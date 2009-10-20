@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions
+END
+readline-callback-read-char.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-callback-read-char.xml
+END
+readline-callback-handler-remove.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-callback-handler-remove.xml
+END
+readline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline.xml
+END
+readline-clear-history.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-clear-history.xml
+END
+readline-add-history.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-add-history.xml
+END
+readline-on-new-line.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-on-new-line.xml
+END
+readline-write-history.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-write-history.xml
+END
+readline-list-history.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-list-history.xml
+END
+readline-read-history.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-read-history.xml
+END
+readline-callback-handler-install.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-callback-handler-install.xml
+END
+readline-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-info.xml
+END
+readline-completion-function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-completion-function.xml
+END
+readline-redisplay.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/readline/functions/readline-redisplay.xml
+END

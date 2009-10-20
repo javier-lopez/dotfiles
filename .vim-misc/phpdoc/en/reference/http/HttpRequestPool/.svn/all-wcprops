@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool
+END
+reset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/reset.xml
+END
+socketPerform.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/socketPerform.xml
+END
+attach.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/attach.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/construct.xml
+END
+getFinishedRequests.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/getFinishedRequests.xml
+END
+detach.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/detach.xml
+END
+socketSelect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/socketSelect.xml
+END
+getAttachedRequests.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/getAttachedRequests.xml
+END
+send.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/send.xml
+END
+destruct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpRequestPool/destruct.xml
+END

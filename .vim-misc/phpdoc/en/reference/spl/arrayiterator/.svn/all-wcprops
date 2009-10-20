@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288810/phpdoc/en/trunk/reference/spl/arrayiterator
+END
+current.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/current.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288810/phpdoc/en/trunk/reference/spl/arrayiterator/construct.xml
+END
+natcasesort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/natcasesort.xml
+END
+offsetexists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/offsetexists.xml
+END
+offsetget.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288719/phpdoc/en/trunk/reference/spl/arrayiterator/offsetget.xml
+END
+seek.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/seek.xml
+END
+uksort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288719/phpdoc/en/trunk/reference/spl/arrayiterator/uksort.xml
+END
+serialize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288719/phpdoc/en/trunk/reference/spl/arrayiterator/serialize.xml
+END
+asort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/asort.xml
+END
+count.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/count.xml
+END
+key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/key.xml
+END
+rewind.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/rewind.xml
+END
+natsort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/natsort.xml
+END
+unserialize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288719/phpdoc/en/trunk/reference/spl/arrayiterator/unserialize.xml
+END
+getflags.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/getflags.xml
+END
+valid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/valid.xml
+END
+ksort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/ksort.xml
+END
+offsetset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288719/phpdoc/en/trunk/reference/spl/arrayiterator/offsetset.xml
+END
+offsetunset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288719/phpdoc/en/trunk/reference/spl/arrayiterator/offsetunset.xml
+END
+append.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/append.xml
+END
+setflags.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288719/phpdoc/en/trunk/reference/spl/arrayiterator/setflags.xml
+END
+getarraycopy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/getarraycopy.xml
+END
+uasort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288719/phpdoc/en/trunk/reference/spl/arrayiterator/uasort.xml
+END
+next.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/arrayiterator/next.xml
+END

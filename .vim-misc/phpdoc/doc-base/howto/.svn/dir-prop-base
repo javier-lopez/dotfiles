@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 43
+howto.ced
+html
+php
+*.php
+.howto.xml
+.*.ser
+
+END

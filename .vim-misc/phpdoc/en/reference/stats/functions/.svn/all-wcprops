@@ -1,0 +1,413 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions
+END
+stats-cdf-poisson.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-poisson.xml
+END
+stats-rand-gen-ipoisson.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-ipoisson.xml
+END
+stats-rand-gen-noncentral-t.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-noncentral-t.xml
+END
+stats-dens-beta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-beta.xml
+END
+stats-cdf-cauchy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-cauchy.xml
+END
+stats-dens-gamma.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-gamma.xml
+END
+stats-cdf-uniform.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-uniform.xml
+END
+stats-skew.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-skew.xml
+END
+stats-dens-chisquare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-chisquare.xml
+END
+stats-cdf-gamma.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-gamma.xml
+END
+stats-dens-exponential.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-exponential.xml
+END
+stats-stat-binomial-coef.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-binomial-coef.xml
+END
+stats-cdf-chisquare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-chisquare.xml
+END
+stats-harmonic-mean.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-harmonic-mean.xml
+END
+stats-rand-gen-f.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-f.xml
+END
+stats-dens-normal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-normal.xml
+END
+stats-rand-gen-iuniform.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-iuniform.xml
+END
+stats-dens-laplace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-laplace.xml
+END
+stats-variance.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-variance.xml
+END
+stats-rand-gen-noncenral-chisquare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-noncenral-chisquare.xml
+END
+stats-rand-gen-t.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-t.xml
+END
+stats-cdf-weibull.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-weibull.xml
+END
+stats-absolute-deviation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-absolute-deviation.xml
+END
+stats-dens-pmf-binomial.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-pmf-binomial.xml
+END
+stats-dens-pmf-poisson.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-pmf-poisson.xml
+END
+stats-dens-cauchy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-cauchy.xml
+END
+stats-rand-gen-beta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-beta.xml
+END
+stats-dens-logistic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-logistic.xml
+END
+stats-cdf-beta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-beta.xml
+END
+stats-rand-setall.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-setall.xml
+END
+stats-stat-gennch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-gennch.xml
+END
+stats-dens-f.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-f.xml
+END
+stats-cdf-f.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-f.xml
+END
+stats-rand-gen-normal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-normal.xml
+END
+stats-rand-gen-int.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-int.xml
+END
+stats-stat-powersum.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-powersum.xml
+END
+stats-dens-t.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-t.xml
+END
+stats-stat-correlation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-correlation.xml
+END
+stats-cdf-t.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-t.xml
+END
+stats-stat-percentile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-percentile.xml
+END
+stats-cdf-logistic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-logistic.xml
+END
+stats-covariance.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-covariance.xml
+END
+stats-cdf-noncentral-chisquare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-noncentral-chisquare.xml
+END
+stats-cdf-exponential.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-exponential.xml
+END
+stats-standard-deviation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-standard-deviation.xml
+END
+stats-dens-negative-binomial.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-negative-binomial.xml
+END
+stats-cdf-binomial.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-binomial.xml
+END
+stats-cdf-negative-binomial.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-negative-binomial.xml
+END
+stats-rand-phrase-to-seeds.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-phrase-to-seeds.xml
+END
+stats-stat-innerproduct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-innerproduct.xml
+END
+stats-dens-weibull.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-weibull.xml
+END
+stats-cdf-laplace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-laplace.xml
+END
+stats-rand-gen-ibinomial-negative.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-ibinomial-negative.xml
+END
+stats-rand-gen-ibinomial.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-ibinomial.xml
+END
+stats-dens-pmf-hypergeometric.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-dens-pmf-hypergeometric.xml
+END
+stats-rand-get-seeds.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-get-seeds.xml
+END
+stats-stat-independent-t.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-independent-t.xml
+END
+stats-rand-ranf.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-ranf.xml
+END
+stats-rand-gen-gamma.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-gamma.xml
+END
+stats-rand-gen-chisquare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-chisquare.xml
+END
+stats-stat-noncentral-t.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-noncentral-t.xml
+END
+stats-stat-paired-t.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-stat-paired-t.xml
+END
+stats-rand-gen-funiform.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-funiform.xml
+END
+stats-rand-gen-noncentral-f.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-noncentral-f.xml
+END
+stats-rand-gen-exponential.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-rand-gen-exponential.xml
+END
+stats-cdf-noncentral-f.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-cdf-noncentral-f.xml
+END
+stats-kurtosis.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-kurtosis.xml
+END
+stats-den-uniform.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/stats/functions/stats-den-uniform.xml
+END

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo
+END
+getMetadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/getMetadata.xml
+END
+setCompressedGZ.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/setCompressedGZ.xml
+END
+setUncompressed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/setUncompressed.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/construct.xml
+END
+setCompressedBZIP2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/setCompressedBZIP2.xml
+END
+chmod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/chmod.xml
+END
+compress.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/compress.xml
+END
+setMetadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/setMetadata.xml
+END
+getCompressedSize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/getCompressedSize.xml
+END
+isCompressed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/isCompressed.xml
+END
+isCompressedGZ.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/isCompressedGZ.xml
+END
+decompress.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/decompress.xml
+END
+delMetadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/delMetadata.xml
+END
+getPharFlags.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/getPharFlags.xml
+END
+isCompressedBZIP2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/isCompressedBZIP2.xml
+END
+isCRCChecked.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/isCRCChecked.xml
+END
+hasMetadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/hasMetadata.xml
+END
+getCRC32.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/PharFileInfo/getCRC32.xml
+END

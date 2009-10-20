@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session
+END
+setup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/setup.xml
+END
+configure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/configure.xml
+END
+security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/security.xml
+END
+versions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/versions.xml
+END
+book.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/book.xml
+END
+constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/constants.xml
+END
+examples.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/examples.xml
+END
+reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/reference.xml
+END
+ini.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/session/ini.xml
+END

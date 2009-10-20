@@ -1,0 +1,1073 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions
+END
+pdf-add-pdflink.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-pdflink.xml
+END
+pdf-set-text-matrix.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-text-matrix.xml
+END
+pdf-set-gstate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-gstate.xml
+END
+pdf-open-image.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-image.xml
+END
+pdf-end-pattern.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-pattern.xml
+END
+pdf-closepath.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-closepath.xml
+END
+pdf-load-font.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-load-font.xml
+END
+pdf-open-pdi-page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-pdi-page.xml
+END
+pdf-set-word-spacing.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-word-spacing.xml
+END
+pdf-get-apiname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-apiname.xml
+END
+pdf-end-glyph.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-glyph.xml
+END
+pdf-new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-new.xml
+END
+pdf-add-table-cell.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-table-cell.xml
+END
+pdf-setrgbcolor-stroke.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setrgbcolor-stroke.xml
+END
+pdf-suspend-page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-suspend-page.xml
+END
+pdf-delete-pvf.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-delete-pvf.xml
+END
+pdf-add-locallink.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-locallink.xml
+END
+pdf-setpolydash.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setpolydash.xml
+END
+pdf-circle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-circle.xml
+END
+pdf-add-textflow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-textflow.xml
+END
+pdf-pcos-get-number.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-pcos-get-number.xml
+END
+pdf-show-xy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-show-xy.xml
+END
+pdf-end-page-ext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-page-ext.xml
+END
+pdf-get-fontsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-fontsize.xml
+END
+pdf-set-info-author.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-info-author.xml
+END
+pdf-close-image.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-close-image.xml
+END
+pdf-setlinecap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setlinecap.xml
+END
+pdf-delete-table.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-delete-table.xml
+END
+pdf-encoding-set-char.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-encoding-set-char.xml
+END
+pdf-setmiterlimit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setmiterlimit.xml
+END
+pdf-begin-page-ext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-page-ext.xml
+END
+pdf-create-fieldgroup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-fieldgroup.xml
+END
+pdf-info-textflow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-info-textflow.xml
+END
+pdf-stringwidth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-stringwidth.xml
+END
+pdf-concat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-concat.xml
+END
+pdf-fill-pdfblock.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fill-pdfblock.xml
+END
+pdf-end-font.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-font.xml
+END
+pdf-create-annotation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-annotation.xml
+END
+pdf-set-text-rise.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-text-rise.xml
+END
+pdf-shading.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-shading.xml
+END
+pdf-setgray.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setgray.xml
+END
+pdf-info-table.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-info-table.xml
+END
+pdf-attach-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-attach-file.xml
+END
+pdf-endpath.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-endpath.xml
+END
+pdf-setgray-stroke.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setgray-stroke.xml
+END
+pdf-open-jpeg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-jpeg.xml
+END
+pdf-utf32-to-utf16.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-utf32-to-utf16.xml
+END
+pdf-begin-font.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-font.xml
+END
+pdf-set-text-rendering.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-text-rendering.xml
+END
+pdf-lineto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-lineto.xml
+END
+pdf-add-bookmark.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-bookmark.xml
+END
+pdf-fit-textflow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fit-textflow.xml
+END
+pdf-activate-item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-activate-item.xml
+END
+pdf-create-pvf.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-pvf.xml
+END
+pdf-set-leading.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-leading.xml
+END
+pdf-rotate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-rotate.xml
+END
+pdf-begin-layer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-layer.xml
+END
+pdf-begin-pattern.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-pattern.xml
+END
+pdf-fit-image.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fit-image.xml
+END
+pdf-set-horiz-scaling.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-horiz-scaling.xml
+END
+pdf-setflat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setflat.xml
+END
+pdf-setgray-fill.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setgray-fill.xml
+END
+pdf-setlinewidth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setlinewidth.xml
+END
+pdf-arc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-arc.xml
+END
+pdf-get-pdi-parameter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-pdi-parameter.xml
+END
+pdf-utf16-to-utf8.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-utf16-to-utf8.xml
+END
+pdf-setrgbcolor-fill.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setrgbcolor-fill.xml
+END
+pdf-pcos-get-stream.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-pcos-get-stream.xml
+END
+pdf-set-duration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-duration.xml
+END
+pdf-add-launchlink.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-launchlink.xml
+END
+pdf-setmatrix.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setmatrix.xml
+END
+pdf-set-layer-dependency.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-layer-dependency.xml
+END
+pdf-set-info-subject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-info-subject.xml
+END
+pdf-makespotcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-makespotcolor.xml
+END
+pdf-arcn.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-arcn.xml
+END
+pdf-create-field.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-field.xml
+END
+pdf-get-buffer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-buffer.xml
+END
+pdf-clip.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-clip.xml
+END
+pdf-open-memory-image.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-memory-image.xml
+END
+pdf-set-info-keywords.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-info-keywords.xml
+END
+pdf-add-nameddest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-nameddest.xml
+END
+pdf-add-note.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-note.xml
+END
+pdf-get-majorversion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-majorversion.xml
+END
+pdf-open-image-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-image-file.xml
+END
+pdf-end-item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-item.xml
+END
+pdf-delete.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-delete.xml
+END
+pdf-set-info-title.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-info-title.xml
+END
+pdf-get-image-height.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-image-height.xml
+END
+pdf-moveto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-moveto.xml
+END
+pdf-resume-page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-resume-page.xml
+END
+pdf-create-action.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-action.xml
+END
+pdf-end-page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-page.xml
+END
+pdf-end-layer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-layer.xml
+END
+pdf-begin-item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-item.xml
+END
+pdf-get-fontname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-fontname.xml
+END
+pdf-info-textline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-info-textline.xml
+END
+pdf-pcos-get-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-pcos-get-string.xml
+END
+pdf-curveto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-curveto.xml
+END
+pdf-closepath-stroke.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-closepath-stroke.xml
+END
+pdf-set-char-spacing.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-char-spacing.xml
+END
+pdf-setdash.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setdash.xml
+END
+pdf-get-parameter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-parameter.xml
+END
+pdf-rect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-rect.xml
+END
+pdf-begin-page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-page.xml
+END
+pdf-load-image.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-load-image.xml
+END
+pdf-create-3dview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-3dview.xml
+END
+pdf-define-layer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-define-layer.xml
+END
+pdf-open-gif.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-gif.xml
+END
+pdf-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-close.xml
+END
+pdf-stroke.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-stroke.xml
+END
+pdf-set-parameter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-parameter.xml
+END
+pdf-add-thumbnail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-thumbnail.xml
+END
+pdf-closepath-fill-stroke.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-closepath-fill-stroke.xml
+END
+pdf-set-text-pos.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-text-pos.xml
+END
+pdf-fit-textline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fit-textline.xml
+END
+pdf-create-textflow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-textflow.xml
+END
+pdf-shfill.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-shfill.xml
+END
+pdf-end-document.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-document.xml
+END
+pdf-set-border-dash.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-border-dash.xml
+END
+pdf-set-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-info.xml
+END
+pdf-fill.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fill.xml
+END
+pdf-close-pdi-page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-close-pdi-page.xml
+END
+pdf-fill-stroke.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fill-stroke.xml
+END
+pdf-load-iccprofile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-load-iccprofile.xml
+END
+pdf-translate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-translate.xml
+END
+pdf-info-matchbox.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-info-matchbox.xml
+END
+pdf-begin-document.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-document.xml
+END
+pdf-get-pdi-value.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-pdi-value.xml
+END
+pdf-set-border-style.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-border-style.xml
+END
+pdf-fit-pdi-page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fit-pdi-page.xml
+END
+pdf-continue-text.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-continue-text.xml
+END
+pdf-fit-table.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fit-table.xml
+END
+pdf-skew.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-skew.xml
+END
+pdf-open-pdi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-pdi.xml
+END
+pdf-delete-textflow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-delete-textflow.xml
+END
+pdf-end-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-end-template.xml
+END
+pdf-show.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-show.xml
+END
+pdf-setfont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setfont.xml
+END
+pdf-restore.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-restore.xml
+END
+pdf-get-font.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-font.xml
+END
+pdf-fill-textblock.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fill-textblock.xml
+END
+pdf-setlinejoin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setlinejoin.xml
+END
+pdf-scale.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-scale.xml
+END
+pdf-setdashpattern.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setdashpattern.xml
+END
+pdf-setcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setcolor.xml
+END
+pdf-begin-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-template.xml
+END
+pdf-save.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-save.xml
+END
+pdf-info-font.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-info-font.xml
+END
+pdf-place-image.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-place-image.xml
+END
+pdf-begin-glyph.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-glyph.xml
+END
+pdf-create-bookmark.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-bookmark.xml
+END
+pdf-findfont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-findfont.xml
+END
+pdf-utf8-to-utf16.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-utf8-to-utf16.xml
+END
+pdf-get-image-width.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-image-width.xml
+END
+pdf-get-errmsg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-errmsg.xml
+END
+pdf-load-3ddata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-load-3ddata.xml
+END
+pdf-open-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-file.xml
+END
+pdf-close-pdi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-close-pdi.xml
+END
+pdf-show-boxed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-show-boxed.xml
+END
+pdf-add-weblink.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-weblink.xml
+END
+pdf-fill-imageblock.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-fill-imageblock.xml
+END
+pdf-set-info-creator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-info-creator.xml
+END
+pdf-set-border-color.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-border-color.xml
+END
+pdf-initgraphics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-initgraphics.xml
+END
+pdf-get-errnum.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-errnum.xml
+END
+pdf-setrgbcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-setrgbcolor.xml
+END
+pdf-open-tiff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-tiff.xml
+END
+pdf-process-pdi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-process-pdi.xml
+END
+pdf-create-gstate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-create-gstate.xml
+END
+pdf-shading-pattern.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-shading-pattern.xml
+END
+pdf-get-value.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-value.xml
+END
+pdf-begin-template-ext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-begin-template-ext.xml
+END
+pdf-add-annotation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-annotation.xml
+END
+pdf-open-ccitt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-open-ccitt.xml
+END
+pdf-add-outline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-add-outline.xml
+END
+pdf-set-value.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-set-value.xml
+END
+pdf-get-minorversion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-get-minorversion.xml
+END
+pdf-place-pdi-page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdf/functions/pdf-place-pdi-page.xml
+END

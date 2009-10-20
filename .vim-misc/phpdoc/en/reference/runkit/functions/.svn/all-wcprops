@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions
+END
+runkit-lint.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-lint.xml
+END
+runkit-method-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-method-add.xml
+END
+runkit-sandbox-output-handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-sandbox-output-handler.xml
+END
+runkit-constant-redefine.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-constant-redefine.xml
+END
+runkit-class-emancipate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-class-emancipate.xml
+END
+runkit-class-adopt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-class-adopt.xml
+END
+runkit-import.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-import.xml
+END
+runkit-method-remove.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-method-remove.xml
+END
+runkit-function-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-function-add.xml
+END
+runkit-constant-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-constant-add.xml
+END
+runkit-function-remove.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-function-remove.xml
+END
+runkit-lint-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-lint-file.xml
+END
+runkit-constant-remove.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-constant-remove.xml
+END
+runkit-method-rename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-method-rename.xml
+END
+runkit-return-value-used.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-return-value-used.xml
+END
+runkit-method-copy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-method-copy.xml
+END
+runkit-function-rename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-function-rename.xml
+END
+runkit-function-copy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-function-copy.xml
+END
+runkit-method-redefine.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-method-redefine.xml
+END
+runkit-superglobals.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-superglobals.xml
+END
+runkit-function-redefine.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/runkit/functions/runkit-function-redefine.xml
+END

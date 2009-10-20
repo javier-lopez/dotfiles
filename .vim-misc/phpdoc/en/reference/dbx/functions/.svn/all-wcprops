@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions
+END
+dbx-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions/dbx-close.xml
+END
+dbx-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions/dbx-query.xml
+END
+dbx-compare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions/dbx-compare.xml
+END
+dbx-sort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions/dbx-sort.xml
+END
+dbx-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions/dbx-connect.xml
+END
+dbx-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions/dbx-error.xml
+END
+dbx-fetch-row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions/dbx-fetch-row.xml
+END
+dbx-escape-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/dbx/functions/dbx-escape-string.xml
+END

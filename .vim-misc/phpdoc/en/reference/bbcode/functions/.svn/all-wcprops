@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bbcode/functions
+END
+bbcode-set-flags.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bbcode/functions/bbcode-set-flags.xml
+END
+bbcode-add-smiley.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bbcode/functions/bbcode-add-smiley.xml
+END
+bbcode-destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bbcode/functions/bbcode-destroy.xml
+END
+bbcode-parse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bbcode/functions/bbcode-parse.xml
+END
+bbcode-set-arg-parser.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bbcode/functions/bbcode-set-arg-parser.xml
+END
+bbcode-add-element.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bbcode/functions/bbcode-add-element.xml
+END
+bbcode-create.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bbcode/functions/bbcode-create.xml
+END

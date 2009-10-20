@@ -1,0 +1,13 @@
+K 10
+svn:ignore
+V 142
+file-entities.ent
+version.ent
+missing-entities.ent
+phpweb.ent
+missing-ids.xml
+pecl-extensions.xml
+addon-extensions.xml
+builtin-extensions.xml
+
+END

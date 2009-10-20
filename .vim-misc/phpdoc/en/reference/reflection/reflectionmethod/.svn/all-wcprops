@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod
+END
+export.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/export.xml
+END
+getmodifiers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/getmodifiers.xml
+END
+isconstructor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/isconstructor.xml
+END
+isstatic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/isstatic.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/construct.xml
+END
+isfinal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/isfinal.xml
+END
+isprotected.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/isprotected.xml
+END
+isdestructor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/isdestructor.xml
+END
+invoke.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/invoke.xml
+END
+isabstract.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/isabstract.xml
+END
+getprototype.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/getprototype.xml
+END
+isprivate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/isprivate.xml
+END
+invokeargs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/invokeargs.xml
+END
+tostring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/tostring.xml
+END
+setaccessible.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/setaccessible.xml
+END
+ispublic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/ispublic.xml
+END
+getdeclaringclass.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionmethod/getdeclaringclass.xml
+END

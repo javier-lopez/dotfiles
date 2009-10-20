@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/negotiation
+END
+http-negotiate-charset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/negotiation/http-negotiate-charset.xml
+END
+http-negotiate-content-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/negotiation/http-negotiate-content-type.xml
+END
+http-negotiate-language.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/negotiation/http-negotiate-language.xml
+END

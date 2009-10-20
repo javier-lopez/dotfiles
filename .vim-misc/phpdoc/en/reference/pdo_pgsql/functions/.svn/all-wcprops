@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo_pgsql/functions
+END
+PDO-pgsqlLOBUnlink.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo_pgsql/functions/PDO-pgsqlLOBUnlink.xml
+END
+PDO-pgsqlLOBOpen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo_pgsql/functions/PDO-pgsqlLOBOpen.xml
+END
+PDO-pgsqlLOBCreate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo_pgsql/functions/PDO-pgsqlLOBCreate.xml
+END

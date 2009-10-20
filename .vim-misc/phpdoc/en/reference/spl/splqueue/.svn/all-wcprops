@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/splqueue
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/splqueue/construct.xml
+END
+enqueue.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/splqueue/enqueue.xml
+END
+setiteratormode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/splqueue/setiteratormode.xml
+END
+dequeue.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/splqueue/dequeue.xml
+END

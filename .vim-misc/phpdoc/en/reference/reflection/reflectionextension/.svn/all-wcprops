@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension
+END
+clone.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/clone.xml
+END
+getname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/getname.xml
+END
+export.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/export.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/construct.xml
+END
+getversion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/getversion.xml
+END
+getdependencies.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/getdependencies.xml
+END
+getfunctions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/getfunctions.xml
+END
+getclassnames.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/getclassnames.xml
+END
+getinientries.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/getinientries.xml
+END
+tostring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/tostring.xml
+END
+info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/info.xml
+END
+getconstants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/getconstants.xml
+END
+getclasses.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionextension/getclasses.xml
+END

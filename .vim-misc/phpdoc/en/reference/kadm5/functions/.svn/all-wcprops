@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions
+END
+kadm5-delete-principal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-delete-principal.xml
+END
+kadm5-flush.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-flush.xml
+END
+kadm5-get-principals.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-get-principals.xml
+END
+kadm5-create-principal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-create-principal.xml
+END
+kadm5-get-policies.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-get-policies.xml
+END
+kadm5-modify-principal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-modify-principal.xml
+END
+kadm5-destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-destroy.xml
+END
+kadm5-init-with-password.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-init-with-password.xml
+END
+kadm5-get-principal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-get-principal.xml
+END
+kadm5-chpass-principal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/kadm5/functions/kadm5-chpass-principal.xml
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service
+END
+setup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/setup.xml
+END
+versions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/versions.xml
+END
+book.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/book.xml
+END
+constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/constants.xml
+END
+examples.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/examples.xml
+END
+reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/reference.xml
+END

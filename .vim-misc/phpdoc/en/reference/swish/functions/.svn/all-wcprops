@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions
+END
+swishsearch-execute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishsearch-execute.xml
+END
+swishsearch-setsort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishsearch-setsort.xml
+END
+swish-prepare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swish-prepare.xml
+END
+swishresults-nextresult.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishresults-nextresult.xml
+END
+swishsearch-setstructure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishsearch-setstructure.xml
+END
+swish-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swish-query.xml
+END
+swishresult-stem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishresult-stem.xml
+END
+swishsearch-resetlimit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishsearch-resetlimit.xml
+END
+swishresults-getremovedstopwords.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishresults-getremovedstopwords.xml
+END
+swishresults-seekresult.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishresults-seekresult.xml
+END
+swishresults-getparsedwords.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishresults-getparsedwords.xml
+END
+swish-getpropertylist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swish-getpropertylist.xml
+END
+swishsearch-setlimit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishsearch-setlimit.xml
+END
+swishresult-getmetalist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishresult-getmetalist.xml
+END
+swish-getmetalist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swish-getmetalist.xml
+END
+swishsearch-setphrasedelimiter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swishsearch-setphrasedelimiter.xml
+END
+swish-construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swish/functions/swish-construct.xml
+END

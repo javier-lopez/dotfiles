@@ -1,0 +1,5 @@
+*ocilogon* -- Alias of oci_connect
+
+This function is an alias of: |oci_connect|.
+
+vim:ft=help:

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions
+END
+mqseries-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-set.xml
+END
+mqseries-cmit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-cmit.xml
+END
+mqseries-conn.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-conn.xml
+END
+mqseries-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-get.xml
+END
+mqseries-back.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-back.xml
+END
+mqseries-open.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-open.xml
+END
+mqseries-disc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-disc.xml
+END
+mqseries-strerror.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-strerror.xml
+END
+mqseries-begin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-begin.xml
+END
+mqseries-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-close.xml
+END
+mqseries-connx.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-connx.xml
+END
+mqseries-inq.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-inq.xml
+END
+mqseries-put.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-put.xml
+END
+mqseries-put1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mqseries/functions/mqseries-put1.xml
+END

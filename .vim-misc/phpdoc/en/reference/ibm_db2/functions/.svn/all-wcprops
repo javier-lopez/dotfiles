@@ -1,0 +1,311 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions
+END
+db2-procedures.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-procedures.xml
+END
+db2-field-precision.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-field-precision.xml
+END
+db2-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-result.xml
+END
+db2-field-num.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-field-num.xml
+END
+db2-autocommit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-autocommit.xml
+END
+db2-stmt-errormsg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-stmt-errormsg.xml
+END
+db2-num-rows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-num-rows.xml
+END
+db2-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-connect.xml
+END
+db2-statistics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-statistics.xml
+END
+db2-conn-errormsg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-conn-errormsg.xml
+END
+db2-primary-keys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-primary-keys.xml
+END
+db2-free-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-free-result.xml
+END
+db2-table-privileges.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-table-privileges.xml
+END
+db2-field-display-size.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-field-display-size.xml
+END
+db2-prepare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-prepare.xml
+END
+db2-special-columns.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-special-columns.xml
+END
+db2-server-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-server-info.xml
+END
+db2-fetch-assoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-fetch-assoc.xml
+END
+db2-field-width.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-field-width.xml
+END
+db2-field-name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-field-name.xml
+END
+db2-field-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-field-type.xml
+END
+db2-escape-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-escape-string.xml
+END
+db2-column-privileges.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-column-privileges.xml
+END
+db2-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-close.xml
+END
+db2-procedure-columns.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-procedure-columns.xml
+END
+db2-free-stmt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-free-stmt.xml
+END
+db2-pconnect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-pconnect.xml
+END
+db2-tables.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-tables.xml
+END
+db2-stmt-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-stmt-error.xml
+END
+db2-columns.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-columns.xml
+END
+db2-fetch-both.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-fetch-both.xml
+END
+db2-conn-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-conn-error.xml
+END
+db2-exec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-exec.xml
+END
+db2-lob-read.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-lob-read.xml
+END
+db2-get-option.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-get-option.xml
+END
+db2-pclose.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-pclose.xml
+END
+db2-commit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-commit.xml
+END
+db2-rollback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-rollback.xml
+END
+db2-next-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-next-result.xml
+END
+db2-cursor-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-cursor-type.xml
+END
+db2-fetch-object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-fetch-object.xml
+END
+db2-fetch-row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-fetch-row.xml
+END
+db2-last-insert-id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-last-insert-id.xml
+END
+db2-set-option.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-set-option.xml
+END
+db2-foreign-keys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-foreign-keys.xml
+END
+db2-execute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-execute.xml
+END
+db2-num-fields.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-num-fields.xml
+END
+db2-fetch-array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-fetch-array.xml
+END
+db2-client-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-client-info.xml
+END
+db2-field-scale.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-field-scale.xml
+END
+db2-bind-param.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibm_db2/functions/db2-bind-param.xml
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses
+END
+http-send-content-disposition.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-send-content-disposition.xml
+END
+http-throttle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-throttle.xml
+END
+http-send-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-send-file.xml
+END
+http-send-last-modified.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-send-last-modified.xml
+END
+http-send-status.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-send-status.xml
+END
+http-send-content-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-send-content-type.xml
+END
+http-send-data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-send-data.xml
+END
+http-redirect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-redirect.xml
+END
+http-send-stream.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/responses/http-send-stream.xml
+END

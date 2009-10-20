@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions
+END
+ngettext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/ngettext.xml
+END
+gettext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/gettext.xml
+END
+dngettext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/dngettext.xml
+END
+dgettext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/dgettext.xml
+END
+bindtextdomain.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/bindtextdomain.xml
+END
+dcngettext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/dcngettext.xml
+END
+bind-textdomain-codeset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/bind-textdomain-codeset.xml
+END
+dcgettext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/dcgettext.xml
+END
+textdomain.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gettext/functions/textdomain.xml
+END

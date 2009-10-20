@@ -1,0 +1,2 @@
+dbext history, <enter> or dbl-click to execute, or [q] to quit (history size:1000)
+1. select * FROM customer

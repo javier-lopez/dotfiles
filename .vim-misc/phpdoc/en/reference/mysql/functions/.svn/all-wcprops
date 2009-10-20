@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions
+END
+mysql-field-flags.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-field-flags.xml
+END
+mysql-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-result.xml
+END
+mysql-list-fields.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-list-fields.xml
+END
+mysql-list-tables.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-list-tables.xml
+END
+mysql-errno.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-errno.xml
+END
+mysql-real-escape-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-real-escape-string.xml
+END
+mysql-create-db.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-create-db.xml
+END
+mysql-drop-db.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-drop-db.xml
+END
+mysql-num-rows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-num-rows.xml
+END
+mysql-tablename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-tablename.xml
+END
+mysql-affected-rows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-affected-rows.xml
+END
+mysql-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-connect.xml
+END
+mysql-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-info.xml
+END
+mysql-free-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-free-result.xml
+END
+mysql-data-seek.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-data-seek.xml
+END
+mysql-fetch-assoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-fetch-assoc.xml
+END
+mysql-thread-id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-thread-id.xml
+END
+mysql-change-user.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-change-user.xml
+END
+mysql-field-name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-field-name.xml
+END
+mysql-select-db.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-select-db.xml
+END
+mysql-field-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-field-type.xml
+END
+mysql-db-name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-db-name.xml
+END
+mysql-escape-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-escape-string.xml
+END
+mysql-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-close.xml
+END
+mysql-pconnect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-pconnect.xml
+END
+mysql-fetch-field.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-fetch-field.xml
+END
+mysql-list-processes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-list-processes.xml
+END
+mysql-list-dbs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-list-dbs.xml
+END
+mysql-set-charset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-set-charset.xml
+END
+mysql-get-host-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-get-host-info.xml
+END
+mysql-get-client-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-get-client-info.xml
+END
+mysql-db-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-db-query.xml
+END
+mysql-unbuffered-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-unbuffered-query.xml
+END
+mysql-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-error.xml
+END
+mysql-fetch-lengths.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-fetch-lengths.xml
+END
+mysql-fetch-object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-fetch-object.xml
+END
+mysql-ping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-ping.xml
+END
+mysql-insert-id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-insert-id.xml
+END
+mysql-fetch-row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-fetch-row.xml
+END
+mysql-field-len.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-field-len.xml
+END
+mysql-client-encoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-client-encoding.xml
+END
+mysql-num-fields.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-num-fields.xml
+END
+mysql-fetch-array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-fetch-array.xml
+END
+mysql-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-query.xml
+END
+mysql-field-table.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-field-table.xml
+END
+mysql-field-seek.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-field-seek.xml
+END
+mysql-get-proto-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-get-proto-info.xml
+END
+mysql-stat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-stat.xml
+END
+mysql-get-server-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysql/functions/mysql-get-server-info.xml
+END

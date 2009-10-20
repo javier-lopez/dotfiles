@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdodasrel
+END
+setup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdodasrel/setup.xml
+END
+book.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdodasrel/book.xml
+END
+constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdodasrel/constants.xml
+END
+limitations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdodasrel/limitations.xml
+END
+examples.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdodasrel/examples.xml
+END
+reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdodasrel/reference.xml
+END

@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions
+END
+ibase-fetch-assoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-fetch-assoc.xml
+END
+ibase-errmsg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-errmsg.xml
+END
+ibase-server-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-server-info.xml
+END
+ibase-blob-cancel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-cancel.xml
+END
+ibase-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-close.xml
+END
+ibase-pconnect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-pconnect.xml
+END
+ibase-free-event-handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-free-event-handler.xml
+END
+ibase-field-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-field-info.xml
+END
+ibase-blob-open.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-open.xml
+END
+ibase-delete-user.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-delete-user.xml
+END
+ibase-db-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-db-info.xml
+END
+ibase-blob-create.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-create.xml
+END
+ibase-commit-ret.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-commit-ret.xml
+END
+ibase-rollback-ret.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-rollback-ret.xml
+END
+ibase-maintain-db.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-maintain-db.xml
+END
+ibase-wait-event.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-wait-event.xml
+END
+ibase-errcode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-errcode.xml
+END
+ibase-free-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-free-query.xml
+END
+ibase-set-event-handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-set-event-handler.xml
+END
+ibase-blob-import.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-import.xml
+END
+ibase-commit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-commit.xml
+END
+ibase-rollback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-rollback.xml
+END
+ibase-param-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-param-info.xml
+END
+ibase-blob-echo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-echo.xml
+END
+ibase-blob-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-get.xml
+END
+ibase-name-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-name-result.xml
+END
+ibase-fetch-object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-fetch-object.xml
+END
+ibase-fetch-row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-fetch-row.xml
+END
+ibase-service-attach.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-service-attach.xml
+END
+ibase-execute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-execute.xml
+END
+ibase-modify-user.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-modify-user.xml
+END
+ibase-gen-id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-gen-id.xml
+END
+ibase-num-fields.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-num-fields.xml
+END
+ibase-add-user.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-add-user.xml
+END
+ibase-blob-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-add.xml
+END
+ibase-backup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-backup.xml
+END
+ibase-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-query.xml
+END
+ibase-timefmt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-timefmt.xml
+END
+ibase-blob-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-info.xml
+END
+ibase-num-params.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-num-params.xml
+END
+ibase-blob-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-blob-close.xml
+END
+ibase-restore.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-restore.xml
+END
+ibase-service-detach.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-service-detach.xml
+END
+ibase-drop-db.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-drop-db.xml
+END
+ibase-trans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-trans.xml
+END
+ibase-affected-rows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-affected-rows.xml
+END
+ibase-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-connect.xml
+END
+ibase-free-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-free-result.xml
+END
+ibase-prepare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ibase/functions/ibase-prepare.xml
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/mpegfile
+END
+getID3v1Tag.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/mpegfile/getID3v1Tag.xml
+END
+getID3v2Tag.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/mpegfile/getID3v2Tag.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/mpegfile/construct.xml
+END
+getAudioProperties.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/mpegfile/getAudioProperties.xml
+END

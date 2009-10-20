@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests
+END
+http-request-method-exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-request-method-exists.xml
+END
+http-request-method-name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-request-method-name.xml
+END
+http-put-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-put-file.xml
+END
+http-request-method-register.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-request-method-register.xml
+END
+http-request.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-request.xml
+END
+http-post-fields.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-post-fields.xml
+END
+http-request-method-unregister.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-request-method-unregister.xml
+END
+http-post-data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-post-data.xml
+END
+http-request-body-encode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-request-body-encode.xml
+END
+http-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-get.xml
+END
+http-put-data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-put-data.xml
+END
+http-head.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-head.xml
+END
+http-put-stream.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/requests/http-put-stream.xml
+END

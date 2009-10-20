@@ -1,0 +1,335 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repository/!svn/ver/288659/phpdoc/doc-base/trunk/scripts
+END
+check-examples.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/277565/phpdoc/doc-base/trunk/scripts/check-examples.php
+END
+check-missing-spldocs.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/278478/phpdoc/doc-base/trunk/scripts/check-missing-spldocs.php
+END
+switch-to-newstyle.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/switch-to-newstyle.php
+END
+fixphpweb.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/fixphpweb.php
+END
+check-references.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/287917/phpdoc/doc-base/trunk/scripts/check-references.php
+END
+check-valid-function.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/check-valid-function.php
+END
+grep-files.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/grep-files.php
+END
+test_missing-entities.php.in
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/test_missing-entities.php.in
+END
+makedoc.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/67107/phpdoc/doc-base/trunk/scripts/makedoc.cc
+END
+check-trans.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/275848/phpdoc/doc-base/trunk/scripts/check-trans.php
+END
+genfuncsummary.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/genfuncsummary.php
+END
+functable.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/functable.php
+END
+bughunter.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/bughunter.php
+END
+funcsummary.awk
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/68875/phpdoc/doc-base/trunk/scripts/funcsummary.awk
+END
+dbtags.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/dbtags.php
+END
+notes_stats.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/notes_stats.php
+END
+file-entities.php.in
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/284721/phpdoc/doc-base/trunk/scripts/file-entities.php.in
+END
+make-partial.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/197121/phpdoc/doc-base/trunk/scripts/make-partial.php
+END
+reviewedcheck.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/reviewedcheck.php
+END
+check-trans-maint.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288659/phpdoc/doc-base/trunk/scripts/check-trans-maint.php
+END
+xml-check.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/xml-check.php
+END
+mk_ini_set_table.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/283877/phpdoc/doc-base/trunk/scripts/mk_ini_set_table.sh
+END
+phpweb-entities.php.in
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/phpweb-entities.php.in
+END
+entity-usage.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/entity-usage.php
+END
+aspell.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/aspell.php
+END
+fix-whitespace.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/fix-whitespace.php
+END
+genfunclist.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/genfunclist.php
+END
+xml_proto.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/275441/phpdoc/doc-base/trunk/scripts/xml_proto.php
+END
+en.pws
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/!svn/ver/146927/phpdoc/doc-base/trunk/scripts/en.pws
+END
+entities.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/entities.php
+END
+checkent.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/checkent.php
+END
+version.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/123207/phpdoc/doc-base/trunk/scripts/version.php
+END
+gen-phpdoc-tz-list.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/286558/phpdoc/doc-base/trunk/scripts/gen-phpdoc-tz-list.php
+END
+revcheck.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/284079/phpdoc/doc-base/trunk/scripts/revcheck.php
+END
+extensions.xml.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/extensions.xml.php
+END
+zendapi_macros.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/205756/phpdoc/doc-base/trunk/scripts/zendapi_macros.php
+END
+orphan_notes.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/orphan_notes.php
+END
+missing-entities.php.in
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/273027/phpdoc/doc-base/trunk/scripts/missing-entities.php.in
+END
+script-skel.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/script-skel.php
+END
+zendapi_protos.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/205766/phpdoc/doc-base/trunk/scripts/zendapi_protos.php
+END
+genPHP_INI_ENTRY.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/genPHP_INI_ENTRY.php
+END
+checkdoc.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/checkdoc.php
+END
+diff_en_rev.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/diff_en_rev.php
+END
+check-acronyms.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/check-acronyms.php
+END
+make_man.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/make_man.php
+END
+html_syntax.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/html_syntax.php
+END
+genfuncindex.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/genfuncindex.php
+END
+process.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/process.php
+END
+spell-checker.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/286546/phpdoc/doc-base/trunk/scripts/spell-checker.php
+END
+notes_extract.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/notes_extract.php
+END
+check-trans-params.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/check-trans-params.php
+END
+cvs2svn_revchange.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/283726/phpdoc/doc-base/trunk/scripts/cvs2svn_revchange.php
+END
+genfuncsummary.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/283877/phpdoc/doc-base/trunk/scripts/genfuncsummary.sh
+END
+reference-split.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/reference-split.php
+END
+sort_aliases.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/sort_aliases.php
+END

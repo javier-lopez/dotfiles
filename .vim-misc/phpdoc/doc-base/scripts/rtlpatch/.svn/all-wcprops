@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/rtlpatch
+END
+todo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/128901/phpdoc/doc-base/trunk/scripts/rtlpatch/todo.txt
+END
+rtlpatch.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/rtlpatch/rtlpatch.php
+END
+HtmlParser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/rtlpatch/HtmlParser.class.php
+END
+HtmlExtParser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/rtlpatch/HtmlExtParser.class.php
+END
+hackmanuallang.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/rtlpatch/hackmanuallang.php
+END

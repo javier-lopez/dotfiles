@@ -1,0 +1,467 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions
+END
+array-search.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-search.xml
+END
+current.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/current.xml
+END
+array-chunk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-chunk.xml
+END
+array-diff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-diff.xml
+END
+krsort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/krsort.xml
+END
+compact.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/compact.xml
+END
+natcasesort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/natcasesort.xml
+END
+array-replace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-replace.xml
+END
+key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/key.xml
+END
+array-map.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-map.xml
+END
+array-shift.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-shift.xml
+END
+array-replace-recursive.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-replace-recursive.xml
+END
+array-uintersect-uassoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-uintersect-uassoc.xml
+END
+pos.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/pos.xml
+END
+array-intersect-key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-intersect-key.xml
+END
+array-fill.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-fill.xml
+END
+array-udiff-uassoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-udiff-uassoc.xml
+END
+end.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/end.xml
+END
+array-uintersect-assoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-uintersect-assoc.xml
+END
+array-intersect-uassoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-intersect-uassoc.xml
+END
+array-pop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-pop.xml
+END
+array-values.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-values.xml
+END
+array-slice.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-slice.xml
+END
+next.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/next.xml
+END
+array-udiff-assoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-udiff-assoc.xml
+END
+array-sum.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-sum.xml
+END
+array-intersect-ukey.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-intersect-ukey.xml
+END
+array-keys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-keys.xml
+END
+count.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/count.xml
+END
+asort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/asort.xml
+END
+array-combine.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-combine.xml
+END
+natsort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/natsort.xml
+END
+range.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/range.xml
+END
+sizeof.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/sizeof.xml
+END
+array-change-key-case.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-change-key-case.xml
+END
+array-count-values.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-count-values.xml
+END
+ksort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/ksort.xml
+END
+rsort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/rsort.xml
+END
+array-diff-key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-diff-key.xml
+END
+arsort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/arsort.xml
+END
+array-merge.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-merge.xml
+END
+list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/list.xml
+END
+usort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/usort.xml
+END
+prev.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/prev.xml
+END
+uasort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/uasort.xml
+END
+array-diff-uassoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-diff-uassoc.xml
+END
+array-walk-recursive.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-walk-recursive.xml
+END
+array-pad.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-pad.xml
+END
+array-merge-recursive.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-merge-recursive.xml
+END
+array-key-exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-key-exists.xml
+END
+reset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/reset.xml
+END
+array-intersect-assoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-intersect-assoc.xml
+END
+array-reduce.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-reduce.xml
+END
+uksort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/uksort.xml
+END
+sort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/sort.xml
+END
+array-reverse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-reverse.xml
+END
+array-push.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-push.xml
+END
+shuffle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/shuffle.xml
+END
+array-product.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-product.xml
+END
+array-diff-ukey.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-diff-ukey.xml
+END
+array-rand.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-rand.xml
+END
+array-filter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-filter.xml
+END
+array-fill-keys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-fill-keys.xml
+END
+array-intersect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-intersect.xml
+END
+array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array.xml
+END
+array-multisort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-multisort.xml
+END
+in-array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/in-array.xml
+END
+array-unique.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-unique.xml
+END
+array-diff-assoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-diff-assoc.xml
+END
+array-splice.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-splice.xml
+END
+array-unshift.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-unshift.xml
+END
+each.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/each.xml
+END
+array-uintersect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-uintersect.xml
+END
+array-flip.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-flip.xml
+END
+array-udiff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-udiff.xml
+END
+extract.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/extract.xml
+END
+array-walk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/array/functions/array-walk.xml
+END

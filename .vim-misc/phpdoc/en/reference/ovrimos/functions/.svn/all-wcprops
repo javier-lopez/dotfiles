@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions
+END
+ovrimos-result-all.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-result-all.xml
+END
+ovrimos-exec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-exec.xml
+END
+ovrimos-num-rows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-num-rows.xml
+END
+ovrimos-commit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-commit.xml
+END
+ovrimos-rollback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-rollback.xml
+END
+ovrimos-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-connect.xml
+END
+ovrimos-longreadlen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-longreadlen.xml
+END
+ovrimos-free-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-free-result.xml
+END
+ovrimos-prepare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-prepare.xml
+END
+ovrimos-fetch-row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-fetch-row.xml
+END
+ovrimos-field-len.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-field-len.xml
+END
+ovrimos-fetch-into.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-fetch-into.xml
+END
+ovrimos-field-name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-field-name.xml
+END
+ovrimos-execute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-execute.xml
+END
+ovrimos-field-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-field-type.xml
+END
+ovrimos-num-fields.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-num-fields.xml
+END
+ovrimos-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-close.xml
+END
+ovrimos-cursor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-cursor.xml
+END
+ovrimos-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-result.xml
+END
+ovrimos-field-num.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ovrimos/functions/ovrimos-field-num.xml
+END

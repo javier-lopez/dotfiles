@@ -1,0 +1,46 @@
+*pathinfo* -- Returns information about a file path
+
+  mixed pathinfo(string path [, int options])~
+
+|pathinfo| returns an associative array containing information about {path}.
+
+{path} The path being checked.
+
+{options} You can specify which elements are returned with optional parameter
+{options}. It composes from PATHINFO_DIRNAME, PATHINFO_BASENAME,
+PATHINFO_EXTENSION and PATHINFO_FILENAME. It defaults to return all elements.
+
+The following associative array elements are returned: dirname, basename,
+extension (if any), and filename.
+
+If {options} is used, this function will return a string if not all elements
+are requested.
+
+Version Description 5.2.0 The PATHINFO_FILENAME constant was added.
+
+|pathinfo| Example
+
+<?php >
+  $path_parts = pathinfo('/www/htdocs/index.html');
+  
+  echo $path_parts['dirname'], "\n";
+  echo $path_parts['basename'], "\n";
+  echo $path_parts['extension'], "\n";
+  echo $path_parts['filename'], "\n"; // since PHP 5.2.0
+?>
+
+The above example will output:
+
+  /www/htdocs
+  index.html
+  html
+  index
+
+
+
+For information on retrieving the current path info, read the section on
+predefined reserved variables.
+
+|dirname| |basename| |parse_url| |realpath|
+
+vim:ft=help:

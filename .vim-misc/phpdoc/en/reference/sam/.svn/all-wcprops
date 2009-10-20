@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sam
+END
+setup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sam/setup.xml
+END
+versions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sam/versions.xml
+END
+book.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sam/book.xml
+END
+constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sam/constants.xml
+END
+examples.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sam/examples.xml
+END
+reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sam/reference.xml
+END

@@ -1,0 +1,2807 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions
+END
+zend_register_internal_class_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_internal_class_ex.xml
+END
+zend_u_fetch_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_fetch_class.xml
+END
+zend_check_property_access.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_check_property_access.xml
+END
+zend_unset_timeout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_unset_timeout.xml
+END
+zend_clear_exception.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_clear_exception.xml
+END
+zend_hash_graceful_destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_graceful_destroy.xml
+END
+add_index_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_unicode.xml
+END
+zend_hash_internal_pointer_end.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_internal_pointer_end.xml
+END
+open_file_for_scanning.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/open_file_for_scanning.xml
+END
+zend_update_static_property_ascii_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_ascii_stringl.xml
+END
+zval_ptr_dtor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zval_ptr_dtor.xml
+END
+zend_declare_class_constant_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_class_constant_long.xml
+END
+zend_std_call_user_call.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_std_call_user_call.xml
+END
+zend_set_user_opcode_handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_set_user_opcode_handler.xml
+END
+get_active_class_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/get_active_class_name.xml
+END
+add_property_resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_resource.xml
+END
+add_get_index_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_index_string.xml
+END
+zend_wrong_param_count.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_wrong_param_count.xml
+END
+add_index_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_string.xml
+END
+zend_call_method_with_0_params.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_call_method_with_0_params.xml
+END
+zend_error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_error.xml
+END
+zend_parse_parameters_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_parse_parameters_ex.xml
+END
+zend_is_callable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_is_callable.xml
+END
+zend_u_hash_init.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_init.xml
+END
+zend_update_static_property_ascii_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_ascii_string.xml
+END
+zend_update_property_rt_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_rt_stringl.xml
+END
+zend_list_insert.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_list_insert.xml
+END
+add_property_double_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_double_ex.xml
+END
+add_next_index_resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_resource.xml
+END
+zend_register_internal_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_internal_class.xml
+END
+zend_update_property_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_long.xml
+END
+add_index_resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_resource.xml
+END
+zend_hash_init.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_init.xml
+END
+zend_hash_apply_with_arguments.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_apply_with_arguments.xml
+END
+zend_convert_scanner_output.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_convert_scanner_output.xml
+END
+zend_eval_string_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_eval_string_ex.xml
+END
+zend_unmangle_property_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_unmangle_property_name.xml
+END
+zend_merge_properties.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_merge_properties.xml
+END
+zend_object_store_ctor_failed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_object_store_ctor_failed.xml
+END
+zend_hash_quick_find.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_quick_find.xml
+END
+add_get_assoc_string_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_assoc_string_ex.xml
+END
+zend_std_unset_static_property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_std_unset_static_property.xml
+END
+zend_update_property_ascii_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_ascii_string.xml
+END
+zend_check_protected.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_check_protected.xml
+END
+add_next_index_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_zval.xml
+END
+eustrdup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/eustrdup.xml
+END
+zend_symtable_update_current_key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_symtable_update_current_key.xml
+END
+zend_stream_getc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_stream_getc.xml
+END
+zend_rsrc_list_get_rsrc_type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_rsrc_list_get_rsrc_type.xml
+END
+zend_declare_class_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_class_constant.xml
+END
+zend_update_static_property_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_stringl.xml
+END
+zend_get_zval_ptr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_zval_ptr.xml
+END
+zend_u_eval_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_eval_string.xml
+END
+add_next_index_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_unicode.xml
+END
+zend_update_static_property_rt_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_rt_stringl.xml
+END
+destroy_op_array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/destroy_op_array.xml
+END
+zend_cleanup_class_data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_cleanup_class_data.xml
+END
+add_property_null.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_null.xml
+END
+compile_file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/compile_file.xml
+END
+zend_make_printable_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_make_printable_zval.xml
+END
+get_unary_op.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/get_unary_op.xml
+END
+zend_reset_locale_deps.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_reset_locale_deps.xml
+END
+add_next_index_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_long.xml
+END
+zend_hash_internal_pointer_reset_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_internal_pointer_reset_ex.xml
+END
+zend_function_dtor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_function_dtor.xml
+END
+add_index_unset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_unset.xml
+END
+zend_zval_type_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_zval_type_name.xml
+END
+add_property_rt_stringl_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_rt_stringl_ex.xml
+END
+array_init.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/array_init.xml
+END
+add_property_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_unicode.xml
+END
+zend_declare_class_constant_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_class_constant_string.xml
+END
+do_bind_function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/do_bind_function.xml
+END
+zend_ustrndup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ustrndup.xml
+END
+add_get_assoc_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_assoc_string.xml
+END
+add_assoc_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_string.xml
+END
+highlight_file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/highlight_file.xml
+END
+zend_hash_quick_add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_quick_add.xml
+END
+zend_hash_move_forward_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_move_forward_ex.xml
+END
+zend_hash_get_current_key_type_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_get_current_key_type_ex.xml
+END
+add_property_unicodel_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_unicodel_ex.xml
+END
+add_assoc_stringl_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_stringl_ex.xml
+END
+add_next_index_binary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_binary.xml
+END
+zend_objects_store_call_destructors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_call_destructors.xml
+END
+zend_hash_init_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_init_ex.xml
+END
+add_property_rt_string_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_rt_string_ex.xml
+END
+zend_restore_ini_entry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_restore_ini_entry.xml
+END
+zend_u_symtable_exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_symtable_exists.xml
+END
+zend_symtable_del.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_symtable_del.xml
+END
+zend_declare_property_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_property_stringl.xml
+END
+zend_ini_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_string.xml
+END
+add_assoc_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_unicode.xml
+END
+zend_object_store_get_object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_object_store_get_object.xml
+END
+zend_declare_class_constant_bool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_class_constant_bool.xml
+END
+zend_call_method.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_call_method.xml
+END
+zend_hash_index_update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_index_update.xml
+END
+add_assoc_unicodel_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_unicodel_ex.xml
+END
+add_assoc_unset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_unset.xml
+END
+zend_list_addref.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_list_addref.xml
+END
+zend_symtable_update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_symtable_update.xml
+END
+zend_cleanup_function_data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_cleanup_function_data.xml
+END
+zend_is_executing.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_is_executing.xml
+END
+zend_stream_read.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_stream_read.xml
+END
+zend_delete_global_variable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_delete_global_variable.xml
+END
+zend_update_static_property_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_double.xml
+END
+zend_hash_add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_add.xml
+END
+zend_hash_update_current_key_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_update_current_key_ex.xml
+END
+zend_declare_property_null.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_property_null.xml
+END
+zend_hash_num_elements.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_num_elements.xml
+END
+zend_declare_property_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_property_ex.xml
+END
+start_memory_manager.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/start_memory_manager.xml
+END
+zend_update_property_bool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_bool.xml
+END
+add_property_null_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_null_ex.xml
+END
+zend_do_fcall.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_do_fcall.xml
+END
+zend_std_get_static_property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_std_get_static_property.xml
+END
+add_property_ascii_string_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_ascii_string_ex.xml
+END
+zend_u_hash_exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_exists.xml
+END
+zend_hash_get_current_data_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_get_current_data_ex.xml
+END
+zend_convert_encodings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_convert_encodings.xml
+END
+zend_objects_store_add_ref.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_add_ref.xml
+END
+zend_is_true.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_is_true.xml
+END
+zend_hash_copy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_copy.xml
+END
+zend_hash_rehash.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_rehash.xml
+END
+zend_get_scanned_file_offset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_scanned_file_offset.xml
+END
+zend_print_flat_zval_r.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_print_flat_zval_r.xml
+END
+zend_file_handle_dtor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_file_handle_dtor.xml
+END
+add_assoc_string_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_string_ex.xml
+END
+zend_make_compiled_string_description.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_make_compiled_string_description.xml
+END
+zend_hash_reverse_apply.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_reverse_apply.xml
+END
+add_next_index_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_string.xml
+END
+zend_register_module_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_module_ex.xml
+END
+zend_hash_update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_update.xml
+END
+add_assoc_null_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_null_ex.xml
+END
+add_property_ascii_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_ascii_stringl.xml
+END
+zend_update_static_property_null.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_null.xml
+END
+zend_do_inherit_interfaces.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_do_inherit_interfaces.xml
+END
+zend_disable_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_disable_class.xml
+END
+zend_restore_compiled_script_encoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_restore_compiled_script_encoding.xml
+END
+zend_hash_compare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_compare.xml
+END
+zval_unicode_to_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zval_unicode_to_string.xml
+END
+zend_do_implement_interface.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_do_implement_interface.xml
+END
+zend_u_eval_string_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_eval_string_ex.xml
+END
+zend_u_unmangle_property_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_unmangle_property_name.xml
+END
+zend_hash_index_del.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_index_del.xml
+END
+zend_get_compiled_variable_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_compiled_variable_name.xml
+END
+zend_print_variable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_print_variable.xml
+END
+add_assoc_unicode_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_unicode_ex.xml
+END
+zend_hash_merge.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_merge.xml
+END
+zval_internal_ptr_dtor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zval_internal_ptr_dtor.xml
+END
+zend_register_default_classes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_default_classes.xml
+END
+zend_print_zval_r_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_print_zval_r_ex.xml
+END
+zend_startup_module.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_startup_module.xml
+END
+add_assoc_resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_resource.xml
+END
+zend_check_private.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_check_private.xml
+END
+add_property_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_zval.xml
+END
+add_next_index_bool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_bool.xml
+END
+zend_update_property_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_string.xml
+END
+zend_register_list_destructors_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_list_destructors_ex.xml
+END
+zend_register_ini_entries.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_ini_entries.xml
+END
+zend_is_compiling.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_is_compiling.xml
+END
+add_get_index_binaryl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_index_binaryl.xml
+END
+zend_get_hash_value.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_hash_value.xml
+END
+zend_initialize_class_data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_initialize_class_data.xml
+END
+zval_internal_dtor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zval_internal_dtor.xml
+END
+zend_register_list_destructors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_list_destructors.xml
+END
+zend_is_auto_global.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_is_auto_global.xml
+END
+zend_update_property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property.xml
+END
+zend_update_static_property_rt_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_rt_string.xml
+END
+zend_update_property_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_stringl.xml
+END
+zend_declare_property_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_property_string.xml
+END
+add_property_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_long.xml
+END
+zend_hash_next_index_insert.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_next_index_insert.xml
+END
+free_estring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/free_estring.xml
+END
+zend_cmp_unicode_and_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_cmp_unicode_and_string.xml
+END
+zend_objects_new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_new.xml
+END
+add_property_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_string.xml
+END
+zend_class_implements.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_class_implements.xml
+END
+zend_destroy_file_handle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_destroy_file_handle.xml
+END
+zend_u_hash_find.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_find.xml
+END
+add_method.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_method.xml
+END
+zend_get_executed_lineno.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_executed_lineno.xml
+END
+zend_ini_shutdown.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_shutdown.xml
+END
+add_property_stringl_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_stringl_ex.xml
+END
+add_property_ascii_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_ascii_string.xml
+END
+zend_u_hash_quick_add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_quick_add.xml
+END
+zend_objects_store_destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_destroy.xml
+END
+execute_internal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/execute_internal.xml
+END
+add_index_binaryl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_binaryl.xml
+END
+zend_u_register_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_register_constant.xml
+END
+zend_u_lookup_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_lookup_class.xml
+END
+add_property_ascii_stringl_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_ascii_stringl_ex.xml
+END
+zend_hash_add_empty_element.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_add_empty_element.xml
+END
+zend_std_cast_object_tostring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_std_cast_object_tostring.xml
+END
+zend_hash_find.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_find.xml
+END
+zend_print_zval_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_print_zval_ex.xml
+END
+zend_u_declare_property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_declare_property.xml
+END
+add_property_long_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_long_ex.xml
+END
+zend_convert_to_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_convert_to_unicode.xml
+END
+add_index_null.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_null.xml
+END
+call_user_function_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/call_user_function_ex.xml
+END
+add_assoc_null.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_null.xml
+END
+zend_call_method_with_2_params.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_call_method_with_2_params.xml
+END
+zend_u_hash_del.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_del.xml
+END
+zend_register_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_constant.xml
+END
+zend_hash_update_current_key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_update_current_key.xml
+END
+zend_set_timeout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_set_timeout.xml
+END
+zend_exception_get_default.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_exception_get_default.xml
+END
+zend_get_parameters.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_parameters.xml
+END
+zend_u_hash_quick_update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_quick_update.xml
+END
+object_init_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/object_init_ex.xml
+END
+add_assoc_function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_function.xml
+END
+zend_exception_error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_exception_error.xml
+END
+zend_ini_deactivate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_deactivate.xml
+END
+zend_get_unified_string_type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_unified_string_type.xml
+END
+zend_hash_index_find.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_index_find.xml
+END
+zend_u_delete_global_variable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_delete_global_variable.xml
+END
+add_assoc_long_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_long_ex.xml
+END
+lex_scan.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/lex_scan.xml
+END
+destroy_zend_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/destroy_zend_class.xml
+END
+zend_ini_sort_entries.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_sort_entries.xml
+END
+add_get_index_unicodel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_index_unicodel.xml
+END
+zend_stream_ftell.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_stream_ftell.xml
+END
+zend_hash_quick_update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_quick_update.xml
+END
+execute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/execute.xml
+END
+zend_declare_property_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_property_long.xml
+END
+zend_message_dispatcher.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_message_dispatcher.xml
+END
+zend_output_debug_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_output_debug_string.xml
+END
+zend_get_compiled_variable_value.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_compiled_variable_value.xml
+END
+zend_parse_method_parameters.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_parse_method_parameters.xml
+END
+zend_list_delete.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_list_delete.xml
+END
+zend_strndup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_strndup.xml
+END
+get_binary_op.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/get_binary_op.xml
+END
+zend_update_static_property_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_unicode.xml
+END
+zend_get_user_opcode_handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_user_opcode_handler.xml
+END
+zend_case_fold_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_case_fold_string.xml
+END
+add_next_index_unset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_unset.xml
+END
+zend_update_static_property_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_long.xml
+END
+add_next_index_binaryl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_binaryl.xml
+END
+add_property_unicode_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_unicode_ex.xml
+END
+zend_fetch_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_fetch_class.xml
+END
+zend_unregister_functions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_unregister_functions.xml
+END
+zend_get_class_entry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_class_entry.xml
+END
+zend_get_compiled_script_encoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_compiled_script_encoding.xml
+END
+zend_get_zval_ptr_ptr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_zval_ptr_ptr.xml
+END
+add_property_bool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_bool.xml
+END
+zend_objects_store_init.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_init.xml
+END
+zend_fetch_list_dtor_id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_fetch_list_dtor_id.xml
+END
+zend_u_mangle_property_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_mangle_property_name.xml
+END
+zend_hash_destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_destroy.xml
+END
+add_property_unicodel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_unicodel.xml
+END
+zend_register_stringl_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_stringl_constant.xml
+END
+zend_html_putc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_html_putc.xml
+END
+add_get_index_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_index_stringl.xml
+END
+zend_strip.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_strip.xml
+END
+zend_u_get_hash_value.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_get_hash_value.xml
+END
+zend_reset_all_cv.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_reset_all_cv.xml
+END
+zend_u_hash_quick_find.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_quick_find.xml
+END
+zend_u_is_auto_global.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_is_auto_global.xml
+END
+highlight_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/highlight_string.xml
+END
+add_next_index_unicodel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_unicodel.xml
+END
+add_property_resource_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_resource_ex.xml
+END
+zend_html_puts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_html_puts.xml
+END
+zend_read_property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_read_property.xml
+END
+zend_unregister_ini_entries.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_unregister_ini_entries.xml
+END
+zend_u_symtable_update_current_key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_symtable_update_current_key.xml
+END
+add_index_unicodel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_unicodel.xml
+END
+add_property_rt_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_rt_stringl.xml
+END
+get_zend_version.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/get_zend_version.xml
+END
+add_assoc_double_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_double_ex.xml
+END
+estrndup_rel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/estrndup_rel.xml
+END
+zend_timeout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_timeout.xml
+END
+add_get_index_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_index_double.xml
+END
+add_index_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_double.xml
+END
+zend_register_module.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_module.xml
+END
+add_index_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_zval.xml
+END
+add_assoc_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_zval.xml
+END
+zend_register_auto_global.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_auto_global.xml
+END
+zend_objects_store_put.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_put.xml
+END
+zend_parse_parameters.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_parse_parameters.xml
+END
+zend_update_static_property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property.xml
+END
+zend_get_std_object_handlers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_std_object_handlers.xml
+END
+zend_declare_class_constant_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_class_constant_stringl.xml
+END
+zend_update_property_ascii_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_ascii_stringl.xml
+END
+zval_add_ref.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zval_add_ref.xml
+END
+add_index_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_stringl.xml
+END
+add_assoc_resource_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_resource_ex.xml
+END
+zend_startup_module_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_startup_module_ex.xml
+END
+zend_get_error_exception.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_error_exception.xml
+END
+zend_stream_fixup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_stream_fixup.xml
+END
+zend_u_hash_add_empty_element.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_add_empty_element.xml
+END
+zend_highlight.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_highlight.xml
+END
+zend_disable_function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_disable_function.xml
+END
+zend_convert_from_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_convert_from_unicode.xml
+END
+eustrndup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/eustrndup.xml
+END
+zend_print_zval_r.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_print_zval_r.xml
+END
+zend_register_functions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_functions.xml
+END
+zend_u_get_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_get_constant.xml
+END
+zend_eval_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_eval_string.xml
+END
+full_mem_check.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/full_mem_check.xml
+END
+zend_declare_property_bool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_property_bool.xml
+END
+add_index_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_long.xml
+END
+add_assoc_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_long.xml
+END
+zend_objects_store_clone_obj.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_clone_obj.xml
+END
+zend_stream_close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_stream_close.xml
+END
+zend_check_magic_method_implementation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_check_magic_method_implementation.xml
+END
+zend_u_hash_func.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_func.xml
+END
+zend_update_static_property_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_string.xml
+END
+estrndup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/estrndup.xml
+END
+zval_string_to_unicode_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zval_string_to_unicode_ex.xml
+END
+zend_register_interfaces.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_interfaces.xml
+END
+zend_get_module_version.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_module_version.xml
+END
+add_property_unset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_unset.xml
+END
+zend_hash_sort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_sort.xml
+END
+zend_hash_next_free_element.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_next_free_element.xml
+END
+zend_hash_merge_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_merge_ex.xml
+END
+zend_hash_func.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_func.xml
+END
+compile_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/compile_string.xml
+END
+do_bind_inherited_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/do_bind_inherited_class.xml
+END
+zend_lookup_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_lookup_class.xml
+END
+zend_hash_graceful_reverse_destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_graceful_reverse_destroy.xml
+END
+get_active_function_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/get_active_function_name.xml
+END
+zend_declare_property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_property.xml
+END
+zend_ini_refresh_caches.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_refresh_caches.xml
+END
+zend_u_symtable_find.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_symtable_find.xml
+END
+zend_u_symtable_update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_symtable_update.xml
+END
+zend_hash_del.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_del.xml
+END
+object_and_properties_init.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/object_and_properties_init.xml
+END
+zend_update_static_property_bool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_bool.xml
+END
+zend_hash_index_exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_index_exists.xml
+END
+zend_stream_ferror.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_stream_ferror.xml
+END
+zend_do_inheritance.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_do_inheritance.xml
+END
+zend_list_find.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_list_find.xml
+END
+shutdown_memory_manager.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/shutdown_memory_manager.xml
+END
+display_ini_entries.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/display_ini_entries.xml
+END
+zend_strtod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_strtod.xml
+END
+zend_symtable_exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_symtable_exists.xml
+END
+zend_call_function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_call_function.xml
+END
+zend_symtable_find.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_symtable_find.xml
+END
+zend_auto_global_disable_jit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_auto_global_disable_jit.xml
+END
+zend_update_property_rt_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_rt_string.xml
+END
+zend_cmp_unicode_and_literal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_cmp_unicode_and_literal.xml
+END
+zend_u_declare_property_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_declare_property_ex.xml
+END
+zend_hash_apply_with_argument.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_apply_with_argument.xml
+END
+zend_objects_store_del_ref.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_del_ref.xml
+END
+zend_declare_class_constant_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_class_constant_double.xml
+END
+zend_alter_ini_entry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_alter_ini_entry.xml
+END
+zend_register_double_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_double_constant.xml
+END
+zend_call_method_with_1_params.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_call_method_with_1_params.xml
+END
+add_assoc_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_double.xml
+END
+zend_ini_global_shutdown.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_global_shutdown.xml
+END
+zend_hash_get_current_key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_get_current_key.xml
+END
+zend_make_callable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_make_callable.xml
+END
+zend_update_property_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_unicode.xml
+END
+zend_hash_move_forward.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_move_forward.xml
+END
+zend_hash_get_current_key_type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_get_current_key_type.xml
+END
+zend_objects_get_address.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_get_address.xml
+END
+add_property_string_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_string_ex.xml
+END
+zend_get_compiled_lineno.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_compiled_lineno.xml
+END
+add_next_index_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_stringl.xml
+END
+add_get_assoc_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_assoc_stringl.xml
+END
+do_bind_class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/do_bind_class.xml
+END
+zend_get_configuration_directive.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_configuration_directive.xml
+END
+zend_objects_free_object_storage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_free_object_storage.xml
+END
+zend_throw_exception_object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_throw_exception_object.xml
+END
+compile_filename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/compile_filename.xml
+END
+zend_update_property_unicodel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_unicodel.xml
+END
+object_init.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/object_init.xml
+END
+zend_ini_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_double.xml
+END
+zend_u_hash_update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_update.xml
+END
+zend_get_module_started.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_module_started.xml
+END
+add_get_index_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_index_long.xml
+END
+add_property_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_stringl.xml
+END
+zend_u_lookup_class_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_lookup_class_ex.xml
+END
+zend_prepare_scanner_converters.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_prepare_scanner_converters.xml
+END
+zend_hash_exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_exists.xml
+END
+zend_hash_move_backwards_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_move_backwards_ex.xml
+END
+zend_read_static_property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_read_static_property.xml
+END
+zend_copy_ini_directives.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_copy_ini_directives.xml
+END
+zend_startup_modules.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_startup_modules.xml
+END
+zend_u_hash_del_key_or_index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_del_key_or_index.xml
+END
+zval_string_to_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zval_string_to_unicode.xml
+END
+zend_is_valid_identifier.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_is_valid_identifier.xml
+END
+zend_get_parameters_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_parameters_ex.xml
+END
+zend_fetch_debug_backtrace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_fetch_debug_backtrace.xml
+END
+call_user_function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/call_user_function.xml
+END
+zend_ini_long.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_long.xml
+END
+zend_set_compiled_script_encoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_set_compiled_script_encoding.xml
+END
+add_assoc_stringl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_stringl.xml
+END
+zend_normalize_identifier.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_normalize_identifier.xml
+END
+add_property_zval_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_zval_ex.xml
+END
+zend_get_executed_filename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_executed_filename.xml
+END
+zend_hash_del_key_or_index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_del_key_or_index.xml
+END
+zend_mangle_property_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_mangle_property_name.xml
+END
+zval_update_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zval_update_constant.xml
+END
+zend_parse_ini_file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_parse_ini_file.xml
+END
+zend_qsort.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_qsort.xml
+END
+add_index_bool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_bool.xml
+END
+add_assoc_bool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_bool.xml
+END
+eustrndup_rel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/eustrndup_rel.xml
+END
+add_u_assoc_zval_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_u_assoc_zval_ex.xml
+END
+zend_stream_open.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_stream_open.xml
+END
+zend_hash_get_current_data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_get_current_data.xml
+END
+init_op_array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/init_op_array.xml
+END
+zend_make_unicode_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_make_unicode_zval.xml
+END
+add_u_assoc_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_u_assoc_zval.xml
+END
+zend_update_property_null.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_null.xml
+END
+add_assoc_unicodel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_unicodel.xml
+END
+add_property_bool_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_bool_ex.xml
+END
+zend_objects_clone_members.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_clone_members.xml
+END
+zend_hash_clean.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_clean.xml
+END
+add_next_index_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_double.xml
+END
+add_assoc_zval_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_zval_ex.xml
+END
+zend_object_create_proxy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_object_create_proxy.xml
+END
+zend_copy_parameters_array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_copy_parameters_array.xml
+END
+zend_bailout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_bailout.xml
+END
+zend_fetch_resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_fetch_resource.xml
+END
+register_list_destructors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/register_list_destructors.xml
+END
+zend_ini_startup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_startup.xml
+END
+mem_block_check.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/mem_block_check.xml
+END
+add_assoc_bool_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_assoc_bool_ex.xml
+END
+add_property_rt_string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_rt_string.xml
+END
+zend_update_property_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_property_double.xml
+END
+zend_set_memory_limit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_set_memory_limit.xml
+END
+zend_register_string_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_string_constant.xml
+END
+zend_register_internal_module.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_internal_module.xml
+END
+zend_is_callable_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_is_callable_ex.xml
+END
+zend_u_hash_init_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_init_ex.xml
+END
+add_next_index_null.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_next_index_null.xml
+END
+zend_get_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_constant.xml
+END
+zend_objects_destroy_object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_destroy_object.xml
+END
+zend_print_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_print_zval.xml
+END
+zend_u_symtable_del.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_symtable_del.xml
+END
+zend_parse_method_parameters_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_parse_method_parameters_ex.xml
+END
+zend_hash_move_backwards.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_move_backwards.xml
+END
+zend_get_compiled_filename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_compiled_filename.xml
+END
+zend_register_resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_resource.xml
+END
+zend_get_parameters_array_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_parameters_array_ex.xml
+END
+zend_declare_property_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_declare_property_double.xml
+END
+add_get_assoc_stringl_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_assoc_stringl_ex.xml
+END
+destroy_zend_function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/destroy_zend_function.xml
+END
+zend_ini_register_displayer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_ini_register_displayer.xml
+END
+zend_restore_compiled_filename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_restore_compiled_filename.xml
+END
+zend_get_parameters_array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_parameters_array.xml
+END
+zend_register_internal_interface.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_internal_interface.xml
+END
+zend_hash_internal_pointer_end_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_internal_pointer_end_ex.xml
+END
+add_get_index_binary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_index_binary.xml
+END
+zend_u_hash_quick_exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_quick_exists.xml
+END
+add_index_binary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_index_binary.xml
+END
+zend_objects_clone_obj.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_clone_obj.xml
+END
+zend_update_class_constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_class_constants.xml
+END
+add_get_index_unicode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_get_index_unicode.xml
+END
+zend_objects_store_mark_destructed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_mark_destructed.xml
+END
+add_property_double.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/add_property_double.xml
+END
+zend_set_compiled_filename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_set_compiled_filename.xml
+END
+zend_execute_scripts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_execute_scripts.xml
+END
+function_add_ref.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/function_add_ref.xml
+END
+zend_register_long_constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_register_long_constant.xml
+END
+zend_hash_quick_exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_quick_exists.xml
+END
+zend_u_hash_add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_u_hash_add.xml
+END
+zend_update_static_property_unicodel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_update_static_property_unicodel.xml
+END
+zend_objects_store_free_object_storage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_objects_store_free_object_storage.xml
+END
+zend_hash_internal_pointer_reset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_internal_pointer_reset.xml
+END
+zend_object_store_set_object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_object_store_set_object.xml
+END
+zend_hash_get_current_key_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_get_current_key_ex.xml
+END
+zend_hash_apply.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_apply.xml
+END
+zend_get_object_classname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_get_object_classname.xml
+END
+zend_hash_minmax.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_hash_minmax.xml
+END
+zend_make_string_zval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/zendapi/functions/zend_make_string_zval.xml
+END

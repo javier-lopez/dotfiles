@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions
+END
+bcmul.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcmul.xml
+END
+bccomp.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bccomp.xml
+END
+bcmod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcmod.xml
+END
+bcdiv.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcdiv.xml
+END
+bcpow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcpow.xml
+END
+bcpowmod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcpowmod.xml
+END
+bcscale.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcscale.xml
+END
+bcadd.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcadd.xml
+END
+bcsqrt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcsqrt.xml
+END
+bcsub.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bc/functions/bcsub.xml
+END

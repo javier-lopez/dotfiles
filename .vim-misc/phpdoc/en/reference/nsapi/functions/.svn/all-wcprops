@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/nsapi/functions
+END
+nsapi-request-headers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/nsapi/functions/nsapi-request-headers.xml
+END
+nsapi-virtual.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/nsapi/functions/nsapi-virtual.xml
+END
+nsapi-response-headers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/nsapi/functions/nsapi-response-headers.xml
+END

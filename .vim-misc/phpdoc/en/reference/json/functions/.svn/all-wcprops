@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/json/functions
+END
+json-last-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/json/functions/json-last-error.xml
+END
+json-encode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/json/functions/json-encode.xml
+END
+json-decode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/json/functions/json-decode.xml
+END

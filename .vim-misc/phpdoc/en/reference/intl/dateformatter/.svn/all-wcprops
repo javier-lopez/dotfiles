@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter
+END
+get-calendar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/get-calendar.xml
+END
+set-lenient.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/set-lenient.xml
+END
+format.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/format.xml
+END
+get-error-message.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/get-error-message.xml
+END
+get-pattern.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/get-pattern.xml
+END
+get-datetype.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/get-datetype.xml
+END
+get-timezone-id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/get-timezone-id.xml
+END
+set-calendar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/set-calendar.xml
+END
+create.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/create.xml
+END
+set-pattern.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/set-pattern.xml
+END
+is-lenient.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/is-lenient.xml
+END
+localtime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/localtime.xml
+END
+parse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/parse.xml
+END
+get-locale.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/get-locale.xml
+END
+get-timetype.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/get-timetype.xml
+END
+set-timezone-id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/set-timezone-id.xml
+END
+get-error-code.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/dateformatter/get-error-code.xml
+END

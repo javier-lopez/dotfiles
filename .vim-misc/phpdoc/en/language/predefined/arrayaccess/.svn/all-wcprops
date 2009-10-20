@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/arrayaccess
+END
+offsetset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/arrayaccess/offsetset.xml
+END
+offsetunset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/arrayaccess/offsetunset.xml
+END
+offsetexists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/arrayaccess/offsetexists.xml
+END
+offsetget.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/arrayaccess/offsetget.xml
+END

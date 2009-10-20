@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator
+END
+getfilename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getfilename.xml
+END
+gettype.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/gettype.xml
+END
+isdot.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/isdot.xml
+END
+current.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/current.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/construct.xml
+END
+getperms.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getperms.xml
+END
+seek.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/seek.xml
+END
+rewind.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/rewind.xml
+END
+key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/key.xml
+END
+islink.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/islink.xml
+END
+getowner.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getowner.xml
+END
+isreadable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/isreadable.xml
+END
+getgroup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getgroup.xml
+END
+getpath.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getpath.xml
+END
+getpathname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getpathname.xml
+END
+getinode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getinode.xml
+END
+getatime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getatime.xml
+END
+valid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/valid.xml
+END
+getctime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getctime.xml
+END
+iswritable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/iswritable.xml
+END
+tostring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/tostring.xml
+END
+isdir.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/isdir.xml
+END
+getsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getsize.xml
+END
+getmtime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getmtime.xml
+END
+getbasename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/getbasename.xml
+END
+isfile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/isfile.xml
+END
+isexecutable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/isexecutable.xml
+END
+next.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/directoryiterator/next.xml
+END

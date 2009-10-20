@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/soap/functions
+END
+is-soap-fault.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/soap/functions/is-soap-fault.xml
+END
+use-soap-error-handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/soap/functions/use-soap-error-handler.xml
+END

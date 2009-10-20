@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw
+END
+bezier.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/bezier.xml
+END
+setstrokecolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setstrokecolor.xml
+END
+setfont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setfont.xml
+END
+scale.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/scale.xml
+END
+polygon.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/polygon.xml
+END
+getfontstyle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getfontstyle.xml
+END
+line.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/line.xml
+END
+setfontweight.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setfontweight.xml
+END
+polyline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/polyline.xml
+END
+gettextencoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/gettextencoding.xml
+END
+ellipse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/ellipse.xml
+END
+getfontsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getfontsize.xml
+END
+setfontstyle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setfontstyle.xml
+END
+arc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/arc.xml
+END
+settextencoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/settextencoding.xml
+END
+getstrokewidth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getstrokewidth.xml
+END
+annotate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/annotate.xml
+END
+setfontsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setfontsize.xml
+END
+getfillopacity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getfillopacity.xml
+END
+setstrokewidth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setstrokewidth.xml
+END
+getfillcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getfillcolor.xml
+END
+point.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/point.xml
+END
+setfillopacity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setfillopacity.xml
+END
+gettextdecoration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/gettextdecoration.xml
+END
+rotate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/rotate.xml
+END
+getstrokeopacity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getstrokeopacity.xml
+END
+setfillcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setfillcolor.xml
+END
+rectangle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/rectangle.xml
+END
+getstrokecolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getstrokecolor.xml
+END
+getfont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getfont.xml
+END
+settextdecoration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/settextdecoration.xml
+END
+setstrokeopacity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/setstrokeopacity.xml
+END
+roundrectangle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/roundrectangle.xml
+END
+getfontweight.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmagick/gmagickdraw/getfontweight.xml
+END

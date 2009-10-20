@@ -1,0 +1,67 @@
+*get_class* -- Returns the name of the class of an object
+
+  string get_class([object object])~
+
+Gets the name of the class of the given {object}.
+
+{object} The tested object
+
+Returns the name of the class of which {object} is an instance. Returns FALSE
+if {object} is not an object.
+
+Version Description Since 5.0.0 The class name is returned in its original
+notation. Since 5.0.0 The {object} parameter is optional if called from the
+object's method.
+
+Using |get_class|
+
+<?php >
+  class foo {
+      function name()
+      {
+          echo "My name is " , get_class($this) , "\n";
+      }
+  }
+  
+  // create an object
+  $bar = new foo();
+  
+  // external call
+  echo "Its name is " , get_class($bar) , "\n";
+  
+  // internal call
+  $bar->name();
+?>
+
+The above example will output:
+
+  Its name is foo
+  My name is foo
+
+Using |get_class| in superclass
+
+<?php >
+  abstract class bar {
+  	public function __construct()
+  	{
+  		var_dump(get_class($this));
+  		var_dump(get_class());
+  	}
+  }
+  
+  class foo extends bar {
+  }
+  
+  new foo;
+?>
+
+The above example will output:
+
+  string(3) "foo"
+  string(3) "bar"
+
+
+
+|get_parent_class| |gettype| |is_subclass_of|
+
+vim:ft=help:

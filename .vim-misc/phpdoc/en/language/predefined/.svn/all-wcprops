@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined
+END
+arrayaccess.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/arrayaccess.xml
+END
+iteratoraggregate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/iteratoraggregate.xml
+END
+exceptions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/exceptions.xml
+END
+interfaces.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/interfaces.xml
+END
+serializable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/serializable.xml
+END
+versions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/versions.xml
+END
+variables.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/variables.xml
+END
+errorexception.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/errorexception.xml
+END
+iterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/iterator.xml
+END
+traversable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/traversable.xml
+END
+exception.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/predefined/exception.xml
+END

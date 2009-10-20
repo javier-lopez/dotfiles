@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types
+END
+pseudo-types.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/pseudo-types.xml
+END
+float.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/float.xml
+END
+type-juggling.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/type-juggling.xml
+END
+object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/object.xml
+END
+string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/string.xml
+END
+resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/resource.xml
+END
+null.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/null.xml
+END
+integer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/integer.xml
+END
+array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/array.xml
+END
+boolean.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types/boolean.xml
+END

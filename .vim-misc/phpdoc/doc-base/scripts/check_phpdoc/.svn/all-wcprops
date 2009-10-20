@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/277602/phpdoc/doc-base/trunk/scripts/check_phpdoc
+END
+build.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/277602/phpdoc/doc-base/trunk/scripts/check_phpdoc/build.php
+END
+view_check_phpdoc.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/277602/phpdoc/doc-base/trunk/scripts/check_phpdoc/view_check_phpdoc.php
+END

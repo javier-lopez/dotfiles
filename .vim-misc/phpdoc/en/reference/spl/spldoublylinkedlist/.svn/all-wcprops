@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist
+END
+unshift.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/unshift.xml
+END
+current.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/current.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/construct.xml
+END
+offsetexists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/offsetexists.xml
+END
+offsetget.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/offsetget.xml
+END
+count.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/count.xml
+END
+key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/key.xml
+END
+rewind.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/rewind.xml
+END
+isempty.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/isempty.xml
+END
+getiteratormode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/getiteratormode.xml
+END
+pop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/pop.xml
+END
+valid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/valid.xml
+END
+top.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/top.xml
+END
+offsetset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/offsetset.xml
+END
+bottom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/bottom.xml
+END
+offsetunset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/offsetunset.xml
+END
+setiteratormode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/setiteratormode.xml
+END
+prev.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/prev.xml
+END
+shift.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/shift.xml
+END
+next.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/next.xml
+END
+push.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/spl/spldoublylinkedlist/push.xml
+END

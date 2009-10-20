@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repository/!svn/ver/288902/phpdoc/en/trunk/reference/mysqli
+END
+configure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/configure.xml
+END
+mysqli_stmt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt.xml
+END
+mysqlnd.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqlnd.xml
+END
+mysqli_driver.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_driver.xml
+END
+book.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/book.xml
+END
+persistconns.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/persistconns.xml
+END
+summary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288902/phpdoc/en/trunk/reference/mysqli/summary.xml
+END
+reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/reference.xml
+END
+setup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/setup.xml
+END
+overview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/283826/phpdoc/en/trunk/reference/mysqli/overview.xml
+END
+versions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/versions.xml
+END
+constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/constants.xml
+END
+mysqli_result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_result.xml
+END
+mysqli.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli.xml
+END
+ini.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/ini.xml
+END

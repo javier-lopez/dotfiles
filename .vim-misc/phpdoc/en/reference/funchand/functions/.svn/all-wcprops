@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions
+END
+call-user-func.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/call-user-func.xml
+END
+register-shutdown-function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/register-shutdown-function.xml
+END
+get-defined-functions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/get-defined-functions.xml
+END
+forward-static-call.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/forward-static-call.xml
+END
+func-get-args.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/func-get-args.xml
+END
+func-num-args.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/func-num-args.xml
+END
+function-exists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/function-exists.xml
+END
+unregister-tick-function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/unregister-tick-function.xml
+END
+create-function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/create-function.xml
+END
+call-user-func-array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/call-user-func-array.xml
+END
+forward-static-call-array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/forward-static-call-array.xml
+END
+func-get-arg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/func-get-arg.xml
+END
+register-tick-function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/funchand/functions/register-tick-function.xml
+END

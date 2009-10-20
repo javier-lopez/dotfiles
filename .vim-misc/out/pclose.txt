@@ -1,0 +1,25 @@
+*pclose* -- Closes process file pointer
+
+  int pclose(resource handle)~
+
+Closes a file pointer to a pipe opened by |popen|.
+
+{handle} The file pointer must be valid, and must have been returned by a
+successful call to |popen|.
+
+Returns the termination status of the process that was run.
+
+|pclose| example
+
+<?php >
+  $handle = popen('/bin/ls', 'r');
+  pclose($handle);
+?>
+
+
+
+
+
+|popen|
+
+vim:ft=help:

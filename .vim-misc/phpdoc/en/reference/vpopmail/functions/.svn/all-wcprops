@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions
+END
+vpopmail-alias-del.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-alias-del.xml
+END
+vpopmail-add-domain.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-add-domain.xml
+END
+vpopmail-set-user-quota.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-set-user-quota.xml
+END
+vpopmail-add-alias-domain-ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-add-alias-domain-ex.xml
+END
+vpopmail-alias-del-domain.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-alias-del-domain.xml
+END
+vpopmail-passwd.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-passwd.xml
+END
+vpopmail-add-user.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-add-user.xml
+END
+vpopmail-alias-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-alias-get.xml
+END
+vpopmail-add-domain-ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-add-domain-ex.xml
+END
+vpopmail-del-domain.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-del-domain.xml
+END
+vpopmail-alias-get-all.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-alias-get-all.xml
+END
+vpopmail-auth-user.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-auth-user.xml
+END
+vpopmail-alias-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-alias-add.xml
+END
+vpopmail-del-user.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-del-user.xml
+END
+vpopmail-del-domain-ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-del-domain-ex.xml
+END
+vpopmail-add-alias-domain.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-add-alias-domain.xml
+END
+vpopmail-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/vpopmail/functions/vpopmail-error.xml
+END

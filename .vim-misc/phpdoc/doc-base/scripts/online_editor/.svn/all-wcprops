@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/online_editor
+END
+base.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/online_editor/base.php
+END
+intro.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/online_editor/intro.php
+END
+viewvc-style.css
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/259149/phpdoc/doc-base/trunk/scripts/online_editor/viewvc-style.css
+END
+workbench.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/online_editor/workbench.php
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/259149/phpdoc/doc-base/trunk/scripts/online_editor/README.txt
+END
+cvsupdate.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/259149/phpdoc/doc-base/trunk/scripts/online_editor/cvsupdate.txt
+END
+editxml.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/online_editor/editxml.php
+END
+cvslist.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/online_editor/cvslist.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/259149/phpdoc/doc-base/trunk/scripts/online_editor/index.php
+END
+login.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/online_editor/login.php
+END

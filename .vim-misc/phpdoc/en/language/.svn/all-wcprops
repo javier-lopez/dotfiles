@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repository/!svn/ver/288721/phpdoc/en/trunk/language
+END
+exceptions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/exceptions.xml
+END
+references.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/references.xml
+END
+control-structures.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/control-structures.xml
+END
+expressions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/expressions.xml
+END
+oop5.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/oop5.xml
+END
+context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/context.xml
+END
+types.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/types.xml
+END
+basic-syntax.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/basic-syntax.xml
+END
+variables.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/variables.xml
+END
+functions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/functions.xml
+END
+constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/constants.xml
+END
+operators.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/operators.xml
+END
+namespaces.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/language/namespaces.xml
+END

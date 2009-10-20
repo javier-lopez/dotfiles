@@ -1,0 +1,103 @@
+*PA_translator.txt*           Translator plugin
+
+Translator plugin                                              *PA_translator*
+                                Version 0.0.3
+
+Plugin for easily translating single word or multiline sentences without leaving
+your VIM |:PA_translator|.
+
+|PA_translator-usage|          Usage
+|PA_translator-installation|   Installation
+|PA_translator-customization|  Customization
+|PA_translator-changelog|      Change Log
+|PA_translator-todo|           Todo
+|PA_translator-credits|        Credits
+
+For Vim version 7.0 and above.
+This plugin is only available if 'compatible' is not set and vim has been
+compiled with RUBY language support.
+It also requires access to network.
+
+{Vi does not have any of this}
+
+==============================================================================
+INSTALLATION                                      *PA_translator-installation*
+
+To install:
+  - Download the PA_translator.zip.
+  - Extract the zip archive into your runtime directory.
+    The archive contains plugin/PA_translator.vim, and doc/PA_translator.txt.
+  - Start Vim or goto an existing instance of Vim.
+  - Execute the following command:
+>
+      :helptag <your runtime directory/doc
+<
+    This will generate all the help tags for any file located in the doc
+    directory.
+  - By default plugin translate from English into Ukrainian (it is my native
+    language). You can change them by adding to your .vimrc: >
+
+       let g:PA_translator_from_lang = 'your_from_language_code'
+       let g:PA_translator_to_lang = 'your_to_language_code'
+<
+    Language codes are google translator API language codes.
+    DON'T FORGET SET YOUR LANGUAGE ENCODINGS.
+    Also see:|PA_translator-customization|
+
+==============================================================================
+USAGE                                                    *PA_translator-usage*
+
+ So, you are working with any document in foreign language and some word is 
+unknown to you. In normal mode, put cursor on this word and press ,tr (in
+previous versions: <A-Space>) buttons. The translation of the word will
+appear in command screen. If word can not be translated you will receive
+message: 'The `your_word` can not be translated by `translate.google.com`'.
+ To translate range of the words (sentences), go to visual mode by pressing
+<Esc>,<v> buttons. Select desired text, for instance, by <Shift-V> and
+after that press ,tr (in previous versions: <A-Space>).
+
+===============================================================================
+CUSTOMIZATION                                     *PA_translator-customization*
+
+The following options can be changed in your .vimrc file.
+
+                                          *g:PA_translator_printed_in_encoding*
+To control encoding of translation printed in command screen, use: >
+  let g:PA_translator_printed_in_encoding = &encoding  " default: VIM encoding
+  let g:PA_translator_printed_in_encoding = 'cp1251'   " some custom value
+<
+                                         *g:PA_translator_received_in_encoding*
+To control encoding of translation received from google translate service, use: >
+  let g:PA_translator_received_in_encoding = 'cp1215'  " default value
+
+<                                                   *g:PA_translator_from_lang*
+To control foreign language, use: >
+  let g:PA_translator_from_lang = 'en'                 " default: English
+
+<                                                     *g:PA_translator_to_lang*
+To control expected (your native) language, use: >
+  let g:PA_translator_to_lang = 'uk'                   " default: Ukrainian
+
+===============================================================================
+CHANGE LOG                                            *PA_translator-changelog*
+
+0.0.3  - Bug fixing: 1. IP host resolving fixed for linux/freebsd OS;
+                     2. `^M` unix/windows bug fixed;
+                     3. Default maps changed from <A-Space> to ,tr because many
+                        OS reserve such shortcuts;
+0.0.2  - Bug fixing: updated IP host resolving;
+0.0.1  - Initial release;
+
+===============================================================================
+TODO                                                       *PA_translator-todo*
+
+1. Possibility to select `into` language on the fly.
+
+===============================================================================
+CREDITS                                                 *PA_translator-credits*
+
+Author: Pukalskyy Andrij <andrijpu@gmail.com>
+
+===============================================================================
+vim:tw=78:noet:wrap:ts=8:ft=help:norl:
+

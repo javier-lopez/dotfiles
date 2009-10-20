@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions
+END
+win32-delete-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions/win32-delete-service.xml
+END
+win32-get-last-control-message.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions/win32-get-last-control-message.xml
+END
+win32-create-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions/win32-create-service.xml
+END
+win32-start-service-ctrl-dispatcher.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions/win32-start-service-ctrl-dispatcher.xml
+END
+win32-stop-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions/win32-stop-service.xml
+END
+win32-query-service-status.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions/win32-query-service-status.xml
+END
+win32-set-service-status.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions/win32-set-service-status.xml
+END
+win32-start-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/win32service/functions/win32-start-service.xml
+END

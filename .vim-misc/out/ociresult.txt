@@ -1,0 +1,5 @@
+*ociresult* -- Alias of oci_result
+
+This function is an alias of: |oci_result|.
+
+vim:ft=help:

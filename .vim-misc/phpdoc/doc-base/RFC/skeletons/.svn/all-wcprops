@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons
+END
+method.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/method.xml
+END
+setup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/setup.xml
+END
+configure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/configure.xml
+END
+function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/function.xml
+END
+classname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/classname.xml
+END
+versions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/versions.xml
+END
+book.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/book.xml
+END
+constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/constants.xml
+END
+examples.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/examples.xml
+END
+reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/reference.xml
+END
+exceptionname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/exceptionname.xml
+END
+ini.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/283871/phpdoc/doc-base/trunk/RFC/skeletons/ini.xml
+END

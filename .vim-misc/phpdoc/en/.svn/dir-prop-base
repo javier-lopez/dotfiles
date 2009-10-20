@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 31
+missing-ids.xml
+entities.*.xml
+
+K 20
+tsvn:projectlanguage
+V 4
+1033
+END

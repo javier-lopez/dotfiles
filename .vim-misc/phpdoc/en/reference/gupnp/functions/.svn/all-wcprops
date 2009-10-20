@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions
+END
+gupnp-control-point-callback-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-control-point-callback-set.xml
+END
+gupnp-service-proxy-set-subscribed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-proxy-set-subscribed.xml
+END
+gupnp-context-unhost-path.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-context-unhost-path.xml
+END
+gupnp-device-action-callback-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-device-action-callback-set.xml
+END
+gupnp-context-timeout-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-context-timeout-add.xml
+END
+gupnp-control-point-new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-control-point-new.xml
+END
+gupnp-root-device-stop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-root-device-stop.xml
+END
+gupnp-service-info-get-introspection.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-info-get-introspection.xml
+END
+gupnp-service-action-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-action-set.xml
+END
+gupnp-service-info-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-info-get.xml
+END
+gupnp-root-device-new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-root-device-new.xml
+END
+gupnp-service-thaw-notify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-thaw-notify.xml
+END
+gupnp-root-device-start.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-root-device-start.xml
+END
+gupnp-context-new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-context-new.xml
+END
+gupnp-service-proxy-add-notify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-proxy-add-notify.xml
+END
+gupnp-service-action-return-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-action-return-error.xml
+END
+gupnp-context-get-host-ip.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-context-get-host-ip.xml
+END
+gupnp-context-get-port.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-context-get-port.xml
+END
+gupnp-control-point-browse-stop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-control-point-browse-stop.xml
+END
+gupnp-context-host-path.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-context-host-path.xml
+END
+gupnp-control-point-browse-start.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-control-point-browse-start.xml
+END
+gupnp-service-proxy-callback-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-proxy-callback-set.xml
+END
+gupnp-device-info-get-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-device-info-get-service.xml
+END
+gupnp-device-info-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-device-info-get.xml
+END
+gupnp-service-notify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-notify.xml
+END
+gupnp-context-get-subscription-timeout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-context-get-subscription-timeout.xml
+END
+gupnp-service-proxy-action-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-proxy-action-get.xml
+END
+gupnp-root-device-get-available.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-root-device-get-available.xml
+END
+gupnp-root-device-get-relative-location.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-root-device-get-relative-location.xml
+END
+gupnp-service-introspection-get-state-variable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-introspection-get-state-variable.xml
+END
+gupnp-service-proxy-get-subscribed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-proxy-get-subscribed.xml
+END
+gupnp-service-proxy-remove-notify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-proxy-remove-notify.xml
+END
+gupnp-service-proxy-send-action.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-proxy-send-action.xml
+END
+gupnp-service-proxy-action-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-proxy-action-set.xml
+END
+gupnp-context-set-subscription-timeout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-context-set-subscription-timeout.xml
+END
+gupnp-service-freeze-notify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-freeze-notify.xml
+END
+gupnp-root-device-set-available.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-root-device-set-available.xml
+END
+gupnp-service-action-return.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-action-return.xml
+END
+gupnp-service-action-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gupnp/functions/gupnp-service-action-get.xml
+END

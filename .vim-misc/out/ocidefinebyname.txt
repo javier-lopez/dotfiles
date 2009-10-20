@@ -1,0 +1,5 @@
+*ocidefinebyname* -- Alias of oci_define_by_name
+
+This function is an alias of: |oci_define_by_name|.
+
+vim:ft=help:

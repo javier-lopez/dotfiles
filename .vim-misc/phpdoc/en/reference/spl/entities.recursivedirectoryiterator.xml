@@ -1,0 +1,5 @@
+&reference.spl.recursivedirectoryiterator.getchildren;
+&reference.spl.recursivedirectoryiterator.haschildren;
+&reference.spl.recursivedirectoryiterator.key;
+&reference.spl.recursivedirectoryiterator.next;
+&reference.spl.recursivedirectoryiterator.rewind;

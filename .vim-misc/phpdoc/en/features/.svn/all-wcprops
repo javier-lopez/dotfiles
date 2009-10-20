@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repository/!svn/ver/288721/phpdoc/en/trunk/features
+END
+persistent-connections.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/persistent-connections.xml
+END
+safe-mode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/safe-mode.xml
+END
+connection-handling.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/connection-handling.xml
+END
+file-upload.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/file-upload.xml
+END
+commandline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/commandline.xml
+END
+sessions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/sessions.xml
+END
+remote-files.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/remote-files.xml
+END
+cookies.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/cookies.xml
+END
+http-auth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/http-auth.xml
+END
+xforms.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repository/!svn/ver/288721/phpdoc/en/trunk/features/xforms.xml
+END

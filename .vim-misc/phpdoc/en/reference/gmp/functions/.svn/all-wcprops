@@ -1,0 +1,251 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions
+END
+gmp-and.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-and.xml
+END
+gmp-scan0.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-scan0.xml
+END
+gmp-pow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-pow.xml
+END
+gmp-abs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-abs.xml
+END
+gmp-scan1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-scan1.xml
+END
+gmp-popcount.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-popcount.xml
+END
+gmp-xor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-xor.xml
+END
+gmp-strval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-strval.xml
+END
+gmp-prob-prime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-prob-prime.xml
+END
+gmp-gcdext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-gcdext.xml
+END
+gmp-testbit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-testbit.xml
+END
+gmp-random.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-random.xml
+END
+gmp-powm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-powm.xml
+END
+gmp-legendre.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-legendre.xml
+END
+gmp-sqrt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-sqrt.xml
+END
+gmp-sqrtrem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-sqrtrem.xml
+END
+gmp-gcd.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-gcd.xml
+END
+gmp-sign.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-sign.xml
+END
+gmp-div-qr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-div-qr.xml
+END
+gmp-init.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-init.xml
+END
+gmp-divexact.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-divexact.xml
+END
+gmp-invert.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-invert.xml
+END
+gmp-neg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-neg.xml
+END
+gmp-nextprime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-nextprime.xml
+END
+gmp-fact.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-fact.xml
+END
+gmp-com.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-com.xml
+END
+gmp-cmp.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-cmp.xml
+END
+gmp-clrbit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-clrbit.xml
+END
+gmp-mod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-mod.xml
+END
+gmp-div-q.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-div-q.xml
+END
+gmp-or.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-or.xml
+END
+gmp-div-r.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-div-r.xml
+END
+gmp-div.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-div.xml
+END
+gmp-perfect-square.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-perfect-square.xml
+END
+gmp-jacobi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-jacobi.xml
+END
+gmp-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-add.xml
+END
+gmp-hamdist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-hamdist.xml
+END
+gmp-sub.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-sub.xml
+END
+gmp-setbit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-setbit.xml
+END
+gmp-mul.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-mul.xml
+END
+gmp-intval.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/gmp/functions/gmp-intval.xml
+END

@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions
+END
+memcache-flush.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-flush.xml
+END
+memcache-setcompressthreshold.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-setcompressthreshold.xml
+END
+memcache-increment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-increment.xml
+END
+memcache-getversion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-getversion.xml
+END
+memcache-setserverparams.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-setserverparams.xml
+END
+memcache-debug.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-debug.xml
+END
+memcache-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-add.xml
+END
+memcache-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-connect.xml
+END
+memcache-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-set.xml
+END
+memcache-getstats.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-getstats.xml
+END
+memcache-delete.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-delete.xml
+END
+memcache-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-close.xml
+END
+memcache-decrement.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-decrement.xml
+END
+memcache-pconnect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-pconnect.xml
+END
+memcache-getserverstatus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-getserverstatus.xml
+END
+memcache-replace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-replace.xml
+END
+memcache-getextendedstats.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-getextendedstats.xml
+END
+memcache-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-get.xml
+END
+memcache-addserver.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/memcache/functions/memcache-addserver.xml
+END

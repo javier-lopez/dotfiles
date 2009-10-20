@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo
+END
+getattribute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/getattribute.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/construct.xml
+END
+errorcode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/errorcode.xml
+END
+exec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/exec.xml
+END
+errorinfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/errorinfo.xml
+END
+lastinsertid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/lastinsertid.xml
+END
+query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/query.xml
+END
+commit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/commit.xml
+END
+rollback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/rollback.xml
+END
+begintransaction.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/begintransaction.xml
+END
+quote.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/quote.xml
+END
+prepare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/prepare.xml
+END
+getavailabledrivers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/getavailabledrivers.xml
+END
+setattribute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/pdo/pdo/setattribute.xml
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/classkit/functions
+END
+classkit-method-rename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/classkit/functions/classkit-method-rename.xml
+END
+classkit-method-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/classkit/functions/classkit-method-add.xml
+END
+classkit-method-copy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/classkit/functions/classkit-method-copy.xml
+END
+classkit-import.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/classkit/functions/classkit-import.xml
+END
+classkit-method-remove.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/classkit/functions/classkit-method-remove.xml
+END
+classkit-method-redefine.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/classkit/functions/classkit-method-redefine.xml
+END

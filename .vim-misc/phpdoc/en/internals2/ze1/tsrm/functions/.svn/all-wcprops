@@ -1,0 +1,269 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions
+END
+tsrm_mutex_alloc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_mutex_alloc.xml
+END
+tsrm_mutex_unlock.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_mutex_unlock.xml
+END
+tsrm_set_new_thread_end_handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_set_new_thread_end_handler.xml
+END
+virtual_rmdir.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_rmdir.xml
+END
+tsrm_new_interpreter_context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_new_interpreter_context.xml
+END
+tsrm_set_interpreter_context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_set_interpreter_context.xml
+END
+virtual_popen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_popen.xml
+END
+tsrm_thread_id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_thread_id.xml
+END
+ts_resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/ts_resource.xml
+END
+virtual_lstat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_lstat.xml
+END
+virtual_chdir_file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_chdir_file.xml
+END
+virtual_chdir.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_chdir.xml
+END
+virtual_chmod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_chmod.xml
+END
+tsrm_set_new_thread_begin_handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_set_new_thread_begin_handler.xml
+END
+ts_free_id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/ts_free_id.xml
+END
+virtual_creat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_creat.xml
+END
+virtual_unlink.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_unlink.xml
+END
+virtual_realpath.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_realpath.xml
+END
+virtual_open.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_open.xml
+END
+tsrm_startup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_startup.xml
+END
+tsrm_error_set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_error_set.xml
+END
+tsrm_shutdown.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_shutdown.xml
+END
+virtual_stat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_stat.xml
+END
+virtual_file_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_file_ex.xml
+END
+virtual_getcwd.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_getcwd.xml
+END
+virtual_chown.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_chown.xml
+END
+virtual_utime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_utime.xml
+END
+ts_resource_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/ts_resource_ex.xml
+END
+tsrm_error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_error.xml
+END
+virtual_filepath_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_filepath_ex.xml
+END
+virtual_filepath.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_filepath.xml
+END
+virtual_cwd_startup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_cwd_startup.xml
+END
+ts_allocate_id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/ts_allocate_id.xml
+END
+virtual_opendir.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_opendir.xml
+END
+virtual_access.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_access.xml
+END
+tsrm_mutex_free.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_mutex_free.xml
+END
+virtual_mkdir.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_mkdir.xml
+END
+virtual_fopen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_fopen.xml
+END
+tsrm_free_interpreter_context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_free_interpreter_context.xml
+END
+virtual_rename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_rename.xml
+END
+virtual_cwd_shutdown.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_cwd_shutdown.xml
+END
+ts_free_thread.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/ts_free_thread.xml
+END
+tsrm_mutex_lock.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/tsrm_mutex_lock.xml
+END
+virtual_getcwd_ex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/internals2/ze1/tsrm/functions/virtual_getcwd_ex.xml
+END

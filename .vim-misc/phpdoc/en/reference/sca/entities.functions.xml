@@ -1,0 +1,4 @@
+&reference.sca.functions.SCA-LocalProxy-createDataObject;
+&reference.sca.functions.SCA-SoapProxy-createDataObject;
+&reference.sca.functions.SCA-createDataObject;
+&reference.sca.functions.SCA-getService;

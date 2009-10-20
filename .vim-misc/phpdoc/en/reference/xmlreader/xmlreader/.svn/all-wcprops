@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader
+END
+movetoelement.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/movetoelement.xml
+END
+lookupnamespace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/lookupnamespace.xml
+END
+readinnerxml.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/readinnerxml.xml
+END
+movetoattributeNo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/movetoattributeNo.xml
+END
+isvalid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/isvalid.xml
+END
+movetonextattribute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/movetonextattribute.xml
+END
+setrelaxngschema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/setrelaxngschema.xml
+END
+movetoattribute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/movetoattribute.xml
+END
+movetoattributeNs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/movetoattributeNs.xml
+END
+xml.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/xml.xml
+END
+getattributeno.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/getattributeno.xml
+END
+getparserproperty.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/getparserproperty.xml
+END
+open.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/open.xml
+END
+readstring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/readstring.xml
+END
+getattribute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/getattribute.xml
+END
+getattributens.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/getattributens.xml
+END
+movetofirstattribute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/movetofirstattribute.xml
+END
+close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/close.xml
+END
+read.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/read.xml
+END
+readouterxml.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/readouterxml.xml
+END
+setschema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/setschema.xml
+END
+setparserproperty.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/setparserproperty.xml
+END
+next.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/next.xml
+END
+setrelaxngschemasource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/setrelaxngschemasource.xml
+END
+expand.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlreader/xmlreader/expand.xml
+END

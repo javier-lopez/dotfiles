@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme
+END
+grapheme-extract.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-extract.xml
+END
+grapheme-stristr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-stristr.xml
+END
+grapheme-strpos.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-strpos.xml
+END
+grapheme-strrpos.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-strrpos.xml
+END
+grapheme-strstr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-strstr.xml
+END
+grapheme-substr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-substr.xml
+END
+grapheme-stripos.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-stripos.xml
+END
+grapheme-strripos.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-strripos.xml
+END
+grapheme-strlen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/intl/grapheme/grapheme-strlen.xml
+END

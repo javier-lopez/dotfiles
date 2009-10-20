@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sca/functions
+END
+SCA-LocalProxy-createDataObject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sca/functions/SCA-LocalProxy-createDataObject.xml
+END
+SCA-getService.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sca/functions/SCA-getService.xml
+END
+SCA-createDataObject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sca/functions/SCA-createDataObject.xml
+END
+SCA-SoapProxy-createDataObject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sca/functions/SCA-SoapProxy-createDataObject.xml
+END

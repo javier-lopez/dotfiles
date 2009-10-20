@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator
+END
+getnextiteratorrow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/getnextiteratorrow.xml
+END
+getiteratorrow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/getiteratorrow.xml
+END
+setiteratorlastrow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/setiteratorlastrow.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/construct.xml
+END
+getcurrentiteratorrow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/getcurrentiteratorrow.xml
+END
+newpixeliterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/newpixeliterator.xml
+END
+setiteratorfirstrow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/setiteratorfirstrow.xml
+END
+clear.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/clear.xml
+END
+synciterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/synciterator.xml
+END
+destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/destroy.xml
+END
+newpixelregioniterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/newpixelregioniterator.xml
+END
+resetiterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/resetiterator.xml
+END
+setiteratorrow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/setiteratorrow.xml
+END
+getpreviousiteratorrow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixeliterator/getpreviousiteratorrow.xml
+END

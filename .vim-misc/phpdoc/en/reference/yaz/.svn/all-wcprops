@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz
+END
+setup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz/setup.xml
+END
+configure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz/configure.xml
+END
+versions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz/versions.xml
+END
+book.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz/book.xml
+END
+constants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz/constants.xml
+END
+examples.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz/examples.xml
+END
+reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz/reference.xml
+END
+ini.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/yaz/ini.xml
+END

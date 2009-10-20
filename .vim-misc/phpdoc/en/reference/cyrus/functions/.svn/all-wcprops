@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/cyrus/functions
+END
+cyrus-authenticate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/cyrus/functions/cyrus-authenticate.xml
+END
+cyrus-unbind.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/cyrus/functions/cyrus-unbind.xml
+END
+cyrus-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/cyrus/functions/cyrus-close.xml
+END
+cyrus-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/cyrus/functions/cyrus-query.xml
+END
+cyrus-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/cyrus/functions/cyrus-connect.xml
+END
+cyrus-bind.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/cyrus/functions/cyrus-bind.xml
+END

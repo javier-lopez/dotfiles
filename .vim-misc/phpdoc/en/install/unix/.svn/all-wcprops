@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repository/!svn/ver/288791/phpdoc/en/trunk/install/unix
+END
+lighttpd-14.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/lighttpd-14.xml
+END
+apache1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288791/phpdoc/en/trunk/install/unix/apache1.xml
+END
+debian.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/debian.xml
+END
+apache2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288791/phpdoc/en/trunk/install/unix/apache2.xml
+END
+hpux.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/hpux.xml
+END
+sun.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/sun.xml
+END
+commandline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/commandline.xml
+END
+caudium.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/caudium.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/index.xml
+END
+fhttpd.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/fhttpd.xml
+END
+openbsd.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/openbsd.xml
+END
+solaris.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/!svn/ver/288721/phpdoc/en/trunk/install/unix/solaris.xml
+END

@@ -1,0 +1,18 @@
+*oci_connect* -- Establishes a connection to the Oracle server
+
+  resource oci_connect(string username, string password [, string db [, string charset [, int session_mode]]])~
+
+Returns a connection identifier needed for most other OCI calls.
+
+{username} The Oracle user name.
+
+{password} The password for {username}.
+
+{db} This optional parameter can either contain the name of the local Oracle
+instance or the name of the entry in tnsnames.ora.
+
+If the not specified, PHP uses environment variables ORACLE_SID and TWO_TASK
+to determine the name of local Oracle instance and location of tnsnames.ora
+accordingly.
+
+vim:ft=help:

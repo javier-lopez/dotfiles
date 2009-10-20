@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions
+END
+error-reporting.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/error-reporting.xml
+END
+set-exception-handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/set-exception-handler.xml
+END
+debug-backtrace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/debug-backtrace.xml
+END
+restore-error-handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/restore-error-handler.xml
+END
+user-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/user-error.xml
+END
+error-get-last.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/error-get-last.xml
+END
+error-log.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/error-log.xml
+END
+restore-exception-handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/restore-exception-handler.xml
+END
+trigger-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/trigger-error.xml
+END
+debug-print-backtrace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/debug-print-backtrace.xml
+END
+set-error-handler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/errorfunc/functions/set-error-handler.xml
+END

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions
+END
+xdiff-file-diff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-diff.xml
+END
+xdiff-string-patch-binary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-patch-binary.xml
+END
+xdiff-string-bdiff-size.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-bdiff-size.xml
+END
+xdiff-string-merge3.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-merge3.xml
+END
+xdiff-file-bdiff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-bdiff.xml
+END
+xdiff-file-patch-binary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-patch-binary.xml
+END
+xdiff-string-diff-binary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-diff-binary.xml
+END
+xdiff-file-bdiff-size.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-bdiff-size.xml
+END
+xdiff-file-merge3.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-merge3.xml
+END
+xdiff-string-rabdiff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-rabdiff.xml
+END
+xdiff-string-patch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-patch.xml
+END
+xdiff-string-bpatch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-bpatch.xml
+END
+xdiff-file-diff-binary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-diff-binary.xml
+END
+xdiff-file-rabdiff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-rabdiff.xml
+END
+xdiff-string-diff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-diff.xml
+END
+xdiff-file-patch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-patch.xml
+END
+xdiff-string-bdiff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-string-bdiff.xml
+END
+xdiff-file-bpatch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xdiff/functions/xdiff-file-bpatch.xml
+END

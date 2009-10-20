@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions
+END
+gmstrftime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/gmstrftime.xml
+END
+date-date-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-date-set.xml
+END
+date-diff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-diff.xml
+END
+timezone-abbreviations-list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-abbreviations-list.xml
+END
+timezone-version-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-version-get.xml
+END
+date-sunset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-sunset.xml
+END
+date-isodate-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-isodate-set.xml
+END
+strftime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/strftime.xml
+END
+date-modify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-modify.xml
+END
+date-sunrise.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-sunrise.xml
+END
+date-format.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-format.xml
+END
+date-default-timezone-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-default-timezone-get.xml
+END
+date-create-from-format.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-create-from-format.xml
+END
+timezone-identifiers-list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-identifiers-list.xml
+END
+strptime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/strptime.xml
+END
+date-sun-info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-sun-info.xml
+END
+gmmktime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/gmmktime.xml
+END
+checkdate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/checkdate.xml
+END
+date-parse-from-format.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-parse-from-format.xml
+END
+getdate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/getdate.xml
+END
+date-offset-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-offset-get.xml
+END
+date-create.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-create.xml
+END
+date-interval-create-from-date-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-interval-create-from-date-string.xml
+END
+date-default-timezone-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-default-timezone-set.xml
+END
+gettimeofday.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/gettimeofday.xml
+END
+timezone-transitions-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-transitions-get.xml
+END
+date-timezone-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-timezone-get.xml
+END
+timezone-name-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-name-get.xml
+END
+date-interval-format.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-interval-format.xml
+END
+date-parse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-parse.xml
+END
+idate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/idate.xml
+END
+mktime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/mktime.xml
+END
+microtime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/microtime.xml
+END
+timezone-open.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-open.xml
+END
+strtotime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/strtotime.xml
+END
+date-timestamp-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-timestamp-get.xml
+END
+timezone-offset-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-offset-get.xml
+END
+date-timezone-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-timezone-set.xml
+END
+time.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/time.xml
+END
+gmdate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/gmdate.xml
+END
+date-time-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-time-set.xml
+END
+date-add.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-add.xml
+END
+date-sub.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-sub.xml
+END
+date-get-last-errors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-get-last-errors.xml
+END
+date-timestamp-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date-timestamp-set.xml
+END
+localtime.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/localtime.xml
+END
+date.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/date.xml
+END
+timezone-location-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-location-get.xml
+END
+timezone-name-from-abbr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/datetime/functions/timezone-name-from-abbr.xml
+END

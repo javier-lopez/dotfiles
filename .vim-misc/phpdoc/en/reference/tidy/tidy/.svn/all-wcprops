@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy
+END
+getrelease.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/getrelease.xml
+END
+gethtmlver.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/gethtmlver.xml
+END
+repairfile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/repairfile.xml
+END
+root.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/root.xml
+END
+getstatus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/getstatus.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/construct.xml
+END
+cleanrepair.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/cleanrepair.xml
+END
+getoptdoc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/getoptdoc.xml
+END
+isxhtml.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/isxhtml.xml
+END
+diagnose.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/diagnose.xml
+END
+isxml.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/isxml.xml
+END
+body.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/body.xml
+END
+head.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/head.xml
+END
+parsestring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/parsestring.xml
+END
+getopt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/getopt.xml
+END
+html.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/html.xml
+END
+getconfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/getconfig.xml
+END
+repairstring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/repairstring.xml
+END
+parsefile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/tidy/tidy/parsefile.xml
+END

@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt
+END
+reset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/reset.xml
+END
+errno.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/errno.xml
+END
+param-count.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/param-count.xml
+END
+attr-get.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/attr-get.xml
+END
+num-rows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/num-rows.xml
+END
+bind-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/bind-result.xml
+END
+affected-rows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/affected-rows.xml
+END
+error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/error.xml
+END
+fetch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/fetch.xml
+END
+result-metadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/result-metadata.xml
+END
+send-long-data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/send-long-data.xml
+END
+free-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/free-result.xml
+END
+prepare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/prepare.xml
+END
+data-seek.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/data-seek.xml
+END
+insert-id.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/insert-id.xml
+END
+sqlstate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/sqlstate.xml
+END
+execute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/execute.xml
+END
+attr-set.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/attr-set.xml
+END
+get-warnings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/get-warnings.xml
+END
+close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/close.xml
+END
+store-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/store-result.xml
+END
+field-count.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/field-count.xml
+END
+bind-param.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/mysqli/mysqli_stmt/bind-param.xml
+END

@@ -1,0 +1,5 @@
+*ociexecute* -- Alias of oci_execute
+
+This function is an alias of: |oci_execute|.
+
+vim:ft=help:

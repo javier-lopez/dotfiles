@@ -1,0 +1,4 @@
+&reference.dom.domxpath.construct;
+&reference.dom.domxpath.evaluate;
+&reference.dom.domxpath.query;
+&reference.dom.domxpath.registernamespace;

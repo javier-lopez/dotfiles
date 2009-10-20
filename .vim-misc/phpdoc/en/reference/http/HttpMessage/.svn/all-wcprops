@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage
+END
+toMessageTypeObject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/toMessageTypeObject.xml
+END
+getType.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getType.xml
+END
+guessContentType.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/guessContentType.xml
+END
+addHeaders.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/addHeaders.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/construct.xml
+END
+getHttpVersion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getHttpVersion.xml
+END
+setRequestUrl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/setRequestUrl.xml
+END
+setHeaders.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/setHeaders.xml
+END
+detach.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/detach.xml
+END
+getHeader.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getHeader.xml
+END
+send.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/send.xml
+END
+getRequestMethod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getRequestMethod.xml
+END
+getResponseCode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getResponseCode.xml
+END
+fromString.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/fromString.xml
+END
+getBody.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getBody.xml
+END
+prepend.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/prepend.xml
+END
+setType.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/setType.xml
+END
+getParentMessage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getParentMessage.xml
+END
+setHttpVersion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/setHttpVersion.xml
+END
+getResponseStatus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getResponseStatus.xml
+END
+setRequestMethod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/setRequestMethod.xml
+END
+setResponseCode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/setResponseCode.xml
+END
+factory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/factory.xml
+END
+setBody.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/setBody.xml
+END
+toString.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/toString.xml
+END
+getRequestUrl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getRequestUrl.xml
+END
+getHeaders.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/getHeaders.xml
+END
+reverse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/reverse.xml
+END
+fromEnv.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/fromEnv.xml
+END
+setResponseStatus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/HttpMessage/setResponseStatus.xml
+END

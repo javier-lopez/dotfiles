@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel
+END
+sethsl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/sethsl.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/construct.xml
+END
+clear.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/clear.xml
+END
+gethsl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/gethsl.xml
+END
+getcolorcount.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/getcolorcount.xml
+END
+setcolorvalue.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/setcolorvalue.xml
+END
+destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/destroy.xml
+END
+getcolorasstring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/getcolorasstring.xml
+END
+setcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/setcolor.xml
+END
+getcolorvalue.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/getcolorvalue.xml
+END
+issimilar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/issimilar.xml
+END
+getcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagickpixel/getcolor.xml
+END

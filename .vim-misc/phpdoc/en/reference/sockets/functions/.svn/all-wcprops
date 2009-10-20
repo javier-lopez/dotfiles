@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions
+END
+socket-write.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-write.xml
+END
+socket-last-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-last-error.xml
+END
+socket-sendto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-sendto.xml
+END
+socket-create-pair.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-create-pair.xml
+END
+socket-getpeername.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-getpeername.xml
+END
+socket-set-nonblock.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-set-nonblock.xml
+END
+socket-listen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-listen.xml
+END
+socket-accept.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-accept.xml
+END
+socket-create-listen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-create-listen.xml
+END
+socket-recv.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-recv.xml
+END
+socket-getsockname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-getsockname.xml
+END
+socket-set-option.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-set-option.xml
+END
+socket-create.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-create.xml
+END
+socket-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-close.xml
+END
+socket-read.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-read.xml
+END
+socket-shutdown.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-shutdown.xml
+END
+socket-bind.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-bind.xml
+END
+socket-clear-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-clear-error.xml
+END
+socket-select.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-select.xml
+END
+socket-strerror.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-strerror.xml
+END
+socket-recvfrom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-recvfrom.xml
+END
+socket-set-block.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-set-block.xml
+END
+socket-get-option.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-get-option.xml
+END
+socket-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-connect.xml
+END
+socket-send.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sockets/functions/socket-send.xml
+END

@@ -1,0 +1,1871 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick
+END
+transposeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/transposeimage.xml
+END
+getimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimage.xml
+END
+setfont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setfont.xml
+END
+getimagetype.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagetype.xml
+END
+getgravity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getgravity.xml
+END
+setimageextent.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageextent.xml
+END
+solarizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/solarizeimage.xml
+END
+setimageiterations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageiterations.xml
+END
+stereoimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/stereoimage.xml
+END
+getimagesblob.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagesblob.xml
+END
+getimageunits.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageunits.xml
+END
+cropimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/cropimage.xml
+END
+blurimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/blurimage.xml
+END
+setimagevirtualpixelmethod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagevirtualpixelmethod.xml
+END
+getoption.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getoption.xml
+END
+setsamplingfactors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setsamplingfactors.xml
+END
+linearstretchimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/linearstretchimage.xml
+END
+resampleimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/resampleimage.xml
+END
+setimagechanneldepth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagechanneldepth.xml
+END
+getsizeoffset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getsizeoffset.xml
+END
+setimageunits.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageunits.xml
+END
+adaptiveresizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/adaptiveresizeimage.xml
+END
+setoption.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setoption.xml
+END
+getimagegamma.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagegamma.xml
+END
+setimagebordercolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagebordercolor.xml
+END
+getinterlacescheme.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getinterlacescheme.xml
+END
+uniqueimagecolors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/uniqueimagecolors.xml
+END
+orderedposterizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/orderedposterizeimage.xml
+END
+implodeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/implodeimage.xml
+END
+setsizeoffset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setsizeoffset.xml
+END
+thresholdimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/thresholdimage.xml
+END
+getimageproperties.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageproperties.xml
+END
+setpointsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setpointsize.xml
+END
+averageimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/averageimages.xml
+END
+queryformats.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/queryformats.xml
+END
+setimagegamma.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagegamma.xml
+END
+getimagerenderingintent.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagerenderingintent.xml
+END
+quantizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/quantizeimage.xml
+END
+coalesceimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/coalesceimages.xml
+END
+enhanceimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/enhanceimage.xml
+END
+getimagegreenprimary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagegreenprimary.xml
+END
+setimageformat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageformat.xml
+END
+gethomeurl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/gethomeurl.xml
+END
+rollimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/rollimage.xml
+END
+getimagemattecolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagemattecolor.xml
+END
+newpseudoimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/newpseudoimage.xml
+END
+setcompression.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setcompression.xml
+END
+getimageblob.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageblob.xml
+END
+setpage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setpage.xml
+END
+clipimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/clipimage.xml
+END
+chopimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/chopimage.xml
+END
+setimagebias.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagebias.xml
+END
+getimageorientation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageorientation.xml
+END
+convolveimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/convolveimage.xml
+END
+getpixelregioniterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getpixelregioniterator.xml
+END
+mosaicimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/mosaicimages.xml
+END
+gaussianblurimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/gaussianblurimage.xml
+END
+swirlimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/swirlimage.xml
+END
+steganoimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/steganoimage.xml
+END
+flopimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/flopimage.xml
+END
+setimageblueprimary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageblueprimary.xml
+END
+getimagecompressionquality.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagecompressionquality.xml
+END
+getimagechanneldistortions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagechanneldistortions.xml
+END
+getiteratorindex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getiteratorindex.xml
+END
+resetimagepage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/resetimagepage.xml
+END
+getimagewidth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagewidth.xml
+END
+setimageresolution.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageresolution.xml
+END
+deconstructimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/deconstructimages.xml
+END
+setimagedispose.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagedispose.xml
+END
+decipherimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/decipherimage.xml
+END
+getimagechannelstatistics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagechannelstatistics.xml
+END
+getformat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getformat.xml
+END
+liquidrescaleimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/liquidrescaleimage.xml
+END
+getimageinterpolatemethod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageinterpolatemethod.xml
+END
+displayimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/displayimages.xml
+END
+addimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/addimage.xml
+END
+montageimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/montageimage.xml
+END
+frameimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/frameimage.xml
+END
+contraststretchimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/contraststretchimage.xml
+END
+setimagefilename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagefilename.xml
+END
+clone.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/clone.xml
+END
+getimagedelay.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagedelay.xml
+END
+setformat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setformat.xml
+END
+setimageinterpolatemethod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageinterpolatemethod.xml
+END
+setimagecolorspace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagecolorspace.xml
+END
+floodfillpaintimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/floodfillpaintimage.xml
+END
+setimagedelay.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagedelay.xml
+END
+nextimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/nextimage.xml
+END
+tintimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/tintimage.xml
+END
+equalizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/equalizeimage.xml
+END
+getimageiterations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageiterations.xml
+END
+gammaimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/gammaimage.xml
+END
+posterizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/posterizeimage.xml
+END
+setlastiterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setlastiterator.xml
+END
+getsamplingfactors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getsamplingfactors.xml
+END
+getimagevirtualpixelmethod.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagevirtualpixelmethod.xml
+END
+setimagebackgroundcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagebackgroundcolor.xml
+END
+writeimagefile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/writeimagefile.xml
+END
+setimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimage.xml
+END
+cyclecolormapimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/cyclecolormapimage.xml
+END
+getimagescene.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagescene.xml
+END
+setimagetype.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagetype.xml
+END
+despeckleimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/despeckleimage.xml
+END
+normalizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/normalizeimage.xml
+END
+getimagesignature.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagesignature.xml
+END
+setimagewhitepoint.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagewhitepoint.xml
+END
+setimagescene.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagescene.xml
+END
+setfirstiterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setfirstiterator.xml
+END
+quantizeimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/quantizeimages.xml
+END
+getimagegravity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagegravity.xml
+END
+sigmoidalcontrastimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/sigmoidalcontrastimage.xml
+END
+getimageformat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageformat.xml
+END
+getcompression.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getcompression.xml
+END
+getimagedistortion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagedistortion.xml
+END
+combineimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/combineimages.xml
+END
+commentimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/commentimage.xml
+END
+recolorimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/recolorimage.xml
+END
+compareimagelayers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/compareimagelayers.xml
+END
+haspreviousimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/haspreviousimage.xml
+END
+readimagefile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/readimagefile.xml
+END
+identifyimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/identifyimage.xml
+END
+transformimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/transformimage.xml
+END
+trimimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/trimimage.xml
+END
+getimagepage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagepage.xml
+END
+mapimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/mapimage.xml
+END
+setimagegreenprimary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagegreenprimary.xml
+END
+flattenimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/flattenimages.xml
+END
+getimageproperty.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageproperty.xml
+END
+setimageopacity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageopacity.xml
+END
+shadowimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/shadowimage.xml
+END
+colorizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/colorizeimage.xml
+END
+opaquepaintimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/opaquepaintimage.xml
+END
+appendimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/appendimages.xml
+END
+flipimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/flipimage.xml
+END
+transverseimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/transverseimage.xml
+END
+painttransparentimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/painttransparentimage.xml
+END
+randomthresholdimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/randomthresholdimage.xml
+END
+rotateimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/rotateimage.xml
+END
+getimageprofile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageprofile.xml
+END
+getimagecompression.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagecompression.xml
+END
+compositeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/compositeimage.xml
+END
+getimageresolution.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageresolution.xml
+END
+getimagedepth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagedepth.xml
+END
+getimagecompose.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagecompose.xml
+END
+mattefloodfillimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/mattefloodfillimage.xml
+END
+reducenoiseimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/reducenoiseimage.xml
+END
+setimageinterlacescheme.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageinterlacescheme.xml
+END
+getimageheight.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageheight.xml
+END
+annotateimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/annotateimage.xml
+END
+getfilename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getfilename.xml
+END
+removeimageprofile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/removeimageprofile.xml
+END
+setimagedepth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagedepth.xml
+END
+setsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setsize.xml
+END
+getimagechannelrange.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagechannelrange.xml
+END
+paintopaqueimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/paintopaqueimage.xml
+END
+setiteratorindex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setiteratorindex.xml
+END
+setimageredprimary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageredprimary.xml
+END
+getimagecolorspace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagecolorspace.xml
+END
+getfont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getfont.xml
+END
+raiseimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/raiseimage.xml
+END
+getquantumrange.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getquantumrange.xml
+END
+getimageextrema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageextrema.xml
+END
+morphimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/morphimages.xml
+END
+compareimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/compareimages.xml
+END
+modulateimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/modulateimage.xml
+END
+queryfonts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/queryfonts.xml
+END
+current.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/current.xml
+END
+getresource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getresource.xml
+END
+getimagechanneldistortion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagechanneldistortion.xml
+END
+newimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/newimage.xml
+END
+getimagewhitepoint.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagewhitepoint.xml
+END
+pingimageblob.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/pingimageblob.xml
+END
+waveimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/waveimage.xml
+END
+getimageclipmask.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageclipmask.xml
+END
+previewimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/previewimages.xml
+END
+paintfloodfillimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/paintfloodfillimage.xml
+END
+setresolution.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setresolution.xml
+END
+getimagebordercolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagebordercolor.xml
+END
+adaptiveblurimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/adaptiveblurimage.xml
+END
+thumbnailimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/thumbnailimage.xml
+END
+addnoiseimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/addnoiseimage.xml
+END
+distortimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/distortimage.xml
+END
+unsharpmaskimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/unsharpmaskimage.xml
+END
+separateimagechannel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/separateimagechannel.xml
+END
+profileimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/profileimage.xml
+END
+medianfilterimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/medianfilterimage.xml
+END
+getcopyright.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getcopyright.xml
+END
+getpage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getpage.xml
+END
+setimagerenderingintent.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagerenderingintent.xml
+END
+getimagealphachannel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagealphachannel.xml
+END
+getimagelength.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagelength.xml
+END
+radialblurimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/radialblurimage.xml
+END
+getimageregion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageregion.xml
+END
+getimageprofiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageprofiles.xml
+END
+clear.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/clear.xml
+END
+shadeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/shadeimage.xml
+END
+affinetransformimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/affinetransformimage.xml
+END
+vignetteimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/vignetteimage.xml
+END
+setimagepage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagepage.xml
+END
+getimagegeometry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagegeometry.xml
+END
+getimageblueprimary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageblueprimary.xml
+END
+minifyimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/minifyimage.xml
+END
+setimagetickspersecond.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagetickspersecond.xml
+END
+encipherimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/encipherimage.xml
+END
+importimagepixels.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/importimagepixels.xml
+END
+setimageproperty.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageproperty.xml
+END
+compareimagechannels.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/compareimagechannels.xml
+END
+clippathimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/clippathimage.xml
+END
+edgeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/edgeimage.xml
+END
+displayimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/displayimage.xml
+END
+getimagedispose.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagedispose.xml
+END
+getimageindex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageindex.xml
+END
+cropthumbnailimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/cropthumbnailimage.xml
+END
+setimageorientation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageorientation.xml
+END
+getimagesize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagesize.xml
+END
+hasnextimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/hasnextimage.xml
+END
+getnumberimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getnumberimages.xml
+END
+getimageredprimary.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageredprimary.xml
+END
+getresourcelimit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getresourcelimit.xml
+END
+setimageindex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageindex.xml
+END
+setbackgroundcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setbackgroundcolor.xml
+END
+getpackagename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getpackagename.xml
+END
+stripimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/stripimage.xml
+END
+levelimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/levelimage.xml
+END
+getimagechannelmean.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagechannelmean.xml
+END
+colorfloodfillimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/colorfloodfillimage.xml
+END
+getimagecolormapcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagecolormapcolor.xml
+END
+charcoalimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/charcoalimage.xml
+END
+render.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/render.xml
+END
+getimagebackgroundcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagebackgroundcolor.xml
+END
+oilpaintimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/oilpaintimage.xml
+END
+queryfontmetrics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/queryfontmetrics.xml
+END
+roundcorners.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/roundcorners.xml
+END
+getimagetotalinkdensity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagetotalinkdensity.xml
+END
+setimagecolormapcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagecolormapcolor.xml
+END
+embossimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/embossimage.xml
+END
+blackthresholdimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/blackthresholdimage.xml
+END
+settype.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/settype.xml
+END
+transparentpaintimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/transparentpaintimage.xml
+END
+getimagehistogram.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagehistogram.xml
+END
+getimagechanneldepth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagechanneldepth.xml
+END
+contrastimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/contrastimage.xml
+END
+setgravity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setgravity.xml
+END
+sharpenimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/sharpenimage.xml
+END
+resizeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/resizeimage.xml
+END
+extentimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/extentimage.xml
+END
+getcompressionquality.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getcompressionquality.xml
+END
+readimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/readimage.xml
+END
+getquantumdepth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getquantumdepth.xml
+END
+writeimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/writeimages.xml
+END
+setimageclipmask.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageclipmask.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/construct.xml
+END
+getpointsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getpointsize.xml
+END
+setcompressionquality.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setcompressionquality.xml
+END
+sepiatoneimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/sepiatoneimage.xml
+END
+motionblurimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/motionblurimage.xml
+END
+textureimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/textureimage.xml
+END
+setimagegravity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagegravity.xml
+END
+getimagecolors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagecolors.xml
+END
+shearimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/shearimage.xml
+END
+setinterlacescheme.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setinterlacescheme.xml
+END
+evaluateimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/evaluateimage.xml
+END
+fximage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/fximage.xml
+END
+borderimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/borderimage.xml
+END
+writeimagesfile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/writeimagesfile.xml
+END
+spreadimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/spreadimage.xml
+END
+getimagepixelcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagepixelcolor.xml
+END
+getimagetickspersecond.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagetickspersecond.xml
+END
+sketchimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/sketchimage.xml
+END
+setimagemattecolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagemattecolor.xml
+END
+scaleimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/scaleimage.xml
+END
+getpixeliterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getpixeliterator.xml
+END
+setimagealphachannel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagealphachannel.xml
+END
+magnifyimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/magnifyimage.xml
+END
+getimageinterlacescheme.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimageinterlacescheme.xml
+END
+removeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/removeimage.xml
+END
+pingimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/pingimage.xml
+END
+whitethresholdimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/whitethresholdimage.xml
+END
+shaveimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/shaveimage.xml
+END
+getsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getsize.xml
+END
+clutimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/clutimage.xml
+END
+polaroidimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/polaroidimage.xml
+END
+readimageblob.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/readimageblob.xml
+END
+getimagematte.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagematte.xml
+END
+getreleasedate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getreleasedate.xml
+END
+setimageprofile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimageprofile.xml
+END
+previousimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/previousimage.xml
+END
+setimagecompression.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagecompression.xml
+END
+adaptivesharpenimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/adaptivesharpenimage.xml
+END
+mergeimagelayers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/mergeimagelayers.xml
+END
+labelimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/labelimage.xml
+END
+spliceimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/spliceimage.xml
+END
+optimizeimagelayers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/optimizeimagelayers.xml
+END
+getimagefilename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagefilename.xml
+END
+setimagecompose.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagecompose.xml
+END
+sampleimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/sampleimage.xml
+END
+getversion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getversion.xml
+END
+setimagematte.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagematte.xml
+END
+setimagecompressionquality.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setimagecompressionquality.xml
+END
+destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/destroy.xml
+END
+setfilename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setfilename.xml
+END
+writeimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/writeimage.xml
+END
+valid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/valid.xml
+END
+pingimagefile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/pingimagefile.xml
+END
+drawimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/drawimage.xml
+END
+getimagechannelextrema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagechannelextrema.xml
+END
+getimagemagicklicense.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/getimagemagicklicense.xml
+END
+setresourcelimit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/setresourcelimit.xml
+END
+animateimages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/animateimages.xml
+END
+negateimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/negateimage.xml
+END
+adaptivethresholdimage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/imagick/imagick/adaptivethresholdimage.xml
+END

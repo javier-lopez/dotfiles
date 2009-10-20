@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties
+END
+isOriginal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/isOriginal.xml
+END
+getLength.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/getLength.xml
+END
+getVersion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/getVersion.xml
+END
+getBitrate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/getBitrate.xml
+END
+getChannels.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/getChannels.xml
+END
+getLayer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/getLayer.xml
+END
+getSampleBitrate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/getSampleBitrate.xml
+END
+isCopyrighted.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/isCopyrighted.xml
+END
+isProtectionEnabled.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/ktaglib/audioproperties/isProtectionEnabled.xml
+END

@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions
+END
+fdf-set-flags.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-flags.xml
+END
+fdf-errno.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-errno.xml
+END
+fdf-set-ap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-ap.xml
+END
+fdf-save.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-save.xml
+END
+fdf-add-doc-javascript.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-add-doc-javascript.xml
+END
+fdf-get-status.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-status.xml
+END
+fdf-enum-values.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-enum-values.xml
+END
+fdf-get-encoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-encoding.xml
+END
+fdf-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-close.xml
+END
+fdf-get-attachment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-attachment.xml
+END
+fdf-set-submit-form-action.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-submit-form-action.xml
+END
+fdf-set-status.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-status.xml
+END
+fdf-set-encoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-encoding.xml
+END
+fdf-get-opt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-opt.xml
+END
+fdf-header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-header.xml
+END
+fdf-get-value.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-value.xml
+END
+fdf-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-error.xml
+END
+fdf-remove-item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-remove-item.xml
+END
+fdf-set-opt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-opt.xml
+END
+fdf-get-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-file.xml
+END
+fdf-add-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-add-template.xml
+END
+fdf-open.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-open.xml
+END
+fdf-get-version.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-version.xml
+END
+fdf-save-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-save-string.xml
+END
+fdf-create.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-create.xml
+END
+fdf-set-value.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-value.xml
+END
+fdf-open-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-open-string.xml
+END
+fdf-set-target-frame.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-target-frame.xml
+END
+fdf-set-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-file.xml
+END
+fdf-get-flags.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-flags.xml
+END
+fdf-set-javascript-action.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-javascript-action.xml
+END
+fdf-next-field-name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-next-field-name.xml
+END
+fdf-get-ap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-get-ap.xml
+END
+fdf-set-version.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-version.xml
+END
+fdf-set-on-import-javascript.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/fdf/functions/fdf-set-on-import-javascript.xml
+END

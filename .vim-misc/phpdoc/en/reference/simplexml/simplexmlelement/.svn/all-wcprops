@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement
+END
+getName.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/getName.xml
+END
+asXML.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/asXML.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/construct.xml
+END
+xpath.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/xpath.xml
+END
+getDocNamespaces.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/getDocNamespaces.xml
+END
+attributes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/attributes.xml
+END
+registerXPathNamespace.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/registerXPathNamespace.xml
+END
+children.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/children.xml
+END
+addAttribute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/addAttribute.xml
+END
+addChild.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/addChild.xml
+END
+getNamespaces.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/simplexml/simplexmlelement/getNamespaces.xml
+END

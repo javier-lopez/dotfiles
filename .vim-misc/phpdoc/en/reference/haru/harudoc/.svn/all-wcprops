@@ -1,0 +1,269 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc
+END
+getpagemode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/getpagemode.xml
+END
+setcompressionmode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setcompressionmode.xml
+END
+addpage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/addpage.xml
+END
+addpagelabel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/addpagelabel.xml
+END
+loadraw.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/loadraw.xml
+END
+usecntencodings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/usecntencodings.xml
+END
+setpagemode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setpagemode.xml
+END
+resetstream.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/resetstream.xml
+END
+setinfodateattr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setinfodateattr.xml
+END
+output.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/output.xml
+END
+usejpfonts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/usejpfonts.xml
+END
+loadtype1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/loadtype1.xml
+END
+usekrfonts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/usekrfonts.xml
+END
+getpagelayout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/getpagelayout.xml
+END
+usecnsfonts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/usecnsfonts.xml
+END
+setencryptionmode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setencryptionmode.xml
+END
+savetostream.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/savetostream.xml
+END
+getencoder.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/getencoder.xml
+END
+getcurrentpage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/getcurrentpage.xml
+END
+usejpencodings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/usejpencodings.xml
+END
+getcurrentencoder.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/getcurrentencoder.xml
+END
+usekrencodings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/usekrencodings.xml
+END
+loadpng.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/loadpng.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/construct.xml
+END
+loadjpeg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/loadjpeg.xml
+END
+getstreamsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/getstreamsize.xml
+END
+getinfoattr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/getinfoattr.xml
+END
+setpagelayout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setpagelayout.xml
+END
+usecnsencodings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/usecnsencodings.xml
+END
+loadttc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/loadttc.xml
+END
+reseterror.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/reseterror.xml
+END
+loadttf.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/loadttf.xml
+END
+setcurrentencoder.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setcurrentencoder.xml
+END
+save.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/save.xml
+END
+insertpage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/insertpage.xml
+END
+setinfoattr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setinfoattr.xml
+END
+createoutline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/createoutline.xml
+END
+setpagesconfiguration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setpagesconfiguration.xml
+END
+setpermission.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setpermission.xml
+END
+getfont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/getfont.xml
+END
+setopenaction.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setopenaction.xml
+END
+readfromstream.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/readfromstream.xml
+END
+usecntfonts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/usecntfonts.xml
+END
+setpassword.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/haru/harudoc/setpassword.xml
+END

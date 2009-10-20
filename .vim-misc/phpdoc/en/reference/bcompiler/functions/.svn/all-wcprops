@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions
+END
+bcompiler-write-footer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-footer.xml
+END
+bcompiler-write-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-file.xml
+END
+bcompiler-read.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-read.xml
+END
+bcompiler-parse-class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-parse-class.xml
+END
+bcompiler-write-class.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-class.xml
+END
+bcompiler-write-function.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-function.xml
+END
+bcompiler-write-included-filename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-included-filename.xml
+END
+bcompiler-load-exe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-load-exe.xml
+END
+bcompiler-write-functions-from-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-functions-from-file.xml
+END
+bcompiler-load.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-load.xml
+END
+bcompiler-write-header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-header.xml
+END
+bcompiler-write-constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-constant.xml
+END
+bcompiler-write-exe-footer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/bcompiler/functions/bcompiler-write-exe-footer.xml
+END

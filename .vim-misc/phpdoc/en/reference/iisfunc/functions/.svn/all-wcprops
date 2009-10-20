@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions
+END
+iis-get-dir-security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-get-dir-security.xml
+END
+iis-remove-server.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-remove-server.xml
+END
+iis-start-server.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-start-server.xml
+END
+iis-set-app-settings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-set-app-settings.xml
+END
+iis-set-script-map.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-set-script-map.xml
+END
+iis-set-dir-security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-set-dir-security.xml
+END
+iis-get-server-rights.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-get-server-rights.xml
+END
+iis-stop-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-stop-service.xml
+END
+iis-get-server-by-path.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-get-server-by-path.xml
+END
+iis-stop-server.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-stop-server.xml
+END
+iis-get-server-by-comment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-get-server-by-comment.xml
+END
+iis-get-service-state.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-get-service-state.xml
+END
+iis-start-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-start-service.xml
+END
+iis-add-server.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-add-server.xml
+END
+iis-get-script-map.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-get-script-map.xml
+END
+iis-set-server-rights.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/iisfunc/functions/iis-set-server-rights.xml
+END

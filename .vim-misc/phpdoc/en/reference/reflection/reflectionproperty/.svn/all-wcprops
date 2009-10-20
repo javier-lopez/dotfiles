@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty
+END
+getname.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/getname.xml
+END
+isdefault.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/isdefault.xml
+END
+export.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/export.xml
+END
+getmodifiers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/getmodifiers.xml
+END
+isstatic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/isstatic.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/construct.xml
+END
+isprotected.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/isprotected.xml
+END
+getdoccomment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/getdoccomment.xml
+END
+setvalue.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/setvalue.xml
+END
+clone.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/clone.xml
+END
+isprivate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/isprivate.xml
+END
+setaccessible.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/setaccessible.xml
+END
+tostring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/tostring.xml
+END
+ispublic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/ispublic.xml
+END
+getvalue.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/getvalue.xml
+END
+getdeclaringclass.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/reflection/reflectionproperty/getdeclaringclass.xml
+END

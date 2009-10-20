@@ -1,0 +1,341 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar
+END
+getMetadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/getMetadata.xml
+END
+running.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/running.xml
+END
+setSignatureAlgorithm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/setSignatureAlgorithm.xml
+END
+getVersion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/getVersion.xml
+END
+convertToExecutable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/convertToExecutable.xml
+END
+startBuffering.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/startBuffering.xml
+END
+offsetGet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/offsetGet.xml
+END
+decompressFiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/decompressFiles.xml
+END
+addFile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/addFile.xml
+END
+getSupportedSignatures.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/getSupportedSignatures.xml
+END
+loadPhar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/loadPhar.xml
+END
+setMetadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/setMetadata.xml
+END
+buildFromIterator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/buildFromIterator.xml
+END
+getSignature.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/getSignature.xml
+END
+offsetSet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/offsetSet.xml
+END
+delete.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/delete.xml
+END
+isBuffering.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/isBuffering.xml
+END
+addFromString.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/addFromString.xml
+END
+setAlias.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/setAlias.xml
+END
+addEmptyDir.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/addEmptyDir.xml
+END
+getSupportedCompression.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/getSupportedCompression.xml
+END
+compressAllFilesGZ.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/compressAllFilesGZ.xml
+END
+uncompressAllFiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/uncompressAllFiles.xml
+END
+stopBuffering.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/stopBuffering.xml
+END
+canCompress.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/canCompress.xml
+END
+getStub.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/getStub.xml
+END
+compressFiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/compressFiles.xml
+END
+apiVersion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/apiVersion.xml
+END
+getModified.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/getModified.xml
+END
+isFileFormat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/isFileFormat.xml
+END
+construct.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/construct.xml
+END
+offsetExists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/offsetExists.xml
+END
+count.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/count.xml
+END
+mapPhar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/mapPhar.xml
+END
+webPhar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/webPhar.xml
+END
+setStub.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/setStub.xml
+END
+compress.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/compress.xml
+END
+interceptFileFuncs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/interceptFileFuncs.xml
+END
+mungServer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/mungServer.xml
+END
+setDefaultStub.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/setDefaultStub.xml
+END
+isCompressed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/isCompressed.xml
+END
+mount.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/mount.xml
+END
+unlinkArchive.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/unlinkArchive.xml
+END
+decompress.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/decompress.xml
+END
+delMetadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/delMetadata.xml
+END
+isWritable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/isWritable.xml
+END
+offsetUnset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/offsetUnset.xml
+END
+createDefaultStub.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/createDefaultStub.xml
+END
+isValidPharFilename.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/isValidPharFilename.xml
+END
+buildFromDirectory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/buildFromDirectory.xml
+END
+copy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/copy.xml
+END
+hasMetadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/hasMetadata.xml
+END
+canWrite.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/canWrite.xml
+END
+extractTo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/extractTo.xml
+END
+convertToData.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/convertToData.xml
+END
+compressAllFilesBZIP2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/phar/Phar/compressAllFilesBZIP2.xml
+END

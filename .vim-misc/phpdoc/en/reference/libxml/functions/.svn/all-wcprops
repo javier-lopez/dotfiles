@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/libxml/functions
+END
+libxml-clear-errors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/libxml/functions/libxml-clear-errors.xml
+END
+libxml-use-internal-errors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/libxml/functions/libxml-use-internal-errors.xml
+END
+libxml-disable-entity-loader.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/libxml/functions/libxml-disable-entity-loader.xml
+END
+libxml-get-last-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/libxml/functions/libxml-get-last-error.xml
+END
+libxml-get-errors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/libxml/functions/libxml-get-errors.xml
+END
+libxml-set-streams-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/libxml/functions/libxml-set-streams-context.xml
+END

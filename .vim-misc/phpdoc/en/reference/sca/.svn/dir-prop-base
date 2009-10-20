@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 51
+entities.*.xml
+backup.xml
+reference_1.xml
+.project
+
+END

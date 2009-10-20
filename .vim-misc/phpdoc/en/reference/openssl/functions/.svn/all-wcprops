@@ -1,0 +1,281 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions
+END
+openssl-pkey-new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkey-new.xml
+END
+openssl-get-privatekey.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-get-privatekey.xml
+END
+openssl-verify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-verify.xml
+END
+openssl-csr-export.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-csr-export.xml
+END
+openssl-pkcs7-encrypt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkcs7-encrypt.xml
+END
+openssl-pkcs12-read.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkcs12-read.xml
+END
+openssl-get-md-methods.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-get-md-methods.xml
+END
+openssl-x509-read.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-x509-read.xml
+END
+openssl-pkcs12-export.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkcs12-export.xml
+END
+openssl-pkey-export-to-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkey-export-to-file.xml
+END
+openssl-encrypt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-encrypt.xml
+END
+openssl-seal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-seal.xml
+END
+openssl-x509-export.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-x509-export.xml
+END
+openssl-x509-free.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-x509-free.xml
+END
+openssl-get-cipher-methods.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-get-cipher-methods.xml
+END
+openssl-pkcs7-verify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkcs7-verify.xml
+END
+openssl-dh-compute-key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-dh-compute-key.xml
+END
+openssl-private-encrypt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-private-encrypt.xml
+END
+openssl-error-string.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-error-string.xml
+END
+openssl-pkcs7-decrypt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkcs7-decrypt.xml
+END
+openssl-sign.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-sign.xml
+END
+openssl-public-encrypt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-public-encrypt.xml
+END
+openssl-random-pseudo-bytes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-random-pseudo-bytes.xml
+END
+openssl-csr-get-subject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-csr-get-subject.xml
+END
+openssl-open.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-open.xml
+END
+openssl-pkey-get-public.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkey-get-public.xml
+END
+openssl-csr-export-to-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-csr-export-to-file.xml
+END
+openssl-get-publickey.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-get-publickey.xml
+END
+openssl-csr-get-public-key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-csr-get-public-key.xml
+END
+openssl-free-key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-free-key.xml
+END
+openssl-pkey-get-details.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkey-get-details.xml
+END
+openssl-decrypt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-decrypt.xml
+END
+openssl-x509-parse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-x509-parse.xml
+END
+openssl-csr-new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-csr-new.xml
+END
+openssl-x509-check-private-key.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-x509-check-private-key.xml
+END
+openssl-pkcs12-export-to-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkcs12-export-to-file.xml
+END
+openssl-digest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-digest.xml
+END
+openssl-x509-export-to-file.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-x509-export-to-file.xml
+END
+openssl-private-decrypt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-private-decrypt.xml
+END
+openssl-pkcs7-sign.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkcs7-sign.xml
+END
+openssl-csr-sign.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-csr-sign.xml
+END
+openssl-public-decrypt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-public-decrypt.xml
+END
+openssl-pkey-free.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkey-free.xml
+END
+openssl-pkey-export.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkey-export.xml
+END
+openssl-pkey-get-private.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-pkey-get-private.xml
+END
+openssl-x509-checkpurpose.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/openssl/functions/openssl-x509-checkpurpose.xml
+END

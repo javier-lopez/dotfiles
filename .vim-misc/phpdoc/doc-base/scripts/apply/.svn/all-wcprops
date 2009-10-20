@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repository/!svn/ver/85108/phpdoc/doc-base/trunk/scripts/apply
+END
+voidify.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/67212/phpdoc/doc-base/trunk/scripts/apply/voidify.php
+END
+add_rev.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/67212/phpdoc/doc-base/trunk/scripts/apply/add_rev.php
+END
+fix_modelines.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/67212/phpdoc/doc-base/trunk/scripts/apply/fix_modelines.php
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/67212/phpdoc/doc-base/trunk/scripts/apply/README
+END
+tfn.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/67212/phpdoc/doc-base/trunk/scripts/apply/tfn.php
+END
+cvsrev.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/!svn/ver/85108/phpdoc/doc-base/trunk/scripts/apply/cvsrev.php
+END
+func2methodsyn.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/67945/phpdoc/doc-base/trunk/scripts/apply/func2methodsyn.php
+END
+lower.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/!svn/ver/85107/phpdoc/doc-base/trunk/scripts/apply/lower.php
+END

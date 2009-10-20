@@ -1,0 +1,172 @@
+9
+
+dir
+288931
+http://svn.php.net/repository/phpdoc/en/trunk/internals2
+http://svn.php.net/repository
+
+
+
+2009-09-25T07:04:39.677048Z
+288721
+torben
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c90b9560-bf6c-de11-be94-00142212c4b1
+
+ini
+dir
+
+pdo
+dir
+
+objects
+dir
+
+intro.xml
+file
+
+
+
+
+2009-09-29T06:05:29.000000Z
+118562f76c695064eea7103efd5ad794
+2009-09-25T07:04:39.677048Z
+288721
+torben
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3312
+
+opcodes.xml
+file
+
+
+
+
+2009-09-23T22:34:47.000000Z
+6aadf9cad8c456f02d523f1b9f0fc352
+2009-08-04T10:51:21.712894Z
+286794
+bjori
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+286253
+
+buildsys
+dir
+
+ze1
+dir
+
+structure
+dir
+
+ze3
+dir
+
+apiref
+dir
+
+faq
+dir
+
+memory
+dir
+
+variables
+dir
+
+resources
+dir
+
+streams
+dir
+
+funcs
+dir
+
+counter.xml
+file
+
+
+
+
+2009-09-29T06:05:29.000000Z
+d27abebd11b10f090f709b26cdfa2a38
+2009-09-25T07:04:39.677048Z
+288721
+torben
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+35172
+

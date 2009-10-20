@@ -1,0 +1,86 @@
+*call_user_func_array* -- Call a user function given with an array of
+parameters
+
+  mixed call_user_func_array(callback function, array param_arr)~
+
+Call a user defined {function} with the parameters in {param_arr}.
+
+{function} The function to be called.
+
+{param_arr} The parameters to be passed to the function, as an indexed array.
+
+Returns the function result, or FALSE on error.
+
+|call_user_func_array| example
+
+<?php >
+  function foobar($arg, $arg2) {
+      echo __FUNCTION__, " got $arg and $arg2\n";
+  }
+  class foo {
+      function bar($arg, $arg2) {
+          echo __METHOD__, " got $arg and $arg2\n";
+      }
+  }
+  
+  
+  // Call the foobar() function with 2 arguments
+  call_user_func_array("foobar", array("one", "two"));
+  
+  // Call the $foo->bar() method with 2 arguments
+  $foo = new foo;
+  call_user_func_array(array($foo, "bar"), array("three", "four"));
+?>
+
+The above example will output something similar to:
+
+  foobar got one and two
+  foo::bar got three and four
+
+|call_user_func_array| using namespace name
+
+<?php >
+  namespace Foobar;
+  
+  class Foo {
+      static public function test($name) {
+          print "Hello {$name}!\n";
+      }
+  }
+  
+  // As of PHP 5.3.0
+  call_user_func_array(__NAMESPACE__ .'\Foo::test', array('Hannes'));
+  
+  // As of PHP 5.3.0
+  call_user_func_array(array(__NAMESPACE__ .'\Foo', 'test'), array('Philip'));
+?>
+
+The above example will output something similar to:
+
+  Hello Hannes!
+  Hello Philip!
+
+Using lambda function
+
+<?php >
+  $func = function($arg1, $arg2) {
+      return $arg1 * $arg2;
+  };
+  
+  var_dump(call_user_func_array($func, array(2, 4))); /* As of PHP 5.3.0 */
+?>
+
+The above example will output:
+
+  int(8)
+
+
+
+Referenced variables in {param_arr} are passed to the function by a reference,
+others are passed by a value. In other words, it does not depend on the
+function signature whether the parameter is passed by a value or by a
+reference.
+
+|call_user_func| information about the callback type
+
+vim:ft=help:

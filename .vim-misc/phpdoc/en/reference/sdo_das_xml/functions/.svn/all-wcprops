@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions
+END
+SDO-DAS-XML-Document-getRootElementName.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-Document-getRootElementName.xml
+END
+SDO-DAS-XML-addTypes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-addTypes.xml
+END
+SDO-DAS-XML-Document-setEncoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-Document-setEncoding.xml
+END
+SDO-DAS-XML-Document-setXMLDeclaration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-Document-setXMLDeclaration.xml
+END
+SDO-DAS-XML-Document-setXMLVersion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-Document-setXMLVersion.xml
+END
+SDO-DAS-XML-saveFile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-saveFile.xml
+END
+SDO-DAS-XML-loadFile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-loadFile.xml
+END
+SDO-DAS-XML-Document-getRootDataObject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-Document-getRootDataObject.xml
+END
+SDO-DAS-XML-createDocument.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-createDocument.xml
+END
+SDO-DAS-XML-create.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-create.xml
+END
+SDO-DAS-XML-createDataObject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-createDataObject.xml
+END
+SDO-DAS-XML-saveString.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-saveString.xml
+END
+SDO-DAS-XML-loadString.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-loadString.xml
+END
+SDO-DAS-XML-Document-getRootElementURI.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/sdo_das_xml/functions/SDO-DAS-XML-Document-getRootElementURI.xml
+END

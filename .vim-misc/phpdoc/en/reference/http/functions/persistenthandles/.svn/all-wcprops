@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/persistenthandles
+END
+http-persistent-handles-clean.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/persistenthandles/http-persistent-handles-clean.xml
+END
+http-persistent-handles-ident.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/persistenthandles/http-persistent-handles-ident.xml
+END
+http-persistent-handles-count.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/http/functions/persistenthandles/http-persistent-handles-count.xml
+END

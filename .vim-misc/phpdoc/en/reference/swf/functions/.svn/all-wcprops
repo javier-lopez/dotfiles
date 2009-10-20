@@ -1,0 +1,407 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions
+END
+swf-actionprevframe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actionprevframe.xml
+END
+swf-definebitmap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-definebitmap.xml
+END
+swf-scale.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-scale.xml
+END
+swf-fonttracking.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-fonttracking.xml
+END
+swf-ortho.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-ortho.xml
+END
+swf-shapecurveto3.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapecurveto3.xml
+END
+swf-mulcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-mulcolor.xml
+END
+swf-openfile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-openfile.xml
+END
+swf-defineline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-defineline.xml
+END
+swf-shapefillsolid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapefillsolid.xml
+END
+swf-actiongotolabel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actiongotolabel.xml
+END
+swf-fontslant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-fontslant.xml
+END
+swf-shapecurveto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapecurveto.xml
+END
+swf-startdoaction.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-startdoaction.xml
+END
+swf-viewport.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-viewport.xml
+END
+swf-addcolor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-addcolor.xml
+END
+swf-actionnextframe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actionnextframe.xml
+END
+swf-actiontogglequality.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actiontogglequality.xml
+END
+swf-getbitmapinfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-getbitmapinfo.xml
+END
+swf-shapemoveto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapemoveto.xml
+END
+swf-showframe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-showframe.xml
+END
+swf-nextid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-nextid.xml
+END
+swf-actionsettarget.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actionsettarget.xml
+END
+swf-actiongeturl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actiongeturl.xml
+END
+swf-shapefilloff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapefilloff.xml
+END
+swf-shapelinesolid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapelinesolid.xml
+END
+swf-posround.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-posround.xml
+END
+swf-actiongotoframe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actiongotoframe.xml
+END
+swf-getfontinfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-getfontinfo.xml
+END
+swf-actionstop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actionstop.xml
+END
+swf-startsymbol.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-startsymbol.xml
+END
+swf-oncondition.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-oncondition.xml
+END
+swf-textwidth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-textwidth.xml
+END
+swf-lookat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-lookat.xml
+END
+swf-startbutton.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-startbutton.xml
+END
+swf-getframe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-getframe.xml
+END
+swf-endsymbol.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-endsymbol.xml
+END
+swf-rotate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-rotate.xml
+END
+swf-fontsize.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-fontsize.xml
+END
+swf-endbutton.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-endbutton.xml
+END
+swf-actionplay.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actionplay.xml
+END
+swf-setframe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-setframe.xml
+END
+swf-polarview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-polarview.xml
+END
+swf-shapefillbitmapclip.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapefillbitmapclip.xml
+END
+swf-ortho2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-ortho2.xml
+END
+swf-modifyobject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-modifyobject.xml
+END
+swf-definefont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-definefont.xml
+END
+swf-shapefillbitmaptile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapefillbitmaptile.xml
+END
+swf-addbuttonrecord.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-addbuttonrecord.xml
+END
+swf-popmatrix.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-popmatrix.xml
+END
+swf-actionwaitforframe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-actionwaitforframe.xml
+END
+swf-removeobject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-removeobject.xml
+END
+swf-shapearc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapearc.xml
+END
+swf-endshape.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-endshape.xml
+END
+swf-enddoaction.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-enddoaction.xml
+END
+swf-perspective.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-perspective.xml
+END
+swf-labelframe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-labelframe.xml
+END
+swf-translate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-translate.xml
+END
+swf-definepoly.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-definepoly.xml
+END
+swf-definetext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-definetext.xml
+END
+swf-pushmatrix.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-pushmatrix.xml
+END
+swf-closefile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-closefile.xml
+END
+swf-definerect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-definerect.xml
+END
+swf-shapelineto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-shapelineto.xml
+END
+swf-placeobject.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-placeobject.xml
+END
+swf-startshape.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-startshape.xml
+END
+swf-setfont.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/swf/functions/swf-setfont.xml
+END

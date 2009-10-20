@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate
+END
+insert_db.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/insert_db.php
+END
+ini_search_lib.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/ini_search_lib.php
+END
+cvs-versions
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/!svn/ver/243059/phpdoc/doc-base/trunk/scripts/iniupdate/cvs-versions
+END
+rm-ini-files.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/191078/phpdoc/doc-base/trunk/scripts/iniupdate/rm-ini-files.php
+END
+print_arrays.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/191082/phpdoc/doc-base/trunk/scripts/iniupdate/print_arrays.php
+END
+ini-update.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/ini-update.php
+END
+cvs-versions.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/cvs-versions.php
+END
+generate_changelog.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/generate_changelog.php
+END
+make_db.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/make_db.php
+END
+pecl.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/pecl.php
+END
+run.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/run.php
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/!svn/ver/242610/phpdoc/doc-base/trunk/scripts/iniupdate/README
+END
+update_db.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/update_db.php
+END
+update-all.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/!svn/ver/272350/phpdoc/doc-base/trunk/scripts/iniupdate/update-all.php
+END

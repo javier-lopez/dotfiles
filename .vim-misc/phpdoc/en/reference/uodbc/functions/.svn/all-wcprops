@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions
+END
+odbc-procedures.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-procedures.xml
+END
+odbc-field-precision.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-field-precision.xml
+END
+odbc-binmode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-binmode.xml
+END
+odbc-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-result.xml
+END
+odbc-primarykeys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-primarykeys.xml
+END
+odbc-field-num.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-field-num.xml
+END
+odbc-autocommit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-autocommit.xml
+END
+odbc-specialcolumns.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-specialcolumns.xml
+END
+odbc-tableprivileges.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-tableprivileges.xml
+END
+odbc-result-all.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-result-all.xml
+END
+odbc-num-rows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-num-rows.xml
+END
+odbc-columnprivileges.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-columnprivileges.xml
+END
+odbc-connect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-connect.xml
+END
+odbc-procedurecolumns.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-procedurecolumns.xml
+END
+odbc-statistics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-statistics.xml
+END
+odbc-free-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-free-result.xml
+END
+odbc-gettypeinfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-gettypeinfo.xml
+END
+odbc-prepare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-prepare.xml
+END
+odbc-fetch-into.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-fetch-into.xml
+END
+odbc-field-name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-field-name.xml
+END
+odbc-do.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-do.xml
+END
+odbc-field-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-field-type.xml
+END
+odbc-close.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-close.xml
+END
+odbc-data-source.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-data-source.xml
+END
+odbc-pconnect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-pconnect.xml
+END
+odbc-tables.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-tables.xml
+END
+odbc-close-all.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-close-all.xml
+END
+odbc-cursor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-cursor.xml
+END
+odbc-columns.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-columns.xml
+END
+odbc-setoption.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-setoption.xml
+END
+odbc-exec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-exec.xml
+END
+odbc-foreignkeys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-foreignkeys.xml
+END
+odbc-commit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-commit.xml
+END
+odbc-error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-error.xml
+END
+odbc-rollback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-rollback.xml
+END
+odbc-next-result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-next-result.xml
+END
+odbc-longreadlen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-longreadlen.xml
+END
+odbc-fetch-object.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-fetch-object.xml
+END
+odbc-fetch-row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-fetch-row.xml
+END
+odbc-field-len.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-field-len.xml
+END
+odbc-errormsg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-errormsg.xml
+END
+odbc-execute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-execute.xml
+END
+odbc-num-fields.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-num-fields.xml
+END
+odbc-fetch-array.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-fetch-array.xml
+END
+odbc-field-scale.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/uodbc/functions/odbc-field-scale.xml
+END

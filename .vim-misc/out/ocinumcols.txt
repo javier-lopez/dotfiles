@@ -1,0 +1,5 @@
+*ocinumcols* -- Alias of oci_num_fields
+
+This function is an alias of: |oci_num_fields|.
+
+vim:ft=help:

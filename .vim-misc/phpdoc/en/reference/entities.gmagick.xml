@@ -1,0 +1,14 @@
+&reference.gmagick.book;
+&reference.gmagick.configure;
+&reference.gmagick.constants;
+&reference.gmagick.entities.gmagick;
+&reference.gmagick.entities.gmagickdraw;
+&reference.gmagick.entities.gmagickpixel;
+&reference.gmagick.examples;
+&reference.gmagick.gmagick;
+&reference.gmagick.gmagickdraw;
+&reference.gmagick.gmagickexception;
+&reference.gmagick.gmagickpixel;
+&reference.gmagick.gmagickpixelexception;
+&reference.gmagick.setup;
+&reference.gmagick.versions;

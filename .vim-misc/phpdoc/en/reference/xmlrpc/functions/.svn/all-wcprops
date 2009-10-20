@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions
+END
+xmlrpc-encode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-encode.xml
+END
+xmlrpc-server-call-method.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-server-call-method.xml
+END
+xmlrpc-server-destroy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-server-destroy.xml
+END
+xmlrpc-get-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-get-type.xml
+END
+xmlrpc-server-register-introspection-callback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-server-register-introspection-callback.xml
+END
+xmlrpc-server-add-introspection-data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-server-add-introspection-data.xml
+END
+xmlrpc-decode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-decode.xml
+END
+xmlrpc-encode-request.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-encode-request.xml
+END
+xmlrpc-is-fault.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-is-fault.xml
+END
+xmlrpc-server-register-method.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-server-register-method.xml
+END
+xmlrpc-server-create.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-server-create.xml
+END
+xmlrpc-decode-request.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-decode-request.xml
+END
+xmlrpc-set-type.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-set-type.xml
+END
+xmlrpc-parse-method-descriptions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/!svn/ver/288721/phpdoc/en/trunk/reference/xmlrpc/functions/xmlrpc-parse-method-descriptions.xml
+END
