@@ -83,7 +83,7 @@ function! Tag_list()
     endif
 endfunction
 
-function! ScmInfo()
+function! GitInfo()
     let l:key = getcwd()
     if ! has_key(g:scm_cache, l:key)
         if (isdirectory(getcwd() . "/.git"))
@@ -172,10 +172,7 @@ function! SetProperties(_language)
     if (a:_language == "c")
         "C reference plugin, http://www.vim.org/scripts/script.php?script_id=614
         "map <c-i> <Leader>cr
-
         set makeprg=make\ %:r
-        map <c-c> :w<CR>:make<CR>
-        map! <c-c> <esc>:w<CR>:make<CR>
 
         "run  (g'o)
         map <c-g> :!./%:r<CR>
@@ -183,52 +180,69 @@ function! SetProperties(_language)
 
         "compile & run (a'll)
         map <c-a> :w<CR>:make && ./%:r<CR>
-        "if you wanna set <c-a> on --insert-- mode, remember to disable emacs
-        "like movements
+        call Common()
 
     elseif (a:_language == "php")
-        set syn=php
+        set syntax=php
         "requires php-cli
         set makeprg=php\ -l\ %
         set errorformat=%m\ in\ %f\ on\ line\ %l
-        map <c-c> :w<CR>:make<CR>
-        map! <c-c> <esc>:w<CR>:make<CR>
         "let php_sql_query = 1
         "let php_baselib = 1
         "let php_htmlInStrings = 1
         "let php_folding = 1
         "don't show variables in freaking php
         let tlist_php_settings = 'php;c:class;d:constant;f:function'
+        call Common()
 
     elseif (a:_language == "perl")
         set makeprg=$VIMRUNTIME/tools/efm_perl.pl\ -c\ %\ $*
         set errorformat=%f:%l:%m
+
+        nnoremap <silent><Leader>> :%!perltidy -q<CR>
+        vnoremap <silent><Leader>> :!perltidy -q<CR>
+
         "let perl_extended_vars = 1
+        "let perl_include_pod = 1
+        "let perl_fold = 1
+        "let perl_fold_blocks = 1
+        call Common()
+
+    elseif (a:_language == "python")
+        set foldmethod=indent
 
     endif
 endfunction
 
+function! Common()
+        set foldmethod=marker
+        set foldmarker={,}
+endfunction
+
 function! Skel(_language)
-    if (a:_language == "rb")
-        0r ~/.vim/skeletons/rbskel.rb
+    if (a:_language == "ruby")
+        0r ~/.vim/skeletons/skeleton.ruby
         :3
 
-    elseif (a:_language == "sh")
-        0r ~/.vim/skeletons/shskel.sh
+    elseif (a:_language == "bash")
+        0r ~/.vim/skeletons/skeleton.bash
         :3
 
     elseif (a:_language == "tex")
-        0r ~/.vim/skeletons/texskel.tex
+        0r ~/.vim/skeletons/skeleton.tex
         :16
 
     elseif (a:_language == "html")
-        0r ~/.vim/skeletons/htmlskel.html
+        0r ~/.vim/skeletons/skeleton.html
         :4
 
-    elseif (a:_language == "py")
-        0r ~/.vim/skeletons/pyskel.py
+    elseif (a:_language == "python")
+        0r ~/.vim/skeletons/skeleton.python
         :3
 
+    elseif (a:_language == "perl")
+        0r ~/.vim/skeletons/skeleton.perl
+        :3
     endif
 endfunction
 
@@ -440,7 +454,7 @@ set statusline=
 set statusline+=%2*%-3.3n%0*\                            "buffer number
 set statusline+=%F\                                      "file name
 let g:scm_cache = {}
-set statusline+=%{ScmInfo()}                             "scm info
+set statusline+=%{GitInfo()}                             "branch info
 set statusline+=%h%1*%m%r%w%0*                           "flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'},             "filetype
 set statusline+=%{&encoding},                            "encoding
@@ -533,15 +547,19 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")|execute("normal 
 "Language specific settings
 "TODO: Add languages
 au BufNewFile,BufEnter *.php,*.php3,*.php4,*.php5,*html,*.ctp,*.thtml call SetProperties("php")
+au BufNewFile,BufEnter *schema,*.inc,*.engine                         call SetProperties("php")
 au BufNewFile,BufEnter *.c,*.h                                        call SetProperties("c")
 au BufNewFile,BufEnter *.pl                                           call SetProperties("perl")
+" turn off any existing search
+au VimEnter * nohls
 
 "Skeletons :
-au BufNewFile *.rb    call Skel("rb")
-au BufNewFile *.sh    call Skel("sh")
+au BufNewFile *.rb    call Skel("ruby")
+au BufNewFile *.sh    call Skel("bash")
 au BufNewFile *.tex   call Skel("tex")
-au BufNewFile *.py    call Skel("py")
+au BufNewFile *.py    call Skel("python")
 au BufNewFile *.html  call Skel("html")
+au BufNewFile *.pl    call Skel("perl")
 
 "===========================================================================================
 "========================================== Mappings =======================================
@@ -574,6 +592,9 @@ map <c-p> :tabp <CR>
 "Ctrl+Pageup & Ctrl+Pagedown should do the same
 
 map <c-e> :tabclose <CR>
+
+map <c-c> :w<CR>:make<CR>
+map! <c-c> <esc>:w<CR>:make<CR>
 
 "for some unknown reason if I set this. it executes :confirm qall when I write
 " '*/' on --insert-- mode where '*' is a wildcard
