@@ -1,7 +1,3 @@
-"au VimEnter * if exists("loaded_cmdalias") |
-" \       call CmdAlias("mkdir",   "!mkdir") |
-" \       call CmdAlias("cvs",     "!cvs") |
-
 "-------------------------------------------------------------------------------
 "           Last review            Sat 17 Oct 2009 02:04:34 AM CDT
 "-------------------------------------------------------------------------------
@@ -12,15 +8,16 @@
 " taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [*]paster.vim autoclose.vim
 " browser.vim dbext.vim LargeFile.vim [*]manpageviewPlugin.vim Matrix.vim
 " [+]nextCS.vim tetris.vim vcscommand.vim VimRegEx.vim vsutil.vim qbuf.vim
-" surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim [*]SearchComplete.vim
-" [+]vimbuddy.vim
+" surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim php-doc.vim
+" [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
+" lusty-explorer.vim NERD_commenter.vim tasklist.vim xml.vim showmarks.vim
 "
 "[+] Modified versions
-"[*] TODO
+"[*] TODO                                git://github.com/chilicuil/dot-f.git
 
-"===========================================================================================
-"====================================== Custom functions ===================================
-"===========================================================================================
+"===============================================================================
+"================================ Custom functions =============================
+"===============================================================================
 
 command! WordMode       call Word_mode()
 command! DevMode        call Dev_mode()
@@ -42,14 +39,18 @@ function! Snippet_search()
     "TODO Open in a quickfix window
     let s:wordUnderCursor = expand("<cword>")
 
-    if &ft == "cpp" || &ft == "c" || &ft == "ruby" || &ft == "php" || &ft == "python"
-        let s:url = "http://www.google.com/codesearch?q=".s:wordUnderCursor."+lang:".&ft
-    elseif  &ft == "html" || &ft == "css" || &ft == "perl" || &ft =="javascript"
-        let s:url = "http://www.google.com/codesearch?q=".s:wordUnderCursor."+lang:".&ft
+    if &ft == "cpp" || &ft == "c" || &ft == "ruby" || &ft == "php"
+        let s:url = "http://www.google.com/codesearch?q="
+                    \.s:wordUnderCursor."+lang:".&ft
+    elseif  &ft == "html" || &ft == "css" || &ft == "perl"
+        let s:url = "http://www.google.com/codesearch?q="
+                    \.s:wordUnderCursor."+lang:".&ft
     elseif &ft == "java" || &ft == "sh" || &ft == "tex"
-        let s:url = "http://www.google.com/codesearch?q=".s:wordUnderCursor."+lang:".&ft
-    elseif &ft == "vim"
-        let s:url = "http://www.google.com/codesearch?q=".s:wordUnderCursor
+        let s:url = "http://www.google.com/codesearch?q="
+                    \.s:wordUnderCursor."+lang:".&ft
+    elseif &ft == "vim" || &ft == "python" || &ft =="javascript"
+        let s:url = "http://www.google.com/codesearch?q="
+                    \.s:wordUnderCursor
     else
         echohl WarningMsg| echo "Filetype unknown" |echohl None
         return
@@ -87,7 +88,9 @@ function! GitInfo()
     let l:key = getcwd()
     if ! has_key(g:scm_cache, l:key)
         if (isdirectory(getcwd() . "/.git"))
-            let g:scm_cache[l:key] = "[" . substitute(readfile(getcwd() . "/.git/HEAD", "", 1)[0],
+            let g:scm_cache[l:key] = "["
+                        \. substitute(readfile(getcwd()
+                        \. "/.git/HEAD", "", 1)[0],
                         \ "^.*/", "", "") . "] "
         else
             let g:scm_cache[l:key] = ""
@@ -196,6 +199,7 @@ function! SetProperties(_language)
         call Common()
 
     elseif (a:_language == "perl")
+        "TODO Use compiler when available
         set makeprg=$VIMRUNTIME/tools/efm_perl.pl\ -c\ %\ $*
         set errorformat=%f:%l:%m
 
@@ -206,10 +210,17 @@ function! SetProperties(_language)
         "let perl_include_pod = 1
         "let perl_fold = 1
         "let perl_fold_blocks = 1
+        "let perl_want_scope_in_variables = 1
         call Common()
 
+    "elseif (a:_language == "python" || a:_language == "make")
     elseif (a:_language == "python")
         set foldmethod=indent
+        setlocal noexpandtab
+
+    elseif (a:_language == "make")
+        set foldmethod=indent
+        setlocal noexpandtab
 
     endif
 endfunction
@@ -280,9 +291,9 @@ function! Dev_mode()
 endfunction
 
 function! Dev_mode_on()
-    set number                                "show the number of the lines on the left of the screen
-    set linebreak                             "wrap at word
-    "set patchmode=.orig                       "keeps a backup called filename.orig while editing a file
+    set number            "show the number of the lines on the left of the screen
+    set linebreak         "wrap at word
+    "set patchmode=.orig  "keeps filename.orig while editing
 
     "subract/add 1 from the number or alphabetic character at or after the cursor.
     noremap - <c-x>
@@ -490,9 +501,9 @@ set foldmarker={,}
 
 setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 
-"===========================================================================================
-"======================================= Plugins config  ===================================
-"===========================================================================================
+"===============================================================================
+"================================ Plugins config  ==============================
+"===============================================================================
 
 "autocomplpop.vim plugin
 let g:acp_behaviorKeywordLength = 4
@@ -527,7 +538,8 @@ let g:qb_hotkey = "<F2>"
 let g:dbext_default_history_file = '~/.vim/plugin/dbext_history'
 let g:dbext_default_history_size = 1000
 "let g:dbext_default_profile             = 'mysql_local'
-let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=chilicuil:passwd=just4fun:dbname=chilicuil:host=localhost:port=3306'
+let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=chilicuil:
+            \passwd=just4fun:dbname=chilicuil:host=localhost:port=3306'
 
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize = 25
@@ -537,19 +549,22 @@ let g:Tlist_WinWidth = 25
 let g:Tlist_Show_One_File = 1
 let Tlist_Enable_Fold_Column = 0
 
-"===========================================================================================
-"===================================== Autoloads by events =================================
-"===========================================================================================
+"===============================================================================
+"================================ Autoloads by events ==========================
+"===============================================================================
 
 " Go back to the position the cursor was on the last time this file was edited
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")|execute("normal `\"")|endif
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+                \|execute("normal `\"")|endif
 
 "Language specific settings
 "TODO: Add languages
-au BufNewFile,BufEnter *.php,*.php3,*.php4,*.php5,*html,*.ctp,*.thtml call SetProperties("php")
-au BufNewFile,BufEnter *schema,*.inc,*.engine                         call SetProperties("php")
-au BufNewFile,BufEnter *.c,*.h                                        call SetProperties("c")
-au BufNewFile,BufEnter *.pl                                           call SetProperties("perl")
+au BufNewFile,BufEnter *.php,*.php3,*.php4,*.php5    call SetProperties("php")
+au BufNewFile,BufEnter *schema,*.inc,*.engine,*html  call SetProperties("php")
+au BufNewFile,BufEnter *.ctp,*.thtml                 call SetProperties("php")
+au BufNewFile,BufEnter *.c,*.h                       call SetProperties("c")
+au BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml           call SetProperties("perl")
+au BufNewFile,BufEnter *[mM]akefile,*.mk             call SetProperties("make")
 " turn off any existing search
 au VimEnter * nohls
 
@@ -561,9 +576,9 @@ au BufNewFile *.py    call Skel("python")
 au BufNewFile *.html  call Skel("html")
 au BufNewFile *.pl    call Skel("perl")
 
-"===========================================================================================
-"========================================== Mappings =======================================
-"===========================================================================================
+"===============================================================================
+"================================== Mappings ===================================
+"===============================================================================
 
 "=== Ctrl Mappings===
 
@@ -596,8 +611,11 @@ map <c-e> :tabclose <CR>
 map <c-c> :w<CR>:make<CR>
 map! <c-c> <esc>:w<CR>:make<CR>
 
-"for some unknown reason if I set this. it executes :confirm qall when I write
-" '*/' on --insert-- mode where '*' is a wildcard
+map <C-Left> b
+map <C-Right> w
+
+"for some unknown reason if I set this. it executes :confirm qall when
+" I write '*/' on --insert-- mode where '*' is a wildcard
 "map! <c-x> <esc>:confirm qall<CR>
 
 "exit keyboard shortcut
@@ -630,7 +648,7 @@ map <silent> <Leader>f :DefaultMode<CR>
 
 "Folding
 map <silent> <Leader>{ :set foldenable!<CR>
-noremap <silent> <Leader>[  :<C-U>exec 'silent! normal! za'.(foldlevel('.')?'':'')<CR>
+noremap <silent> <Leader>[ za
 
 "update ~/.vimrc
 map <Leader>u :source $MYVIMRC<CR>
@@ -676,7 +694,8 @@ noremap <Space> i <Esc>
 xnoremap <BS> d
 snoremap <BS> <BS>i
 
-"Most of the time, the only reason you want to move to the end of a word is to add text
+"Most of the time, the only reason you want to move to the end
+"of a word is to add text
 map e ea
 
 "make Y consistent with D and C
@@ -706,21 +725,29 @@ cabbr Wq wq
 
 noremap <HOME> ^
 noremap <END> $
+"this will work only on the gui version, most terminal are unable to
+"determinate the difference between <home> and <m-home>
+noremap <M-HOME> gg
+noremap <M-END> G
 "move between buffers
 map <Tab><Space> :bnext <CR>
 
-"insert a newline in normal mode, it has some problems with vimgrep use r<Enter> instance
+"insert a newline in normal mode, it has some problems with vimgrep
+"use r<Enter> instance
 "noremap <CR> i<CR><Esc>
 "noremap <CR> o<Esc>
+
+noremap N Nzz
+noremap n nzz
 
 "Basically you press * or # to search for the current selection
 vnoremap <silent> * :call VisualSearch('f')<CR>
 vnoremap <silent> # :call VisualSearch('b')<CR>
 vnoremap <silent> gv :call VisualSearch('gv')<CR>
 
-"===========================================================================================
-"=======================================Extra-notes=========================================
-"===========================================================================================
+"===============================================================================
+"==================================Extra-notes==================================
+"===============================================================================
 
 " ==Movement==
 " "Ctrl-f" scrolls forward one screen
@@ -746,7 +773,7 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " "gg" puts the cursor in the first line.
 " "G" puts the cursor in the last line
 " "'0" returns to the last mark
-" "Ctrl-w f" goes to the file under the cursor, it also works with ftp, scp, rcp, http files
+" "Ctrl-w f" goes to the file under the cursor
 
 " ==Text objects==
 " "daw" deletes word under cursor, see :h text-objects, (c)hange & (y)ank
@@ -774,25 +801,30 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " ":%s/\(old\) \(stuff\)/\2 \1/gc" same to the above sentence
 " ":1,10s/.*/(&)/" surrounds each line from 1 to 10 with parenthesis
 " "%s/yes, doctor/\uyes, \udoctor/gc" changes 'yes doctor' to 'Yes, Doctor'
-" ":%s/\([:.]\)  */\1  /g" replaces one or more spaces following a period or a colon with two spaces
-" ":g/^[ tab]*$/d" deletes all blank lines, plus any lines that contain only whitespace
+" ":%s/\([:.]\)  */\1  /g" replaces one or more spaces following a period
+"                          or a colon with two spaces
+" ":g/^[ tab]*$/d" deletes all blank lines, plus any lines that contain
+"                  only whitespace
 " ":%s/.*/\U&/"
 " ":%s/./\U&/g" changes every letter in a file to uppercase
 " ":windo %s/old/new/g" replaces 'old' with 'new' in all windows
 " ":bufdo set nonumber" set nonumber option in all buffers
 " ":g/^/move 0" reverses the order of lines in a file
-" ":g!/^[[:digit:]]/move $" for any line that doesn't begin with a number, moves the line to the end of the file
+" ":g!/^[[:digit:]]/move $" for any line that doesn't begin with a number,
+"                           moves the line to the end of the file
 " "&" repeats the last substitution
 " ":%&g" repeats the last substitution globally
 " "/\<thi" matches all the words who start with "thi" like 'things'
 " "/ing\>" matches all the words who end with "ing", like 'using'
-" ":vimgrep /\%1l/ **/filename" find all files given a name at any depth in the current directory or below
+" ":vimgrep /\%1l/ **/filename" find all files given a name at any depth
+"                               in the current directory or below
 " ":copen" open the list generated by vimgrep
 " "f<character>" searches for the character
 " ";" goes to the next match
 " "," goes to the previous match
 " "F<character>" searches to the left.
-" "d/key-word" deletes from the cursor to the key-word, it also works with ?
+" "d/key-word" deletes from the cursor to the key-word, it also
+"              works with ?
 " "[I" finds global identifiers in included files
 
 " ==Edit==
@@ -812,18 +844,21 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " "Ctrl-w r" rotates windows
 " "Ctrl-w x" rotates windows and cursor focus at the same time
 " "Ctrl-w T" moves the current window to a new tab
-" "Ctrl-w H | J | K | L" moves the current window to the left, bottom, top and right of the screen
+" "Ctrl-w H | J | K | L" moves the current window to the left,
+"                        bottom, top and right of the screen
 " "vim + file" opens file at last line
-" "find . | vim -" you can take the output of any command and send it into a vim session
+" "find . | vim -" you can take the output of any command and
+"                  send it into a vim session
 " ":sball" opens all buffers in new windows
 " ":help 42"
 " ":help quotes"
 " ":help holy-grail"
 " ":w !sudo tee %" you can use sudo inside vim
-" "<F12>" use the next scheme (nextCS required)
-" "<F11>" use the previous scheme (nextCS required)
 " "zo" Open a folder
 " "zO" Open a folder recursively
 " "zc" Close a folder
 " "zC" Close a folder recursively
-" Vim can be suspended like any other program with Ctrl-z and be restarted with --fg--
+" "map" List maps
+" "set all" show all the options
+" Vim can be suspended like any other program with Ctrl-z and
+" be restarted with --fg--
