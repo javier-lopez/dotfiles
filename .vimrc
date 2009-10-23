@@ -11,10 +11,12 @@
 " surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim php-doc.vim
 " [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
 " lusty-explorer.vim NERD_commenter.vim tasklist.vim xml.vim showmarks.vim
+" DirDiff.vim
 "
 "[+] Modified versions
 "[*] TODO                                git://github.com/chilicuil/dot-f.git
 
+let loaded_showmarks = 1
 "===============================================================================
 "================================ Custom functions =============================
 "===============================================================================
@@ -403,9 +405,10 @@ set nocompatible       "breaks compatibility with vi, it must be enable at the
                        "start to not overwrite other flags
 set noexrc             "don't use local version of .(g)vimrc, .exrc
 set mouse=nv           "set the mouse to work in console mode
+set mousehide          "hide the mouse while typying
 set lazyredraw         "do not redraw the screen while macros are running. It
                        "improves performance
-"set ttyfast
+set ttyfast            "indicates a fast terminal connection
 set history=1000       "record last 1000 commands, press 'q:' to see a new
                        "window (normal mode) with the full history
 set t_Co=256           "set 256 colors. Make sure your console supports it.
@@ -452,8 +455,7 @@ set backspace=indent,eol,start     "make backspace works like in other editors.
 filetype plugin indent on          "enable filetype-specific plugins
 
 "remember as much as possible
-set viminfo='1000,f1,:1000,/1000
-
+set viminfo='1000,<1000,s100,h
 
 "====== Status Line ======
 
@@ -474,9 +476,11 @@ if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
     set statusline+=\ %{VimBuddy()}                      "vim buddy
 endif
 set statusline+=%=                                       "right align
+set statusline+=%2*%-8{strftime('%H:%M')}                "time
 "set statusline+=%2*%-3b,0x%-8B\                          "current char
-set statusline+=%2*0x%-8B\                               "current char
-set statusline+=%-14.(%l,%c%V%)\ %<%P                    "offset
+set statusline+=0x%-4B\                                  "current char
+"set statusline+=%-14.(%l,%c%V%)\ %<%P                    "offset
+set statusline+=%-8.(%l,%c%V%)\ %P                      "offset
 
 " special statusbar for special windows
 if has("autocmd")
@@ -511,6 +515,7 @@ let g:acp_mappingDriven = 1
 let g:acp_completeOption = '.,w,b,u,t,k,i'
 "let g:acp_completeOption = '.,w,b,i,t,u'
 let g:acp_completeoptPreview = 1
+let g:acp_behaviorSnipmateLength = 1
 
 "pastebin plugin (modified)
 let g:pasteBinURI = 'http://chilicuil.pastebin.com/'
