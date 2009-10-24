@@ -11,12 +11,14 @@
 " surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim php-doc.vim
 " [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
 " lusty-explorer.vim NERD_commenter.vim tasklist.vim xml.vim showmarks.vim
-" DirDiff.vim
+" DirDiff.vim, fuzzyfinder.vim, srcexpl.vim, align.vim
 "
 "[+] Modified versions
 "[*] TODO                                git://github.com/chilicuil/dot-f.git
 
 let loaded_showmarks = 1
+let loaded_srcexpl = 1
+
 "===============================================================================
 "================================ Custom functions =============================
 "===============================================================================
@@ -499,7 +501,7 @@ call Trailer()
 "set runtimepath+=/home/chilicuil/.vim/doc/php
 
 "folder options
-set foldenable                                           "off by default
+set foldenable!                                           "off by default
 set foldmethod=marker
 set foldmarker={,}
 
@@ -512,7 +514,7 @@ setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 "autocomplpop.vim plugin
 let g:acp_behaviorKeywordLength = 4
 let g:acp_mappingDriven = 1
-let g:acp_completeOption = '.,w,b,u,t,k,i'
+"let g:acp_completeOption = '.,w,b,u,t,k,i'
 "let g:acp_completeOption = '.,w,b,i,t,u'
 let g:acp_completeoptPreview = 1
 let g:acp_behaviorSnipmateLength = 1

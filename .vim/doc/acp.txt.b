@@ -45,7 +45,8 @@ And then update your help tags files to enable fuzzyfinder help. See
 ==============================================================================
 USAGE                                                              *acp-usage*
 
-Once this plugin is installed, auto-popup is enabled at startup by default.
+If this plugin has been installed, auto-popup is enabled at startup by
+default.
 
 Which completion method is used depends on the text before the cursor. The
 default behavior is as follows:
@@ -57,40 +58,12 @@ default behavior is as follows:
         Omni      ruby        ".", "::" or non-word character + ":"
                               (|+ruby| required.)
         Omni      python      "." (|+python| required.)
-        Omni      xml         "<", "</" or ("<" + non-">" characters + " ")
         Omni      html/xhtml  "<", "</" or ("<" + non-">" characters + " ")
         Omni      css         (":", ";", "{", "^", "@", or "!")
                               + 0 or 1 space
 
-Also, you can make user-defined completion and snipMate's trigger completion
-(|acp-snipMate|) auto-popup if the options are set.
+This behavior is customizable.
 
-These behavior are customizable.
-
-                                                                *acp-snipMate*
-snipMate's Trigger Completion ~
-
-snipMate's trigger completion enables you to complete a snippet trigger
-provided by snipMate plugin
-(http://www.vim.org/scripts/script.php?script_id=2540) and expand it.
-
-
-To enable auto-popup for this completion, add following function to
-plugin/snipMate.vim:
->
-  fun! GetSnipsInCurrentScope()
-    let snips = {}
-    for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
-      call extend(snips, get(s:snippets, scope, {}), 'keep')
-      call extend(snips, get(s:multi_snips, scope, {}), 'keep')
-    endfor
-    return snips
-  endf
-<
-And set |g:acp_behaviorSnipmateLength| option to 1.
-
-There is the restriction on this auto-popup, that the text before cursor must
-consist only of uppercase characters.
 
 ==============================================================================
 COMMANDS                                                        *acp-commands*
@@ -146,7 +119,7 @@ OPTIONS                                                          *acp-options*
 <
         If non-zero, "preview" is added to 'completeopt' when auto-popup.
 
-                                        *g:acp_behaviorUserDefinedFunction*  >
+                                             *g:acp_behaviorUserDefinedFunction*  >
   let g:acp_behaviorUserDefinedFunction = ''
 <
         Function for user-defined completion. If empty, this completion will
@@ -154,20 +127,14 @@ OPTIONS                                                          *acp-options*
 
         See also:|complete-functions|
 
-                                         *g:acp_behaviorUserDefinedPattern*  >
+                                             *g:acp_behaviorUserDefinedPattern*  >
   let g:acp_behaviorUserDefinedPattern = '\k$'
 <
         Pattern before a cursor, which are needed to attempt user-defined
         completion.
 
-                                             *g:acp_behaviorSnipmateLength*  >
-  let g:acp_behaviorSnipmateLength = -1
-<
-        Pattern before a cursor, which are needed to attempt snipMate-trigger
-        completion.
-
                                              *g:acp_behaviorKeywordCommand*  >
-  let g:acp_behaviorKeywordCommand = "\<C-n>"
+  let g:acp_behaviorKeywordCommand = "\<C-p>"
 <
         Command for keyword completion. This option is usually set "\<C-n>" or
         "\<C-p>".
@@ -206,13 +173,6 @@ OPTIONS                                                          *acp-options*
         Length of keyword characters before a cursor, which are needed to
         attempt python omni-completion. If negative value, this completion
         will be never attempted.
-
-                                              *g:acp_behaviorXmlOmniLength*  >
-  let g:acp_behaviorXmlOmniLength = 0
-<
-        Length of keyword characters before a cursor, which are needed to
-        attempt XML omni-completion. If negative value, this completion will
-        be never attempted.
 
                                              *g:acp_behaviorHtmlOmniLength*  >
   let g:acp_behaviorHtmlOmniLength = 0
@@ -268,24 +228,6 @@ SPECIAL THANKS                                                    *acp-thanks*
 
 ==============================================================================
 CHANGELOG                                                      *acp-changelog*
-
-2.11
-  - Implemented experimental feature which is snipMate's trigger completion.
-
-2.10
-  - Improved the response by changing not to attempt any completion when
-    keyword characters are entered after a word which has been found that it
-    has no completion candidate at the last attempt of completions.
-  - Improved the response by changing to close popup menu when <BS> was
-    pressed and the text before the cursor would not match with the pattern of
-    current behavior.
-
-2.9
-  - Changed default behavior to support XML omni completion.
-  - Changed default value of g:acp_behaviorKeywordCommand option.
-    The option with "\<C-p>" cause a problem which inserts a match without
-    <CR> when 'dictionary' has been set and keyword completion is done.
-  - Changed to show error message when incompatible with a installed vim.
 
 2.8.1
   - Fixed a bug which inserted a selected match to the next line when

@@ -11,6 +11,7 @@ acp-contact	acp.jax	/*acp-contact*
 acp-installation	acp.jax	/*acp-installation*
 acp-introduction	acp.jax	/*acp-introduction*
 acp-options	acp.jax	/*acp-options*
+acp-snipMate	acp.jax	/*acp-snipMate*
 acp-usage	acp.jax	/*acp-usage*
 acp.txt	acp.jax	/*acp.txt*
 autocomplpop	acp.jax	/*autocomplpop*
@@ -24,8 +25,10 @@ g:acp_behaviorKeywordLength	acp.jax	/*g:acp_behaviorKeywordLength*
 g:acp_behaviorPythonOmniLength	acp.jax	/*g:acp_behaviorPythonOmniLength*
 g:acp_behaviorRubyOmniMethodLength	acp.jax	/*g:acp_behaviorRubyOmniMethodLength*
 g:acp_behaviorRubyOmniSymbolLength	acp.jax	/*g:acp_behaviorRubyOmniSymbolLength*
+g:acp_behaviorSnipmateLength	acp.jax	/*g:acp_behaviorSnipmateLength*
 g:acp_behaviorUserDefinedFunction	acp.jax	/*g:acp_behaviorUserDefinedFunction*
 g:acp_behaviorUserDefinedPattern	acp.jax	/*g:acp_behaviorUserDefinedPattern*
+g:acp_behaviorXmlOmniLength	acp.jax	/*g:acp_behaviorXmlOmniLength*
 g:acp_completeOption	acp.jax	/*g:acp_completeOption*
 g:acp_completeoptPreview	acp.jax	/*g:acp_completeoptPreview*
 g:acp_enableAtStartup	acp.jax	/*g:acp_enableAtStartup*

@@ -19,7 +19,7 @@ function acp#enable()
 
   augroup AcpGlobalAutoCommand
     autocmd!
-    autocmd InsertEnter * unlet! s:posLast s:lastUncompletableWord
+    autocmd InsertEnter * unlet! s:posLast
     autocmd InsertLeave * call s:finishPopup(1)
   augroup END
 
@@ -60,36 +60,8 @@ function acp#unlock()
 endfunction
 
 "
-function acp#completeSnipmate(findstart, base)
-  if a:findstart
-    return len(matchstr(s:getCurrentText(), '.*\U'))
-  endif
-  let lenBase = len(a:base)
-  let items = filter(GetSnipsInCurrentScope(),
-        \            'strpart(v:key, 0, lenBase) ==? a:base')
-  return map(items(items), 's:makeSnipmateItem(v:val[0], v:val[1])')
-endfunction
-
-"
-function acp#onPopupCloseSnipmate()
-  let text = s:getCurrentText()
-  let lenText = len(text)
-  for trigger in keys(GetSnipsInCurrentScope())
-    let lenTrigger = len(trigger)
-    if lenText >= lenTrigger && strridx(text, trigger) + lenTrigger == lenText
-      let g:i = text . '|' . trigger
-      call feedkeys("\<C-l>", "m")
-      return 0
-    endif
-  endfor
-  return 1
-endfunction
-
-"
 function acp#onPopupPost()
   if pumvisible()
-    inoremap <silent> <expr> <C-h> acp#onBs()
-    inoremap <silent> <expr> <BS>  acp#onBs()
     " a command to restore to original text and select the first match
     return (s:behavsCurrent[0].command =~# "\<C-p>" ? "\<C-n>\<Up>"
           \                                         : "\<C-p>\<Down>")
@@ -99,21 +71,9 @@ function acp#onPopupPost()
     return printf("\<C-e>%s\<C-r>=acp#onPopupPost()\<CR>",
           \       s:behavsCurrent[0].command)
   else
-    let s:lastUncompletableWord = s:getCurrentWord()
     call s:finishPopup(0)
     return "\<C-e>"
   endif
-endfunction
-
-"
-function acp#onBs()
-  " using "matchstr" and not "strpart" in order to handle multi-byte
-  " characters
-  if s:matchesBehavior(matchstr(s:getCurrentText(), '.*\ze.'),
-        \              s:behavsCurrent[0])
-    return "\<BS>"
-  endif
-  return "\<C-e>\<BS>"
 endfunction
 
 " }}}1
@@ -163,16 +123,6 @@ function s:restoreTempOptions(group)
 endfunction
 
 "
-function s:getCurrentWord()
-  return matchstr(s:getCurrentText(), '\k*$')
-endfunction
-
-"
-function s:getCurrentText()
-  return strpart(getline('.'), 0, col('.') - 1)
-endfunction
-
-"
 function s:matchesBehavior(text, behav)
   return a:text =~ a:behav.pattern &&
         \ (!exists('a:behav.exclude') || a:text !~ a:behav.exclude)
@@ -201,12 +151,6 @@ function s:feedPopup()
   if s:lockCount > 0 || pumvisible() || &paste
     return ''
   endif
-  if exists('s:behavsCurrent[0].onPopupClose')
-    if !function(s:behavsCurrent[0].onPopupClose)()
-      call s:finishPopup(1)
-      return ''
-    endif
-  endif
   let cursorMoved = s:isCursorMovedSinceLastCall()
   if exists('s:behavsCurrent[0].repeat') && s:behavsCurrent[0].repeat
     let s:behavsCurrent = [ s:behavsCurrent[0] ]
@@ -217,14 +161,8 @@ function s:feedPopup()
   else
     let s:behavsCurrent = []
   endif
-  if exists('s:lastUncompletableWord') &&
-        \ stridx(s:getCurrentWord(), s:lastUncompletableWord) == 0
-    let s:behavsCurrent = []
-  else
-    unlet! s:lastUncompletableWord
-    let text = s:getCurrentText()
-    call filter(s:behavsCurrent, 's:matchesBehavior(text, v:val)')
-  endif
+  let text = strpart(getline('.'), 0, col('.') - 1)
+  call filter(s:behavsCurrent, 's:matchesBehavior(text, v:val)')
   if empty(s:behavsCurrent)
     call s:finishPopup(1)
     return ''
@@ -250,8 +188,6 @@ endfunction
 
 "
 function s:finishPopup(fGroup1)
-  inoremap <C-h> <Nop> | iunmap <C-h>
-  inoremap <BS>  <Nop> | iunmap <BS>
   let s:behavsCurrent = []
   call s:restoreTempOptions(s:GROUP0)
   if a:fGroup1
@@ -264,19 +200,6 @@ function s:setCompletefunc()
   if exists('s:behavsCurrent[0].completefunc')
     call s:setTempOption(0, 'completefunc', s:behavsCurrent[0].completefunc)
   endif
-endfunction
-
-"
-function s:makeSnipmateItem(key, snip)
-  if type(a:snip) == type([])
-    let snipFormatted = '[multi snip]'
-  else
-    let snipFormatted = strpart(substitute(a:snip, "\n", '    ', 'g'), 0, 80)
-  endif
-  return  {
-        \   'word': a:key,
-        \   'menu': snipFormatted,
-        \ }
 endfunction
 
 " }}}1

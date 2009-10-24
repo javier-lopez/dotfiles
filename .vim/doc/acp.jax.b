@@ -56,39 +56,12 @@ ZIPファイルをランタイムディレクトリに展開します。
                                     + 0文字以上のファイル名文字
         オムニ補完      ruby        ".", "::" or 単語を構成する文字以外 + ":"
         オムニ補完      python      "."
-        オムニ補完      xml         "<", "</" or ("<" + ">"以外の文字列 + " ")
         オムニ補完      html/xhtml  "<", "</" or ("<" + ">"以外の文字列 + " ")
         オムニ補完      css         (":", ";", "{", "^", "@", or "!")
                                     + 0個または1個のスペース
 
-さらに、設定を行うことで、ユーザー定義補完と snipMate トリガー補完
-(|acp-snipMate|) を自動ポップアップさせることができます。
+この補完動作はカスタマイズ可能です。
 
-これらの補完動作はカスタマイズ可能です。
-
-                                                                *acp-snipMate*
-snipMate トリガー補完 ~
-
-snipMate トリガー補完では、snipMate プラグイン
-(http://www.vim.org/scripts/script.php?script_id=2540) が提供するスニペットの
-トリガーを補完してそれを展開することができます。
-
-この自動ポップアップを有効にするには、次の関数を plugin/snipMate.vim に追加す
-る必要があります:
->
-  fun! GetSnipsInCurrentScope()
-    let snips = {}
-    for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
-      call extend(snips, get(s:snippets, scope, {}), 'keep')
-      call extend(snips, get(s:multi_snips, scope, {}), 'keep')
-    endfor
-    return snips
-  endf
-<
-そして|g:acp_behaviorSnipmateLength|オプションを 1 にしてください。
-
-この自動ポップアップには制限があり、カーソル直前の単語は大文字英字だけで構成さ
-れていなければなりません。
 
 ==============================================================================
 コマンド                                                        *acp-commands*
@@ -145,25 +118,19 @@ snipMate トリガー補完では、snipMate プラグイン
 <
         真なら自動ポップアップ時に、 'completeopt' へ "preview" を追加します。
 
-                                        *g:acp_behaviorUserDefinedFunction*  >
+                                             *g:acp_behaviorUserDefinedFunction*  >
   let g:acp_behaviorUserDefinedFunction = ''
 <
         ユーザー定義補完の関数。空ならこの補完は行いません。
 
-                                         *g:acp_behaviorUserDefinedPattern*  >
+                                             *g:acp_behaviorUserDefinedPattern*  >
   let g:acp_behaviorUserDefinedPattern = '\k$'
 <
         ユーザー定義補完の自動ポップアップを行うのに必要なカーソルの直前のパタ
         ーン。
 
-                                             *g:acp_behaviorSnipmateLength*  >
-  let g:acp_behaviorSnipmateLength = -1
-<
-        snipMate トリガー補完の自動ポップアップを行うのに必要なカーソルの直前
-        のパターン。
-
                                              *g:acp_behaviorKeywordCommand*  >
-  let g:acp_behaviorKeywordCommand = "\<C-n>"
+  let g:acp_behaviorKeywordCommand = "\<C-p>"
 <
         キーワード補完のコマンド。このオプションには普通 "\<C-n>" か "\<C-p>"
         を設定します。
@@ -197,12 +164,6 @@ snipMate トリガー補完では、snipMate プラグイン
 <
         Python オムニ補完の自動ポップアップを行うのに必要なカーソルの直前のキ
         ーワード文字数。負数ならこの補完は行いません。
-
-                                              *g:acp_behaviorXmlOmniLength*  >
-  let g:acp_behaviorXmlOmniLength = 0
-<
-        XML オムニ補完の自動ポップアップを行うのに必要なカーソルの直前のキーワ
-        ード文字数。負数ならこの補完は行いません。
 
                                              *g:acp_behaviorHtmlOmniLength*  >
   let g:acp_behaviorHtmlOmniLength = 0

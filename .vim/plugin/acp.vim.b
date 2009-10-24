@@ -5,10 +5,7 @@
 "=============================================================================
 " LOAD GUARD {{{1
 
-if exists('g:loaded_acp')
-  finish
-elseif v:version < 702
-  echoerr 'AutoComplPop does not support this version of vim (' . v:version . ').'
+if exists('g:loaded_acp') || v:version < 702
   finish
 endif
 let g:loaded_acp = 1
@@ -30,7 +27,6 @@ function s:makeDefaultBehavior()
         \   '*'      : [],
         \   'ruby'   : [],
         \   'python' : [],
-        \   'xml'    : [],
         \   'html'   : [],
         \   'xhtml'  : [],
         \   'css'    : [],
@@ -43,18 +39,6 @@ function s:makeDefaultBehavior()
             \   'completefunc' : g:acp_behaviorUserDefinedFunction,
             \   'pattern'      : g:acp_behaviorUserDefinedPattern,
             \   'repeat'       : 0,
-            \ })
-    endfor
-  endif
-  "---------------------------------------------------------------------------
-  if g:acp_behaviorSnipmateLength >= 0
-    for key in keys(behavs)
-      call add(behavs[key], {
-            \   'command'      : "\<C-x>\<C-u>",
-            \   'completefunc' : 'acp#completeSnipmate',
-            \   'pattern'      : printf('\(^\|\s\|\<\)\u\{%d,}$', g:acp_behaviorSnipmateLength),
-            \   'repeat'       : 0,
-            \   'onPopupClose' : 'acp#onPopupCloseSnipmate'
             \ })
     endfor
   endif
@@ -108,15 +92,6 @@ function s:makeDefaultBehavior()
           \ })
   endif
   "---------------------------------------------------------------------------
-  if g:acp_behaviorXmlOmniLength >= 0
-    call add(behavs.xml, {
-          \   'command' : "\<C-x>\<C-o>",
-          \   'pattern' : printf('\(<\|<\/\|<[^>]\+ \|<[^>]\+=\"\)\k\{%d,}$',
-          \                      g:acp_behaviorXmlOmniLength),
-          \   'repeat'  : 0,
-          \ })
-  endif
-  "---------------------------------------------------------------------------
   if g:acp_behaviorHtmlOmniLength >= 0
     let behavHtml = {
           \   'command' : "\<C-x>\<C-o>",
@@ -161,14 +136,12 @@ call s:defineOption('g:acp_completeOption', '.,w,b,k')
 call s:defineOption('g:acp_completeoptPreview', 0)
 call s:defineOption('g:acp_behaviorUserDefinedFunction', '')
 call s:defineOption('g:acp_behaviorUserDefinedPattern' , '\k$')
-call s:defineOption('g:acp_behaviorSnipmateLength', -1)
-call s:defineOption('g:acp_behaviorKeywordCommand', "\<C-n>")
+call s:defineOption('g:acp_behaviorKeywordCommand', "\<C-p>")
 call s:defineOption('g:acp_behaviorKeywordLength', 2)
 call s:defineOption('g:acp_behaviorFileLength', 0)
 call s:defineOption('g:acp_behaviorRubyOmniMethodLength', 0)
 call s:defineOption('g:acp_behaviorRubyOmniSymbolLength', 1)
 call s:defineOption('g:acp_behaviorPythonOmniLength', 0)
-call s:defineOption('g:acp_behaviorXmlOmniLength', 0)
 call s:defineOption('g:acp_behaviorHtmlOmniLength', 0)
 call s:defineOption('g:acp_behaviorCssOmniPropertyLength', 1)
 call s:defineOption('g:acp_behaviorCssOmniValueLength', 0)
