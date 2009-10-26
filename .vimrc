@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Sat 17 Oct 2009 02:04:34 AM CDT
+"           Last review            Fri 23 Oct 2009 07:40:08 PM CDT
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
@@ -88,6 +88,7 @@ function! Tag_list()
     endif
 endfunction
 
+"I dont remember where I found this
 function! GitInfo()
     let l:key = getcwd()
     if ! has_key(g:scm_cache, l:key)
@@ -103,6 +104,7 @@ function! GitInfo()
     return g:scm_cache[l:key]
 endfunction
 
+"neither this one
 function! <SID>FixMiniBufExplorerTitle()
     if "-MiniBufExplorer-" == bufname("%")
         setlocal statusline=%2*%-3.3n%0*
@@ -235,29 +237,18 @@ function! Common()
 endfunction
 
 function! Skel(_language)
-    if (a:_language == "ruby")
-        0r ~/.vim/skeletons/skeleton.ruby
-        :3
-
-    elseif (a:_language == "bash")
-        0r ~/.vim/skeletons/skeleton.bash
-        :3
-
-    elseif (a:_language == "tex")
-        0r ~/.vim/skeletons/skeleton.tex
-        :16
-
-    elseif (a:_language == "html")
-        0r ~/.vim/skeletons/skeleton.html
-        :4
-
-    elseif (a:_language == "python")
-        0r ~/.vim/skeletons/skeleton.python
-        :3
-
-    elseif (a:_language == "perl")
-        0r ~/.vim/skeletons/skeleton.perl
-        :3
+    let l:skeleton_file = expand("~/.vim/skeletons/skeleton.". a:_language)
+    if filereadable(l:skeleton_file)
+        execute "0read " . l:skeleton_file
+        " Delete last line:
+        normal! G
+        normal! dd
+        normal! gg
+        call search("++HERE++")
+        normal! xxxxxxxx
+        " (crude, but it works)
+        " To automatically switch to insert mode, uncomment the following line:
+         startinsert
     endif
 endfunction
 
@@ -423,6 +414,8 @@ set ruler              "show the cursor position all the time
 set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
+"set wildignore =.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,
+"                \*.png,*.xpm,*.gif
 set hidden             "allow open other file without saving current file
 set autochdir          "change to the current directory
 set winminheight=1     "never let a window to be less than 1px height
@@ -502,8 +495,8 @@ call Trailer()
 
 "folder options
 set foldenable!                                           "off by default
-set foldmethod=marker
-set foldmarker={,}
+set foldmethod=syntax
+"set foldmarker={,}
 
 setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 
@@ -572,17 +565,110 @@ au BufNewFile,BufEnter *.ctp,*.thtml                 call SetProperties("php")
 au BufNewFile,BufEnter *.c,*.h                       call SetProperties("c")
 au BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml           call SetProperties("perl")
 au BufNewFile,BufEnter *[mM]akefile,*.mk             call SetProperties("make")
-" turn off any existing search
-au VimEnter * nohls
+
+"TODO
+    " Java
+    "augroup lang_java
+        "au!
+        "let java_highlight_all=1
+        "let java_highlight_functions="style"
+        "let java_allow_cpp_keywords=1
+"
+        "autocmd FileType java nmap <F4> :w<CR>:!javac %<CR>
+        "autocmd FileType java nmap <F5> :w<CR>:!javac % && java %:r<CR>
+        "autocmd FileType java nmap <F6> :w<CR>:!javac % && java %:r<SPACE>
+        "autocmd FileType java nmap <F7> :w<CR>:!javac % && jdb %:r<CR>
+        "autocmd FileType java nmap <F8> :w<CR>:!javac % && jdb %:r<SPACE>
+    "augroup END
+   " C
+    "augroup lang_c
+        "au!
+        "autocmd FileType c compiler gcc
+        "" Check with splint and compile
+        "autocmd FileType c nmap <F4> :w<CR>:!splint % \| less; gcc -Wall -g -c % -o %:r ; true<CR>
+        "" Once more, with objdumps!
+        "autocmd FileType c nmap <ESC><F4> :w<CR>:!splint % \| less; gcc -Wall -g -c % -o %:r && objdump -d %:r<CR>
+        "" Compile and run (w/o, w/ parameters)
+        "autocmd FileType c nmap <F5> :w<CR>:!gcc -Wall -g % -o %:r && ./%:r<CR>
+        "autocmd FileType c nmap <F6> :w<CR>:!gcc -Wall -g % -o %:r && ./%:r<SPACE>
+        "" Debug (w/o, w/ parameters)
+        "autocmd FileType c nmap <F7> :w<CR>:!gcc -Wall -g % -o %:r && cgdb %:r<CR>
+        "autocmd FileType c nmap <F8> :w<CR>:!gcc -Wall -g % -o %:r && cgdb %:r<SPACE>
+        "" Memory leaks (w/o, w/ parameters)
+        "autocmd FileType c nmap <ESC><F5> :w<CR>:!gcc -Wall -g % -o %:r && valgrind --leak-check=full ./%:r<CR>
+        "autocmd FileType c nmap <ESC><F6> :w<CR>:!gcc -Wall -g % -o %:r && valgrind --leak-check=full ./%:r<SPACE>
+        "
+        "" Automatic ctags
+        "autocmd BufWritePost *.c,*.h silent! !ctags -R &
+"
+        "" Documentation
+        ""autocmd FileType c setlocal keywordprg=man\ 3
+"
+        "" Abbreviations
+        ""   TODO
+"
+        "" C tip (no binding, requires that splint be installed):
+        ""   :compiler splint
+        ""   :make
+    "augroup END
+
+    "" C++
+    "augroup lang_cpp
+        "au!
+        "autocmd FileType cpp compiler gcc
+"
+        "" Add C dictionary (C++ dictionary automatically added above)
+        "autocmd FileType cpp exe('setlocal dictionary+='.$VIMRUNTIME.'/syntax/c.vim')
+"
+        "" Compile
+        "autocmd FileType cpp nmap <F4> :w<CR>:!g++ -Wall -g -c % -o %:r ; true<CR>
+        "" Compile + view objdump
+        "autocmd FileType cpp nmap <ESC><F4> :w<CR>:!g++ -Wall -g -c % -o %:r && objdump -d %:r \| less<CR>
+        "" Compile and run (w/o, w/ parameters)
+        "autocmd FileType cpp nmap <F5> :w<CR>:!g++ -Wall -g % -o %:r && ./%:r<CR>
+        "autocmd FileType cpp nmap <F6> :w<CR>:!g++ -Wall -g % -o %:r && ./%:r<SPACE>
+        "" Debug (w/o, w/ parameters)
+        "autocmd FileType cpp nmap <F7> :w<CR>:!g++ -Wall -g % -o %:r && cgdb %:r<CR>
+        "autocmd FileType cpp nmap <F8> :w<CR>:!g++ -Wall -g % -o %:r && cgdb %:r<SPACE>
+        "" Memory leaks (w/o, w/ parameters)
+        "autocmd FileType cpp nmap <ESC><F5> :w<CR>:!g++ -Wall -g % -o %:r && valgrind --leak-check=full ./%:r<CR>
+        "autocmd FileType cpp nmap <ESC><F6> :w<CR>:!g++ -Wall -g % -o %:r && valgrind --leak-check=full ./%:r<SPACE>
+"
+        "" Automatic ctags
+        "autocmd BufWritePost *.cpp silent! !ctags -R &
+"
+        "" Documentation
+        "autocmd FileType cpp setlocal keywordprg=man\ 3
+    "augroup END
+
+" for files encrypted using ccrypt(1)
+"augroup CPT
+  "au!
+  "" decrypt before reading
+  "au BufReadPre *.cpt       set bin viminfo= noswapfile
+  "" decrypted; prepare for editing
+  "au BufReadPost *.cpt      let $VIMPASS = inputsecret("Password: ")
+  "au BufReadPost *.cpt      %!ccrypt -cb -E VIMPASS
+  "au BufReadPost *.cpt      set nobin
+"
+  "" encrypt
+  "au BufWritePre *.cpt      set bin
+  "au BufWritePre *.cpt      %!ccrypt -e -E VIMPASS
+  "" encrypted; prepare for continuing to edit the file
+  "au BufWritePost *.cpt     silent undo | set nobin
+"augroup END
+
 
 "Skeletons :
-au BufNewFile *.rb    call Skel("ruby")
-au BufNewFile *.sh    call Skel("bash")
-au BufNewFile *.tex   call Skel("tex")
-au BufNewFile *.py    call Skel("python")
-au BufNewFile *.html  call Skel("html")
-au BufNewFile *.pl    call Skel("perl")
+au BufNewFile *.rb,*.ruby,*.eruby                    call Skel("ruby")
+au BufNewFile *.sh                                   call Skel("bash")
+au BufNewFile *.tex                                  call Skel("tex")
+au BufNewFile *.py                                   call Skel("python")
+au BufNewFile *.html                                 call Skel("html")
+au BufNewFile *.pl                                   call Skel("perl")
 
+" turn off any existing search
+au VimEnter * nohls
 "===============================================================================
 "================================== Mappings ===================================
 "===============================================================================
