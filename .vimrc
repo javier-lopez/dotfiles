@@ -61,7 +61,6 @@ function! Snippet_search()
     endif
 
     let s:cmd = "silent !" . s:browser . " " . s:url. " 2> /dev/null &"
-    "echo  s:cmd
     execute  s:cmd
     redraw!
 endfunction
@@ -189,20 +188,35 @@ function! SetProperties(_language)
 
         "compile & run (a'll)
         map <c-a> :w<CR>:make && ./%:r<CR>
-        call Common()
+
+    elseif (a:_language == "java")
+        set makeprg=javac %
+
+        "run  (g'o)
+        map <c-g> :!java %:r<CR>
+        map! <c-g> <Esc>:!java %:r<CR>
+
+        "compile & run (a'll)
+        map <c-a> :w<CR>:make && java %:r<CR>
+
+        "TODO:debug shortcut
+        "autocmd FileType java nmap <F7> :w<CR>:!javac % && jdb %:r<CR>
+        "autocmd FileType java nmap <F8> :w<CR>:!javac % && jdb %:r<SPACE>
+        let java_highlight_all=1
+        let java_highlight_functions="style"
+        let java_allow_cpp_keywords=1
 
     elseif (a:_language == "php")
         set syntax=php
         "requires php-cli
         set makeprg=php\ -l\ %
         set errorformat=%m\ in\ %f\ on\ line\ %l
-        "let php_sql_query = 1
-        "let php_baselib = 1
-        "let php_htmlInStrings = 1
-        "let php_folding = 1
+        let php_sql_query = 1
+        let php_baselib = 1
+        let php_htmlInStrings = 1
+        let php_folding = 1
         "don't show variables in freaking php
-        let tlist_php_settings = 'php;c:class;d:constant;f:function'
-        call Common()
+        "let tlist_php_settings = 'php;c:class;d:constant;f:function'
 
     elseif (a:_language == "perl")
         "TODO Use compiler when available
@@ -212,14 +226,12 @@ function! SetProperties(_language)
         nnoremap <silent><Leader>> :%!perltidy -q<CR>
         vnoremap <silent><Leader>> :!perltidy -q<CR>
 
-        "let perl_extended_vars = 1
-        "let perl_include_pod = 1
-        "let perl_fold = 1
-        "let perl_fold_blocks = 1
-        "let perl_want_scope_in_variables = 1
-        call Common()
+        let perl_extended_vars = 1
+        let perl_include_pod = 1
+        let perl_fold = 1
+        let perl_fold_blocks = 1
+        let perl_want_scope_in_variables = 1
 
-    "elseif (a:_language == "python" || a:_language == "make")
     elseif (a:_language == "python")
         set foldmethod=indent
         setlocal noexpandtab
@@ -229,11 +241,6 @@ function! SetProperties(_language)
         setlocal noexpandtab
 
     endif
-endfunction
-
-function! Common()
-        set foldmethod=marker
-        set foldmarker={,}
 endfunction
 
 function! Skel(_language)
@@ -248,7 +255,7 @@ function! Skel(_language)
         normal! xxxxxxxx
         " (crude, but it works)
         " To automatically switch to insert mode, uncomment the following line:
-         startinsert
+        " startinsert
     endif
 endfunction
 
@@ -414,8 +421,8 @@ set ruler              "show the cursor position all the time
 set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
-"set wildignore =.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,
-"                \*.png,*.xpm,*.gif
+set wildignore =.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,
+                \*.png,*.xpm,*.gif
 set hidden             "allow open other file without saving current file
 set autochdir          "change to the current directory
 set winminheight=1     "never let a window to be less than 1px height
@@ -565,107 +572,17 @@ au BufNewFile,BufEnter *.ctp,*.thtml                 call SetProperties("php")
 au BufNewFile,BufEnter *.c,*.h                       call SetProperties("c")
 au BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml           call SetProperties("perl")
 au BufNewFile,BufEnter *[mM]akefile,*.mk             call SetProperties("make")
-
-"TODO
-    " Java
-    "augroup lang_java
-        "au!
-        "let java_highlight_all=1
-        "let java_highlight_functions="style"
-        "let java_allow_cpp_keywords=1
-"
-        "autocmd FileType java nmap <F4> :w<CR>:!javac %<CR>
-        "autocmd FileType java nmap <F5> :w<CR>:!javac % && java %:r<CR>
-        "autocmd FileType java nmap <F6> :w<CR>:!javac % && java %:r<SPACE>
-        "autocmd FileType java nmap <F7> :w<CR>:!javac % && jdb %:r<CR>
-        "autocmd FileType java nmap <F8> :w<CR>:!javac % && jdb %:r<SPACE>
-    "augroup END
-   " C
-    "augroup lang_c
-        "au!
-        "autocmd FileType c compiler gcc
-        "" Check with splint and compile
-        "autocmd FileType c nmap <F4> :w<CR>:!splint % \| less; gcc -Wall -g -c % -o %:r ; true<CR>
-        "" Once more, with objdumps!
-        "autocmd FileType c nmap <ESC><F4> :w<CR>:!splint % \| less; gcc -Wall -g -c % -o %:r && objdump -d %:r<CR>
-        "" Compile and run (w/o, w/ parameters)
-        "autocmd FileType c nmap <F5> :w<CR>:!gcc -Wall -g % -o %:r && ./%:r<CR>
-        "autocmd FileType c nmap <F6> :w<CR>:!gcc -Wall -g % -o %:r && ./%:r<SPACE>
-        "" Debug (w/o, w/ parameters)
-        "autocmd FileType c nmap <F7> :w<CR>:!gcc -Wall -g % -o %:r && cgdb %:r<CR>
-        "autocmd FileType c nmap <F8> :w<CR>:!gcc -Wall -g % -o %:r && cgdb %:r<SPACE>
-        "" Memory leaks (w/o, w/ parameters)
-        "autocmd FileType c nmap <ESC><F5> :w<CR>:!gcc -Wall -g % -o %:r && valgrind --leak-check=full ./%:r<CR>
-        "autocmd FileType c nmap <ESC><F6> :w<CR>:!gcc -Wall -g % -o %:r && valgrind --leak-check=full ./%:r<SPACE>
-        "
-        "" Automatic ctags
-        "autocmd BufWritePost *.c,*.h silent! !ctags -R &
-"
-        "" Documentation
-        ""autocmd FileType c setlocal keywordprg=man\ 3
-"
-        "" Abbreviations
-        ""   TODO
-"
-        "" C tip (no binding, requires that splint be installed):
-        ""   :compiler splint
-        ""   :make
-    "augroup END
-
-    "" C++
-    "augroup lang_cpp
-        "au!
-        "autocmd FileType cpp compiler gcc
-"
-        "" Add C dictionary (C++ dictionary automatically added above)
-        "autocmd FileType cpp exe('setlocal dictionary+='.$VIMRUNTIME.'/syntax/c.vim')
-"
-        "" Compile
-        "autocmd FileType cpp nmap <F4> :w<CR>:!g++ -Wall -g -c % -o %:r ; true<CR>
-        "" Compile + view objdump
-        "autocmd FileType cpp nmap <ESC><F4> :w<CR>:!g++ -Wall -g -c % -o %:r && objdump -d %:r \| less<CR>
-        "" Compile and run (w/o, w/ parameters)
-        "autocmd FileType cpp nmap <F5> :w<CR>:!g++ -Wall -g % -o %:r && ./%:r<CR>
-        "autocmd FileType cpp nmap <F6> :w<CR>:!g++ -Wall -g % -o %:r && ./%:r<SPACE>
-        "" Debug (w/o, w/ parameters)
-        "autocmd FileType cpp nmap <F7> :w<CR>:!g++ -Wall -g % -o %:r && cgdb %:r<CR>
-        "autocmd FileType cpp nmap <F8> :w<CR>:!g++ -Wall -g % -o %:r && cgdb %:r<SPACE>
-        "" Memory leaks (w/o, w/ parameters)
-        "autocmd FileType cpp nmap <ESC><F5> :w<CR>:!g++ -Wall -g % -o %:r && valgrind --leak-check=full ./%:r<CR>
-        "autocmd FileType cpp nmap <ESC><F6> :w<CR>:!g++ -Wall -g % -o %:r && valgrind --leak-check=full ./%:r<SPACE>
-"
-        "" Automatic ctags
-        "autocmd BufWritePost *.cpp silent! !ctags -R &
-"
-        "" Documentation
-        "autocmd FileType cpp setlocal keywordprg=man\ 3
-    "augroup END
-
-" for files encrypted using ccrypt(1)
-"augroup CPT
-  "au!
-  "" decrypt before reading
-  "au BufReadPre *.cpt       set bin viminfo= noswapfile
-  "" decrypted; prepare for editing
-  "au BufReadPost *.cpt      let $VIMPASS = inputsecret("Password: ")
-  "au BufReadPost *.cpt      %!ccrypt -cb -E VIMPASS
-  "au BufReadPost *.cpt      set nobin
-"
-  "" encrypt
-  "au BufWritePre *.cpt      set bin
-  "au BufWritePre *.cpt      %!ccrypt -e -E VIMPASS
-  "" encrypted; prepare for continuing to edit the file
-  "au BufWritePost *.cpt     silent undo | set nobin
-"augroup END
-
+au BufNewFile,BufEnter *.java                        call SetProperties("java")
 
 "Skeletons :
 au BufNewFile *.rb,*.ruby,*.eruby                    call Skel("ruby")
-au BufNewFile *.sh                                   call Skel("bash")
+au BufNewFile *.sh,*.bash                            call Skel("bash")
 au BufNewFile *.tex                                  call Skel("tex")
-au BufNewFile *.py                                   call Skel("python")
+au BufNewFile *.py,*.python                          call Skel("python")
 au BufNewFile *.html                                 call Skel("html")
-au BufNewFile *.pl                                   call Skel("perl")
+au BufNewFile *.pl,*.perl                            call Skel("perl")
+au BufNewFile *.php,*.php3,*.php4,*.php5             call Skel("php")
+au BufNewFile *schema,*.inc,*.engine,*.ctp           call Skel("php")
 
 " turn off any existing search
 au VimEnter * nohls
@@ -674,7 +591,6 @@ au VimEnter * nohls
 "===============================================================================
 
 "=== Ctrl Mappings===
-
 "move between split windows
 "map work on --normal--, --visual-- and --operator-- modes
 "look at :help map-modes for more info
@@ -714,9 +630,7 @@ map <C-Right> w
 "exit keyboard shortcut
 map <c-x> :confirm qall<CR>
 
-
 "=== Leader Mappings===
-
 let mapleader = ","
 
 "matrix screensaver, matrix.vim plugin
@@ -767,14 +681,12 @@ nmap <Leader>vv <Plug>VCSVimDiff#
 "noremap <Leader>gg ggVG
 
 "=== Tab Mappings===
-
 map <Tab>c :cc<CR>
 map <Tab>n :cnext<CR>
 map <Tab>p :cprevious<CR>
 
 
 "=== Misc Mappings===
-
 map ; :
 
 "you don't wanna go far away just to press <Esc>, take care when pasting stuff

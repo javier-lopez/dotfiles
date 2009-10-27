@@ -9,6 +9,9 @@ endif
 
 let loaded_nextCS = 1
 
+let s:save_cpo = &cpo
+set cpo&vim
+
 function! l:avoidECN()
     if exists('g:colors_name')
         let result = index(g:colorSchemesDetected, g:colors_name)
@@ -81,3 +84,5 @@ endfunction
 
 nnoremap <F12> :call NextCS() <CR>
 nnoremap <F11> :call PreviousCS() <CR>
+
+let &cpo = s:save_cpo
