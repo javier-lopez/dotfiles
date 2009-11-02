@@ -212,10 +212,10 @@ function! SetProperties(_language)
         let java_allow_cpp_keywords  = 1
 
     elseif (a:_language == "php")
-        set syntax              = php
+        set syntax              =php
         "requires php-cli
-        set makeprg             = php\ -l\ %
-        set errorformat         = %m\ in\ %f\ on\ line\ %l
+        set makeprg             =php\ -l\ %
+        set errorformat         =%m\ in\ %f\ on\ line\ %l
         let php_sql_query       = 1
         let php_baselib         = 1
         let php_htmlInStrings   = 1
