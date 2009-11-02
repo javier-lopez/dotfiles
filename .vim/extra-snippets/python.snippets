@@ -1,7 +1,7 @@
 snippet #!
 	#!/usr/bin/python
 
-snippet imp
+snippet import
 	import ${1:module}
 # Module Docstring
 snippet docs
@@ -10,14 +10,14 @@ snippet docs
 	Author: ${2:`g:snips_author`}
 	Description: ${3}
 	'''
-snippet wh
+snippet while
 	while ${1:condition}:
 		${2:# code...}
 snippet for
 	for ${1:needle} in ${2:haystack}:
 		${3:# code...}
 # New Class
-snippet cl
+snippet class
 	class ${1:ClassName}(${2:object}):
 		"""${3:docstring for $1}"""
 		def __init__(self, ${4:arg}):
@@ -25,15 +25,15 @@ snippet cl
 			self.$4 = $4
 			${6}
 # New Function
-snippet def
+snippet def function with docstring
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
 		"""${3:docstring for $1}"""
 		${4:pass}
-snippet deff
+snippet def function without docstring
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
 		${3}
 # New Method
-snippet defs
+snippet def method
 	def ${1:mname}(self, ${2:arg}):
 		${3:pass}
 # New Property

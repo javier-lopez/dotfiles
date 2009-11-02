@@ -1,10 +1,10 @@
 "-------------------------------------------------------------------------------
-"           Last review            Fri 23 Oct 2009 07:40:08 PM CDT
+"           Last review            Mon 02 Nov 2009 03:50:43 AM CST
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
 "
-" [*]matchit.vim [*]crefvim.vim cscope_maps.vim NERD_tree.vim snipMate.vim
+" [*]matchit.vim [*]crefvim.vim NERD_tree.vim snipMate.vim
 " taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [*]paster.vim autoclose.vim
 " browser.vim dbext.vim LargeFile.vim [*]manpageviewPlugin.vim Matrix.vim
 " [+]nextCS.vim tetris.vim vcscommand.vim VimRegEx.vim vsutil.vim qbuf.vim
@@ -16,8 +16,10 @@
 "[+] Modified versions
 "[*] TODO                                git://github.com/chilicuil/dot-f.git
 
-let loaded_showmarks = 1
-let loaded_srcexpl = 1
+let loaded_showmarks         = 1
+let loaded_srcexpl           = 1
+let loaded_manpageviewPlugin = 1
+let g:loaded_AutoClose       = 1
 
 "===============================================================================
 "================================ Custom functions =============================
@@ -27,9 +29,11 @@ command! WordMode       call Word_mode()
 command! DevMode        call Dev_mode()
 command! DefaultMode    call Default_mode()
 
+"TODO: Add a map for this, find a way to make it work with differents langs
 function! AddCscope() "Add a session only if doesn't exist a previous one
     try
         if !(cscope_connection())
+            silent !cscope -R -b -q
             cs add cscope.out
         endif
     catch /E563:/
@@ -38,9 +42,9 @@ function! AddCscope() "Add a session only if doesn't exist a previous one
 endfunction
 
 " vimtip #1354
-function! Snippet_search()
-    let s:browser = "firefox" "or whatever browser you prefer
-    "TODO Open in a quickfix window
+function! Google_for_snippet()
+    let s:browser         = "firefox" "or whatever browser you prefer
+    "TODO Open it in a quickfix window
     let s:wordUnderCursor = expand("<cword>")
 
     if &ft == "cpp" || &ft == "c" || &ft == "ruby" || &ft == "php"
@@ -65,7 +69,8 @@ function! Snippet_search()
     redraw!
 endfunction
 
-function! Nerd_tree()
+function! Nerd_tree() "need it to force close it, when changing beetween my
+                      "custom modes (dev, spell, def)
     if exists ("s:nerd_tree")
         NERDTreeClose
         wincmd p
@@ -87,7 +92,8 @@ function! Tag_list()
     endif
 endfunction
 
-"I dont remember where I found this
+"TODO: Make it support other VCS
+"I dont remember where I found this function
 function! GitInfo()
     let l:key = getcwd()
     if ! has_key(g:scm_cache, l:key)
@@ -151,7 +157,7 @@ function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
     unmenu Foo
-endfunction 
+endfunction
 
 " From an idea by Michael Naumann
 " http://amix.dk/blog/viewEntry/19334
@@ -159,8 +165,8 @@ function! VisualSearch(direction) range
     let l:saved_reg = @"
     execute "normal! vgvy"
 
-    let l:pattern = escape(@", '\\/.*$^~[]')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
+    let l:pattern   = escape(@", '\\/.*$^~[]')
+    let l:pattern   = substitute(l:pattern, "\n$", "", "")
 
     if a:direction == 'b'
         execute "normal ?" . l:pattern . "^M"
@@ -178,23 +184,22 @@ endfunction
 function! SetProperties(_language)
 
     if (a:_language == "c")
-        "C reference plugin, http://www.vim.org/scripts/script.php?script_id=614
-        "map <c-i> <Leader>cr
         set makeprg=make\ %:r
 
-        "run  (g'o)
-        map <c-g> :!./%:r<CR>
-        map! <c-g> <Esc>:!./%:r<CR>
+        "i'nit
+        map <c-i> :!./%:r<CR>
+        map! <c-i> <Esc>:!./%:r<CR>
 
         "compile & run (a'll)
         map <c-a> :w<CR>:make && ./%:r<CR>
 
     elseif (a:_language == "java")
+        "TODO: fix makeprg while using java
         set makeprg=javac %
 
-        "run  (g'o)
-        map <c-g> :!java %:r<CR>
-        map! <c-g> <Esc>:!java %:r<CR>
+        "i'nit
+        map <c-i> :!java %:r<CR>
+        map! <c-i> <Esc>:!java %:r<CR>
 
         "compile & run (a'll)
         map <c-a> :w<CR>:make && java %:r<CR>
@@ -202,19 +207,19 @@ function! SetProperties(_language)
         "TODO:debug shortcut
         "autocmd FileType java nmap <F7> :w<CR>:!javac % && jdb %:r<CR>
         "autocmd FileType java nmap <F8> :w<CR>:!javac % && jdb %:r<SPACE>
-        let java_highlight_all=1
-        let java_highlight_functions="style"
-        let java_allow_cpp_keywords=1
+        let java_highlight_all       = 1
+        let java_highlight_functions = "style"
+        let java_allow_cpp_keywords  = 1
 
     elseif (a:_language == "php")
-        set syntax=php
+        set syntax              = php
         "requires php-cli
-        set makeprg=php\ -l\ %
-        set errorformat=%m\ in\ %f\ on\ line\ %l
-        let php_sql_query = 1
-        let php_baselib = 1
-        let php_htmlInStrings = 1
-        let php_folding = 1
+        set makeprg             = php\ -l\ %
+        set errorformat         = %m\ in\ %f\ on\ line\ %l
+        let php_sql_query       = 1
+        let php_baselib         = 1
+        let php_htmlInStrings   = 1
+        let php_folding         = 1
         "don't show variables in freaking php
         "let tlist_php_settings = 'php;c:class;d:constant;f:function'
 
@@ -226,10 +231,10 @@ function! SetProperties(_language)
         nnoremap <silent><Leader>> :%!perltidy -q<CR>
         vnoremap <silent><Leader>> :!perltidy -q<CR>
 
-        let perl_extended_vars = 1
-        let perl_include_pod = 1
-        let perl_fold = 1
-        let perl_fold_blocks = 1
+        let perl_extended_vars           = 1
+        let perl_include_pod             = 1
+        let perl_fold                    = 1
+        let perl_fold_blocks             = 1
         let perl_want_scope_in_variables = 1
 
     elseif (a:_language == "python")
@@ -246,7 +251,7 @@ endfunction
 function! Skel(_language)
     let l:skeleton_file = expand("~/.vim/skeletons/skeleton.". a:_language)
     if filereadable(l:skeleton_file)
-        execute "0read " . l:skeleton_file
+        execute "silent! 0read " . l:skeleton_file
         " Delete last line:
         normal! G
         normal! dd
@@ -305,7 +310,6 @@ function! Dev_mode_on()
     if &ft =="cpp" || &ft =="c"
         "autocreate the cscope database and add it to the current session when we
         "change to :dev mode
-        silent !cscope -R -b -q
         call AddCscope()
     endif
 
@@ -321,7 +325,7 @@ function! Dev_mode_on()
     "endif
 
     "'b'uild the database of cscope 'r'ecursively and for all subdirectories.
-    map <Tab>b <esc>:w<CR>:!cscope -R -b -q<CR>:call AddCscope()<CR>
+    map <Tab>b <esc>:w<CR>:call AddCscope()<CR>
 
     if !exists("s:nerd_tree")
         call Nerd_tree()          "It allows you to explore your filesystem
@@ -354,6 +358,7 @@ function! Dev_mode_off()
     unmap -
 
     if &ft == "cpp" || &ft=="c"
+        cs kill -1
     endif
 
     if &ft =="php" || &ft =="html"
@@ -421,7 +426,7 @@ set ruler              "show the cursor position all the time
 set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
-set wildignore =.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,
+set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,
                 \*.png,*.xpm,*.gif
 set hidden             "allow open other file without saving current file
 set autochdir          "change to the current directory
@@ -445,8 +450,11 @@ set nostartofline
 set nofsync            "improves performance, let OS decide when to flush disk
 set showmatch          "when closing a block, show the matching bracket.
 "set matchtime=5        "how many tenths of a second to blink
-                        " matching brackets for"
-set diffopt+=iwhite    " ignore whitespace in diff mode
+                        "matching brackets for"
+set diffopt+=iwhite    "ignore whitespace in diff mode
+set cscopetag          "use both cscope and ctag for 'ctrl-]'
+set csto=0             "gives preference to cscope over ctag
+"set cscopeverbose
 set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
                        "just press F5 when you are going to
                        "paste several lines of text so they won't
@@ -497,7 +505,7 @@ endif
 "Show tabs and trailing whitespace visually
 call Trailer()
 
-"php documentation TODO
+"TODO: php documentation
 "set runtimepath+=/home/chilicuil/.vim/doc/php
 
 "folder options
@@ -512,16 +520,16 @@ setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 "===============================================================================
 
 "autocomplpop.vim plugin
-let g:acp_behaviorKeywordLength = 4
-let g:acp_mappingDriven = 1
-"let g:acp_completeOption = '.,w,b,u,t,k,i'
-"let g:acp_completeOption = '.,w,b,i,t,u'
-let g:acp_completeoptPreview = 1
+let g:acp_behaviorKeywordLength  = 4
+let g:acp_mappingDriven          = 1
+"let g:acp_completeOption        = '.,w,b,u,t,k,i'
+"let g:acp_completeOption        = '.,w,b,i,t,u'
+let g:acp_completeoptPreview     = 1
 let g:acp_behaviorSnipmateLength = 1
 
 "pastebin plugin (modified)
 let g:pasteBinURI = 'http://chilicuil.pastebin.com/'
-let g:nickID = 'chilicuil'
+let g:nickID      = 'chilicuil'
 
 "d for day, m for month, and f for forever
 "let g:timePasted = 'f'
@@ -530,6 +538,7 @@ let g:nickID = 'chilicuil'
 let g:GetLatestVimScripts_allowautoinstall=1
 
 "Snippet directories
+let g:snips_author = "chilicuil"
 let g:snippets_dir = "~/.vim/snippets/, ~/.vim/extra-snippets/"
 
 " qbuf.vim
@@ -544,17 +553,17 @@ let g:qb_hotkey = "<F2>"
 "dbext.vim
 let g:dbext_default_history_file = '~/.vim/plugin/dbext_history'
 let g:dbext_default_history_size = 1000
-"let g:dbext_default_profile             = 'mysql_local'
+"let g:dbext_default_profile     = 'mysql_local'
 let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=chilicuil:
             \passwd=just4fun:dbname=chilicuil:host=localhost:port=3306'
 
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos  = "right"
 let g:NERDTreeWinSize = 25
 
 "let g:Tlist_Use_Right_Window = 1
-let g:Tlist_WinWidth = 25
-let g:Tlist_Show_One_File = 1
-let Tlist_Enable_Fold_Column = 0
+let g:Tlist_WinWidth          = 25
+let g:Tlist_Show_One_File     = 1
+let Tlist_Enable_Fold_Column  = 0
 
 "===============================================================================
 "================================ Autoloads by events ==========================
@@ -620,9 +629,6 @@ map <c-e> :tabclose <CR>
 map <c-c> :w<CR>:make<CR>
 map! <c-c> <esc>:w<CR>:make<CR>
 
-map <C-Left> b
-map <C-Right> w
-
 "for some unknown reason if I set this. it executes :confirm qall when
 " I write '*/' on --insert-- mode where '*' is a wildcard
 "map! <c-x> <esc>:confirm qall<CR>
@@ -637,13 +643,10 @@ let mapleader = ","
 map <Leader>m :Matrix<CR>
 
 "online doc search
-map <silent> <Leader>s :call Snippet_search()<CR>
+map <silent> <Leader>g :call Google_for_snippet()<CR>
 
 "Trailer map
 map <silent> <Leader>v :call Trailer()<CR>
-
-"Opens in a quickfix window your TODO list
-"map <Leader>t
 
 "keyboard shortcuts to close/open the two main plugins
 map <silent> <Leader>n :call Nerd_tree()<CR>
@@ -660,7 +663,7 @@ noremap <silent> <Leader>[ za
 "update ~/.vimrc
 map <Leader>u :source $MYVIMRC<CR>
 
-" VCSCommand
+"VCSCommand
 nmap <Leader>va <Plug>VCSAdd
 nmap <Leader>vn <Plug>VCSAnnotate
 nmap <Leader>vc <Plug>VCSCommit
@@ -675,10 +678,37 @@ nmap <Leader>vu <Plug>VCSUpdate
 nmap <Leader>vU <Plug>VCSUnlock
 nmap <Leader>vv <Plug>VCSVimDiff#
 
+"cscope
+"   's'   symbol: find all references to the token under cursor
+"   'g'   global: find global definition(s) of the token under cursor
+"   'c'   calls:  find all calls to the function name under cursor
+"   't'   text:   find all instances of the text under cursor
+"   'e'   egrep:  egrep search for the word under cursor
+"   'f'   file:   open the filename under cursor
+"   'i'   includes: find files that include the filename under cursor
+"   'd'   called: find functions that function under cursor calls
+
+nmap <Leader>fs :scs find s <C-R>=expand("<cword>")<CR><CR>	
+nmap <Leader>fg :scs find g <C-R>=expand("<cword>")<CR><CR>	
+nmap <Leader>fc :scs find c <C-R>=expand("<cword>")<CR><CR>	
+nmap <Leader>ft :scs find t <C-R>=expand("<cword>")<CR><CR>	
+nmap <Leader>fe :scs find e <C-R>=expand("<cword>")<CR><CR>	
+nmap <Leader>ff :scs find f <C-R>=expand("<cfile>")<CR><CR>	
+nmap <Leader>fi :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
+nmap <Leader>fd :scs find d <C-R>=expand("<cword>")<CR><CR>	
+
 "nmap <Leader>p  :Pastebin<CR>
 
 "Select everything
 "noremap <Leader>gg ggVG
+
+"Opens in a quickfix window your TODO list
+"map <Leader>t
+
+"crefvim.vim
+"map <Leader>crn <Plug>CRV_CRefVimNormal
+"map <Leader>caw <Plug>CRV_CRefVimAsk
+"map <Leader>cvi <Plug>CRV_CRefVimInvoke
 
 "=== Tab Mappings===
 map <Tab>c :cc<CR>
@@ -707,9 +737,9 @@ map e ea
 nnoremap Y y$
 
 "don't clobber registers when doing character deletes
-nnoremap x "_x
-nnoremap X "_X
-nnoremap s "_s
+"nnoremap x "_x
+"nnoremap X "_X
+"nnoremap s "_s
 
 "noremap <M-a> ggVG
 
@@ -741,9 +771,6 @@ map <Tab><Space> :bnext <CR>
 "use r<Enter> instance
 "noremap <CR> i<CR><Esc>
 "noremap <CR> o<Esc>
-
-noremap N Nzz
-noremap n nzz
 
 "Basically you press * or # to search for the current selection
 vnoremap <silent> * :call VisualSearch('f')<CR>

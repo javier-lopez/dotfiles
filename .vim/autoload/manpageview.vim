@@ -287,7 +287,7 @@ fun! manpageview#ManPageView(viamap,bknum,...) range
 "   call Decho("attempt to infer on filetype<".&ft.">")
 
    " filetype: vim
-   if &ft == "vim" || &ft == "php"
+   if &ft == "vim"
    	if g:manpageview_winopen == "only"
 	 exe "help ".fnameescape(manpagetopic)
 	 only
@@ -310,8 +310,8 @@ fun! manpageview#ManPageView(viamap,bknum,...) range
    	let ext = "pl"
 
    " filetype:  php
-   "elseif &ft == "php"
-   	"let ext = "php"
+   elseif &ft == "php"
+   	let ext = "php"
 
    " filetype: tex
   elseif &ft == "tex"

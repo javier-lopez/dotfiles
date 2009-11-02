@@ -14,12 +14,12 @@ snippet map
 snippet vector
 	std::vector<${1:char}> v${2};
 # Namespace
-snippet ns
+snippet namespace
 	namespace ${1:`Filename('', 'my')`} {
 		${2}
 	} /* $1 */
 # Class
-snippet cl
+snippet class
 	class ${1:`Filename('$1_t', 'name')`} {
 	public:
 		$1 (${2:arguments});

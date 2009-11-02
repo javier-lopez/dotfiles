@@ -3,12 +3,12 @@ snippet #!
 	#!/usr/bin/tclsh
 	
 # Process
-snippet pro
+snippet proc
 	proc ${1:function_name} {${2:args}} {
 		${3:#body ...}
 	}
 #xif
-snippet xif
+snippet ter
 	${1:expr}? ${2:true} : ${3:false}
 # Conditional
 snippet if
@@ -16,14 +16,14 @@ snippet if
 		${2:# body...}
 	}
 # Conditional if..else
-snippet ife
+snippet ifelse
 	if {${1}} {
 		${2:# body...}
 	} else {
 		${3:# else...}
 	}
 # Conditional if..elsif..else
-snippet ifee
+snippet ifelseif
 	if {${1}} {
 		${2:# body...}
 	} elseif {${3}} {
@@ -40,7 +40,7 @@ snippet ifc
 snippet catch
 	catch {${1}} ${2:err} ${3:options}
 # While Loop
-snippet wh
+snippet while
 	while {${1}} {
 		${2:# body...}
 	}
@@ -50,27 +50,27 @@ snippet for
 		${4:# body...}
 	}
 # Foreach Loop
-snippet fore
+snippet foreach
 	foreach ${1:x} {${2:#list}} {
 		${3:# body...}
 	}
 # after ms script...
-snippet af
+snippet after do_something
 	after ${1:ms} ${2:#do something}
 # after cancel id
-snippet afc
+snippet after cancel
 	after cancel ${1:id or script}
 # after idle
-snippet afi
+snippet after idle
 	after idle ${1:script}
 # after info id
-snippet afin
+snippet after info
 	after info ${1:id}
 # Expr
-snippet exp
+snippet expr
 	expr {${1:#expression here}}
 # Switch
-snippet sw
+snippet switch
 	switch ${1:var} {
 		${3:pattern 1} {
 			${4:#do something}
@@ -85,8 +85,8 @@ snippet ca
 		${2:#do something}
 	}${3}
 # Namespace eval
-snippet ns
+snippet namespace eval
 	namespace eval ${1:path} {${2:#script...}}
 # Namespace current
-snippet nsc
+snippet namespace current
 	namespace current

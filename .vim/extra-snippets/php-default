@@ -1,16 +1,22 @@
-snippet php
+######################################################################
+#			    Default snippets
+######################################################################
+snippet <?php
 	<?php
 	${1}
 	?>
+# Hash Pointer
+snippet .
+	 =>
 snippet echo
 	echo "${1:string}"${2};
-snippet include
+snippet include simple
 	include ("${1:file}");${2}
-snippet include_once
+snippet include once
 	include_once ("${1:file}");${2}
-snippet require
+snippet require simple
 	require ("${1:file}");${2}
-snippet require_once
+snippet require once
 	require_once ("${1:file}");${2}
 # $GLOBALS['...']
 snippet globals
@@ -202,9 +208,13 @@ snippet for
 	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
 		${4: // code...}
 	}
-snippet foreach
+snippet foreach $key
 	foreach ($${1:variable} as $${2:key}) {
 		${3:// code...}
+	}
+snippet foreach $key => $value
+	foreach ($${1:variable} as $${2:key} => $${3:value}) {
+		${4:// code...}
 	}
 snippet function
 	${1:public }function ${2:FunctionName}(${3})

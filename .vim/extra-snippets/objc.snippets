@@ -1,11 +1,11 @@
 # #import <...>
-snippet Imp
+snippet #import
 	#import <${1:Cocoa/Cocoa.h}>${2}
 # #import "..."
-snippet imp
+snippet #import
 	#import "${1:`Filename()`.h}"${2}
 # @selector(...)
-snippet sel
+snippet @selector
 	@selector(${1:method}:)${3}
 # @"..." string
 snippet s
@@ -14,7 +14,7 @@ snippet s
 snippet o
 	${1:NSObject} *${2:foo} = [${3:$1 alloc}]${4};${5}
 # NSLog(...)
-snippet log
+snippet NSLog
 	NSLog(@"${1:%@}"${2});${3}
 # Class
 snippet objc
@@ -27,14 +27,14 @@ snippet objc
 	${3}
 	@end
 # Class Interface
-snippet int
+snippet @interface
 	@interface ${1:`Filename('', 'someClass')`} : ${2:NSObject}
 	{${3}
 	}
 	${4}
 	@end
 # Class Implementation
-snippet impl
+snippet @implementation
 	@implementation ${1:`Filename('', 'someClass')`}
 	${2}
 	@end

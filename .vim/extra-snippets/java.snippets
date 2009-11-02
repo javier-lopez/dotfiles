@@ -1,0 +1,35 @@
+snippet main
+	public static void main (String [] args)
+	{
+		${1:/* code */}
+	}
+snippet catch
+	catch(${1:Exception} ${2:e}) ${3}
+snippet if
+	if (${1}) ${2}
+snippet else
+	else
+snippet elseif
+	else if (${1}) ${2}
+snippet while
+	while (${1}) ${2}
+snippet for standard
+	for (${1}; ${2}; ${3}) ${4}
+snippet for simple
+	for (${1} : ${2}) ${3}
+snippet switch
+	switch (${1}) ${2}
+snippet case
+	case ${1}:
+		${2}
+	${3}
+snippet class
+	class ${1:`Filename("", "untitled")`} ${2}
+snippet interface
+	interface ${1:`Filename("", "untitled")`} ${2:extends Parent}${3}
+snippet m
+	${1:void} ${2:method}(${3}) ${4:throws }${5}
+snippet v
+	${1:String} ${2:var}${3: = null}${4};${5}
+snippet assert
+	assert ${1:test} : "${2:Failure message}";${3}

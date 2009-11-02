@@ -1,20 +1,20 @@
-snippet def
+snippet <%def
 	<%def name="${1:name}">
 		${2:}
 	</%def>
-snippet call
+snippet <%call
 	<%call expr="${1:name}">
 		${2:}
 	</%call>
-snippet doc
+snippet <%doc
 	<%doc>
 		${1:}
 	</%doc>
-snippet text
+snippet <%text
 	<%text>
 		${1:}
 	</%text>
-snippet for
+snippet <%for
 	% for ${1:i} in ${2:iter}:
 		${3:}
 	% endfor
@@ -34,7 +34,7 @@ snippet try
 	% except${2:}:
 		${3:pass}
 	% endtry
-snippet wh
+snippet while
 	% while ${1:}:
 		${2:}
 	% endwhile
