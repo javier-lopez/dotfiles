@@ -133,4 +133,4 @@ function! FindMate(name)
 endfunction
 
 command! -nargs=1 FindMate :call FindMate("<args>")
-map ,, :FindMate
+map ,, :FindMate 

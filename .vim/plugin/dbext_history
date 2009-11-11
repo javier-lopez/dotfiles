@@ -1,2 +1,30 @@
 dbext history, <enter> or dbl-click to execute, or [q] to quit (history size:1000)
-1. select * FROM customer
+1. CREATE TABLE posts (@@@id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,@@@title VARCHAR(50),@@@body TEXT,@@@created DATETIME DEFAULT NULL,@@@modified DATETIME DEFAULT NULL@@@);@@@/* Then insert some posts for testing: */@@@INSERT INTO posts (title,body,created)@@@VALUES ('The title', 'This is the post body.', NOW());@@@INSERT INTO posts (title,body,created)@@@VALUES ('A title once again', 'And the post body follows.', NOW());@@@INSERT INTO posts (title,body,created)@@@VALUES ('Title strikes back', 'This is really exciting! Not.', NOW());
+2. select * from test1.posts
+3. select * from test1
+4. select nombre from test1.personas
+5. select * from test1.personas
+6. select * from test1.
+7. select * from person
+8. delete from tet1 personas where personas idPersonas = 2 limit 1
+9. delete personas where personas idPersonas=2
+10. delete personas where idPersonas=2
+11. delete personas where idPersonas = 2
+12. delete from test1 personas where personas idPersonas=2
+13. delete 4 test1.personas
+14. delete test1.personas
+15. delete 4 from test1
+16. select * from test1.carreras
+17. select * from nombre
+18. select nombre from test1.carreras
+19. select name from carreras
+20. select name from test1.carreras
+21. select * from test1.cursos
+22. select * from *
+23. select * from carreras
+24. INSERT INTO `test1`.`carreras` (@@@`idCarreras` ,@@@`nombre` ,@@@`descripcion` ,@@@`created` ,@@@`modified`@@@)@@@VALUES (@@@'4', 'electronica', 'descripcion de la carrera de electronica', NULL , NULL@@@);
+25. INSERT INTO `test1`.`carreras` (@@@`idCarreras` ,@@@`nombre` ,@@@`descripcion` ,@@@`created` ,@@@`modified`@@@)@@@VALUES (@@@'3', 'geofisica', 'descripcion de la carrera de geofisica', NULL , NULL@@@);
+26. select nombre from carreras
+27. INSERT INTO `test1`.`carreras` (@@@`idCarreras` ,@@@`nombre` ,@@@`descripcion` ,@@@`created` ,@@@`modified`@@@)@@@VALUES (@@@'2', 'telecomunicaciones', 'descripcion de la carrera de telecomunicaciones', NULL , NULL@@@);
+28. INSERT INTO `test1`.`carreras` (@@@`idCarreras` ,@@@`nombre` ,@@@`descripcion` ,@@@`created` ,@@@`modified`@@@)@@@VALUES (@@@'', 'telecomunicaciones', 'descripcion de la carrera de telecomunicaciones', NULL , NULL@@@);
+29. select * FROM customer

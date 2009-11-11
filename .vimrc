@@ -11,7 +11,7 @@
 " surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim php-doc.vim
 " [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
 " lusty-explorer.vim NERD_commenter.vim tasklist.vim xml.vim showmarks.vim
-" DirDiff.vim, fuzzyfinder.vim, srcexpl.vim, align.vim
+" DirDiff.vim, fuzzyfinder.vim, srcexpl.vim, align.vim, CSApprox.vim
 "
 "[+] Modified versions
 "[*] TODO                                git://github.com/chilicuil/dot-f.git
@@ -19,7 +19,9 @@
 let loaded_showmarks         = 1
 let loaded_srcexpl           = 1
 let loaded_manpageviewPlugin = 1
-let g:loaded_AutoClose       = 1
+let loaded_AutoClose         = 1
+let checksyntax              = 1
+let loaded_fugitive          = 1
 
 "===============================================================================
 "================================ Custom functions =============================
@@ -187,19 +189,19 @@ function! SetProperties(_language)
         set makeprg=make\ %:r
 
         "i'nit
-        map <c-i> :!./%:r<CR>
-        map! <c-i> <Esc>:!./%:r<CR>
+        "map <c-i> :!./%:r<CR>
+        "map! <c-i> <Esc>:!./%:r<CR>
 
         "compile & run (a'll)
         map <c-a> :w<CR>:make && ./%:r<CR>
 
     elseif (a:_language == "java")
         "TODO: fix makeprg while using java
-        set makeprg=javac %
+        set makeprg=javac\ %
 
         "i'nit
-        map <c-i> :!java %:r<CR>
-        map! <c-i> <Esc>:!java %:r<CR>
+        "map <c-i> :!java %:r<CR>
+        "map! <c-i> <Esc>:!java %:r<CR>
 
         "compile & run (a'll)
         map <c-a> :w<CR>:make && java %:r<CR>
@@ -396,7 +398,8 @@ endif
 
 if has ('gui_running')
     set background=dark    "i like dark colors
-    colorscheme wombat     "http://files.werx.dk/wombat.vim
+    "colorscheme wombat     "http://files.werx.dk/wombat.vim
+    colorscheme ir_black
 else
     set background=dark    "i like dark colors
     colorscheme ir_black   "my favorite theme, it's a customized version
@@ -553,9 +556,11 @@ let g:qb_hotkey = "<F2>"
 "dbext.vim
 let g:dbext_default_history_file = '~/.vim/plugin/dbext_history'
 let g:dbext_default_history_size = 1000
-"let g:dbext_default_profile     = 'mysql_local'
-let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=chilicuil:
-            \passwd=just4fun:dbname=chilicuil:host=localhost:port=3306'
+"let g:dbext_default_profile     = 'mysql_test1'
+let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
+            \passwd=just4fun:dbname=test1:host=localhost:port=3306'
+let g:dbext_default_profile_mysql_test0 = 'type=MYSQL:user=chilicuil:
+            \passwd=just4fun:dbname=test0:host=localhost:port=3306'
 
 let g:NERDTreeWinPos  = "right"
 let g:NERDTreeWinSize = 25
