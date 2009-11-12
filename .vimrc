@@ -1,16 +1,16 @@
 "-------------------------------------------------------------------------------
-"           Last review            Mon 02 Nov 2009 03:50:43 AM CST
+"           Last review            Tue 10 Nov 2009 08:46:10 PM CST
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
 "
-" [*]matchit.vim [*]crefvim.vim NERD_tree.vim snipMate.vim
-" taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [*]paster.vim autoclose.vim
+" [*]matchit.vim [*]crefvim.vim NERD_tree.vim [+]snipMate.vim
+" taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [+]paster.vim autoclose.vim
 " browser.vim dbext.vim LargeFile.vim [*]manpageviewPlugin.vim Matrix.vim
 " [+]nextCS.vim tetris.vim vcscommand.vim VimRegEx.vim vsutil.vim qbuf.vim
 " surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim php-doc.vim
 " [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
-" lusty-explorer.vim NERD_commenter.vim tasklist.vim xml.vim showmarks.vim
+" lusty-explorer.vim NERD_commenter.vim tasklist.vim [*]xml.vim showmarks.vim
 " DirDiff.vim, fuzzyfinder.vim, srcexpl.vim, align.vim, CSApprox.vim
 "
 "[+] Modified versions
@@ -22,6 +22,8 @@ let loaded_manpageviewPlugin = 1
 let loaded_AutoClose         = 1
 let checksyntax              = 1
 let loaded_fugitive          = 1
+let loaded_project           = 1
+let PA_translator_version    = 1
 
 "===============================================================================
 "================================ Custom functions =============================
@@ -561,6 +563,10 @@ let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
             \passwd=just4fun:dbname=test1:host=localhost:port=3306'
 let g:dbext_default_profile_mysql_test0 = 'type=MYSQL:user=chilicuil:
             \passwd=just4fun:dbname=test0:host=localhost:port=3306'
+let g:dbext_default_profile_mysql_cursophp2 = 'type=MYSQL:user=chilicuil:
+            \passwd=just4fun:dbname=cursophp2:host=localhost:port=3306'
+let g:dbext_default_profile_mysql_cursophp = 'type=MYSQL:user=chilicuil:
+            \passwd=just4fun:dbname=cursophp:host=localhost:port=3306'
 
 let g:NERDTreeWinPos  = "right"
 let g:NERDTreeWinSize = 25
