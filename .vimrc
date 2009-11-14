@@ -25,6 +25,16 @@ let loaded_fugitive          = 1
 let loaded_project           = 1
 let PA_translator_version    = 1
 
+"function! UpdateTags()
+    "call writefile(getline(1, '$'), '.tmp.cc', 'b')
+    "call system('grep -v "	'.expand('%').'	" tags > tags2 && mv -f tags2 
+    "tags')
+    "let tags = system('ctags --c++-kinds=+p --fields=+iaS --extra=+q -f 
+    "- .tmp.cc | sed "s/\t\.tmp\.cc\t/\t'.expand('%').'\t/" >> tags')
+    "return ';'
+"endfunction
+"inoremap <expr> ; UpdateTags()
+
 "===============================================================================
 "================================ Custom functions =============================
 "===============================================================================
@@ -73,15 +83,15 @@ function! Google_for_snippet()
     redraw!
 endfunction
 
-function! Nerd_tree() "need it to force close it, when changing beetween my
-                      "custom modes (dev, spell, def)
+function! Nerd_tree() "need it to force close it, when changing between my
+    "custom modes (dev, spell, def)
     if exists ("s:nerd_tree")
         NERDTreeClose
-        wincmd p
+        wincmd p      "forces to return the focus to the window who call it
         unlet s:nerd_tree
     else
         NERDTreeToggle
-        wincmd p
+        wincmd p      "forces to return the focus to the window who call it
         let s:nerd_tree = 1
     endif
 endfunction
@@ -145,16 +155,6 @@ endfunction
 function! Trailer_off()
     set nolist
     "TODO unset fillchars and listchars
-endfunction
-
-function! Word_mode()
-    if exists ("s:Word_mode")
-        call Word_mode_off()
-        unlet s:Word_mode
-    else
-        call Word_mode_on()
-        let s:Word_mode = 1
-    endif
 endfunction
 
 function! CmdLine(str)
@@ -268,26 +268,50 @@ function! Skel(_language)
     endif
 endfunction
 
+function! Word_mode()
+    if exists ("s:Word_mode")
+        call Word_mode_off()
+        unlet s:Word_mode
+    else
+        call Word_mode_on()
+        let s:Word_mode = 1
+    endif
+endfunction
+
+function! Spell(_language) "TODO: make _language optional
+    if (a:_language == "en_us")
+        let g:acp_completeOption = '.,w,b,t,k,kspell,i,d'
+        set spell spelllang=en_us
+    elseif (a:_language == "es_mx")
+        let g:acp_completeOption = '.,w,b,t,k,i,d'
+        set spell spelllang=es_mx
+    elseif (a:_language == "none")
+        let g:acp_completeOption = '.,w,t,k,i,d'
+        set nospell
+    endif
+endfunction
+
 function! Word_mode_on()
     set linebreak
     set nonumber
-    set spell spelllang=en_us
-    set nocursorline
     set textwidth=84
-    noremap <F3> :setlocal spell spelllang=es_mx<CR>
-    noremap <F4> :setlocal spell spelllang=en_us<CR>
-    inoremap <F3> <Esc>:setlocal spell spelllang=es_mx<CR>a
-    inoremap <F4> <Esc>:setlocal spell spelllang=en_us<CR>a
+    call Spell("en_us")
+
+    noremap <F3> :call Spell("es_mx")<CR>
+    noremap <F4> :call Spell("en_us")<CR>
+    inoremap <F3> <Esc>:call Spell("es_mx")<CR>a
+    inoremap <F4> <Esc>:call Spell("en_us")<CR>a
+
     redraw!
 endfunction
 
 function! Word_mode_off()
     set nolinebreak
-    set nospell
     unmap <F4>
     unmap <F3>
     iunmap <F4>
     iunmap <F3>
+    call Spell("none")
     redraw!
 endfu
 
@@ -395,7 +419,7 @@ endfunction
 
 if v:version < 700
     echo "This vimrc file use features than are only available on vim 7.0 or\
-        \ greater versions"
+                \ greater versions"
 endif
 
 if has ('gui_running')
@@ -405,24 +429,24 @@ if has ('gui_running')
 else
     set background=dark    "i like dark colors
     colorscheme ir_black   "my favorite theme, it's a customized version
-                           "http://blog.infinitered.com/entries/show/6
-                           "http://pastebin.com/ff366c16
+    "http://blog.infinitered.com/entries/show/6
+    "http://pastebin.com/ff366c16
 endif
 
-                       "disable features due to security concerns
+"disable features due to security concerns
 set modelines=0        "http://www.guninski.com/vim1.html
 set nocompatible       "breaks compatibility with vi, it must be enable at the
-                       "start to not overwrite other flags
+"start to not overwrite other flags
 set noexrc             "don't use local version of .(g)vimrc, .exrc
 set mouse=nv           "set the mouse to work in console mode
 set mousehide          "hide the mouse while typying
 set lazyredraw         "do not redraw the screen while macros are running. It
-                       "improves performance
+"improves performance
 set ttyfast            "indicates a fast terminal connection
 set history=1000       "record last 1000 commands, press 'q:' to see a new
-                       "window (normal mode) with the full history
+"window (normal mode) with the full history
 set t_Co=256           "set 256 colors. Make sure your console supports it.
-                       "gnome-terminal and konsole work well
+"gnome-terminal and konsole work well
 set report=0           "report any changes
 set tabpagemax=50      "max open tabs at the same time
 set autoread           "watch for file changes by other programs
@@ -432,7 +456,7 @@ set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,
-                \*.png,*.xpm,*.gif
+            \*.png,*.xpm,*.gif
 set hidden             "allow open other file without saving current file
 set autochdir          "change to the current directory
 set winminheight=1     "never let a window to be less than 1px height
@@ -447,7 +471,7 @@ set showcmd            "show the command you're typing
 set softtabstop=4      "vim sees 4 spaces as a tab
 set shiftwidth=4       "indentation
 set expandtab          "tabs mutate into spaces, if you wanna insert "real"
-                       "tabs use Ctrl-v <tab> instance
+"tabs use Ctrl-v <tab> instance
 set splitright         "split vertically to the right.
 set splitbelow         "split horizontally below.
 set cursorline         "highlight the screen line of the cursor
@@ -455,15 +479,15 @@ set nostartofline
 set nofsync            "improves performance, let OS decide when to flush disk
 set showmatch          "when closing a block, show the matching bracket.
 "set matchtime=5        "how many tenths of a second to blink
-                        "matching brackets for"
+"matching brackets for"
 set diffopt+=iwhite    "ignore whitespace in diff mode
 set cscopetag          "use both cscope and ctag for 'ctrl-]'
 set csto=0             "gives preference to cscope over ctag
 "set cscopeverbose
 set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
-                       "just press F5 when you are going to
-                       "paste several lines of text so they won't
-                       "be indented.
+"just press F5 when you are going to
+"paste several lines of text so they won't
+"be indented.
 
 
 set backspace=indent,eol,start     "make backspace works like in other editors.
@@ -527,10 +551,9 @@ setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 "autocomplpop.vim plugin
 let g:acp_behaviorKeywordLength  = 4
 let g:acp_mappingDriven          = 1
-"let g:acp_completeOption        = '.,w,b,u,t,k,i'
-"let g:acp_completeOption        = '.,w,b,i,t,u'
+let g:acp_completeOption         = '.,w,b,t,k,i,d'
 let g:acp_completeoptPreview     = 1
-let g:acp_behaviorSnipmateLength = 1
+let g:acp_behaviorSnipmateLength = 2
 
 "pastebin plugin (modified)
 let g:pasteBinURI = 'http://chilicuil.pastebin.com/'
@@ -582,7 +605,7 @@ let Tlist_Enable_Fold_Column  = 0
 
 " Go back to the position the cursor was on the last time this file was edited
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-                \|execute("normal `\"")|endif
+            \|execute("normal `\"")|endif
 
 "Language specific settings
 "TODO: Add languages
@@ -699,14 +722,14 @@ nmap <Leader>vv <Plug>VCSVimDiff#
 "   'i'   includes: find files that include the filename under cursor
 "   'd'   called: find functions that function under cursor calls
 
-nmap <Leader>fs :scs find s <C-R>=expand("<cword>")<CR><CR>	
-nmap <Leader>fg :scs find g <C-R>=expand("<cword>")<CR><CR>	
-nmap <Leader>fc :scs find c <C-R>=expand("<cword>")<CR><CR>	
-nmap <Leader>ft :scs find t <C-R>=expand("<cword>")<CR><CR>	
-nmap <Leader>fe :scs find e <C-R>=expand("<cword>")<CR><CR>	
-nmap <Leader>ff :scs find f <C-R>=expand("<cfile>")<CR><CR>	
-nmap <Leader>fi :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
-nmap <Leader>fd :scs find d <C-R>=expand("<cword>")<CR><CR>	
+nmap <Leader>fs :scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>fg :scs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>fc :scs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>ft :scs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>fe :scs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>ff :scs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <Leader>fi :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <Leader>fd :scs find d <C-R>=expand("<cword>")<CR><CR>
 
 "nmap <Leader>p  :Pastebin<CR>
 
