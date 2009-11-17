@@ -122,20 +122,28 @@ endfunction
 
 "
 function acp#meetsForPythonOmni(context)
-  return has('python') &&
+  return has('python') && g:acp_behaviorPythonOmniLength >= 0 &&
         \ a:context =~ '\k\.\k\{' . g:acp_behaviorPythonOmniLength . ',}$'
 endfunction
 
 "
+function acp#meetsForPerlOmni(context)
+  return g:acp_behaviorPerlOmniLength >= 0 &&
+        \ a:context =~ '\w->\k\{' . g:acp_behaviorPerlOmniLength . ',}$'
+endfunction
+
+"
 function acp#meetsForXmlOmni(context)
-  return a:context =~ '\(<\|<\/\|<[^>]\+ \|<[^>]\+=\"\)\k\{' .
-        \             g:acp_behaviorXmlOmniLength . ',}$'
+  return g:acp_behaviorXmlOmniLength >= 0 &&
+        \ a:context =~ '\(<\|<\/\|<[^>]\+ \|<[^>]\+=\"\)\k\{' .
+        \              g:acp_behaviorXmlOmniLength . ',}$'
 endfunction
 
 "
 function acp#meetsForHtmlOmni(context)
-  return a:context =~ '\(<\|<\/\|<[^>]\+ \|<[^>]\+=\"\)\k\{' .
-        \             g:acp_behaviorHtmlOmniLength . ',}$'
+  return g:acp_behaviorHtmlOmniLength >= 0 &&
+        \ a:context =~ '\(<\|<\/\|<[^>]\+ \|<[^>]\+=\"\)\k\{' .
+        \              g:acp_behaviorHtmlOmniLength . ',}$'
 endfunction
 
 "
@@ -156,21 +164,20 @@ endfunction
 "
 function acp#completeSnipmate(findstart, base)
   if a:findstart
-    return len(matchstr(s:getCurrentText(), '.*\U'))
+    let s:posSnipmateCompletion = len(matchstr(s:getCurrentText(), '.*\U'))
+    return s:posSnipmateCompletion
   endif
   let lenBase = len(a:base)
   let items = filter(GetSnipsInCurrentScope(),
         \            'strpart(v:key, 0, lenBase) ==? a:base')
-  return map(items(items), 's:makeSnipmateItem(v:val[0], v:val[1])')
+  return map(sort(items(items)), 's:makeSnipmateItem(v:val[0], v:val[1])')
 endfunction
 
 "
 function acp#onPopupCloseSnipmate()
-  let text = s:getCurrentText()
-  let lenText = len(text)
+  let word = s:getCurrentText()[s:posSnipmateCompletion :]
   for trigger in keys(GetSnipsInCurrentScope())
-    let lenTrigger = len(trigger)
-    if lenText >= lenTrigger && strridx(text, trigger) + lenTrigger == lenText
+    if word ==# trigger
       call feedkeys("\<C-r>=TriggerSnippet()\<CR>", "n")
       return 0
     endif
@@ -280,30 +287,31 @@ function s:isModifiedSinceLastCall()
     let posPrev = s:posLast
     let nLinesPrev = s:nLinesLast
     let textPrev = s:textLast
-    let postTextPrev = s:postTextLast
   endif
   let s:posLast = getpos('.')
   let s:nLinesLast = line('$')
-  let s:textLast = s:getCurrentText()
-  let s:postTextLast = s:getPostText()
+  let s:textLast = getline('.')
   if !exists('posPrev')
     return 1
   elseif posPrev[1] != s:posLast[1] || nLinesPrev != s:nLinesLast
     return (posPrev[1] - s:posLast[1] == nLinesPrev - s:nLinesLast)
-  elseif textPrev ==# s:textLast || postTextPrev !=# s:postTextLast
+  elseif textPrev ==# s:textLast
     return 0
-  elseif has('gui') && has('multi_byte') && !has('win32') && !has('win64')
-    " NOTE: auto-popup causes a strange behavior when XIM is working
-    return empty(s:textLast) || char2nr(matchstr(s:textLast, '.$')) < 0x80
+  elseif posPrev[2] > s:posLast[2]
+    return 1
+  elseif has('gui_running') && has('multi_byte')
+    " NOTE: auto-popup causes a strange behavior when IME/XIM is working
+    return posPrev[2] + 1 == s:posLast[2]
   endif
-  return 1
+  return posPrev[2] != s:posLast[2]
 endfunction
 
 "
-function s:makeCurrentBehaviorSet(behavsLast, cursorMoved)
-  if exists('behavsLast[s:iBehavs].repeat') && behavsLast[s:iBehavs].repeat
-    let behavs = [ behavsLast[s:iBehavs] ]
-  elseif a:cursorMoved
+function s:makeCurrentBehaviorSet()
+  let modified = s:isModifiedSinceLastCall()
+  if exists('s:behavsCurrent[s:iBehavs].repeat') && s:behavsCurrent[s:iBehavs].repeat
+    let behavs = [ s:behavsCurrent[s:iBehavs] ]
+  elseif modified
     let behavs = copy(exists('g:acp_behavior[&filetype]')
           \           ? g:acp_behavior[&filetype]
           \           : g:acp_behavior['*'])
@@ -336,8 +344,7 @@ function s:feedPopup()
       return ''
     endif
   endif
-  let s:behavsCurrent = s:makeCurrentBehaviorSet(
-        \ s:behavsCurrent, s:isModifiedSinceLastCall())
+  let s:behavsCurrent = s:makeCurrentBehaviorSet()
   if empty(s:behavsCurrent)
     call s:finishPopup(1)
     return ''

@@ -13,6 +13,7 @@
 " lusty-explorer.vim NERD_commenter.vim tasklist.vim showmarks.vim
 " DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
 " cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
+" FindInNERDTree.vim
 "
 "[+] Modified versions
 "[*] TODO                                git://github.com/chilicuil/dot-f.git
@@ -28,6 +29,7 @@ let loaded_project           = 1
 let CSApprox_loaded          = 1
 let indexed_search_plugin    = 1
 let loaded_search_complete   = 1
+"let loaded_acp               = 1
 
 "function! UpdateTags()
     "call writefile(getline(1, '$'), '.tmp.cc', 'b')
@@ -752,6 +754,8 @@ nmap <Leader>fd :scs find d <C-R>=expand("<cword>")<CR><CR>
 "map <Leader>crn <Plug>CRV_CRefVimNormal
 "map <Leader>caw <Plug>CRV_CRefVimAsk
 "map <Leader>cvi <Plug>CRV_CRefVimInvoke
+
+nnoremap <silent><Leader>g :call FindInNERDTree()<CR>
 
 "=== Tab Mappings===
 map <Tab>c :cc<CR>
