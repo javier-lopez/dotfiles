@@ -16,7 +16,7 @@
 " FindInNERDTree.vim, Drawit.vim
 "
 "[+] Modified versions
-"[*] TODO                                git://github.com/chilicuil/dot-f.git
+"[*] TODO 17-11-2009 13:10 => git://github.com/chilicuil/dot-f.git
 
 "plugins disabled
 let loaded_showmarks         = 1
@@ -49,7 +49,7 @@ command! WordMode       call Word_mode()
 command! DevMode        call Dev_mode()
 command! DefaultMode    call Default_mode()
 
-"TODO: Add a map for this, find a way to make it work with differents langs
+"TODO 17-11-2009 13:10 => Add a map for this, find a way to make it work with differents langs
 function! AddCscope() "Add a session only if doesn't exist a previous one
     try
         if !(cscope_connection())
@@ -64,7 +64,7 @@ endfunction
 " vimtip #1354
 function! Google_for_snippet()
     let s:browser         = "firefox" "or whatever browser you prefer
-    "TODO Open it in a quickfix window
+    "TODO 17-11-2009 13:10 => Open it in a quickfix window
     let s:wordUnderCursor = expand("<cword>")
 
     if &ft == "cpp" || &ft == "c" || &ft == "ruby" || &ft == "php"
@@ -112,7 +112,7 @@ function! Tag_list()
     endif
 endfunction
 
-"TODO: Make it support other VCS
+"TODO 17-11-2009 13:11 => Make it support other VCS
 "I dont remember where I found this function
 function! GitInfo()
     let l:key = getcwd()

@@ -7,5 +7,6 @@ snippet date
 snippet timestamp
 	`strftime("%c")`
 snippet last
-	Last review            `strftime("%c")`
-
+	Last review            `strftime("%c")`${1}
+snippet TODO
+	TODO `strftime("%d-%m-%Y %H:%M")` => ${1:comment}
