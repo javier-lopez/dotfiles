@@ -4,18 +4,20 @@
 "
 "Plugins used:
 "
-" [*]matchit.vim [*]crefvim.vim NERD_tree.vim [+]snipMate.vim
+" [*]matchit.vim [*]crefvim.vim NERD_tree.vim [+]snipMate.vim, breakpts.vim
 " taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [+]paster.vim autoclose.vim
 " browser.vim dbext.vim LargeFile.vim [*]manpageviewPlugin.vim Matrix.vim
 " [+]nextCS.vim tetris.vim vcscommand.vim VimRegEx.vim vsutil.vim qbuf.vim
 " surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim php-doc.vim
 " [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
-" lusty-explorer.vim NERD_commenter.vim tasklist.vim [*]xml.vim showmarks.vim
-" DirDiff.vim, fuzzyfinder.vim, srcexpl.vim, align.vim, CSApprox.vim
+" lusty-explorer.vim NERD_commenter.vim tasklist.vim showmarks.vim
+" DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
+" cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
 "
 "[+] Modified versions
 "[*] TODO                                git://github.com/chilicuil/dot-f.git
 
+"plugins disabled
 let loaded_showmarks         = 1
 let loaded_srcexpl           = 1
 let loaded_manpageviewPlugin = 1
@@ -23,8 +25,9 @@ let loaded_AutoClose         = 1
 let checksyntax              = 1
 let loaded_fugitive          = 1
 let loaded_project           = 1
-let PA_translator_version    = 1
 let CSApprox_loaded          = 1
+let indexed_search_plugin    = 1
+let loaded_search_complete   = 1
 
 "function! UpdateTags()
     "call writefile(getline(1, '$'), '.tmp.cc', 'b')
