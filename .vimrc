@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Tue 10 Nov 2009 08:46:10 PM CST
+"           Last review            Sat 14 Nov 2009 08:01:54 AM CST
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
@@ -24,6 +24,7 @@ let checksyntax              = 1
 let loaded_fugitive          = 1
 let loaded_project           = 1
 let PA_translator_version    = 1
+let CSApprox_loaded          = 1
 
 "function! UpdateTags()
     "call writefile(getline(1, '$'), '.tmp.cc', 'b')
@@ -437,6 +438,7 @@ endif
 set modelines=0        "http://www.guninski.com/vim1.html
 set nocompatible       "breaks compatibility with vi, it must be enable at the
 "start to not overwrite other flags
+syntax on
 set noexrc             "don't use local version of .(g)vimrc, .exrc
 set mouse=nv           "set the mouse to work in console mode
 set mousehide          "hide the mouse while typying
@@ -530,9 +532,6 @@ if has("autocmd")
                 \     setlocal statusline+=%=%2*\ %<%P |
                 \ endif
 endif
-
-"Show tabs and trailing whitespace visually
-call Trailer()
 
 "TODO: php documentation
 "set runtimepath+=/home/chilicuil/.vim/doc/php
@@ -646,6 +645,13 @@ inoremap <c-k> <Esc><c-w>k
 inoremap <c-j> <Esc><c-w>j
 inoremap <c-l> <Esc><c-w>l
 inoremap <c-h> <Esc><c-w>h
+
+" VIM-Shell
+" Ctrl_W e opens up a vimshell in a horizontally split window
+" Ctrl_W E opens up a vimshell in a vertically split window
+" The shell window will be auto closed after termination
+nmap <C-W>e :new \| vimshell bash<CR>
+nmap <C-W>E :vnew \| vimshell bash<CR>
 
 "resize windows
 noremap <c-left> <c-w><
