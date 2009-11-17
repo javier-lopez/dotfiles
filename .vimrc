@@ -13,7 +13,7 @@
 " lusty-explorer.vim NERD_commenter.vim tasklist.vim showmarks.vim
 " DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
 " cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
-" FindInNERDTree.vim
+" FindInNERDTree.vim, Drawit.vim
 "
 "[+] Modified versions
 "[*] TODO                                git://github.com/chilicuil/dot-f.git
@@ -939,5 +939,8 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " "zC" Close a folder recursively
 " "map" List maps
 " "set all" show all the options
+" "q/" gives the search history window
+" "q:" gives the comand history window
+" ":%! nl -ba" numbers all lines in a file
 " Vim can be suspended like any other program with Ctrl-z and
 " be restarted with --fg--
