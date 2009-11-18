@@ -1,4 +1,30 @@
 # #!/bin/bash
+snippet header
+	#============================================================================
+	#
+	#          FILE:  `expand('%')`
+	#
+	#         USAGE:  ./`expand('%')`
+	#
+	#   DESCRIPTION:  ${1:---}
+	#
+	#       OPTIONS:  ${2:---}
+	#  REQUIREMENTS:  ${3:---}
+	#        AUTHOR:  ${4:`g:snips_author`} ${5:<`g:snips_authorEmail`>}
+	#       COMPANY:  ${6:---}
+	#       VERSION:  ${7:---}
+	#       CREATED:  `strftime("%d-%m-%Y %H:%M")` 
+	#      REVISION:  ${8:---}
+	#============================================================================
+	${11}
+snippet legal
+	#==========================================================================
+	#  This program is free software; you can redistribute it and/or modify 
+	#  it under the terms of the GNU General Public License as published by 
+	#  the Free Software Foundation; either version 2 of the License, or    
+	#  (at your option) any later version.                                  
+	#==========================================================================
+	${1}
 snippet #!
 	#!/bin/bash
 	

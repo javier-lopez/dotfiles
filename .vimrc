@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Sat 14 Nov 2009 08:01:54 AM CST
+"           Last review            Tue 17 Nov 2009 02:08:03 PM CST
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
@@ -10,10 +10,10 @@
 " [+]nextCS.vim tetris.vim vcscommand.vim VimRegEx.vim vsutil.vim qbuf.vim
 " surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim php-doc.vim
 " [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
-" lusty-explorer.vim NERD_commenter.vim tasklist.vim showmarks.vim
+" lusty-explorer.vim NERD_commenter.vim tasklist.vim showmarks.vim, rails.vim
 " DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
 " cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
-" FindInNERDTree.vim, Drawit.vim
+" FindInNERDTree.vim, Drawit.vim, [*]echofunc.vim, omnicppcomplete.vim
 "
 "[+] Modified versions
 "[*] TODO 17-11-2009 13:10 => git://github.com/chilicuil/dot-f.git
@@ -29,6 +29,8 @@ let loaded_project           = 1
 let CSApprox_loaded          = 1
 let indexed_search_plugin    = 1
 let loaded_search_complete   = 1
+let loaded_echofunc          = 1
+let loaded_rails             = 1
 "let loaded_acp               = 1
 
 "function! UpdateTags()
@@ -160,7 +162,7 @@ endfunction
 
 function! Trailer_off()
     set nolist
-    "TODO unset fillchars and listchars
+    "TODO 17-11-2009 13:11 => unset fillchars and listchars
 endfunction
 
 function! CmdLine(str)
@@ -190,33 +192,36 @@ function! VisualSearch(direction) range
     let @" = l:saved_reg
 endfunction
 
-"TODO: functions for  php, c, perl, python, etc
+"TODO 17-11-2009 13:11 => functions for  php, c, perl, python, etc
 function! SetProperties(_language)
 
     if (a:_language == "c")
-        set makeprg=make\ %:r
+        set syntax  =c
+        set makeprg =make\ %:r
 
-        "i'nit
-        "map <c-i> :!./%:r<CR>
-        "map! <c-i> <Esc>:!./%:r<CR>
-
-        "compile & run (a'll)
-        map <c-a> :w<CR>:make && ./%:r<CR>
+        "r'un
+        map <Leader>mr :!./%:r<CR>
+        "c'ompile
+        map <Leader>mc :w<CR>:make<CR>
+        "compile & run (make a'll)
+        map <Leader>ma :w<CR>:make && ./%:r<CR>
+        "TODO 17-11-2009 13:11 => debug shortcut
 
     elseif (a:_language == "java")
-        "TODO: fix makeprg while using java
-        set makeprg=javac\ %
+        set syntax   =java
+        set makeprg =javac\ %
 
-        "i'nit
-        "map <c-i> :!java %:r<CR>
-        "map! <c-i> <Esc>:!java %:r<CR>
-
+        "r'un
+        map <Leader>mr :!java %:r<CR>
+        "c'ompile
+        map <Leader>mc  :w<CR>:make<CR>
         "compile & run (a'll)
-        map <c-a> :w<CR>:make && java %:r<CR>
+        map <Leader>ma  :w<CR>:make && java %:r<CR>
+        "debug without arguments
+        map <Leader>md  :w<CR>:make && jdb %:r<CR>
+        "debug with arguments
+        map <Leader>mda :w<CR>:make && jdb %:r<SPACE>
 
-        "TODO:debug shortcut
-        "autocmd FileType java nmap <F7> :w<CR>:!javac % && jdb %:r<CR>
-        "autocmd FileType java nmap <F8> :w<CR>:!javac % && jdb %:r<SPACE>
         let java_highlight_all       = 1
         let java_highlight_functions = "style"
         let java_allow_cpp_keywords  = 1
@@ -234,9 +239,10 @@ function! SetProperties(_language)
         "let tlist_php_settings = 'php;c:class;d:constant;f:function'
 
     elseif (a:_language == "perl")
-        "TODO Use compiler when available
-        set makeprg=$VIMRUNTIME/tools/efm_perl.pl\ -c\ %\ $*
-        set errorformat=%f:%l:%m
+        "TODO 17-11-2009 13:11 => Use compiler when available
+        set syntax       =perl
+        set makeprg      =$VIMRUNTIME/tools/efm_perl.pl\ -c\ %\ $*
+        set errorformat  =%f:%l:%m
 
         nnoremap <silent><Leader>> :%!perltidy -q<CR>
         vnoremap <silent><Leader>> :!perltidy -q<CR>
@@ -248,11 +254,13 @@ function! SetProperties(_language)
         let perl_want_scope_in_variables = 1
 
     elseif (a:_language == "python")
-        set foldmethod=indent
+        set syntax     =python
+        set foldmethod =indent
         setlocal noexpandtab
 
     elseif (a:_language == "make")
-        set foldmethod=indent
+        set syntax     =make
+        set foldmethod =indent
         setlocal noexpandtab
 
     endif
@@ -284,7 +292,7 @@ function! Word_mode()
     endif
 endfunction
 
-function! Spell(_language) "TODO: make _language optional
+function! Spell(_language) "TODO 17-11-2009 13:12 => make _language optional
     if (a:_language == "en_us")
         let g:acp_completeOption = '.,w,b,t,k,kspell,i,d'
         set spell spelllang=en_us
@@ -332,18 +340,19 @@ function! Dev_mode()
 endfunction
 
 function! Dev_mode_on()
-    set number            "show the number of the lines on the left of the screen
-    set linebreak         "wrap at word
-    "set patchmode=.orig  "keeps filename.orig while editing
+    set number         "show the number of the lines on the left of the screen
+    set linebreak      "wrap at word
+    "set patchmode=.orig       "keeps filename.orig while editing
 
-    "subract/add 1 from the number or alphabetic character at or after the cursor.
+    "subract/add 1 from the number or alphabetic character before
+    "or after the cursor.
     noremap - <c-x>
     noremap + <c-a>
 
     "Specific configuration for things that take a long time to finish.
     if &ft =="cpp" || &ft =="c"
-        "autocreate the cscope database and add it to the current session when we
-        "change to :dev mode
+        "autocreate the cscope database and add it to
+        "the current session when we change to :dev mode
         call AddCscope()
     endif
 
@@ -353,7 +362,7 @@ function! Dev_mode_on()
         "call AddCscope()
     endif
 
-    "TODO: specific filetype options, i.e.
+    "TODO 17-11-2009 13:12 => specific filetype options, i.e.
     "if &ft == "filetype"
     "useful plugins, options, keyboard shortcuts, etc.
     "endif
@@ -462,8 +471,8 @@ set ruler              "show the cursor position all the time
 set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
-set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,
-            \*.png,*.xpm,*.gif
+set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,
+                \*.swp,*.jpg,*.png,*.xpm,*.gif
 set hidden             "allow open other file without saving current file
 set autochdir          "change to the current directory
 set winminheight=1     "never let a window to be less than 1px height
@@ -526,7 +535,7 @@ set statusline+=%2*%-8{strftime('%H:%M')}                "time
 "set statusline+=%2*%-3b,0x%-8B\                          "current char
 set statusline+=0x%-4B\                                  "current char
 "set statusline+=%-14.(%l,%c%V%)\ %<%P                    "offset
-set statusline+=%-8.(%l,%c%V%)\ %P                      "offset
+set statusline+=%-8.(%l,%c%V%)\ %P                       "offset
 
 " special statusbar for special windows
 if has("autocmd")
@@ -538,7 +547,7 @@ if has("autocmd")
                 \ endif
 endif
 
-"TODO: php documentation
+"TODO 17-11-2009 13:12 => php documentation
 "set runtimepath+=/home/chilicuil/.vim/doc/php
 
 "folder options
@@ -570,8 +579,9 @@ let g:nickID      = 'chilicuil'
 let g:GetLatestVimScripts_allowautoinstall=1
 
 "Snippet directories
-let g:snips_author = "chilicuil"
-let g:snippets_dir = "~/.vim/snippets/, ~/.vim/extra-snippets/"
+let g:snips_author      = "chilicuil"
+let g:snips_authorEmail = "chilicuil@users.sourceforge.net"
+let g:snippets_dir      = "~/.vim/snippets/, ~/.vim/extra-snippets/"
 
 " qbuf.vim
 let g:qb_hotkey = "<F2>"
@@ -608,31 +618,34 @@ let Tlist_Enable_Fold_Column  = 0
 "===============================================================================
 
 " Go back to the position the cursor was on the last time this file was edited
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-            \|execute("normal `\"")|endif
+if has("autocmd")
+    autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+                \|execute("normal `\"")|endif
+endif
 
 "Language specific settings
-"TODO: Add languages
-au BufNewFile,BufEnter *.php,*.php3,*.php4,*.php5    call SetProperties("php")
-au BufNewFile,BufEnter *schema,*.inc,*.engine,*html  call SetProperties("php")
-au BufNewFile,BufEnter *.ctp,*.thtml                 call SetProperties("php")
-au BufNewFile,BufEnter *.c,*.h                       call SetProperties("c")
-au BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml           call SetProperties("perl")
-au BufNewFile,BufEnter *[mM]akefile,*.mk             call SetProperties("make")
-au BufNewFile,BufEnter *.java                        call SetProperties("java")
+"TODO 17-11-2009 13:12 => Add languages
+autocmd BufNewFile,BufEnter *.php,*.php3,*.php4  call SetProperties("php")
+autocmd BufNewFile,BufEnter *.php5,*html ,*.inc  call SetProperties("php")
+autocmd BufNewFile,BufEnter *schema,*.engine     call SetProperties("php")
+autocmd BufNewFile,BufEnter *.ctp,*.thtml        call SetProperties("php")
+autocmd BufNewFile,BufEnter *.c,*.h              call SetProperties("c")
+autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml  call SetProperties("perl")
+autocmd BufNewFile,BufEnter *[mM]akefile,*.mk    call SetProperties("make")
+autocmd BufNewFile,BufEnter *.java               call SetProperties("java")
 
 "Skeletons :
-au BufNewFile *.rb,*.ruby,*.eruby                    call Skel("ruby")
-au BufNewFile *.sh,*.bash                            call Skel("bash")
-au BufNewFile *.tex                                  call Skel("tex")
-au BufNewFile *.py,*.python                          call Skel("python")
-au BufNewFile *.html                                 call Skel("html")
-au BufNewFile *.pl,*.perl                            call Skel("perl")
-au BufNewFile *.php,*.php3,*.php4,*.php5             call Skel("php")
-au BufNewFile *schema,*.inc,*.engine,*.ctp           call Skel("php")
+autocmd BufNewFile *.rb,*.ruby,*.eruby           call Skel("ruby")
+autocmd BufNewFile *.sh,*.bash                   call Skel("bash")
+autocmd BufNewFile *.tex                         call Skel("tex")
+autocmd BufNewFile *.py,*.python                 call Skel("python")
+autocmd BufNewFile *.html                        call Skel("html")
+autocmd BufNewFile *.pl,*.perl                   call Skel("perl")
+autocmd BufNewFile *.php,*.php3,*.php4,*.php5    call Skel("php")
+autocmd BufNewFile *schema,*.inc,*.engine,*.ctp  call Skel("php")
 
 " turn off any existing search
-au VimEnter * nohls
+autocmd VimEnter * nohls
 "===============================================================================
 "================================== Mappings ===================================
 "===============================================================================
