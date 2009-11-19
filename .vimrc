@@ -1,37 +1,84 @@
 "-------------------------------------------------------------------------------
-"           Last review            Tue 17 Nov 2009 02:08:03 PM CST
+"           Last review            Wed 18 Nov 2009 09:54:53 PM CST
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
 "
 " [*]matchit.vim [*]crefvim.vim NERD_tree.vim [+]snipMate.vim, breakpts.vim
-" taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [+]paster.vim autoclose.vim
-" browser.vim dbext.vim LargeFile.vim [*]manpageviewPlugin.vim Matrix.vim
-" [+]nextCS.vim tetris.vim vcscommand.vim VimRegEx.vim vsutil.vim qbuf.vim
-" surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim php-doc.vim
+" [+]taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [+]paster.vim autoclose.vim
+" [+]browser.vim dbext.vim LargeFile.vim [*]manpageviewPlugin.vim [+]Matrix.vim
+" [+]nextCS.vim [+]tetris.vim vcscommand.vim [+]VimRegEx.vim vsutil.vim qbuf.vim
+" surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim [+]php-doc.vim
 " [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
 " lusty-explorer.vim NERD_commenter.vim tasklist.vim showmarks.vim, rails.vim
-" DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
+" [+]DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
 " cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
-" FindInNERDTree.vim, Drawit.vim, [*]echofunc.vim, omnicppcomplete.vim
+" [+]FindInNERDTree.vim, Drawit.vim, [*]echofunc.vim, omnicppcomplete.vim
+" netrwPlugin.vim
 "
-"[+] Modified versions
-"[*] TODO 17-11-2009 13:10 => git://github.com/chilicuil/dot-f.git
+"[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
+"[*] TODO 18-11-2009 21:19
 
-"plugins disabled
-let loaded_showmarks         = 1
-let loaded_srcexpl           = 1
-let loaded_manpageviewPlugin = 1
+"===============================================================================
+"==================================== Load guards ==============================
+"===============================================================================
+"Comment it to enable it
+
+"let loaded_matchit          = 1
+let loaded_crefvim           = 1
+"let loaded_nerd_tree        = 1
+"let loaded_snips            = 1
+let loaded_breakpts          = 1
+"let loaded_taglist_mod      = 1
+"let loaded_debugger         = 1
+"let loaded_acp              = 1
+"let loader_paster           = 1
 let loaded_AutoClose         = 1
-let checksyntax              = 1
-let loaded_fugitive          = 1
-let loaded_project           = 1
-let CSApprox_loaded          = 1
+"let loaded_browser          = 1
+"let loaded_dbext            = 1
+"let loaded_LargeFile        = 1
+let loaded_manpageviewPlugin = 1
+"let loaded_Matrix           = 1
+"let loaded_nextCS           = 1
+"let loaded_tetris           = 1
+"let loaded_VCSCommand       = 1
+let loaded_vimRegEx          = 1
+let VSUTIL                   = 1
+"let qb_loaded               = 1
+"let loaded_surround         = 1
+"let loaded_repeat           = 1
+"let loaded_findMate         = 1
 let indexed_search_plugin    = 1
+let loader_php_doc           = 1
 let loaded_search_complete   = 1
-let loaded_echofunc          = 1
+"let loaded_vimbuddy         = 1
+let loaded_Decho             = 1
+let loaded_genutils          = 1
+let loaded_project           = 1
+let loaded_lustyexplorer     = 1
+"let loaded_nerd_comments    = 1
+"let loaded_tasklist         = 1
+let loaded_showmarks         = 1
 let loaded_rails             = 1
-"let loaded_acp               = 1
+"let loaded_DirDiff          = 1
+"let loaded_fuf              = 1
+let loaded_srcexpl           = 1
+"let loaded_AlignMapsPlugin  = 1
+"let loaded_AlignPlugin      = 1
+"let CSApprox_loaded         = 1
+"let loaded_cecutil          = 1
+"let loaded_cmdline_complete = 1
+"let checksyntax             = 1
+"let loaded_fugitive         = 1
+"let loaded_FindInNERDTree   = 1
+"let loaded_DrawItPlugin     = 1
+"let loaded_echofunc         = 1
+"let loaded_netrwPlugin      = 1
+
+
+"===============================================================================
+"=============================== Experimental stuff ============================
+"===============================================================================
 
 "function! UpdateTags()
     "call writefile(getline(1, '$'), '.tmp.cc', 'b')
@@ -464,7 +511,7 @@ set history=1000       "record last 1000 commands, press 'q:' to see a new
 set t_Co=256           "set 256 colors. Make sure your console supports it.
 "gnome-terminal and konsole work well
 set report=0           "report any changes
-set tabpagemax=50      "max open tabs at the same time
+set tabpagemax=100     "max open tabs at the same time
 set autoread           "watch for file changes by other programs
 set encoding=utf-8     "utf is able to represent any character
 set ruler              "show the cursor position all the time
@@ -626,7 +673,7 @@ endif
 "Language specific settings
 "TODO 17-11-2009 13:12 => Add languages
 autocmd BufNewFile,BufEnter *.php,*.php3,*.php4  call SetProperties("php")
-autocmd BufNewFile,BufEnter *.php5,*html ,*.inc  call SetProperties("php")
+autocmd BufNewFile,BufEnter *.php5,*html,*.inc   call SetProperties("php")
 autocmd BufNewFile,BufEnter *schema,*.engine     call SetProperties("php")
 autocmd BufNewFile,BufEnter *.ctp,*.thtml        call SetProperties("php")
 autocmd BufNewFile,BufEnter *.c,*.h              call SetProperties("c")
@@ -950,7 +997,8 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " "zO" Open a folder recursively
 " "zc" Close a folder
 " "zC" Close a folder recursively
-" "map" List maps
+" ":map" List maps
+" ":registers" Show what is in each register
 " "set all" show all the options
 " "q/" gives the search history window
 " "q:" gives the comand history window

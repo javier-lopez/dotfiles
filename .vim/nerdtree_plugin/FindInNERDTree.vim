@@ -11,6 +11,15 @@
 " A plugin for NERDTree
 " http://www.vim.org/scripts/script.php?script_id=1658
 
+if exists("g:loaded_FindInNERDTree") || &cp
+ finish
+endif
+
+let g:loaded_FindInNERDTree = 1
+let s:keepcpo               = &cpo
+
+set cpo&vim
+
 function! FindInNERDTree(...)
   if a:0
     let l:path = a:1
@@ -59,3 +68,6 @@ function! FindInNERDTree(...)
 
   return {}
 endfunction
+
+let &cpo= s:keepcpo
+unlet s:keepcpo

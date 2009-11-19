@@ -12,6 +12,13 @@
 "   * Improve input parser, so it can select ranges, and lists (using commas
 "   or any other simbol instance white spaces)
 
+if &cp || exists("g:loaded_findMate")
+ finish
+endif
+
+let s:old_cpo = &cpo
+set cpo&vim
+
 function! FindMate_vimgrep(_name)
     try
         silent execute g:FindMate_TotalResults. "vimgrep /\\%1l/j **/" .a:_name. "*"
@@ -134,3 +141,5 @@ endfunction
 
 command! -nargs=1 FindMate :call FindMate("<args>")
 map ,, :FindMate 
+let &cpo = s:old_cpo
+unlet s:old_cpo

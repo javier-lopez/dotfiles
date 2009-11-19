@@ -50,6 +50,14 @@
 "      window
 "
 
+if exists("g:loaded_vimRegEx") || &cp
+ finish
+endif
+
+let g:loaded_vimRegEx = 1
+let s:keepcpo         = &cpo
+set cpo&vim
+
 let s:thisScript=expand("<sfile>:p")
 let s:myName=fnamemodify(s:thisScript,":t")
 
@@ -2140,3 +2148,6 @@ See:   :h tohtml, then /Remarks: (search for 'Remarks:').
 
 END MANUAL SECTION SEVEN
 endfunction
+
+let &cpo= s:keepcpo
+unlet s:keepcpo

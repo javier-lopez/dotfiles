@@ -5,6 +5,15 @@
 "
 " Usage:       Insert %{VimBuddy()} into your 'statusline'
 "
+
+if exists("g:loaded_vimbuddy") || &cp
+ finish
+endif
+
+let g:loaded_vimbuddy = 1
+let s:keepcpo         = &cpo
+set cpo&vim
+
 function! VimBuddy()
     " Take a copy for others to see the messages
     if ! exists("s:vimbuddy_msg")
@@ -84,3 +93,6 @@ function! VimBuddy()
     " Happiness is my favourite mood
     return ":-)"
 endfunction
+
+let &cpo= s:keepcpo
+unlet s:keepcpo

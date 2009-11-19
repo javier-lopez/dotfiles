@@ -26,6 +26,10 @@
 "    -  Added sorting from eval.txt example
 "    -  Added Uniq()
 
+if exists("g:VSUTIL") || &cp
+ finish
+endif
+
 let g:VSUTIL=1
 let g:VSUTILMAJ=1
 let g:VSUTILMIN=4

@@ -111,6 +111,14 @@
 "=============================================================================
 " }}}
 
+if exists("g:loaded_debugger") || &cp
+ finish
+endif
+
+let g:loaded_debugger = 1
+let s:keepcpo         = &cpo
+set cpo&vim
+
 " Do not source this script when python is not compiled in.
 if !has("python")
     finish
@@ -176,3 +184,6 @@ if !exists('g:debuggerMiniBufExpl')
   let g:debuggerMiniBufExpl = 0
 endif
 python debugger_init(1)
+
+let &cpo= s:keepcpo
+unlet s:keepcpo

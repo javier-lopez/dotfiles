@@ -62,6 +62,14 @@
 " -------------
 "  * Added foldmarker generation.
 " 
+if &cp || exists("g:loaded_php_doc")
+ finish
+endif
+
+let g:loaded_php_doc = 1
+let s:old_cpo        = &cpo
+
+set cpo&vim
 
 if has ("user_commands")
 
@@ -504,3 +512,6 @@ endfunc
 " }}}
 
 endif " user_commands
+
+let &cpo = s:old_cpo
+unlet s:old_cpo

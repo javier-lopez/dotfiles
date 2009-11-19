@@ -84,6 +84,13 @@
 "au FileType php map K :call OpenPhpFunction('<c-r><c-w>')<cr>
 "au FileType python map K :GooglePythonDoc <cword><cr>
 
+if &cp || exists("g:loaded_browser")
+ finish
+endif
+
+let s:old_cpo = &cpo
+set cpo&vim
+
 com! -nargs=+ Wikipedia       call OpenWikipedia(<q-args>)
 com! -nargs=+ Dictionary      call OpenDictionary(<q-args>)
 com! -nargs=+ WebBrowser      call OpenWebBrowser(<q-args>)
@@ -170,3 +177,4 @@ fun! OpenLink (address)
     echo "reading " . a:address
 endfun
 
+let &cpo = s:old_cpo

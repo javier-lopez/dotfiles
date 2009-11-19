@@ -56,6 +56,12 @@
 "
 " ****************** Do not modify after this line ************************
 
+if exists('g:loaded_taglist_mod') || &cp || version < 700
+	finish
+endif
+
+let g:loaded_taglist_mod = 1
+
 " Line continuation used here
 let s:cpo_save = &cpo
 set cpo&vim
@@ -4543,4 +4549,3 @@ endfunction
 " restore 'cpo'
 let &cpo = s:cpo_save
 unlet s:cpo_save
-

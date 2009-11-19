@@ -191,6 +191,15 @@
 "
 " }}}
 
+if &cp || exists("g:loaded_DirDiff")
+ finish
+endif
+
+let g:loaded_DirDiff = 1
+
+let s:old_cpo = &cpo
+set cpo&vim
+
 " Public Interface:
 command! -nargs=* -complete=dir DirDiff call <SID>DirDiff (<f-args>)
 command! -nargs=0 DirDiffOpen call <SID>DirDiffOpen ()
@@ -1068,3 +1077,5 @@ function! <SID>GetDiffStrings()
 	call <SID>Delete(tmpdiff)
 
 endfunction
+let &cpo = s:old_cpo
+unlet s:old_cpo

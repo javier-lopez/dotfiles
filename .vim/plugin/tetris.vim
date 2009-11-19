@@ -9,6 +9,15 @@
 "	If your name is not here, but should be, drop me a mail
 
 " TODO FocusGained FocusLost Auto calibration during play
+if exists("g:loaded_tetris") || &cp
+ finish
+endif
+
+let g:loaded_tetris = 1
+let s:keepcpo       = &cpo
+
+set cpo&vim
+
 let s:s='-Tetris_game-'
 let s:WIDTH=10|let s:NEXTXPOS=16|let s:NEXTYPOS=2
 let s:CLEAR=0|let s:CHECK=1|let s:DRAW=2
@@ -310,4 +319,8 @@ fu! s:Main()
 endf
 
 nmap <Leader>te :cal <SID>Main()<CR>
+
+let &cpo= s:keepcpo
+unlet s:keepcpo
+
 " vi:sw=1

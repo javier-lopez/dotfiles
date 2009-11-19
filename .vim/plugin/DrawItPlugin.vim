@@ -41,7 +41,8 @@ if has("gui_running") && has("menu") && &go =~ 'm'
  if !exists("g:DrChipTopLvlMenu")
   let g:DrChipTopLvlMenu= "DrChip."
  endif
- exe 'menu '.g:DrChipTopLvlMenu.'DrawIt.Start\ DrawIt<tab>\\di		<Leader>di'
+ exe 'menu '.g:DrChipTopLvlMenu.'DrawIt.Start\ DrawIt<tab>\\dw		<Leader>dw'
+ exe 'menu '.g:DrChipTopLvlMenu.'DrawIt.Stop\ DrawIt<tab>\\ds		<Leader>ds'
 endif
 
 " ---------------------------------------------------------------------

@@ -49,6 +49,13 @@
 " http://ciurana.eu/pastebin/ - these are the ##java channel default pastebin
 " sites:
 
+if &cp || exists("g:loaded_paster")
+ finish
+endif
+
+let s:old_cpo = &cpo
+set cpo&vim
+
 let g:PASTER_COMMAND         = 'curl'
 let g:PASTER_CONTROL         = '-isv'
 let g:PASTER_FIXED_ARGUMENTS = '-d "parentID=&paste=Send&remember=0&expiry=timePasted"'
@@ -625,5 +632,5 @@ endfunction
 
 " *************** End pastey.net configuration ************
 
-
-
+let &cpo = s:old_cpo
+unlet s:old_cpo

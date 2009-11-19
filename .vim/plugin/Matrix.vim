@@ -42,6 +42,13 @@
 "            removed frame counter
 " 01/26/05 - initial version
 
+if exists("g:loaded_Matrix") || &cp
+ finish
+endif
+
+let g:loaded_Matrix   = 1
+let s:keepcpo         = &cpo
+set cpo&vim
 
 " Speed range, must be positive.  Lower delay = faster.
 let s:mindelay = 1
@@ -323,3 +330,6 @@ if !has('virtualedit') || !has('windows') || !has('syntax')
 else
    command! Matrix call Matrix()
 endif
+
+let &cpo= s:keepcpo
+unlet s:keepcpo

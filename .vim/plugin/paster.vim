@@ -55,6 +55,15 @@
 
 " Exit early if curl isn't available.
 
+if &cp || exists("g:loaded_paster")
+ finish
+endif
+
+let g:loaded_paster = 1
+
+let s:old_cpo = &cpo
+set cpo&vim
+
 if !executable(g:PASTER_COMMAND)
   finish
 endif
@@ -184,3 +193,6 @@ endfunction
 " Command to call the function:
 
 com! -range=% -nargs=0 Pastebin :<line1>,<line2>call Pastebin()
+
+let &cpo = s:old_cpo
+unlet s:old_cpo
