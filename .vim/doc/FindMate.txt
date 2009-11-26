@@ -1,0 +1,117 @@
+*FindMate.txt*	Plugin for finding files in your whole system or current directory
+
+		    Copyright (c) 2007-2009 Manuel Aguilar
+		    Copyright (c) 2007-2009 Victor Guardiola
+
+FindMate                                                *FindMate* *findmate*
+
+INTRODUCTION                    |FindMate-introduction|
+INSTALLATION                    |FindMate-installation|
+USAGE                           |FindMate-usage|
+OPTIONS                         |FindMate-options|
+CHANGELOG                       |FindMate-changelog|
+ABOUT                           |FindMate-about|
+
+===================================================================================
+INTRODUCTION                                                *FindMate-introduction*
+
+FindMate provides a convenient way (at least for me) to quickly find the
+files you want. It uses the locate and file commands to achieve its goal
+(vimgrep on windows). 
+
+Originality it was released by Manuel Aguilar and Victor Guardiola but as I
+couldn't reach neither of them I decide to upload it by myself (and add some
+documentation) because I consider that this script could help to someone else.
+
+The original script can be still found at
+
+http://snipt.net/voyeg3r/findmate-plugin-for-vim/
+
+===================================================================================
+INSTALLATION                                                *FindMate-installation*
+
+Put all files into your runtime directory. If you have the zip file, extract
+it to your runtime directory.
+
+Additionally make sure you've both of the commands FindMate use (locate and
+find), on Windows it'll use vimgrep who is a remastered version of grep. 
+
+You should place the files as follows:
+>
+	<your runtime directory>/plugin/FindMate.vim
+	<your runtime directory>/doc/FindMate.txt
+<
+And then update your help tags files to enable the FindMate help. See
+|add-local-help| for details.
+
+To uninstall the plugin just delete it from your plugin directory. Don't forget
+remove the doc/FindMate.txt as well.
+
+To get better results make sure you update the locate database often, this is
+the default behavior in most systems.
+
+Check "man updatedb" to get additional help.
+
+===================================================================================
+USAGE		                                                   *FindMate-usage*
+
+You can launch FindMate by typing:
+>
+    ,, File_name
+<
+Or
+>
+    :FindMate File_name
+<
+The shortcut can be redefined by using:
+>
+    map your_shortcut   <Plug>FindMate
+<
+In your .vimrc file
+
+===================================================================================
+OPTIONS                                                          *FindMate-options*
+
+                                                             *g:loaded_findMate*  >
+  let g:loaded_findMate = 0
+<
+        Enable or disable the plugin
+
+                                                            *g:FindMate_verbose*  >
+  let g:FindMate_verbose = 1
+<
+        Ask instead of using both commands (which may take some minutes)
+
+                                                       *g:FindMate_totalResults*  >
+  let g:FindMate_totalResults = 15
+<
+        Number of results that will be shown
+
+                                                        *g:FindMate_firstSearch*  >
+  let g:FindMate_verbose = 'locate'
+<
+        The command which FindMate will use at first, note that locate will search
+        faster but it'll do it in the whole system, while find is slower but can
+        search in a directory basis. I would recommend use locate when looking for
+        general files and find when looking for a specific file in the top of a
+        project directory.
+
+===================================================================================
+CHANGELOG                                                      *FindMate-changelog*
+
+0.1:
+    - Initial upload
+
+===================================================================================
+ABOUT                         *FindMate-about* *FindMate-contact* *FindMate-author*
+
+Author: Copyright (c) 2007-2009 Manuel Aguilar
+        Copyright (c) 2007-2009 Victor Guardiola
+URL:    http://www.vim.org/scripts/script.php?script_id=2871 
+
+Bugs/Issues/Suggestions/Improvements ~
+
+Please submit to <chilicuil.vim@DELETE-ME.gmail.com>
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:

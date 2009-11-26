@@ -37,7 +37,7 @@ let loaded_AutoClose         = 1
 "let loaded_browser          = 1
 "let loaded_dbext            = 1
 "let loaded_LargeFile        = 1
-let loaded_manpageviewPlugin = 1
+"let loaded_manpageviewPlugin = 1
 "let loaded_Matrix           = 1
 "let loaded_nextCS           = 1
 "let loaded_tetris           = 1
@@ -48,7 +48,7 @@ let VSUTIL                   = 1
 "let loaded_surround         = 1
 "let loaded_repeat           = 1
 "let loaded_findMate         = 1
-let indexed_search_plugin    = 1
+"let indexed_search_plugin   = 1
 let loader_php_doc           = 1
 let loaded_search_complete   = 1
 "let loaded_vimbuddy         = 1
@@ -68,7 +68,7 @@ let loaded_srcexpl           = 1
 "let CSApprox_loaded         = 1
 "let loaded_cecutil          = 1
 "let loaded_cmdline_complete = 1
-"let checksyntax             = 1
+let checksyntax              = 1
 "let loaded_fugitive         = 1
 "let loaded_FindInNERDTree   = 1
 "let loaded_DrawItPlugin     = 1
@@ -1003,5 +1003,6 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " "q/" gives the search history window
 " "q:" gives the comand history window
 " ":%! nl -ba" numbers all lines in a file
+" ":%! cat -n %" same as above
 " Vim can be suspended like any other program with Ctrl-z and
 " be restarted with --fg--

@@ -153,6 +153,16 @@ DBI	dbext.txt	/*DBI*
 ExtractSnips()	snipMate.txt	/*ExtractSnips()*
 ExtractSnipsFile()	snipMate.txt	/*ExtractSnipsFile()*
 Filename()	snipMate.txt	/*Filename()*
+FindMate	FindMate.txt	/*FindMate*
+FindMate-about	FindMate.txt	/*FindMate-about*
+FindMate-author	FindMate.txt	/*FindMate-author*
+FindMate-changelog	FindMate.txt	/*FindMate-changelog*
+FindMate-contact	FindMate.txt	/*FindMate-contact*
+FindMate-installation	FindMate.txt	/*FindMate-installation*
+FindMate-introduction	FindMate.txt	/*FindMate-introduction*
+FindMate-options	FindMate.txt	/*FindMate-options*
+FindMate-usage	FindMate.txt	/*FindMate-usage*
+FindMate.txt	FindMate.txt	/*FindMate.txt*
 LargeFile-copyright	LargeFile.txt	/*LargeFile-copyright*
 LargeFile.txt	LargeFile.txt	/*LargeFile.txt*
 MatchError	matchit.txt	/*MatchError*
@@ -1767,6 +1777,7 @@ drawit.txt	DrawIt.txt	/*drawit.txt*
 drv-dtArrayInit	crefvim.txt	/*drv-dtArrayInit*
 drv-dtIncompleteArrayDecl	crefvim.txt	/*drv-dtIncompleteArrayDecl*
 ds	surround.txt	/*ds*
+findmate	FindMate.txt	/*findmate*
 fuf	fuf.txt	/*fuf*
 fuf-abbreviation	fuf.txt	/*fuf-abbreviation*
 fuf-about	fuf.txt	/*fuf-about*
@@ -1867,6 +1878,9 @@ g:CSApprox_loaded	CSApprox.txt	/*g:CSApprox_loaded*
 g:CSApprox_redirfallback	CSApprox.txt	/*g:CSApprox_redirfallback*
 g:CSApprox_use_showrgb	CSApprox.txt	/*g:CSApprox_use_showrgb*
 g:CSApprox_verbose_level	CSApprox.txt	/*g:CSApprox_verbose_level*
+g:FindMate_firstSearch	FindMate.txt	/*g:FindMate_firstSearch*
+g:FindMate_totalResults	FindMate.txt	/*g:FindMate_totalResults*
+g:FindMate_verbose	FindMate.txt	/*g:FindMate_verbose*
 g:PA_translator_from_lang	PA_translator.txt	/*g:PA_translator_from_lang*
 g:PA_translator_printed_in_encoding	PA_translator.txt	/*g:PA_translator_printed_in_encoding*
 g:PA_translator_received_in_encoding	PA_translator.txt	/*g:PA_translator_received_in_encoding*
@@ -1950,6 +1964,7 @@ g:fuf_taggedfile_prompt	fuf.txt	/*g:fuf_taggedfile_prompt*
 g:fuf_taggedfile_switchOrder	fuf.txt	/*g:fuf_taggedfile_switchOrder*
 g:fuf_timeFormat	fuf.txt	/*g:fuf_timeFormat*
 g:fuf_useMigemo	fuf.txt	/*g:fuf_useMigemo*
+g:loaded_findMate	FindMate.txt	/*g:loaded_findMate*
 g:loaded_rails	rails.txt	/*g:loaded_rails*
 g:manpageview_K_EXT	manpageview.txt	/*g:manpageview_K_EXT*
 g:manpageview_iconv	manpageview.txt	/*g:manpageview_iconv*
