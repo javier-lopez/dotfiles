@@ -80,7 +80,7 @@ function! s:FindMate_show(_list)
     if (!type(a:_list) == type([]))
         return
     endif
-    
+
     if (a:_list[1] > 1)
         echo a:_list[0]
         let l:input = input("Which ones (<enter>=nothing)? ")
@@ -164,7 +164,7 @@ function! FindMate(name)
         return
     else 
         let l:list = s:FindMate_find(_name)
-        if (l:list[1] == -1) 
+        if (l:list[1] == -1)
             if g:FindMate_verbose
                 echo "Your search -" .a:name. "- did not match any documents"
                 let answer = input("\n\nWould you like to try using \"locate\"
@@ -172,7 +172,7 @@ function! FindMate(name)
                 if answer == "y"
                     redraw!
                     let l:list = s:FindMate_find(_name)
-                    if (l:list[1] == -1) 
+                    if (l:list[1] == -1)
                         echo "Your search -" .a:name. "- did not match any documents"
                         return
                     endif

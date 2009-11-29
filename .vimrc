@@ -164,18 +164,19 @@ endfunction
 "TODO 17-11-2009 13:11 => Make it support other VCS
 "I dont remember where I found this function
 function! GitInfo()
-    let l:key = getcwd()
-    if ! has_key(g:scm_cache, l:key)
-        if (isdirectory(getcwd() . "/.git"))
-            let g:scm_cache[l:key] = "["
-                        \. substitute(readfile(getcwd()
+    let g:vcs_cache = {}
+    let l:path = getcwd()
+    if ! has_key(g:vcs_cache, l:path)
+        if (isdirectory(l:path . "/.git"))
+            let g:vcs_cache[l:path] = "[git:"
+                        \. substitute(readfile(l:path
                         \. "/.git/HEAD", "", 1)[0],
                         \ "^.*/", "", "") . "] "
         else
-            let g:scm_cache[l:key] = ""
+            let g:vcs_cache[l:path] = ""
         endif
     endif
-    return g:scm_cache[l:key]
+    return g:vcs_cache[l:path]
 endfunction
 
 "neither this one
@@ -187,29 +188,37 @@ function! <SID>FixMiniBufExplorerTitle()
     endif
 endfunction
 
+"http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
+function! FileSize()
+    let bytes = getfsize(expand("%:p"))
+    if bytes <= 0
+        return ""
+    elseif bytes < 1024
+        return bytes
+    elseif bytes < 1048576
+        return(bytes / 1024) . "Kb"
+    else
+        return(bytes / 1048576) . "Mb"
+    endif
+endfunction
+
 function! Trailer()
     if exists ("s:trailer")
-        call Trailer_off()
+        set nolist
+        "TODO 17-11-2009 13:11 => unset fillchars and listchars
+        echo "[Trailer off]"
         unlet s:trailer
     else
-        call Trailer_on()
+        if has("gui_running")
+            set list listchars=tab:»·,trail:·,extends:…,nbsp:‗
+        else
+            " xterm + terminus hates these
+            set list listchars=tab:»·,trail:·,extends:>,nbsp:_
+        endif
+        set fillchars=fold:-
+        echo "[Trailer on]"
         let s:trailer = 1
     endif
-endfunction
-
-function! Trailer_on()
-    if has("gui_running")
-        set list listchars=tab:»·,trail:·,extends:…,nbsp:‗
-    else
-        " xterm + terminus hates these
-        set list listchars=tab:»·,trail:·,extends:>,nbsp:_
-    endif
-    set fillchars=fold:-
-endfunction
-
-function! Trailer_off()
-    set nolist
-    "TODO 17-11-2009 13:11 => unset fillchars and listchars
 endfunction
 
 function! CmdLine(str)
@@ -519,7 +528,7 @@ set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,
-                \*.swp,*.jpg,*.png,*.xpm,*.gif
+            \*.swp,*.jpg,*.png,*.xpm,*.gif
 set hidden             "allow open other file without saving current file
 set autochdir          "change to the current directory
 set winminheight=1     "never let a window to be less than 1px height
@@ -561,14 +570,13 @@ set viminfo='1000,<1000,s100,h
 
 "====== Status Line ======
 
-"Nice statusline taken from
+"Nice statusline taken mostly from
 "http://github.com/ciaranm/dotfiles-ciaranm/raw/master/vimrc
 
 set laststatus=2                                         "always show statusline
 set statusline=
 set statusline+=%2*%-3.3n%0*\                            "buffer number
-set statusline+=%F\                                      "file name
-let g:scm_cache = {}
+set statusline+=%F\                                      "file name (full)
 set statusline+=%{GitInfo()}                             "branch info
 set statusline+=%h%1*%m%r%w%0*                           "flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'},             "filetype
@@ -579,6 +587,7 @@ if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
 endif
 set statusline+=%=                                       "right align
 set statusline+=%2*%-8{strftime('%H:%M')}                "time
+set statusline+=%-7{FileSize()}                          "file size
 "set statusline+=%2*%-3b,0x%-8B\                          "current char
 set statusline+=0x%-4B\                                  "current char
 "set statusline+=%-14.(%l,%c%V%)\ %<%P                    "offset
@@ -652,8 +661,9 @@ let g:dbext_default_profile_mysql_cursophp2 = 'type=MYSQL:user=chilicuil:
 let g:dbext_default_profile_mysql_cursophp = 'type=MYSQL:user=chilicuil:
             \passwd=just4fun:dbname=cursophp:host=localhost:port=3306'
 
-let g:NERDTreeWinPos  = "right"
-let g:NERDTreeWinSize = 25
+let g:NERDTreeWinPos    = "right"
+let g:NERDTreeWinSize   = 25
+let g:NERDTreeMouseMode = 3
 
 "let g:Tlist_Use_Right_Window = 1
 let g:Tlist_WinWidth          = 25
