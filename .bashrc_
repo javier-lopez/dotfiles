@@ -1,0 +1,84 @@
+#===Custom Alias===
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias .bashrc='vim ~/.bashrc'
+alias .bashrc_='vim ~/.bashrc_'
+alias c='cd'
+alias cc='LANGUAGE=en cc'
+alias cd..='cd ..'
+alias dmesg-tail='dmesg|tail'
+alias gcc='LANGUAGE=en gcc'
+alias la='ls -A'
+alias learn='cd ~/code/learn/'
+alias ll='ls -l'
+alias l='ls -CF'
+alias ls='ls --color=auto'
+alias make='LANGUAGE=en make'
+alias mutt='LANGUAGE=en mutt'
+alias plugin='cd ~/.vim/plugin/'
+alias s='ls -CF'
+alias so='source ~/.bashrc'
+alias todo='todo -d ~/.todo/todo.cfg'
+alias t='todo'
+alias dev='vim -c DevMode'
+alias vd='vim -c DevMode'
+alias vimdev='vim -c DevMode'
+alias vrc='vim ~/.vimrc'
+alias v='vim'
+alias wifi='iwlist eth1 s'
+alias zz='exit'
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
+alias install='sudo apt-get install'
+alias purge='sudo apt-get purge'
+alias tree='tree -C|less -R'
+alias tree_aC='tree -aC|less -R'
+alias kcore='sudo cat /proc/kcore | strings | less'
+alias dir='ls -d */'
+#================================================
+
+#==Custom functions==
+#search(){ curl "http://www.commandlinefu.com/commands/matching/$@/\
+                #$(echo -n $@ | openssl base64)/plaintext"|less; }
+#================================================
+
+export DEBEMAIL="chilicuil@users.sourceforge.net"
+export DEBFULLNAME="chilicuil"
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17/bin:/opt/e17-ecomorph/bin:/usr/local/bin/bin/
+
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+export HISTCONTROL=ignoreboth
+export HISTFILESIZE=10000
+#export HISTTIMEFORMAT="%s "
+
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"\
+'echo $USER \ "$(history 1)" >> ~/.bash_eternal_history'
+
+# ==========================COLORS==========================
+export BLACK=$'\E[0;30m'
+export BLUE=$'\E[0;34m'
+export BROWN=$'\E[0;33m'
+export CYAN=$'\E[0;36m'
+export DARK_GREY=$'\E[1;30m'
+export DEFAULT=$'\E[0m'
+export GREEN=$'\E[0;32m'
+export LIGHT_BLUE=$'\E[1;34m'
+export LIGHT_CYAN=$'\E[1;36m'
+export LIGHT_GREEN=$'\E[1;32m'
+export LIGHT_GREY=$'\E[0;37m'
+export LIGHT_PURPLE=$'\E[1;35m'
+export LIGHT_RED=$'\E[1;31m'
+export PURPLE=$'\E[1;35m'
+export RED=$'\E[0;31m'
+export WHITE=$'\E[1;37m'
+export YELLOW=$'\E[0;33m'
+
+#mint-fortune
