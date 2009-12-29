@@ -13,3 +13,4 @@ manpageview.vba: call delete('/home/chilicuil/.vim/plugin/manpageviewPlugin.vim'
 checksyntax.vba: call delete('/home/chilicuil/.vim/doc/checksyntax.txt')|call delete('/home/chilicuil/.vim/plugin/checksyntax.vim')
 DrawIt.vba: call delete('/home/chilicuil/.vim/plugin/DrawItPlugin.vim')|call delete('/home/chilicuil/.vim/plugin/cecutil.vim')|call delete('/home/chilicuil/.vim/autoload/DrawIt.vim')|call delete('/home/chilicuil/.vim/doc/DrawIt.txt')
 DrawIt.vba: call delete('/home/chilicuil/.vim/plugin/DrawItPlugin.vim')|call delete('/home/chilicuil/.vim/plugin/cecutil.vim')|call delete('/home/chilicuil/.vim/autoload/DrawIt.vim')|call delete('/home/chilicuil/.vim/doc/DrawIt.txt')
+getscript.vba: call delete('/home/chilicuil/.vim/plugin/getscriptPlugin.vim')|call delete('/home/chilicuil/.vim/autoload/getscript.vim')|call delete('/home/chilicuil/.vim/GetLatest/GetLatestVimScripts.dist')|call delete('/home/chilicuil/.vim/doc/pi_getscript.txt')

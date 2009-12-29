@@ -139,7 +139,7 @@ function! Google_for_snippet()
 endfunction
 
 function! Nerd_tree() "need it to force close it, when changing between my
-    "custom modes (dev, spell, def)
+                      "custom modes (dev, spell, def)
     if exists ("s:nerd_tree")
         NERDTreeClose
         wincmd p      "forces to return the focus to the window who call it
@@ -161,17 +161,23 @@ function! Tag_list()
     endif
 endfunction
 
-"TODO 17-11-2009 13:11 => Make it support other VCS
-"I dont remember where I found this function
-function! GitInfo()
+"TODO 17-11-2009 13:11 => Add support to other VCS, current: git, svn
+"I dont remember where I found this function originality
+function! VCSInfo()
     let g:vcs_cache = {}
     let l:path = getcwd()
     if ! has_key(g:vcs_cache, l:path)
         if (isdirectory(l:path . "/.git"))
-            let g:vcs_cache[l:path] = "[git:"
+            let g:vcs_cache[l:path] = "["
                         \. substitute(readfile(l:path
                         \. "/.git/HEAD", "", 1)[0],
-                        \ "^.*/", "", "") . "] "
+                        \ "^.*/", "", "") . "]"
+        elseif (isdirectory(l:path . "/.svn"))
+            let l:vcs_status = readfile(l:path . "/.svn/entries", "", 5)
+            let g:vcs_cache[l:path] = "["
+                        \. substitute(l:vcs_status[4], "^.*/", "", "")
+                        \. ":r" . l:vcs_status[3]
+                        \. "]"
         else
             let g:vcs_cache[l:path] = ""
         endif
@@ -221,12 +227,6 @@ function! Trailer()
     endif
 endfunction
 
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
-
 " From an idea by Michael Naumann
 " http://amix.dk/blog/viewEntry/19334
 function! VisualSearch(direction) range
@@ -238,8 +238,7 @@ function! VisualSearch(direction) range
 
     if a:direction == 'b'
         execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+
     elseif a:direction == 'f'
         execute "normal /" . l:pattern . "^M"
     endif
@@ -257,8 +256,6 @@ function! SetProperties(_language)
 
         "r'un
         map <Leader>mr :!./%:r<CR>
-        "c'ompile
-        map <Leader>mc :w<CR>:make<CR>
         "compile & run (make a'll)
         map <Leader>ma :w<CR>:make && ./%:r<CR>
         "TODO 17-11-2009 13:11 => debug shortcut
@@ -269,8 +266,6 @@ function! SetProperties(_language)
 
         "r'un
         map <Leader>mr :!java %:r<CR>
-        "c'ompile
-        map <Leader>mc  :w<CR>:make<CR>
         "compile & run (a'll)
         map <Leader>ma  :w<CR>:make && java %:r<CR>
         "debug without arguments
@@ -319,9 +314,20 @@ function! SetProperties(_language)
         set foldmethod =indent
         setlocal noexpandtab
 
+    elseif (a:_language == "bash")
+        set syntax  =sh
+        set makeprg =chmod\ +x\ %
+
+        "r'un
+        map <Leader>mr :!./%<CR>
+        "run with arguments
+        map <Leader>mra :!./%<SPACE>
+        "compile & run (a'll)
+        map <Leader>ma :w<CR>:make && ./%<CR>
     endif
 endfunction
 
+" Found in some dot.org file, rip
 function! Skel(_language)
     let l:skeleton_file = expand("~/.vim/skeletons/skeleton.". a:_language)
     if filereadable(l:skeleton_file)
@@ -575,9 +581,9 @@ set viminfo='1000,<1000,s100,h
 
 set laststatus=2                                         "always show statusline
 set statusline=
-set statusline+=%2*%-3.3n%0*\                            "buffer number
-set statusline+=%F\                                      "file name (full)
-set statusline+=%{GitInfo()}                             "branch info
+set statusline+=%2*%-2n                                  "buffer number
+set statusline+=%*\ %F\                                  "file name (full)
+set statusline+=%{VCSInfo()}                             "branch info
 set statusline+=%h%1*%m%r%w%0*                           "flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'},             "filetype
 set statusline+=%{&encoding},                            "encoding
@@ -690,6 +696,7 @@ autocmd BufNewFile,BufEnter *.c,*.h              call SetProperties("c")
 autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml  call SetProperties("perl")
 autocmd BufNewFile,BufEnter *[mM]akefile,*.mk    call SetProperties("make")
 autocmd BufNewFile,BufEnter *.java               call SetProperties("java")
+autocmd BufNewFile,BufEnter *.sh,*.bash          call SetProperties("bash")
 
 "Skeletons :
 autocmd BufNewFile *.rb,*.ruby,*.eruby           call Skel("ruby")
@@ -724,7 +731,6 @@ inoremap <c-h> <Esc><c-w>h
 " VIM-Shell
 " Ctrl_W e opens up a vimshell in a horizontally split window
 " Ctrl_W E opens up a vimshell in a vertically split window
-" The shell window will be auto closed after termination
 nmap <C-W>e :new \| vimshell bash<CR>
 nmap <C-W>E :vnew \| vimshell bash<CR>
 
@@ -741,8 +747,8 @@ map <c-p> :tabp <CR>
 
 map <c-e> :tabclose <CR>
 
-map <c-c> :w<CR>:make<CR>
-map! <c-c> <esc>:w<CR>:make<CR>
+"c'ompile
+map <Leader>mc  :make <CR> 
 
 "for some unknown reason if I set this. it executes :confirm qall when
 " I write '*/' on --insert-- mode where '*' is a wildcard
@@ -755,7 +761,7 @@ map <c-x> :confirm qall<CR>
 let mapleader = ","
 
 "matrix screensaver, matrix.vim plugin
-map <Leader>m :Matrix<CR>
+map <Leader>M :Matrix<CR>
 
 "online doc search
 map <silent> <Leader>g :call Google_for_snippet()<CR>
@@ -827,11 +833,10 @@ nmap <Leader>fd :scs find d <C-R>=expand("<cword>")<CR><CR>
 
 nnoremap <silent><Leader>g :call FindInNERDTree()<CR>
 
-"=== Tab Mappings===
+"=== Tab Mappings ===
 map <Tab>c :cc<CR>
 map <Tab>n :cnext<CR>
 map <Tab>p :cprevious<CR>
-
 
 "=== Misc Mappings===
 map ; :
@@ -877,10 +882,13 @@ cabbr Wq wq
 
 noremap <HOME> ^
 noremap <END> $
+
 "this will work only on the gui version, most terminal are unable to
-"determinate the difference between <home> and <m-home>
+"determinate the difference between <home> and <m-home>, thanks to scroolose 
+"for the tip
 noremap <M-HOME> gg
 noremap <M-END> G
+
 "move between buffers
 map <Tab><Space> :bnext <CR>
 

@@ -16,7 +16,7 @@ snippet header
 	#       CREATED:  `strftime("%d-%m-%Y %H:%M")` 
 	#      REVISION:  ${8:---}
 	#============================================================================
-	${11}
+	${9}
 snippet legal
 	#==========================================================================
 	#  This program is free software; you can redistribute it and/or modify 
@@ -26,7 +26,7 @@ snippet legal
 	#==========================================================================
 	${1}
 snippet #!
-	#!/bin/bash
+	#!/usr/bin/env bash
 	
 snippet if
 	if [[ ${1:condition} ]]; then
@@ -52,3 +52,42 @@ snippet case
 		${2:pattern})
 			${3};;
 	esac
+snippet echo #normal
+	echo -e "${1:String}"${2}
+snippet echo #confirm
+	echo -e "$LIGHT_RED[*]$DEFAULT ${1:command}"${2}
+snippet fun
+	${1:function} (${2})
+	{
+	    ${3}
+	}
+snippet usage
+	VERSION="${1:0.0.1}"
+	
+	usage()
+	{
+	  echo -e "${2:$ 0}: ${3:General usage description}"
+	  echo -e "  -h  or --help     List available arguments and usage (this message)."
+	  echo -e "  -v  or --version  Print version."
+	  ${4}
+	}
+snippet options
+	if [ $# != 0 ]; then
+	  case ${1:$ 1} in
+	    -h | --help)
+	      usage
+	      exit 0
+	      ;;
+	    -v | --version)
+	      echo $VERSION
+	      exit 0
+	      ;;
+	   ${2:option})
+	      ${3}
+	    *)
+	      echo -e "Error, unknown option: \"$1\""
+	      usage
+	      exit 1
+	      ;;
+	  esac
+	fi

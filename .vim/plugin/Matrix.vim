@@ -141,6 +141,7 @@ function! s:Reset()
    let b:w = winwidth(0)
    let b:h = winheight(0)
    exec 'norm! gg"_dG' . b:h . 'O' . nr2char(27) . 'gg'
+   "clean the whole screen
    redraw
    if b:w < 10 || b:h < 8
       let b:run = 0
@@ -179,7 +180,7 @@ function! s:Init()
    " existing buffers without switching to a new buffer preserves
    " undo history.
    exec 'mksession! ' . s:session_file
-   let s:num_orig_win = winnr("$")
+   let s:num_orig_win = winnr("$") "total windows
 
    " move to top window, so created window will become window 1,
    " then attempt to create new window
@@ -190,7 +191,7 @@ function! s:Init()
    if winnr("$") != s:num_orig_win + 1
       return 1
    endif
-   let s:newbuf = bufnr('%')
+   let s:newbuf = bufnr('%') "current buffer
 
    " close all but window 1, which is the new window
    only
@@ -203,7 +204,7 @@ function! s:Init()
       let s:o_go = &go
       set gcr=a:ver1-blinkon0 go=
    endif
-   if has('cmdline_info')
+   if has('cmdline_info') "save before change the settings
       let s:o_ru = &ru
       let s:o_sc = &sc
       set noru nosc
@@ -226,7 +227,7 @@ function! s:Init()
    let s:o_smd = &smd
    let s:o_so = &so
    let s:o_ve = &ve
-   set ch=1 ls=0 lz nosm nosmd siso=0 so=0 ve=all
+   set ch=1 ls=0 lz nosm nosmd siso=0 so=0 ve=all "make an unwritable buffer
 
    " Initialize PRNG
    let b:seed = localtime()
