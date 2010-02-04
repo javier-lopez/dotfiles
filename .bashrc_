@@ -1,48 +1,103 @@
+#################################################################
+#Add this to enable this custom settings to .profile or .bashrc #
+#                     source ~/.bashrc_                         #
+#################################################################
+
 #===Custom Alias===
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
 alias .bashrc='vim ~/.bashrc'
 alias .bashrc_='vim ~/.bashrc_'
 alias c='cd'
 alias cc='LANGUAGE=en cc'
+alias ..='cd ..'
 alias cd..='cd ..'
-alias dmesg-tail='dmesg|tail'
+alias dev='vim -c DevMode'
+alias dir='ls -d */'
+alias dmesg.tail='dmesg|tail -f'
+alias framework='cd ~/code/framework-trunk/'
 alias gcc='LANGUAGE=en gcc'
+alias install='sudo apt-get install'
+alias JDownloader='java -jar /home/chilicuil/code/JDownloader/JDownloader.jar'
+alias jdownloader='JDownloader'
+alias kcore='sudo cat /proc/kcore | strings | less'
 alias la='ls -A'
+alias la='ls -A'
+alias learn.autocp='cd ~/code/learn/autocp/bash_completion.d/'
+alias learn.c='cd ~/code/learn/c/'
+alias learn.c++='cd ~/code/learn/c++/'
 alias learn='cd ~/code/learn/'
+alias learn.html='cd ~/code/learn/html/'
+alias learn.java='cd ~/code/learn/java/'
+alias learn.perl='cd ~/code/learn/perl/'
+alias learn.php='cd ~/code/learn/php/'
+alias learn.python='cd ~/code/learn/python/'
+alias learn.ruby='cd ~/code/learn/ruby/'
+alias learn.sh='cd ~/code/learn/sh/'
 alias ll='ls -l'
 alias l='ls -CF'
 alias ls='ls --color=auto'
+alias lss='ls'
 alias make='LANGUAGE=en make'
+alias match='join'
+alias mkdir='mkdir -vp'
 alias mutt='LANGUAGE=en mutt'
 alias plugin='cd ~/.vim/plugin/'
+alias purge='sudo apt-get purge'
 alias s='ls -CF'
 alias so='source ~/.bashrc'
+alias st='setup'
 alias todo='todo -d ~/.todo/todo.cfg'
+alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
+alias lh='ls -lah'
 alias t='todo'
-alias dev='vim -c DevMode'
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
 alias vd='vim -c DevMode'
 alias vimdev='vim -c DevMode'
 alias vrc='vim ~/.vimrc'
 alias v='vim'
 alias wifi='iwlist eth1 s'
 alias zz='exit'
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get upgrade'
-alias install='sudo apt-get install'
-alias purge='sudo apt-get purge'
-alias tree='tree -C|less -R'
-alias tree_aC='tree -aC|less -R'
-alias kcore='sudo cat /proc/kcore | strings | less'
-alias dir='ls -d */'
 #================================================
 
 #==Custom functions==
 #search(){ curl "http://www.commandlinefu.com/commands/matching/$@/\
                 #$(echo -n $@ | openssl base64)/plaintext"|less; }
+
+#chunks from the debian/ubuntu bash configuration
+force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]$(date +\%R) \[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}$(date +\%R) \u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
 #================================================
 
+#===Custom Vars===
 export DEBEMAIL="chilicuil@users.sourceforge.net"
 export DEBFULLNAME="chilicuil"
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -56,13 +111,8 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
 
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=ignoreboth
-export HISTFILESIZE=10000
 #export HISTTIMEFORMAT="%s "
 
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"\
-'echo $USER \ "$(history 1)" >> ~/.bash_eternal_history'
-
-# ==========================COLORS==========================
 export BLACK=$'\E[0;30m'
 export BLUE=$'\E[0;34m'
 export BROWN=$'\E[0;33m'
@@ -81,4 +131,10 @@ export RED=$'\E[0;31m'
 export WHITE=$'\E[1;37m'
 export YELLOW=$'\E[0;33m'
 
+#====Misc settings=====
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"\
+'echo $USER \ \ \ \ \ "$(history 1)" >> ~/.bash_eternal_history'
+set match-hidden-files off
+#"\e[A": history-search-backward
+#"\e[B": history-search-forward
 #mint-fortune

@@ -55,7 +55,7 @@ snippet case
 snippet echo #normal
 	echo -e "${1:String}"${2}
 snippet echo #confirm
-	echo -e "$LIGHT_RED[*]$DEFAULT ${1:command}"${2}
+	echo -ne "$LIGHT_RED[*]$DEFAULT ${1:command}"${2}
 snippet fun
 	${1:function} (${2})
 	{

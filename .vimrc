@@ -162,7 +162,6 @@ function! Tag_list()
 endfunction
 
 "TODO 17-11-2009 13:11 => Add support to other VCS, current: git, svn
-"I dont remember where I found this function originality
 function! VCSInfo()
     let g:vcs_cache = {}
     let l:path = getcwd()
@@ -185,7 +184,6 @@ function! VCSInfo()
     return g:vcs_cache[l:path]
 endfunction
 
-"neither this one
 function! <SID>FixMiniBufExplorerTitle()
     if "-MiniBufExplorer-" == bufname("%")
         setlocal statusline=%2*%-3.3n%0*
@@ -216,10 +214,10 @@ function! Trailer()
         unlet s:trailer
     else
         if has("gui_running")
-            set list listchars=tab:»·,trail:·,extends:…,nbsp:‗
+            set list listchars=tab:▷⋅,trail:·,extends:…,nbsp:‗
         else
             " xterm + terminus hates these
-            set list listchars=tab:»·,trail:·,extends:>,nbsp:_
+            set list listchars=tab:▷⋅,trail:·,extends:>,nbsp:_
         endif
         set fillchars=fold:-
         echo "[Trailer on]"
@@ -327,7 +325,7 @@ function! SetProperties(_language)
     endif
 endfunction
 
-" Found in some dot.org file, rip
+" Found in a dot.org file, rip
 function! Skel(_language)
     let l:skeleton_file = expand("~/.vim/skeletons/skeleton.". a:_language)
     if filereadable(l:skeleton_file)
@@ -624,11 +622,12 @@ setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 "===============================================================================
 
 "autocomplpop.vim plugin
-let g:acp_behaviorKeywordLength  = 4
-let g:acp_mappingDriven          = 1
-let g:acp_completeOption         = '.,w,b,t,k,i,d'
-let g:acp_completeoptPreview     = 1
-let g:acp_behaviorSnipmateLength = 2
+let g:acp_behaviorKeywordLength    = 4
+let g:acp_mappingDriven            = 1
+let g:acp_completeOption           = '.,w,b,t,k,i,d'
+let g:acp_completeoptPreview       = 1
+let g:acp_behaviorSnipmateLength   = 2
+let g:acp_behaviorPythonOmniLength = -1
 
 "pastebin plugin (modified)
 let g:pasteBinURI = 'http://chilicuil.pastebin.com/'

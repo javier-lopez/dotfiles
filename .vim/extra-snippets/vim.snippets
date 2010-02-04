@@ -9,7 +9,7 @@ snippet guard
 	endif
 	let $1 = 1${3}
 snippet fun
-	fun ${1:function_name}(${2})
+	function! ${1:function_name}(${2})
 		${3:" code}
 	endf
 snippet for
@@ -30,3 +30,5 @@ snippet ifelse
 	else
 		${3}
 	endif
+snippet let
+	let ${1:variable} = ${2:value}
