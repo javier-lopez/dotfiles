@@ -29,7 +29,7 @@ endfunction
 
 function! l:getCS() "getColorSheme
     "this search in the color directories for *.vim files and add them to
-    "colorSchemesDetected 
+    "colorSchemesDetected
     "let g:colorSchemesDetected = map(split(globpath(&runtimepath, "colors/*.vim", "\n")), 'fnamemodify(v:val, ":t:r")')
     let g:colorSchemesDetected = map(split(globpath(&runtimepath, "colors/*.vim")), 'fnamemodify(v:val, ":t:r")')
 

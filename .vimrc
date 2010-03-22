@@ -5,7 +5,7 @@
 "Plugins used:
 "
 " [*]matchit.vim [*]crefvim.vim NERD_tree.vim [+]snipMate.vim, breakpts.vim
-" [+]taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [+]paster.vim autoclose.vim
+" [+]taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [+]pastebin.vim autoclose.vim
 " [+]browser.vim dbext.vim LargeFile.vim [*]manpageviewPlugin.vim [+]Matrix.vim
 " [+]nextCS.vim [+]tetris.vim vcscommand.vim [+]VimRegEx.vim vsutil.vim qbuf.vim
 " surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim [+]php-doc.vim
@@ -32,7 +32,7 @@ let loaded_breakpts          = 1
 "let loaded_taglist_mod      = 1
 "let loaded_debugger         = 1
 "let loaded_acp              = 1
-"let loader_paster           = 1
+"let loader_pastebin         = 1
 let loaded_AutoClose         = 1
 "let loaded_browser          = 1
 "let loaded_dbext            = 1
@@ -198,7 +198,7 @@ function! FileSize()
     if bytes <= 0
         return ""
     elseif bytes < 1024
-        return bytes
+        return bytes . "b"
     elseif bytes < 1048576
         return(bytes / 1024) . "Kb"
     else
@@ -303,8 +303,9 @@ function! SetProperties(_language)
         let perl_want_scope_in_variables = 1
 
     elseif (a:_language == "python")
-        set syntax     =python
-        set foldmethod =indent
+        set filetype=python
+        set syntax=python
+        set foldmethod=indent
         setlocal noexpandtab
 
     elseif (a:_language == "make")
@@ -368,7 +369,7 @@ endfunction
 function! Word_mode_on()
     set linebreak
     set nonumber
-    set textwidth=84
+    set textwidth=76
     call Spell("en_us")
 
     noremap <F3> :call Spell("es_mx")<CR>
@@ -514,7 +515,7 @@ set nocompatible       "breaks compatibility with vi, it must be enable at the
 "start to not overwrite other flags
 syntax on
 set noexrc             "don't use local version of .(g)vimrc, .exrc
-set mouse=nv           "set the mouse to work in console mode
+"set mouse=nv           "set the mouse to work in console mode
 set mousehide          "hide the mouse while typying
 set lazyredraw         "do not redraw the screen while macros are running. It
 "improves performance
@@ -630,11 +631,11 @@ let g:acp_behaviorSnipmateLength   = 2
 let g:acp_behaviorPythonOmniLength = -1
 
 "pastebin plugin (modified)
-let g:pasteBinURI = 'http://chilicuil.pastebin.com/'
+"let g:pasteBinURI = 'chilicuil' "Actually now it's a subdomain
 let g:nickID      = 'chilicuil'
 
-"d for day, m for month, and f for forever
-"let g:timePasted = 'f'
+"10M for 10 min, 1H for an hour, 1D for a day, 1M for a month, and N for forever
+"let g:timePasted = 'N'
 
 "enable autoinstall of scripts w/o markup see :help GLVS
 let g:GetLatestVimScripts_allowautoinstall=1

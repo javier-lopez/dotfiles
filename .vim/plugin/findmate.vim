@@ -162,7 +162,7 @@ function! FindMate(name)
         endif
         call s:FindMate_show(l:list)
         return
-    else 
+    else
         let l:list = s:FindMate_find(_name)
         if (l:list[1] == -1)
             if g:FindMate_verbose

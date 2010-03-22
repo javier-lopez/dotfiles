@@ -53,17 +53,21 @@
 if exists('loaded_breakpts')
   finish
 endif
+
 if v:version < 701
   echomsg 'breakpts: You need at least Vim 7.1'
   finish
 endif
+
 if !exists('loaded_genutils')
   runtime plugin/genutils.vim
 endif
+
 if !exists('loaded_genutils') || loaded_genutils < 204
   echomsg 'breakpts: You need a newer version of genutils.vim plugin'
   finish
 endif
+
 let loaded_breakpts = 400
 
 " No error if not found.
