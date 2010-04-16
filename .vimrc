@@ -507,6 +507,12 @@ else
     colorscheme ir_black   "my favorite theme, it's a customized version
     "http://blog.infinitered.com/entries/show/6
     "http://pastebin.com/ff366c16
+    if &term == "linux"
+        let g:CSApprox_loaded = 1
+        if &lines > 47
+            set lines=47
+        endif
+    endif
 endif
 
 "disable features due to security concerns
@@ -688,28 +694,30 @@ endif
 
 "Language specific settings
 "TODO 17-11-2009 13:12 => Add languages
-autocmd BufNewFile,BufEnter *.php,*.php3,*.php4  call SetProperties("php")
-autocmd BufNewFile,BufEnter *.php5,*html,*.inc   call SetProperties("php")
-autocmd BufNewFile,BufEnter *schema,*.engine     call SetProperties("php")
-autocmd BufNewFile,BufEnter *.ctp,*.thtml        call SetProperties("php")
-autocmd BufNewFile,BufEnter *.c,*.h              call SetProperties("c")
-autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml  call SetProperties("perl")
-autocmd BufNewFile,BufEnter *[mM]akefile,*.mk    call SetProperties("make")
-autocmd BufNewFile,BufEnter *.java               call SetProperties("java")
-autocmd BufNewFile,BufEnter *.sh,*.bash          call SetProperties("bash")
+if has("autocmd")
+    autocmd BufNewFile,BufEnter *.php,*.php3,*.php4  call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.php5,*html,*.inc   call SetProperties("php")
+    autocmd BufNewFile,BufEnter *schema,*.engine     call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.ctp,*.thtml        call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.c,*.h              call SetProperties("c")
+    autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml  call SetProperties("perl")
+    autocmd BufNewFile,BufEnter *[mM]akefile,*.mk    call SetProperties("make")
+    autocmd BufNewFile,BufEnter *.java               call SetProperties("java")
+    autocmd BufNewFile,BufEnter *.sh,*.bash          call SetProperties("bash")
 
-"Skeletons :
-autocmd BufNewFile *.rb,*.ruby,*.eruby           call Skel("ruby")
-autocmd BufNewFile *.sh,*.bash                   call Skel("bash")
-autocmd BufNewFile *.tex                         call Skel("tex")
-autocmd BufNewFile *.py,*.python                 call Skel("python")
-autocmd BufNewFile *.html                        call Skel("html")
-autocmd BufNewFile *.pl,*.perl                   call Skel("perl")
-autocmd BufNewFile *.php,*.php3,*.php4,*.php5    call Skel("php")
-autocmd BufNewFile *schema,*.inc,*.engine,*.ctp  call Skel("php")
+    "Skeletons :
+    autocmd BufNewFile *.rb,*.ruby,*.eruby           call Skel("ruby")
+    autocmd BufNewFile *.sh,*.bash                   call Skel("bash")
+    autocmd BufNewFile *.tex                         call Skel("tex")
+    autocmd BufNewFile *.py,*.python                 call Skel("python")
+    autocmd BufNewFile *.html                        call Skel("html")
+    autocmd BufNewFile *.pl,*.perl                   call Skel("perl")
+    autocmd BufNewFile *.php,*.php3,*.php4,*.php5    call Skel("php")
+    autocmd BufNewFile *schema,*.inc,*.engine,*.ctp  call Skel("php")
 
-" turn off any existing search
-autocmd VimEnter * nohls
+    " turn off any existing search
+    autocmd VimEnter * nohls
+endif
 "===============================================================================
 "================================== Mappings ===================================
 "===============================================================================
