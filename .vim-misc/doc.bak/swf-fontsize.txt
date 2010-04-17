@@ -1,8 +1,0 @@
-swf_fontsize -- Change the font size
-
-  void swf_fontsize(float size)~
-
-The |swf_fontsize| function changes the font size to the value given by the
-{size} parameter.
-
-vim:ft=help:

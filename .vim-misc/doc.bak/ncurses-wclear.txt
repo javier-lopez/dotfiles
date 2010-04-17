@@ -1,8 +1,0 @@
-ncurses_wclear -- Clears window
-
-  int ncurses_wclear(resource window)~
-
-This function is currently not documented; only the argument list is
-available.
-
-vim:ft=help:

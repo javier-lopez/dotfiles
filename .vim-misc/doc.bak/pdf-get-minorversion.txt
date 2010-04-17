@@ -1,9 +1,0 @@
-pdf_get_minorversion -- Returns the minor version number of the PDFlib
-
-  int pdf_get_minorversion()~
-
-Returns the minor version number of the PDFlib.
-
-See also |pdf_get_majorversion|.
-
-vim:ft=help:

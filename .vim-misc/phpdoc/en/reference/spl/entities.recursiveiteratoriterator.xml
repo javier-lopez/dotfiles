@@ -1,7 +1,0 @@
-&reference.spl.recursiveiteratoriterator.current;
-&reference.spl.recursiveiteratoriterator.getdepth;
-&reference.spl.recursiveiteratoriterator.getsubiterator;
-&reference.spl.recursiveiteratoriterator.key;
-&reference.spl.recursiveiteratoriterator.next;
-&reference.spl.recursiveiteratoriterator.rewind;
-&reference.spl.recursiveiteratoriterator.valid;

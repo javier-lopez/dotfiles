@@ -1,7 +1,0 @@
-&reference.spl.simplexmliterator.current;
-&reference.spl.simplexmliterator.getchildren;
-&reference.spl.simplexmliterator.haschildren;
-&reference.spl.simplexmliterator.key;
-&reference.spl.simplexmliterator.next;
-&reference.spl.simplexmliterator.rewind;
-&reference.spl.simplexmliterator.valid;

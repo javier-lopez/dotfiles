@@ -1,622 +1,0 @@
-9
-
-dir
-288931
-http://svn.php.net/repository/phpdoc/en/trunk/reference
-http://svn.php.net/repository
-
-
-
-2009-09-29T05:51:35.357899Z
-288931
-torben
-has-props
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-c90b9560-bf6c-de11-be94-00142212c4b1
-
-objaggregation
-dir
-
-ncurses
-dir
-
-bc
-dir
-
-qtdom
-dir
-
-mcve
-dir
-
-xslt
-dir
-
-spl
-dir
-
-domxml
-dir
-
-iisfunc
-dir
-
-memcache
-dir
-
-xattr
-dir
-
-win32ps
-dir
-
-xmlrpc
-dir
-
-intl
-dir
-
-pdo_4d
-dir
-
-json
-dir
-
-classkit
-dir
-
-mailparse
-dir
-
-newt
-dir
-
-mysqli
-dir
-
-dom
-dir
-
-tcpwrap
-dir
-
-sam
-dir
-
-gnupg
-dir
-
-apache
-dir
-
-session
-dir
-
-openssl
-dir
-
-gettext
-dir
-
-exec
-dir
-
-spplus
-dir
-
-net_gopher
-dir
-
-misc
-dir
-
-dotnet
-dir
-
-fdf
-dir
-
-haru
-dir
-
-mhash
-dir
-
-classobj
-dir
-
-filepro
-dir
-
-sqlite
-dir
-
-pdo_sqlite
-dir
-
-cyrus
-dir
-
-outcontrol
-dir
-
-mcrypt
-dir
-
-iconv
-dir
-
-http
-dir
-
-pcntl
-dir
-
-ldap
-dir
-
-rpmreader
-dir
-
-spl_types
-dir
-
-inclued
-dir
-
-hash
-dir
-
-win32service
-dir
-
-htscanner
-dir
-
-ingres-ii
-dir
-
-ifx
-dir
-
-sybase
-dir
-
-unicode
-dir
-
-vpopmail
-dir
-
-expect
-dir
-
-network
-dir
-
-math
-dir
-
-ftp
-dir
-
-gupnp
-dir
-
-info
-dir
-
-sdo_das_xml
-dir
-
-kadm5
-dir
-
-geoip
-dir
-
-curl
-dir
-
-sca
-dir
-
-regex
-dir
-
-dio
-dir
-
-dbase
-dir
-
-dir
-dir
-
-openal
-dir
-
-ssh2
-dir
-
-java
-dir
-
-filesystem
-dir
-
-ctype
-dir
-
-imap
-dir
-
-dba
-dir
-
-pdo_pgsql
-dir
-
-notes
-dir
-
-maxdb
-dir
-
-uodbc
-dir
-
-apc
-dir
-
-imagick
-dir
-
-apd
-dir
-
-sphinx
-dir
-
-nsapi
-dir
-
-overload
-dir
-
-runkit
-dir
-
-msql
-dir
-
-dbx
-dir
-
-inotify
-dir
-
-image
-dir
-
-sdo
-dir
-
-funchand
-dir
-
-mqseries
-dir
-
-strings
-dir
-
-session_pgsql
-dir
-
-ming
-dir
-
-stream
-dir
-
-lzf
-dir
-
-ovrimos
-dir
-
-zlib
-dir
-
-xdiff
-dir
-
-recode
-dir
-
-mnogosearch
-dir
-
-fribidi
-dir
-
-libevent
-dir
-
-pdo_oci
-dir
-
-pdo_dblib
-dir
-
-mongo
-dir
-
-parsekit
-dir
-
-printer
-dir
-
-gmp
-dir
-
-sqlite3
-dir
-
-sem
-dir
-
-pgsql
-dir
-
-radius
-dir
-
-dbplus
-dir
-
-pcre
-dir
-
-exif
-dir
-
-xmlwriter
-dir
-
-pdo_informix
-dir
-
-mssql
-dir
-
-soap
-dir
-
-posix
-dir
-
-yaz
-dir
-
-errorfunc
-dir
-
-xsl
-dir
-
-pdo_mysql
-dir
-
-fbsql
-dir
-
-pdf
-dir
-
-bcompiler
-dir
-
-id3
-dir
-
-oauth
-dir
-
-sdodasrel
-dir
-
-pdo
-dir
-
-shmop
-dir
-
-pdo_firebird
-dir
-
-phar
-dir
-
-paradox
-dir
-
-pspell
-dir
-
-oggvorbis
-dir
-
-url
-dir
-
-fam
-dir
-
-memcached
-dir
-
-svn
-dir
-
-wddx
-dir
-
-tokenizer
-dir
-
-ktaglib
-dir
-
-com
-dir
-
-hw
-dir
-
-i18n
-dir
-
-enchant
-dir
-
-mail
-dir
-
-ps
-dir
-
-crack
-dir
-
-ibase
-dir
-
-readline
-dir
-
-xmlreader
-dir
-
-rar
-dir
-
-mbstring
-dir
-
-filter
-dir
-
-bzip2
-dir
-
-mime_magic
-dir
-
-libxml
-dir
-
-var
-dir
-
-nis
-dir
-
-reflection
-dir
-
-fileinfo
-dir
-
-datetime
-dir
-
-swish
-dir
-
-ibm_db2
-dir
-
-stats
-dir
-
-swf
-dir
-
-msession
-dir
-
-xml
-dir
-
-oci8
-dir
-
-gmagick
-dir
-
-zip
-dir
-
-memtrack
-dir
-
-mysql
-dir
-
-w32api
-dir
-
-tokyo_tyrant
-dir
-
-hwapi
-dir
-
-pdo_ibm
-dir
-
-calendar
-dir
-
-pdo_odbc
-dir
-
-tidy
-dir
-
-idn
-dir
-
-scream
-dir
-
-simplexml
-dir
-
-sockets
-dir
-
-snmp
-dir
-
-array
-dir
-
-bbcode
-dir
-

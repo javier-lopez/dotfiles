@@ -1,7 +1,0 @@
-K 13
-svn:externals
-V 110
-doc-base http://svn.php.net/repository/phpdoc/doc-base/trunk
-en http://svn.php.net/repository/phpdoc/en/trunk
-
-END

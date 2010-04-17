@@ -1,9 +1,0 @@
-tanh -- Hyperbolic tangent
-
-  float tanh(float arg)~
-
-Returns the hyperbolic tangent of {arg}, defined as sinh(arg)/cosh(arg).
-
-See also: |tan|, |atanh|, |sin|, and |cos|.
-
-vim:ft=help:

@@ -1,7 +1,0 @@
-dns_get_mx -- Synonym for getmxrr
-
-  bool dns_get_mx(string hostname, array mxhosts [, array weight])~
-
-Get MX records corresponding to a given Internet host name.
-
-vim:ft=help:

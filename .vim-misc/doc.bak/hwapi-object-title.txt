@@ -1,5 +1,0 @@
-hw_api_object->title -- Returns the title attribute
-
-  string hw_api_object->title(array parameter)~
-
-vim:ft=help:

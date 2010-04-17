@@ -1,5 +1,0 @@
-pdf_setpolydash -- Deprecated: Sets complicated dash pattern
-
-This function is deprecated, use |pdf_setdash| instead.
-
-vim:ft=help:

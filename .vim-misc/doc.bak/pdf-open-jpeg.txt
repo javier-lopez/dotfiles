@@ -1,5 +1,0 @@
-pdf_open_jpeg -- Deprecated: Opens a JPEG image
-
-This function is deprecated, use |pdf_open_image| instead.
-
-vim:ft=help:

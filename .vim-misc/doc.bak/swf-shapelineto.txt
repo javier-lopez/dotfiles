@@ -1,5 +1,0 @@
-swf_shapelineto -- Draw a line
-
-  void swf_shapelineto(float x, float y)~
-
-vim:ft=help:

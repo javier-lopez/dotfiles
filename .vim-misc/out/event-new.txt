@@ -1,7 +1,0 @@
-*event_new* -- Create new event
-
-  resource event_new()~
-
-Creates and returns new event resource.
-
-vim:ft=help:
