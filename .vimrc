@@ -250,7 +250,7 @@ function! SetProperties(_language)
 
     if (a:_language == "c")
         set syntax  =c
-        set makeprg =make\ %:r
+        set makeprg =LANGUAGE=en\ CFLAGS='-g\ -Wall'\ make\ %:r
 
         "r'un
         map <Leader>mr :!./%:r<CR>
@@ -714,6 +714,7 @@ if has("autocmd")
     autocmd BufNewFile *.pl,*.perl                   call Skel("perl")
     autocmd BufNewFile *.php,*.php3,*.php4,*.php5    call Skel("php")
     autocmd BufNewFile *schema,*.inc,*.engine,*.ctp  call Skel("php")
+    autocmd BufNewFile *.c                           call Skel("c")
 
     " turn off any existing search
     autocmd VimEnter * nohls
@@ -756,7 +757,7 @@ map <c-p> :tabp <CR>
 map <c-e> :tabclose <CR>
 
 "c'ompile
-map <Leader>mc  :make <CR> 
+map <Leader>mm  :make<CR> 
 
 "for some unknown reason if I set this. it executes :confirm qall when
 " I write '*/' on --insert-- mode where '*' is a wildcard

@@ -1,0 +1,10 @@
+[user]
+    name = chilicuil
+    email = chilicuil@users.sourceforge.net
+
+[alias]
+    ci = commit -am
+    cm = commit -am
+    co = checkout
+    st = status -a
+    praise = blame
