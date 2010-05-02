@@ -3,6 +3,7 @@
 alias .bashrc='vim ~/.bashrc'
 alias c='cd'
 alias cc='LANGUAGE=en cc'
+alias p='ping'
 alias ..='cd ..'
 alias cd..='cd ..'
 alias dev='vim -c DevMode'
