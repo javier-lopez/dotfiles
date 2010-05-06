@@ -3,8 +3,16 @@
     email = chilicuil@users.sourceforge.net
 
 [alias]
-    ci = commit -am
-    cm = commit -am
+    ci = commit
     co = checkout
-    st = status -a
+    st = status
+    br = branch
+    unstage = reset HEAD --
+    last = log -1 HEAD
     praise = blame
+
+[core]
+    editor = vim
+
+[merge]
+    tool = vimdiff
