@@ -1,0 +1,10 @@
+#Ignore everything but the files I really wanna track
+*
+!.alias*
+!.bashrc
+!.gitconfig
+!.gitignore
+!.vim
+!.vimrc
+!.vimperator
+!.vimperatorrc*
