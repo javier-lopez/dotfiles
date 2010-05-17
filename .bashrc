@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-#           Last review            Fri 16 Apr 2010 04:45:33 AM CDT
+#           Last review            Sun 16 May 2010 11:23:56 PM CDT
 #-------------------------------------------------------------------------------
 
 #===============================================================================
@@ -11,6 +11,9 @@
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+
+# do not break long commands into several lines
+shopt -s cmdhist
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -40,17 +43,10 @@ fi
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"\
 'echo $USER \ \ \ \ \ "$(history 1)" >> ~/.bash_eternal_history'
 
-OS=$(uname)
-
 #===============================================================================
-#============================ Custom functions =================================
+#=============================== Custom vars  ==================================
 #===============================================================================
 
-
-
-#===============================================================================
-#=========================== Custom alias & vars================================
-#===============================================================================
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
 export LESS_TERMCAP_me=$'\E[0m'           # end mode
@@ -79,6 +75,12 @@ export RED=$'\E[0;31m'
 export WHITE=$'\E[1;37m'
 export YELLOW=$'\E[0;33m'
 
+#===============================================================================
+#=============================== Custom alias ==================================
+#===============================================================================
+
+OS=$(uname)
+
 case $OS in
     Linux)
         source ~/.alias.linux
@@ -86,4 +88,6 @@ case $OS in
     OpenBSD)
         source ~/.alias.openbsd
         ;;
+    #*)
+        #source ~/.alias.common
 esac

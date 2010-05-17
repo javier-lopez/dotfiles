@@ -2,6 +2,7 @@
 # ===alias===
 alias .bashrc='vim ~/.bashrc'
 alias c='cd'
+alias k='gls --color=always -CF'
 alias cc='LANGUAGE=en cc'
 alias p='ping'
 alias ..='cd ..'

@@ -14,7 +14,7 @@
 " [+]DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
 " cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
 " [+]FindInNERDTree.vim, Drawit.vim, [*]echofunc.vim, omnicppcomplete.vim
-" netrwPlugin.vim
+" netrwPlugin.vim, securemodelines.vim
 "
 "[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
 "[*] TODO 18-11-2009 21:19
@@ -244,6 +244,19 @@ function! VisualSearch(direction) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+" Append modeline after last line in buffer.
+" Use substitute() (not printf()) to handle '%%s' modeline in LaTeX files.
+" Taken from http://vim.wikia.com/wiki/Modeline_magic
+function! AppendModeline()
+  let save_cursor = getpos('.')
+  let append = ' vim: set ts='.&tabstop.' sw='.&shiftwidth.' tw='.&textwidth.' ft='.&filetype.' : '
+  $put =substitute(&commentstring, '%s', append, '')
+  call setpos('.', save_cursor)
+  redraw!
+  echo "Added modeline :)"
+endfunction
+
 
 "TODO 17-11-2009 13:11 => functions for  php, c, perl, python, etc
 function! SetProperties(_language)
@@ -529,7 +542,7 @@ set ttyfast            "indicates a fast terminal connection
 set history=1000       "record last 1000 commands, press 'q:' to see a new
 "window (normal mode) with the full history
 set t_Co=256           "set 256 colors. Make sure your console supports it.
-"gnome-terminal and konsole work well
+                       "gnome-terminal and konsole work well
 set report=0           "report any changes
 set tabpagemax=100     "max open tabs at the same time
 set autoread           "watch for file changes by other programs
@@ -645,6 +658,9 @@ let g:nickID      = 'chilicuil'
 
 "enable autoinstall of scripts w/o markup see :help GLVS
 let g:GetLatestVimScripts_allowautoinstall=1
+
+"enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
+"let g:secure_modelines_verbose=1
 
 "Snippet directories
 let g:snips_author      = "chilicuil"
@@ -831,6 +847,8 @@ nmap <Leader>fd :scs find d <C-R>=expand("<cword>")<CR><CR>
 
 "Select everything
 "noremap <Leader>gg ggVG
+
+nnoremap <silent><Leader>ml :call AppendModeline()<CR>
 
 "Opens in a quickfix window your TODO list
 "map <Leader>t

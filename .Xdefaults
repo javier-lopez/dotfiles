@@ -1,0 +1,91 @@
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+!
+! Last review            Mon 17 May 2010 02:10:31 AM CDT
+
+!====================================================
+!========================THEME=======================
+!====================================================
+!
+! Dark I
+!*background: rgb:00/00/00
+!*foreground: rgb:a8/a8/a8
+!*color0:     rgb:00/00/00
+!*color1:     rgb:a8/00/00
+!*color2:     rgb:00/a8/00
+!*color3:     rgb:a8/54/00
+!*color4:     rgb:00/00/a8
+!*color5:     rgb:a8/00/a8
+!*color6:     rgb:00/a8/a8
+!*color7:     rgb:a8/a8/a8
+!*color8:     rgb:54/50/54
+!*color9:     rgb:f8/54/50
+!*color10:    rgb:50/fc/50
+!*color11:    rgb:f8/fc/50
+!*color12:    rgb:50/54/f8
+!*color13:    rgb:f8/54/f8
+!*color14:    rgb:50/fc/f8
+!*color15:    rgb:f8/fc/f8
+
+! Dark II
+*background: rgb:00/00/00
+*foreground: rgb:cf/cf/cf
+*color0:     rgb:00/00/00
+*color1:     rgb:e0/10/10
+*color2:     rgb:20/ad/20
+*color3:     rgb:d4/c2/4f
+*color4:     rgb:23/1b/b8
+*color5:     rgb:9c/38/85
+*color6:     rgb:1d/bd/b8
+*color7:     rgb:fe/fe/fe
+*color8:     rgb:6a/6a/6a
+*color9:     rgb:e8/3a/3d
+*color10:    rgb:35/e9/56
+*color11:    rgb:ff/ff/2f
+*color12:    rgb:3a/53/f0
+*color13:    rgb:e6/28/ba
+*color14:    rgb:1c/f5/f5
+*color15:    rgb:ff/ff/ff
+
+!====================================================
+!========================URXVT=======================
+!====================================================
+!
+!We add 8 more bits to store the Alpha(transparency)
+!information.
+URxvt*depth: 32
+
+!Red/Blue/Green/Alpha.
+
+!To change the shading change the Alpha value in
+!background option. 0000 = full !transparent and
+!ffff = no transparency.
+URxvt*background: rgba:0000/0000/0000/dddd
+
+!urlLauncher settings
+URxvt*perl-lib:           /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:    default,matcher
+URxvt*urlLauncher:        /usr/bin/firefox
+URxvt*matcher.button:     1
+
+!URxvt*font:             xft:Bitstream Vera Sans Mono:pixelsize=9
+URxvt*boldFont:         xft:Bitstream Vera Sans Mono:pixelsize=9
+!URxvt*font:            xft:LucidaMacBold:pixelsize=7
+URxvt*italicFont:       xft:segoe ui:pixelsize=9
+URxvt*bolditalicFont:   xft:Bitstream Vera Sans Mono:pixelsize=9
+URxvt*scrollBar:        false
+URxvt*internalBorder:   3
+URxvt*saveLines:        10000
+!URxvt*fading: 25%
+!URxvt.scrollstyle:      plain
+URxvt*cursorBlink:       true
+
+URxvt.title:             buzz
+
+!boobs
+!URxvt.title:             ( . Y . )
+!listening music
+!URxvt.title:             d-_-b
+!boring
+!URxvt.title:             (¬_¬)
+!innocent face
+!URxvt.title:             ʘ‿ʘ
