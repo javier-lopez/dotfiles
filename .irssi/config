@@ -1,0 +1,8 @@
+settings = {
+  core = {
+    real_name = "chilicuil";
+    user_name = "chilicuil";
+    nick = "chilicuil";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+};

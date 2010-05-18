@@ -9,16 +9,13 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# append to the history file, don't overwrite it
-shopt -s histappend
+# http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
+shopt -s autocd cdspell checkhash checkwinsize cmdhist dirspell expand_aliases
+shopt -s histreedit mailwarn hostcomplete histappend
 
-# do not break long commands into several lines
-shopt -s cmdhist
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 set match-hidden-files off
+set bind-tty-special-chars on
+set completion-ignore-case on
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
