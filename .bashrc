@@ -10,8 +10,12 @@
 [ -z "$PS1" ] && return
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
-shopt -s autocd cdspell checkhash checkwinsize cmdhist dirspell expand_aliases
-shopt -s histreedit mailwarn hostcomplete histappend
+if [[ $BASH_VERSINFO -ge 4 ]]; then
+    shopt -s cdspell dirspell
+fi
+
+shopt -s autocd checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
+shopt -s hostcomplete histappend
 
 set match-hidden-files off
 set bind-tty-special-chars on
