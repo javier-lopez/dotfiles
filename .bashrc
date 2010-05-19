@@ -11,10 +11,10 @@
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 if [[ $BASH_VERSINFO -ge 4 ]]; then
-    shopt -s cdspell dirspell
+    shopt -s autocd cdspell dirspell
 fi
 
-shopt -s autocd checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
+shopt -s checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
 shopt -s hostcomplete histappend
 
 set match-hidden-files off
