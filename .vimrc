@@ -14,7 +14,7 @@
 " [+]DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
 " cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
 " [+]FindInNERDTree.vim, Drawit.vim, [*]echofunc.vim, omnicppcomplete.vim
-" netrwPlugin.vim, securemodelines.vim
+" netrwPlugin.vim, securemodelines.vim markdown.vim
 "
 "[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
 "[*] TODO 18-11-2009 21:19
@@ -32,7 +32,7 @@ let loaded_breakpts          = 1
 "let loaded_taglist_mod      = 1
 "let loaded_debugger         = 1
 "let loaded_acp              = 1
-"let loader_pastebin         = 1
+let loader_pastebin         = 1
 let loaded_AutoClose         = 1
 "let loaded_browser          = 1
 "let loaded_dbext            = 1

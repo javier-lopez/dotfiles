@@ -14,6 +14,11 @@ let s:debug = 1
 if s:debug == 0 && exists("g:loaded_AutoClose")
     finish "stop loading the script"
 endif
+
+if &cp || exists("g:loaded_AutoClose")
+    finish
+endif
+
 let g:loaded_AutoClose = 1
 
 let s:global_cpo = &cpo " store compatible-mode in local variable

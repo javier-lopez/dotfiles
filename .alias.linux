@@ -1,6 +1,7 @@
 # vim: tw=80 ft=sh
 # ===alias===
 alias autoremove='sudo apt-get autoremove'
+alias ubuntu='cd ~/misc/packages/ubuntu-10.04/'
 alias .bashrc='vim ~/.bashrc'
 alias c='cd'
 alias cc='LANGUAGE=en cc'
@@ -10,7 +11,7 @@ alias cp='cp -v'
 alias dev='vim -c DevMode'
 alias dir='ls -d */'
 alias dmesg.tail='dmesg|tail'
-alias .et='vim .bash_eternal_history'
+alias .et='vim ~/.bash_eternal_history'
 alias firefox='swiftfox'
 alias framework='cd ~/code/framework-trunk/'
 alias gcc='LANGUAGE=en gcc'
@@ -68,3 +69,5 @@ alias zz='exit'
 export DEBEMAIL="chilicuil@users.sourceforge.net"
 export DEBFULLNAME="chilicuil"
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17/bin:/opt/e17-ecomorph/bin:/usr/local/bin/bin/:/opt/bochs/bin/
+
+export QUILT_PATCHES=debian/patches
