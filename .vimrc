@@ -552,7 +552,7 @@ set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,
-            \*.swp,*.jpg,*.png,*.xpm,*.gif
+            \*.swp
 set hidden             "allow open other file without saving current file
 set autochdir          "change to the current directory
 set winminheight=1     "never let a window to be less than 1px height
@@ -797,6 +797,8 @@ map <silent> <Leader>v :call Trailer()<CR>
 "keyboard shortcuts to close/open the two main plugins
 map <silent> <Leader>n :call Nerd_tree()<CR>
 map <silent> <Leader>l :call Tag_list()<CR>
+
+map <silent> <Leader>m :set number!<CR>
 
 map <silent> <Leader>d :DevMode<CR>
 map <silent> <Leader>w :WordMode<CR>
