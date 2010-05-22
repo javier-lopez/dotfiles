@@ -105,8 +105,9 @@
 .mp3blaster
 .mplayer
 .msf*
-.mutt/
-.muttrc
+.mutt/accounts
+.mutt/cache/
+.mutt/certificates
 .mysql*
 .nautilus
 .ncmpcpp
@@ -149,7 +150,9 @@
 .silc
 .sjphone
 .skel
-.ssh
+.ssh/authorized_keys
+.ssh/id*
+.ssh/known_hosts
 .subversion
 .sudo_as_admin_successful
 .sw*

@@ -1,0 +1,25 @@
+# vim: set ts=8 sw=4 tw=0 ft=muttrc : 
+subscribe asterisk-users@lists.digium.com
+subscribe crypto@securityfocus.com
+subscribe current@FreeBSD.org
+subscribe current-users@NetBSD.org
+subscribe doc-es@lists.php.net
+subscribe enlightenment-devel@lists.sourceforge.net
+subscribe framework@spool.metasploit.com
+subscribe freebsd-advocacy@freebsd.org
+subscribe freebsd-chat@freebsd.org
+subscribe freebsd-hackers@freebsd.org
+subscribe freebsd-questions@freebsd.org
+subscribe full-disclosure@lists.grok.org.uk
+subscribe linux-kernel@vger.kernel.org
+subscribe misc@openbsd.org
+subscribe netbsd-docs@netbsd.org
+subscribe pkgsrc-users@netbsd.org
+subscribe security-basics@securityfocus.com
+subscribe tech-kern@NetBSD.org
+subscribe tech@openbsd.org
+subscribe vim_use@googlegroups.com
+subscribe wikies-l@lists.wikimedia.org
+subscribe wireshark-users@wireshark.org
+subscribe netbsd-users@netbsd.org
+subscribe pen-test@securityfocus.com
