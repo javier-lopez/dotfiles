@@ -123,6 +123,8 @@
 .openoffice.org
 .packages.list
 .pass
+.pgadmin3
+.pgpass
 .pida*
 .pki
 .printer-groups.xml
