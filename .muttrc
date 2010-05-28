@@ -1,32 +1,32 @@
 # === General settings ===
-push <show-version>                #show version
-set nomark_old                     #avoid marking unread msgs as old ones
-set nobeep                         #plz dont be noisy
-set delete                = yes    #don't confirm
-set quit                  = yes    #don't confirm
-set imap_check_subscribed = yes    #automatically poll subscribed mailboxes for new mail
-set query_command         = "~/code/learn/python/goobook query '%s'" #autocomplete addresses
+push <show-version>                                                           #show version
+set nomark_old                                                                #avoid marking unread msgs as old ones
+set nobeep                                                                    #plz dont be noisy
+set delete                = yes                                               #don't confirm
+set quit                  = yes                                               #don't confirm
+set imap_check_subscribed = yes                                               #automatically poll subscribed mailboxes for new mail
+set query_command         = "~/code/learn/python/goobook query '%s'"          #autocomplete addresses
 set sort                  = "threads"
 set sort_aux              = "last-date-received"
-#set sort_aux             = "reverse-last-date-received" #like gmail
-set sort_re                        # thread based on regex
+#set sort_aux             = "reverse-last-date-received"                      #like gmail
+set sort_re                                                                   # thread based on regex
 set reply_regexp          = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
-set followup_to           = no     #http://larve.net/people/hugo/2000/07/ml-mutt
-set pager_index_lines   = 10                                    # number of index lines to show 
-set pager_context       = 5                                     # number of context lines to show
-set pager_stop                     # don't go to the next message automatically
-unset markers                                                   # no ugly plus signs
+set followup_to           = no                                                #http://larve.net/people/hugo/2000/07/ml-mutt
+set pager_index_lines   = 10                                                  # number of index lines to show 
+set pager_context       = 5                                                   # number of context lines to show
+set pager_stop                                                                # don't go to the next message automatically
+unset markers                                                                 # no ugly plus signs
 set menu_scroll
 set quote_regexp          = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 set honor_followup_to     = no
-set include               = yes    #automatically quote message
-set editor                = "vim +':call Word_mode()' + %s" #is there any other editor?
-set edit_headers          = yes    #you can add cc, bcc, or change ur from input
-set mail_check            = 90     #how often mutt will query gmail for new email
+set include               = yes                                               #automatically quote message
+set editor                = "vim +':call Word_mode()' + %s"                   #is there any other editor?
+set edit_headers          = yes                                               #you can add cc, bcc, or change ur from input
+set mail_check            = 90                                                #how often mutt will query gmail for new email
 set timeout               = 20
-set move                  = no     #don't ask to move read messages to mbox on exit
-set pipe_decode                                                 # strip headers and eval mimes when piping
-set thorough_search                                             # strip headers and eval mimes before searching
+set move                  = no                                                #don't ask to move read messages to mbox on exit
+set pipe_decode                                                               # strip headers and eval mimes when piping
+set thorough_search                                                           # strip headers and eval mimes before searching
 #set signature             = ~/.mutt/conf/signature
 
 # formats

@@ -34,8 +34,10 @@ alias Learn.python='cd ~/code/learn/python/'
 alias Learn.ruby='cd ~/code/learn/ruby/'
 alias Learn.sh='cd ~/code/learn/sh/'
 alias lh='ls -lah'
+alias lk='ls --color=auto'
 alias ll='ls -l'
 alias l='ls -CF'
+alias lñ='ls --color=auto'
 alias ls='ls --color=auto'
 alias lss='ls'
 alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
@@ -67,7 +69,7 @@ alias wifi='iwlist eth1 s'
 alias zz='exit'
 
 #====VARS====
-export DEBEMAIL="chilicuil@users.sourceforge.net"
+export DEBEMAIL="chilicuil@i.am"
 export DEBFULLNAME="chilicuil"
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17/bin:/opt/e17-ecomorph/bin:/usr/local/bin/bin/:/opt/bochs/bin/
 
