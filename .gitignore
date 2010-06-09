@@ -190,13 +190,12 @@
 .wxglade
 .Xauthority
 .xine
-.xinitrc
 .xmdd*
 .xmind
 .xmms
+.xsession-errors
 .Xscrc
 .xscreensaver-getimage.cache
-.xsession*
 .xvidcaprc
 .y2log
 .y2usersettings

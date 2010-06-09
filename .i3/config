@@ -1,5 +1,64 @@
+# #####################################################################################
 # Last review            Mon 17 May 2010 02:12:56 AM CDT
-#
+# #####################################################################################
+#  vim: set ts=8 sw=4 tw=0 ft=conf : 
+
+# Mod4 is <Win> and Mod1 is <Alt>
+set $Win Mod4
+set $Alt Mod1
+
+
+# ###################################
+# ########### NOT WORKING ###########
+# ###################################
+
+# Requires latest version (from git)
+# ---------------------------------->
+# Window border style:
+# bn: border normal, with window title bar;
+# bp: border only, no window title bar;
+# bb: no berder or window title bar.
+#new_window bp
+# ----------------------------------<
+
+# Focus / follow mouse
+#focus_follows_mouse yes
+
+# Workspace bar
+# workspace_bar yes
+
+# ###################################
+# ######## GENERAL SETTINGS #########
+# ###################################
+
+# execute my startup programs
+exec ~/.startup
+
+#exec /home/cooky/.i3/dzen &
+#exec /usr/bin/dropboxd &
+
+# workspace names
+workspace 1 www
+workspace 2 work
+workspace 3 work
+workspace 4 work
+workspace 5 email
+workspace 6 im
+workspace 7 files
+workspace 8 work
+workspace 9 work
+workspace 10 work
+#workspace 11 work
+#workspace 12 work
+#workspace 13 work
+#workspace 14 work
+#workspace 15 work
+
+# Requires latest version (from git)
+# ---------------------------------->
+#new_container stacking
+# ----------------------------------<
+
 # This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
 
@@ -11,119 +70,222 @@ terminal /usr/bin/x-terminal-emulator
 # ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
-# Use Mouse+Mod4 to drag floating windows to their wanted position
-floating_modifier Mod4
+# ###################################
+# ######## KEYBOARD BINDINGS ########
+# ###################################
 
-# Fullscreen (Mod4+f)
-bind Mod4+41 f
+# Use Mouse+$Win to drag floating windows to their wanted position
+floating_modifier $Win
 
-# Stacking (Mod4+h)
-bind Mod4+43 s
+# Fullscreen ($Win+f)
+bind $Win+41 f
 
-# Tabbed (Mod4+w)
-bind Mod4+25 T
+# Stacking ($Win+s)
+bind $Win+39 s
 
-# Default (Mod4+e)
-bind Mod4+26 d
+# Tabbed ($Win+t)
+bind $Win+28 T
 
-# Toggle tiling/floating of the current window (Mod4+Shift+Space)
-bind Mod4+Shift+65 t
+# Default ($Win+d)
+bind $Win+40 d
+
+# Toggle tiling/floating of the current window ($Win+Shift+Space)
+bind $Win+Shift+65 t
 
 # Go into the tiling layer / floating layer, depending on whether
-# the current window is tiling / floating (Mod4+t)
-bind Mod4+28 focus ft
+# the current window is tiling / floating ($Win+t)
+bind $Win+28 focus ft
 
-# Focus (Mod4+j/k/l/;)
-bind Mod4+44 h
-bind Mod4+45 j
-bind Mod4+46 k
-bind Mod4+47 l
+# Focus ($Win+h/j/k/l)
+bind $Win+43 h
+bind $Win+44 j
+bind $Win+45 k
+bind $Win+46 l
 # (alternatively, you can use the cursor keys:)
-bindsym Mod4+Left h
-bindsym Mod4+Down j
-bindsym Mod4+Up k
-bindsym Mod4+Right l
+bindsym $Win+Left h
+bindsym $Win+Down j
+bindsym $Win+Up k
+bindsym $Win+Right l
 
-# Focus Container (Mod3+j/k/l/;)
-bind Mod3+44 wch
-bind Mod3+45 wcj
-bind Mod3+46 wck
-bind Mod3+47 wcl
+# Focus Container ($Alt+h/j/k/l)
+bind $Alt+43 wch
+bind $Alt+44 wcj
+bind $Alt+45 wck
+bind $Alt+46 wcl
+
+# Snap ($Win+Control+h/j/k/l)
+bind $Win+Control+43 sh
+bind $Win+Control+44 sj
+bind $Win+Control+45 sk
+bind $Win+Control+46 sl
 # (alternatively, you can use the cursor keys:)
-bindsym Mod3+Left h
-bindsym Mod3+Down j
-bindsym Mod3+Up k
-bindsym Mod3+Right l
+bindsym $Win+Control+Left h
+bindsym $Win+Control+Down j
+bindsym $Win+Control+Up k
+bindsym $Win+Control+Right l
 
-# Snap (Mod4+Control+j/k/l/;)
-bind Mod4+Control+44 sh
-bind Mod4+Control+45 sj
-bind Mod4+Control+46 sk
-bind Mod4+Control+47 sl
+# Move ($Win+Shift+h/j/k/l)
+bind $Win+Shift+43 mh
+bind $Win+Shift+44 mj
+bind $Win+Shift+45 mk
+bind $Win+Shift+46 ml
 # (alternatively, you can use the cursor keys:)
-bindsym Mod4+Control+Left h
-bindsym Mod4+Control+Down j
-bindsym Mod4+Control+Up k
-bindsym Mod4+Control+Right l
+bindsym $Win+Shift+Left h
+bindsym $Win+Shift+Down j
+bindsym $Win+Shift+Up k
+bindsym $Win+Shift+Right l
 
-# Move (Mod4+Shift+j/k/l/;)
-bind Mod4+Shift+44 mh
-bind Mod4+Shift+45 mj
-bind Mod4+Shift+46 mk
-bind Mod4+Shift+47 ml
-# (alternatively, you can use the cursor keys:)
-bindsym Mod4+Shift+Left h
-bindsym Mod4+Shift+Down j
-bindsym Mod4+Shift+Up k
-bindsym Mod4+Shift+Right l
+# Move Container (Mod3+Shift+h/j/k/l)
+#bind Mod3+Shift+43 wcmh
+#bind Mod3+Shift+44 wcmj
+#bind Mod3+Shift+45 wcmk
+#bind Mod3+Shift+46 wcml
 
-# Move Container (Mod3+Shift+j/k/l/;)
-bind Mod3+Shift+44 wcmh
-bind Mod3+Shift+45 wcmj
-bind Mod3+Shift+46 wcmk
-bind Mod3+Shift+47 wcml
-
-# Workspaces (Mod4+1/2/…)
-bind Mod4+10    1
-bind Mod4+11    2
-bind Mod4+12    3
-bind Mod4+13    4
-bind Mod4+14    5
-bind Mod4+15    6
-bind Mod4+16    7
-bind Mod4+17    8
-bind Mod4+18    9
-bind Mod4+19    10
+# Workspaces ($Win+1/2/…)
+bind $Win+10    1
+bind $Win+11    2
+bind $Win+12    3
+bind $Win+13    4
+bind $Win+14    5
+bind $Win+15    6
+bind $Win+16    7
+bind $Win+17    8
+bind $Win+18    9
+bind $Win+19    10
+bind $Win+24    11
+bind $Win+25    12
+bind $Win+26    13
+bind $Win+27    14
+bind $Win+28    15
+bind $Win+29    16
+bind $Win+30    17
+bind $Win+31    18
+bind $Win+32    19
+bind $Win+33    20
+# Requires latest version (from git)
+# ---------------------------------->
+#bind $Win+113   pw
+#bibd $Win+114   nw
+# ----------------------------------<
 
 # Move to Workspaces
-bind Mod4+Shift+10 m1
-bind Mod4+Shift+11 m2
-bind Mod4+Shift+12 m3
-bind Mod4+Shift+13 m4
-bind Mod4+Shift+14 m5
-bind Mod4+Shift+15 m6
-bind Mod4+Shift+16 m7
-bind Mod4+Shift+17 m8
-bind Mod4+Shift+18 m9
-bind Mod4+Shift+19 m10
+bind $Win+Shift+10 m1
+bind $Win+Shift+11 m2
+bind $Win+Shift+12 m3
+bind $Win+Shift+13 m4
+bind $Win+Shift+14 m5
+bind $Win+Shift+15 m6
+bind $Win+Shift+16 m7
+bind $Win+Shift+17 m8
+bind $Win+Shift+18 m9
+bind $Win+Shift+19 m10
 
-# Mod4+Enter starts a new terminal
-bind Mod4+36 exec /usr/bin/x-terminal-emulator
+# Requires latest version (from git)
+# ---------------------------------->
+bind $Win+Shift+24  m11
+bind $Win+Shift+25  m12
+bind $Win+Shift+26  m13
+bind $Win+Shift+27  m14
+bind $Win+Shift+28  m15
+bind $Win+Shift+29  m16
+bind $Win+Shift+30  m17
+bind $Win+Shift+31  m18
+bind $Win+Shift+32  m19
+bind $Win+Shift+33  m20
+# ----------------------------------<
 
-# Mod4+Shift+q kills the current client
-bind Mod4+Shift+24 kill
+# $Win+Enter starts a new terminal
+bind $Win+36 exec /usr/bin/x-terminal-emulator
 
-# Mod4+v starts dmenu and launches the selected application
+# Control+Shift*f starts firefox
+bind Control+Shift+41 exec /usr/bin/firefox
+
+# Control+Shift+k kills the current client
+bind Control+Shift+45 kill
+
+# $Alt+Esc starts dmenu and launches the selected application
 # for now, we don’t have an own launcher
-bind Mod4+55 exec /usr/bin/dmenu_run
+bind $Alt+9 exec /usr/bin/dmenu_run
 
-# Mod4+Shift+e exits i3
-bind Mod4+Shift+26 exit
+# $Win+Shift+e exits i3
+bind $Win+Shift+26 exit
 
-# Mod4+Shift+r restarts i3 inplace
-bind Mod4+Shift+27 restart
+# $Win+Shift+r restarts i3 inplace
+bind $Win+Shift+27 restart
 
-#############################################################
-# DELETE THE FOLLOWING LINES TO DISABLE THE WELCOME MESSAGE #
-#############################################################
-#exec xmessage -file /etc/i3/welcome
+#mode "resize" {
+        ## These bindings trigger as soon as you enter the resize mode
+
+        ## They resize the border in the direction you pressed, e.g.
+        ## when pressing left, the window is resized so that it has
+        ## more space on its left
+
+        #bindsym n resize left -10
+        #bindsym Shift+n resize left +10
+
+        #bindsym r resize bottom +10
+        #bindsym Shift+r resize bottom -10
+
+        #bindsym t resize top -10
+        #bindsym Shift+t resize top +10
+
+        #bindsym d resize right +10
+        #bindsym Shift+d resize right -10
+        
+        ##Enter
+        ##bind 36 mode default
+#}
+
+## Enter resize mode
+#bindsym $Win+r mode resize
+
+# Get me to the next open VIM instance
+bindsym Mod4+a jump "urxvt/VIM"
+
+# Read 1 character and mark the current window with this character
+#bindsym Mod4+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
+
+# Read 1 character and go to the window with the character
+#bindsym Mod4+g exec i3-input -p 'goto ' -l 1 -P 'Goto: '
+
+# ###################################
+# ############# ASSIGNS #############
+# ###################################
+
+# Assigns default workspaces for app
+# assign ["]window class[/window title]["] [→] [~ | workspace]
+
+#assign "GVIM"  3
+
+# ###################################
+# ############# COLORS ##############
+# ###################################
+
+#  colorclass            border          background      text
+
+# colours arch linux
+#client.focused          #1793D1         #1793D1         #ffffff
+#client.focused_inactive #666666         #666666         #ffffff
+#client.unfocused        #333333         #333333         #ffffff
+#client.urgent           #D11931         #D11931         #ffffff
+#bar.focused             #1793d1         #1793d1         #ffffff
+#bar.unfocused           #333333         #333333         #ffffff
+#bar.urgent              #d11931         #d11931         #ffffff
+
+# colours freebsd
+#client.focused         #990000         #990000         #ffffff
+#client.focused_inactive        #666666         #666666         #ffffff
+#client.unfocused       #333333         #333333         #ffffff
+#client.urgent          #D11931         #D11931         #ffffff
+#bar.focused            #990000         #990000         #ffffff
+#bar.unfocused          #333333         #333333         #ffffff
+#bar.urgent             #d11931         #d11931         #ffffff
+
+# colours gentoo
+client.focused         #7a5ada         #7a5ada         #ffffff
+client.focused_inactive        #45347b         #45347b         #ffffff
+client.unfocused       #333333         #333333         #ffffff
+client.urgent          #D11931         #D11931         #ffffff
+bar.focused            #45347b         #45347b         #ffffff
+bar.unfocused          #dddaec         #dddaec         #45347b
+bar.urgent             #d11931         #d11931         #ffffff

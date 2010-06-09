@@ -1,6 +1,6 @@
-! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
-!
 ! Last review            Mon 17 May 2010 02:10:31 AM CDT
+!
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 
 !====================================================
 !========================THEME=======================
@@ -68,15 +68,16 @@ URxvt*urlLauncher:        /usr/bin/firefox
 URxvt*matcher.button:     1
 
 !URxvt*font:             xft:Bitstream Vera Sans Mono:pixelsize=9
-URxvt*boldFont:         xft:Bitstream Vera Sans Mono:pixelsize=9
 !URxvt*font:            xft:LucidaMacBold:pixelsize=7
+URxvt*boldFont:         xft:Bitstream Vera Sans Mono:pixelsize=9
 URxvt*italicFont:       xft:segoe ui:pixelsize=9
 URxvt*bolditalicFont:   xft:Bitstream Vera Sans Mono:pixelsize=9
 URxvt*scrollBar:        false
-URxvt*internalBorder:   3
+URxvt*internalBorder:   5
 URxvt*saveLines:        10000
 !URxvt*fading: 25%
 !URxvt.scrollstyle:      plain
+URxvt.urgentOnBell:      true
 URxvt*cursorBlink:       true
 
 URxvt.title:             buzz

@@ -1,3 +1,9 @@
+#########################################################
+# Last review            Thu 03 Jun 2010 03:41:40 PM CDT
+#########################################################
+
+# vim: set ts=8 sw=4 tw=0 ft=muttrc : 
+
 # === General settings ===
 push <show-version>                                                           #show version
 set nomark_old                                                                #avoid marking unread msgs as old ones

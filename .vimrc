@@ -14,7 +14,7 @@
 " [+]DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
 " cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
 " [+]FindInNERDTree.vim, Drawit.vim, [*]echofunc.vim, omnicppcomplete.vim
-" netrwPlugin.vim, securemodelines.vim markdown.vim
+" netrwPlugin.vim, securemodelines.vim markdown.vim [+]irssilog.vim
 "
 "[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
 "[*] TODO 18-11-2009 21:19
@@ -664,7 +664,7 @@ let g:GetLatestVimScripts_allowautoinstall=1
 
 "Snippet directories
 let g:snips_author      = "chilicuil"
-let g:snips_authorEmail = "chilicuil@users.sourceforge.net"
+let g:snips_authorEmail = "chilicuil@i.am"
 let g:snippets_dir      = "~/.vim/snippets/, ~/.vim/extra-snippets/"
 
 " qbuf.vim
