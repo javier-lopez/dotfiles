@@ -3,14 +3,30 @@
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf : 
 
-# Mod4 is <Win> and Mod1 is <Alt>
-set $Win Mod4
-set $Alt Mod1
-
-
 # ###################################
 # ########### NOT WORKING ###########
 # ###################################
+
+# DEPRECATED
+# Tell i3 about your preferred terminal. You can refer to this as $terminal
+# later. It is recommended to set this option to allow i3 to open a terminal
+# containing the introduction on first start.
+#terminal /usr/bin/x-terminal-emulator
+#terminal /usr/bin/urxvtc
+
+# Focus / follow mouse
+#focus_follows_mouse yes
+
+# ###################################
+# ######## GENERAL SETTINGS #########
+# ###################################
+
+# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
+# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
+
+# Mod4 is <Win> and Mod1 is <Alt>
+set $Win Mod4
+set $Alt Mod1
 
 # Requires latest version (from git)
 # ---------------------------------->
@@ -18,33 +34,20 @@ set $Alt Mod1
 # bn: border normal, with window title bar;
 # bp: border only, no window title bar;
 # bb: no berder or window title bar.
-#new_window bp
-# ----------------------------------<
-
-# Focus / follow mouse
-#focus_follows_mouse yes
+new_window bp
 
 # Workspace bar
 # workspace_bar yes
-
-# ###################################
-# ######## GENERAL SETTINGS #########
-# ###################################
-
-# execute my startup programs
-exec ~/.startup
-
-#exec /home/cooky/.i3/dzen &
-#exec /usr/bin/dropboxd &
+# ----------------------------------<
 
 # workspace names
 workspace 1 www
 workspace 2 work
 workspace 3 work
-workspace 4 work
-workspace 5 email
-workspace 6 im
-workspace 7 files
+workspace 4 im
+workspace 5 mail
+workspace 6 files
+workspace 7 work
 workspace 8 work
 workspace 9 work
 workspace 10 work
@@ -59,16 +62,32 @@ workspace 10 work
 #new_container stacking
 # ----------------------------------<
 
-# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
-# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-
-# Tell i3 about your preferred terminal. You can refer to this as $terminal
-# later. It is recommended to set this option to allow i3 to open a terminal
-# containing the introduction on first start.
-terminal /usr/bin/x-terminal-emulator
-
 # ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1
+
+### IPC INTERFACE ###
+
+# The IPC interface allows programs like an external workspace bar
+# (i3-wsbar) or i3-msg (can be used to "remote-control" i3) to work.
+ipc-socket ~/.i3/ipc.sock
+
+# ###################################
+# ############ AUTOSTART ############
+# ###################################
+
+# execute my startup programs
+#exec ~/.i3/startup
+
+#exec xsetroot -solid white
+#exec xsetroot -cursor_name left_ptr
+
+#it breaks very often
+#exec urxvtd -q -f -o
+#exec feh --bg-scale /home/chilicuil/data/images/wallpapers/Aurora_Borealis.jpg
+
+#exec conky |/home/chilicuil/code/dzen/dzen2 -x 300 -y 800 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000"
+exec conky |/home/chilicuil/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000"
 
 # ###################################
 # ######## KEYBOARD BINDINGS ########
@@ -94,7 +113,7 @@ bind $Win+Shift+65 t
 
 # Go into the tiling layer / floating layer, depending on whether
 # the current window is tiling / floating ($Win+t)
-bind $Win+28 focus ft
+bind $Win+65 focus ft
 
 # Focus ($Win+h/j/k/l)
 bind $Win+43 h
@@ -119,10 +138,10 @@ bind $Win+Control+44 sj
 bind $Win+Control+45 sk
 bind $Win+Control+46 sl
 # (alternatively, you can use the cursor keys:)
-bindsym $Win+Control+Left h
-bindsym $Win+Control+Down j
-bindsym $Win+Control+Up k
-bindsym $Win+Control+Right l
+bindsym $Win+Control+Left sh
+bindsym $Win+Control+Down sj
+bindsym $Win+Control+Up sk
+bindsym $Win+Control+Right sl
 
 # Move ($Win+Shift+h/j/k/l)
 bind $Win+Shift+43 mh
@@ -130,16 +149,16 @@ bind $Win+Shift+44 mj
 bind $Win+Shift+45 mk
 bind $Win+Shift+46 ml
 # (alternatively, you can use the cursor keys:)
-bindsym $Win+Shift+Left h
-bindsym $Win+Shift+Down j
-bindsym $Win+Shift+Up k
-bindsym $Win+Shift+Right l
+bindsym $Win+Shift+Left mh
+bindsym $Win+Shift+Down mj
+bindsym $Win+Shift+Up mk
+bindsym $Win+Shift+Right ml
 
 # Move Container (Mod3+Shift+h/j/k/l)
-#bind Mod3+Shift+43 wcmh
-#bind Mod3+Shift+44 wcmj
-#bind Mod3+Shift+45 wcmk
-#bind Mod3+Shift+46 wcml
+bind $Alt+$Win+Shift+43 wcmh
+bind $Alt+$Win+Shift+44 wcmj
+bind $Alt+$Win+Shift+45 wcmk
+bind $Alt+$Win+Shift+46 wcml
 
 # Workspaces ($Win+1/2/…)
 bind $Win+10    1
@@ -196,22 +215,58 @@ bind $Win+Shift+33  m20
 
 # $Win+Enter starts a new terminal
 bind $Win+36 exec /usr/bin/x-terminal-emulator
+#bind $Win+36 exec /usr/bin/urxvtc
+bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
+#bindsym Control+Shift+g exec /usr/bin/urxvtc
 
 # Control+Shift*f starts firefox
-bind Control+Shift+41 exec /usr/bin/firefox
+#bind Control+Shift+41 exec /usr/bin/firefox
 
 # Control+Shift+k kills the current client
 bind Control+Shift+45 kill
 
 # $Alt+Esc starts dmenu and launches the selected application
 # for now, we don’t have an own launcher
-bind $Alt+9 exec /usr/bin/dmenu_run
+#-sf purple
+bind $Alt+9 exec /usr/bin/dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
 
-# $Win+Shift+e exits i3
-bind $Win+Shift+26 exit
+# Control+$Alt+e exits i3
+bind Control+$Alt+26 exit
 
-# $Win+Shift+r restarts i3 inplace
-bind $Win+Shift+27 restart
+# Control+$Alt+r restarts i3 inplace
+bind Control+$Alt+27 restart
+
+# Control+$Alt+Supr starts a dmenu session menu
+bind Control+$Alt+119 exec dmenu_session
+
+# mutt: Control+Shift+m
+#bindsym Control+Shift+m exec /usr/bin/urxvtc -e mutt
+bindsym Control+Shift+m exec /usr/bin/x-terminal-emulator -e mutt
+
+# irssi: Control+Shift+i
+#bindsym Control+Shift+i exec /usr/bin/urxvtc -e irssi
+bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
+
+# pms: Control+Shift+p
+#bindsym Control+Shift+p exec /usr/bin/urxvtc -e pms
+bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e pms
+
+# alsamixer: Control+Shift+a
+bindsym Control+Shift+a exec /usr/bin/urxvtc -e alsamixer
+bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
+
+# pcmanfm:
+bindsym Control+Shift+h exec /usr/bin/pcmanfm 
+
+# volume 
+bind Control+Shift+20 exec /usr/bin/amixer set Master 1-
+bind Control+Shift+21 exec /usr/bin/amixer set Master 1+  
+
+# mpd
+bind Control+Shift+61 exec /usr/bin/mpc play
+bind Control+61 exec /usr/bin/mpc stop
+bind Control+Shift+60 exec /usr/bin/mpc next
+bind Control+Shift+59 exec /usr/bin/mpc prev
 
 #mode "resize" {
         ## These bindings trigger as soon as you enter the resize mode
@@ -240,7 +295,7 @@ bind $Win+Shift+27 restart
 #bindsym $Win+r mode resize
 
 # Get me to the next open VIM instance
-bindsym Mod4+a jump "urxvt/VIM"
+#bindsym Mod4+a jump "urxvt/VIM"
 
 # Read 1 character and mark the current window with this character
 #bindsym Mod4+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
@@ -255,7 +310,10 @@ bindsym Mod4+a jump "urxvt/VIM"
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
 
-#assign "GVIM"  3
+assign "firefox"  1
+assign "buzz/irssi" 4
+assign "buzz/mutt" 5
+assign "pcmanfm" 6
 
 # ###################################
 # ############# COLORS ##############
@@ -263,7 +321,7 @@ bindsym Mod4+a jump "urxvt/VIM"
 
 #  colorclass            border          background      text
 
-# colours arch linux
+# arch linux
 #client.focused          #1793D1         #1793D1         #ffffff
 #client.focused_inactive #666666         #666666         #ffffff
 #client.unfocused        #333333         #333333         #ffffff
@@ -272,7 +330,7 @@ bindsym Mod4+a jump "urxvt/VIM"
 #bar.unfocused           #333333         #333333         #ffffff
 #bar.urgent              #d11931         #d11931         #ffffff
 
-# colours freebsd
+# freebsd
 #client.focused         #990000         #990000         #ffffff
 #client.focused_inactive        #666666         #666666         #ffffff
 #client.unfocused       #333333         #333333         #ffffff
@@ -281,11 +339,21 @@ bindsym Mod4+a jump "urxvt/VIM"
 #bar.unfocused          #333333         #333333         #ffffff
 #bar.urgent             #d11931         #d11931         #ffffff
 
-# colours gentoo
-client.focused         #7a5ada         #7a5ada         #ffffff
-client.focused_inactive        #45347b         #45347b         #ffffff
-client.unfocused       #333333         #333333         #ffffff
-client.urgent          #D11931         #D11931         #ffffff
-bar.focused            #45347b         #45347b         #ffffff
-bar.unfocused          #dddaec         #dddaec         #45347b
-bar.urgent             #d11931         #d11931         #ffffff
+# gentoo
+#client.focused         #7a5ada         #7a5ada         #ffffff
+#client.focused_inactive        #45347b         #45347b         #ffffff
+#client.unfocused       #333333         #333333         #ffffff
+#client.urgent          #D11931         #D11931         #ffffff
+#bar.focused            #45347b         #45347b         #ffffff
+#bar.unfocused          #dddaec         #dddaec         #45347b
+#bar.urgent             #d11931         #d11931         #ffffff
+
+# dark
+client.focused            #999999      #999999      #000000
+client.focused_inactive   #333333      #333333      #999999
+client.unfocused          #333333      #333333      #999999
+client.urgent             #8C4665      #8C5665      #999999
+bar.focused               #999999      #000000      #999999
+bar.unfocused             #333333      #000000      #999999
+#bar.urgent                #8C4665      #000000      #999999
+bar.urgent             #d11931         #000000         #999999

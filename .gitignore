@@ -31,6 +31,7 @@
 .ddd
 .diffuse
 .directory
+.dmenu_cache
 .dmrc
 .DownloadManager
 .dreampie
@@ -73,13 +74,15 @@
 .gnupg
 .grdc
 .gstreamer-0.10
-.gtk*
+#.gtk*
 .gtk-bookmarks
 .httrack.ini
 .ICEauthority
 .icons
 .img
 .img*
+.irssi/away.log
+.irssi.logs
 .jackdrc
 .jagex*
 .java
@@ -103,6 +106,7 @@
 .mcop*
 .mono
 .mozilla
+.mozilla.back*
 .mp3blaster
 .mplayer
 .msf*
@@ -193,9 +197,9 @@
 .xmdd*
 .xmind
 .xmms
-.xsession-errors
 .Xscrc
 .xscreensaver-getimage.cache
+.xsession-errors
 .xvidcaprc
 .y2log
 .y2usersettings

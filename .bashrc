@@ -21,6 +21,9 @@ set match-hidden-files off
 set bind-tty-special-chars on
 set completion-ignore-case on
 
+# Do not show ^C when pressing Ctrl+C
+stty -ctlecho
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -32,9 +35,9 @@ fi
 force_color_prompt=yes
 
 if [ "$force_color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]$(date +\%R) \[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='╔═${debian_chroot:+($debian_chroot)}[\[\033[01;35m\]$(date +\%R)\[\033[00m\]] \[\033[00;32m\]\u@\h\[\033[00m\] [\[\033[01;34m\]\w\[\033[00m\]]\n╚═[\$] '
 else
-    PS1='${debian_chroot:+($debian_chroot)}$(date +\%R) \u@\h:\w\$ '
+    PS1='╔═${debian_chroot:+($debian_chroot)}[$(date +\%R)] \u@\h [\w]\n╚═[\$] '
 fi
 
 if [ -f /etc/bash_completion ]; then
