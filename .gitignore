@@ -5,6 +5,8 @@
 
 #But ignore these
 .AbiSuite
+.azimov
+.assaultcube
 .adobe
 .alien-arena
 .aptitude
