@@ -7,7 +7,7 @@
 #	only ones currently supported. Defaults to both.
 RELEASES="maverick"
 
-ISOROOT="/home/chilicuil/misc/packages/ubuntu-10.04/isos/"
+ISOROOT="$HOME/misc/packages/ubuntu-10.04/isos/"
 
 #    ARCHS
 #        Which computer architectures to download. If you only have
@@ -23,7 +23,7 @@ FLAVORS="ubuntu ubuntu-server ubuntu-netbook"
 #    VARIANTS
 #        Which variants of each flavor to download: desktop cd, alternative
 #        cd, server cd, dvd, etc. Default is all of them.
-VARIANTS="desktop alternate server"
+VARIANTS="desktop alternate server netbook"
 
 #    EXCLUDE
 #        Which flavors to NOT download. Sometimes it's easier to specify
@@ -43,7 +43,7 @@ NO_ACT="no"
 #    VERIFY
 #        If this is set to "true", then the script will verify the iso's
 #        md5sum against the downloaded MD5SUMS file.
-VERIFY="true"
+#VERIFY="true"
 
 #    BUILD
 #        Tell the script to download a specific build of the isos rather

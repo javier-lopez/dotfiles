@@ -339,7 +339,7 @@ function! SetProperties(_language)
     endif
 endfunction
 
-" Found in a dot.org file, rip
+" Found in a dot.org file
 function! Skel(_language)
     let l:skeleton_file = expand("~/.vim/skeletons/skeleton.". a:_language)
     if filereadable(l:skeleton_file)
@@ -539,11 +539,14 @@ set mousehide          "hide the mouse while typying
 set lazyredraw         "do not redraw the screen while macros are running. It
 "improves performance
 set ttyfast            "indicates a fast terminal connection
-set history=1000       "record last 1000 commands, press 'q:' to see a new
+set history=50       "record last 1000 commands, press 'q:' to see a new
 "window (normal mode) with the full history
 set t_Co=256           "set 256 colors. Make sure your console supports it.
                        "gnome-terminal and konsole work well
 set report=0           "report any changes
+set nobackup           "turn backup off
+set nowb
+set noswapfile
 set tabpagemax=100     "max open tabs at the same time
 set autoread           "watch for file changes by other programs
 set encoding=utf-8     "utf is able to represent any character
@@ -662,12 +665,12 @@ let g:GetLatestVimScripts_allowautoinstall=1
 "enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
 "let g:secure_modelines_verbose=1
 
-"Snippet directories
+"snipmate
 let g:snips_author      = "chilicuil"
 let g:snips_authorEmail = "chilicuil@i.am"
 let g:snippets_dir      = "~/.vim/snippets/, ~/.vim/extra-snippets/"
 
-" qbuf.vim
+"qbuf.vim
 let g:qb_hotkey = "<F2>"
 
 "PA_translator.vim
@@ -689,6 +692,7 @@ let g:dbext_default_profile_mysql_cursophp2 = 'type=MYSQL:user=chilicuil:
 let g:dbext_default_profile_mysql_cursophp = 'type=MYSQL:user=chilicuil:
             \passwd=just4fun:dbname=cursophp:host=localhost:port=3306'
 
+"nerdtree
 let g:NERDTreeWinPos    = "right"
 let g:NERDTreeWinSize   = 25
 let g:NERDTreeMouseMode = 3

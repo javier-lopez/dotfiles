@@ -4,6 +4,7 @@
 #  vim: set ts=8 sw=4 tw=0 ft=conf : 
 
 #eval `cat $HOME/.fehbg` &                   # set background
+#feh --bg-scale ~/some_cool_wp.png
 #xsetroot -solid "#333333"                   # or use a solid color
 #xsetroot -cursor_name left_ptr              # req'd for xmonad's cursor
 #xset fp+ /usr/share/fonts/local &           # add local fonts
@@ -16,7 +17,7 @@
 
 #xcompmgr -fF &                              # allow transparency
 
-xrdb $HOME/.Xdefaults &                      # load Xdefaults
+#xrdb $HOME/.Xdefaults &                      # load Xdefaults
 
 #(sleep 3 && xmodmap $HOME/.Xmodmap) &       # remove capslock
 

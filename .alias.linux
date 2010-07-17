@@ -10,9 +10,11 @@ alias cd-='cd -'
 alias cd..='cd ..'
 alias cp='cp -v'
 alias date.stamp='date +%d-%m-%Y'
+alias notes='cd ~/misc/notes'
 alias dev='vim -c DevMode'
 alias dir='ls -d */'
 alias dmesg.tail='dmesg|tail'
+alias fu-search="fu-search -c"
 alias .et='vim ~/.bash_eternal_history'
 #alias firefox='swiftfox'
 alias framework='cd ~/code/framework-trunk/'
@@ -76,8 +78,9 @@ alias wifi='iwlist eth1 s'
 alias zz='exit'
 
 #====VARS====
+export EDITOR=vim
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 export DEBEMAIL="chilicuil@i.am"
 export DEBFULLNAME="chilicuil"
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17/bin:/opt/e17-ecomorph/bin:/usr/local/bin/bin/:/opt/bochs/bin/
-
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17-ecomorph/bin:/opt/bochs/bin/
 export QUILT_PATCHES=debian/patches

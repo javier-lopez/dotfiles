@@ -12,13 +12,22 @@
 !Xcursor*theme: tool
 
 !====================================================
+!=======================GENERAL======================
+!====================================================
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:      	rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+!====================================================
 !========================URXVT=======================
 !====================================================
 !
 !We add 8 more bits to store the Alpha(transparency)
 !information.
-URxvt*transparent: true
-URxvt*depth: 32
+!URxvt*transparent: true
+!URxvt*depth: 32
 
 !To change the shading change the Alpha value in
 !background option. 0000 = full !transparent and

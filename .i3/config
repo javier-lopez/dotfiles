@@ -183,8 +183,8 @@ bind $Win+32    19
 bind $Win+33    20
 # Requires latest version (from git)
 # ---------------------------------->
-#bind $Win+113   pw
-#bibd $Win+114   nw
+bind $Win+113   pw
+bibd $Win+114   nw
 # ----------------------------------<
 
 # Move to Workspaces

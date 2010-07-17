@@ -1,5 +1,6 @@
 # vim: set ts=8 sw=4 tw=0 ft=muttrc : 
 subscribe asterisk-users@lists.digium.com
+subscribe freebsd-announce@freebsd.org
 subscribe crypto@securityfocus.com
 subscribe current@FreeBSD.org
 subscribe current-users@NetBSD.org
