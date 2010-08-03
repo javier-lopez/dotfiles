@@ -64,3 +64,10 @@ URxvt*perl-lib:           /usr/lib/urxvt/perl/
 URxvt*perl-ext-common:    default,matcher
 URxvt*urlLauncher:        /usr/bin/firefox
 URxvt*matcher.button:     1
+
+URxvt.keysym.M-g: perl:mark-yank-urls:activate_mark_mode
+!URxvt.reverseVideo: true
+URxvt.perl-lib: /home/chilicuil/.urxvt/
+URxvt.perl-ext: selection
+URxvt.perl-ext: mark-yank-urls
+

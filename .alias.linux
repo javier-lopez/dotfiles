@@ -1,6 +1,7 @@
 # vim: tw=80 ft=sh
 # ===alias===
 alias autoremove='sudo apt-get autoremove'
+alias e='extract'
 alias .bashrc='vim ~/.bashrc'
 alias beep='echo -e "\007\c"'
 alias c='cd'
@@ -66,7 +67,7 @@ alias terminal='gnome-terminal'
 alias todo='todo -d ~/.todo/todo.cfg'
 alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
 alias t='todo'
-alias ubuntu='cd ~/misc/packages/ubuntu-10.04/'
+alias ubuntu='cd ~/misc/packages/ubuntu/ubuntu-10.04/'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias vd='vim -c DevMode'
@@ -79,6 +80,7 @@ alias zz='exit'
 
 #====VARS====
 export EDITOR=vim
+export BROWSER=firefox
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 export DEBEMAIL="chilicuil@i.am"
 export DEBFULLNAME="chilicuil"

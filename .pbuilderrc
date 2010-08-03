@@ -123,3 +123,11 @@ else
     echo "Unknown distribution: $DIST"
     exit 1
 fi
+
+# ccache
+#sudo mkdir -p "$PATH_PBUILDER/ccache"
+#sudo chmod a+w $PATH_PBUILDER/ccache"
+#export CCACHE_DIR="$PATH_PBUILDER/ccache"
+#export PATH="/usr/lib/ccache:${PATH}"
+#EXTRAPACKAGES=ccache
+#BINDMOUNTS="${CCACHE_DIR}"
