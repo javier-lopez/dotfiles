@@ -1,5 +1,7 @@
+# Last review            Fri 06 Aug 2010 12:28:44 PM CDT
 # vim: tw=80 ft=sh
-# ===alias===
+
+# ===aliases===
 alias autoremove='sudo apt-get autoremove'
 alias e='extract'
 alias .bashrc='vim ~/.bashrc'
@@ -22,8 +24,8 @@ alias framework='cd ~/code/framework-trunk/'
 alias gcc='LANGUAGE=en gcc'
 alias install='sudo apt-get install --no-install-recommends'
 alias isntall='sudo apt-get install --no-install-recommends'
-alias JDownloader='java -jar /home/chilicuil/code/JDownloader/JDownloader.jar'
-alias jdownloader='JDownloader'
+alias JDownloader='java -jar ~/code/JDownloader/JDownloader.jar'
+alias jdownloader='java -jar ~/code/JDownloader/JDownloader.jar'
 alias kcore='sudo cat /proc/kcore | strings | less'
 alias key.lookup='xev'
 alias kl='ls --color=auto'
@@ -68,6 +70,7 @@ alias todo='todo -d ~/.todo/todo.cfg'
 alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
 alias t='todo'
 alias ubuntu='cd ~/misc/packages/ubuntu/ubuntu-10.04/'
+alias results='cd ~/misc/packages/ubuntu/results/'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias vd='vim -c DevMode'
@@ -82,7 +85,23 @@ alias zz='exit'
 export EDITOR=vim
 export BROWSER=firefox
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+
+
+#====UBUNTU DEV===
+alias bzr.debuild='bzr bd -- -S -uc -us'
+alias pbuilder.lucid='sudo DIST=lucid pbuilder'
+alias pbuilder.maverick='sudo DIST=maverick pbuilder'
+alias pbuilder.sid='sudo DIST=sid pbuilder'
+alias pbuilder.unstable='sudo DIST=unstable pbuilder'
+
 export DEBEMAIL="chilicuil@i.am"
 export DEBFULLNAME="chilicuil"
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17-ecomorph/bin:/opt/bochs/bin/
 export QUILT_PATCHES=debian/patches
+#export PBUILDFOLDER="~/.pbuilder"
+
+if [ -f /usr/bin/ccache ]; then
+    export PATH="/usr/lib/ccache:$PATH"
+    export CCACHE_DIR="$HOME/.ccache"
+    #export CCACHE_PREFIX="distcc"
+fi

@@ -23,3 +23,5 @@
 
 #xmonad                                      # start xmonad
 exec /usr/bin/i3                             # start i3
+#setterm -blank 0 -powersave off -powerdown 0
+#xset s off

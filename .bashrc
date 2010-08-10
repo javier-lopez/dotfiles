@@ -10,7 +10,7 @@
 [ -z "$PS1" ] && return
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
-if [[ $BASH_VERSINFO -ge 4 ]]; then
+if [ $BASH_VERSINFO -ge 4 ]; then
     shopt -s autocd cdspell dirspell
 fi
 
@@ -32,12 +32,12 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-force_color_prompt=yes
+force_color=yes
 
-if [ "$force_color_prompt" = yes ]; then
-    PS1='╔═${debian_chroot:+($debian_chroot)}[\[\033[01;35m\]$(date +\%R)\[\033[00m\]] \[\033[00;32m\]\u@\h\[\033[00m\] [\[\033[01;34m\]\w\[\033[00m\]]\n╚═[\$] '
+if [ "$force_color" = yes ]; then
+    PS1='╔═${debian_chroot:+($debian_chroot)}[\[\033[01;35m\]\D{%R %a(%d).%b}\[\033[00m\]] \[\033[00;32m\]\u@\h\[\033[00m\] [`if [ \$? = 0 ]; then echo -e "\e[01;32m0"; else echo -e "\e[01;31m-1"; fi`\[\033[1;37m\]:`readlink /proc/self/fd/0`:\[\033[01;34m\]\w\[\033[00m\]]\n╚═[\$] '
 else
-    PS1='╔═${debian_chroot:+($debian_chroot)}[$(date +\%R)] \u@\h [\w]\n╚═[\$] '
+    PS1='╔═${debian_chroot:+($debian_chroot)}[\D{%R %a(%d).%b}] \u@\h [`if [ \$? = 0 ]; then echo -e "0"; else echo -e "-1"; fi`:`readlink /proc/self/fd/0`:\w]\n╚═[\$] '
 fi
 
 if [ -f /etc/bash_completion ]; then
@@ -61,23 +61,23 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=ignoreboth
 
-export BLACK=$'\E[0;30m'
-export BLUE=$'\E[0;34m'
-export BROWN=$'\E[0;33m'
-export CYAN=$'\E[0;36m'
-export DARK_GREY=$'\E[1;30m'
-export DEFAULT=$'\E[0m'
-export GREEN=$'\E[0;32m'
-export LIGHT_BLUE=$'\E[1;34m'
-export LIGHT_CYAN=$'\E[1;36m'
-export LIGHT_GREEN=$'\E[1;32m'
-export LIGHT_GREY=$'\E[0;37m'
-export LIGHT_PURPLE=$'\E[1;35m'
-export LIGHT_RED=$'\E[1;31m'
-export PURPLE=$'\E[1;35m'
-export RED=$'\E[0;31m'
-export WHITE=$'\E[1;37m'
-export YELLOW=$'\E[0;33m'
+#export BLACK=$'\E[0;30m'
+#export BLUE=$'\E[0;34m'
+#export BROWN=$'\E[0;33m'
+#export CYAN=$'\E[0;36m'
+#export DARK_GREY=$'\E[1;30m'
+#export DEFAULT=$'\E[0m'
+#export GREEN=$'\E[0;32m'
+#export LIGHT_BLUE=$'\E[1;34m'
+#export LIGHT_CYAN=$'\E[1;36m'
+#export LIGHT_GREEN=$'\E[1;32m'
+#export LIGHT_GREY=$'\E[0;37m'
+#export LIGHT_PURPLE=$'\E[1;35m'
+#export LIGHT_RED=$'\E[1;31m'
+#export PURPLE=$'\E[1;35m'
+#export RED=$'\E[0;31m'
+#export WHITE=$'\E[1;37m'
+#export YELLOW=$'\E[0;33m'
 
 export GPGKEY=B2F0CD93
 
