@@ -3,6 +3,7 @@
 
 # ===aliases===
 alias autoremove='sudo apt-get autoremove'
+alias ccache.ubuntu='CCACHE_DIR=~/.ccache_ubuntu ccache'
 alias e='extract'
 alias .bashrc='vim ~/.bashrc'
 alias beep='echo -e "\007\c"'
@@ -103,5 +104,6 @@ export QUILT_PATCHES=debian/patches
 if [ -f /usr/bin/ccache ]; then
     export PATH="/usr/lib/ccache:$PATH"
     export CCACHE_DIR="$HOME/.ccache"
+    export CCACHE_SIZE="2G"
     #export CCACHE_PREFIX="distcc"
 fi

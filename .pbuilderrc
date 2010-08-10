@@ -128,7 +128,13 @@ fi
 # ccache
 #sudo mkdir -p "$PATH_PBUILDER/ccache"
 #sudo chmod a+w $PATH_PBUILDER/ccache"
-#export CCACHE_DIR="$PATH_PBUILDER/ccache"
-#export PATH="/usr/lib/ccache:${PATH}"
-EXTRAPACKAGES=ccache
-BINDMOUNTS="${CCACHE_DIR}"
+if [ -f /usr/bin/ccache ]; then
+    export PATH="/usr/lib/ccache:$PATH"
+    export CCACHE_DIR="$HOME/.ccache_ubuntu"
+    EXTRAPACKAGES="ccache ${EXTRAPACKAGES}"
+    BINDMOUNTS="${CCACHE_DIR} ${BINDMOUNTS}"
+    #if [ -n "${BUILDUSERID}" ]; then
+       #chown "${BUILDUSERID}":"${BUILDUSERID}" "${CCACHE_DIR}" || true
+    #fi
+    #export CCACHE_PREFIX="distcc"
+fi

@@ -1,4 +1,4 @@
-! Last review            Mon 17 May 2010 02:10:31 AM CDT
+! Last review            Mon 09 Aug 2010 03:58:28 PM CDT
 !
 ! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 
@@ -59,10 +59,22 @@ URxvt.title:             buzz
 !innocent face
 !URxvt.title:             ʘ‿ʘ
 
+!Scroll settings. Thx kazuo http://tinyurl.com/2dae24d
+!   -Scroll when output come but not when you go back in to the buffer (with mouse
+!   scroll or shift pgup). 
+!   -Scroll back to the end on key press (on program stop running and prompt is back
+!   it go back to the end too).
+
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
+
+URxvt.print-pipe:           cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
+
 !urlLauncher settings
 URxvt*perl-lib:           /usr/lib/urxvt/perl/
 URxvt*perl-ext-common:    default,matcher
-URxvt*urlLauncher:        /usr/bin/firefox
+URxvt*urlLauncher:        x-www-browser
 URxvt*matcher.button:     1
 
 URxvt.keysym.M-g: perl:mark-yank-urls:activate_mark_mode
