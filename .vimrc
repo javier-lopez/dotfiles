@@ -4,17 +4,14 @@
 "
 "Plugins used:
 "
-" [*]matchit.vim [*]crefvim.vim NERD_tree.vim [+]snipMate.vim, breakpts.vim
+" [*]matchit.vim [*]crefvim.vim NERD_tree.vim [+]snipMate.vim breakpts.vim
 " [+]taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [+]pastebin.vim autoclose.vim
-" [+]browser.vim dbext.vim LargeFile.vim [*]manpageviewPlugin.vim [+]Matrix.vim
-" [+]nextCS.vim [+]tetris.vim vcscommand.vim [+]VimRegEx.vim vsutil.vim qbuf.vim
-" surround.vim repeat.vim [+]findmate.vim [*]IndexedSearch.vim [+]php-doc.vim
-" [*]SearchComplete.vim [+]vimbuddy.vim Decho.vim genutils.vim project.vim
-" lusty-explorer.vim NERD_commenter.vim tasklist.vim showmarks.vim, rails.vim
-" [+]DirDiff.vim, fuf.vim, srcexpl.vim, align.vim, CSApprox.vim, cecutil.vim,
-" cmdline-complete.vim, checksyntax.vim, fugitive.vim, refactor.vim
-" [+]FindInNERDTree.vim, Drawit.vim, [*]echofunc.vim, omnicppcomplete.vim
-" netrwPlugin.vim, securemodelines.vim markdown.vim [+]irssilog.vim
+" dbext.vim LargeFile.vim [*]manpageviewPlugin.vim [+]Matrix.vim ragtag.vim
+" [+]nextCS.vim [+]tetris.vim vcscommand.vim qbuf.vim surround.vim repeat.vim
+" [+]findmate.vim [*]IndexedSearch.vim [+]php-doc.vim [+]vimbuddy.vim
+" NERD_commenter.vim tasklist.vim align.vim CSApprox.vim checksyntax.vim
+" fugitive.vim refactor.vim Drawit.vim omnicppcomplete.vim netrwPlugin.vim
+" securemodelines.vim markdown.vim [+]irssilog.vim
 "
 "[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
 "[*] TODO 18-11-2009 21:19
@@ -30,49 +27,34 @@ let loaded_crefvim           = 1
 "let loaded_snips            = 1
 let loaded_breakpts          = 1
 "let loaded_taglist_mod      = 1
-"let loaded_debugger         = 1
+let loaded_debugger         = 1
 "let loaded_acp              = 1
 let loader_pastebin         = 1
 let loaded_AutoClose         = 1
-"let loaded_browser          = 1
-"let loaded_dbext            = 1
+let loaded_dbext            = 1
 "let loaded_LargeFile        = 1
 "let loaded_manpageviewPlugin = 1
-"let loaded_Matrix           = 1
+let loaded_Matrix           = 1
+"let loaded_ragtag           = 1
 "let loaded_nextCS           = 1
-"let loaded_tetris           = 1
+let loaded_tetris           = 1
 "let loaded_VCSCommand       = 1
-let loaded_vimRegEx          = 1
-let VSUTIL                   = 1
 "let qb_loaded               = 1
 "let loaded_surround         = 1
 "let loaded_repeat           = 1
 "let loaded_findMate         = 1
 "let indexed_search_plugin   = 1
 let loader_php_doc           = 1
-let loaded_search_complete   = 1
 "let loaded_vimbuddy         = 1
-let loaded_Decho             = 1
-let loaded_genutils          = 1
-let loaded_project           = 1
-let loaded_lustyexplorer     = 1
 "let loaded_nerd_comments    = 1
 "let loaded_tasklist         = 1
-let loaded_showmarks         = 1
-let loaded_rails             = 1
-"let loaded_DirDiff          = 1
-"let loaded_fuf              = 1
-let loaded_srcexpl           = 1
 "let loaded_AlignMapsPlugin  = 1
 "let loaded_AlignPlugin      = 1
 "let CSApprox_loaded         = 1
-"let loaded_cecutil          = 1
-"let loaded_cmdline_complete = 1
 let checksyntax              = 1
-"let loaded_fugitive         = 1
+let loaded_fugitive         = 1
 "let loaded_FindInNERDTree   = 1
 "let loaded_DrawItPlugin     = 1
-"let loaded_echofunc         = 1
 "let loaded_netrwPlugin      = 1
 
 
@@ -571,6 +553,7 @@ set softtabstop=4      "vim sees 4 spaces as a tab
 set shiftwidth=4       "indentation
 set expandtab          "tabs mutate into spaces, if you wanna insert "real"
 "tabs use Ctrl-v <tab> instance
+set textwidth=80
 set splitright         "split vertically to the right.
 set splitbelow         "split horizontally below.
 set cursorline         "highlight the screen line of the cursor
