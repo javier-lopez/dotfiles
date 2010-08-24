@@ -73,6 +73,7 @@ alias t='todo'
 alias ubuntu='cd ~/misc/packages/ubuntu/ubuntu-10.04/'
 alias results='cd ~/misc/packages/ubuntu/results/'
 alias update='sudo apt-get update'
+alias update-fonts='sudo fc-cache -f -v'
 alias upgrade='sudo apt-get upgrade'
 alias vd='vim -c DevMode'
 alias vimdev='vim -c DevMode'
@@ -96,7 +97,8 @@ alias pbuilder.sid='sudo DIST=sid pbuilder'
 alias pbuilder.unstable='sudo DIST=unstable pbuilder'
 
 export DEBEMAIL="chilicuil@i.am"
-export DEBFULLNAME="chilicuil"
+#export DEBFULLNAME="chilicuil" # I was forced to do it ='(
+export DEBFULLNAME="Francisco Javier P.L."
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17-ecomorph/bin:/opt/bochs/bin/
 export QUILT_PATCHES=debian/patches
 #export PBUILDFOLDER="~/.pbuilder"

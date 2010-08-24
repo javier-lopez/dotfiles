@@ -180,7 +180,7 @@ bind $Win+33    20
 # Requires latest version (from git)
 # ---------------------------------->
 bind $Win+113   pw
-bibd $Win+114   nw
+bind $Win+114   nw
 # ----------------------------------<
 
 # Move to Workspaces
@@ -252,7 +252,8 @@ bindsym Control+Shift+a exec /usr/bin/urxvtc -e alsamixer
 bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
 
 # pcmanfm:
-bindsym Control+Shift+h exec /usr/bin/pcmanfm 
+#bindsym Control+Shift+h exec /usr/bin/pcmanfm 
+bindsym Control+Shift+h exec /usr/bin/gnome-commander
 
 # volume 
 bind Control+Shift+20 exec /usr/bin/amixer set Master 1-
@@ -264,31 +265,31 @@ bind Control+61 exec /usr/bin/mpc stop
 bind Control+Shift+60 exec /usr/bin/mpc next
 bind Control+Shift+59 exec /usr/bin/mpc prev
 
-#mode "resize" {
-        ## These bindings trigger as soon as you enter the resize mode
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
 
-        ## They resize the border in the direction you pressed, e.g.
-        ## when pressing left, the window is resized so that it has
-        ## more space on its left
+        # They resize the border in the direction you pressed, e.g.
+        # when pressing left, the window is resized so that it has
+        # more space on its left
 
-        #bindsym n resize left -10
-        #bindsym Shift+n resize left +10
+        bindsym n resize left -10
+        bindsym Shift+n resize left +10
 
-        #bindsym r resize bottom +10
-        #bindsym Shift+r resize bottom -10
+        bindsym r resize bottom +10
+        bindsym Shift+r resize bottom -10
 
-        #bindsym t resize top -10
-        #bindsym Shift+t resize top +10
+        bindsym t resize top -10
+        bindsym Shift+t resize top +10
 
-        #bindsym d resize right +10
-        #bindsym Shift+d resize right -10
+        bindsym d resize right +10
+        bindsym Shift+d resize right -10
         
-        ##Enter
-        ##bind 36 mode default
-#}
+        #Enter
+        bindsym $Win+Shift+z mode default
+}
 
-## Enter resize mode
-#bindsym $Win+r mode resize
+# Enter resize mode
+bindsym $Win+z mode resize
 
 # Get me to the next open VIM instance
 #bindsym Mod4+a jump "urxvt/VIM"
