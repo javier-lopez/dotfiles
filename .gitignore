@@ -5,13 +5,14 @@
 
 #But ignore these
 .AbiSuite
-.azimov
-.assaultcube
 .adobe
 .alien-arena
 .aptitude
 .asoundrc*
 .aspell.*
+.assaultcube
+.assaultcube_v1.1
+.azimov
 .bash_eternal_history
 .bash_history
 .B.blend
@@ -21,6 +22,7 @@
 .boumlrc
 .bzr.log
 .cache
+.ccache*
 .checkbox
 .compiz
 .com.zerog.registry.xml
@@ -29,6 +31,7 @@
 .covers
 .cups
 .cvspass
+.dan
 .dbus
 .ddd
 .diffuse
@@ -166,6 +169,7 @@
 .*.swp
 .synaptic
 .tdrc
+.teamviewer
 .terminfo
 .texmf-var
 .themes

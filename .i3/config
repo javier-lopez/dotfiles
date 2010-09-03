@@ -236,20 +236,20 @@ bind Control+$Alt+27 restart
 bind Control+$Alt+119 exec dmenu_session
 
 # mutt: Control+Shift+m
-#bindsym Control+Shift+m exec /usr/bin/urxvtc -e mutt
 bindsym Control+Shift+m exec /usr/bin/x-terminal-emulator -e mutt
+#bindsym Control+Shift+m exec /bin/sh -c mutt
 
 # irssi: Control+Shift+i
-#bindsym Control+Shift+i exec /usr/bin/urxvtc -e irssi
 bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
+#bindsym Control+Shift+i exec /bin/sh -c irssi
 
 # pms: Control+Shift+p
-#bindsym Control+Shift+p exec /usr/bin/urxvtc -e pms
 bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e pms
+#bindsym Control+Shift+p exec sh -c pms
 
 # alsamixer: Control+Shift+a
-bindsym Control+Shift+a exec /usr/bin/urxvtc -e alsamixer
 bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
+#bindsym Control+Shift+a exec /bin/sh -c alsamixer
 
 # pcmanfm:
 #bindsym Control+Shift+h exec /usr/bin/pcmanfm 
@@ -292,13 +292,14 @@ mode "resize" {
 bindsym $Win+z mode resize
 
 # Get me to the next open VIM instance
-#bindsym Mod4+a jump "urxvt/VIM"
+bindsym $Win+v jump "buzz/VIM"
+bindsym $Win+m jump "buzz/mutt"
 
 # Read 1 character and mark the current window with this character
-#bindsym Mod4+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
+#bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
 
 # Read 1 character and go to the window with the character
-#bindsym Mod4+g exec i3-input -p 'goto ' -l 1 -P 'Goto: '
+#bindsym $Win+g exec i3-input -p 'goto ' -l 1 -P 'Goto: '
 
 # ###################################
 # ############# ASSIGNS #############

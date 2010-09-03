@@ -1,4 +1,4 @@
-# Last review            Fri 06 Aug 2010 12:28:44 PM CDT
+# Last review            Fri 03 Sep 2010 07:51:05 AM CDT
 # vim: tw=80 ft=sh
 
 # ===aliases===
@@ -10,6 +10,7 @@ alias beep='echo -e "\007\c"'
 alias c='cd'
 alias cc='LANGUAGE=en cc'
 alias ..='cd ..'
+alias ....='cd ../..'
 alias cd-='cd -'
 alias cd..='cd ..'
 alias cp='cp -v'
@@ -67,11 +68,19 @@ alias so='source ~/.bashrc'
 alias startx='~/code/learn/sh/startx'
 alias st='setup'
 alias terminal='gnome-terminal'
-alias todo='todo -d ~/.todo/todo.cfg'
+alias todo='todo.sh -d ~/.todo/config'
 alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
-alias t='todo'
+alias t='todo.sh'
 alias ubuntu='cd ~/misc/packages/ubuntu/ubuntu-10.04/'
+alias ubuntu.app='cd ~/misc/packages/ubuntu/ubuntu-10.04/app/'
+alias ubuntu.diffs='cd ~/misc/packages/ubuntu/ubuntu-10.04/diffs/'
+alias ubuntu.isos='cd ~/misc/packages/ubuntu/ubuntu-10.04/isos/'
+alias ubuntu.merge='cd ~/misc/packages/ubuntu/ubuntu-10.04/merge'
+alias ubuntu.presentations='cd ~/misc/packages/ubuntu/ubuntu-10.04/presentations'
+alias ubuntu.tools='cd ~/misc/packages/ubuntu/ubuntu-10.04/tools/'
 alias results='cd ~/misc/packages/ubuntu/results/'
+alias results.maverick='cd ~/misc/packages/ubuntu/results/maverick-i386/'
+alias results.lucid='cd ~/misc/packages/ubuntu/results/lucid-i386/'
 alias update='sudo apt-get update'
 alias update-fonts='sudo fc-cache -f -v'
 alias upgrade='sudo apt-get upgrade'
