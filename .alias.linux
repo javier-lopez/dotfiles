@@ -71,16 +71,23 @@ alias terminal='gnome-terminal'
 alias todo='todo.sh -d ~/.todo/config'
 alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
 alias t='todo.sh'
-alias ubuntu='cd ~/misc/packages/ubuntu/ubuntu-10.04/'
-alias ubuntu.app='cd ~/misc/packages/ubuntu/ubuntu-10.04/app/'
-alias ubuntu.diffs='cd ~/misc/packages/ubuntu/ubuntu-10.04/diffs/'
-alias ubuntu.isos='cd ~/misc/packages/ubuntu/ubuntu-10.04/isos/'
-alias ubuntu.merge='cd ~/misc/packages/ubuntu/ubuntu-10.04/merge'
-alias ubuntu.presentations='cd ~/misc/packages/ubuntu/ubuntu-10.04/presentations'
-alias ubuntu.tools='cd ~/misc/packages/ubuntu/ubuntu-10.04/tools/'
-alias results='cd ~/misc/packages/ubuntu/results/'
-alias results.maverick='cd ~/misc/packages/ubuntu/results/maverick-i386/'
-alias results.lucid='cd ~/misc/packages/ubuntu/results/lucid-i386/'
+alias ubuntu.maverick='cd ~/misc/packaging/ubuntu/ubuntu-10.04/'
+alias ubuntu.maverick.app='cd ~/misc/packaging/ubuntu/ubuntu-10.04/app/'
+alias ubuntu.maverick.diffs='cd ~/misc/packaging/ubuntu/ubuntu-10.04/diffs/'
+alias ubuntu.maverick.isos='cd ~/misc/packaging/ubuntu/ubuntu-10.04/isos/'
+alias ubuntu.maverick.merge='cd ~/misc/packaging/ubuntu/ubuntu-10.04/merge'
+alias ubuntu.maverick.presentations='cd ~/misc/packaging/ubuntu/ubuntu-10.04/presentations'
+alias ubuntu.maverick.tools='cd ~/misc/packaging/ubuntu/ubuntu-10.04/tools/'
+alias ubuntu.lucid='cd ~/misc/packaging/ubuntu/ubuntu-9.10/'
+alias ubuntu.lucid.app='cd ~/misc/packaging/ubuntu/ubuntu-9.10/app/'
+alias ubuntu.lucid.diffs='cd ~/misc/packaging/ubuntu/ubuntu-9.10/diffs/'
+alias ubuntu.lucid.isos='cd ~/misc/packaging/ubuntu/ubuntu-9.10//isos/'
+alias ubuntu.lucid.merge='cd ~/misc/packaging/ubuntu/ubuntu-9.10//merge'
+alias ubuntu.lucid.presentations='cd ~/misc/packaging/ubuntu/ubuntu-9.10//presentations'
+alias ubuntu.lucid.tools='cd ~/misc/packaging/ubuntu/ubuntu-9.10/tools/'
+alias results='cd ~/misc/packaging/ubuntu/results/'
+alias results.maverick='cd ~/misc/packaging/ubuntu/results/maverick-i386/'
+alias results.lucid='cd ~/misc/packaging/ubuntu/results/lucid-i386/'
 alias update='sudo apt-get update'
 alias update-fonts='sudo fc-cache -f -v'
 alias upgrade='sudo apt-get upgrade'
@@ -94,6 +101,7 @@ alias zz='exit'
 
 #====VARS====
 export EDITOR=vim
+#export TERM=rxvt
 export BROWSER=firefox
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 

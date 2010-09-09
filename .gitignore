@@ -160,6 +160,7 @@
 .silc
 .sjphone
 .skel
+.softmaker
 .ssh/authorized_keys
 .ssh/id*
 .ssh/known_hosts
