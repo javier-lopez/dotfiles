@@ -1372,7 +1372,10 @@ snippet main
 	int main(int argc, char const* argv[])
 	{
 		${1}
-		return 0;
+		fflush(stdout);
+		if (ferror(stdout))
+			exit(EXIT_FAILURE);
+		return EXIT_SUCCESS;
 	}
 # #include <...>
 snippet inc

@@ -11,7 +11,7 @@
 " [+]findmate.vim [*]IndexedSearch.vim [+]php-doc.vim [+]vimbuddy.vim
 " NERD_commenter.vim tasklist.vim align.vim CSApprox.vim checksyntax.vim
 " fugitive.vim refactor.vim Drawit.vim omnicppcomplete.vim netrwPlugin.vim
-" securemodelines.vim markdown.vim [+]irssilog.vim
+" securemodelines.vim markdown.vim [+]irssilog.vim twitvim.vim echofunc.vim
 "
 "[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
 "[*] TODO 18-11-2009 21:19
@@ -37,7 +37,7 @@ let loaded_dbext            = 1
 let loaded_Matrix           = 1
 "let loaded_ragtag           = 1
 "let loaded_nextCS           = 1
-let loaded_tetris           = 1
+"let loaded_tetris           = 1
 "let loaded_VCSCommand       = 1
 "let qb_loaded               = 1
 "let loaded_surround         = 1
@@ -56,6 +56,8 @@ let loaded_fugitive         = 1
 "let loaded_FindInNERDTree   = 1
 "let loaded_DrawItPlugin     = 1
 "let loaded_netrwPlugin      = 1
+"let loaded_twitvim          = 1
+"let loaded_echofunc         = 1
 
 
 "===============================================================================
@@ -76,9 +78,10 @@ let loaded_fugitive         = 1
 "================================ Custom functions =============================
 "===============================================================================
 
-command! WordMode       call Word_mode()
-command! DevMode        call Dev_mode()
-command! DefaultMode    call Default_mode()
+command! WordMode         call Word_mode()
+command! DevMode          call Dev_mode()
+command! PresentationMode call Presentation_mode()
+command! DefaultMode      call Default_mode()
 
 "TODO 17-11-2009 13:10 => Add a map for this, find a way to make it work with differents langs
 function! AddCscope() "Add a session only if doesn't exist a previous one
@@ -118,6 +121,7 @@ function! Google_for_snippet()
     let s:cmd = "silent !" . s:browser . " " . s:url. " 2> /dev/null &"
     execute  s:cmd
     redraw!
+    echo "Looking google code for string=" . s:wordUnderCursor . " lang=" . &ft
 endfunction
 
 function! Nerd_tree() "need it to force close it, when changing between my
@@ -297,6 +301,11 @@ function! SetProperties(_language)
         let perl_fold_blocks             = 1
         let perl_want_scope_in_variables = 1
 
+        "r'un
+        map <Leader>mr :!perl ./%<CR>
+        "run with arguments
+        map <Leader>mra :!perl ./%<SPACE>
+
     elseif (a:_language == "python")
         set filetype=python
         set syntax=python
@@ -338,16 +347,6 @@ function! Skel(_language)
     endif
 endfunction
 
-function! Word_mode()
-    if exists ("s:Word_mode")
-        call Word_mode_off()
-        unlet s:Word_mode
-    else
-        call Word_mode_on()
-        let s:Word_mode = 1
-    endif
-endfunction
-
 function! Spell(_language) "TODO 17-11-2009 13:12 => make _language optional
     if (a:_language == "en_us")
         let g:acp_completeOption = '.,w,b,t,k,kspell,i,d'
@@ -358,6 +357,16 @@ function! Spell(_language) "TODO 17-11-2009 13:12 => make _language optional
     elseif (a:_language == "none")
         let g:acp_completeOption = '.,w,t,k,i,d'
         set nospell
+    endif
+endfunction
+
+function! Word_mode()
+    if exists ("s:Word_mode")
+        call Word_mode_off()
+        unlet s:Word_mode
+    else
+        call Word_mode_on()
+        let s:Word_mode = 1
     endif
 endfunction
 
@@ -467,12 +476,62 @@ function! Dev_mode_off()
     redraw!
 endfunction
 
+function! Presentation_mode()
+    if exists ("s:Presentation_mode")
+        call Presentation_mode_off()
+        unlet s:Presentation_mode
+    else
+        call Presentation_mode_on()
+        let s:Presentation_mode = 1
+    endif
+endfunction
+
+function! Presentation_mode_on()
+    " This .vimrc file was created firstly by Vroom-0.23 and edited later by me =D
+    map <SPACE> :n<CR>:<CR>
+    map <BACKSPACE> :N<CR>:<CR>
+    map RR  :!vroom -run %<CR>
+    map VV :!vroom -vroom<CR>
+    map OO :!open <cWORD><CR><CR>
+    map EE :e <cWORD><CR>
+    map !! G:!open <cWORD><CR><CR>
+    map ?? :e .help<CR>
+    let g:presentation_statusline=&statusline
+
+    set statusline=
+    set statusline+=%2*%-.50F\                               "file name (full)
+    set statusline+=%*\ \ \ Press\ \<Space\>\ or\ \<Backspace\>\ to\ continue
+    set statusline+=%h%1*%m%r%w%0*                           "flags
+    set statusline+=%=                                       "right align
+    set statusline+=%2*%-8{strftime('%H:%M')}                "time
+    set statusline+=Powered\ by\ Vroom!
+
+    redraw!
+endf
+
+function! Presentation_mode_off()
+    unmap <SPACE>
+    noremap <SPACE> i <Esc>
+    unmap <BACKSPACE>
+    unmap RR
+    unmap VV
+    unmap OO
+    unmap EE
+    unmap !!
+    unmap ??
+    let &statusline=g:presentation_statusline
+    redraw!
+endf
+
 function! Default_mode()
+    if exists ("s:Word_mode")
+        call Word_mode()
+    endif
     if exists ("s:Dev_mode")
         call Dev_mode()
     endif
-    if exists ("s:Word_mode")
-        call Word_mode()
+    if exists ("s:Presentation_mode")
+        call Presentation_mode()
     endif
 
     if exists ("s:nerd_tree")
@@ -586,7 +645,7 @@ set viminfo='1000,<1000,s100,h
 set laststatus=2                                         "always show statusline
 set statusline=
 set statusline+=%2*%-2n                                  "buffer number
-set statusline+=%*\ %F\                                  "file name (full)
+set statusline+=%*\ %-.50F\                              "file name (full)
 set statusline+=%{VCSInfo()}                             "branch info
 set statusline+=%h%1*%m%r%w%0*                           "flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'},             "filetype
@@ -595,6 +654,7 @@ set statusline+=%{&fileformat}]                          "file format
 if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
     set statusline+=\ %{VimBuddy()}                      "vim buddy
 endif
+set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
 set statusline+=%=                                       "right align
 set statusline+=%2*%-8{strftime('%H:%M')}                "time
 set statusline+=%-7{FileSize()}                          "file size
@@ -649,8 +709,8 @@ let g:GetLatestVimScripts_allowautoinstall=1
 "let g:secure_modelines_verbose=1
 
 "snipmate
-let g:snips_author      = "chilicuil"
-let g:snips_authorEmail = "chilicuil@i.am"
+let g:snips_author      = "P.L. Javier"
+let g:snips_authorEmail = "jav@pobox.com"
 let g:snippets_dir      = "~/.vim/snippets/, ~/.vim/extra-snippets/"
 
 "qbuf.vim
@@ -674,6 +734,16 @@ let g:dbext_default_profile_mysql_cursophp2 = 'type=MYSQL:user=chilicuil:
             \passwd=just4fun:dbname=cursophp2:host=localhost:port=3306'
 let g:dbext_default_profile_mysql_cursophp = 'type=MYSQL:user=chilicuil:
             \passwd=just4fun:dbname=cursophp:host=localhost:port=3306'
+
+"twitvim.vim
+let twitvim_login         = "chilicuil:andreaforever"
+let twitvim_enable_perl   = 1
+let twitvim_enable_python = 1
+let twitvim_enable_ruby   = 1
+let twitvim_enable_tcl    = 1
+let twitvim_browser_cmd   = "x-www-browser"
+let twitvim_token_file    = "/home/chilicuil/.vim/.twitvim_token_file"
+let twitvim_count         = 50
 
 "nerdtree
 let g:NERDTreeWinPos    = "right"
@@ -776,7 +846,7 @@ let mapleader = ","
 map <Leader>M :Matrix<CR>
 
 "online doc search
-map <silent> <Leader>g :call Google_for_snippet()<CR>
+map <silent> <Leader>c :call Google_for_snippet()<CR>
 
 "Trailer map
 map <silent> <Leader>v :call Trailer()<CR>
@@ -787,8 +857,9 @@ map <silent> <Leader>l :call Tag_list()<CR>
 
 map <silent> <Leader>m :set number!<CR>
 
-map <silent> <Leader>d :DevMode<CR>
 map <silent> <Leader>w :WordMode<CR>
+map <silent> <Leader>d :DevMode<CR>
+map <silent> <Leader>p :PresentationMode<CR>
 map <silent> <Leader>f :DefaultMode<CR>
 
 "Folding
