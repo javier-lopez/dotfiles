@@ -79,7 +79,7 @@ export HISTCONTROL=ignoreboth
 #export WHITE=$'\E[1;37m'
 #export YELLOW=$'\E[0;33m'
 
-export GPGKEY=B2F0CD93
+export GPGKEY=BC9C8902
 
 #===============================================================================
 #=============================== Custom alias ==================================

@@ -116,7 +116,7 @@ alias pbuilder.maverick='sudo DIST=maverick pbuilder'
 alias pbuilder.sid='sudo DIST=sid pbuilder'
 alias pbuilder.unstable='sudo DIST=unstable pbuilder'
 
-export DEBEMAIL="chilicuil@i.am"
+export DEBEMAIL="fco.plj@gmail.com"
 #export DEBFULLNAME="chilicuil" # I was forced to do it ='(
 export DEBFULLNAME="Francisco Javier P.L."
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17-ecomorph/bin:/opt/bochs/bin/

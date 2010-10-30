@@ -22,3 +22,4 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+`echo $- | grep -qs i` && byobu-launcher && exit 0

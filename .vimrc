@@ -459,7 +459,7 @@ function! Dev_mode_off()
         call Tag_list()
     endif
 
-    set nocursorline
+    "set nocursorline
     set nonumber
     set nolinebreak
     unmap +
@@ -488,6 +488,8 @@ endfunction
 
 function! Presentation_mode_on()
     " This .vimrc file was created firstly by Vroom-0.23 and edited later by me =D
+    set nocursorline         "highlight the screen line of the cursor
+
     map <SPACE> :n<CR>:<CR>
     map <BACKSPACE> :N<CR>:<CR>
     map RR  :!vroom -run %<CR>
@@ -499,17 +501,18 @@ function! Presentation_mode_on()
     let g:presentation_statusline=&statusline
 
     set statusline=
-    set statusline+=%2*%-.50F\                               "file name (full)
+    set statusline+=%2*%-.50f\                               "file name (!full)
     set statusline+=%*\ \ \ Press\ \<Space\>\ or\ \<Backspace\>\ to\ continue
     set statusline+=%h%1*%m%r%w%0*                           "flags
     set statusline+=%=                                       "right align
     set statusline+=%2*%-8{strftime('%H:%M')}                "time
-    set statusline+=Powered\ by\ Vroom!
+    "set statusline+=Powered\ by\ Vroom!
 
     redraw!
 endf
 
 function! Presentation_mode_off()
+    set cursorline         "highlight the screen line of the cursor
     unmap <SPACE>
     noremap <SPACE> i <Esc>
     unmap <BACKSPACE>
@@ -554,6 +557,8 @@ endif
 
 if has ('gui_running')
     set background=dark    "i like dark colors
+    "set antialias
+    "set guifont=Inconsolata\ 11
     "colorscheme wombat     "http://files.werx.dk/wombat.vim
     colorscheme ir_black
 else

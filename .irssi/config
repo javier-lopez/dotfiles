@@ -1,8 +1,301 @@
+########################################################
+#Last review            Tue 01 Jun 2010 04:32:02 AM CDT
+########################################################
+
+# vim: set ts=8 sw=4 tw=0 ft=config : 
+# scripts used: active_notify, auto_away, beepaway, bitlbee_join_notice
+#               bitlbee_tab_completion, bitlbee_typing_notice, follow
+#               iMPD, ircops, nickbar, nickcolor, screen_away, trackbar
+#               scriptassist, showhilight
+
+servers = (
+  {
+    address = "irc.freenode.net";
+    chatnet = "fn";
+    port = "6667";
+    autoconnect = "yes";
+    nick = "chilicuil";
+    password = "159263";
+  },
+  {
+    address = "im.bitlbee.org";
+    chatnet = "im";
+    port = "6667";
+    autoconnect = "yes";
+    nick = "chilicuil";
+  }
+);
+
+chatnets = {
+  fn = { type = "IRC"; autosendcmd = "wait 2000"; };
+  im = {
+    type = "IRC";
+    autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
+  };
+};
+
+channels = (
+  { name = "#asterisk"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#bash"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#debian"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#e"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#freebsd"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#netbsd"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#openbsd"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#vim"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#metasploit"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-meeting"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-packaging"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-devel"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-motu"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-reviews"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-bugs"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-bugs-announce"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-es"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-es-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#fel-clan"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-desktop"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-classroom"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-server"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#networking"; chatnet = "fn"; autojoin = "Yes"; },
+
+);
+
+aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WI = "whois";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "who";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+};
+
+statusbar = {
+  # formats:
+  # when using {templates}, the template is shown only if its argument isnt
+  # empty unless no argument is given. for example {sb} is printed always,
+  # but {sb $T} is printed only if $T isnt empty.
+
+  items = {
+    # start/end text in statusbars
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+
+    # treated "normally", you could change the time/user name to whatever
+    time = "{sb $Z}";
+    user = "{sb $cumode$N{sbmode $usermode}{sbaway $A}}";
+
+    # treated specially .. window is printed with non-empty windows,
+    # window_empty is printed with empty windows
+    window = "{sb $winref:$T{sbmode $M}}";
+    window_empty = "{sb $winref{sbservertag $tag}}";
+    prompt = "{prompt $[.15]T}";
+    prompt_empty = "{prompt $winname}";
+    topic = " $topic";
+    topic_empty = " Irssi v$J - http://irssi.org/help/";
+
+    # all of these treated specially, theyre only displayed when needed
+    lag = "{sb Lag: $0-}";
+    act = "{sb Act: $0-}";
+    more = "-- more --";
+  };
+
+  # theres two type of statusbars. root statusbars are either at the top
+  # of the screen or at the bottom of the screen. window statusbars are at
+  # the top/bottom of each split window in screen.
+  default = {
+    # the "default statusbar" to be displayed at the bottom of the window.
+    # contains all the normal items.
+    window = {
+
+      # window, root
+      type = "window";
+      # top, bottom
+      placement = "bottom";
+      # number
+      position = "1";
+      # active, inactive, always
+      visible = "active";
+
+      # list of items in statusbar in the display order
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+        join_notice = { };
+        typing_notice = { };
+      };
+    };
+
+    # statusbar to use in inactive split windows
+    window_inact = {
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "inactive";
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    # we treat input line as yet another statusbar :) Its possible to
+    # add other items before or after the input line item.
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      # we want to be at the bottom always
+      position = "100";
+      visible = "always";
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        # treated specially, this is the real input line.
+        input = { priority = "10"; };
+      };
+    };
+
+    # topicbar
+    topic = {
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+      items = {
+        barstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+    mpdbar = { disabled = "yes"; };
+  };
+};
+
 settings = {
   core = {
     real_name = "chilicuil";
     user_name = "chilicuil";
     nick = "chilicuil";
+
   };
-  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    autolog = "yes";
+    autolog_path = "~/.irssi.logs/$tag/$0-%m%y.log";
+    show_nickmode_empty = "yes";
+    theme = "dark_winter";
+    bell_beeps = "yes";
+    beep_when_away = "yes";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+  };
+  "fe-text" = {
+    colors = "yes";
+    autostick_split_windows = "yes";
+    actlist_sort = "refnum";
+  };
+  "perl/core/scripts" = { notify_broadcast = "yes"; mpd_port = "6600"; };
 };
+
+#logs = { };
+
+ignores = (
+  {
+    level = "JOINS PARTS QUITS";
+    channels = (
+      "#asterisk",
+      "#bash",
+      "#debian-es",
+      "#debian",
+      "#e",
+      "##freebsd",
+      "#netbsd",
+      "#openbsd",
+      "#vim",
+      "#metasploit",
+      "#ubuntu-bugs",
+      "#ubuntu-es",
+      "#ubuntu-es-offtopic",
+      "#ubuntu-mx",
+      "#ubuntu-meeting",
+      "#ubuntu-motu",
+      "#ubuntu-reviews",
+      "#ubuntu-packaging",
+      "#ubuntu-devel",
+      "#ubuntu-desktop",
+      "#ubuntu-classroom",
+      "#ubuntu-classroom-chat",
+      "#ubuntu-server",
+      "##networking",
+      "#ubuntu",
+      "#ubuntu-bugs-announce",
+      #"#fel-clan"
+    );
+    network = "fn";
+  },
+  { level = "MODES"; channels = ( "&amp;bitlbee" ); network = "im"; },
+  { mask = "nando"; level = "ALL"; },
+  { mask = "nando_"; level = "ALL"; },
+  { mask = "FAMN"; level = "ALL"; },
+  { mask = "FAMM"; level = "ALL"; }
+);
+
+keyboard = (
+  { key = "meta-1"; id = "change_window"; data = "1"; },
+  { key = "meta-2"; id = "change_window"; data = "2"; },
+  { key = "meta-3"; id = "change_window"; data = "3"; },
+  { key = "meta-4"; id = "change_window"; data = "4"; },
+  { key = "meta-5"; id = "change_window"; data = "5"; },
+  { key = "meta-6"; id = "change_window"; data = "6"; },
+  { key = "meta-7"; id = "change_window"; data = "7"; },
+  { key = "meta-8"; id = "change_window"; data = "8"; },
+  { key = "meta-9"; id = "change_window"; data = "9"; },
+  { key = "meta-0"; id = "change_window"; data = "10"; }
+);
+
+windows = { 1 = { immortal = "yes"; name = "(status)"; level = "ALL"; }; };
+mainwindows = { 1 = { first_line = "1"; lines = "52"; }; };
+logs = { };

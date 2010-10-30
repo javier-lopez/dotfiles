@@ -6,15 +6,16 @@
 
 # === General settings ===
 push <show-version>                                                           #show version
+set use_from
 set nomark_old                                                                #avoid marking unread msgs as old ones
 set nobeep                                                                    #plz dont be noisy
 set delete                = yes                                               #don't confirm
 set quit                  = yes                                               #don't confirm
 set imap_check_subscribed = yes                                               #automatically poll subscribed mailboxes for new mail
-set query_command         = "~/code/learn/python/goobook query '%s'"          #autocomplete addresses
+#set query_command         = "~/code/learn/python/goobook query '%s'"          #autocomplete addresses
 set sort                  = "threads"
-set sort_aux              = "last-date-received"
-#set sort_aux             = "reverse-last-date-received"                      #like gmail
+#set sort_aux              = "last-date-received"
+set sort_aux             = "reverse-last-date-received"                      #like gmail
 set sort_re                                                                   # thread based on regex
 set reply_regexp          = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 set followup_to           = no                                                #http://larve.net/people/hugo/2000/07/ml-mutt
@@ -71,8 +72,8 @@ bind editor <Tab>   complete-query
 bind editor       complete
 # bindings
 bind pager i            exit
-bind pager n            next-undeleted
-bind pager p            previous-undeleted
+#bind pager n            next-undeleted
+#bind pager p            previous-undeleted
 bind pager /            search
 bind pager <up>         previous-line
 bind pager <down>       next-line
