@@ -104,8 +104,8 @@ BASETGZ="$PATH_PBUILDER/$NAME/$NAME-base.tgz"
 DISTRIBUTION="$DIST"
 APTCACHE="$PATH_PBUILDER/$NAME/aptcache/"
 BUILDPLACE="$PATH_PBUILDER/$NAME/build/"
-BUILDRESULT="/home/chilicuil/misc/packaging/ubuntu/results/$NAME/"
-HOOKDIR="/home/chilicuil/.pbuilder-hooks/"
+BUILDRESULT="$HOME/misc/packaging/ubuntu/results/$NAME/"
+HOOKDIR="$HOME/.pbuilder-hooks/"
 ###################################################################################
 
 if $(echo ${DEBIAN_SUITES[@]} | grep -q $DIST); then

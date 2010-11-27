@@ -7,7 +7,7 @@
 #	only ones currently supported. Defaults to both.
 RELEASES="natty"
 
-ISOROOT="$HOME/misc/packages/ubuntu-10.04/isos/"
+ISOROOT="/home/chilicuil/misc/packaging/ubuntu/ubuntu-11.04/isos/"
 
 #    ARCHS
 #        Which computer architectures to download. If you only have

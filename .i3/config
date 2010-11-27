@@ -255,7 +255,7 @@ bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
 #bindsym Control+Shift+h exec /usr/bin/pcmanfm 
 bindsym Control+Shift+h exec /usr/bin/gnome-commander
 
-# volume 
+# volume:
 bind Control+Shift+20 exec /usr/bin/amixer set Master 1-
 bind Control+Shift+21 exec /usr/bin/amixer set Master 1+  
 
@@ -264,6 +264,11 @@ bind Control+Shift+61 exec /usr/bin/mpc play
 bind Control+61 exec /usr/bin/mpc stop
 bind Control+Shift+60 exec /usr/bin/mpc next
 bind Control+Shift+59 exec /usr/bin/mpc prev
+
+# record_desktop
+bind Control+Shift+35 exec /usr/local/bin/record_desktop
+bind Control+35 exec /usr/local/bin/record_desktop stop
+
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

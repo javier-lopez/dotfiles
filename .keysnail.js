@@ -5,6 +5,42 @@
 // ========================================================================= //
 //{{%PRESERVE%
 // Put your codes here
+
+//external editor
+key.setEditKey(["C-i"], function (ev, arg) {
+    ext.exec("edit_text", arg);
+}, "Edit with gvim", true);
+plugins.options["K2Emacs.editor"]    = "/usr/bin/gvim -f";
+
+//search function
+key.setViewKey('s', function (ev, arg) {
+        let engines = util.suggest.getEngines();
+
+        // If you want to use all available suggest engines,
+        // change suggestEngines value to util.suggest.filterEngines(engines);
+
+        let suggestEngines = [util.suggest.ss.getEngineByName("Google")];
+        let collection     = engines.map(
+            function (engine) [(engine.iconURI || {spec:""}).spec, engine.name, engine.description]
+            );
+
+        prompt.selector(
+            {
+message      : "engine:",
+collection   : collection,
+flags        : [ICON | IGNORE, 0, 0],
+header       : ["Name", "Description"],
+keymap       : {
+"s"   : "prompt-decide",
+"j"   : "prompt-next-completion",
+"k"   : "prompt-previous-completion"
+},
+callback     : function (i) {
+if (i >= 0)
+util.suggest.searchWithSuggest(engines[i], suggestEngines, "tab");
+}
+}); 
+}, "Search With Suggest", true);
 //}}%PRESERVE%
 // ========================================================================= //
 
@@ -25,6 +61,10 @@ key.suspendKey           = "C-z";
 
 
 // ============================= Key bindings ============================== //
+
+key.setViewKey('a', function (ev, arg) {
+        noscriptOverlay.allowPage(true);
+}, 'NoScript - Allow page');
 
 key.setViewKey('j', function (ev) {
     key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_DOWN, true);
