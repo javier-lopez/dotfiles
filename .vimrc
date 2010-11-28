@@ -714,8 +714,8 @@ let g:GetLatestVimScripts_allowautoinstall=1
 "let g:secure_modelines_verbose=1
 
 "snipmate
-let g:snips_author      = "P.L. Javier"
-let g:snips_authorEmail = "jav@pobox.com"
+let g:snips_author      = "chilicuil"
+let g:snips_authorEmail = "chilicuil@gmail.com"
 let g:snippets_dir      = "~/.vim/snippets/, ~/.vim/extra-snippets/"
 
 "qbuf.vim
