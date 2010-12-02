@@ -266,8 +266,8 @@ bind Control+Shift+60 exec /usr/bin/mpc next
 bind Control+Shift+59 exec /usr/bin/mpc prev
 
 # record_desktop
-bind Control+Shift+35 exec /usr/local/bin/record_desktop
-bind Control+35 exec /usr/local/bin/record_desktop stop
+bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
+bind Control+35 exec /usr/local/bin/screencast_record
 
 
 mode "resize" {
