@@ -3,6 +3,7 @@
 
 # ===aliases===
 alias autoremove='sudo apt-get autoremove'
+alias nautilus='nautilus --no-desktop'
 alias work='cd $HOME/misc/work'
 alias eix.exact='eix --exact'
 alias .bashrc='vim ~/.bashrc'
