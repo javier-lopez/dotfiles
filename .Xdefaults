@@ -82,4 +82,3 @@ URxvt.keysym.M-g: perl:mark-yank-urls:activate_mark_mode
 URxvt.perl-lib: /home/chilicuil/.urxvt/
 URxvt.perl-ext: selection
 URxvt.perl-ext: mark-yank-urls
-

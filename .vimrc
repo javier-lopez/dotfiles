@@ -590,7 +590,7 @@ set history=50       "record last 1000 commands, press 'q:' to see a new
 set t_Co=256           "set 256 colors. Make sure your console supports it.
                        "gnome-terminal and konsole work well
 set report=0           "report any changes
-set nobackup           "turn backup off
+"set nobackup           "turn backup off
 set nowb
 set noswapfile
 set tabpagemax=100     "max open tabs at the same time

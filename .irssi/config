@@ -27,11 +27,11 @@ servers = (
 );
 
 chatnets = {
-  fn = { type = "IRC"; autosendcmd = "wait 2000"; };
-  im = {
-    type = "IRC";
-    autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
-  };
+fn = { type = "IRC"; autosendcmd = "wait 2000"; };
+im = {
+type = "IRC";
+autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
+};
 };
 
 channels = (
@@ -52,7 +52,11 @@ channels = (
   { name = "#ubuntu-bugs"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-bugs-announce"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-beginners"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-beginners-team"; chatnet = "fn"; autojoin = "Yes"; },
+  { 
+    name = "#ubuntu-beginners-team";
+    chatnet = "fn";
+    autojoin = "Yes";
+  },
   #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-es"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-es-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
@@ -303,3 +307,4 @@ keyboard = (
 windows = { 1 = { immortal = "yes"; name = "(status)"; level = "ALL"; }; };
 mainwindows = { 1 = { first_line = "1"; lines = "52"; }; };
 logs = { };
+chatnets = { fn = { type = "IRC"; }; im = { type = "IRC"; }; };

@@ -9,6 +9,13 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# http://launchpadlibrarian.net/59511828/cgroup_patch
+if [ "$PS1" ] ; then
+mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
+echo $$ > /dev/cgroup/cpu/user/$$/tasks
+echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
+fi
+
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 if [ $BASH_VERSINFO -ge 4 ]; then
     shopt -s autocd cdspell dirspell
@@ -20,6 +27,8 @@ shopt -s hostcomplete histappend
 set match-hidden-files off
 set bind-tty-special-chars on
 set completion-ignore-case on
+
+set -o vi #this is sparta!
 
 # Do not show ^C when pressing Ctrl+C
 stty -ctlecho

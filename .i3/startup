@@ -1,1 +1,5 @@
 #!/bin/sh
+
+#/usr/bin/x-terminal-emulator
+#/usr/bin/pcmanfm
+#/usr/bin/x-www-browser
