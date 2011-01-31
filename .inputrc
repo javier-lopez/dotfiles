@@ -9,5 +9,5 @@
   #"\e[21~": "mc\C-M"
 
   # do history expansion when space entered
-  Space: magic-space
+  #Space: magic-space
 #$endif
