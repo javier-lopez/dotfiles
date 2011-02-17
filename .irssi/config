@@ -1,5 +1,5 @@
 ########################################################
-#Last review            Tue 01 Jun 2010 04:32:02 AM CDT
+#Last review            Thu 03 Feb 2011 10:03:46 AM CST
 ########################################################
 
 # vim: set ts=8 sw=4 tw=0 ft=config : 
@@ -49,14 +49,11 @@ channels = (
   { name = "#ubuntu-devel"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-motu"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-reviews"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-testing"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-bugs"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-bugs-announce"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-beginners"; chatnet = "fn"; autojoin = "Yes"; },
-  { 
-    name = "#ubuntu-beginners-team";
-    chatnet = "fn";
-    autojoin = "Yes";
-  },
+  { name = "#ubuntu-beginners-team"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-es"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-es-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
@@ -66,7 +63,50 @@ channels = (
   { name = "#ubuntu-classroom"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-server"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#networking"; chatnet = "fn"; autojoin = "Yes"; },
+);
 
+ignores = (
+  {
+    level = "JOINS PARTS QUITS";
+    channels = (
+      "#asterisk",
+      "#bash",
+      "#debian-es",
+      "#debian",
+      "#e",
+      "##freebsd",
+      "#netbsd",
+      "#openbsd",
+      "#vim",
+      "#metasploit",
+      "#ubuntu-bugs",
+      "#ubuntu-es",
+      "#ubuntu-es-offtopic",
+      "#ubuntu-mx",
+      "#ubuntu-meeting",
+      "#ubuntu-motu",
+      "#ubuntu-testing",
+      "#ubuntu-reviews",
+      "#ubuntu-packaging",
+      "#ubuntu-devel",
+      "#ubuntu-desktop",
+      "#ubuntu-classroom",
+      "#ubuntu-classroom-chat",
+      "#ubuntu-beginners",
+      "#ubuntu-beginners-team",
+      "#ubuntu-server",
+      "##networking",
+      "#ubuntu",
+      "#ubuntu-bugs-announce",
+      #"#fel-clan"
+    );
+    network = "fn";
+  },
+  { level = "MODES"; channels = ( "&amp;bitlbee" ); network = "im"; },
+  { mask = "nando"; level = "ALL"; },
+  { mask = "nando_"; level = "ALL"; },
+  { mask = "FAMN"; level = "ALL"; },
+  { mask = "FAMM"; level = "ALL"; }
 );
 
 aliases = {
@@ -247,49 +287,6 @@ settings = {
 };
 
 #logs = { };
-
-ignores = (
-  {
-    level = "JOINS PARTS QUITS";
-    channels = (
-      "#asterisk",
-      "#bash",
-      "#debian-es",
-      "#debian",
-      "#e",
-      "##freebsd",
-      "#netbsd",
-      "#openbsd",
-      "#vim",
-      "#metasploit",
-      "#ubuntu-bugs",
-      "#ubuntu-es",
-      "#ubuntu-es-offtopic",
-      "#ubuntu-mx",
-      "#ubuntu-meeting",
-      "#ubuntu-motu",
-      "#ubuntu-reviews",
-      "#ubuntu-packaging",
-      "#ubuntu-devel",
-      "#ubuntu-desktop",
-      "#ubuntu-classroom",
-      "#ubuntu-classroom-chat",
-      "#ubuntu-beginners",
-      "#ubuntu-beginners-team",
-      "#ubuntu-server",
-      "##networking",
-      "#ubuntu",
-      "#ubuntu-bugs-announce",
-      #"#fel-clan"
-    );
-    network = "fn";
-  },
-  { level = "MODES"; channels = ( "&amp;bitlbee" ); network = "im"; },
-  { mask = "nando"; level = "ALL"; },
-  { mask = "nando_"; level = "ALL"; },
-  { mask = "FAMN"; level = "ALL"; },
-  { mask = "FAMM"; level = "ALL"; }
-);
 
 keyboard = (
   { key = "meta-1"; id = "change_window"; data = "1"; },

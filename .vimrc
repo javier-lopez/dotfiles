@@ -1,17 +1,18 @@
 "-------------------------------------------------------------------------------
-"           Last review            Wed 18 Nov 2009 09:54:53 PM CST
+"           Last review            Sat 05 Feb 2011 07:06:49 PM CST
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
 "
 " [*]matchit.vim [*]crefvim.vim NERD_tree.vim [+]snipMate.vim breakpts.vim
-" [+]taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim [+]pastebin.vim autoclose.vim
-" dbext.vim LargeFile.vim [*]manpageviewPlugin.vim [+]Matrix.vim ragtag.vim
+" [+]taglist.vim [+]debugger.vim [*]php.vim [*]acp.vim autoclose.vim
+" dbext.vim LargeFile.vim [*]manpageviewPlugin.vim [+]Matrix.vim
 " [+]nextCS.vim [+]tetris.vim vcscommand.vim qbuf.vim surround.vim repeat.vim
-" [+]findmate.vim [*]IndexedSearch.vim [+]php-doc.vim [+]vimbuddy.vim
+" [+]findmate.vim [*]IndexedSearch.vim [+]vimbuddy.vim
 " NERD_commenter.vim tasklist.vim align.vim CSApprox.vim checksyntax.vim
 " fugitive.vim refactor.vim Drawit.vim omnicppcomplete.vim netrwPlugin.vim
-" securemodelines.vim markdown.vim [+]irssilog.vim twitvim.vim echofunc.vim
+" securemodelines.vim markdown.vim [+]irssilog.vim twitvim.vim 
+" hiswinPlugin.vim cctree.vim command_t.vim gist.vim unimparied.vim
 "
 "[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
 "[*] TODO 18-11-2009 21:19
@@ -29,13 +30,11 @@ let loaded_breakpts          = 1
 "let loaded_taglist_mod      = 1
 let loaded_debugger         = 1
 "let loaded_acp              = 1
-let loader_pastebin         = 1
 let loaded_AutoClose         = 1
 let loaded_dbext            = 1
 "let loaded_LargeFile        = 1
 "let loaded_manpageviewPlugin = 1
-let loaded_Matrix           = 1
-"let loaded_ragtag           = 1
+"let loaded_Matrix           = 1
 "let loaded_nextCS           = 1
 "let loaded_tetris           = 1
 "let loaded_VCSCommand       = 1
@@ -44,20 +43,22 @@ let loaded_Matrix           = 1
 "let loaded_repeat           = 1
 "let loaded_findMate         = 1
 "let indexed_search_plugin   = 1
-let loader_php_doc           = 1
 "let loaded_vimbuddy         = 1
 "let loaded_nerd_comments    = 1
 "let loaded_tasklist         = 1
 "let loaded_AlignMapsPlugin  = 1
 "let loaded_AlignPlugin      = 1
 "let CSApprox_loaded         = 1
-let checksyntax              = 1
-let loaded_fugitive         = 1
+let loaded_fugitive          = 1
 "let loaded_FindInNERDTree   = 1
 "let loaded_DrawItPlugin     = 1
 "let loaded_netrwPlugin      = 1
 "let loaded_twitvim          = 1
-"let loaded_echofunc         = 1
+"let loaded_undo_browse      = 1
+"let loaded_cctree           = 1
+"let command_t_loaded        = 1
+"let loaded_gist_vim         = 1
+"let loaded_unimpaired       = 1
 
 
 "===============================================================================
@@ -561,9 +562,11 @@ if has ('gui_running')
     "set guifont=Inconsolata\ 11
     "colorscheme wombat     "http://files.werx.dk/wombat.vim
     colorscheme ir_black
+    "colorscheme molokai
 else
     set background=dark    "i like dark colors
     colorscheme ir_black   "my favorite theme, it's a customized version
+    "colorscheme  molokai "my favorite theme, it's a customized version
     "http://blog.infinitered.com/entries/show/6
     "http://pastebin.com/ff366c16
     if &term == "linux"
@@ -580,6 +583,8 @@ set nocompatible       "breaks compatibility with vi, it must be enable at the
 "start to not overwrite other flags
 syntax on
 set noexrc             "don't use local version of .(g)vimrc, .exrc
+set clipboard=unnamedplus "yanks go on clipboard instead, "+p to make recover the x11 clipboard
+                          "use xsel hacks if your vim version has no "clipboad-x11 support
 "set mouse=nv           "set the mouse to work in console mode
 set mousehide          "hide the mouse while typying
 set lazyredraw         "do not redraw the screen while macros are running. It
@@ -700,13 +705,6 @@ let g:acp_completeoptPreview       = 1
 let g:acp_behaviorSnipmateLength   = 2
 let g:acp_behaviorPythonOmniLength = -1
 
-"pastebin plugin (modified)
-"let g:pasteBinURI = 'chilicuil' "Actually now it's a subdomain
-let g:nickID      = 'chilicuil'
-
-"10M for 10 min, 1H for an hour, 1D for a day, 1M for a month, and N for forever
-"let g:timePasted = 'N'
-
 "enable autoinstall of scripts w/o markup see :help GLVS
 let g:GetLatestVimScripts_allowautoinstall=1
 
@@ -717,6 +715,10 @@ let g:GetLatestVimScripts_allowautoinstall=1
 let g:snips_author      = "chilicuil"
 let g:snips_authorEmail = "chilicuil@gmail.com"
 let g:snippets_dir      = "~/.vim/snippets/, ~/.vim/extra-snippets/"
+
+"gist.vim
+let g:github_user       = "chilicuil"
+let g:github_token      = "7c0098a81da8a04fadbbc1318eaeb7e1"
 
 "qbuf.vim
 let g:qb_hotkey = "<F2>"
@@ -815,6 +817,17 @@ inoremap <c-j> <Esc><c-w>j
 inoremap <c-l> <Esc><c-w>l
 inoremap <c-h> <Esc><c-w>h
 
+"TODO 07-02-2011 11:40 => add gvim menu
+"unimpaired.vim
+"bubble single lines
+"nmap <Leader>j [e
+"nmap <Leader>k ]e
+
+"bubble multiple lines
+"vmap <Leader>j [egv
+"vmap <Leader>k ]egv
+
+
 " VIM-Shell
 " Ctrl_W e opens up a vimshell in a horizontally split window
 " Ctrl_W E opens up a vimshell in a vertically split window
@@ -850,6 +863,13 @@ let mapleader = ","
 "matrix screensaver, matrix.vim plugin
 map <Leader>M :Matrix<CR>
 
+"tasklist.vim
+map <silent> <Leader>k <Plug>TaskList
+
+"command_t
+"map <silent> <Leader>t :CommandT<CR>
+"let g:CommandTAcceptSelectionSplitMap=['<C-s>', '<C-o>']
+
 "online doc search
 map <silent> <Leader>c :call Google_for_snippet()<CR>
 
@@ -872,7 +892,7 @@ map <silent> <Leader>{ :set foldenable!<CR>
 noremap <silent> <Leader>[ za
 
 "update ~/.vimrc
-map <Leader>u :source $MYVIMRC<CR>
+map <Leader>s :source $MYVIMRC<CR>
 
 "VCSCommand
 nmap <Leader>va <Plug>VCSAdd
@@ -925,6 +945,13 @@ nnoremap <silent><Leader>ml :call AppendModeline()<CR>
 
 nnoremap <silent><Leader>g :call FindInNERDTree()<CR>
 
+"let's switch these
+nnoremap ' `
+nnoremap ` '
+
+"histwinBrowse
+nnoremap <silent><Leader>u :UB<CR><CR>
+
 "=== Tab Mappings ===
 map <Tab>c :cc<CR>
 map <Tab>n :cnext<CR>
@@ -934,7 +961,7 @@ map <Tab>p :cprevious<CR>
 map ; :
 
 "you don't wanna go far away just to press <Esc>, take care when pasting stuff
-inoremap jj <Esc>
+inoremap jj <Esc>:w<CR>
 
 "insert a space in normal mode
 noremap <Space> i <Esc>
@@ -978,9 +1005,10 @@ noremap <END> $
 "this will work only on the gui version, most terminal are unable to
 "determinate the difference between <home> and <m-home>, thanks to scroolose 
 "for the tip
-noremap <M-HOME> gg
-noremap <M-END> G
 
+noremap <M-HOME> gg
+
+noremap <M-END> G
 "move between buffers
 map <Tab><Space> :bnext <CR>
 

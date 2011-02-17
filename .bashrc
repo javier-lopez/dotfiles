@@ -12,9 +12,9 @@
 # http://launchpadlibrarian.net/59511828/cgroup_patch
 # /etc/rc.local
 if [ "$PS1" ] ; then
-mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
-echo $$ > /dev/cgroup/cpu/user/$$/tasks
-echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
+    mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
+    echo $$ > /dev/cgroup/cpu/user/$$/tasks
+    echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
 fi
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html

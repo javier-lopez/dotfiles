@@ -1,7 +1,8 @@
-# Last review            Fri 03 Sep 2010 07:51:05 AM CDT
+# Last review            Thu 17 Feb 2011 11:43:59 AM CST
 # vim: tw=80 ft=sh
 
 # ===aliases===
+alias vnc='remmina'
 alias sudo='sudo ' # http://tinyurl.com/6azvksf
 alias still_tomcat='ps auwwx | grep catalina.startup.Bootstrap'
 alias nautilus='nautilus --no-desktop'
@@ -20,6 +21,7 @@ alias ....='cd ../..'
 alias cd-='cd -'
 alias cd..='cd ..'
 alias cp='cp -v'
+alias facu='cd $HOME/misc/doc/facu/'
 alias data.books='cd $HOME/data/books/'
 alias data.images='cd $HOME/data/images/'
 alias data.music='cd $HOME/data/music/'
@@ -128,6 +130,8 @@ export BROWSER="firefox"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 
+#====ANDROID DEV===
+export PATH=$PATH:/home/chilicuil/code/android/android-sdk-linux_x86/tools/
 
 #====UBUNTU DEV===
 alias bzr.debuild='bzr bd -- -S -uc -us'
@@ -140,12 +144,12 @@ alias pbuilder.unstable='sudo DIST=unstable pbuilder'
 export DEBEMAIL="fco.plj@gmail.com"
 #export DEBFULLNAME="chilicuil"
 export DEBFULLNAME="Francisco Javier P.L."
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17-ecomorph/bin:/opt/bochs/bin/
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17-ecomorph/bin:/opt/bochs/bin/:/opt/vim/bin/
 export QUILT_PATCHES=debian/patches
 #export PBUILDFOLDER="$HOME/.pbuilder"
 
 if [ -f /usr/bin/ccache ]; then
-    export PATH="/usr/lib/ccache:$PATH"
+    export PATH="$PATH:/usr/lib/ccache"
     export CCACHE_DIR="$HOME/.ccache"
     export CCACHE_SIZE="2G"
     #export CCACHE_PREFIX="distcc"
