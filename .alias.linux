@@ -124,14 +124,18 @@ alias wifi.wl='iwlist wl s'
 alias zz='exit'
 
 #====VARS====
-export EDITOR=vim #is there any other choice?
+export EDITOR="vim" #is there any other choice?
 #export TERM=rxvt
 export BROWSER="firefox"
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+#export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 
 #====ANDROID DEV===
-export PATH=$PATH:/home/chilicuil/code/android/android-sdk-linux_x86/tools/
+export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/tools/
+export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/platform-tools/
+
+#====ELEMENTARY DEV===
+export PKG_CONFIG_PATH=/opt/e17/lib/pkgconfig/
 
 #====UBUNTU DEV===
 alias bzr.debuild='bzr bd -- -S -uc -us'

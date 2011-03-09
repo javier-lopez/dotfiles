@@ -2,6 +2,7 @@
 # Last review            Mon 17 May 2010 02:12:56 AM CDT
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf : 
+#  TODO 02-03-2011 09:57 => xbindkeys
 
 # ###################################
 # ########### NOT WORKING ###########
@@ -235,7 +236,7 @@ bind Control+Shift+45 kill
 # $Alt+Esc starts dmenu and launches the selected application
 # for now, we don’t have an own launcher
 #-sf purple
-bind $Alt+9 exec /usr/bin/dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
+bind $Alt+9 exec dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
 
 # Control+$Alt+e exits i3
 bind Control+$Alt+26 exit

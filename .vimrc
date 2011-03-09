@@ -769,7 +769,7 @@ let Tlist_Enable_Fold_Column  = 0
 " Go back to the position the cursor was on the last time this file was edited
 if has("autocmd")
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-                \|execute("normal `\"")|endif
+                \|execute("normal '\"")|endif
 endif
 
 "Language specific settings
