@@ -212,6 +212,18 @@ function! Trailer()
     endif
 endfunction
 
+function! Folding()
+    if exists ("s:folding")
+        set foldenable!                                           "off by default
+        echo "[Folding off]"
+        unlet s:folding
+    else
+        set foldenable!                                           "off by default
+        echo "[Folding on]"
+        let s:folding = 1
+    endif
+endfunction
+
 " From an idea by Michael Naumann
 " http://amix.dk/blog/viewEntry/19334
 function! VisualSearch(direction) range
@@ -686,8 +698,8 @@ endif
 "TODO 17-11-2009 13:12 => php documentation
 "set runtimepath+=/home/chilicuil/.vim/doc/php
 
-"folder options
-set foldenable!                                           "off by default
+"Folding
+set foldenable!                 "off by default
 set foldmethod=syntax
 "set foldmarker={,}
 
@@ -888,8 +900,8 @@ map <silent> <Leader>p :PresentationMode<CR>
 map <silent> <Leader>f :DefaultMode<CR>
 
 "Folding
-map <silent> <Leader>{ :set foldenable!<CR>
-noremap <silent> <Leader>[ za
+map <silent> <Leader>} :call Folding()<CR>
+noremap <silent> <Leader>{ za
 
 "update ~/.vimrc
 map <Leader>s :source $MYVIMRC<CR>
