@@ -12,7 +12,6 @@
 .aspell.*
 .assaultcube
 .assaultcube_v1.1
-.azimov
 .bash_eternal_history
 .bash_history
 .B.blend
@@ -75,8 +74,8 @@
 .gnochm
 .gnome*
 .gntpositions
-.gnu*
-.gnupg
+#.gnu*
+#.gnupg
 .grdc
 .gstreamer-0.10
 #.gtk*

@@ -11,6 +11,11 @@
 
 # http://launchpadlibrarian.net/59511828/cgroup_patch
 # /etc/rc.local
+#   mkdir -p /dev/cgroup/cpu
+#   mount -t cgroup cgroup /dev/cgroup/cpu -o cpu
+#   mkdir -m 0777 /dev/cgroup/cpu/user
+#   echo "/usr/local/sbin/cgroup_clean" > /dev/cgroup/cpu/release_agent
+#   exit 0
 if [ "$PS1" ] ; then
     mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
     echo $$ > /dev/cgroup/cpu/user/$$/tasks
@@ -88,8 +93,6 @@ export HISTCONTROL=ignoreboth
 #export RED=$'\E[0;31m'
 #export WHITE=$'\E[1;37m'
 #export YELLOW=$'\E[0;33m'
-
-export GPGKEY=BC9C8902
 
 #===============================================================================
 #=============================== Custom alias ==================================

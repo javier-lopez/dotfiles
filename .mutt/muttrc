@@ -1,5 +1,5 @@
 #########################################################
-# Last review            Sat 12 Jun 2010 11:40:16 PM CDT
+# Last review            Wed 30 Mar 2011 05:41:58 PM CST
 #########################################################
 
 # vim: set ts=8 sw=4 tw=0 ft=muttrc : 
@@ -65,60 +65,6 @@ ignore *                                                        # ignore all hea
 unignore from: to: cc: date: subject:                           # show only these
 hdr_order from: to: cc: date: subject:                          # and in this order
 
-# === Mappings ===
-bind  pager   k     previous-line
-bind  pager   j     next-line
-bind editor <Tab>   complete-query
-bind editor       complete
-# bindings
-bind pager i            exit
-#bind pager n            next-undeleted
-#bind pager p            previous-undeleted
-bind pager /            search
-bind pager <up>         previous-line
-bind pager <down>       next-line
-bind pager k            previous-line
-bind pager j            next-line
-bind pager gg           top
-bind pager G            bottom
-bind pager K            previous-undeleted
-bind pager J            next-undeleted
-bind index gg           first-entry
-bind index G            last-entry
-bind index K            previous-thread
-bind index J            next-thread
-bind index,pager R      group-reply
-bind index,pager \#     noop
-bind index i            noop
-#bind index I            noop
-
-# === Macros ===
-macro index B   "<limit>~b "                "search message bodies"
-macro index I   "<change-folder>!<enter>"   "go to Inbox"
-
-# save a decoded copy in ~
-macro index P   "<pipe-message>cat > ~/"    "save message as"
-
-
-# === MIME ===
-# Tell mutt which MIME types to auto-view
-auto_view application/zip
-auto_view application/x-gzip
-auto_view application/x-gunzip
-auto_view application/octet-stream
-auto_view application/x-zip-compressed
-auto_view application/x-tar-gz
-auto_view application/msword
-auto_view application/x-perl
-auto_view application/x-sh
-auto_view application/x-tcl
-auto_view application/RTF
-auto_view text/html
-auto_view text/x-vcard
-auto_view image/tiff
-
-alternative_order text/enriched text/plain text
-
 # === Accounts ===
 #set realname         = "Javier P.L."
 #set from             = "user@gmail.com"
@@ -133,34 +79,17 @@ set folder           = "imaps://imap.gmail.com:993"
 set spoolfile        = "imaps://imap.gmail.com:993/INBOX"
 set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts"
 set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail"
-set header_cache     = "~/.mutt/cache/headers"
-set message_cachedir = "~/.mutt/cache/bodies"
-set certificate_file = "~/.mutt/certificates"
-
-# === GnuPG ===
-set pgp_autosign             = yes
-set pgp_verify_sig           = yes
-set pgp_sign_as              = 0xB2F0CD93
-set pgp_replyencrypt         = yes
-set pgp_timeout              = 1800
-set pgp_good_sign            = "^gpg: Signed by "
-set pgp_auto_decode          = yes
-set pgp_decode_command       = "gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
-set pgp_verify_command       = "gpg --no-verbose --batch --output - --verify %s %f"
-set pgp_decrypt_command      = "gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
-set pgp_sign_command         = "gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
-set pgp_clearsign_command    = "gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
-set pgp_encrypt_only_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xB2F0CD93 -- -r %r -- %f"
-set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xB2F0CD93 -- -r %r -- %f"
-set pgp_import_command       = "gpg --no-verbose --import -v %f"
-set pgp_export_command       = "gpg --no-verbose --export --armor %r"
-set pgp_verify_key_command   = "gpg --no-verbose --batch --fingerprint --check-sigs %r"
-set pgp_list_pubring_command = "gpg --no-verbose --batch --with-colons --list-keys %r"
-set pgp_list_secring_command = "gpg --no-verbose --batch --with-colons --list-secret-keys %r"
+set header_cache     = "$HOME/.mutt/cache/headers"
+set message_cachedir = "$HOME/.mutt/cache/bodies"
+set certificate_file = "$HOME/.mutt/certificates"
 
 # === Extra stuff ===
-source ~/.mutt/accounts
-source ~/.mutt/conf/aliases
-source ~/.mutt/conf/lists
-source ~/.mutt/conf/color
-source ~/.mutt/conf/sidebar
+source $HOME/.mutt/accounts
+source $HOME/.mutt/conf/mappings
+source $HOME/.mutt/conf/macros
+source $HOME/.mutt/conf/aliases
+source $HOME/.mutt/conf/gnupg
+source $HOME/.mutt/conf/color
+source $HOME/.mutt/conf/mime
+source $HOME/.mutt/conf/sidebar
+source $HOME/.mutt/conf/lists

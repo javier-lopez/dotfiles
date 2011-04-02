@@ -2,15 +2,7 @@
 # vim: tw=80 ft=sh
 
 # ===aliases===
-alias vnc='remmina'
-alias sudo='sudo ' # http://tinyurl.com/6azvksf
-alias still_tomcat='ps auwwx | grep catalina.startup.Bootstrap'
-alias nautilus='nautilus --no-desktop'
-alias traffic='bwm-ng'
 alias autoremove='sudo apt-get autoremove'
-alias nautilus='nautilus --no-desktop'
-alias work='cd $HOME/misc/work'
-alias eix.exact='eix --exact'
 alias .bashrc='vim $HOME/.bashrc'
 alias beep='echo -e "\007\c"'
 alias ccache.ubuntu='CCACHE_DIR=$HOME/.ccache_ubuntu ccache'
@@ -21,7 +13,6 @@ alias ....='cd ../..'
 alias cd-='cd -'
 alias cd..='cd ..'
 alias cp='cp -v'
-alias facu='cd $HOME/misc/doc/facu/'
 alias data.books='cd $HOME/data/books/'
 alias data.images='cd $HOME/data/images/'
 alias data.music='cd $HOME/data/music/'
@@ -31,7 +22,17 @@ alias dev='vim -c DevMode'
 alias dir='ls -d */'
 alias dmesg.tail='dmesg|tail'
 alias e='extract'
+alias eix.exact='eix --exact'
 alias .et='vim $HOME/.bash_eternal_history'
+alias facu.argumentacion='cd $HOME/misc/doc/facu/argumentacion/'
+alias facu='cd $HOME/misc/doc/facu/'
+alias facu.desarrollo_sustentable='cd $HOME/misc/doc/facu/desarrollo_sustentable/'
+alias facu.gestion_de_sistemas='cd $HOME/misc/doc/facu/gestion_de_sistemas/'
+alias facu.historia_computacion='cd $HOME/misc/doc/facu/historia_computacion/'
+alias facu.pensamiento_matematico='cd $HOME/misc/doc/facu/pensamiento_matematico/'
+alias facu.probabilidad_y_estadistica='cd $HOME/misc/doc/facu/probabilidad_y_estadistica/'
+alias facu.programacion_estructurada='cd $HOME/misc/doc/facu/programacion_estructurada/'
+alias facu.taller_de_matematicas='cd $HOME/misc/doc/facu/taller_de_matematicas/'
 #alias firefox='swiftfox'
 alias framework='cd $HOME/code/framework-trunk/'
 alias fu-search="fu-search -c"
@@ -40,7 +41,6 @@ alias install='sudo apt-get install --no-install-recommends'
 alias isntall='sudo apt-get install --no-install-recommends'
 alias jdownloader='java -jar $HOME/code/JDownloader/JDownloader.jar'
 alias JDownloader='java -jar $HOME/code/JDownloader/JDownloader.jar'
-alias kcore='sudo cat /proc/kcore | strings | less'
 alias key.lookup='xev'
 alias kl='ls --color=auto'
 alias k='ls -CF'
@@ -69,11 +69,14 @@ alias match='join'
 alias mkdir='mkdir -vp'
 alias mutt='LANGUAGE=en mutt'
 alias mv='mv -v'
+alias nautilus='nautilus --no-desktop'
+alias nautilus='nautilus --no-desktop'
+alias ñ='ls --color=auto'
 alias notes='cd $HOME/misc/notes'
 alias otf2ttf='fontforge -script /usr/local/bin/otf_ttf'
 alias pg='ping google.com'
-alias pm='ping mononeurona.org'
 alias plugin='cd $HOME/.vim/plugin/'
+alias pm='ping mononeurona.org'
 alias purge='sudo apt-get purge'
 alias remove='sudo apt-get remove'
 alias results='cd $HOME/misc/packaging/ubuntu/results/'
@@ -86,9 +89,12 @@ alias s='ls -CF'
 alias softmaker='sudo dpkg -L softmaker-office-2010|grep bin'
 alias so='source $HOME/.bashrc'
 alias startx='$HOME/code/learn/sh/startx'
+alias still_tomcat='ps auwwx | grep catalina.startup.Bootstrap'
 alias st='setup'
+alias sudo='sudo ' # http://tinyurl.com/6azvksf
 alias terminal='gnome-terminal'
 alias todo='todo.sh -d $HOME/.todo/config'
+alias traffic='bwm-ng'
 alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
 alias t='todo.sh'
 alias ubuntu='cd $HOME/misc/packaging/ubuntu'
@@ -98,7 +104,6 @@ alias ubuntu.lucid.diffs='cd $HOME/misc/packaging/ubuntu/ubuntu-10.04/diffs/'
 alias ubuntu.lucid.isos='cd $HOME/misc/packaging/ubuntu/ubuntu-10.04/isos/'
 alias ubuntu.lucid.merge='cd $HOME/misc/packaging/ubuntu/ubuntu-10.04/merge'
 alias ubuntu.lucid.presentations='cd $HOME/misc/packaging/ubuntu/ubuntu-10.04/presentations'
-alias ubuntu.tools='cd $HOME/misc/packaging/tools/'
 alias ubuntu.maverick.app='cd $HOME/misc/packaging/ubuntu/ubuntu-10.10/app/'
 alias ubuntu.maverick='cd $HOME/misc/packaging/ubuntu/ubuntu-10.10/'
 alias ubuntu.maverick.diffs='cd $HOME/misc/packaging/ubuntu/ubuntu-10.10/diffs/'
@@ -111,30 +116,41 @@ alias ubuntu.natty.diffs='cd $HOME/misc/packaging/ubuntu/ubuntu-11.04/diffs/'
 alias ubuntu.natty.isos='cd $HOME/misc/packaging/ubuntu/ubuntu-11.04/isos/'
 alias ubuntu.natty.merge='cd $HOME/misc/packaging/ubuntu/ubuntu-11.04/merge'
 alias ubuntu.natty.presentations='cd $HOME/misc/packaging/ubuntu/ubuntu-11.04/presentations'
+alias ubuntu.tools='cd $HOME/misc/packaging/tools/'
 alias update-fonts='sudo fc-cache -f -v'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias vd='vim -c DevMode'
 alias vimdev='vim -c DevMode'
+alias vnc='remmina'
 alias vrc='vim $HOME/.vimrc'
 alias v='vim'
 alias wget='wget -c'
 alias wifi.eth1='iwlist eth1 s'
 alias wifi.wl='iwlist wl s'
+alias work='cd $HOME/misc/work'
 alias zz='exit'
 
-#====VARS====
+#====RANDOM VARS===
 export EDITOR="vim" #is there any other choice?
 #export TERM=rxvt
 export BROWSER="firefox"
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 
+#======GNUPG=======
+export GPGKEY=BC9C8902
+alias gpg.genkey='gpg --gen-key'
+alias gpg.delete='gpg --delete-key'
+alias gpg.listkeys='gpg --list-keys'
+alias gpg.encrypt='gpg -v --encrypt --recipient $GPGKEY'
+alias gpg.decrypt='gpg -v --decrypt'
+
 #====ANDROID DEV===
 export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/tools/
 export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/platform-tools/
 
-#====ELEMENTARY DEV===
+#=ELEMENTARY DEV==
 export PKG_CONFIG_PATH=/opt/e17/lib/pkgconfig/
 
 #====UBUNTU DEV===
@@ -146,7 +162,6 @@ alias pbuilder.sid='sudo DIST=sid pbuilder'
 alias pbuilder.unstable='sudo DIST=unstable pbuilder'
 
 export DEBEMAIL="fco.plj@gmail.com"
-#export DEBFULLNAME="chilicuil"
 export DEBFULLNAME="Francisco Javier P.L."
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17-ecomorph/bin:/opt/bochs/bin/:/opt/vim/bin/
 export QUILT_PATCHES=debian/patches

@@ -1,3 +1,4 @@
+# Last review            Wed 30 Mar 2011 05:41:48 PM CST
 # vim: set ts=8 sw=4 tw=0 ft=muttrc : 
 subscribe asterisk-users@lists.digium.com
 subscribe freebsd-announce@freebsd.org
@@ -24,3 +25,9 @@ subscribe wikies-l@lists.wikimedia.org
 subscribe wireshark-users@wireshark.org
 subscribe netbsd-users@netbsd.org
 subscribe pen-test@securityfocus.com
+subscribe ubuntu-server@lists.ubuntu.com
+subscribe ubuntu-cloud@lists.ubuntu.com
+subscribe ubuntu-devel@lists.ubuntu.com
+subscribe ubuntu-devel-discuss@lists.ubuntu.com
+subscribe ubuntu-devel-announce@lists.ubuntu.com
+subscribe bugsquad-mentorship-group-alpha@lists.launchpad.net
