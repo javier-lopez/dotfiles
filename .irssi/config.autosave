@@ -216,7 +216,7 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
         join_notice = { };
         typing_notice = { };
-        window_switcher = { };
+        dccstat = { };
       };
     };
 
@@ -265,7 +265,7 @@ statusbar = {
       };
     };
     mpdbar = { disabled = "yes"; };
-    dccstat = { disabled = "yes"; };
+    dccstat = { };
   };
 };
 
@@ -290,11 +290,7 @@ settings = {
     autostick_split_windows = "yes";
     actlist_sort = "refnum";
   };
-  "perl/core/scripts" = {
-    notify_broadcast = "yes";
-    mpd_port = "6600";
-    dccstat_hide_sbar_when_inactive = "yes";
-  };
+  "perl/core/scripts" = { notify_broadcast = "yes"; mpd_port = "6600"; };
 };
 
 #logs = { };
@@ -309,16 +305,9 @@ keyboard = (
   { key = "meta-7"; id = "change_window"; data = "7"; },
   { key = "meta-8"; id = "change_window"; data = "8"; },
   { key = "meta-9"; id = "change_window"; data = "9"; },
-  { key = "meta-0"; id = "change_window"; data = "10"; },
-  { key = "^R"; id = "command"; data = "history_search "; },
-  { key = "^G"; id = "multi"; data = "erase_line;insert_text /ws "; }
+  { key = "meta-0"; id = "change_window"; data = "10"; }
 );
 
 windows = { 1 = { immortal = "yes"; name = "(status)"; level = "ALL"; }; };
 mainwindows = { 1 = { first_line = "1"; lines = "52"; }; };
 logs = { };
-
-#======================================
-#=============== [dcc] ================
-#======================================
-
