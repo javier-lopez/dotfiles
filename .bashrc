@@ -76,6 +76,10 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=ignoreboth
 
+# grep
+export GREP_COLOR='1;35' #purple
+export GREP_OPTIONS=--color=auto
+
 #export BLACK=$'\E[0;30m'
 #export BLUE=$'\E[0;34m'
 #export BROWN=$'\E[0;33m'
