@@ -1,7 +1,0 @@
-"2.1 (created: 2009/05/21 13:13:06)
-
-set guioptions=rbmT
-set runtimepath=/home/chilicuil/.vimperator
-source! /home/chilicuil/.vimperatorrc.local
-
-" vim: set ft=vimperator:
