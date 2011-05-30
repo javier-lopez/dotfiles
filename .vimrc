@@ -12,7 +12,8 @@
 " NERD_commenter.vim tasklist.vim align.vim CSApprox.vim checksyntax.vim
 " fugitive.vim refactor.vim Drawit.vim omnicppcomplete.vim netrwPlugin.vim
 " securemodelines.vim markdown.vim [+]irssilog.vim twitvim.vim 
-" hiswinPlugin.vim cctree.vim command_t.vim gist.vim unimparied.vim
+" hiswinPlugin.vim cctree.vim command_t.vim gist.vim unimparied.vim session.vim
+" easytags.vim
 "
 "[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
 "[*] TODO 18-11-2009 21:19
@@ -22,43 +23,45 @@
 "===============================================================================
 "Comment it to enable it, I know it's weird
 
-"let loaded_matchit          = 1
-let loaded_crefvim           = 1
-"let loaded_nerd_tree        = 1
-"let loaded_snips            = 1
-let loaded_breakpts          = 1
-"let loaded_taglist_mod      = 1
-let loaded_debugger         = 1
-"let loaded_acp              = 1
-let loaded_AutoClose         = 1
-let loaded_dbext            = 1
-"let loaded_LargeFile        = 1
+"let loaded_matchit           = 1
+let loaded_crefvim            = 1
+"let loaded_nerd_tree         = 1
+"let loaded_snips             = 1
+let loaded_breakpts           = 1
+"let loaded_taglist_mod       = 1
+let loaded_debugger           = 1
+"let loaded_acp               = 1
+let loaded_AutoClose          = 1
+let loaded_dbext              = 1
+"let loaded_LargeFile         = 1
 "let loaded_manpageviewPlugin = 1
-"let loaded_Matrix           = 1
-"let loaded_nextCS           = 1
-"let loaded_tetris           = 1
-"let loaded_VCSCommand       = 1
-"let qb_loaded               = 1
-"let loaded_surround         = 1
-"let loaded_repeat           = 1
-"let loaded_findMate         = 1
-"let indexed_search_plugin   = 1
-"let loaded_vimbuddy         = 1
-"let loaded_nerd_comments    = 1
-"let loaded_tasklist         = 1
-"let loaded_AlignMapsPlugin  = 1
-"let loaded_AlignPlugin      = 1
-"let CSApprox_loaded         = 1
-let loaded_fugitive          = 1
-"let loaded_FindInNERDTree   = 1
-"let loaded_DrawItPlugin     = 1
-"let loaded_netrwPlugin      = 1
-"let loaded_twitvim          = 1
-"let loaded_undo_browse      = 1
-"let loaded_cctree           = 1
-"let command_t_loaded        = 1
-"let loaded_gist_vim         = 1
-"let loaded_unimpaired       = 1
+"let loaded_Matrix            = 1
+"let loaded_nextCS            = 1
+"let loaded_tetris            = 1
+"let loaded_VCSCommand        = 1
+"let qb_loaded                = 1
+"let loaded_surround          = 1
+"let loaded_repeat            = 1
+"let loaded_findMate          = 1
+"let indexed_search_plugin    = 1
+"let loaded_vimbuddy          = 1
+"let loaded_nerd_comments     = 1
+"let loaded_tasklist          = 1
+"let loaded_AlignMapsPlugin   = 1
+"let loaded_AlignPlugin       = 1
+"let CSApprox_loaded          = 1
+let loaded_fugitive           = 1
+"let loaded_FindInNERDTree    = 1
+"let loaded_DrawItPlugin      = 1
+"let loaded_netrwPlugin       = 1
+"let loaded_twitvim           = 1
+"let loaded_undo_browse       = 1
+"let loaded_cctree            = 1
+"let command_t_loaded         = 1
+"let loaded_gist_vim          = 1
+"let loaded_unimpaired        = 1
+"let loaded_session           = 1
+"let loaded_easytags          = 1
 
 
 "===============================================================================
@@ -755,24 +758,39 @@ let g:dbext_default_profile_mysql_cursophp = 'type=MYSQL:user=chilicuil:
             \passwd=just4fun:dbname=cursophp:host=localhost:port=3306'
 
 "twitvim.vim
-let twitvim_login         = "chilicuil:andreaforever"
+let twitvim_login         = 'chilicuil:andreaforever'
 let twitvim_enable_perl   = 1
 let twitvim_enable_python = 1
 let twitvim_enable_ruby   = 1
 let twitvim_enable_tcl    = 1
-let twitvim_browser_cmd   = "x-www-browser"
-let twitvim_token_file    = "/home/chilicuil/.vim/.twitvim_token_file"
+let twitvim_browser_cmd   = 'x-www-browser'
+let twitvim_token_file    = '~/.vim/.twitvim_token_file'
 let twitvim_count         = 50
 
 "nerdtree
-let g:NERDTreeWinPos    = "right"
-let g:NERDTreeWinSize   = 25
-let g:NERDTreeMouseMode = 3
+let g:NERDTreeWinPos      = 'right'
+let g:NERDTreeWinSize     = 25
+let g:NERDTreeMouseMode   = 3
 
+"tlist
 "let g:Tlist_Use_Right_Window = 1
 let g:Tlist_WinWidth          = 25
 let g:Tlist_Show_One_File     = 1
 let Tlist_Enable_Fold_Column  = 0
+
+"session, fix
+let g:session_directory       = '~/.session_vim'
+"let g:session_autoload       = 1
+"let g:session_autosave       = 1
+
+"easytags
+let g:easytags_file                    = '~/.ctags/tags'
+"let g:easytags_always_enabled         = 1
+"let g:easytags_on_cursorhold          = 0 "disable the automatic refresh
+"let g:easytags_autorecurse            = 1 "take care with this option!!!
+"let g:easytags_include_members        = 1 "struct/classes for c++, java, etc
+"let g:easytags_suppress_ctags_warning = 1
+"set tags=./.tags;,~/ctags/tags
 
 "===============================================================================
 "================================ Autoloads by events ==========================
@@ -1063,6 +1081,8 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " "G" puts the cursor in the last line
 " "'0" returns to the last mark
 " "Ctrl-w f" goes to the file under the cursor
+" "Ctrl-]" jumps to the function's definition :tags
+" "Ctrl-T" jumps back
 
 " ==Text objects==
 " "daw" deletes word under cursor, see :h text-objects, (c)hange & (y)ank

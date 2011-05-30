@@ -1,10 +1,12 @@
 #########################################################
-# Last review            Wed 30 Mar 2011 05:41:58 PM CST
+# Last review            Sun 01 May 2011 06:08:29 PM CDT
 #########################################################
 
 # vim: set ts=8 sw=4 tw=0 ft=muttrc : 
 
-# === General settings ===
+# =========================================================================================
+# === General settings ====================================================================
+# =========================================================================================
 push <show-version>                                                           #show version
 set use_from
 set nomark_old                                                                #avoid marking unread msgs as old ones
@@ -12,15 +14,15 @@ set nobeep                                                                    #p
 set delete                = yes                                               #don't confirm
 set quit                  = yes                                               #don't confirm
 set imap_check_subscribed = yes                                               #automatically poll subscribed mailboxes for new mail
-#set query_command         = "~/code/learn/python/goobook query '%s'"          #autocomplete addresses
+#set query_command         = "~/code/learn/python/goobook query '%s'"          #autocomplete addresses, TODO
 set sort                  = "threads"
 #set sort_aux              = "last-date-received"
-set sort_aux             = "reverse-last-date-received"                      #like gmail
+set sort_aux              = "reverse-last-date-received"                      #like gmail
 set sort_re                                                                   # thread based on regex
 set reply_regexp          = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 set followup_to           = no                                                #http://larve.net/people/hugo/2000/07/ml-mutt
-set pager_index_lines   = 10                                                  # number of index lines to show 
-set pager_context       = 5                                                   # number of context lines to show
+set pager_index_lines     = 10                                                # number of index lines to show 
+set pager_context         = 5                                                 # number of context lines to show
 set pager_stop                                                                # don't go to the next message automatically
 unset markers                                                                 # no ugly plus signs
 set menu_scroll
@@ -35,13 +37,12 @@ set timeout               = 20
 set move                  = no                                                #don't ask to move read messages to mbox on exit
 set pipe_decode                                                               # strip headers and eval mimes when piping
 set thorough_search                                                           # strip headers and eval mimes before searching
-#set signature             = ~/.mutt/conf/signature
 
 # formats
 set date_format         = "%m/%d/%y at %I:%M%P"
 set index_format        = "%3C %Z %D %-15.15L (%?l?%4l&%4c?) %s"
-set status_format       = "-%r- %v ---[ Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
 set alias_format        = "%4n %t %-20a  %r"
+#set status_format goes in the account settings 
 
 # composing mail
 set envelope_from                                               # which from?
@@ -65,31 +66,310 @@ ignore *                                                        # ignore all hea
 unignore from: to: cc: date: subject:                           # show only these
 hdr_order from: to: cc: date: subject:                          # and in this order
 
-# === Accounts ===
-#set realname         = "Javier P.L."
-#set from             = "user@gmail.com"
+# =========================================================================================
+# === Mapping =============================================================================
+# =========================================================================================
+bind  pager   k     previous-line
+bind  pager   j     next-line
+bind editor <Tab>   complete-query
+bind editor       complete
+# bindings
+bind pager i            exit
+#bind pager n            next-undeleted
+#bind pager p            previous-undeleted
+bind pager /            search
+bind pager <up>         previous-line
+bind pager <down>       next-line
+bind pager k            previous-line
+bind pager j            next-line
+bind pager gg           top
+bind pager G            bottom
+bind pager K            previous-undeleted
+bind pager J            next-undeleted
+bind index gg           first-entry
+bind index G            last-entry
+bind index K            previous-thread
+bind index J            next-thread
+bind index,pager R      group-reply
+bind index,pager \#     noop
+bind index i            noop
+#bind index I            noop
 
-#set imap_user        = "user@gmail.com"
-#set imap_pass        = passwd
+# =========================================================================================
+# === Macros ==============================================================================
+# =========================================================================================
+macro index B   "<limit>~b "                "search message bodies"
+macro index I   "<change-folder>!<enter>"   "go to Inbox"
 
-#set smtp_url         = smtp://user@smtp.gmail.com:587/
-#set smtp_pass        = passwd
+# save a decoded copy in ~
+macro index P   "<pipe-message>cat > ~/"    "save message as"
 
-set folder           = "imaps://imap.gmail.com:993"
-set spoolfile        = "imaps://imap.gmail.com:993/INBOX"
-set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts"
-set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail"
-set header_cache     = "$HOME/.mutt/cache/headers"
-set message_cachedir = "$HOME/.mutt/cache/bodies"
-set certificate_file = "$HOME/.mutt/certificates"
+# =========================================================================================
+# === Mime ================================================================================
+# =========================================================================================
+# Tell mutt which MIME types to auto-view
+auto_view application/zip
+auto_view application/x-gzip
+auto_view application/x-gunzip
+auto_view application/octet-stream
+auto_view application/x-zip-compressed
+auto_view application/x-tar-gz
+auto_view application/msword
+auto_view application/x-perl
+auto_view application/x-sh
+auto_view application/x-tcl
+auto_view application/RTF
+auto_view text/html
+auto_view text/x-vcard
+auto_view image/tiff
 
-# === Extra stuff ===
-source $HOME/.mutt/accounts
-source $HOME/.mutt/conf/mappings
-source $HOME/.mutt/conf/macros
-source $HOME/.mutt/conf/aliases
-source $HOME/.mutt/conf/gnupg
-source $HOME/.mutt/conf/color
-source $HOME/.mutt/conf/mime
-source $HOME/.mutt/conf/sidebar
-source $HOME/.mutt/conf/lists
+alternative_order text/enriched text/plain text
+
+# =========================================================================================
+# === Aliases =============================================================================
+# =========================================================================================
+alias ronicardona ronicardona@hotmail.com (Ronicardona)
+
+# =========================================================================================
+# === Color ===============================================================================
+# =========================================================================================
+color attachment brightmagenta black
+color error brightwhite red   # errors yell at you in red
+color hdrdefault red black   # headers
+color indicator white magenta # currently selected message
+color markers brightcyan black  # the + for wrapped pager lines
+color message brightcyan black  # informational messages, not mail
+color normal white black    # plain text
+color quoted green black  # quoted text
+color search brightgreen black # hilite search patterns in the pager
+color signature red black    # signature (after "-- ") is red
+color status brightcyan black # status bar is brightcyan *on black*
+color tilde blue black  # ~'s after message body
+color tree red black    # thread tree in index menu is magenta
+color signature brightred black
+color underline yellow black
+color header cyan black ^(From|Subject): # Important headers
+color body magenta black "(ftp|http)://[^ ]+"  # picks up URLs
+color body magenta black [-a-z_0-9.]+@[-a-z_0-9.]+
+
+#  Coloring quoted text - coloring the first 7 levels:
+color quoted    cyan black
+color quoted1   yellow black
+color quoted2   red black
+color quoted3   green black
+color quoted4   cyan black
+color quoted5   yellow black
+color quoted6   red black
+color quoted7   green black
+
+#  Colorize smileys:  :-)  ;-)  :-/  :-(
+color body  yellow black "[;:]-[)/(|]"
+color body  yellow black "[;:][)/(|]"
+color body  green black "[[:alpha:]]\+://[^ ]*"
+
+color index brightmagenta black ~N      # New
+color index yellow black ~O              # Old
+color index brightred black ~F      # Important
+color index red black ~T                # Tag
+color index blue black ~D       # Delete
+
+# =========================================================================================
+# === Sidebar =============================================================================
+# =========================================================================================
+set sidebar_width=18
+
+set sidebar_visible=yes
+set sidebar_delim='|'
+set sidebar_sort=no
+
+# which mailboxes to list in the sidebar. useless?
+# mailboxes =inbox =ml
+
+# color of folders with new mail
+color sidebar_new brightred default
+
+# ctrl-n, ctrl-p to select next, prev folder
+# ctrl-o to open selected folder
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+# ctrl-k, ctrl-j to select next, prev folder
+# ctrl-l to open selected folder
+#bind index \CK sidebar-prev
+#bind index \CJ sidebar-next
+#bind index \CL sidebar-open
+#bind pager \CK sidebar-prev
+#bind pager \CJ sidebar-next
+#bind pager \CL sidebar-open
+
+# I don't need these.  just for documentation purposes.  See below.
+# sidebar-scroll-up
+# sidebar-scroll-down
+
+# b toggles sidebar visibility
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+
+# Remap bounce-message function to "B"
+bind index B bounce-message
+
+#
+# Mario Holbe suggests:
+# macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+# macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+
+# =========================================================================================
+# === Lists ===============================================================================
+# =========================================================================================
+subscribe asterisk-users@lists.digium.com
+subscribe freebsd-announce@freebsd.org
+subscribe crypto@securityfocus.com
+subscribe current@FreeBSD.org
+subscribe current-users@NetBSD.org
+subscribe doc-es@lists.php.net
+subscribe enlightenment-devel@lists.sourceforge.net
+subscribe framework@spool.metasploit.com
+subscribe freebsd-advocacy@freebsd.org
+subscribe freebsd-chat@freebsd.org
+subscribe freebsd-hackers@freebsd.org
+subscribe freebsd-questions@freebsd.org
+subscribe full-disclosure@lists.grok.org.uk
+subscribe linux-kernel@vger.kernel.org
+subscribe misc@openbsd.org
+subscribe netbsd-docs@netbsd.org
+subscribe pkgsrc-users@netbsd.org
+subscribe security-basics@securityfocus.com
+subscribe tech-kern@NetBSD.org
+subscribe tech@openbsd.org
+subscribe vim_use@googlegroups.com
+subscribe wikies-l@lists.wikimedia.org
+subscribe wireshark-users@wireshark.org
+subscribe netbsd-users@netbsd.org
+subscribe pen-test@securityfocus.com
+subscribe ubuntu-server@lists.ubuntu.com
+subscribe ubuntu-cloud@lists.ubuntu.com
+subscribe ubuntu-devel@lists.ubuntu.com
+subscribe ubuntu-devel-discuss@lists.ubuntu.com
+subscribe ubuntu-devel-announce@lists.ubuntu.com
+subscribe bugsquad-mentorship-group-alpha@lists.launchpad.net
+
+# =========================================================================================
+# === Gnupg ===============================================================================
+# =========================================================================================
+set pgp_use_gpg_agent        = yes
+
+set pgp_autosign             = yes
+set pgp_verify_sig           = yes
+set pgp_sign_as              = 0xBC9C8902
+set pgp_replyencrypt         = yes
+set pgp_timeout              = 1800
+set pgp_good_sign            = "^gpg: Signed by "
+set pgp_auto_decode          = yes
+
+#==================================================================================
+#--passphrase-fd 0 is required if you're not running gpg-agent
+#set pgp_decode_command       = "gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f" 
+#set pgp_decrypt_command      = "gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+#set pgp_sign_command         = "gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+#set pgp_clearsign_command    = "gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+#set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xBC9C8902 -- -r %r -- %f"
+#
+set pgp_decode_command       = "gpg --no-verbose --batch --output - %f"
+set pgp_decrypt_command      = "gpg --no-verbose --batch --output - %f"
+set pgp_sign_command         = "gpg --no-verbose --batch --output - --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command    = "gpg --no-verbose --batch --output - --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xBC9C8902 -- -r %r -- %f"
+#==================================================================================
+
+set pgp_verify_command       = "gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_encrypt_only_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xBC9C8902 -- -r %r -- %f"
+set pgp_import_command       = "gpg --no-verbose --import -v %f"
+set pgp_export_command       = "gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command   = "gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command = "gpg --no-verbose --batch --with-colons --list-keys %r"
+set pgp_list_secring_command = "gpg --no-verbose --batch --with-colons --list-secret-keys %r"
+
+# =========================================================================================
+# === Accounts  ===========================================================================
+# =========================================================================================
+# passwd management
+set my_decrypt=`gpg -o $HOME/.mutt/accounts/passwd.gpg.tmp -d $HOME/.mutt/accounts/passwd.gpg`
+set my_fcoDOTpljATgmailDOTcom=`awk '/fco.plj@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_chilicuilATgmailDOTcom=`awk '/chilicuil@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_lnthestqfgxygATgmailDOTcom=`awk '/lnthestqfgxyg@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_chilicuilDOTvimATgmailDOTcom=`awk '/chilicuil.vim@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_perezDOTlopezDOTfranciscoDOTjavierATgmailDOTcom=`awk '/perez.lopez.francisco.javier@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_mnDOTcuentaATgmailDOTcom=`awk '/mn.cuenta@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_javierDOTperezATixpanDOTcomDOTmx=`awk '/javier.perez@ixpan.com.mx:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_rm=`rm -f $HOME/.mutt/accounts/passwd.gpg.tmp`
+
+# default
+source $HOME/.mutt/accounts/fco.plj@gmail.com/fco.plj@gmail.com.profile
+
+mailboxes 'imaps://fco.plj@gmail.com@imap.gmail.com:993/mailbox' \
+'imaps://chilicuil@gmail.com@imap.gmail.com:993/mailbox' \
+# folder hooks
+folder-hook imaps://fco.plj@gmail.com@imap.gmail.com:993 ' \
+set from             = "Francisco Javier P.L. <fco.plj@gmail.com>" \
+set folder           = "imaps://imap.gmail.com:993" \
+set spoolfile        = "imaps://imap.gmail.com:993/INBOX" \
+set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts" \
+set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail" \
+set header_cache     = "$HOME/.mutt/cache/fco.plj@gmail.com.headers" \
+set message_cachedir = "$HOME/.mutt/cache/fco.plj@gmail.com.bodies" \
+set certificate_file = "$HOME/.mutt/certificates/fco.plj@gmail.com.certificate" \
+set imap_user        = "fco.plj@gmail.com" \
+set imap_pass        = $my_fcoDOTpljATgmailDOTcom \
+set smtp_url         = "smtp://fco.plj@smtp.gmail.com:587/" \
+set smtp_pass        = $my_fcoDOTpljATgmailDOTcom \
+set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]" \
+set signature        = "$HOME/.mutt/accounts/fco.plj@gmail.com/fco.plj@gmail.com.signature"'
+
+folder-hook imaps://chilicuil@gmail.com@imap.gmail.com:993 ' \
+set from             = "chilicuil <chilicuil@gmail.com>" \
+set folder           = "imaps://imap.gmail.com:993" \
+set spoolfile        = "imaps://imap.gmail.com:993/INBOX" \
+set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts" \
+set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail" \
+set header_cache     = "$HOME/.mutt/cache/chilicuil@gmail.com.headers" \
+set message_cachedir = "$HOME/.mutt/cache/chilicuil@gmail.com.bodies" \
+set certificate_file = "$HOME/.mutt/certificates/chilicuil@gmail.com.certificate" \
+set imap_user        = "chilicuil@gmail.com" \
+set imap_pass        = $my_chilicuilATgmailDOTcom \
+set smtp_url         = "smtp://chilicuil@smtp.gmail.com:587/" \
+set smtp_pass        = $my_chilicuilATgmailDOTcom \
+set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]" \
+set signature        = "$HOME/.mutt/accounts/chilicuil@gmail.com/chilicuil@chilicuil@gmail.com.signature"'
+#account-hook . 'unset imap_user imap_pass' # unset first!
+#account-hook 'imaps://fco.plj@imap.gmail.com/' "\
+              #set imap_user=fco.plj@gmail.com imap_pass=$my_fcoDOTpljATgmailDOTcom "
+#account-hook 'imaps://chilicuil@imap.gmail.com/' "\
+              #set imap_user=chilicuil@gmail.com imap_pass=$my_chilicuilATgmailDOTcom "
+
+## folders
+#set folder="imaps://fco.plj@imap.gmail.com/"
+#mailboxes =INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam
+#folder-hook 'imaps://fco.plj@imap.gmail.com' " \
+        #set     folder=imaps://fco.plj@imap.gmail.com/ \
+                #postponed=+[Gmail]/Drafts \
+                #record=+[Gmail]/'Sent Mail' \
+                #smtp_url=smtps://fco.plj@smtp.gmail.com \
+                #smtp_pass=$my_fcoDOTpljATgmailDOTcom "
+
+#set folder="imaps://chilicuil@imap.gmail.com/"
+#mailboxes =INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam
+#folder-hook 'imaps://chilicuil@imap.gmail.com' " \
+        #set     folder=imaps://chilicuil@imap.gmail.com/ \
+                #postponed=+[Gmail]/Drafts \
+                #record=+[Gmail]/'Sent Mail' \
+                #smtp_url=smtps://chilicuil@smtp.gmail.com \
+                #smtp_pass=$my_chilicuilATgmailDOTcom "
+
+##-------------------------------------
+## Macros to make life easier
+##-------------------------------------
+#macro index <esc>1 "y1<return><return>" # ESC+1 takes to first INBOX
+#macro index <esc>2 "y5<return><return>" # ESC+2 takes to the second

@@ -97,10 +97,12 @@
 :CVSWatchers	vcscommand.txt	/*:CVSWatchers*
 :CheckSyntax	checksyntax.txt	/*:CheckSyntax*
 :Cligs	twitvim.txt	/*:Cligs*
+:CloseSession	session.txt	/*:CloseSession*
 :CommandT	command-t.txt	/*:CommandT*
 :CommandTFlush	command-t.txt	/*:CommandTFlush*
 :DMSentTwitter	twitvim.txt	/*:DMSentTwitter*
 :DMTwitter	twitvim.txt	/*:DMTwitter*
+:DeleteSession	session.txt	/*:DeleteSession*
 :FavTwitter	twitvim.txt	/*:FavTwitter*
 :FollowListTwitter	twitvim.txt	/*:FollowListTwitter*
 :FollowTwitter	twitvim.txt	/*:FollowTwitter*
@@ -110,6 +112,7 @@
 :ForwardTwitter	twitvim.txt	/*:ForwardTwitter*
 :FriendsTwitter	twitvim.txt	/*:FriendsTwitter*
 :Googl	twitvim.txt	/*:Googl*
+:HighlightTags	easytags.txt	/*:HighlightTags*
 :IsGd	twitvim.txt	/*:IsGd*
 :ListTwitter	twitvim.txt	/*:ListTwitter*
 :LocationTwitter	twitvim.txt	/*:LocationTwitter*
@@ -126,6 +129,7 @@
 :NERDTreeToggle	NERD_tree.txt	/*:NERDTreeToggle*
 :NextInfoTwitter	twitvim.txt	/*:NextInfoTwitter*
 :NextTwitter	twitvim.txt	/*:NextTwitter*
+:OpenSession	session.txt	/*:OpenSession*
 :OwnedListsTwitter	twitvim.txt	/*:OwnedListsTwitter*
 :PBitLy	twitvim.txt	/*:PBitLy*
 :PCligs	twitvim.txt	/*:PCligs*
@@ -151,9 +155,11 @@
 :RepliesTwitter	twitvim.txt	/*:RepliesTwitter*
 :ReportSpamTwitter	twitvim.txt	/*:ReportSpamTwitter*
 :ResetLoginTwitter	twitvim.txt	/*:ResetLoginTwitter*
+:RestartVim	session.txt	/*:RestartVim*
 :RetweetedByMeTwitter	twitvim.txt	/*:RetweetedByMeTwitter*
 :RetweetedToMeTwitter	twitvim.txt	/*:RetweetedToMeTwitter*
 :Rgala	twitvim.txt	/*:Rgala*
+:SaveSession	session.txt	/*:SaveSession*
 :SearchTwitter	twitvim.txt	/*:SearchTwitter*
 :SendDMTwitter	twitvim.txt	/*:SendDMTwitter*
 :SetLoginTwitter	twitvim.txt	/*:SetLoginTwitter*
@@ -183,6 +189,7 @@
 :UnblockTwitter	twitvim.txt	/*:UnblockTwitter*
 :UnfollowListTwitter	twitvim.txt	/*:UnfollowListTwitter*
 :UnfollowTwitter	twitvim.txt	/*:UnfollowTwitter*
+:UpdateTags	easytags.txt	/*:UpdateTags*
 :UrlBorg	twitvim.txt	/*:UrlBorg*
 :UserTwitter	twitvim.txt	/*:UserTwitter*
 :VCSAdd	vcscommand.txt	/*:VCSAdd*
@@ -202,6 +209,7 @@
 :VCSUnlock	vcscommand.txt	/*:VCSUnlock*
 :VCSUpdate	vcscommand.txt	/*:VCSUpdate*
 :VCSVimDiff	vcscommand.txt	/*:VCSVimDiff*
+:ViewSession	session.txt	/*:ViewSession*
 :Zima	twitvim.txt	/*:Zima*
 AND	dbext.txt	/*AND*
 Align-copyright	Align.txt	/*Align-copyright*
@@ -233,12 +241,12 @@ NERDComComment	NERD_commenter.txt	/*NERDComComment*
 NERDComCredits	NERD_commenter.txt	/*NERDComCredits*
 NERDComDefaultDelims	NERD_commenter.txt	/*NERDComDefaultDelims*
 NERDComEOLComment	NERD_commenter.txt	/*NERDComEOLComment*
-NERDComFiletypes	NERD_commenter.txt	/*NERDComFiletypes*
 NERDComFunctionality	NERD_commenter.txt	/*NERDComFunctionality*
 NERDComFunctionalityDetails	NERD_commenter.txt	/*NERDComFunctionalityDetails*
 NERDComFunctionalitySummary	NERD_commenter.txt	/*NERDComFunctionalitySummary*
 NERDComHeuristics	NERD_commenter.txt	/*NERDComHeuristics*
 NERDComInsertComment	NERD_commenter.txt	/*NERDComInsertComment*
+NERDComInstallation	NERD_commenter.txt	/*NERDComInstallation*
 NERDComInvertComment	NERD_commenter.txt	/*NERDComInvertComment*
 NERDComIssues	NERD_commenter.txt	/*NERDComIssues*
 NERDComLicense	NERD_commenter.txt	/*NERDComLicense*
@@ -1946,6 +1954,7 @@ drawit.txt	DrawIt.txt	/*drawit.txt*
 drv-dtArrayInit	crefvim.txt	/*drv-dtArrayInit*
 drv-dtIncompleteArrayDecl	crefvim.txt	/*drv-dtIncompleteArrayDecl*
 ds	surround.txt	/*ds*
+easytags.txt	easytags.txt	/*easytags.txt*
 findmate	FindMate.txt	/*findmate*
 fugitive	fugitive.txt	/*fugitive*
 fugitive-:Gblame	fugitive.txt	/*fugitive-:Gblame*
@@ -2049,7 +2058,15 @@ g:acp_enableAtStartup	acp.txt	/*g:acp_enableAtStartup*
 g:acp_ignorecaseOption	acp.txt	/*g:acp_ignorecaseOption*
 g:acp_mappingDriven	acp.txt	/*g:acp_mappingDriven*
 g:drawit_insertmode	DrawIt.txt	/*g:drawit_insertmode*
+g:easytags_always_enabled	easytags.txt	/*g:easytags_always_enabled*
+g:easytags_autorecurse	easytags.txt	/*g:easytags_autorecurse*
+g:easytags_cmd	easytags.txt	/*g:easytags_cmd*
+g:easytags_file	easytags.txt	/*g:easytags_file*
+g:easytags_include_members	easytags.txt	/*g:easytags_include_members*
+g:easytags_on_cursorhold	easytags.txt	/*g:easytags_on_cursorhold*
+g:easytags_resolve_links	easytags.txt	/*g:easytags_resolve_links*
 g:loaded_findMate	FindMate.txt	/*g:loaded_findMate*
+g:loaded_session	session.txt	/*g:loaded_session*
 g:manpageview_K_EXT	manpageview.txt	/*g:manpageview_K_EXT*
 g:manpageview_iconv	manpageview.txt	/*g:manpageview_iconv*
 g:manpageview_init_EXT	manpageview.txt	/*g:manpageview_init_EXT*
@@ -2064,6 +2081,9 @@ g:manpageview_sfx_EXT	manpageview.txt	/*g:manpageview_sfx_EXT*
 g:manpageview_syntax_EXT	manpageview.txt	/*g:manpageview_syntax_EXT*
 g:manpageview_winopen	manpageview.txt	/*g:manpageview_winopen*
 g:manpgeview_user	manpageview.txt	/*g:manpgeview_user*
+g:session_autoload	session.txt	/*g:session_autoload*
+g:session_autosave	session.txt	/*g:session_autosave*
+g:session_directory	session.txt	/*g:session_directory*
 g:snippets_dir	snipMate.txt	/*g:snippets_dir*
 g:snips_author	snipMate.txt	/*g:snips_author*
 histwin	histwin.txt	/*histwin*
@@ -2185,6 +2205,8 @@ ragtag-encoding	ragtag.txt	/*ragtag-encoding*
 ragtag-mappings	ragtag.txt	/*ragtag-mappings*
 ragtag-surroundings	ragtag.txt	/*ragtag-surroundings*
 ragtag.txt	ragtag.txt	/*ragtag.txt*
+session.txt	session.txt	/*session.txt*
+sessionoptions	session.txt	/*sessionoptions*
 snipMate	snipMate.txt	/*snipMate*
 snipMate-$#	snipMate.txt	/*snipMate-$#*
 snipMate-${#:}	snipMate.txt	/*snipMate-${#:}*

@@ -18,8 +18,8 @@ servers = (
     password = "159263";
   },
   {
-    #address = "im.bitlbee.org";
-    address = "testing.bitlbee.org";
+    address = "im.bitlbee.org";
+    #address = "testing.bitlbee.org";
     chatnet = "im";
     port = "6667";
     autoconnect = "yes";

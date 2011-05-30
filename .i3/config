@@ -264,8 +264,8 @@ bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
 #bindsym Control+Shift+a exec /bin/sh -c alsamixer
 
 # pcmanfm:
-#bindsym Control+Shift+h exec /usr/bin/pcmanfm 
-bindsym Control+Shift+h exec nautilus
+bindsym Control+Shift+h exec /usr/bin/pcmanfm 
+#bindsym Control+Shift+h exec nautilus
 
 # volume:
 bind Control+Shift+20 exec /usr/bin/amixer set Master 1-
