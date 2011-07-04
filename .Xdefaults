@@ -8,6 +8,7 @@
 
 !#include "/home/chilicuil/.Xtheme/dark-I.theme"
 #include "/home/chilicuil/.Xtheme/dark-II.theme"
+!#include "/home/chilicuil/.Xtheme/darksoft-I.theme"
 
 !Xcursor*theme: tool
 

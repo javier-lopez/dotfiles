@@ -17,6 +17,7 @@
 "
 "[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
 "[*] TODO 18-11-2009 21:19
+"[*] TODO 30-05-2011 12:09 => Fix easytags who apparently makes acp going mad
 
 "===============================================================================
 "==================================== Load guards ==============================
@@ -61,7 +62,7 @@ let loaded_fugitive           = 1
 "let loaded_gist_vim          = 1
 "let loaded_unimpaired        = 1
 "let loaded_session           = 1
-"let loaded_easytags          = 1
+let loaded_easytags          = 1
 
 
 "===============================================================================
