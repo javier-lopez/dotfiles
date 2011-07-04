@@ -1,8 +1,7 @@
 " Vim script
 " Author: Peter Odding
-" Last Change: May 12, 2011
+" Last Change: June 18, 2011
 " URL: http://peterodding.com/code/vim/session/
-" Version: 1.4
 
 " Support for automatic update using the GLVS plug-in.
 " GetLatestVimScripts: 3150 1 :AutoInstall: session.zip
@@ -12,24 +11,29 @@ if &cp || exists('g:loaded_session')
   finish
 endif
 
-" Make sure the submodule with miscellaneous auto-load scripts is available.
-try
-  call xolox#misc#os#is_win()
-catch /^Vim\%((\a\+)\)\=:E117/
-  let s:msg = "It looks like the session plug-in wasn't correctly installed, if you're using"
-  let s:msg .= " git you should probably use 'git clone --recursive ...' to clone the repository!"
-  echoerr s:msg
-  finish
-endtry
+let g:session_version = '1.4.9'
 
-" Automatic loading of the default session is disabled by default.
+" When you start Vim without opening any files the plug-in will prompt you
+" whether you want to load the default session. Other supported values for
+" this option are 'yes' (to load the default session without prompting) and
+" 'no' (don't prompt and don't load the default session).
 if !exists('g:session_autoload')
-  let g:session_autoload = 0
+  let g:session_autoload = 'prompt'
 endif
 
-" Automatic saving of the default session is disabled by default.
+" When you quit Vim the plug-in will prompt you whether you want to save your
+" current session. Other supported values for this option are 'yes' (to save
+" the session without prompting) and 'no' (don't prompt and don't save the
+" session).
 if !exists('g:session_autosave')
-  let g:session_autosave = 0
+  let g:session_autosave = 'prompt'
+endif
+
+" The session plug-in can automatically open sessions in three ways: based on
+" Vim's server name, by remembering the last used session or by opening the
+" session named `default'. Enable this option to use the second approach.
+if !exists('g:session_default_to_last')
+  let g:session_default_to_last = 0
 endif
 
 " The default directory where session scripts are stored.
@@ -47,8 +51,8 @@ if !isdirectory(s:directory)
   call mkdir(s:directory, 'p')
 endif
 if filewritable(s:directory) != 2
-  let s:msg = "session.vim: The sessions directory %s isn't writable!"
-  call xolox#misc#msg#warn(s:msg, string(s:directory))
+  let s:msg = "session.vim %s: The sessions directory %s isn't writable!"
+  call xolox#misc#msg#warn(s:msg, g:session_version, string(s:directory))
   unlet s:msg
   finish
 endif
