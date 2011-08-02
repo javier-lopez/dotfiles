@@ -1,4 +1,4 @@
-# Last review            Thu 17 Feb 2011 11:43:59 AM CST
+# Last review            Mon 01 Aug 2011 12:11:05 PM CDT
 # vim: tw=80 ft=sh
 
 # ===aliases===
@@ -51,19 +51,20 @@ alias key.lookup='xev'
 alias kl='ls --color=auto'
 alias k='ls -CF'
 alias la='ls -A'
-alias Learn.autocp='cd $HOME/code/learn/autocp/bash_completion.d/'
-alias Learn.c='cd $HOME/code/learn/c/'
-alias Learn.c++='cd $HOME/code/learn/c++/'
-alias Learn='cd $HOME/code/learn/'
-alias Learn.html='cd $HOME/code/learn/html/'
-alias Learn.java='cd $HOME/code/learn/java/'
-alias Learn.perl='cd $HOME/code/learn/perl/'
-alias Learn.php='cd $HOME/code/learn/php/'
-alias Learn.python='cd $HOME/code/learn/python/'
-alias Learn.ruby='cd $HOME/code/learn/ruby/'
-alias Learn.sh='cd $HOME/code/learn/sh/'
+alias learn.autocp='cd $HOME/code/learn/autocp/bash_completion.d/'
+alias learn.c='cd $HOME/code/learn/c/'
+alias learn.c++='cd $HOME/code/learn/c++/'
+alias learn='cd $HOME/code/learn/'
+alias learn.html='cd $HOME/code/learn/html/'
+alias learn.java='cd $HOME/code/learn/java/'
+alias learn.perl='cd $HOME/code/learn/perl/'
+alias learn.php='cd $HOME/code/learn/php/'
+alias learn.python='cd $HOME/code/learn/python/'
+alias learn.ruby='cd $HOME/code/learn/ruby/'
+alias learn.sh='cd $HOME/code/learn/sh/'
 alias less.color='less -R'
 alias lh='ls -lah'
+alias lisp='sbcl'
 alias listen.ports='sudo lsof -i -P | grep -i listen'
 alias lk='ls --color=auto'
 alias ll='ls -l --color=auto'
@@ -138,6 +139,12 @@ alias wget='wget -c'
 alias wifi.eth1='iwlist eth1 s'
 alias wifi.wl='iwlist wl s'
 alias work='cd $HOME/misc/work'
+alias work.ixpan.backups='cd $HOME/misc/work/ixpan/backups'
+alias work.ixpan='cd $HOME/misc/work/ixpan'
+alias work.ixpan.docs='cd $HOME/misc/work/ixpan/docs'
+alias work.ixpan.downloads='cd $HOME/misc/work/ixpan/downloads'
+alias work.ixpan.scripts='cd $HOME/misc/work/ixpan/scripts'
+alias xrandr.same-as='xrandr --output VGA1 --mode 1024x768 --same-as LVDS1'
 alias zz='exit'
 
 #====RANDOM VARS===
@@ -149,7 +156,7 @@ export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 
 #======GNUPG=======
 export GPGKEY=BC9C8902
-#export GPG_TTY=$(tty)
+export GPG_TTY=$(tty)
 alias gpg.genkey='gpg --gen-key'
 alias gpg.delete='gpg --delete-key'
 alias gpg.listkeys='gpg --list-keys'

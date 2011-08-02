@@ -49,7 +49,7 @@ workspace 4 im
 workspace 5 mail
 workspace 6 files
 workspace 7 work
-workspace 8 work
+workspace 8 news
 workspace 9 work
 workspace 10 work
 workspace 11 work
@@ -325,11 +325,13 @@ bindsym $Win+m jump "buzz/mutt"
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
 
-assign "firefox"  1
-assign "buzz/irssi" 4
-assign "buzz/mutt" 5
-assign "pcmanfm" 6
-assign "nautilus" 6
+assign "firefox"         1
+assign "buzz/irssi"      4
+assign "buzz/mutt"       5
+assign "thunderbird"     5
+assign "liferea"         8
+assign "pcmanfm"         6
+assign "nautilus"        6
 
 # ###################################
 # ############# COLORS ##############

@@ -25,15 +25,15 @@
 "Comment it to enable it, I know it's weird
 
 "let loaded_matchit           = 1
-let loaded_crefvim            = 1
+"let loaded_crefvim            = 1
 "let loaded_nerd_tree         = 1
 "let loaded_snips             = 1
-let loaded_breakpts           = 1
+"let loaded_breakpts           = 1
 "let loaded_taglist_mod       = 1
-let loaded_debugger           = 1
+"let loaded_debugger           = 1
 "let loaded_acp               = 1
-let loaded_AutoClose          = 1
-let loaded_dbext              = 1
+"let loaded_AutoClose          = 1
+"let loaded_dbext              = 1
 "let loaded_LargeFile         = 1
 "let loaded_manpageviewPlugin = 1
 "let loaded_Matrix            = 1
@@ -51,7 +51,7 @@ let loaded_dbext              = 1
 "let loaded_AlignMapsPlugin   = 1
 "let loaded_AlignPlugin       = 1
 "let CSApprox_loaded          = 1
-let loaded_fugitive           = 1
+"let loaded_fugitive           = 1
 "let loaded_FindInNERDTree    = 1
 "let loaded_DrawItPlugin      = 1
 "let loaded_netrwPlugin       = 1
@@ -63,7 +63,7 @@ let loaded_fugitive           = 1
 "let loaded_unimpaired        = 1
 "let loaded_session           = 1
 let loaded_easytags          = 1
-
+ 
 
 "===============================================================================
 "=============================== Experimental stuff ============================
@@ -750,16 +750,10 @@ let g:dbext_default_history_file = '~/.vim/plugin/dbext_history'
 let g:dbext_default_history_size = 1000
 "let g:dbext_default_profile     = 'mysql_test1'
 let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
-            \passwd=just4fun:dbname=test1:host=localhost:port=3306'
-let g:dbext_default_profile_mysql_test0 = 'type=MYSQL:user=chilicuil:
-            \passwd=just4fun:dbname=test0:host=localhost:port=3306'
-let g:dbext_default_profile_mysql_cursophp2 = 'type=MYSQL:user=chilicuil:
-            \passwd=just4fun:dbname=cursophp2:host=localhost:port=3306'
-let g:dbext_default_profile_mysql_cursophp = 'type=MYSQL:user=chilicuil:
-            \passwd=just4fun:dbname=cursophp:host=localhost:port=3306'
+            \passwd=passwd:dbname=test1:host=localhost:port=3306'
 
 "twitvim.vim
-let twitvim_login         = 'chilicuil:andreaforever'
+let twitvim_login         = 'chilicuil:passwd'
 let twitvim_enable_perl   = 1
 let twitvim_enable_python = 1
 let twitvim_enable_ruby   = 1

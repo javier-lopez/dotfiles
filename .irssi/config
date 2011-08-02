@@ -68,7 +68,9 @@ channels = (
   { name = "#networking"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-es-ops"; chatnet = "fn"; autojoin = "Yes"; }
+  { name = "#ubuntu-es-ops"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-br"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; }
 );
 
 ignores = (
@@ -90,6 +92,8 @@ ignores = (
       "#ubuntu-es-offtopic",
       "#ubuntu-es-ops",
       "#ubuntu-mx",
+      "#ubuntu-br",
+      "##ubuntu-br-offtopic",
       "#ubuntu-meeting",
       "#ubuntu-motu",
       "#ubuntu-testing",
