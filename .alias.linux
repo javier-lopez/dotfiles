@@ -1,7 +1,7 @@
 # Last review            Mon 01 Aug 2011 12:11:05 PM CDT
 # vim: tw=80 ft=sh
 
-# ===aliases===
+# ===aliases=== $(sort -k 2)
 alias autoremove='sudo apt-get autoremove'
 alias .bashrc='vim $HOME/.bashrc'
 alias beep='echo -e "\007\c"'
@@ -14,6 +14,7 @@ alias cd-='cd -'
 alias cd..='cd ..'
 alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
 alias cd='. wcd'
+alias cls='clear'
 alias cp='cp -v'
 alias data.books='cd $HOME/data/books/'
 alias data.images='cd $HOME/data/images/'
@@ -127,6 +128,7 @@ alias ubuntu.natty.isos='cd $HOME/misc/packaging/ubuntu/ubuntu-11.04/isos/'
 alias ubuntu.natty.merge='cd $HOME/misc/packaging/ubuntu/ubuntu-11.04/merge'
 alias ubuntu.natty.presentations='cd $HOME/misc/packaging/ubuntu/ubuntu-11.04/presentations'
 alias ubuntu.tools='cd $HOME/misc/packaging/tools/'
+alias update-cd='mkdir $HOME/.wcd; /usr/lib/wcd/wcd.exec -GN -j -xf $HOME/.ban.wcd -S $HOME -A /etc/ -A /opt/'
 alias update-fonts='sudo fc-cache -f -v'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
@@ -149,6 +151,7 @@ alias zz='exit'
 
 #====RANDOM VARS===
 export EDITOR="vim" #is there any other choice?
+export WCDHOME="$HOME/.wcd" #wcd magic
 #export TERM=rxvt
 export BROWSER="firefox"
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
