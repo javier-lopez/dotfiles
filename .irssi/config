@@ -39,7 +39,7 @@ channels = (
   #{ name = "#asterisk"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#bash"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#debian"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#e"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#e"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#freebsd"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#netbsd"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#openbsd"; chatnet = "fn"; autojoin = "Yes"; },
@@ -49,19 +49,12 @@ channels = (
   { name = "#ubuntu-packaging"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-devel"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-motu"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#ubuntu-reviews"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-testing"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-bugs"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-bugs-announce"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-locoteams"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-beginners"; chatnet = "fn"; autojoin = "Yes"; },
-  { 
-    name = "#ubuntu-beginners-team";
-    chatnet = "fn";
-    autojoin = "Yes";
-  },
-  #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#fel-clan"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-beginners-team"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-desktop"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-classroom"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-server"; chatnet = "fn"; autojoin = "Yes"; },
@@ -71,6 +64,9 @@ channels = (
   { name = "#ubuntu-es-ops"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-br"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; }
+  #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#fel-clan"; chatnet = "fn"; autojoin = "Yes"; },
 );
 
 ignores = (
@@ -109,6 +105,7 @@ ignores = (
       "##networking",
       "#ubuntu",
       "#ubuntu-bugs-announce",
+      "#ubuntu-locoteams"
       #"#fel-clan"
     );
     network = "fn";
