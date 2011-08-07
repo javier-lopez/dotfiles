@@ -84,6 +84,9 @@ ipc-socket ~/.i3/ipc.sock
 
 # execute my startup programs
 # exec ~/.i3/startup
+#exec conky |/home/chilicuil/code/dzen/dzen2 -x 300 -y 800 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000"
+exec conky |/home/chilicuil/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000"
+
 exec /usr/bin/pcmanfm
 exec /usr/bin/x-terminal-emulator
 
@@ -93,9 +96,6 @@ exec /usr/bin/x-terminal-emulator
 #it breaks very often
 #exec urxvtd -q -f -o
 #exec feh --bg-scale /home/chilicuil/data/images/wallpapers/Aurora_Borealis.jpg
-
-#exec conky |/home/chilicuil/code/dzen/dzen2 -x 300 -y 800 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000"
-exec conky |/home/chilicuil/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000"
 
 # ###################################
 # ######## KEYBOARD BINDINGS ########
@@ -243,6 +243,9 @@ bind Control+$Alt+26 exit
 
 # Control+$Alt+r restarts i3 inplace
 bind Control+$Alt+27 restart
+
+# Control+$Alt+l lock session
+bind Control+$Alt+46 exec gnome-screensaver-command --lock
 
 # Control+$Alt+Supr starts a dmenu session menu
 bind Control+$Alt+119 exec dmenu_session
