@@ -146,7 +146,9 @@ alias work.ixpan='cd $HOME/misc/work/ixpan'
 alias work.ixpan.docs='cd $HOME/misc/work/ixpan/docs'
 alias work.ixpan.downloads='cd $HOME/misc/work/ixpan/downloads'
 alias work.ixpan.scripts='cd $HOME/misc/work/ixpan/scripts'
-alias xrandr.same-as='xrandr --output VGA1 --mode 1024x768 --same-as LVDS1'
+alias xrandr.same-as='xrandr --output VGA1 --auto --same-as LVDS1'
+alias xrandr.above.vga_inhouse='xrandr --output VGA1 --mode 1600x1200 --above LVDS1'
+alias xrandr.off.vga_inhouse='xrandr --output VGA1 --off'
 alias zz='exit'
 
 #====RANDOM VARS===
