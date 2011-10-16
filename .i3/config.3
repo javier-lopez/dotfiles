@@ -1,0 +1,378 @@
+# #####################################################################################
+# Last review            Mon 17 May 2010 02:12:56 AM CDT
+# #####################################################################################
+#  vim: set ts=8 sw=4 tw=0 ft=conf : 
+#  TODO 02-03-2011 09:57 => xbindkeys
+
+# ###################################
+# ########### NOT WORKING ###########
+# ###################################
+
+# DEPRECATED
+# Tell i3 about your preferred terminal. You can refer to this as $terminal
+# later. It is recommended to set this option to allow i3 to open a terminal
+# containing the introduction on first start.
+#terminal /usr/bin/x-terminal-emulator
+#terminal /usr/bin/urxvtc
+
+# Focus / follow mouse
+#focus_follows_mouse yes
+
+# ###################################
+# ######## GENERAL SETTINGS #########
+# ###################################
+
+# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
+# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
+
+# Mod4 is <Win> and Mod1 is <Alt>
+set $Win Mod4
+set $Alt Mod1
+
+# Requires latest version (from git)
+# ---------------------------------->
+# Window border style:
+# bn: border normal, with window title bar;
+# bp: border only, no window title bar;
+# bb: no berder or window title bar.
+new_window bp
+
+# Workspace bar
+# workspace_bar yes
+# ----------------------------------<
+
+# Window layout style:
+# default: it splits the screen
+# stacking
+# tabbed
+#workspace_layout tabbed
+
+# workspace names
+workspace 1 www
+workspace 2 work
+workspace 3 work
+workspace 4 im
+workspace 5 mail
+workspace 6 files
+workspace 7 work
+workspace 8 news
+workspace 9 work
+workspace 10 work
+workspace 11 work
+workspace 12 work
+workspace 13 work
+workspace 14 work
+workspace 15 work
+workspace 16 work
+workspace 17 work
+workspace 18 work
+workspace 19 work
+workspace 20 work
+
+# Requires latest version (from git)
+# ---------------------------------->
+#new_container stacking
+# ----------------------------------<
+
+# ISO 10646 = Unicode
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1
+
+### IPC INTERFACE ###
+
+# The IPC interface allows programs like an external workspace bar
+# (i3-wsbar) or i3-msg (can be used to "remote-control" i3) to work.
+ipc-socket ~/.i3/ipc.sock
+
+# ###################################
+# ############ AUTOSTART ############
+# ###################################
+
+# execute my startup programs
+exec ~/.i3/startup
+
+# ###################################
+# ######## KEYBOARD BINDINGS ########
+# ###################################
+
+# Use Mouse+$Win to drag floating windows to their wanted position
+floating_modifier $Win
+
+# Fullscreen ($Win+f)
+bind $Win+41 f
+
+# Stacking ($Win+s)
+bind $Win+39 s
+
+# Tabbed ($Win+t)
+bind $Win+28 T
+
+# Default ($Win+d)
+bind $Win+40 d
+
+# Toggle tiling/floating of the current window ($Win+Shift+Space)
+bind $Win+Shift+65 t
+
+# Go into the tiling layer / floating layer, depending on whether
+# the current window is tiling / floating ($Win+t)
+bind $Win+65 focus ft
+
+# Focus ($Win+h/j/k/l)
+bind $Win+43 h
+bind $Win+44 j
+bind $Win+45 k
+bind $Win+46 l
+# (alternatively, you can use the cursor keys:)
+bindsym $Win+Left h
+bindsym $Win+Down j
+bindsym $Win+Up k
+bindsym $Win+Right l
+
+# Focus Container ($Alt+h/j/k/l)
+bind $Alt+43 wch
+bind $Alt+44 wcj
+bind $Alt+45 wck
+bind $Alt+46 wcl
+
+# Snap ($Win+Control+h/j/k/l)
+bind $Win+Control+43 sh
+bind $Win+Control+44 sj
+bind $Win+Control+45 sk
+bind $Win+Control+46 sl
+# (alternatively, you can use the cursor keys:)
+bindsym $Win+Control+Left sh
+bindsym $Win+Control+Down sj
+bindsym $Win+Control+Up sk
+bindsym $Win+Control+Right sl
+
+# Move ($Win+Shift+h/j/k/l)
+bind $Win+Shift+43 mh
+bind $Win+Shift+44 mj
+bind $Win+Shift+45 mk
+bind $Win+Shift+46 ml
+# (alternatively, you can use the cursor keys:)
+bindsym $Win+Shift+Left mh
+bindsym $Win+Shift+Down mj
+bindsym $Win+Shift+Up mk
+bindsym $Win+Shift+Right ml
+
+# Move Container (Mod3+Shift+h/j/k/l)
+bind $Alt+$Win+Shift+43 wcmh
+bind $Alt+$Win+Shift+44 wcmj
+bind $Alt+$Win+Shift+45 wcmk
+bind $Alt+$Win+Shift+46 wcml
+
+# Workspaces ($Win+1/2/…)
+bind $Win+10    1
+bind $Win+11    2
+bind $Win+12    3
+bind $Win+13    4
+bind $Win+14    5
+bind $Win+15    6
+bind $Win+16    7
+bind $Win+17    8
+bind $Win+18    9
+bind $Win+19    10
+bind $Win+24    11
+bind $Win+25    12
+bind $Win+26    13
+bind $Win+27    14
+bind $Win+28    15
+bind $Win+29    16
+bind $Win+30    17
+bind $Win+31    18
+bind $Win+32    19
+bind $Win+33    20
+# Requires latest version (from git)
+# ---------------------------------->
+bind $Win+113   pw
+bind $Win+114   nw
+# ----------------------------------<
+
+# Move to Workspaces
+bind $Win+Shift+10 m1
+bind $Win+Shift+11 m2
+bind $Win+Shift+12 m3
+bind $Win+Shift+13 m4
+bind $Win+Shift+14 m5
+bind $Win+Shift+15 m6
+bind $Win+Shift+16 m7
+bind $Win+Shift+17 m8
+bind $Win+Shift+18 m9
+bind $Win+Shift+19 m10
+
+# Requires latest version (from git)
+# ---------------------------------->
+bind $Win+Shift+24  m11
+bind $Win+Shift+25  m12
+bind $Win+Shift+26  m13
+bind $Win+Shift+27  m14
+bind $Win+Shift+28  m15
+bind $Win+Shift+29  m16
+bind $Win+Shift+30  m17
+bind $Win+Shift+31  m18
+bind $Win+Shift+32  m19
+bind $Win+Shift+33  m20
+# ----------------------------------<
+
+# $Win+Enter starts a new terminal
+bind $Win+36 exec /usr/bin/x-terminal-emulator
+#bind $Win+36 exec /usr/bin/urxvtc
+bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
+#bindsym Control+Shift+g exec /usr/bin/urxvtc
+
+# Control+Shift*f starts firefox
+#bind Control+Shift+41 exec /usr/bin/firefox
+
+# Control+Shift+k kills the current client
+bind Control+Shift+45 kill
+
+# $Alt+Esc starts dmenu and launches the selected application
+# for now, we don’t have an own launcher
+#-sf purple
+bind $Alt+9 exec dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
+
+# Control+$Alt+e exits i3
+bind Control+$Alt+26 exit
+
+# Control+$Alt+r restarts i3 inplace
+bind Control+$Alt+27 restart
+
+# Control+$Alt+l lock session
+bind Control+$Alt+46 exec gnome-screensaver-command --lock
+
+# Control+$Alt+Supr starts a dmenu session menu
+bind Control+$Alt+119 exec dmenu_session
+
+# mutt: Control+Shift+m
+bindsym Control+Shift+m exec /usr/bin/x-terminal-emulator -e mutt
+#bindsym Control+Shift+m exec /bin/sh -c mutt
+
+# irssi: Control+Shift+i
+bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
+#bindsym Control+Shift+i exec /bin/sh -c irssi
+
+# pms: Control+Shift+p
+bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e pms
+#bindsym Control+Shift+p exec sh -c pms
+
+# alsamixer: Control+Shift+a
+bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
+#bindsym Control+Shift+a exec /bin/sh -c alsamixer
+
+# pcmanfm:
+bindsym Control+Shift+h exec /usr/bin/pcmanfm 
+#bindsym Control+Shift+h exec nautilus
+
+# volume:
+bind Control+Shift+20 exec /usr/bin/amixer set Master 1-
+bind Control+Shift+21 exec /usr/bin/amixer set Master 1+  
+
+# mpd
+bind Control+Shift+61 exec /usr/bin/mpc play
+bind Control+61 exec /usr/bin/mpc stop
+bind Control+Shift+60 exec /usr/bin/mpc next
+bind Control+Shift+59 exec /usr/bin/mpc prev
+
+# record_desktop
+bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
+bind Control+35 exec /usr/local/bin/screencast_record
+
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # They resize the border in the direction you pressed, e.g.
+        # when pressing left, the window is resized so that it has
+        # more space on its left
+
+        bindsym n resize left -10
+        bindsym Shift+n resize left +10
+
+        bindsym r resize bottom +10
+        bindsym Shift+r resize bottom -10
+
+        bindsym t resize top -10
+        bindsym Shift+t resize top +10
+
+        bindsym d resize right +10
+        bindsym Shift+d resize right -10
+        
+        #Enter
+        bindsym $Win+Shift+z mode default
+}
+
+# Enter resize mode
+bindsym $Win+z mode resize
+
+# Get me to the next open VIM instance
+#bindsym $Win+v jump "buzz/VIM"
+#bindsym $Win+m jump "buzz/mutt"
+
+# Read 1 character and mark the current window with this character
+#bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
+
+# Read 1 character and go to the window with the character
+#bindsym $Win+g exec i3-input -p 'goto ' -l 1 -P 'Goto: '
+
+# ###################################
+# ############# ASSIGNS #############
+# ###################################
+
+# Assigns default monitor for workspaces
+workspace 1 output VGA1
+
+# Assigns default workspaces for app
+# assign ["]window class[/window title]["] [→] [~ | workspace]
+
+assign "firefox"         1
+assign "buzz/irssi"      4
+assign "buzz/mutt"       5
+assign "thunderbird"     5
+assign "liferea"         8
+assign "pcmanfm"         6
+assign "nautilus"        6
+assign "workrave"        20
+
+# ###################################
+# ############# COLORS ##############
+# ###################################
+
+#  colorclass            border          background      text
+
+# arch linux
+#client.focused          #1793D1         #1793D1         #ffffff
+#client.focused_inactive #666666         #666666         #ffffff
+#client.unfocused        #333333         #333333         #ffffff
+#client.urgent           #D11931         #D11931         #ffffff
+#bar.focused             #1793d1         #1793d1         #ffffff
+#bar.unfocused           #333333         #333333         #ffffff
+#bar.urgent              #d11931         #d11931         #ffffff
+
+# freebsd
+#client.focused         #990000         #990000         #ffffff
+#client.focused_inactive        #666666         #666666         #ffffff
+#client.unfocused       #333333         #333333         #ffffff
+#client.urgent          #D11931         #D11931         #ffffff
+#bar.focused            #990000         #990000         #ffffff
+#bar.unfocused          #333333         #333333         #ffffff
+#bar.urgent             #d11931         #d11931         #ffffff
+
+# gentoo
+#client.focused         #7a5ada         #7a5ada         #ffffff
+#client.focused_inactive        #45347b         #45347b         #ffffff
+#client.unfocused       #333333         #333333         #ffffff
+#client.urgent          #D11931         #D11931         #ffffff
+#bar.focused            #45347b         #45347b         #ffffff
+#bar.unfocused          #dddaec         #dddaec         #45347b
+#bar.urgent             #d11931         #d11931         #ffffff
+
+# dark
+client.focused            #999999      #999999      #000000
+client.focused_inactive   #333333      #333333      #999999
+client.unfocused          #333333      #333333      #999999
+client.urgent             #8C4665      #8C5665      #999999
+bar.focused               #999999      #000000      #999999
+bar.unfocused             #333333      #000000      #999999
+#bar.urgent                #8C4665      #000000      #999999
+bar.urgent             #d11931         #000000         #999999
