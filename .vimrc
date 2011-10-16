@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Sat 05 Feb 2011 07:06:49 PM CST
+"           Last review            Wed 07 Sep 2011 11:56:21 AM CDT
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
@@ -12,10 +12,10 @@
 " NERD_commenter.vim tasklist.vim align.vim CSApprox.vim checksyntax.vim
 " fugitive.vim refactor.vim Drawit.vim omnicppcomplete.vim netrwPlugin.vim
 " securemodelines.vim markdown.vim [+]irssilog.vim twitvim.vim 
-" hiswinPlugin.vim cctree.vim command_t.vim gist.vim unimparied.vim session.vim
-" easytags.vim
+" hiswinPlugin.vim cctree.vim command_t.vim gist.vim unimparied.vim
+" easytags.vim syntastic.vim
 "
-"[+] Modified versions                   => git://github.com/chilicuil/dot-f.git
+"[+] Modified versions                   => git://github.com/chilicuil/dotfiles.git
 "[*] TODO 18-11-2009 21:19
 "[*] TODO 30-05-2011 12:09 => Fix easytags who apparently makes acp going mad
 
@@ -61,8 +61,8 @@
 "let command_t_loaded         = 1
 "let loaded_gist_vim          = 1
 "let loaded_unimpaired        = 1
-"let loaded_session           = 1
 let loaded_easytags          = 1
+"let loaded_syntastic_plugin  = 1
  
 
 "===============================================================================
@@ -568,8 +568,7 @@ endfunction
 "===============================================================================
 
 if v:version < 700
-    echo "This vimrc file use features than are only available on vim 7.0 or\
-                \ greater versions"
+    echo "This vimrc file use features than are only available on vim 7.0 or greater versions"
 endif
 
 if has ('gui_running')
@@ -599,7 +598,7 @@ set nocompatible       "breaks compatibility with vi, it must be enable at the
 "start to not overwrite other flags
 syntax on
 set noexrc             "don't use local version of .(g)vimrc, .exrc
-set clipboard=unnamedplus "yanks go on clipboard instead, "+p to make recover the x11 clipboard
+"set clipboard=unnamedplus "yanks go on clipboard instead, "+p to make recover the x11 clipboard
                           "use xsel hacks if your vim version has no "clipboad-x11 support
 "set mouse=nv           "set the mouse to work in console mode
 set mousehide          "hide the mouse while typying
@@ -660,8 +659,8 @@ set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
 set backspace=indent,eol,start     "make backspace works like in other editors.
 filetype plugin indent on          "enable filetype-specific plugins
 
-"remember as much as possible
-set viminfo='1000,<1000,s100,h
+"remember not as much as possible
+set viminfo='100,<100,s10,h
 
 "====== Status Line ======
 
@@ -672,7 +671,7 @@ set laststatus=2                                         "always show statusline
 set statusline=
 set statusline+=%2*%-2n                                  "buffer number
 set statusline+=%*\ %-.50F\                              "file name (full)
-set statusline+=%{VCSInfo()}                             "branch info
+"set statusline+=%{VCSInfo()}                             "branch info
 set statusline+=%h%1*%m%r%w%0*                           "flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'},             "filetype
 set statusline+=%{&encoding},                            "encoding
@@ -773,11 +772,6 @@ let g:Tlist_WinWidth          = 25
 let g:Tlist_Show_One_File     = 1
 let Tlist_Enable_Fold_Column  = 0
 
-"session, fix
-let g:session_directory       = '~/.session_vim'
-"let g:session_autoload       = 1
-"let g:session_autosave       = 1
-
 "easytags
 let g:easytags_file                    = '~/.ctags/tags'
 "let g:easytags_always_enabled         = 1
@@ -786,6 +780,22 @@ let g:easytags_file                    = '~/.ctags/tags'
 "let g:easytags_include_members        = 1 "struct/classes for c++, java, etc
 "let g:easytags_suppress_ctags_warning = 1
 "set tags=./.tags;,~/ctags/tags
+
+"syntastic.vim
+set statusline+=\ %#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+"use this option to tell syntastic to automatically open a list when a buffer
+"has errors (:Errors) TODO 07-09-2011 11:07 => add shortcut for :Errors
+"let g:syntastic_auto_loc_list=1
+
+"Use this option to tell syntastic to use the |:sign| interface to mark errors
+"let g:syntastic_enable_signs=1
+
+"Use this option if you only care about syntax errors, not warnings
+"let g:syntastic_quiet_warnings=1
+
+"Use this option to disable syntax checking on selected filetypes
+"let g:syntastic_disabled_filetypes = ['ruby', 'php']
 
 "===============================================================================
 "================================ Autoloads by events ==========================
@@ -873,7 +883,7 @@ map <c-p> :tabp <CR>
 map <c-e> :tabclose <CR>
 
 "c'ompile
-map <Leader>mm  :make<CR> 
+map <Leader>mm  :make<CR>
 
 "for some unknown reason if I set this. it executes :confirm qall when
 " I write '*/' on --insert-- mode where '*' is a wildcard
@@ -953,15 +963,14 @@ nmap <Leader>ff :scs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <Leader>fi :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <Leader>fd :scs find d <C-R>=expand("<cword>")<CR><CR>
 
-"nmap <Leader>p  :Pastebin<CR>
-
 "Select everything
 "noremap <Leader>gg ggVG
 
 nnoremap <silent><Leader>ml :call AppendModeline()<CR>
 
 "Opens in a quickfix window your TODO list
-"map <Leader>t
+"TODO 07-09-2011 11:30 => make it toggle (open/close)
+map <Leader>t <Plug>TaskList
 
 "crefvim.vim
 "map <Leader>crn <Plug>CRV_CRefVimNormal
@@ -969,13 +978,13 @@ nnoremap <silent><Leader>ml :call AppendModeline()<CR>
 "map <Leader>cvi <Plug>CRV_CRefVimInvoke
 
 nnoremap <silent><Leader>g :call FindInNERDTree()<CR>
-
-"let's switch these
-nnoremap ' `
-nnoremap ` '
+"Language specific settings
 
 "histwinBrowse
 nnoremap <silent><Leader>u :UB<CR><CR>
+
+"syntastic.vim TODO 07-09-2011 11:32 => make it toogle (open/close)
+map <silent><Leader>e :Errors<CR>
 
 "=== Tab Mappings ===
 map <Tab>c :cc<CR>
@@ -984,6 +993,10 @@ map <Tab>p :cprevious<CR>
 
 "=== Misc Mappings===
 map ; :
+
+"let's switch these
+nnoremap ' `
+nnoremap ` '
 
 "you don't wanna go far away just to press <Esc>, take care when pasting stuff
 inoremap jj <Esc>:w<CR>
