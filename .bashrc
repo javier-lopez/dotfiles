@@ -59,6 +59,17 @@ if [ -f /etc/bash_completion ]; then
     source /etc/bash_completion
 fi
 
+# Change the window title of X terminals
+# originally from /etc/bash/bashrc on Gentoo
+case ${TERM} in
+	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
+		PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
+		;;
+	screen)
+		PROMPT_COMMAND='echo -ne "\033_${PWD/$HOME/~}\033\\"'
+		;;
+esac
+
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"\
 'echo $USER \ \ \ \ \ "$(history 1)" >> ~/.bash_eternal_history'
 
