@@ -28,7 +28,7 @@ servers = (
 );
 
 chatnets = {
-fn = { type = "IRC"; autosendcmd = "wait 2000"; };
+fn = { type = "IRC"; autosendcmd = "wait 2000; /window down"; };
 im = {
 type = "IRC";
 autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
@@ -56,12 +56,15 @@ channels = (
   #{ name = "#ubuntu-beginners"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-beginners-team"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-desktop"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-leadership"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-app-devel"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-classroom"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-server"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#networking"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-ops"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-es-monitor"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-br"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; }
   #{ name = "#ugj-df"; chatnet = "fn"; autojoin = "Yes"; },
@@ -92,6 +95,7 @@ ignores = (
       "#ubuntu-es",
       "#ubuntu-es-offtopic",
       "#ubuntu-es-ops",
+      "#ubuntu-es-monitor",
       "#ubuntu-mx",
       "#ubuntu-br",
       "##ubuntu-br-offtopic",
@@ -110,6 +114,8 @@ ignores = (
       "##networking",
       "#ubuntu",
       "#ubuntu-bugs-announce",
+      "#ubuntu-leadership",
+      "#ubuntu-app-devel",
       "#ubuntu-locoteams"
       #"#fel-clan"
     );

@@ -27,17 +27,16 @@ autocutsel &                                   #sync X/Gnome clipboards
 autocutsel -s PRIMARY &
 
 #exec /usr/bin/xmonad                          # start xmonad
-#exec /opt/e17/bin/enlightenment_start         # start e17
+#exec /usr/bin/enlightenment_start              # start e17
 exec /usr/bin/i3                               # start i3
 
 #case $1 in
 #i3)
     ##exec /usr/bin/i3
-    #exec x-terminal-emulator
    #;;
 
 #e17)
-    #exec /opt/e17/bin/enlightenment_start
+    #exec /usr/bin/enlightenment_start
    #;;
 
 ##openbox)
