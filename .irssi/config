@@ -1,12 +1,11 @@
 ########################################################
-#Last review            Thu 03 Feb 2011 10:03:46 AM CST
+#Last review            Sun 23 Oct 2011 05:19:59 PM CDT
 ########################################################
 
 # vim: set ts=8 sw=4 tw=0 ft=config : 
 # scripts used: active_notify, auto_away, beepaway, bitlbee_join_notice
-#               bitlbee_tab_completion, bitlbee_typing_notice, follow
-#               iMPD, ircops, nickbar, nickcolor, screen_away, trackbar
-#               scriptassist, showhilight
+#               bitlbee_tab_completion, bitlbee_typing_notice, nickbar,
+#               nickcolor, screen_away, trackbar, scriptassist, showhilight
 
 servers = (
   {
@@ -28,11 +27,11 @@ servers = (
 );
 
 chatnets = {
-fn = { type = "IRC"; autosendcmd = "wait 2000; /window down"; };
-im = {
-type = "IRC";
-autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
-};
+  fn = { type = "IRC"; autosendcmd = "wait 2000; /window down"; };
+  im = {
+    type = "IRC";
+    autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
+  };
 };
 
 channels = (
@@ -66,7 +65,7 @@ channels = (
   { name = "#ubuntu-es-ops"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-monitor"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-br"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; }
+  { name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ugj-df"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ugj-df-triaging"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ugj-df-testing"; chatnet = "fn"; autojoin = "Yes"; },
@@ -116,7 +115,7 @@ ignores = (
       "#ubuntu-bugs-announce",
       "#ubuntu-leadership",
       "#ubuntu-app-devel",
-      "#ubuntu-locoteams"
+      "#ubuntu-locoteams",
       #"#fel-clan"
     );
     network = "fn";
@@ -306,8 +305,6 @@ settings = {
   };
   "perl/core/scripts" = {
     notify_broadcast = "yes";
-    mpd_port = "6600";
-    dccstat_hide_sbar_when_inactive = "yes";
   };
 };
 
@@ -336,4 +333,3 @@ logs = { };
 #=============== [dcc] ================
 #======================================
 
-chatnets = { fn = { type = "IRC"; }; im = { type = "IRC"; }; };
