@@ -72,14 +72,14 @@ else
             set lines=47
         endif
     endif
-    if &term=="rxvt-unicode"
-        set term=builtin_ansi
-    endif
+    "if &term=="rxvt-unicode"
+        "set term=builtin_xterm
+        "set term=builtin_ansi
+    "endif
 endif
 
 set modelines=0        "http://www.guninski.com/vim1.html
 set nocompatible       "breaks compatibility with vi, required
-"set term=builtin_xterm
 set noexrc             "don't use local version of .(g)vimrc, .exrc
 syntax on
 set lazyredraw         "do not redraw the screen while macros are running. It
@@ -163,6 +163,10 @@ if has("autocmd")
                 \|execute("normal '\"")|endif
 endif
 
+"Sourced from vim tip: http://vim.wikia.com/wiki/Keep_folds_closed_while_inserting_text
+"autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+"autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+
 "Language specific settings
 "TODO 17-11-2009 13:12 => Add languages
 if has("autocmd")
@@ -231,6 +235,15 @@ endif
 "================================ Plugins config  ==============================
 "===============================================================================
 
+if !isdirectory(expand(expand("~/.vim/bundle/vundle/.git/")))
+    "call inputsave()
+    echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
+    if nr2char(getchar()) ==? 'y'
+        !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    endif
+    "call inputrestore()
+endif
+
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -253,18 +266,13 @@ Bundle 'msanders/snipmate.vim'
         let g:snippets_dir      = "~/.vim/extra-snippets/"
 
 Bundle 'chilicuil/taglist.vim'
-Bundle 'Shougo/neocomplcache'
-        let g:neocomplcache_enable_at_startup = 1
-        let g:neocomplcache_max_list = 20
-        let g:neocomplcache_max_menu_width = 10
-        let g:neocomplcache_auto_completion_start_length = 4
-        let g:neocomplcache_manual_completion_start_length = 4
-        let g:neocomplcache_enable_auto_select = 1
-        let g:neocomplcache_enable_auto_delimiter = 1
-        let g:neocomplcache_disable_auto_complete = 0
-        let g:neocomplcache_enable_wildcard = 1
-        let g:neocomplcache_enable_caching_message = 1
-        imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+Bundle 'vim-scripts/AutoComplPop'
+        let g:acp_behaviorKeywordLength    = 4
+        let g:acp_mappingDriven            = 1
+        let g:acp_completeOption           = '.,w,b,t,k,i,d'
+        let g:acp_completeoptPreview       = 1
+        "let g:acp_behaviorSnipmateLength   = 2
+        let g:acp_behaviorPythonOmniLength = -1
 
 Bundle 'Townk/vim-autoclose'
 Bundle 'chilicuil/dbext.vim'
@@ -330,13 +338,18 @@ Bundle 'IndexedSearch'
 Bundle 'Align'
 
 "experimental
-"Bundle 'vim-scripts/AutoComplPop'
-        "let g:acp_behaviorKeywordLength    = 4
-        "let g:acp_mappingDriven            = 1
-        "let g:acp_completeOption           = '.,w,b,t,k,i,d'
-        "let g:acp_completeoptPreview       = 1
-        ""let g:acp_behaviorSnipmateLength   = 2
-        "let g:acp_behaviorPythonOmniLength = -1
+"Bundle 'Shougo/neocomplcache'
+        "let g:neocomplcache_enable_at_startup = 1
+        "let g:neocomplcache_max_list = 20
+        "let g:neocomplcache_max_menu_width = 10
+        "let g:neocomplcache_auto_completion_start_length = 4
+        "let g:neocomplcache_manual_completion_start_length = 4
+        "let g:neocomplcache_enable_auto_select = 1
+        "let g:neocomplcache_enable_auto_delimiter = 1
+        "let g:neocomplcache_disable_auto_complete = 0
+        "let g:neocomplcache_enable_wildcard = 1
+        "let g:neocomplcache_enable_caching_message = 1
+        "imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "Bundle 'xolox/vim-easytags'
         "let g:easytags_file                    = '~/.ctags/tags'
@@ -348,6 +361,7 @@ Bundle 'Align'
         "set tags=./.tags;,~/ctags/tags
 
 "Bundle 'Shougo/unite.vim'
+"Bundle 'Raimondi/delimitMate'
 
 "===============================================================================
 "================================== Mappings ===================================
