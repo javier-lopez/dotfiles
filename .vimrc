@@ -333,9 +333,11 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
 
     Bundle 'gmarik/github-search.vim'
     Bundle 'kien/ctrlp.vim'
-        let g:ctrlp_map = '<leader><leader>'
+        let g:ctrlp_map = '<leader>f'
         let g:ctrlp_clear_cache_on_exit = 0
         "let g:ctrlp_user_command = 'find %s -type f'
+    Bundle 'Lokaltog/vim-easymotion'
+    let g:EasyMotion_leader_key = '<leader><leader>'
 
     "===vim-scripts===, not hosted in github for some obscure reason
     Bundle 'QuickBuf'
