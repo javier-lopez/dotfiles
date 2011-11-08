@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Wed 07 Sep 2011 11:56:21 AM CDT
+"           Last review            Mon 07 Nov 2011 01:24:56 AM CST
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
@@ -101,7 +101,7 @@ set ruler              "show the cursor position all the time
 set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
-set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp
+set wildignore=*/.svn/*,CVS,*/.git,*/.hg/*,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp
 set hidden             "allow open other file without saving current file
 set autochdir          "change to the current directory
 set winminheight=1     "never let a window to be less than 1px height
@@ -135,7 +135,7 @@ set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
                        "paste several lines of text so they won't
                        "be indented.
 set mousehide          "hide the mouse while typying
-"set mouse=nv          "set the mouse to work in console mode
+set mouse=nv          "set the mouse to work in console mode
 set clipboard=unnamed
 "set clipboard=unnamedplus         "yanks go on clipboard instead, "+p to make recover the x11 clipboard
                                    "use xsel hacks if your vim version has no "clipboad-x11 support
@@ -147,10 +147,11 @@ filetype plugin indent on          "enable filetype-specific plugins
 set viminfo='100,<100,s10,h
 
 "Folding
-set foldenable!                 "off by default
+set foldenable!                    "off by default
 set foldmethod=syntax
 "set foldmarker={,}
 
+let mapleader = ","
 setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 
 "===============================================================================
@@ -161,14 +162,13 @@ setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 if has("autocmd")
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \|execute("normal '\"")|endif
+
+    "Sourced from vim tip: http://vim.wikia.com/wiki/Keep_folds_closed_while_inserting_text
+    "autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+    "autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 endif
 
-"Sourced from vim tip: http://vim.wikia.com/wiki/Keep_folds_closed_while_inserting_text
-"autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-"autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
-
 "Language specific settings
-"TODO 17-11-2009 13:12 => Add languages
 if has("autocmd")
     "Behaviour :
     autocmd BufNewFile,BufEnter *.php,*.php3,*.php4  call SetProperties("php")
@@ -244,29 +244,30 @@ if !isdirectory(expand(expand("~/.vim/bundle/vundle/.git/")))
     "call inputrestore()
 endif
 
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
+if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
+    set runtimepath+=~/.vim/bundle/vundle/
+    call vundle#rc()
 
-"github
-Bundle 'gmarik/vundle'
-Bundle 'mhz/vim-matchit'
-Bundle 'vim-scripts/CRefVim'
+    "====github====
+    Bundle 'gmarik/vundle'
+    Bundle 'mhz/vim-matchit'
+    Bundle 'vim-scripts/CRefVim'
         "map <Leader>crn <Plug>CRV_CRefVimNormal
         "map <Leader>caw <Plug>CRV_CRefVimAsk
         "map <Leader>cvi <Plug>CRV_CRefVimInvoke
-Bundle 'scrooloose/nerdtree'
+
+    Bundle 'scrooloose/nerdtree'
         let g:NERDTreeWinPos      = 'right'
         let g:NERDTreeWinSize     = 25
         let g:NERDTreeMouseMode   = 3
 
-Bundle 'msanders/snipmate.vim'
-        "TODO 03-11-2011 10:47 => check out if neocomplcache can superseed it
+    Bundle 'msanders/snipmate.vim'
         let g:snips_author      = "chilicuil"
         let g:snips_authorEmail = "chilicuil@gmail.com"
         let g:snippets_dir      = "~/.vim/extra-snippets/"
 
-Bundle 'chilicuil/taglist.vim'
-Bundle 'vim-scripts/AutoComplPop'
+    Bundle 'chilicuil/taglist.vim'
+    Bundle 'vim-scripts/AutoComplPop'
         let g:acp_behaviorKeywordLength    = 4
         let g:acp_mappingDriven            = 1
         let g:acp_completeOption           = '.,w,b,t,k,i,d'
@@ -274,22 +275,24 @@ Bundle 'vim-scripts/AutoComplPop'
         "let g:acp_behaviorSnipmateLength   = 2
         let g:acp_behaviorPythonOmniLength = -1
 
-Bundle 'Townk/vim-autoclose'
-Bundle 'chilicuil/dbext.vim'
+    Bundle 'Townk/vim-autoclose'
+    Bundle 'chilicuil/dbext.vim'
         let g:dbext_default_history_size = 100
         "let g:dbext_default_profile     = 'mysql_test1'
         let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
-         \passwd=passwd:dbname=test1:host=localhost:port=3306'
+                    \passwd=passwd:dbname=test1:host=localhost:port=3306'
 
-Bundle 'gmunkhbaatarmn/vim-largefile'
-Bundle 'vim-scripts/matrix.vim--Yang'
-        "map <Leader>x :Matrix<CR>
+    Bundle 'gmunkhbaatarmn/vim-largefile'
+    Bundle 'vim-scripts/matrix.vim--Yang'
+        map <leader>x :Matrix<CR>
 
-Bundle 'chilicuil/nextCS'
-Bundle 'chilicuil/TeTrIs.vim'
-Bundle 'chilicuil/vimbuddy.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'vim-scripts/TaskList.vim'
+    Bundle 'chilicuil/nextCS'
+    Bundle 'chilicuil/TeTrIs.vim'
+        "nmap <Leader>te :cal <SID>Main()<CR>
+
+    Bundle 'chilicuil/vimbuddy.vim'
+    Bundle 'scrooloose/nerdcommenter'
+    Bundle 'vim-scripts/TaskList.vim'
         "let g:Tlist_Use_Right_Window = 1
         let g:Tlist_WinWidth          = 25
         let g:Tlist_Show_One_File     = 1
@@ -297,24 +300,27 @@ Bundle 'vim-scripts/TaskList.vim'
         "TODO 07-09-2011 11:30 => make it toggle (open/close)
         map <Leader>t <Plug>TaskList
 
-Bundle 'godlygeek/csapprox'
-Bundle 'vim-scripts/DrawIt'
-Bundle 'vim-scripts/netrw.vim'
-Bundle 'ciaranm/securemodelines'
+    Bundle 'godlygeek/csapprox'
+    Bundle 'vim-scripts/DrawIt'
+        "map <leader>di :DIstart <CR>
+        "map <leader>ds :DIstop <CR>
+
+    Bundle 'vim-scripts/netrw.vim'
+    Bundle 'ciaranm/securemodelines'
         "enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
         "let g:secure_modelines_verbose=1
 
-Bundle 'tpope/vim-markdown'
-Bundle 'vim-scripts/irssilog.vim'
-Bundle 'mattn/gist-vim'
+    Bundle 'tpope/vim-markdown'
+    Bundle 'vim-scripts/irssilog.vim'
+    Bundle 'mattn/gist-vim'
         let g:github_user       = "chilicuil"
         let g:github_token      = "7c0098a81da8a04fadbbc1318eaeb7e1"
 
-Bundle 'scrooloose/syntastic'
+    Bundle 'scrooloose/syntastic'
         set statusline+=\ %#warningmsg#
         set statusline+=%{SyntasticStatuslineFlag()}
         "use this option to tell syntastic to automatically open a list when a buffer
-        "has errors (:Errors) TODO 07-09-2011 11:07 => add shortcut for :Errors
+        "has errors (:Errors)
         "let g:syntastic_auto_loc_list=1
         "use this option to tell syntastic to use the |:sign| interface to mark errors
         "let g:syntastic_enable_signs=1
@@ -322,23 +328,28 @@ Bundle 'scrooloose/syntastic'
         "let g:syntastic_quiet_warnings=1
         "use this option to disable syntax checking on selected filetypes
         "let g:syntastic_disabled_filetypes = ['ruby', 'php']
-        "TODO 07-09-2011 11:32 => make it toogle (open/close)
-        map <silent><Leader>e :Errors<CR>
+        "TODO 07-09-2011 11:32 => make it toogle (open/close), check nerdtree out
+        map <silent><leader>e :Errors<CR>
 
-Bundle 'gmarik/github-search.vim'
+    Bundle 'gmarik/github-search.vim'
+    Bundle 'kien/ctrlp.vim'
+        let g:ctrlp_map = '<leader><leader>'
+        let g:ctrlp_clear_cache_on_exit = 0
+        "let g:ctrlp_user_command = 'find %s -type f'
 
-"===vim-scripts===, not hosted in github for some obscure reason
-Bundle 'QuickBuf'
+    "===vim-scripts===, not hosted in github for some obscure reason
+    Bundle 'QuickBuf'
         let g:qb_hotkey = "<F2>"
 
-Bundle 'surround.vim'
-Bundle 'repeat.vim'
-Bundle 'FindMate'
-Bundle 'IndexedSearch'
-Bundle 'Align'
+    Bundle 'surround.vim'
+        " ds" / cs"' / ysiw'
 
-"experimental
-"Bundle 'Shougo/neocomplcache'
+    Bundle 'repeat.vim'
+    Bundle 'IndexedSearch'
+    Bundle 'Align'
+
+    "===experimental===
+    "Bundle 'Shougo/neocomplcache'
         "let g:neocomplcache_enable_at_startup = 1
         "let g:neocomplcache_max_list = 20
         "let g:neocomplcache_max_menu_width = 10
@@ -351,7 +362,7 @@ Bundle 'Align'
         "let g:neocomplcache_enable_caching_message = 1
         "imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
-"Bundle 'xolox/vim-easytags'
+    "Bundle 'xolox/vim-easytags'
         "let g:easytags_file                    = '~/.ctags/tags'
         "let g:easytags_always_enabled         = 1
         "let g:easytags_on_cursorhold          = 0 "disable the automatic refresh
@@ -360,8 +371,13 @@ Bundle 'Align'
         "let g:easytags_suppress_ctags_warning = 1
         "set tags=./.tags;,~/ctags/tags
 
-"Bundle 'Shougo/unite.vim'
-"Bundle 'Raimondi/delimitMate'
+    "Bundle 'Shougo/unite.vim'
+    "Bundle 'Raimondi/delimitMate'
+
+    "===discarted===
+    "Bundle 'chilicuil/conque'
+    "Bundle 'FindMate'
+endif
 
 "===============================================================================
 "================================== Mappings ===================================
@@ -398,10 +414,7 @@ map <c-n> :tabn <CR>
 map <c-p> :tabp <CR>
 "Ctrl+Pageup & Ctrl+Pagedown should do the same
 
-map <c-e> :tabclose <CR>
-
-"c'ompile
-map <Leader>mm  :make<CR>
+map <c-w> :tabclose <CR>
 
 "for some unknown reason if I set this. it executes :confirm qall when
 " I write '*/' on --insert-- mode where '*' is a wildcard
@@ -410,35 +423,37 @@ map <Leader>mm  :make<CR>
 "exit keyboard shortcut
 map <c-x> :confirm qall<CR>
 
-"=== Leader Mappings===
-let mapleader = ","
+"=== Leader Mappings(,)==
+
+"m'ak'e
+map <silent> <leader>mk :make<CR>
 
 "online doc search
-map <silent> <Leader>c :call Google_for_snippet()<CR>
+map <silent> <leader>gs :call GoogleSnippets()<CR>
 
-"Trailer map
-map <silent> <Leader>v :call Trailer()<CR>
+"trailer map
+map <silent> <leader>v :call Trailer()<CR>
 
 "keyboard shortcuts to close/open the two main plugins
-map <silent> <Leader>n :call Nerd_tree()<CR>
-map <silent> <Leader>l :call Tag_list()<CR>
+map <silent> <leader>n :call Nerd_tree()<CR>
+map <silent> <leader>l :call Tag_list()<CR>
 
-map <silent> <Leader>m :set number!<CR>
+map <silent> <leader>m :set number!<CR>
 
-map <silent> <Leader>w :WordMode<CR>
-map <silent> <Leader>d :DevMode<CR>
-map <silent> <Leader>p :PresentationMode<CR>
-map <silent> <Leader>f :DefaultMode<CR>
+map <silent> <leader>w :WordMode<CR>
+map <silent> <leader>d :DevMode<CR>
+map <silent> <leader>p :PresentationMode<CR>
+map <silent> <leader>f :DefaultMode<CR>
 
 "folding
-map <silent> <Leader>} :call Folding()<CR>
-noremap <silent> <Leader>{ za
+map <silent> <leader>} :call Folding()<CR>
+noremap <silent> <leader>{ za
 
 "update ~/.vimrc
-map <Leader>s :source $MYVIMRC<CR>
+map <leader>s :source $MYVIMRC<CR>
 
 "clear highlighted searches
-nmap <silent> <Leader>/ :nohlsearch<CR>
+nmap <silent> <leader>/ :nohlsearch<CR>
 
 "Select everything
 "noremap <Leader>gg ggVG
@@ -458,7 +473,7 @@ nnoremap ' `
 nnoremap ` '
 
 "you don't wanna go far away just to press <Esc>, take care when pasting stuff
-inoremap jj <Esc>:w<CR>
+inoremap jj <Esc>
 
 "insert a space in normal mode
 noremap <Space> i <Esc>
@@ -478,8 +493,6 @@ nnoremap Y y$
 "nnoremap x "_x
 "nnoremap X "_X
 "nnoremap s "_s
-
-"noremap <M-a> ggVG
 
 "quit and save faster
 noremap zz :q!<CR>
@@ -504,15 +517,10 @@ noremap <END> $
 "for the tip
 
 noremap <M-HOME> gg
-
 noremap <M-END> G
-"move between buffers
-map <Tab><Space> :bnext <CR>
 
-"insert a newline in normal mode, it has some problems with vimgrep
-"use r<Enter> instance
-"noremap <CR> i<CR><Esc>
-"noremap <CR> o<Esc>
+"move between buffers
+map <Tab><Space> :bnext<CR>
 
 "Basically you press * or # to search for the current selection
 vnoremap <silent> * :call VisualSearch('f')<CR>
@@ -528,7 +536,7 @@ command! DevMode          call Dev_mode()
 command! PresentationMode call Presentation_mode()
 command! DefaultMode      call Default_mode()
 
-"TODO 17-11-2009 13:10 => Add a map for this, find a way to make it work with differents langs
+"TODO 17-11-2009 13:10 => find a way to make it work with differents langs
 function! AddCscope() "Add a session only if doesn't exist a previous one
     try
         if !(cscope_connection())
@@ -541,7 +549,7 @@ function! AddCscope() "Add a session only if doesn't exist a previous one
 endfunction
 
 " vimtip #1354
-function! Google_for_snippet()
+function! GoogleSnippets()
     let s:browser         = "firefox" "or whatever browser you prefer
     "TODO 17-11-2009 13:10 => Open it in a quickfix window
     let s:wordUnderCursor = expand("<cword>")
@@ -557,7 +565,7 @@ function! Google_for_snippet()
                     \.s:wordUnderCursor."+lang:".&ft
     elseif &ft == "vim" || &ft == "python" || &ft =="javascript"
         let s:url = "http://www.google.com/codesearch?q="
-                    \.s:wordUnderCursor
+                    \.s:wordUnderCursor."+lang:".&ft
     else
         echohl WarningMsg| echo "Filetype unknown" |echohl None
         return
@@ -566,7 +574,7 @@ function! Google_for_snippet()
     let s:cmd = "silent !" . s:browser . " " . s:url. " 2> /dev/null &"
     execute  s:cmd
     redraw!
-    echo "Looking google code for string=" . s:wordUnderCursor . " lang=" . &ft
+    echo "Looking google code (" . &ft . ") for \"" . s:wordUnderCursor . "\": " . s:url
 endfunction
 
 function! Nerd_tree() "need it to force close it, when changing between my
@@ -640,7 +648,6 @@ endfunction
 function! Trailer()
     if exists ("s:trailer")
         set nolist
-        "TODO 17-11-2009 13:11 => unset fillchars and listchars
         echo "[Trailer off]"
         unlet s:trailer
     else
@@ -658,11 +665,11 @@ endfunction
 
 function! Folding()
     if exists ("s:folding")
-        set foldenable!                                           "off by default
+        set foldenable!                "off by default
         echo "[Folding off]"
         unlet s:folding
     else
-        set foldenable!                                           "off by default
+        set foldenable!                "off by default
         echo "[Folding on]"
         let s:folding = 1
     endif
@@ -700,19 +707,17 @@ function! AppendModeline()
   echo "Added modeline :)"
 endfunction
 
-
-"TODO 17-11-2009 13:11 => functions for  php, c, perl, python, etc
 function! SetProperties(_language)
 
     if (a:_language == "c")
         set syntax  =c
         set makeprg =LANGUAGE=en\ CFLAGS='-g\ -Wall'\ make\ %:r
 
+        "TODO 07-11-2011 03:06 => work on this maps (run, make, etc)
         "r'un
         map <Leader>mr :!./%:r<CR>
         "compile & run (make a'll)
         map <Leader>ma :w<CR>:make && ./%:r<CR>
-        "TODO 17-11-2009 13:11 => debug shortcut
 
     elseif (a:_language == "java")
         set syntax   =java
@@ -744,7 +749,6 @@ function! SetProperties(_language)
         "let tlist_php_settings = 'php;c:class;d:constant;f:function'
 
     elseif (a:_language == "perl")
-        "TODO 17-11-2009 13:11 => Use compiler when available
         set syntax       =perl
         set makeprg      =$VIMRUNTIME/tools/efm_perl.pl\ -c\ %\ $*
         set errorformat  =%f:%l:%m
@@ -804,7 +808,7 @@ function! Skel(_language)
     endif
 endfunction
 
-function! Spell(_language) "TODO 17-11-2009 13:12 => make _language optional
+function! Spell(_language)
     if (a:_language == "en_us")
         let g:acp_completeOption = '.,w,b,t,k,kspell,i,d'
         set spell spelllang=en_us
@@ -866,16 +870,12 @@ function! Dev_mode_on()
     set linebreak      "wrap at word
     "set patchmode=.orig       "keeps filename.orig while editing
 
-    "subract/add 1 from the number or alphabetic character before
-    "or after the cursor.
-    noremap - <c-x>
-    noremap + <c-a>
-
     "Specific configuration for things that take a long time to finish.
+    "TODO 07-11-2011 03:09 => wrap to another function, maybe the same SetProperties
     if &ft =="cpp" || &ft =="c"
         "autocreate the cscope database and add it to
         "the current session when we change to :dev mode
-        call AddCscope()
+        "call AddCscope()
     endif
 
     if &ft =="php" || &ft =="html"
@@ -884,13 +884,8 @@ function! Dev_mode_on()
         "call AddCscope()
     endif
 
-    "TODO 17-11-2009 13:12 => specific filetype options, i.e.
-    "if &ft == "filetype"
-    "useful plugins, options, keyboard shortcuts, etc.
-    "endif
-
     "'b'uild the database of cscope 'r'ecursively and for all subdirectories.
-    map <Tab>b <esc>:w<CR>:call AddCscope()<CR>
+    "map <Tab>b <esc>:w<CR>:call AddCscope()<CR>
 
     if !exists("s:nerd_tree")
         call Nerd_tree()          "It allows you to explore your filesystem
@@ -899,9 +894,6 @@ function! Dev_mode_on()
     if !exists("s:tag_list")
         call Tag_list()           "Open one window with tags of current files
     endif
-
-    "<TAB> on insert mode is set to use the incredible snipMate plugin
-    "http://www.vim.org/scripts/script.php?script_id=2540
 
     redraw!
 endfunction
@@ -919,17 +911,16 @@ function! Dev_mode_off()
     "set nocursorline
     set nonumber
     set nolinebreak
-    unmap +
-    unmap -
 
     if &ft == "cpp" || &ft=="c"
-        cs kill -1
+        "SetProperties("none")?
+        "cs kill -1
     endif
 
     if &ft =="php" || &ft =="html"
     endif
 
-    unmap <Tab>b
+    "unmap <Tab>b
     redraw!
 endfunction
 
@@ -944,7 +935,7 @@ function! Presentation_mode()
 endfunction
 
 function! Presentation_mode_on()
-    " This .vimrc file was created firstly by Vroom-0.23 and edited later by me =D
+    "this .vimrc config was created firstly by Vroom-0.23
     set nocursorline         "highlight the screen line of the cursor
 
     map <SPACE> :n<CR>:<CR>
@@ -955,7 +946,7 @@ function! Presentation_mode_on()
     map EE :e <cWORD><CR>
     map !! G:!open <cWORD><CR><CR>
     map ?? :e .help<CR>
-    let g:presentation_statusline=&statusline
+    let g:old_statusline=&statusline
 
     set statusline=
     set statusline+=%2*%-.50f\                               "file name (!full)
@@ -963,7 +954,6 @@ function! Presentation_mode_on()
     set statusline+=%h%1*%m%r%w%0*                           "flags
     set statusline+=%=                                       "right align
     set statusline+=%2*%-8{strftime('%H:%M')}                "time
-    "set statusline+=Powered\ by\ Vroom!
 
     redraw!
 endf
@@ -979,7 +969,7 @@ function! Presentation_mode_off()
     unmap EE
     unmap !!
     unmap ??
-    let &statusline=g:presentation_statusline
+    let &statusline=g:old_statusline
     redraw!
 endf
 
