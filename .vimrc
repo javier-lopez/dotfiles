@@ -10,7 +10,7 @@
 "       [+]tetris.vim qbuf.vim surround.vim repeat.vim findmate.vim
 "       IndexedSearch.vim [+]vimbuddy.vim NERD_commenter.vim tasklist.vim
 "       align.vim CSApprox.vim Drawit.vim netrw.vim securemodelines.vim
-"       markdown.vim irssilog.vim gist.vim syntastic.vim
+"       irssilog.vim gist.vim syntastic.vim
 "
 "[+] Modified versions                   => https://github.com/chilicuil
 
@@ -135,7 +135,7 @@ set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
                        "paste several lines of text so they won't
                        "be indented.
 set mousehide          "hide the mouse while typying
-set mouse=nv          "set the mouse to work in console mode
+"set mouse=nv          "set the mouse to work in console mode
 set clipboard=unnamed
 "set clipboard=unnamedplus         "yanks go on clipboard instead, "+p to make recover the x11 clipboard
                                    "use xsel hacks if your vim version has no "clipboad-x11 support
@@ -150,6 +150,10 @@ set viminfo='100,<100,s10,h
 set foldenable!                    "off by default
 set foldmethod=syntax
 "set foldmarker={,}
+
+"Print to html
+let html_use_css       = 1
+let html_dynamic_folds = 1
 
 let mapleader = ","
 setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
@@ -310,7 +314,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
         "let g:secure_modelines_verbose=1
 
-    Bundle 'tpope/vim-markdown'
     Bundle 'vim-scripts/irssilog.vim'
     Bundle 'mattn/gist-vim'
         let g:github_user       = "chilicuil"
@@ -379,6 +382,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "===discarted===
     "Bundle 'chilicuil/conque'
     "Bundle 'FindMate'
+    "Bundle 'tomtom/viki_vim'
 endif
 
 "===============================================================================
@@ -1116,6 +1120,7 @@ endfunction
 " "find . | vim -" you can take the output of any command and
 "                  send it into a vim session
 " ":sball" opens all buffers in new windows
+" ":ped file" open in a help window a second file
 " ":help 42"
 " ":help quotes"
 " ":help holy-grail"
