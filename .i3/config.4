@@ -1,4 +1,4 @@
-# #####################################################################################
+#######################################################################################
 # Last review            Mon 17 May 2010 02:12:56 AM CDT
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf : 
@@ -16,7 +16,17 @@
 #terminal /usr/bin/urxvtc
 
 # Focus / follow mouse
-focus_follows_mouse yes
+#focus_follows_mouse yes
+
+# Just for i3.4
+for_window [title="xzoom x2"] floating enabled
+for_window [title="~/misc"] floating enable
+
+# Window layout style:
+# default: it splits the screen
+# stacking
+# tabbed
+#workspace_layout tabbed
 
 # ###################################
 # ######## GENERAL SETTINGS #########
@@ -38,7 +48,7 @@ set $Alt Mod1
 new_window 1pixel
 
 # Workspace bar
-workspace_bar yes
+# workspace_bar yes
 # ----------------------------------<
 
 # workspace names
@@ -64,19 +74,7 @@ ipc-socket ~/.i3/ipc.sock
 # ###################################
 
 # execute my startup programs
-# exec ~/.i3/startup
-#exec conky |/home/chilicuil/code/dzen/dzen2 -x 300 -y 800 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000"
-exec conky |/home/chilicuil/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" 2>/dev/null
-
-exec /usr/bin/pcmanfm
-exec /usr/bin/x-terminal-emulator
-
-#exec xsetroot -solid white
-#exec xsetroot -cursor_name left_ptr
-
-#it breaks very often
-#exec urxvtd -q -f -o
-#exec feh --bg-scale /home/chilicuil/data/images/wallpapers/Aurora_Borealis.jpg
+exec ~/.i3/startup
 
 # ###################################
 # ######## KEYBOARD BINDINGS ########
@@ -91,8 +89,8 @@ bindcode $Win+41 fullscreen
 # Stacking ($Win+s)
 bindcode $Win+39 layout stacking
 
-# Tabbed ($Win+t)
-bindcode $Win+28 layout tabbed
+# Tabbed ($Win+a)
+bindcode $Win+38 layout tabbed
 
 # Default ($Win+d)
 bindcode $Win+40 layout default
@@ -101,7 +99,8 @@ bindcode $Win+40 layout default
 bindcode $Win+Shift+65 floating toggle
 
 # Go into the tiling layer / floating layer, depending on whether
-# the current window is tiling / floating ($Win+t)
+# the current window is tiling / floating ($Win+t) / it's already set up for
+# moving to the 15th workspace
 bindcode $Win+65 focus mode_toggle
 
 # Focus ($Win+h/j/k/l)
@@ -293,8 +292,8 @@ mode "resize" {
 bindsym $Win+z mode "resize"
 
 # Get me to the next open VIM instance
-bindsym $Win+v [class="buzz" title="VIM"] focus
-bindsym $Win+m [class="buzz" title="mutt"] focus
+#bindsym $Win+v [class="buzz" title="VIM"] focus
+#bindsym $Win+m [class="buzz" title="mutt"] focus
 
 # Read 1 character and mark the current window with this character
 #bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
@@ -306,16 +305,19 @@ bindsym $Win+m [class="buzz" title="mutt"] focus
 # ############# ASSIGNS #############
 # ###################################
 
+# Assigns default monitor for workspaces
+workspace 1 output VGA1
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
 
-assign "firefox"         1 www
-assign "buzz/irssi"      4 im
-assign "buzz/mutt"       5 mail
-assign "thunderbird"     5 mail
-assign "liferea"         8 news
-assign "pcmanfm"         6 files
-assign "nautilus"        6 files
+#assign "firefox"         1 www
+#assign "buzz/irssi"      4 im
+#assign "buzz/mutt"       5 mail
+#assign "thunderbird"     5 mail
+#assign "liferea"         8 news
+#assign "pcmanfm"         6 files
+#assign "nautilus"        6 files
+#assign "workrave"        20
 
 # ###################################
 # ############# COLORS ##############
@@ -364,4 +366,7 @@ client.urgent             #8C4665      #8C5665      #999999
 # Old line: bar.urgent             #d11931         #000000         #999999
 
 # XXX: Automatically added a call to i3bar to provide a workspace bar
-exec i3status | i3bar -d
+#exec i3status | i3bar -d
+bar {
+status_command i3status
+}

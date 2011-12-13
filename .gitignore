@@ -5,7 +5,13 @@
 !.*
 
 #But ignore these
+bundle
 .AbiSuite
+.wcd
+.chmsee
+.pentadac*
+.bin
+.ctags
 .adobe
 .alien-arena
 .appletviewer

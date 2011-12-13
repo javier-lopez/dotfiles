@@ -5,9 +5,9 @@
 #    RELEASES
 #	Which releases of Ubuntu to target. Hardy and Lucid are the
 #	only ones currently supported. Defaults to both.
-RELEASES="oneiric"
+RELEASES="precise"
 
-ISOROOT="/home/chilicuil/misc/packaging/ubuntu/ubuntu-11.10/isos/"
+ISOROOT="/home/chilicuil/misc/packaging/ubuntu/ubuntu-12.04/isos/"
 
 #    ARCHS
 #        Which computer architectures to download. If you only have

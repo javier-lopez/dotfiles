@@ -24,14 +24,19 @@ servers = (
     autoconnect = "yes";
     nick = "chilicuil";
   }
+  {
+    address = "irc.twice-irc.de";
+    chatnet = "tw";
+    port = "6667";
+    autoconnect = "yes";
+    nick = "chilicuil";
+  }
 );
 
 chatnets = {
   fn = { type = "IRC"; autosendcmd = "wait 2000; /window down"; };
-  im = {
-    type = "IRC";
-    autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
-  };
+  im = { type = "IRC"; autosendcmd = "wait 1000; /msg &bitlbee identify just4fun"; };
+  tw = { type = "IRC"; };
 };
 
 channels = (
@@ -45,7 +50,7 @@ channels = (
   #{ name = "#vim"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#metasploit"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-meeting"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-locoteams"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-locoteams"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-packaging"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-devel"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-motu"; chatnet = "fn"; autojoin = "Yes"; },
@@ -55,17 +60,19 @@ channels = (
   #{ name = "#ubuntu-beginners"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-beginners-team"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-desktop"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-leadership"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-app-devel"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-leadership"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-app-devel"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-classroom"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-server"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#networking"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#networking"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-ops"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-monitor"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-br"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-power-users"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#juju"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ugj-df"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ugj-df-triaging"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ugj-df-testing"; chatnet = "fn"; autojoin = "Yes"; },
@@ -74,6 +81,7 @@ channels = (
   #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#fel-clan"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#i3"; chatnet = "tw"; autojoin = "Yes"; }
 );
 
 ignores = (
@@ -115,7 +123,10 @@ ignores = (
       "#ubuntu-bugs-announce",
       "#ubuntu-leadership",
       "#ubuntu-app-devel",
-      "#ubuntu-locoteams",
+      "#ubuntu-power-users",
+      "#juju",
+      "#i3",
+      "#ubuntu-locoteams"
       #"#fel-clan"
     );
     network = "fn";

@@ -27,12 +27,13 @@ autocutsel &                                   #sync X/Gnome clipboards
 autocutsel -s PRIMARY &
 
 #exec /usr/bin/xmonad                          # start xmonad
-#exec /usr/bin/enlightenment_start              # start e17
-exec /usr/bin/i3                               # start i3
+#exec /usr/bin/enlightenment_start             # start e17
+#exec /usr/bin/i3 -V all >> ~/.i3/logfile      # start i3
+exec /usr/bin/i3 >> ~/.i3/logfile              # start i3
 
 #case $1 in
 #i3)
-    ##exec /usr/bin/i3
+    #exec /usr/bin/i3
    #;;
 
 #e17)

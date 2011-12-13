@@ -1,4 +1,4 @@
-# #####################################################################################
+#######################################################################################
 # Last review            Mon 17 May 2010 02:12:56 AM CDT
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf : 
@@ -17,6 +17,16 @@
 
 # Focus / follow mouse
 #focus_follows_mouse yes
+
+# Just for i3.4
+#for_window [title="xzoom x2"] floating enabled
+#for_window [title="~/misc"] floating enable
+
+# Window layout style:
+# default: it splits the screen
+# stacking
+# tabbed
+#workspace_layout tabbed
 
 # ###################################
 # ######## GENERAL SETTINGS #########
@@ -40,12 +50,6 @@ new_window bp
 # Workspace bar
 # workspace_bar yes
 # ----------------------------------<
-
-# Window layout style:
-# default: it splits the screen
-# stacking
-# tabbed
-#workspace_layout tabbed
 
 # workspace names
 workspace 1 www
@@ -104,8 +108,8 @@ bind $Win+41 f
 # Stacking ($Win+s)
 bind $Win+39 s
 
-# Tabbed ($Win+t)
-bind $Win+28 T
+# Tabbed ($Win+a)
+bind $Win+38 T
 
 # Default ($Win+d)
 bind $Win+40 d
@@ -114,8 +118,9 @@ bind $Win+40 d
 bind $Win+Shift+65 t
 
 # Go into the tiling layer / floating layer, depending on whether
-# the current window is tiling / floating ($Win+t)
-bind $Win+65 focus ft
+# the current window is tiling / floating ($Win+t) / it's already set up for
+# moving to the 15th workspace
+#bind $Win+65 focus ft
 
 # Focus ($Win+h/j/k/l)
 bind $Win+43 h
