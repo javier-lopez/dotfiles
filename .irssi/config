@@ -31,12 +31,20 @@ servers = (
     autoconnect = "yes";
     nick = "chilicuil";
   }
+  #{
+    #address = "irc.power2all.com";
+    #chatnet = "an";
+    #port = "6667";
+    #autoconnect = "yes";
+    #nick = "chilicuil";
+  #}
 );
 
 chatnets = {
   fn = { type = "IRC"; autosendcmd = "wait 2000; /window down"; };
   im = { type = "IRC"; autosendcmd = "wait 1000; /msg &bitlbee identify just4fun"; };
   tw = { type = "IRC"; };
+  #an = { type = "IRC"; };
 };
 
 channels = (
@@ -49,7 +57,7 @@ channels = (
   #{ name = "#openbsd"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#vim"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#metasploit"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-meeting"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-meeting"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-locoteams"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-packaging"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-devel"; chatnet = "fn"; autojoin = "Yes"; },
@@ -59,7 +67,7 @@ channels = (
   { name = "#ubuntu-bugs-announce"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-beginners"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-beginners-team"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-desktop"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-desktop"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-leadership"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-app-devel"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-classroom"; chatnet = "fn"; autojoin = "Yes"; },
@@ -69,19 +77,25 @@ channels = (
   { name = "#ubuntu-es-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-ops"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-monitor"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-br"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-br"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-power-users"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#juju"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#ugj-df"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#ugj-df-triaging"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#ugj-df-testing"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#ugj-df-traduccion"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#ugj-df-doc"; chatnet = "fn"; autojoin = "Yes"; }
+  #{ name = "#ubuntu-power-users"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#juju"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ugj-df"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ugj-df-testing"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ugj-df-triaging"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ugj-df-traduccion"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ugj-df-doc"; chatnet = "fn"; autojoin = "Yes"; }
   #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#fel-clan"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#i3"; chatnet = "tw"; autojoin = "Yes"; }
+  #{ name = "#i3"; chatnet = "tw"; autojoin = "Yes"; },
+  { name = "##english-br"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "##espanol-br"; chatnet = "fn"; autojoin = "Yes"; }
+  #{ name = "#hispania"; chatnet = "an"; autojoin = "Yes"; },
+  #{ name = "#opmexico"; chatnet = "an"; autojoin = "Yes"; },
+  #{ name = "#anonymousbr"; chatnet = "an"; autojoin = "Yes"; }
+  #{ name = "#ubuntu-classroom-es"; chatnet = "fn"; autojoin = "Yes"; }
 );
 
 ignores = (
@@ -126,7 +140,16 @@ ignores = (
       "#ubuntu-power-users",
       "#juju",
       "#i3",
-      "#ubuntu-locoteams"
+      "#ubuntu-locoteams",
+      "##english-br",
+      "#ubuntu-es-cafe",
+      "##espanol-br",
+      "#hispania",
+      "#opmexico",
+      "#ubuntu-classroom",
+      "#ubuntu-classroom-chat",
+      "#ubuntu-classroom-es",
+      "#anonymousbr"
       #"#fel-clan"
     );
     network = "fn";

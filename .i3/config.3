@@ -57,7 +57,7 @@ workspace 2 work
 workspace 3 work
 workspace 4 im
 workspace 5 mail
-workspace 6 files
+workspace 6 fm
 workspace 7 work
 workspace 8 news
 workspace 9 work
@@ -238,10 +238,10 @@ bind Control+Shift+45 kill
 bind $Alt+9 exec dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
 
 # Control+$Alt+e exits i3
-bind Control+$Alt+26 exit
+#bind Control+$Alt+26 exit
 
 # Control+$Alt+r restarts i3 inplace
-bind Control+$Alt+27 restart
+#bind Control+$Alt+27 restart
 
 # Control+$Alt+l lock session
 bind Control+$Alt+46 exec gnome-screensaver-command --lock
@@ -249,8 +249,11 @@ bind Control+$Alt+46 exec gnome-screensaver-command --lock
 # Control+$Alt+Supr starts a dmenu session menu
 bind Control+$Alt+119 exec dmenu_session
 
-# mutt: Control+Shift+m
-bindsym Control+Shift+m exec /usr/bin/x-terminal-emulator -e mutt
+# Toggle windows transparency
+bindsym Control+Shift+t exec transset-df -p
+
+# magnifier: Control+Shift+m
+bindsym Control+Shift+m exec magnifier
 #bindsym Control+Shift+m exec /bin/sh -c mutt
 
 # irssi: Control+Shift+i
@@ -280,8 +283,8 @@ bind Control+Shift+60 exec /usr/bin/mpc next
 bind Control+Shift+59 exec /usr/bin/mpc prev
 
 # record_desktop
-bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
-bind Control+35 exec /usr/local/bin/screencast_record
+#bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
+#bind Control+35 exec /usr/local/bin/screencast_record
 
 
 mode "resize" {
@@ -303,7 +306,7 @@ mode "resize" {
         bindsym d resize right +10
         bindsym Shift+d resize right -10
         
-        #Enter
+        #Exit resize mode
         bindsym $Win+Shift+z mode default
 }
 
@@ -326,6 +329,7 @@ bindsym $Win+z mode resize
 
 # Assigns default monitor for workspaces
 workspace 1 output VGA1
+#workspace 1 output HDMI1
 
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
@@ -364,20 +368,20 @@ assign "workrave"        20
 #bar.urgent             #d11931         #d11931         #ffffff
 
 # gentoo
-#client.focused         #7a5ada         #7a5ada         #ffffff
-#client.focused_inactive        #45347b         #45347b         #ffffff
-#client.unfocused       #333333         #333333         #ffffff
-#client.urgent          #D11931         #D11931         #ffffff
-#bar.focused            #45347b         #45347b         #ffffff
-#bar.unfocused          #dddaec         #dddaec         #45347b
-#bar.urgent             #d11931         #d11931         #ffffff
+client.focused         #7a5ada         #7a5ada         #ffffff
+client.focused_inactive        #45347b         #45347b         #ffffff
+client.unfocused       #333333         #333333         #ffffff
+client.urgent          #D11931         #D11931         #ffffff
+bar.focused            #45347b         #45347b         #ffffff
+bar.unfocused          #dddaec         #dddaec         #45347b
+bar.urgent             #d11931         #d11931         #ffffff
 
 # dark
-client.focused            #999999      #999999      #000000
-client.focused_inactive   #333333      #333333      #999999
-client.unfocused          #333333      #333333      #999999
-client.urgent             #8C4665      #8C5665      #999999
-bar.focused               #999999      #000000      #999999
-bar.unfocused             #333333      #000000      #999999
+#client.focused            #999999      #999999      #000000
+#client.focused_inactive   #333333      #333333      #999999
+#client.unfocused          #333333      #333333      #999999
+#client.urgent             #8C4665      #8C5665      #999999
+#bar.focused               #999999      #000000      #999999
+#bar.unfocused             #333333      #000000      #999999
 #bar.urgent                #8C4665      #000000      #999999
-bar.urgent             #d11931         #000000         #999999
+#bar.urgent             #d11931         #000000         #999999

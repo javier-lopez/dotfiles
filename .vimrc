@@ -93,7 +93,7 @@ set report=0           "report any changes
 set nowritebackup
 set nobackup           "turn backup off
 set noswapfile
-set tabpagemax=150     "max open tabs at the same time
+set tabpagemax=200     "max open tabs at the same time
 set autowrite
 set autoread           "watch for file changes by other programs
 set encoding=utf-8     "utf is able to represent any character
@@ -117,7 +117,7 @@ set softtabstop=4      "vim sees 4 spaces as a tab
 set shiftwidth=4       "indentation
 set expandtab          "tabs mutate into spaces, if you wanna insert "real"
                        "tabs use Ctrl-v <tab> instance
-set textwidth=80
+"set textwidth=80
 set splitright         "split vertically to the right.
 set splitbelow         "split horizontally below.
 set cursorline         "highlight the screen line of the cursor
@@ -255,7 +255,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "====github====
     Bundle 'gmarik/vundle'
     Bundle 'mhz/vim-matchit'
-    Bundle 'vim-scripts/CRefVim'
+    "Bundle 'vim-scripts/CRefVim'
         "map <Leader>crn <Plug>CRV_CRefVimNormal
         "map <Leader>caw <Plug>CRV_CRefVimAsk
         "map <Leader>cvi <Plug>CRV_CRefVimInvoke
@@ -279,7 +279,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:acp_behaviorSnipmateLength   = 2
         let g:acp_behaviorPythonOmniLength = -1
 
-    Bundle 'Townk/vim-autoclose'
+    "Bundle 'Townk/vim-autoclose'
     Bundle 'chilicuil/dbext.vim'
         let g:dbext_default_history_size = 100
         "let g:dbext_default_profile     = 'mysql_test1'
@@ -352,6 +352,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     Bundle 'repeat.vim'
     Bundle 'IndexedSearch'
     Bundle 'Align'
+    Bundle 'gnupg.vim'
 
     "===experimental===
     "Bundle 'Shougo/neocomplcache'
@@ -378,13 +379,15 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
 
     "Bundle 'Shougo/unite.vim'
     "Bundle 'Raimondi/delimitMate'
+    Bundle 'mattn/zencoding-vim'
+        "let g:user_zen_leader_key = '<c-y>'
+        let g:use_zen_complete_tag = 1
 
     "===discarted===
     "Bundle 'chilicuil/conque'
     "Bundle 'FindMate'
     "Bundle 'tomtom/viki_vim'
-endif
-
+endif 
 "===============================================================================
 "================================== Mappings ===================================
 "===============================================================================
@@ -410,10 +413,10 @@ inoremap <c-h> <Esc><c-w>h
 "nmap <C-W>E :vnew \| vimshell bash<CR>
 
 "resize windows
-noremap <c-left> <c-w><
-noremap <c-right> <c-w>>
-noremap <c-down> <c-w>-
-noremap <c-up> <c-w>+
+"noremap <c-left> <c-w><
+"noremap <c-right> <c-w>>
+"noremap <c-down> <c-w>-
+"noremap <c-up> <c-w>+
 
 "tabs manage
 map <c-n> :tabn <CR>

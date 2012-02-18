@@ -3,8 +3,7 @@
 #
 
 #    RELEASES
-#	Which releases of Ubuntu to target. Hardy and Lucid are the
-#	only ones currently supported. Defaults to both.
+#	Which releases of Ubuntu to target.
 RELEASES="precise"
 
 ISOROOT="/home/chilicuil/misc/packaging/ubuntu/ubuntu-12.04/isos/"
@@ -13,7 +12,7 @@ ISOROOT="/home/chilicuil/misc/packaging/ubuntu/ubuntu-12.04/isos/"
 #        Which computer architectures to download. If you only have
 #        one, you will want to set this variable to that. Default is
 #        all the Ubuntu release architectures.
-ARCHS="i386"
+ARCHS="i386 amd64"
 
 #    FLAVORS
 #        Which flavors of Ubuntu to download: Ubuntu, Kubuntu, etc.
@@ -23,7 +22,7 @@ FLAVORS="ubuntu"
 #    VARIANTS
 #        Which variants of each flavor to download: desktop cd, alternative
 #        cd, server cd, dvd, etc. Default is all of them.
-VARIANTS="desktop server netbook"
+VARIANTS="desktop server alternative"
 
 #    EXCLUDE
 #        Which flavors to NOT download. Sometimes it's easier to specify
