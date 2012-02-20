@@ -3,12 +3,13 @@
 # ######################################################
 #  vim: set ts=8 sw=4 tw=0 ft=sh: 
 
-#background?
+#background
 #eval `cat $HOME/.fehbg` &                     # set background
 #xsetroot -solid "#333333"                     # or use a solid color
-xsetroot -cursor_name left_ptr
-#feh --bg-scale $HOME/data/images/wallpapers/Aurora_Borealis.jpg
 feh --bg-scale /home/chilicuil/tmp_img/circles.jpg
+#feh --bg-scale $HOME/data/images/wallpapers/Aurora_Borealis.jpg
+
+xsetroot -cursor_name left_ptr
 #numlockx on &                                 # numlock on
 #setxkbmap -option terminate:ctrl_alt_bksp &   # C-A-BS to kill X
 #xrdb $HOME/.Xdefaults &                       # force to load Xdefaults

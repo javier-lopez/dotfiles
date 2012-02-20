@@ -1,9 +1,7 @@
 #!/bin/sh
 
-#to avoid errors for trying to start apps without an Xserver running
-sleep .1s
-
-#tab
+xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3 &
+i3-msg T &
 conky | $HOME/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
 
 #/usr/bin/x-terminal-emulator &
@@ -11,11 +9,6 @@ conky | $HOME/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*
 
 #/usr/bin/workrave & #force to take a break ~/.workrave
 #xwrits breaktime=0:20 typetime=5:00 +mouse +lock #helps to take a break every 5 min
-#exec xsetroot -solid white
-#exec xsetroot -cursor_name left_ptr
 
 #urxvt server, nice but it breaks very often
 #urxvtd -q -f -o
-
-#background?
-#feh --bg-scale $HOME/data/images/wallpapers/Aurora_Borealis.jpg
