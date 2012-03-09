@@ -265,7 +265,7 @@ set pgp_autosign             = yes
 set pgp_verify_sig           = yes
 set pgp_sign_as              = 0xBC9C8902
 set pgp_replyencrypt         = yes
-set pgp_timeout              = 1800
+set pgp_timeout              = 3600
 set pgp_good_sign            = "^gpg: Signed by "
 set pgp_auto_decode          = yes
 

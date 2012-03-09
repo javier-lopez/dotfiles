@@ -81,11 +81,11 @@ channels = (
   #{ name = "##ubuntu-br-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-power-users"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#juju"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ugj-df"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ugj-df-testing"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ugj-df-triaging"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ugj-df-traduccion"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ugj-df-doc"; chatnet = "fn"; autojoin = "Yes"; }
+  #{ name = "#ugj-df"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-df-testing"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-df-triaging"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-df-traduccion"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-df-doc"; chatnet = "fn"; autojoin = "Yes"; }
   #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#fel-clan"; chatnet = "fn"; autojoin = "Yes"; },

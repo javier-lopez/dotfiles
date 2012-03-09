@@ -7,6 +7,7 @@
 #eval `cat $HOME/.fehbg` &                     # set background
 #xsetroot -solid "#333333"                     # or use a solid color
 feh --bg-scale /home/chilicuil/tmp_img/circles.jpg
+#feh --bg-scale /home/chilicuil/tmp_img/wallcolor.jpg
 #feh --bg-scale $HOME/data/images/wallpapers/Aurora_Borealis.jpg
 
 xsetroot -cursor_name left_ptr

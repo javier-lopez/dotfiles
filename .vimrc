@@ -134,8 +134,8 @@ set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
                        "just press F5 when you are going to
                        "paste several lines of text so they won't
                        "be indented.
-set mousehide          "hide the mouse while typying
-"set mouse=nv          "set the mouse to work in console mode
+"set mousehide          "hide the mouse while typying
+"set mouse=nv            "set the mouse to work in console mode
 set clipboard=unnamed
 "set clipboard=unnamedplus         "yanks go on clipboard instead, "+p to make recover the x11 clipboard
                                    "use xsel hacks if your vim version has no "clipboad-x11 support
@@ -175,15 +175,16 @@ endif
 "Language specific settings
 if has("autocmd")
     "Behaviour :
-    autocmd BufNewFile,BufEnter *.php,*.php3,*.php4  call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.php5,*html,*.inc   call SetProperties("php")
-    autocmd BufNewFile,BufEnter *schema,*.engine     call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.ctp,*.thtml        call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.c,*.h              call SetProperties("c")
-    autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml  call SetProperties("perl")
-    autocmd BufNewFile,BufEnter *[mM]akefile,*.mk    call SetProperties("make")
-    autocmd BufNewFile,BufEnter *.java               call SetProperties("java")
-    autocmd BufNewFile,BufEnter *.sh,*.bash          call SetProperties("bash")
+    autocmd BufNewFile,BufEnter *.php,*.php3,*.php4                                     call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.php5,*html,*.inc                                      call SetProperties("php")
+    autocmd BufNewFile,BufEnter *schema,*.engine                                        call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.ctp,*.thtml                                           call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.c,*.h                                                 call SetProperties("c")
+    autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml                                     call SetProperties("perl")
+    autocmd BufNewFile,BufEnter *[mM]akefile,*.mk                                       call SetProperties("make")
+    autocmd BufNewFile,BufEnter *.java                                                  call SetProperties("java")
+    autocmd BufNewFile,BufEnter *.sh,*.bash                                             call SetProperties("bash")
+    autocmd BufNewFile,BufEnter *.{md,mdown,mkd,mkdn,markdown,mdwn,todo,notes,mn}       call SetProperties("markdown")
 
     "Skeletons :
     autocmd BufNewFile *.rb,*.ruby,*.eruby           call Skel("ruby")
@@ -340,7 +341,9 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:ctrlp_clear_cache_on_exit = 0
         "let g:ctrlp_user_command = 'find %s -type f'
     Bundle 'Lokaltog/vim-easymotion'
-    let g:EasyMotion_leader_key = '<leader><leader>'
+        let g:EasyMotion_leader_key = '<leader><leader>'
+    Bundle 'chilicuil/vim-markdown'
+
 
     "===vim-scripts===, not hosted in github for some obscure reason
     Bundle 'QuickBuf'
@@ -797,6 +800,9 @@ function! SetProperties(_language)
         map <Leader>mra :!./%<SPACE>
         "compile & run (a'll)
         map <Leader>ma :w<CR>:make && ./%<CR>
+
+    elseif (a:_language == "markdown")
+        set filetype=mkd
     endif
 endfunction
 
