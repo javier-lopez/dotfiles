@@ -6,6 +6,8 @@ conky | $HOME/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*
 
 #/usr/bin/x-terminal-emulator &
 /usr/bin/pcmanfm &
+autocutsel &                                   #sync X/Gnome clipboards
+autocutsel -s PRIMARY &
 
 #/usr/bin/workrave & #force to take a break ~/.workrave
 #xwrits breaktime=0:20 typetime=5:00 +mouse +lock #helps to take a break every 5 min

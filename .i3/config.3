@@ -234,6 +234,9 @@ bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
 # Control+Shift+k kills the current client
 bind Control+Shift+45 kill
 
+# Control+Shift+l killall
+bind Control+Shift+46 exec dmenu_killall
+
 # $Alt+Esc starts dmenu and launches the selected application
 # for now, we don’t have an own launcher
 #-sf purple
@@ -278,15 +281,18 @@ bindsym Control+Shift+h exec /usr/bin/pcmanfm
 bind Control+Shift+20 exec /usr/bin/amixer set Master 1-
 bind Control+Shift+21 exec /usr/bin/amixer set Master 1+  
 
-# mpd
+# mpd:
 bind Control+Shift+61 exec /usr/bin/mpc play
 bind Control+61 exec /usr/bin/mpc stop
 bind Control+Shift+60 exec /usr/bin/mpc next
 bind Control+Shift+59 exec /usr/bin/mpc prev
 
+# song:
+bindsym Control+Shift+s exec /usr/local/bin/dmenu_mpd
+
 # record_desktop
-#bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
-#bind Control+35 exec /usr/local/bin/screencast_record
+bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
+bind Control+35 exec /usr/local/bin/screencast_record start
 
 
 mode "resize" {

@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-#           Last review            Sun 16 May 2010 11:23:56 PM CDT
+#           Last review            Mon 05 Mar 2012 09:26:28 AM CST
 #-------------------------------------------------------------------------------
 
 #===============================================================================
@@ -16,11 +16,16 @@
 #   mkdir -m 0777 /dev/cgroup/cpu/user
 #   echo "/usr/local/sbin/cgroup_clean" > /dev/cgroup/cpu/release_agent
 #   exit 0
-if [ "$PS1" ] ; then
-    mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
-    echo $$ > /dev/cgroup/cpu/user/$$/tasks
-    echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
+if [ -f /etc/rc.local ]; then
+    if [ "$PS1" ] ; then
+        mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
+        echo $$ > /dev/cgroup/cpu/user/$$/tasks
+        echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
+    fi
 fi
+
+#http://aymanh.com/how-debug-bash-scripts
+export PS4='>>(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 if [ $BASH_VERSINFO -ge 4 ]; then
@@ -91,6 +96,23 @@ export HISTCONTROL=ignoreboth
 export GREP_COLOR='1;35' #purple
 export GREP_OPTIONS=--color=auto
 
+# android
+export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/tools/                                              
+export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/platform-tools/
+
+# gpg
+export GPGKEY=BC9C8902
+export GPG_TTY=$(tty)
+
+# random vars
+export EDITOR="vim" #is there any other choice?
+export WCDHOME="$HOME/.wcd" #wcd magic
+#export TERM=rxvt
+export BROWSER="firefox"
+export CSCOPE_EDITOR=vim
+export PKG_CONFIG_PATH=/opt/e17/lib/pkgconfig/
+export DISPLAY=:0.0
+
 #export BLACK=$'\E[0;30m'
 #export BLUE=$'\E[0;34m'
 #export BROWN=$'\E[0;33m'
@@ -116,8 +138,9 @@ eval $(dircolors -b $HOME/.dir_colors)
 #=============================== Custom alias ==================================
 #===============================================================================
 
-OS=$(uname)
+source ~/.alias.common
 
+OS=$(uname)
 case $OS in
     Linux)
         source ~/.alias.linux
@@ -125,6 +148,5 @@ case $OS in
     OpenBSD)
         source ~/.alias.openbsd
         ;;
-    #*)
-        #source ~/.alias.common
+    *)
 esac
