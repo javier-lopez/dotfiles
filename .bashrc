@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-#           Last review            Mon 05 Mar 2012 09:26:28 AM CST
+#           Last review            Thu 05 Apr 2012 06:25:00 PM CDT
 #-------------------------------------------------------------------------------
 
 #===============================================================================
@@ -23,9 +23,6 @@ if [ -f /etc/rc.local ]; then
         echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
     fi
 fi
-
-#http://aymanh.com/how-debug-bash-scripts
-export PS4='>>(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 if [ $BASH_VERSINFO -ge 4 ]; then
@@ -52,13 +49,53 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-force_color=yes
+# PS1
+# Grabbed mostly from Yu-Jie Lin
+[[ $TERM == 'linux' ]] && STR_MAX_LENGTH=2 || STR_MAX_LENGTH=4
+NORMAL_COLOR='\[\e[00m\]'
+DATE_COLOR='\[\e[01;35m\]'
+HOST_COLOR='\e[0;32m'
+USER_COLOR='\e[0;34m'
+DIR_COLOR='\[\e[1;32m\]'
+DIR_HOME_COLOR='\[\e[1;35m\]'
+DIR_SEP_COLOR='\[\e[1;31m\]'
+ABBR_DIR_COLOR='\[\e[1;37m\]'
 
-if [ "$force_color" = yes ]; then
-    PS1='╔═${debian_chroot:+($debian_chroot)}[\[\033[01;35m\]\D{%R %a(%d).%b}\[\033[00m\]] \[\033[00;32m\]\u@\h\[\033[00m\] [`if [ \$? = 0 ]; then echo -e "\e[01;32m0"; else echo -e "\e[01;31m-1"; fi`\[\033[1;37m\]:`readlink /proc/self/fd/0`:\[\033[01;34m\]\w\[\033[00m\]]\n╚═[\$] '
-else
-    PS1='╔═${debian_chroot:+($debian_chroot)}[\D{%R %a(%d).%b}] \u@\h [`if [ \$? = 0 ]; then echo -e "0"; else echo -e "-1"; fi`:`readlink /proc/self/fd/0`:\w]\n╚═[\$] '
+NEW_PWD='$(
+p=${PWD/$HOME/}
+[[ "$p" != "$PWD" ]] && echo -n "'"$DIR_HOME_COLOR"'~"
+if [[ "$p" != "" ]]; then
+until [[ "$p" == "$d" ]]; do
+    p=${p#*/}
+    d=${p%%/*}
+    dirnames[${#dirnames[@]}]="$d"
+done
 fi
+for (( i=0; i<${#dirnames[@]}; i++ )); do
+    if (( i == 0 )) || (( i == ${#dirnames[@]} - 1 )) || (( ${#dirnames[$i]} <= '"$STR_MAX_LENGTH"' )); then
+        echo -n "'"$DIR_SEP_COLOR"'/'"$DIR_COLOR"'${dirnames[$i]}"
+    else
+        echo -n "'"$DIR_SEP_COLOR"'/'"$ABBR_DIR_COLOR"'${dirnames[$i]:0:'"$STR_MAX_LENGTH"'}"
+    fi
+done
+)'
+
+STATUS='$(
+ret=$?
+if [ "${ret}" = 0 ]; then
+    echo -e "\e[01;32m0"
+else echo -e "\e[01;31m$ret";
+fi
+)'
+
+
+# the first $DIR_COLOR can be removed
+PS1="$NORMAL_COLOR╔═${debian_chroot:+($debian_chroot)}[$DATE_COLOR\D{%R %a(%d).%b}$NORMAL_COLOR] $USER_COLOR\u$NORMAL_COLOR@$HOST_COLOR\h$NORMAL_COLOR [$STATUS$NORMAL_COLOR:$DIR_COLOR$NEW_PWD$NORMAL_COLOR]\n╚═[\$] "
+
+unset STR_MAX_LENGTH DIR_COLOR DIR_HOME_COLOR DIR_SEP_COLOR ABBR_DIR_COLOR USER_COLOR NEW_PWD PS1_ERROR
+
+#http://aymanh.com/how-debug-bash-scripts
+export PS4='>>(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
 if [ -f /etc/bash_completion ]; then
     source /etc/bash_completion
@@ -82,13 +119,13 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"\
 #=============================== Custom vars  ==================================
 #===============================================================================
 
-export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
-export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
-export LESS_TERMCAP_me=$'\E[0m'           # end mode
-export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
-export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
-export LESS_TERMCAP_ue=$'\E[0m'           # end underline
-export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\e[0m'           # end mode
+export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\e[0m'           # end underline
+export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=ignoreboth
 
@@ -113,23 +150,23 @@ export CSCOPE_EDITOR=vim
 export PKG_CONFIG_PATH=/opt/e17/lib/pkgconfig/
 export DISPLAY=:0.0
 
-#export BLACK=$'\E[0;30m'
-#export BLUE=$'\E[0;34m'
-#export BROWN=$'\E[0;33m'
-#export CYAN=$'\E[0;36m'
-#export DARK_GREY=$'\E[1;30m'
-#export DEFAULT=$'\E[0m'
-#export GREEN=$'\E[0;32m'
-#export LIGHT_BLUE=$'\E[1;34m'
-#export LIGHT_CYAN=$'\E[1;36m'
-#export LIGHT_GREEN=$'\E[1;32m'
-#export LIGHT_GREY=$'\E[0;37m'
-#export LIGHT_PURPLE=$'\E[1;35m'
-#export LIGHT_RED=$'\E[1;31m'
-#export PURPLE=$'\E[1;35m'
-#export RED=$'\E[0;31m'
-#export WHITE=$'\E[1;37m'
-#export YELLOW=$'\E[0;33m'
+#export BLACK=$'\e[0;30m'
+#export BLUE=$'\e[0;34m'
+#export BROWN=$'\e[0;33m'
+#export CYAN=$'\e[0;36m'
+#export DARK_GREY=$'\e[1;30m'
+#export DEFAULT=$'\e[0m'
+#export GREEN=$'\e[0;32m'
+#export LIGHT_BLUE=$'\e[1;34m'
+#export LIGHT_CYAN=$'\e[1;36m'
+#export LIGHT_GREEN=$'\e[1;32m'
+#export LIGHT_GREY=$'\e[0;37m'
+#export LIGHT_PURPLE=$'\e[1;35m'
+#export LIGHT_RED=$'\e[1;31m'
+#export PURPLE=$'\e[1;35m'
+#export RED=$'\e[0;31m'
+#export WHITE=$'\e[1;37m'
+#export YELLOW=$'\e[0;33m'
 
 #ls colors
 eval $(dircolors -b $HOME/.dir_colors)

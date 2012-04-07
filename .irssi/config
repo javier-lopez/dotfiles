@@ -23,26 +23,29 @@ servers = (
     port = "6667";
     autoconnect = "yes";
     nick = "chilicuil";
-  }
+  },
   {
     address = "irc.twice-irc.de";
     chatnet = "tw";
     port = "6667";
     autoconnect = "yes";
     nick = "chilicuil";
-  }
+  },
   #{
-    #address = "irc.power2all.com";
-    #chatnet = "an";
-    #port = "6667";
-    #autoconnect = "yes";
-    #nick = "chilicuil";
+  #address = "irc.power2all.com";
+  #chatnet = "an";
+  #port = "6667";
+  #autoconnect = "yes";
+  #nick = "chilicuil";
   #}
 );
 
 chatnets = {
   fn = { type = "IRC"; autosendcmd = "wait 2000; /window down"; };
-  im = { type = "IRC"; autosendcmd = "wait 1000; /msg &bitlbee identify just4fun"; };
+  im = {
+    type = "IRC";
+    autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
+  };
   tw = { type = "IRC"; };
   #an = { type = "IRC"; };
 };
@@ -87,11 +90,11 @@ channels = (
   #{ name = "#ugj-df-traduccion"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ugj-df-doc"; chatnet = "fn"; autojoin = "Yes"; }
   #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#fel-clan"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#i3"; chatnet = "tw"; autojoin = "Yes"; },
   { name = "##english-br"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "##espanol-br"; chatnet = "fn"; autojoin = "Yes"; }
+  { name = "##espanol-br"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#hispania"; chatnet = "an"; autojoin = "Yes"; },
   #{ name = "#opmexico"; chatnet = "an"; autojoin = "Yes"; },
   #{ name = "#anonymousbr"; chatnet = "an"; autojoin = "Yes"; }
@@ -149,7 +152,7 @@ ignores = (
       "#ubuntu-classroom",
       "#ubuntu-classroom-chat",
       "#ubuntu-classroom-es",
-      "#anonymousbr"
+      "#anonymousbr",
       #"#fel-clan"
     );
     network = "fn";
@@ -158,7 +161,8 @@ ignores = (
   { mask = "nando"; level = "ALL"; },
   { mask = "nando_"; level = "ALL"; },
   { mask = "FAMN"; level = "ALL"; },
-  { mask = "FAMM"; level = "ALL"; }
+  { mask = "FAMM"; level = "ALL"; },
+  { mask = "rengo"; level = "ALL"; }
 );
 
 aliases = {
@@ -337,9 +341,7 @@ settings = {
     autostick_split_windows = "yes";
     actlist_sort = "refnum";
   };
-  "perl/core/scripts" = {
-    notify_broadcast = "yes";
-  };
+  "perl/core/scripts" = { notify_broadcast = "yes"; };
 };
 
 #logs = { };

@@ -255,6 +255,7 @@ subscribe ubuntu-devel@lists.ubuntu.com
 subscribe ubuntu-devel-discuss@lists.ubuntu.com
 subscribe ubuntu-devel-announce@lists.ubuntu.com
 subscribe bugsquad-mentorship-group-alpha@lists.launchpad.net
+subscribe ubuntu-qa@lists.ubuntu.com
 
 # =========================================================================================
 # === Gnupg ===============================================================================
