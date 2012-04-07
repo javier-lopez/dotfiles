@@ -5,14 +5,9 @@
 !.*
 
 #But ignore these
-bundle
 .AbiSuite
-.wcd
-.chmsee
-.pentadac*
-.bin
-.ctags
 .adobe
+.adr
 .alien-arena
 .appletviewer
 .aptitude
@@ -27,21 +22,26 @@ bundle
 .bash_history
 .B.blend
 .BillardGL.conf.v7
+.bin
 .Bitch*
 .bittorrent
 .blender
 .bluefish
 .boumlrc
+bundle
 .byobu
 .bzr.log
 .cache
 .ccache*
 .checkbox
+.chmsee
 .compiz
 .com.zerog.registry.xml
 .config
 .cosa
 .covers
+.ctags
+.ctrlp_cache
 .cups
 .cvspass
 .dan
@@ -55,6 +55,7 @@ bundle
 .dreampie
 .dropbox
 .dvdcss
+.dynamag
 .e
 .e.*
 .easy_e17.conf*
@@ -85,6 +86,7 @@ bundle
 .gegl*
 .gem
 .gerbview
+.gftp
 .ghttrack.cfg
 .gimp*
 .gitk
@@ -104,6 +106,7 @@ bundle
 .gtk-bookmarks
 .gtkpod
 .httrack.ini
+.i3/logfile
 .ICEauthority
 .icons
 .img
@@ -116,6 +119,7 @@ bundle
 .java
 .jigl
 .jmol
+.kchmviewer
 .kde*
 .keysnail.tb.js
 .kicad
@@ -161,8 +165,13 @@ bundle
 .packages.list
 .pan2
 .pass
+.pentadac*
 .pgadmin3
 .pgpass
+.icedteaplugin
+.pagekite.rc
+.magnifier.ini
+.gtk-recordmydesktop
 .pida*
 .pki
 .printer-groups.xml
@@ -193,12 +202,14 @@ bundle
 .ssh/authorized_keys
 .ssh/id*
 .ssh/known_hosts
+.ssh/ugj*
 .sticky-notes*
 .subversion
 .sudo_as_admin_successful
 .sw*
 .*.swp
 .synaptic
+.systemtap
 .tdrc
 .teamviewer
 .terminfo
@@ -222,6 +233,7 @@ bundle
 .VirtualBox
 .vlc
 .w3m
+.wcd
 .wesnoth*
 .whoami
 .wine
