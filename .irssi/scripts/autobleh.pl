@@ -9,7 +9,7 @@ use LWP::Simple;
 # and IRC Network Staff.
 #
 # Version:
-#   $Id: autobleh.pl 32 2011-02-03 05:22:40Z nhandler $
+#   $Id: autobleh.pl 33 2012-01-19 14:52:21Z sysdef $
 #
 # Contact:
 #   email: sysdef@projectnet.org
@@ -21,30 +21,28 @@ use LWP::Simple;
 # License - http://www.gnu.org/licenses/gpl.html
 #
 # Please send all your thanks, money, donations, coffee, code, suggestions,
-# fixes and patches or hardware to the projects 'Main Contact' but please
+# fixes and patches or hardware to the projects main contact but please
 # write an email first.
 #
 # Sometimes it's possible to directly send gifts to the developer who needs
 # the part you want to give away so we can save additional shipment fees.
-#
-# Please also read the 'Need Help' page of the project first before you send
-# your coffee back to Columbia. (example)
 #
 # You will find your thanks and contributions in-kind listed on the project
 # website and details on how it was shared and helped our development or
 # developers.
 #
 
-$VERSION = q$Rev: 32 $;
+$VERSION = q$Rev: 33 $;
 %IRSSI = (
   authors     => 'Juergen (sysdef) Heine, Tom (tomaw) Wesley, Nathan (nhandler) Handler. Based on auto_bleh.pl by Don Armstrong',
   name        => 'autobleh',
   description => 'Provides /ak /aq /ab /abr /abrn /arn /amb /amr /at /op /topicset /modeset /af',
   license     => 'GPL3',
-  changed     => q$Id: autobleh.pl 32 2011-02-03 05:22:40Z nhandler $,
+  changed     => q$Id: autobleh.pl 33 2012-01-19 14:52:21Z sysdef $,
 );
 
 # CHANGELOG
+# 2012-01-19 - sysdef - renamed example config file; fixed comment char(;) in config ini file
 # 2011-02-02 - nhandler - Allow using $nick and $channel in bleh_remove_message
 # 2010-12-13 - nhandler - Remove extra space to fix kick command (Thanks rww)
 # 2010-12-04 - nhandler - Change bleh_at_stay_opped from 10 to 300 seconds (5 minutes)
@@ -65,36 +63,38 @@ $VERSION = q$Rev: 32 $;
 # 2008-01-25 - sysdef - add command af (auto forward / forward ban)
 
 # read the config file
-open ( CONF, Irssi::get_irssi_dir()."/autobleh.conf" ) or Irssi::print( "warning: '".Irssi::get_irssi_dir()."/autobleh.conf' doesn't exist.");
+open ( CONF, Irssi::get_irssi_dir()."/autobleh.conf" ) or Irssi::print( "warning: '".Irssi::get_irssi_dir()."/autobleh.conf' doesn't exist. Note there is 'autobleh.conf.example'.");
 Irssi::print("loading autobleh config ...");
 my $category;
 my $config;
 my $val;
 my $key;
+my $linecount;
 foreach my $line ( <CONF> ) {
   chomp $line;
+  $linecount++;
   # filter empty lines
   if ( $line =~ /^\s*$/ ) {
-    #Irssi::print("space    : $line");
+    # Irssi::print("empty: $line");
   }
   # new category
   elsif ( $line =~ /^\[/ ) {
     $line =~ /\[(.*)\]/;
     $category = $1;
-    #Irssi::print("category : $line ($1)");
+    Irssi::print("category: $category");
   }
   # filter comments
-  elsif ( $line =~ /^#\s+/ ) {
-    #Irssi::print("comment  : $line");
+  elsif ( $line =~ /^;\s+/ ) {
+    # Irssi::print("comment: $line");
   }
   # get key/value pair
-  elsif ( $line =~ /^([^ ]+)\s*=\s*([^ ]+)$/ ) {
-    Irssi::print( "by config : $category $1 => $2" );
+  elsif ( $line =~ /^([^ ]+)\s*=\s*([^ ]+)$/ && $category ) {
+    Irssi::print( "by config.$linecount: $category '$1' => '$2'" );
     $config->{$category}{$1} = $2;
   }
   # crap line
   else {
-    Irssi::print( "config   : $line" );
+    Irssi::print( "PLEASE FIX YOUR CONFIG, LINE $linecount: '$line'" );
   }
 }
 close CONF;
@@ -703,7 +703,7 @@ sub check_updates{
       Irssi::print( 'autobleh ' . $current . ' is currently installed.' );
     }
     else {
-      Irssi::print( 'autobleh (' . $current . ') is up-to-date.');
+      Irssi::print( 'autobleh (' . $current . ') is up-to-date.' );
     }
   }
   else { 
@@ -722,9 +722,8 @@ while ( ( $command, $function ) = each %command_bindings ) {
 }
 
 Irssi::settings_add_bool( $IRSSI{name}, 'bleh_deop_after_action', 1 );
-#Irssi::settings_add_str(  $IRSSI{name}, 'bleh_remove_message', 'you should know better' );
-Irssi::settings_add_str(  $IRSSI{name}, 'bleh_remove_message', 'comportamiento inadecuado' );
-Irssi::settings_add_str(  $IRSSI{name}, 'bleh_at_stay_opped', 300 ); #5 minutes
+Irssi::settings_add_str(  $IRSSI{name}, 'bleh_remove_message', 'you should know better' );
+Irssi::settings_add_str(  $IRSSI{name}, 'bleh_at_stay_opped', 300 ); # 5 minutes
 
 # find text for antispam
 #Irssi::signal_add_last( "message public", "msg_public" );
