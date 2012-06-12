@@ -304,46 +304,45 @@ set my_lnthestqfgxygATgmailDOTcom=`awk '/lnthestqfgxyg@gmail.com:/ {print $2}' $
 set my_chilicuilDOTvimATgmailDOTcom=`awk '/chilicuil.vim@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_perezDOTlopezDOTfranciscoDOTjavierATgmailDOTcom=`awk '/perez.lopez.francisco.javier@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_mnDOTcuentaATgmailDOTcom=`awk '/mn.cuenta@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
-set my_javierDOTperezATixpanDOTcomDOTmx=`awk '/javier.perez@ixpan.com.mx:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_rm=`rm -f $HOME/.mutt/accounts/passwd.gpg.tmp`
 
 # default
 source $HOME/.mutt/accounts/fco.plj@gmail.com/fco.plj@gmail.com.profile
 
-mailboxes 'imaps://fco.plj@gmail.com@imap.gmail.com:993/mailbox' \
-'imaps://chilicuil@gmail.com@imap.gmail.com:993/mailbox' \
+#mailboxes 'imaps://fco.plj@gmail.com@imap.gmail.com:993/mailbox' \
+#'imaps://chilicuil@gmail.com@imap.gmail.com:993/mailbox' \
 # folder hooks
-folder-hook imaps://fco.plj@gmail.com@imap.gmail.com:993 ' \
-set from             = "Francisco Javier P.L. <fco.plj@gmail.com>" \
-set folder           = "imaps://imap.gmail.com:993" \
-set spoolfile        = "imaps://imap.gmail.com:993/INBOX" \
-set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts" \
-set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail" \
-set header_cache     = "$HOME/.mutt/cache/fco.plj@gmail.com.headers" \
-set message_cachedir = "$HOME/.mutt/cache/fco.plj@gmail.com.bodies" \
-set certificate_file = "$HOME/.mutt/certificates/fco.plj@gmail.com.certificate" \
-set imap_user        = "fco.plj@gmail.com" \
-set imap_pass        = $my_fcoDOTpljATgmailDOTcom \
-set smtp_url         = "smtp://fco.plj@smtp.gmail.com:587/" \
-set smtp_pass        = $my_fcoDOTpljATgmailDOTcom \
-set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]" \
-set signature        = "$HOME/.mutt/accounts/fco.plj@gmail.com/fco.plj@gmail.com.signature"'
+#folder-hook imaps://fco.plj@gmail.com@imap.gmail.com:993 ' \
+#set from             = "Francisco Javier P.L. <fco.plj@gmail.com>" \
+#set folder           = "imaps://imap.gmail.com:993" \
+#set spoolfile        = "imaps://imap.gmail.com:993/INBOX" \
+#set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts" \
+#set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail" \
+#set header_cache     = "$HOME/.mutt/cache/fco.plj@gmail.com.headers" \
+#set message_cachedir = "$HOME/.mutt/cache/fco.plj@gmail.com.bodies" \
+#set certificate_file = "$HOME/.mutt/certificates/fco.plj@gmail.com.certificate" \
+#set imap_user        = "fco.plj@gmail.com" \
+#set imap_pass        = $my_fcoDOTpljATgmailDOTcom \
+#set smtp_url         = "smtp://fco.plj@smtp.gmail.com:587/" \
+#set smtp_pass        = $my_fcoDOTpljATgmailDOTcom \
+#set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]" \
+#set signature        = "$HOME/.mutt/accounts/fco.plj@gmail.com/fco.plj@gmail.com.signature"'
 
-folder-hook imaps://chilicuil@gmail.com@imap.gmail.com:993 ' \
-set from             = "chilicuil <chilicuil@gmail.com>" \
-set folder           = "imaps://imap.gmail.com:993" \
-set spoolfile        = "imaps://imap.gmail.com:993/INBOX" \
-set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts" \
-set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail" \
-set header_cache     = "$HOME/.mutt/cache/chilicuil@gmail.com.headers" \
-set message_cachedir = "$HOME/.mutt/cache/chilicuil@gmail.com.bodies" \
-set certificate_file = "$HOME/.mutt/certificates/chilicuil@gmail.com.certificate" \
-set imap_user        = "chilicuil@gmail.com" \
-set imap_pass        = $my_chilicuilATgmailDOTcom \
-set smtp_url         = "smtp://chilicuil@smtp.gmail.com:587/" \
-set smtp_pass        = $my_chilicuilATgmailDOTcom \
-set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]" \
-set signature        = "$HOME/.mutt/accounts/chilicuil@gmail.com/chilicuil@chilicuil@gmail.com.signature"'
+#folder-hook imaps://chilicuil@gmail.com@imap.gmail.com:993 ' \
+#set from             = "chilicuil <chilicuil@gmail.com>" \
+#set folder           = "imaps://imap.gmail.com:993" \
+#set spoolfile        = "imaps://imap.gmail.com:993/INBOX" \
+#set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts" \
+#set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail" \
+#set header_cache     = "$HOME/.mutt/cache/chilicuil@gmail.com.headers" \
+#set message_cachedir = "$HOME/.mutt/cache/chilicuil@gmail.com.bodies" \
+#set certificate_file = "$HOME/.mutt/certificates/chilicuil@gmail.com.certificate" \
+#set imap_user        = "chilicuil@gmail.com" \
+#set imap_pass        = $my_chilicuilATgmailDOTcom \
+#set smtp_url         = "smtp://chilicuil@smtp.gmail.com:587/" \
+#set smtp_pass        = $my_chilicuilATgmailDOTcom \
+#set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]" \
+#set signature        = "$HOME/.mutt/accounts/chilicuil@gmail.com/chilicuil@chilicuil@gmail.com.signature"'
 #account-hook . 'unset imap_user imap_pass' # unset first!
 #account-hook 'imaps://fco.plj@imap.gmail.com/' "\
               #set imap_user=fco.plj@gmail.com imap_pass=$my_fcoDOTpljATgmailDOTcom "
