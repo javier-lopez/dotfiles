@@ -3,6 +3,7 @@
 xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3 &
 i3-msg T &
 conky | $HOME/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
+#conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
 
 #/usr/bin/x-terminal-emulator &
 /usr/bin/pcmanfm &
