@@ -57,4 +57,4 @@ ${if_up eth0}^i(/home/chilicuil/data/images/icons/dzen2/sm4tik/net_wired.xbm) et
 ^i(/home/chilicuil/data/images/icons/dzen2/sm4tik/bat_full_01.xbm) ${battery_percent BAT1}%\
  ${battery_time BAT1} ^i(/home/chilicuil/data/images/icons/dzen2/sm4tik/temp.xbm) \
 ${acpitemp}°| ^i(/home/chilicuil/data/images/icons/dzen2/sm4tik/spkr_01.xbm)\
- ${mixer}% ${if_mpd_playing}^i(/home/chilicuil/data/images/icons/dzen2/sm4tik/phones.xbm) ${mpd_smart}${endif}
+ ${mixerr}% ${if_mpd_playing}^i(/home/chilicuil/data/images/icons/dzen2/sm4tik/phones.xbm) ${mpd_smart}${endif}

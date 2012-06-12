@@ -1,8 +1,19 @@
-# DO NOT EDIT!  This file will be overwritten by LXAppearance.
-# Any customization should be done in ~/.gtkrc-2.0.mine
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 gtk-theme-name="darkening"
 gtk-icon-theme-name="laga"
 gtk-font-name="Sans 9"
-gtk-toolbar-style=2
+gtk-cursor-theme-name="ComixCursors-Opaque-Blue-Large-Slim"
+gtk-cursor-theme-size=0
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=0
+gtk-menu-images=0
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=1
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintfull"
+gtk-xft-rgba="rgb"
 include "/home/chilicuil/.gtkrc-2.0.mine"

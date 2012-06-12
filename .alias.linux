@@ -46,6 +46,7 @@ alias xrandr.off.hdmi='xrandr --output HDMI1 --off; barstatus.on'
 alias xrandr.off.vga='xrandr --output VGA1 --off; barstatus.on'
 alias xrandr.same_as.hdmi='xrandr --output HDMI1 --auto --same-as LVDS1'
 alias xrandr.same_as.vga='xrandr --output VGA1 --auto --same-as LVDS1'
+alias ztup='setup'
 
 #====RANDOM VARS===
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
