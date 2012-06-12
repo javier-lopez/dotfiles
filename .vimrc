@@ -849,7 +849,7 @@ endfunction
 function! Word_mode_on()
     set linebreak
     set nonumber
-    set textwidth=76
+    set textwidth=80
     call Spell("en_us")
 
     noremap <F3> :call Spell("es_mx")<CR>
