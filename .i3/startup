@@ -10,6 +10,9 @@ conky | $HOME/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*
 autocutsel &                                   #sync X/Gnome clipboards
 autocutsel -s PRIMARY &
 
+#give time to open some graph app, so notify don't go to the background, this sucks!
+#sleep 10s; /usr/bin/pantheon-notify &
+
 #/usr/bin/workrave & #force to take a break ~/.workrave
 #xwrits breaktime=0:20 typetime=5:00 +mouse +lock #helps to take a break every 5 min
 

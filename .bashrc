@@ -155,7 +155,14 @@ export DISPLAY=:0.0
 
 #ls colors
 eval $(dircolors -b $HOME/.dir_colors)
-head -5 $HOME/.todo -v
+
+#show the todo list every 10 terminal invocations, aprox
+rnumber=$((RANDOM%10))
+if [ $rnumber == 5 ]; then
+    todo ls +5
+    todo ls +in_progress
+    todo ls @debug| head -5 -v
+fi
 
 #===============================================================================
 #=============================== Custom alias ==================================

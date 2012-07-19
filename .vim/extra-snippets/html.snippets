@@ -125,10 +125,12 @@ snippet <label
 	<label for="${2:$1}">${1:name}</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="${5}" id="${6:$2}"`Close()`>${7}
 snippet <link
 	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}
-snippet <a mailto
-	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>${4}
+snippet <a www:target
+	<a href="${1:google.com}" target="${3:_blank"}>${2:text}</a>${4}
 snippet <a www
 	<a href="${1:google.com}">${2:text}</a>${3}
+snippet <a mailto
+	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>${4}
 snippet <meta
 	<meta name="${1:name}" content="${2:content}"`Close()`>${3}
 snippet <option with value

@@ -1408,7 +1408,7 @@ snippet if
 		${2:/* code */}
 	}
 snippet else
-	else 
+	else
 	{
 		${1:/* code */}
 	}
@@ -1455,7 +1455,7 @@ snippet typedef
 	typedef ${1:int} ${2:MyCustomType};${3}
 # Struct
 snippet struct
-	struct ${1:`Filename('$1_t', 'name')`} 
+	struct ${1:`Filename('$1_t', 'name')`}
 	{
 		${2:/* data */}
 	}${3: /* optional variable list */};${4}
@@ -1519,7 +1519,7 @@ snippet header
 	#        AUTHOR:  ${2:`g:snips_author`} ${3:<`g:snips_authorEmail`>}
 	#       COMPANY:  ${4:---}
 	#      COMPILER:  ${5:gcc}
-	#       CREATED:  `strftime("%d-%m-%Y %H:%M")` 
+	#       CREATED:  `strftime("%d-%m-%Y %H:%M")`
 	#      REVISION:  ${6:---}
 	#============================================================================
 	${11}
