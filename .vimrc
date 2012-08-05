@@ -176,9 +176,9 @@ endif
 if has("autocmd")
     "Behaviour :
     autocmd BufNewFile,BufEnter *.php,*.php3,*.php4                                     call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.php5,*html,*.inc                                      call SetProperties("php")
-    autocmd BufNewFile,BufEnter *schema,*.engine                                        call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.ctp,*.thtml                                           call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.php5,*.inc,*schema                                    call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.engine,*.ctp                                          call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.html,*.xml                                            call SetProperties("html")
     autocmd BufNewFile,BufEnter *.c,*.h                                                 call SetProperties("c")
     autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml                                     call SetProperties("perl")
     autocmd BufNewFile,BufEnter *[mM]akefile,*.mk                                       call SetProperties("make")
@@ -753,12 +753,21 @@ function! SetProperties(_language)
         "requires php-cli
         set makeprg             =php\ -l\ %
         set errorformat         =%m\ in\ %f\ on\ line\ %l
+
         let php_sql_query       = 1
         let php_baselib         = 1
         let php_htmlInStrings   = 1
         let php_folding         = 1
         "don't show variables in freaking php
         "let tlist_php_settings = 'php;c:class;d:constant;f:function'
+        "
+    elseif (a:_language == "html")
+        set syntax              =html
+        set softtabstop=2      "vim sees 4 spaces as a tab
+        set shiftwidth=2       "indentation
+        "requires php-cli
+        "set makeprg             =php\ -l\ %
+        "set errorformat         =%m\ in\ %f\ on\ line\ %l
 
     elseif (a:_language == "perl")
         set syntax       =perl
