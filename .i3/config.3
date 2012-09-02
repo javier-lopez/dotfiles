@@ -34,12 +34,10 @@
 
 # This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-
-
-
 # Mod4 is <Win> and Mod1 is <Alt>
 set $Win Mod4
 set $Alt Mod1
+set $Altgr Mod5
 
 # Requires latest version (from git)
 # ---------------------------------->
@@ -63,7 +61,7 @@ workspace 6 fm
 workspace 7 work
 workspace 8 news
 workspace 9 work
-workspace 10 todo
+workspace 10 work
 workspace 11 work
 workspace 12 work
 workspace 13 work
@@ -136,21 +134,21 @@ bindsym $Win+Up k
 bindsym $Win+Right l
 
 # Focus Container ($Alt+h/j/k/l)
-bind $Alt+43 wch
-bind $Alt+44 wcj
-bind $Alt+45 wck
-bind $Alt+46 wcl
+#bind $Alt+43 wch
+#bind $Alt+44 wcj
+#bind $Alt+45 wck
+#bind $Alt+46 wcl
 
 # Snap ($Win+Control+h/j/k/l)
-bind $Win+Control+43 sh
-bind $Win+Control+44 sj
-bind $Win+Control+45 sk
-bind $Win+Control+46 sl
+#bind $Win+Control+43 sh
+#bind $Win+Control+44 sj
+#bind $Win+Control+45 sk
+#bind $Win+Control+46 sl
 # (alternatively, you can use the cursor keys:)
-bindsym $Win+Control+Left sh
-bindsym $Win+Control+Down sj
-bindsym $Win+Control+Up sk
-bindsym $Win+Control+Right sl
+#bindsym $Win+Control+Left sh
+#bindsym $Win+Control+Down sj
+#bindsym $Win+Control+Up sk
+#bindsym $Win+Control+Right sl
 
 # Move ($Win+Shift+h/j/k/l)
 bind $Win+Shift+43 mh
@@ -164,10 +162,10 @@ bindsym $Win+Shift+Up mk
 bindsym $Win+Shift+Right ml
 
 # Move Container ($Alt+$Win+Shift+h/j/k/l)
-bind $Alt+$Win+Shift+43 wcmh
-bind $Alt+$Win+Shift+44 wcmj
-bind $Alt+$Win+Shift+45 wcmk
-bind $Alt+$Win+Shift+46 wcml
+#bind $Alt+$Win+Shift+43 wcmh
+#bind $Alt+$Win+Shift+44 wcmj
+#bind $Alt+$Win+Shift+45 wcmk
+#bind $Alt+$Win+Shift+46 wcml
 
 # Workspaces ($Win+1/2/…)
 bind $Win+10    1
@@ -192,8 +190,8 @@ bind $Win+32    19
 bind $Win+33    20
 # Requires latest version (from git)
 # ---------------------------------->
-bind $Win+113   pw
-bind $Win+114   nw
+#bind $Win+113   pw
+#bind $Win+114   nw
 # ----------------------------------<
 
 # Move to Workspaces
@@ -225,22 +223,25 @@ bind $Win+Shift+33  m20
 # $Win+Enter starts a new terminal
 bind $Win+36 exec /usr/bin/x-terminal-emulator
 #bind $Win+36 exec /usr/bin/urxvtc
-bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
+#bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
 #bindsym Control+Shift+g exec /usr/bin/urxvtc
 
 # Control+Shift*f starts firefox
 #bind Control+Shift+41 exec firefox
 
 # Control+Shift+k kills the current client
-bind Control+Shift+45 kill
+#bind Control+Shift+45 kill
+bind $Altgr+45 kill
 
 # Control+Shift+l killall
-bind Control+Shift+46 exec dmenu_killall
+#bind Control+Shift+46 exec dmenu_killall
+bind $Altgr+46 exec dmenu_killall
 
 # $Alt+Esc starts dmenu and launches the selected application
 # for now, we don’t have an own launcher
 #-sf purple
 bind $Alt+9 exec dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
+#bind $Alt+9 exec dmenu_run
 
 # Control+$Alt+e exits i3
 #bind Control+$Alt+26 exit
@@ -255,43 +256,59 @@ bind Control+$Alt+46 exec i3lock -i $HOME/data/images/wallpapers/1.png -p win -n
 bind Control+$Alt+119 exec dmenu_session
 
 # Toggle windows transparency
-bindsym Control+Shift+t exec transset -p
+#bindsym Control+Shift+t exec transset -p
 
 # magnifier: Control+Shift+m
-bindsym Control+Shift+m exec magnifier
+#bindsym Control+Shift+m exec magnifier
+bindsym $Altgr+m exec magnifier
 #bindsym Control+Shift+m exec /bin/sh -c mutt
 
 # irssi: Control+Shift+i
-bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
+#bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
+bindsym $Altgr+i exec /usr/bin/x-terminal-emulator -title "irssi" -e irssi
 #bindsym Control+Shift+i exec /bin/sh -c irssi
 
 # pms: Control+Shift+p
 #bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e pms
-bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e ncmpcpp
+#bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e ncmpcpp
+bindsym $Altgr+r exec /usr/bin/x-terminal-emulator -e ncmpcpp
 #bindsym Control+Shift+p exec sh -c pms
 
 # alsamixer: Control+Shift+a
-bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
+#bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
 #bindsym Control+Shift+a exec /bin/sh -c alsamixer
 
 # pcmanfm:
-bindsym Control+Shift+h exec /usr/bin/pcmanfm 
+#bindsym Control+Shift+h exec /usr/bin/pcmanfm
+bindsym $Altgr+h exec /usr/bin/pcmanfm
 #bindsym Control+Shift+h exec nautilus
 
 # volume:
-bind Control+Shift+20 exec /usr/bin/amixer set Master 1-
-bind Control+Shift+21 exec /usr/bin/amixer set Master 1+  
+#bind Control+Shift+20 exec /usr/bin/amixer set Master 1-
+bind $Altgr+59 exec /usr/bin/amixer set Master 1-
+#bind Control+Shift+21 exec /usr/bin/amixer set Master 1+
+bind $Altgr+60 exec /usr/bin/amixer set Master 1+
 
 # mpd:
-bind Control+Shift+61 exec /usr/bin/mpc play
-bind Control+61 exec /usr/bin/mpc stop
-bind Control+Shift+60 exec /usr/bin/mpc next
-bind Control+Shift+59 exec /usr/bin/mpc prev
+#bind Control+Shift+61 exec /usr/bin/mpc play
+#bind Control+61 exec /usr/bin/mpc stop
+bindsym $Altgr+p exec /usr/local/bin/mpc_toggle
+#bind Control+Shift+60 exec /usr/bin/mpc next
+bind $Altgr+21 exec /usr/bin/mpc next
+#bind Control+Shift+59 exec /usr/bin/mpc prev
+bind $Altgr+34 exec /usr/bin/mpc prev
 
 # song:
-bindsym Control+Shift+s exec /usr/local/bin/dmenu_mpd
+#bindsym Control+Shift+s exec /usr/local/bin/dmenu_mpd
+bindsym $Altgr+s exec /usr/local/bin/dmenu_mpd
 
-# record_desktop
+# dmenu_xrandr: $Altgr+a
+bindsym $Altgr+a exec /usr/local/bin/dmenu_xrandr
+
+# screenshot: ImpPt
+bind 107 exec /usr/local/bin/screenshot
+ 
+# record_desktop: TODO 18-08-2012 22:33 >> make it work again
 bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
 bind Control+35 exec /usr/local/bin/screencast_record start
 
@@ -304,33 +321,33 @@ mode "resize" {
         # more space on its left
 
         bindsym h resize left -10
-        bindsym Shift+h resize left +10
+        #bindsym Shift+h resize left +10
 
-        bindsym j resize bottom +10
-        bindsym Shift+j resize bottom -10
+        #bindsym j resize bottom +10
+        bindsym j resize top +10
 
         bindsym k resize top -10
-        bindsym Shift+k resize top +10
+        #bindsym Shift+k resize top +10
 
-        bindsym l resize right +10
-        bindsym Shift+l resize right -10
+        #bindsym l resize right +10
+        bindsym l resize left +10
         
         #Exit resize mode
-        bindsym $Win+Shift+z mode default
+        bindsym $Altgr+x mode default
 }
 
 # Enter resize mode
-bindsym $Win+z mode resize
+bindsym $Altgr+z mode resize
 
 # Get me to the next open VIM instance
-#bindsym $Win+v jump "buzz/VIM"
+#bindsym $Win+v jump "x-terminal-emulator/VIM"
 #bindsym $Win+m jump "buzz/mutt"
 
 # Read 1 character and mark the current window with this character
-#bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
+bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'set: '
 
 # Read 1 character and go to the window with the character
-#bindsym $Win+g exec i3-input -p 'goto ' -l 1 -P 'Goto: '
+bind $Win+20 exec i3-input -p 'goto ' -l 1 -P 'go: '
 
 # ###################################
 # ############# ASSIGNS #############
@@ -343,14 +360,14 @@ workspace 1 output VGA1
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
 
-assign "firefox"         1
-assign "buzz/irssi"      4
-assign "buzz/mutt"       5
-assign "thunderbird"     5
-assign "liferea"         8
-assign "pcmanfm"         6
-assign "nautilus"        6
-assign "workrave"        20
+assign "firefox"                   1
+assign "x-terminal-emulator/irssi" 4
+assign "buzz/mutt"                 5
+assign "thunderbird"               5
+assign "liferea"                   8
+assign "pcmanfm"                   6
+assign "nautilus"                  6
+assign "workrave"                  20
 
 # ###################################
 # ############# COLORS ##############
