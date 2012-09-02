@@ -1,5 +1,5 @@
 !-----------------------------------------------------------------------------
-!           Last review            Mon 09 Aug 2010 03:58:28 PM CDT
+!           Last review            Sun 02 Sep 2012 01:41:11 AM CDT
 !-----------------------------------------------------------------------------
 ! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 
@@ -13,16 +13,16 @@
 #include "/home/chilicuil/.Xtheme/dark-IV.theme"
 !#include "/home/chilicuil/.Xtheme/darksoft-I.theme"
 
-Xcursor*theme: tool
+!Xcursor*theme: tool
 
 !======================================================
 !======================= General ======================
 !======================================================
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:      	rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintslight
+!Xft.dpi:        96
+!Xft.antialias:  true
+!Xft.rgba:       rgb
+!Xft.hinting:    true
+!Xft.hintstyle:  hintslight
 
 !======================================================
 !======================== Urxvt =======================
@@ -34,33 +34,36 @@ Xft.hintstyle:  hintslight
 !URxvt*depth: 32
 
 !To change the shading change the Alpha value in
-!background option. 0000 = full !transparent and
-!ffff = no transparency.
-!                     Red/Blue/Green/Alpha
-!URxvt*background: rgba:0000/0000/0000/dddd
-URxvt*background: #000000
+!background option. 0000 = full !transparent and ffff = no transparency
+!URxvt*background:      rgba:0000/0000/0000/dddd
+!                            Red/Blue/Green/Alpha
+URxvt*background:       #000000
 
-!URxvt*font:            terminus-12
-!URxvt*font:            xft:Bitstream Vera Sans Mono:pixelsize=9
-!URxvt*font:            xft:LucidaMacBold:pixelsize=7
-URxvt*boldFont:         xft:Bitstream Vera Sans Mono:pixelsize=9
-URxvt*italicFont:       xft:segoe ui:pixelsize=9
-URxvt*bolditalicFont:   xft:Bitstream Vera Sans Mono:pixelsize=9
-URxvt*scrollBar:        false
-URxvt*internalBorder:   5
+!URxvt*font:             xft:Inconsolata:pixelsize=12
+URxvt*font:             xft:Inconsolata for Powerline:pixelsize=12
+!URxvt*font:             xft:Monaco:style=Standard:pixelsize=12
+!URxvt*font:             xft:Monaco for Powerline:regular:size=8
+!URxvt*boldFont:         xft:Bitstream Vera Sans Mono:pixelsize=9
+!URxvt*boldFont:         xft:Monaco:pixelsize=9
+!URxvt*italicFont:       xft:segoe ui:pixelsize=9
+!URxvt*bolditalicFont:   xft:Bitstream Vera Sans Mono:pixelsize=9
+!URxvt*letterSpace:      -1
+
 URxvt*saveLines:        10000
+URxvt*scrollBar:        false
+!URxvt*internalBorder:   5
 !URxvt*fading: 25%
 !URxvt.scrollstyle:      plain
-URxvt.urgentOnBell:      true
-URxvt*cursorBlink:       true
-URxvt.title:             buzz
+URxvt.urgentOnBell:     true
+URxvt*cursorBlink:      true
 
+!URxvt.title:            buzz
 !boobs
-!URxvt.title:             ( . Y . )
+!URxvt.title:            ( . Y . )
 !listening music
-!URxvt.title:             d-_-b
+!URxvt.title:            d-_-b
 !boring
-!URxvt.title:             (¬_¬)
+!URxvt.title:            (¬_¬)
 !innocent face
 !URxvt.title:             ʘ‿ʘ
 
