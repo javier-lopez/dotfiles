@@ -8,17 +8,16 @@
 #xsetroot -solid "#333333"                     # or use a solid color
 feh --bg-scale /home/chilicuil/data/images/wallpapers/circles.jpg
 #feh --bg-scale /home/chilicuil/data/images/wallpapers/wallcolor.jpg
-#feh --bg-scale $HOME/data/images/wallpapers/Aurora_Borealis.jpg
 
-xsetroot -cursor_name left_ptr
+#xsetroot -cursor_name left_ptr
 #numlockx on &                                 # numlock on
 #setxkbmap -option terminate:ctrl_alt_bksp &   # C-A-BS to kill X
-#xrdb $HOME/.Xdefaults &                       # force to load Xdefaults
 
 #exec /usr/bin/xmonad                          # start xmonad
 #exec /usr/bin/enlightenment_start             # start e17
 #exec /usr/bin/i3 -V all >> ~/.i3/logfile      # start i3 debug
-exec /usr/bin/i3 >> ~/.i3/logfile              # start i3
+#exec /usr/bin/i3 >> ~/.i3/logfile              # start i3
+exec /usr/bin/i3                               # start i3
 
 #case $1 in
 #i3)
