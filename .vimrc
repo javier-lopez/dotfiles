@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Mon 07 Nov 2011 01:24:56 AM CST
+"           Last review            Sun 02 Sep 2012 02:41:11 AM CDT
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
@@ -56,7 +56,7 @@ if v:version < 700
 endif
 
 if has ('gui_running')
-    set background=dark    "I like dark colors
+    set background=dark     "I like dark colors
     colorscheme ir_black
     "colorscheme wombat     "http://files.werx.dk/wombat.vim
     "colorscheme molokai
@@ -120,7 +120,7 @@ set expandtab          "tabs mutate into spaces, if you wanna insert "real"
 "set textwidth=80
 set splitright         "split vertically to the right.
 set splitbelow         "split horizontally below.
-set cursorline         "highlight the screen line of the cursor
+"set cursorline         "highlight the screen line of the cursor
 set nostartofline
 set nofsync            "improves performance, let OS decide when to flush disk
 set showmatch          "when closing a block, show the matching bracket.
@@ -199,6 +199,10 @@ if has("autocmd")
 
     " turn off any existing search
     autocmd VimEnter * nohls
+
+    " quickly browse : http://vim.wikia.com/wiki/Mapping_to_quickly_browse_help
+    autocmd filetype help :nnoremap <buffer><CR> <c-]>
+    autocmd filetype help :nnoremap <buffer><BS> <c-T>
 endif
 
 "====== Status Line ======
@@ -222,7 +226,7 @@ set statusline+=%=                                       "right align
 set statusline+=%2*%-8{strftime('%H:%M')}                "time
 set statusline+=%-7{FileSize()}                          "file size
 "set statusline+=%2*%-3b,0x%-8B\                          "current char
-set statusline+=0x%-4B\                                  "current char
+"set statusline+=0x%-4B\                                  "current char
 "set statusline+=%-14.(%l,%c%V%)\ %<%P                    "offset
 set statusline+=%-8.(%l,%c%V%)\ %P                       "offset
 
@@ -281,18 +285,18 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:acp_behaviorPythonOmniLength = -1
 
     "Bundle 'Townk/vim-autoclose'
-    Bundle 'chilicuil/dbext.vim'
-        let g:dbext_default_history_size = 100
-        "let g:dbext_default_profile     = 'mysql_test1'
-        let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
-                    \passwd=passwd:dbname=test1:host=localhost:port=3306'
+    "Bundle 'chilicuil/dbext.vim'
+        "let g:dbext_default_history_size = 100
+        ""let g:dbext_default_profile     = 'mysql_test1'
+        "let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
+                    "\passwd=passwd:dbname=test1:host=localhost:port=3306'
 
     Bundle 'gmunkhbaatarmn/vim-largefile'
     Bundle 'vim-scripts/matrix.vim--Yang'
         map <leader>x :Matrix<CR>
 
     Bundle 'chilicuil/nextCS'
-    Bundle 'chilicuil/TeTrIs.vim'
+    "Bundle 'chilicuil/TeTrIs.vim'
         "nmap <Leader>te :cal <SID>Main()<CR>
 
     Bundle 'chilicuil/vimbuddy.vim'
@@ -315,11 +319,10 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
         "let g:secure_modelines_verbose=1
 
-    Bundle 'vim-scripts/irssilog.vim'
+    Bundle 'mattn/webapi-vim'
     Bundle 'mattn/gist-vim'
-        let g:github_user       = "chilicuil"
-        let g:github_token      = "7c0098a81da8a04fadbbc1318eaeb7e1"
 
+    Bundle 'vim-scripts/irssilog.vim'
     Bundle 'scrooloose/syntastic'
         set statusline+=\ %#warningmsg#
         set statusline+=%{SyntasticStatuslineFlag()}
@@ -380,11 +383,19 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:easytags_suppress_ctags_warning = 1
         "set tags=./.tags;,~/ctags/tags
 
-    "Bundle 'Shougo/unite.vim'
-    "Bundle 'Raimondi/delimitMate'
     Bundle 'mattn/zencoding-vim'
         "let g:user_zen_leader_key = '<c-y>'
         let g:use_zen_complete_tag = 1
+
+    Bundle 'jpalardy/vim-slime'
+
+    "Bundle 'Lokaltog/vim-powerline'
+        "let g:Powerline_cache_enabled = 1
+        "let g:Powerline_symbols = 'compatible' "compatible, unicode, fancy
+        "let g:Powerline_theme = 'default' "default, skwp
+        "let g:Powerline_stl_path_style = 'short' "relative, filename, short, full
+        "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+        "call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
 
     "===discarted===
     "Bundle 'chilicuil/conque'
@@ -431,6 +442,12 @@ map <c-w> :tabclose <CR>
 "for some unknown reason if I set this. it executes :confirm qall when
 " I write '*/' on --insert-- mode where '*' is a wildcard
 "map! <c-x> <esc>:confirm qall<CR>
+
+" Ctrl-L clears the highlight from the last search
+"noremap <C-l> :nohlsearch<CR><C-l>
+"noremap! <C-l> <ESC>:nohlsearch<CR><C-l>
+source $VIMRUNTIME/ftplugin/man.vim
+nnoremap K :Man <C-R><C-W><CR>
 
 "exit keyboard shortcut
 map <c-x> :confirm qall<CR>
