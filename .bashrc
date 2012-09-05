@@ -21,7 +21,7 @@ set match-hidden-files off
 set bind-tty-special-chars on
 set completion-ignore-case on
 
-set -o vi #this is sparta!
+#set -o vi #this is sparta!
 
 # Do not show ^C when pressing Ctrl+C
 stty -ctlecho

@@ -39,8 +39,8 @@
 !                            Red/Blue/Green/Alpha
 URxvt*background:       #000000
 
-!URxvt*font:             xft:Inconsolata:pixelsize=12
-URxvt*font:             xft:Inconsolata for Powerline:pixelsize=12
+URxvt*font:             xft:Inconsolata:pixelsize=12
+!URxvt*font:             xft:Inconsolata for Powerline:pixelsize=12
 !URxvt*font:             xft:Monaco:style=Standard:pixelsize=12
 !URxvt*font:             xft:Monaco for Powerline:regular:size=8
 !URxvt*boldFont:         xft:Bitstream Vera Sans Mono:pixelsize=9
