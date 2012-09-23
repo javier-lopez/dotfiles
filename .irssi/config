@@ -90,6 +90,11 @@ channels = (
   #{ name = "#ugj-df-traduccion"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ugj-df-doc"; chatnet = "fn"; autojoin = "Yes"; }
   #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-mx"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-mx-testing"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-mx-triaging"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-mx-traduccion"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ugj-mx-doc"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#fel-clan"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#i3"; chatnet = "tw"; autojoin = "Yes"; },
   { name = "##english-br"; chatnet = "fn"; autojoin = "Yes"; },
@@ -340,7 +345,9 @@ settings = {
     autostick_split_windows = "yes";
     actlist_sort = "refnum";
   };
-  "perl/core/scripts" = { notify_broadcast = "yes"; };
+  "perl/core/scripts" = {
+    notify_broadcast = "yes";
+  };
 };
 
 #logs = { };
