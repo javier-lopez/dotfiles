@@ -100,7 +100,7 @@ channels = (
   { name = "##english-br"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "##espanol-br"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
-  #{ name = "#hispania"; chatnet = "an"; autojoin = "Yes"; },
+  { name = "#ubuntu-community-team"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#opmexico"; chatnet = "an"; autojoin = "Yes"; },
   #{ name = "#anonymousbr"; chatnet = "an"; autojoin = "Yes"; }
   #{ name = "#ubuntu-classroom-es"; chatnet = "fn"; autojoin = "Yes"; }
@@ -157,6 +157,7 @@ ignores = (
       "#ubuntu-classroom",
       "#ubuntu-classroom-chat",
       "#ubuntu-classroom-es",
+      "#ubuntu-community-team",
       "#anonymousbr",
       #"#fel-clan"
     );
