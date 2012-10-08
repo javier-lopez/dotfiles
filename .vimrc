@@ -259,7 +259,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
 
     "====github====
     Bundle 'gmarik/vundle'
-    Bundle 'mhz/vim-matchit'
+    Bundle 'edsono/vim-matchit'
     "Bundle 'vim-scripts/CRefVim'
         "map <Leader>crn <Plug>CRV_CRefVimNormal
         "map <Leader>caw <Plug>CRV_CRefVimAsk
@@ -291,7 +291,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
                     "\passwd=passwd:dbname=test1:host=localhost:port=3306'
 
-    Bundle 'gmunkhbaatarmn/vim-largefile'
+    Bundle 'vim-scripts/LargeFile'
     Bundle 'vim-scripts/matrix.vim--Yang'
         map <leader>x :Matrix<CR>
 
