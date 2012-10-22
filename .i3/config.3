@@ -1,54 +1,27 @@
-# #####################################################################################
-# Last review            Mon 20 Feb 2012 02:30:05 AM CST
+######################################################################################
+# Last review            Sun 21 Oct 2012 01:55:01 PM CDT
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf : 
 #  TODO 02-03-2011 09:57 => xbindkeys
 
 # ###################################
-# ########### NOT WORKING ###########
+# ############ AUTOSTART ############
 # ###################################
 
-# DEPRECATED
-# Tell i3 about your preferred terminal. You can refer to this as $terminal
-# later. It is recommended to set this option to allow i3 to open a terminal
-# containing the introduction on first start.
-#terminal /usr/bin/x-terminal-emulator
-#terminal /usr/bin/urxvtc
-
-# Focus / follow mouse
-#focus_follows_mouse yes
-
-# Just for i3.4
-#for_window [title="xzoom x2"] floating enabled
-#for_window [title="~/misc"] floating enable
-
-# Window layout style:
-# default: it splits the screen
-# stacking
-# tabbed
-#workspace_layout tabbed
+# execute my startup programs
+exec ~/.i3/startup
 
 # ###################################
 # ######## GENERAL SETTINGS #########
 # ###################################
 
-# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
-# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-# Mod4 is <Win> and Mod1 is <Alt>
-set $Win Mod4
-set $Alt Mod1
-set $Altgr Mod5
-
-# Requires latest version (from git)
-# ---------------------------------->
 # Window border style:
 # bn: border normal, with window title bar;
 # bp: border only, no window title bar;
 # bb: no berder or window title bar.
 new_window bp
-
-# Workspace bar
-# workspace_bar yes
+#default_orientation auto | vertical | horizontal
+#hide_edge_borders <none|vertical|horizontal|both>
 # ----------------------------------<
 
 # workspace names
@@ -73,13 +46,9 @@ workspace 18 work
 workspace 19 work
 workspace 20 work
 
-# Requires latest version (from git)
-# ---------------------------------->
-#new_container stacking
-# ----------------------------------<
-
 # ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font xft:DejaVu Sans Mono 10
 #font -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1
 
 ### IPC INTERFACE ###
@@ -89,15 +58,15 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 ipc-socket ~/.i3/ipc.sock
 
 # ###################################
-# ############ AUTOSTART ############
-# ###################################
-
-# execute my startup programs
-exec ~/.i3/startup
-
-# ###################################
 # ######## KEYBOARD BINDINGS ########
 # ###################################
+
+# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
+# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
+# Mod4 is <Win> and Mod1 is <Alt>
+set $Win Mod4
+set $Alt Mod1
+set $Altgr Mod5
 
 # Use Mouse+$Win to drag floating windows to their wanted position
 floating_modifier $Win
@@ -117,21 +86,22 @@ bind $Win+40 d
 # Toggle tiling/floating of the current window ($Win+Shift+Space)
 bind $Win+Shift+65 t
 
-# Go into the tiling layer / floating layer, depending on whether
-# the current window is tiling / floating ($Win+t) / it's already set up for
-# moving to the 15th workspace
-#bind $Win+65 focus ft
-
 # Focus ($Win+h/j/k/l)
 bind $Win+43 h
 bind $Win+44 j
 bind $Win+45 k
 bind $Win+46 l
-# (alternatively, you can use the cursor keys:)
+# alternatively, you can use the cursor keys
 bindsym $Win+Left h
 bindsym $Win+Down j
 bindsym $Win+Up k
 bindsym $Win+Right l
+
+# scratchpad, only for i3.4
+# send to the scratchpad ($Win+Insert)
+#bind $Win+118 move scratchpad
+# show the scratchpad ($Win+Space)
+bind $Win+65 scratchpad show
 
 # Focus Container ($Alt+h/j/k/l)
 #bind $Alt+43 wch
@@ -188,11 +158,6 @@ bind $Win+30    17
 bind $Win+31    18
 bind $Win+32    19
 bind $Win+33    20
-# Requires latest version (from git)
-# ---------------------------------->
-#bind $Win+113   pw
-#bind $Win+114   nw
-# ----------------------------------<
 
 # Move to Workspaces
 bind $Win+Shift+10 m1
@@ -222,6 +187,7 @@ bind $Win+Shift+33  m20
 
 # $Win+Enter starts a new terminal
 bind $Win+36 exec /usr/bin/x-terminal-emulator
+#bind $Win+Shift+36 split h
 #bind $Win+36 exec /usr/bin/urxvtc
 #bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
 #bindsym Control+Shift+g exec /usr/bin/urxvtc
@@ -347,18 +313,31 @@ bindsym $Altgr+z mode resize
 #bindsym $Win+m jump "buzz/mutt"
 
 # Read 1 character and mark the current window with this character
-bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'set: '
+bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
 
 # Read 1 character and go to the window with the character
-bind $Win+20 exec i3-input -p 'goto ' -l 1 -P 'go: '
+bind $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
 
 # ###################################
 # ############# ASSIGNS #############
 # ###################################
 
+# Just for i3.4
+#for_window [class="Magnifier"] floating enable
+#for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
+#for_window [class="^TeamViewer.exe$"] floating enable
+#for_window [title="^TeamViewer$"] floating enable
+#for_window [title="- TeamViewer -"] floating enable
+#popup_during_fullscreen ignore
+#workspace_auto_back_and_forth yes
+
+# makes the window floating as soon as I change
+# directory to ~/work
+#for_window [title="x200: ~/work"] floating enable
+
 # Assigns default monitor for workspaces
 workspace 1 output VGA1
-#workspace 1 output HDMI1
+workspace 1 output HDMI1
 
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
@@ -412,5 +391,4 @@ client.unfocused          #333333      #333333      #999999
 client.urgent             #8C4665      #8C5665      #999999
 bar.focused               #999999      #000000      #999999
 bar.unfocused             #333333      #000000      #999999
-bar.urgent                #8C4665      #000000      #999999
-bar.urgent             #d11931         #000000         #999999
+bar.urgent                #d11931      #000000      #999999

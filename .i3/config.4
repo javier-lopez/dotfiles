@@ -1,66 +1,35 @@
-#######################################################################################
-# Last review            Mon 17 May 2010 02:12:56 AM CDT
+######################################################################################
+# Last review            Sun 21 Oct 2012 01:55:01 PM CDT
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf : 
 #  TODO 02-03-2011 09:57 => xbindkeys
 
 # ###################################
-# ########### NOT WORKING ###########
+# ############ AUTOSTART ############
 # ###################################
 
-# DEPRECATED
-# Tell i3 about your preferred terminal. You can refer to this as $terminal
-# later. It is recommended to set this option to allow i3 to open a terminal
-# containing the introduction on first start.
-#terminal /usr/bin/x-terminal-emulator
-#terminal /usr/bin/urxvtc
-
-# Focus / follow mouse
-#focus_follows_mouse yes
-
-# Just for i3.4
-for_window [title="xzoom x2"] floating enabled
-for_window [title="~/misc"] floating enable
-
-# Window layout style:
-# default: it splits the screen
-# stacking
-# tabbed
-#workspace_layout tabbed
+# execute my startup programs
+exec_always ~/.i3/startup
 
 # ###################################
 # ######## GENERAL SETTINGS #########
 # ###################################
 
-# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
-# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-
-# Mod4 is <Win> and Mod1 is <Alt>
-set $Win Mod4
-set $Alt Mod1
-
-# Requires latest version (from git)
-# ---------------------------------->
 # Window border style:
 # bn: border normal, with window title bar;
 # bp: border only, no window title bar;
 # bb: no berder or window title bar.
 new_window 1pixel
-
-# Workspace bar
-# workspace_bar yes
+#default_orientation auto | vertical | horizontal
+#hide_edge_borders <none|vertical|horizontal|both>
 # ----------------------------------<
 
 # workspace names
 # XXX: workspace name will end up in the corresponding bindings.
 
-# Requires latest version (from git)
-# ---------------------------------->
-#new_container stacking
-# ----------------------------------<
-
 # ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font xft:DejaVu Sans Mono 10
 #font -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1
 
 ### IPC INTERFACE ###
@@ -70,15 +39,15 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 ipc-socket ~/.i3/ipc.sock
 
 # ###################################
-# ############ AUTOSTART ############
-# ###################################
-
-# execute my startup programs
-exec ~/.i3/startup
-
-# ###################################
 # ######## KEYBOARD BINDINGS ########
 # ###################################
+
+# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
+# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
+# Mod4 is <Win> and Mod1 is <Alt>
+set $Win Mod4
+set $Alt Mod1
+set $Altgr Mod5
 
 # Use Mouse+$Win to drag floating windows to their wanted position
 floating_modifier $Win
@@ -98,38 +67,39 @@ bindcode $Win+40 layout default
 # Toggle tiling/floating of the current window ($Win+Shift+Space)
 bindcode $Win+Shift+65 floating toggle
 
-# Go into the tiling layer / floating layer, depending on whether
-# the current window is tiling / floating ($Win+t) / it's already set up for
-# moving to the 15th workspace
-bindcode $Win+65 focus mode_toggle
-
 # Focus ($Win+h/j/k/l)
 bindcode $Win+43 focus left
 bindcode $Win+44 focus down
 bindcode $Win+45 focus up
 bindcode $Win+46 focus right
-# (alternatively, you can use the cursor keys:)
+# alternatively, you can use the cursor keys
 bindsym $Win+Left focus left
 bindsym $Win+Down focus down
 bindsym $Win+Up focus up
 bindsym $Win+Right focus right
 
+# scratchpad, only for i3.4
+# send to the scratchpad ($Win+Insert)
+bindcode $Win+118 move scratchpad
+# show the scratchpad ($Win+Space)
+bindcode $Win+65 scratchpad show
+
 # Focus Container ($Alt+h/j/k/l)
-bindcode $Alt+43 focus parent; focus left
-bindcode $Alt+44 focus parent; focus down
-bindcode $Alt+45 focus parent; focus up
-bindcode $Alt+46 focus parent; focus right
+#bindcode $Alt+43 focus parent; focus left
+#bindcode $Alt+44 focus parent; focus down
+#bindcode $Alt+45 focus parent; focus up
+#bindcode $Alt+46 focus parent; focus right
 
 # Snap ($Win+Control+h/j/k/l)
-bindcode $Win+Control+43 layout stacking
-bindcode $Win+Control+44 layout stacking
-bindcode $Win+Control+45 layout stacking
-bindcode $Win+Control+46 layout stacking
+#bindcode $Win+Control+43 layout stacking
+#bindcode $Win+Control+44 layout stacking
+#bindcode $Win+Control+45 layout stacking
+#bindcode $Win+Control+46 layout stacking
 # (alternatively, you can use the cursor keys:)
-bindsym $Win+Control+Left layout stacking
-bindsym $Win+Control+Down layout stacking
-bindsym $Win+Control+Up layout stacking
-bindsym $Win+Control+Right layout stacking
+#bindsym $Win+Control+Left layout stacking
+#bindsym $Win+Control+Down layout stacking
+#bindsym $Win+Control+Up layout stacking
+#bindsym $Win+Control+Right layout stacking
 
 # Move ($Win+Shift+h/j/k/l)
 bindcode $Win+Shift+43 move left
@@ -143,10 +113,10 @@ bindsym $Win+Shift+Up move up
 bindsym $Win+Shift+Right move right
 
 # Move Container (Mod3+Shift+h/j/k/l)
-bindcode $Alt+$Win+Shift+43 focus parent; move left
-bindcode $Alt+$Win+Shift+44 focus parent; move down
-bindcode $Alt+$Win+Shift+45 focus parent; move up
-bindcode $Alt+$Win+Shift+46 focus parent; move right
+#bindcode $Alt+$Win+Shift+43 focus parent; move left
+#bindcode $Alt+$Win+Shift+44 focus parent; move down
+#bindcode $Alt+$Win+Shift+45 focus parent; move up
+#bindcode $Alt+$Win+Shift+46 focus parent; move right
 
 # Workspaces ($Win+1/2/…)
 bindcode $Win+10 workspace 1 www
@@ -169,11 +139,6 @@ bindcode $Win+30 workspace 17 work
 bindcode $Win+31 workspace 18 work
 bindcode $Win+32 workspace 19 work
 bindcode $Win+33 workspace 20 work
-# Requires latest version (from git)
-# ---------------------------------->
-bindcode $Win+113 workspace prev
-bindcode $Win+114 workspace next
-# ----------------------------------<
 
 # Move to Workspaces
 bindcode $Win+Shift+10 move workspace 1 www
@@ -203,6 +168,7 @@ bindcode $Win+Shift+33 move workspace 20 work
 
 # $Win+Enter starts a new terminal
 bindcode $Win+36 exec /usr/bin/x-terminal-emulator
+bindcode $Win+Shift+36 split h
 #bind $Win+36 exec /usr/bin/urxvtc
 bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
 #bindsym Control+Shift+g exec /usr/bin/urxvtc
@@ -211,58 +177,90 @@ bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
 #bind Control+Shift+41 exec /usr/bin/firefox
 
 # Control+Shift+k kills the current client
-bindcode Control+Shift+45 kill
+#bindcode Control+Shift+45 kill
+bindcode $Altgr+45 kill
+
+# Control+Shift+l killall
+#bind Control+Shift+46 exec dmenu_killall
+bindcode $Altgr+46 exec dmenu_killall
 
 # $Alt+Esc starts dmenu and launches the selected application
 # for now, we don’t have an own launcher
 #-sf purple
 bindcode $Alt+9 exec dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
+#bind $Alt+9 exec dmenu_run
 
 # Control+$Alt+e exits i3
-bindcode Control+$Alt+26 exit
+#bindcode Control+$Alt+26 exit
 
 # Control+$Alt+r restarts i3 inplace
-bindcode Control+$Alt+27 restart
+#bindcode Control+$Alt+27 restart
 
 # Control+$Alt+l lock session
-bindcode Control+$Alt+46 exec gnome-screensaver-command --lock
+bindcode Control+$Alt+46 exec i3lock -i $HOME/data/images/wallpapers/1.png -p win -n
 
 # Control+$Alt+Supr starts a dmenu session menu
 bindcode Control+$Alt+119 exec dmenu_session
 
-# mutt: Control+Shift+m
-bindsym Control+Shift+m exec /usr/bin/x-terminal-emulator -e mutt
+# Toggle windows transparency
+#bindsym Control+Shift+t exec transset -p
+
+# magnifier: Control+Shift+m
+#bindsym Control+Shift+m exec magnifier
+bindsym $Altgr+m exec magnifier
 #bindsym Control+Shift+m exec /bin/sh -c mutt
 
 # irssi: Control+Shift+i
-bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
+#bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
+bindsym $Altgr+i exec /usr/bin/x-terminal-emulator -title "irssi" -e irssi
 #bindsym Control+Shift+i exec /bin/sh -c irssi
 
 # pms: Control+Shift+p
-bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e pms
+#bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e pms
+#bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e ncmpcpp
+bindsym $Altgr+r exec /usr/bin/x-terminal-emulator -e ncmpcpp
 #bindsym Control+Shift+p exec sh -c pms
 
+# wicd-curses: Altgr+w
+bindsym $Altgr+w exec /usr/bin/x-terminal-emulator -e wicd-curses
+
 # alsamixer: Control+Shift+a
-bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
+#bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
 #bindsym Control+Shift+a exec /bin/sh -c alsamixer
 
 # pcmanfm:
-bindsym Control+Shift+h exec /usr/bin/pcmanfm 
+#bindsym Control+Shift+h exec /usr/bin/pcmanfm
+bindsym $Altgr+h exec /usr/bin/pcmanfm
 #bindsym Control+Shift+h exec nautilus
 
 # volume:
-bindcode Control+Shift+20 exec /usr/bin/amixer set Master 1-
-bindcode Control+Shift+21 exec /usr/bin/amixer set Master 1+  
+#bindcode Control+Shift+20 exec /usr/bin/amixer set Master 1-
+bindcode $Altgr+59 exec /usr/bin/amixer set Master 1-
+#bind Control+Shift+21 exec /usr/bin/amixer set Master 1+
+bindcode $Altgr+60 exec /usr/bin/amixer set Master 1+
 
-# mpd
-bindcode Control+Shift+61 exec /usr/bin/mpc play
-bindcode Control+61 exec /usr/bin/mpc stop
-bindcode Control+Shift+60 exec /usr/bin/mpc next
-bindcode Control+Shift+59 exec /usr/bin/mpc prev
+# mpd:
+#bindcode Control+Shift+61 exec /usr/bin/mpc play
+#bindcode Control+61 exec /usr/bin/mpc stop
+bindsym $Altgr+p exec /usr/local/bin/mpc_toggle
+#bind Control+Shift+60 exec /usr/bin/mpc next
+bind $Altgr+21 exec /usr/bin/mpc next
+#bind Control+Shift+59 exec /usr/bin/mpc prev
+bind $Altgr+34 exec /usr/bin/mpc prev
 
-# record_desktop
-bindcode Control+Shift+35 exec /usr/local/bin/screencast_record stop
-bindcode Control+35 exec /usr/local/bin/screencast_record
+# song:
+#bindsym Control+Shift+s exec /usr/local/bin/dmenu_mpd
+bindsym $Altgr+s exec /usr/local/bin/dmenu_mpd
+
+# dmenu_xrandr: $Altgr+a
+bindsym $Altgr+a exec /usr/local/bin/dmenu_xrandr
+
+# screenshot: ImpPt
+bind 107 exec /usr/local/bin/screenshot
+ 
+# record_desktop: TODO 18-08-2012 22:33 >> make it work again
+bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
+bind Control+35 exec /usr/local/bin/screencast_record start
 
 
 mode "resize" {
@@ -272,51 +270,66 @@ mode "resize" {
         # when pressing left, the window is resized so that it has
         # more space on its left
         
-        bindsym n resize shrink left 10 px
-        bindsym Shift+n resize grow left 10 px
+        bindsym h resize grow left 10 px
+        #bindsym Shift+h resize grow left 10 px
+ 
+        #bindsym t resize shrink up 10 px
+        bindsym j resize shrink up 10 px
+
+        bindsym k resize grow up 10 px
+        #bindsym Shift+k resize grow down 10 px
         
-        bindsym r resize grow down 10 px
-        bindsym Shift+r resize shrink down 10 px
+        #bindsym l resize grow right 10 px
+        bindsym l resize shrink left 10 px
         
-        bindsym t resize shrink up 10 px
-        bindsym Shift+t resize grow up 10 px
-        
-        bindsym d resize grow right 10 px
-        bindsym Shift+d resize shrink right 10 px
-        
-        #Enter
-        bindsym $Win+Shift+z mode "default"
+        #Exit resize mode
+        bindsym $Altgr+x mode "default"
 }
 
 # Enter resize mode
-bindsym $Win+z mode "resize"
+bindsym $Altgr+z mode "resize"
 
 # Get me to the next open VIM instance
 #bindsym $Win+v [class="buzz" title="VIM"] focus
 #bindsym $Win+m [class="buzz" title="mutt"] focus
 
 # Read 1 character and mark the current window with this character
-#bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
+bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
 
 # Read 1 character and go to the window with the character
-#bindsym $Win+g exec i3-input -p 'goto ' -l 1 -P 'Goto: '
+bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
 
 # ###################################
 # ############# ASSIGNS #############
 # ###################################
 
+# Just for i3.4
+#for_window [class="Magnifier"] floating enable
+for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
+for_window [class="^TeamViewer.exe$"] floating enable
+for_window [title="^TeamViewer$"] floating enable
+for_window [title="- TeamViewer -"] floating enable
+#popup_during_fullscreen ignore
+workspace_auto_back_and_forth yes
+
+# makes the window floating as soon as I change
+# directory to ~/work
+#for_window [title="x200: ~/work"] floating enable
+
 # Assigns default monitor for workspaces
-workspace 1 output VGA1
+workspace 1 www output VGA1
+workspace 1 www output HDMI1
+
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
 
-#assign "firefox"         1 www
-#assign "buzz/irssi"      4 im
-#assign "buzz/mutt"       5 mail
-#assign "thunderbird"     5 mail
-#assign "liferea"         8 news
-#assign "pcmanfm"         6 files
-#assign "nautilus"        6 files
+assign "firefox"                                1 www
+assign assign [class="^URxvt$" title="irssi"]   4 im
+assign "buzz/mutt"                              5 mail
+assign "thunderbird"                            5 mail
+assign "liferea"                                8 news
+assign "pcmanfm"                                6 files
+assign "nautilus"                               6 files
 #assign "workrave"        20
 
 # ###################################
@@ -358,15 +371,23 @@ client.focused_inactive   #333333      #333333      #999999
 client.unfocused          #333333      #333333      #999999
 client.urgent             #8C4665      #8C5665      #999999
 # XXX: REMOVED bar.focused, configure i3bar instead.
-# Old line: bar.focused               #999999      #000000      #999999
-# XXX: REMOVED bar.unfocused, configure i3bar instead.
-# Old line: bar.unfocused             #333333      #000000      #999999
-#bar.urgent                #8C4665      #000000      #999999
-# XXX: REMOVED bar.urgent, configure i3bar instead.
-# Old line: bar.urgent             #d11931         #000000         #999999
+#bar.focused               #999999      #000000      #999999
+#bar.unfocused             #333333      #000000      #999999
+#bar.urgent                #d11931      #000000      #999999
 
 # XXX: Automatically added a call to i3bar to provide a workspace bar
 #exec i3status | i3bar -d
 bar {
-status_command i3status
+    colors {
+        background #000000
+        statusline #ffffff
+        focused_workspace  #999999 #000000 #999999
+        active_workspace   #999999 #000000 #999999
+        inactive_workspace #333333 #000000 #999999
+        urgent_workspace   #d11931 #000000 #999999
+    }
+    status_command i3status
+    tray_output none
+    #mode hide
+    #modifier $Win
 }

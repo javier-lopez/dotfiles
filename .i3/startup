@@ -1,21 +1,21 @@
 #!/bin/sh
 
 #xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3 &
-i3-msg T &
+i3-msg layout tabbed &
+
 conky | $HOME/code/dzen/dzen2  -x 350 -y 749 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
 #conky | $HOME/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
 #conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
 
-#/usr/bin/x-terminal-emulator &
 /usr/bin/pcmanfm &
 autocutsel &                                   #sync X/Gnome clipboards
 autocutsel -s PRIMARY &
-
-#give time to open some graph app, so notify don't go to the background, this sucks!
-#sleep 10s; /usr/bin/pantheon-notify &
 
 #/usr/bin/workrave & #force to take a break ~/.workrave
 #xwrits breaktime=0:20 typetime=5:00 +mouse +lock #helps to take a break every 5 min
 
 #urxvt server, nice but it breaks very often
 #urxvtd -q -f -o
+
+/usr/bin/x-terminal-emulator -name scratchpad -e bash &
+xrefresh &
