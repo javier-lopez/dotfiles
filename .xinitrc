@@ -1,1 +1,1 @@
-.xsession.info
+.xsession

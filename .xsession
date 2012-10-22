@@ -9,7 +9,6 @@
 feh --bg-scale /home/chilicuil/data/images/wallpapers/sun.jpg
 #feh --bg-scale /home/chilicuil/data/images/wallpapers/wallcolor.jpg
 
-xsetroot -cursor_name left_ptr
 #numlockx on &                                 # numlock on
 #setxkbmap -option terminate:ctrl_alt_bksp &   # C-A-BS to kill X
 
