@@ -102,7 +102,10 @@ BASETGZ="$PATH_PBUILDER/$NAME/$NAME-base.tgz"
 # Optionally, set BASEPATH (and not BASETGZ) if using cowbuilder
 # BASEPATH="$PATH_PBUILDER/$NAME/base.cow/"
 DISTRIBUTION="$DIST"
+#use it only if you've followed http://viajemotu.wordpress.com/2010/08/10/notas-sobre-pbuilder/
 export BUILDRESULT="$HOME/misc/packaging/ubuntu/results/$NAME/"
+#otherwise uncomment the next line
+#export BUILDRESULT="/var/cache/pbuilder/$NAME/result/"
 BINDMOUNTS="$BUILDRESULT"
 APTCACHE="$PATH_PBUILDER/$NAME/aptcache/"
 BUILDPLACE="$PATH_PBUILDER/$NAME/build/"
