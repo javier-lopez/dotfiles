@@ -48,7 +48,7 @@ DEBIAN_SUITES=($UNSTABLE_CODENAME $TESTING_CODENAME $STABLE_CODENAME
     "unstable" "testing" "stable")
 
 # List of Ubuntu suites. Update these when needed.
-UBUNTU_SUITES=("quantal" "precise" "oneiric" "natty" "lucid")
+UBUNTU_SUITES=("raring" "quantal" "precise")
 
 # Mirrors to use. Update these to your preferred mirror.
 DEBIAN_MIRROR="ftp.us.debian.org"
@@ -102,9 +102,10 @@ BASETGZ="$PATH_PBUILDER/$NAME/$NAME-base.tgz"
 # Optionally, set BASEPATH (and not BASETGZ) if using cowbuilder
 # BASEPATH="$PATH_PBUILDER/$NAME/base.cow/"
 DISTRIBUTION="$DIST"
+export BUILDRESULT="$HOME/misc/packaging/ubuntu/results/$NAME/"
+BINDMOUNTS="$BUILDRESULT"
 APTCACHE="$PATH_PBUILDER/$NAME/aptcache/"
 BUILDPLACE="$PATH_PBUILDER/$NAME/build/"
-BUILDRESULT="$HOME/misc/packaging/ubuntu/results/$NAME/"
 HOOKDIR="$HOME/.pbuilder-hooks/"
 ###################################################################################
 
