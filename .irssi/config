@@ -15,22 +15,22 @@ servers = (
     autoconnect = "yes";
     nick = "chilicuil";
     password = "159263";
-  },
-  {
-    address = "im.bitlbee.org";
+  }
+  #{
+    #address = "im.bitlbee.org";
     #address = "testing.bitlbee.org";
-    chatnet = "im";
-    port = "6667";
-    autoconnect = "yes";
-    nick = "chilicuil";
-  },
-  {
-    address = "irc.twice-irc.de";
-    chatnet = "tw";
-    port = "6667";
-    autoconnect = "yes";
-    nick = "chilicuil";
-  },
+    #chatnet = "im";
+    #port = "6667";
+    #autoconnect = "yes";
+    #nick = "chilicuil";
+  #},
+  #{
+    #address = "irc.twice-irc.de";
+    #chatnet = "tw";
+    #port = "6667";
+    #autoconnect = "yes";
+    #nick = "chilicuil";
+  #},
   #{
   #address = "irc.power2all.com";
   #chatnet = "an";
@@ -42,11 +42,11 @@ servers = (
 
 chatnets = {
   fn = { type = "IRC"; autosendcmd = "wait 2000; /window down"; };
-  im = {
-    type = "IRC";
-    autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
-  };
-  tw = { type = "IRC"; };
+  #im = {
+    #type = "IRC";
+    #autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
+  #};
+  #tw = { type = "IRC"; };
   #an = { type = "IRC"; };
 };
 
