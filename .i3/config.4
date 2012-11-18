@@ -176,17 +176,8 @@ bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
 # Control+Shift*f starts firefox
 #bind Control+Shift+41 exec /usr/bin/firefox
 
-# Control+Shift+k kills the current client
-#bindcode Control+Shift+45 kill
-bindcode $Altgr+45 kill
-
-# Control+Shift+l killall
-#bind Control+Shift+46 exec dmenu_killall
-bindcode $Altgr+46 exec dmenu_killall
-
-# $Alt+Esc starts dmenu and launches the selected application
-# for now, we don’t have an own launcher
-#-sf purple
+# $Alt+Esc dmenu_run
+# -sf purple
 bindcode $Alt+9 exec dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
 #bind $Alt+9 exec dmenu_run
 
@@ -205,23 +196,20 @@ bindcode Control+$Alt+119 exec dmenu_session
 # Toggle windows transparency
 #bindsym Control+Shift+t exec transset -p
 
-# magnifier: Control+Shift+m
-#bindsym Control+Shift+m exec magnifier
+# magnifier:
 bindsym $Altgr+m exec magnifier
 #bindsym Control+Shift+m exec /bin/sh -c mutt
 
-# irssi: Control+Shift+i
+# irssi:
 #bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
 bindsym $Altgr+i exec /usr/bin/x-terminal-emulator -title "irssi" -e irssi
 #bindsym Control+Shift+i exec /bin/sh -c irssi
 
-# pms: Control+Shift+p
-#bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e pms
-#bindsym Control+Shift+p exec /usr/bin/x-terminal-emulator -e ncmpcpp
+# pms: 
 bindsym $Altgr+r exec /usr/bin/x-terminal-emulator -e ncmpcpp
 #bindsym Control+Shift+p exec sh -c pms
 
-# wicd-curses: Altgr+w
+# wicd-curses:
 bindsym $Altgr+w exec /usr/bin/x-terminal-emulator -e wicd-curses
 
 # alsamixer: Control+Shift+a
@@ -240,20 +228,26 @@ bindcode $Altgr+59 exec /usr/bin/amixer set Master 1-
 bindcode $Altgr+60 exec /usr/bin/amixer set Master 1+
 
 # mpd:
-#bindcode Control+Shift+61 exec /usr/bin/mpc play
-#bindcode Control+61 exec /usr/bin/mpc stop
 bindsym $Altgr+p exec /usr/local/bin/mpc_toggle
 #bind Control+Shift+60 exec /usr/bin/mpc next
 bind $Altgr+21 exec /usr/bin/mpc next
 #bind Control+Shift+59 exec /usr/bin/mpc prev
 bind $Altgr+34 exec /usr/bin/mpc prev
 
+# kills the current app
+bindcode $Altgr+45 kill
+
+# killall shows up a menu to kill the choosen item
+bindcode $Altgr+46 exec dmenu_killall
+
 # song:
-#bindsym Control+Shift+s exec /usr/local/bin/dmenu_mpd
 bindsym $Altgr+s exec /usr/local/bin/dmenu_mpd
 
-# dmenu_xrandr: $Altgr+a
+# xrand:
 bindsym $Altgr+a exec /usr/local/bin/dmenu_xrandr
+
+# vbox:
+bindsym $Altgr+v exec /usr/local/bin/dmenu_vbox
 
 # screenshot: ImpPt
 bind 107 exec /usr/local/bin/screenshot

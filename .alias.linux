@@ -54,6 +54,15 @@ alias ztup='setup'
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 
+#====PYTHON BREW===
+# http://chilicuil.github.com/all/random/2012/11/17/varias-versiones-python-ubuntu-pythonbrew.html
+# For further instructions, run: pythonbrew help
+# e.g, for installing 2.7.2 & 3.2 python versions
+#   $ pythonbrew install 2.7.2
+#   $ pythonbrew install 3.2
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+
+
 #====UBUNTU DEV===
 alias bzr.debuild='bzr bd -- -S -uc -us'
 alias ccache.ubuntu='CCACHE_DIR=$HOME/.ccache_ubuntu ccache'

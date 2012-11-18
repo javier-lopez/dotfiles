@@ -62,7 +62,7 @@ channels = (
   #{ name = "#metasploit"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-meeting"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#ubuntu-locoteams"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-packaging"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-packaging"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-devel"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-motu"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-testing"; chatnet = "fn"; autojoin = "Yes"; },
