@@ -34,6 +34,7 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+export TERM=xterm-color
 # PS1
 # Grabbed mostly from Yu-Jie Lin
 [[ $TERM == 'linux' ]] && STR_MAX_LENGTH=2 || STR_MAX_LENGTH=4
@@ -129,7 +130,6 @@ export GPG_TTY=$(tty)
 # random vars
 export EDITOR="vim" #is there any other choice?
 export WCDHOME="$HOME/.wcd" #wcd magic
-#export TERM=rxvt
 export BROWSER="firefox"
 export CSCOPE_EDITOR=vim
 export PKG_CONFIG_PATH=/opt/e17/lib/pkgconfig/

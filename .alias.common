@@ -58,6 +58,7 @@ alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
 alias vd='vim -c DevMode'
 alias vimdev='vim -c DevMode'
 alias vnc='remmina'
+alias vnc.server='x11vnc -forever -safer -display :0'
 alias vrc='vim $HOME/.vimrc'
 alias v='vim'
 alias wget='wget -c'
