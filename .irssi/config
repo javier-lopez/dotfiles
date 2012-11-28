@@ -15,22 +15,29 @@ servers = (
     autoconnect = "yes";
     nick = "chilicuil";
     password = "159263";
-  }
+  },
   #{
-    #address = "im.bitlbee.org";
-    #address = "testing.bitlbee.org";
-    #chatnet = "im";
-    #port = "6667";
-    #autoconnect = "yes";
-    #nick = "chilicuil";
+  #address = "im.bitlbee.org";
+  #address = "testing.bitlbee.org";
+  #chatnet = "im";
+  #port = "6667";
+  #autoconnect = "yes";
+  #nick = "chilicuil";
   #},
   #{
-    #address = "irc.twice-irc.de";
-    #chatnet = "tw";
-    #port = "6667";
-    #autoconnect = "yes";
-    #nick = "chilicuil";
+  #address = "irc.twice-irc.de";
+  #chatnet = "tw";
+  #port = "6667";
+  #autoconnect = "yes";
+  #nick = "chilicuil";
   #},
+  {
+    address = "irc.debian.org";
+    chatnet = "deb";
+    port = "6667";
+    autoconnect = "yes";
+    nick = "chilicuil";
+  },
   #{
   #address = "irc.power2all.com";
   #chatnet = "an";
@@ -43,11 +50,12 @@ servers = (
 chatnets = {
   fn = { type = "IRC"; autosendcmd = "wait 2000; /window down"; };
   #im = {
-    #type = "IRC";
-    #autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
+  #type = "IRC";
+  #autosendcmd = "wait 1000; /msg &bitlbee identify just4fun";
   #};
   #tw = { type = "IRC"; };
   #an = { type = "IRC"; };
+  deb = { type = "IRC"; };
 };
 
 channels = (
@@ -76,6 +84,7 @@ channels = (
   #{ name = "#ubuntu-classroom"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-server"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "#networking"; chatnet = "fn"; autojoin = "Yes"; },
+  { name = "#ubuntu-release"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-offtopic"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-es-ops"; chatnet = "fn"; autojoin = "Yes"; },
@@ -100,7 +109,13 @@ channels = (
   { name = "##english-br"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "##espanol-br"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-community-team"; chatnet = "fn"; autojoin = "Yes"; },
+  { 
+    name = "#ubuntu-community-team";
+    chatnet = "fn";
+    autojoin = "Yes";
+  },
+  { name = "#debian-ubuntu"; chatnet = "deb"; autojoin = "Yes"; },
+  { name = "#debian-devel"; chatnet = "deb"; autojoin = "Yes"; },
   #{ name = "#opmexico"; chatnet = "an"; autojoin = "Yes"; },
   #{ name = "#anonymousbr"; chatnet = "an"; autojoin = "Yes"; }
   #{ name = "#ubuntu-classroom-es"; chatnet = "fn"; autojoin = "Yes"; }
@@ -113,6 +128,8 @@ ignores = (
       "#asterisk",
       "#bash",
       "#debian-es",
+      "#debian-ubuntu",
+      "#debian-devel",
       "#debian",
       "#e",
       "##freebsd",
@@ -124,6 +141,7 @@ ignores = (
       "#ubuntu-es",
       "#ubuntu-es-offtopic",
       "#ubuntu-es-ops",
+      "#ubuntu-release",
       "#ubuntu-es-monitor",
       "#ubuntu-mx",
       "#ubuntu-br",
@@ -347,9 +365,7 @@ settings = {
     autostick_split_windows = "yes";
     actlist_sort = "refnum";
   };
-  "perl/core/scripts" = {
-    notify_broadcast = "yes";
-  };
+  "perl/core/scripts" = { notify_broadcast = "yes"; };
 };
 
 #logs = { };
