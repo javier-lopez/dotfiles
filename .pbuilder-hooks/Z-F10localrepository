@@ -1,4 +1,4 @@
-#!/bin/s
+#!/bin/sh
 echo "buildresult: $BUILDRESULT"
 /usr/bin/dpkg-scanpackages $BUILDRESULT /dev/null > $BUILDRESULT/Packages
 #echo "deb file:$BUILDRESULT precise main" >> /etc/apt/sources.list
