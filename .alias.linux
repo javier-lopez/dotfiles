@@ -6,6 +6,11 @@ if [ -f /usr/local/bin/wcd ]; then
     alias cd='. wcd'
 fi
 
+if [ -f /usr/local/bin/rm_ ]; then
+    alias rm.rf='rm_ -r'
+    alias rm='rm_'
+fi
+
 alias addgroup.touser='usermod -a -G'
 alias autoremove='sudo apt-get autoremove'
 alias barstatus.off='killall conky dzen2 > /dev/null 2>&1'
