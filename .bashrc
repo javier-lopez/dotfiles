@@ -21,7 +21,7 @@ set match-hidden-files off
 set bind-tty-special-chars on
 set completion-ignore-case on
 
-#set -o vi #this is sparta!
+set -o vi #this is sparta!
 
 # Do not show ^C when pressing Ctrl+C
 stty -ctlecho
@@ -159,9 +159,11 @@ eval $(dircolors -b $HOME/.dir_colors)
 #show the todo list every 10 terminal invocations, aprox
 rnumber=$((RANDOM%10))
 if [ $rnumber == 5 ]; then
-    todo ls +5
-    todo ls +in_progress
-    todo ls @debug| head -5 -v
+    if [ -f /usr/local/bin/todo ]; then
+        todo ls +5
+        todo ls +in_progress
+        todo ls @debug| head -5 -v
+    fi
 fi
 
 #===============================================================================
