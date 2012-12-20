@@ -6,6 +6,7 @@
 
 #But ignore these
 .AbiSuite
+.sxiv
 .adobe
 .adr
 .alien-arena

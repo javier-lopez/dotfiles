@@ -14,8 +14,9 @@ feh --bg-scale /home/chilicuil/data/images/wallpapers/sun.jpg
 
 #exec /usr/bin/xmonad                          # start xmonad
 #exec /usr/bin/enlightenment_start             # start e17
-#exec /usr/bin/i3 -V all >> ~/.i3/logfile      # start i3 debug
-#exec /usr/bin/i3 >> ~/.i3/logfile              # start i3
+#exec /usr/bin/i3 -d all >> ~/.i3/logfile      # start i3 debug
+#exec /usr/bin/i3 -V -d all >> ~/.i3/logfile   # start i3 debug, super verbose mode
+#exec /usr/bin/i3 >> ~/.i3/logfile             # start i3
 exec /usr/bin/i3                               # start i3
 
 #case $1 in

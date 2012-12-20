@@ -1,5 +1,5 @@
 ######################################################################################
-# Last review            Sun 21 Oct 2012 01:55:01 PM CDT
+# Last review            Thu 20 Dec 2012 07:00:35 AM CST
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf : 
 #  TODO 02-03-2011 09:57 => xbindkeys
@@ -9,7 +9,8 @@
 # ###################################
 
 # execute my startup programs
-exec_always ~/.i3/startup
+# exec_always
+exec ~/.i3/startup
 
 # ###################################
 # ######## GENERAL SETTINGS #########
@@ -256,6 +257,8 @@ bind 107 exec /usr/local/bin/screenshot
 bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
 bind Control+35 exec /usr/local/bin/screencast_record start
 
+# go to the urgent flag set
+#bindsym $Win+x [urgent=latest] focus
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -298,11 +301,13 @@ bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
 # ###################################
 
 # Just for i3.4
-#for_window [class="Magnifier"] floating enable
+for_window [class="Magnifier"] floating enable
 for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
 for_window [class="^TeamViewer.exe$"] floating enable
 for_window [title="^TeamViewer$"] floating enable
 for_window [title="- TeamViewer -"] floating enable
+
+# popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
 #popup_during_fullscreen ignore
 workspace_auto_back_and_forth yes
 
@@ -311,19 +316,18 @@ workspace_auto_back_and_forth yes
 #for_window [title="x200: ~/work"] floating enable
 
 # Assigns default monitor for workspaces
-workspace 1 www output VGA1
-workspace 1 www output HDMI1
+#workspace "1 www" output VGA1
+workspace "1 www" output HDMI1
 
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
 
-assign "firefox"                                1 www
-assign assign [class="^URxvt$" title="irssi"]   4 im
-assign "buzz/mutt"                              5 mail
-assign "thunderbird"                            5 mail
-assign "liferea"                                8 news
-assign "pcmanfm"                                6 files
-assign "nautilus"                               6 files
+assign [class="Firefox"]                                "1 www"
+assign [class="^URxvt$" title="irssi"]                  "4 im"
+assign [class="Thunderbird"]                            "5 mail"
+assign [class="Liferea"]                                "8 news"
+assign [class="Pcmanfm"]                                "6 files"
+assign [class="Nautilus"]                               "6 files"
 #assign "workrave"        20
 
 # ###################################
