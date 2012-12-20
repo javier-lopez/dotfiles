@@ -2,6 +2,27 @@
 # vim: tw=80 ft=sh
 
 # ===aliases=== $(sort -k 2)
+if [ -f /usr/local/bin/wcd ]; then
+    alias cd='. wcd'
+fi
+
+if [ -f /usr/local/bin/rm_ ]; then
+    alias rm.rf='rm_ -r'
+    alias rm='rm_'
+else
+    alias rm.rf='rm -rf'
+fi
+
+if [ -f /usr/bin/colormake ]; then
+    alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake'
+else
+    alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
+fi
+
+if [ -f /usr/local/bin/vw ]; then
+    alias feh='vw'
+fi
+
 alias .bashrc='$EDITOR $HOME/.bashrc'
 alias beep='echo -e "\007\c"'
 alias c='cd'
@@ -22,6 +43,7 @@ alias e='extract'
 alias .et='vim ~/.bash_eternal_history'
 alias fu-search="fu-search -c"
 alias gcc='LANGUAGE=en gcc'
+alias git.clone.dotfiles='git clone --dept=1 git://github.com/chilicuil/dotfiles.git'
 alias jdownloader='java -jar $HOME/code/JDownloader/JDownloader.jar'
 alias JDownloader='java -jar $HOME/code/JDownloader/JDownloader.jar'
 alias key.lookup='xev'
@@ -43,16 +65,16 @@ alias mutt='LANGUAGE=en mutt'
 alias mv='mv -v'
 alias pg='ping google.com'
 alias plugin='cd ~/.vim/plugin/'
-alias pm='ping mononeurona.org'
 alias print.192.168.1.11='rlpr -h -Plp -H192.168.1.11'
 alias simple.server='sudo python -m SimpleHTTPServer'
 alias size='du -sh'
 alias so='source $HOME/.bashrc'
-alias st='setup'
 alias sudo='sudo ' # http://tinyurl.com/6azvksf
 alias test.broadband='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias test.stress='dd if=/dev/zero of=/dev/null bs=1024k'
+alias traffic='bwm-ng'
 alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
+alias t='todo'
 alias vd='vim -c DevMode'
 alias vimdev='vim -c DevMode'
 alias vnc='remmina'
@@ -60,6 +82,14 @@ alias vnc.server='x11vnc -forever -safer -display :0'
 alias vrc='vim $HOME/.vimrc'
 alias v='vim'
 alias wget='wget -c'
+alias x.nested='Xephyr -ac -br -noreset -host-cursor -screen 800x600'
+alias xrandr.above.hdmi_1920x1080='xrandr --output HDMI1 --mode 1920x1080 --above LVDS1; barstatus.on'
+alias xrandr.above.vga_1600x1200='xrandr --output VGA1 --mode 1600x1200 --above LVDS1; barstatus.on'
+alias xrandr.off.hdmi='xrandr --output HDMI1 --off; barstatus.on'
+alias xrandr.off.vga='xrandr --output VGA1 --off; barstatus.on'
+alias xrandr.same_as.hdmi='xrandr --output HDMI1 --auto --same-as LVDS1'
+alias xrandr.same_as.vga='xrandr --output VGA1 --auto --same-as LVDS1'
+alias ztup='setup'
 alias zz='exit'
 
 # gnupg

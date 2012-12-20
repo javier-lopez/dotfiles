@@ -2,15 +2,6 @@
 # vim: tw=80 ft=sh
 
 # ===aliases=== $(sort -k 2)
-if [ -f /usr/local/bin/wcd ]; then
-    alias cd='. wcd'
-fi
-
-if [ -f /usr/local/bin/rm_ ]; then
-    alias rm.rf='rm_ -r'
-    alias rm='rm_'
-fi
-
 alias addgroup.touser='usermod -a -G'
 alias autoremove='sudo apt-get autoremove'
 alias barstatus.off='killall conky dzen2 > /dev/null 2>&1'
@@ -19,7 +10,6 @@ alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
 alias date.stamp='date +%d-%m-%Y'
 alias dir='ls -d */'
 alias eix.exact='eix --exact'
-alias git.clone.dotfiles='git clone --dept=1 git://github.com/chilicuil/dotfiles.git'
 alias install='sudo apt-get install --no-install-recommends'
 alias isntall='sudo apt-get install --no-install-recommends'
 alias kl='ls --color=auto'
@@ -33,7 +23,6 @@ alias l='ls -CF'
 alias lñ='ls --color=auto'
 alias ls='ls --color=auto'
 alias lss='ls --color=auto'
-alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake'
 alias nautilus='nautilus --no-desktop'
 alias ñ='ls --color=auto'
 alias otf2ttf='fontforge -script /usr/local/bin/otf_ttf'
@@ -42,8 +31,6 @@ alias remove='sudo apt-get remove'
 alias rip='abcde -o mp3'
 alias route.add.default.gw='sudo route add default gw'
 alias s='ls -CF'
-alias traffic='bwm-ng'
-alias t='todo'
 alias update-cd='mkdir $HOME/.wcd; /usr/bin/wcd.exec -GN -j -xf $HOME/.ban.wcd -S $HOME'
 #alias update-cd='mkdir $HOME/.wcd; /usr/bin/wcd.exec -GN -j -xf $HOME/.ban.wcd -S $HOME -A /etc/ -A /opt/'
 alias update-fonts='sudo fc-cache -f -v'
@@ -51,14 +38,6 @@ alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias wifi.eth1='iwlist eth1 s'
 alias wifi.wl='iwlist wl s'
-alias x.nested='Xephyr -ac -br -noreset -host-cursor -screen 800x600'
-alias xrandr.above.hdmi_1920x1080='xrandr --output HDMI1 --mode 1920x1080 --above LVDS1; barstatus.on'
-alias xrandr.above.vga_1600x1200='xrandr --output VGA1 --mode 1600x1200 --above LVDS1; barstatus.on'
-alias xrandr.off.hdmi='xrandr --output HDMI1 --off; barstatus.on'
-alias xrandr.off.vga='xrandr --output VGA1 --off; barstatus.on'
-alias xrandr.same_as.hdmi='xrandr --output HDMI1 --auto --same-as LVDS1'
-alias xrandr.same_as.vga='xrandr --output VGA1 --auto --same-as LVDS1'
-alias ztup='setup'
 
 #====RANDOM VARS===
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
@@ -128,6 +107,10 @@ export DEBEMAIL="chilicuil@ubuntu.com"
 export DEBFULLNAME="Javier P.L."
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/e17/bin:/opt/e17-ecomorph/bin:/opt/bochs/bin/:/opt/vim/bin/
 export QUILT_PATCHES=debian/patches
+export QUILT_PUSH_ARGS="--color=auto"
+export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
+export QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
+export QUILT_DIFF_OPTS='-p'
 #export PBUILDFOLDER="$HOME/.pbuilder"
 
 if [ -f /usr/bin/ccache ]; then
