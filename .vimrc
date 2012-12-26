@@ -57,6 +57,8 @@ endif
 
 if has ('gui_running')
     set background=dark     "I like dark colors
+    set gfn=Monaco\ for\ Powerline\ 8
+    "set gfn=Inconsolata\ Medium\ 10
     colorscheme ir_black
     "colorscheme wombat     "http://files.werx.dk/wombat.vim
     "colorscheme molokai

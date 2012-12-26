@@ -34,7 +34,10 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-export TERM=xterm-color
+#/etc/terminfo/*
+#export TERM=xterm-color
+export TERM=xterm-256color
+
 # PS1
 # Grabbed mostly from Yu-Jie Lin
 [[ $TERM == 'linux' ]] && STR_MAX_LENGTH=2 || STR_MAX_LENGTH=4
@@ -90,12 +93,12 @@ fi
 # Change the window title of X terminals
 # originally from /etc/bash/bashrc on Gentoo
 case ${TERM} in
-	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
-		PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
-		;;
-	screen)
-		PROMPT_COMMAND='echo -ne "\033_${PWD/$HOME/~}\033\\"'
-		;;
+    xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
+        PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
+        ;;
+    screen)
+        PROMPT_COMMAND='echo -ne "\033_${PWD/$HOME/~}\033\\"'
+        ;;
 esac
 
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"\
@@ -120,7 +123,7 @@ export GREP_COLOR='1;35' #purple
 export GREP_OPTIONS=--color=auto
 
 # android
-export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/tools/                                              
+export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/tools/
 export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/platform-tools/
 
 # gpg
@@ -128,11 +131,10 @@ export GPGKEY=BC9C8902
 export GPG_TTY=$(tty)
 
 # random vars
-export EDITOR="vim" #is there any other choice?
+export EDITOR="vim" #exist other choice?
+export CSCOPE_EDITOR=vim
 export WCDHOME="$HOME/.wcd" #wcd magic
 export BROWSER="firefox"
-export CSCOPE_EDITOR=vim
-export PKG_CONFIG_PATH=/opt/e17/lib/pkgconfig/
 export DISPLAY=:0.0
 
 #export BLACK=$'\e[0;30m'
@@ -154,12 +156,14 @@ export DISPLAY=:0.0
 #export YELLOW=$'\e[0;33m'
 
 #ls colors
-eval $(dircolors -b $HOME/.dir_colors)
+if [ -f $HOME/.dir_colors ]; then
+    eval $(dircolors -b $HOME/.dir_colors)
+fi
 
 #show the todo list every 10 terminal invocations, aprox
-rnumber=$((RANDOM%10))
-if [ $rnumber == 5 ]; then
-    if [ -f /usr/local/bin/todo ]; then
+if [ -f /usr/local/bin/todo ]; then
+    rnumber=$((RANDOM%10))
+    if [ $rnumber == 5 ]; then
         todo ls +5
         todo ls +in_progress
         todo ls @debug| head -5 -v
