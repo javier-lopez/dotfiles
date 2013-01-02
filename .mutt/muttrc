@@ -14,7 +14,8 @@ set nobeep                                                                    #p
 set delete                = yes                                               #don't confirm
 set quit                  = yes                                               #don't confirm
 set imap_check_subscribed = yes                                               #automatically poll subscribed mailboxes for new mail
-#set query_command         = "~/code/learn/python/goobook query '%s'"          #autocomplete addresses, TODO
+# $ sudo pip install goobook
+set query_command         = "goobook query '%s'"          #autocomplete addresses, TODO
 set sort                  = "threads"
 #set sort_aux              = "last-date-received"
 set sort_aux              = "reverse-last-date-received"                      #like gmail
@@ -71,7 +72,7 @@ hdr_order from: to: cc: date: subject:                          # and in this or
 # =========================================================================================
 bind  pager   k     previous-line
 bind  pager   j     next-line
-bind editor <Tab>   complete-query
+bind editor  \t   complete-query
 bind editor       complete
 # bindings
 bind pager i            exit
@@ -103,6 +104,27 @@ macro index I   "<change-folder>!<enter>"   "go to Inbox"
 
 # save a decoded copy in ~
 macro index P   "<pipe-message>cat > ~/"    "save message as"
+macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
+# Reload goobook db
+macro index,pager   gr  "!goobook reload\n" "Goobook reload"
+
+# b toggles sidebar visibility
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+
+# Remap bounce-message function to "B"
+bind index B bounce-message
+
+# Mario Holbe suggests:
+# macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+# macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+
+macro index 1 '<sync-mailbox><enter-command>source ~/.mutt/accounts/fco.plj@gmail.com/account<enter><change-folder>!<enter>'
+macro index 2 '<sync-mailbox><enter-command>source ~/.mutt/accounts/chilicuil@gmail.com/account<enter><change-folder>!<enter>'
+macro index 3 '<sync-mailbox><enter-command>source ~/.mutt/accounts/chilicuil.vim@gmail.com/account<enter><change-folder>!<enter>'
+macro index 4 '<sync-mailbox><enter-command>source ~/.mutt/accounts/perez.lopez.francisco.javier@gmail.com/account<enter><change-folder>!<enter>'
+macro index 5 '<sync-mailbox><enter-command>source ~/.mutt/accounts/ubuntuclassroomes@gmail.com/account<enter><change-folder>!<enter>'
+macro index 6 '<sync-mailbox><enter-command>source ~/.mutt/accounts/ugjmexico@gmail.com/account<enter><change-folder>!<enter>'
 
 # =========================================================================================
 # === Mime ================================================================================
@@ -124,11 +146,6 @@ auto_view text/x-vcard
 auto_view image/tiff
 
 alternative_order text/enriched text/plain text
-
-# =========================================================================================
-# === Aliases =============================================================================
-# =========================================================================================
-alias ronicardona ronicardona@hotmail.com (Ronicardona)
 
 # =========================================================================================
 # === Color ===============================================================================
@@ -209,18 +226,6 @@ bind pager \CO sidebar-open
 # sidebar-scroll-up
 # sidebar-scroll-down
 
-# b toggles sidebar visibility
-macro index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager b '<enter-command>toggle sidebar_visible<enter>'
-
-# Remap bounce-message function to "B"
-bind index B bounce-message
-
-#
-# Mario Holbe suggests:
-# macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
-# macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
-
 # =========================================================================================
 # === Lists ===============================================================================
 # =========================================================================================
@@ -254,8 +259,10 @@ subscribe ubuntu-cloud@lists.ubuntu.com
 subscribe ubuntu-devel@lists.ubuntu.com
 subscribe ubuntu-devel-discuss@lists.ubuntu.com
 subscribe ubuntu-devel-announce@lists.ubuntu.com
-subscribe bugsquad-mentorship-group-alpha@lists.launchpad.net
-subscribe ubuntu-qa@lists.ubuntu.com
+subscribe ubuntu-quality@lists.ubuntu.com
+subscribe ubuntu-bugsquad@lists.ubuntu.com
+subscribe papercuts-ninja@lists.launchpad.net
+subscribe ubuntu-mx@lists.ubuntu.com
 
 # =========================================================================================
 # === Gnupg ===============================================================================
@@ -264,7 +271,7 @@ set pgp_use_gpg_agent        = yes
 
 set pgp_autosign             = yes
 set pgp_verify_sig           = yes
-set pgp_sign_as              = 0xBC9C8902
+#set pgp_sign_as              = 0xBC9C8902
 set pgp_replyencrypt         = yes
 set pgp_timeout              = 3600
 set pgp_good_sign            = "^gpg: Signed by "
@@ -282,11 +289,11 @@ set pgp_decode_command       = "gpg --no-verbose --batch --output - %f"
 set pgp_decrypt_command      = "gpg --no-verbose --batch --output - %f"
 set pgp_sign_command         = "gpg --no-verbose --batch --output - --armor --detach-sign --textmode %?a?-u %a? %f"
 set pgp_clearsign_command    = "gpg --no-verbose --batch --output - --armor --textmode --clearsign %?a?-u %a? %f"
-set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xBC9C8902 -- -r %r -- %f"
+set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust -- -r %r -- %f"
 #==================================================================================
 
 set pgp_verify_command       = "gpg --no-verbose --batch --output - --verify %s %f"
-set pgp_encrypt_only_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xBC9C8902 -- -r %r -- %f"
+set pgp_encrypt_only_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust -- -r %r -- %f"
 set pgp_import_command       = "gpg --no-verbose --import -v %f"
 set pgp_export_command       = "gpg --no-verbose --export --armor %r"
 set pgp_verify_key_command   = "gpg --no-verbose --batch --fingerprint --check-sigs %r"
@@ -304,72 +311,9 @@ set my_lnthestqfgxygATgmailDOTcom=`awk '/lnthestqfgxyg@gmail.com:/ {print $2}' $
 set my_chilicuilDOTvimATgmailDOTcom=`awk '/chilicuil.vim@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_perezDOTlopezDOTfranciscoDOTjavierATgmailDOTcom=`awk '/perez.lopez.francisco.javier@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_mnDOTcuentaATgmailDOTcom=`awk '/mn.cuenta@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_ubuntuclassroomesATgmailDOTcom=`awk '/ubuntuclassroomes@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_ugjmexicoATgmailDOTcom=`awk '/ugjmexico@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_rm=`rm -f $HOME/.mutt/accounts/passwd.gpg.tmp`
 
 # default
-source $HOME/.mutt/accounts/fco.plj@gmail.com/fco.plj@gmail.com.profile
-
-#mailboxes 'imaps://fco.plj@gmail.com@imap.gmail.com:993/mailbox' \
-#'imaps://chilicuil@gmail.com@imap.gmail.com:993/mailbox' \
-# folder hooks
-#folder-hook imaps://fco.plj@gmail.com@imap.gmail.com:993 ' \
-#set from             = "Francisco Javier P.L. <fco.plj@gmail.com>" \
-#set folder           = "imaps://imap.gmail.com:993" \
-#set spoolfile        = "imaps://imap.gmail.com:993/INBOX" \
-#set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts" \
-#set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail" \
-#set header_cache     = "$HOME/.mutt/cache/fco.plj@gmail.com.headers" \
-#set message_cachedir = "$HOME/.mutt/cache/fco.plj@gmail.com.bodies" \
-#set certificate_file = "$HOME/.mutt/certificates/fco.plj@gmail.com.certificate" \
-#set imap_user        = "fco.plj@gmail.com" \
-#set imap_pass        = $my_fcoDOTpljATgmailDOTcom \
-#set smtp_url         = "smtp://fco.plj@smtp.gmail.com:587/" \
-#set smtp_pass        = $my_fcoDOTpljATgmailDOTcom \
-#set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]" \
-#set signature        = "$HOME/.mutt/accounts/fco.plj@gmail.com/fco.plj@gmail.com.signature"'
-
-#folder-hook imaps://chilicuil@gmail.com@imap.gmail.com:993 ' \
-#set from             = "chilicuil <chilicuil@gmail.com>" \
-#set folder           = "imaps://imap.gmail.com:993" \
-#set spoolfile        = "imaps://imap.gmail.com:993/INBOX" \
-#set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts" \
-#set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail" \
-#set header_cache     = "$HOME/.mutt/cache/chilicuil@gmail.com.headers" \
-#set message_cachedir = "$HOME/.mutt/cache/chilicuil@gmail.com.bodies" \
-#set certificate_file = "$HOME/.mutt/certificates/chilicuil@gmail.com.certificate" \
-#set imap_user        = "chilicuil@gmail.com" \
-#set imap_pass        = $my_chilicuilATgmailDOTcom \
-#set smtp_url         = "smtp://chilicuil@smtp.gmail.com:587/" \
-#set smtp_pass        = $my_chilicuilATgmailDOTcom \
-#set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]" \
-#set signature        = "$HOME/.mutt/accounts/chilicuil@gmail.com/chilicuil@chilicuil@gmail.com.signature"'
-#account-hook . 'unset imap_user imap_pass' # unset first!
-#account-hook 'imaps://fco.plj@imap.gmail.com/' "\
-              #set imap_user=fco.plj@gmail.com imap_pass=$my_fcoDOTpljATgmailDOTcom "
-#account-hook 'imaps://chilicuil@imap.gmail.com/' "\
-              #set imap_user=chilicuil@gmail.com imap_pass=$my_chilicuilATgmailDOTcom "
-
-## folders
-#set folder="imaps://fco.plj@imap.gmail.com/"
-#mailboxes =INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam
-#folder-hook 'imaps://fco.plj@imap.gmail.com' " \
-        #set     folder=imaps://fco.plj@imap.gmail.com/ \
-                #postponed=+[Gmail]/Drafts \
-                #record=+[Gmail]/'Sent Mail' \
-                #smtp_url=smtps://fco.plj@smtp.gmail.com \
-                #smtp_pass=$my_fcoDOTpljATgmailDOTcom "
-
-#set folder="imaps://chilicuil@imap.gmail.com/"
-#mailboxes =INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam
-#folder-hook 'imaps://chilicuil@imap.gmail.com' " \
-        #set     folder=imaps://chilicuil@imap.gmail.com/ \
-                #postponed=+[Gmail]/Drafts \
-                #record=+[Gmail]/'Sent Mail' \
-                #smtp_url=smtps://chilicuil@smtp.gmail.com \
-                #smtp_pass=$my_chilicuilATgmailDOTcom "
-
-##-------------------------------------
-## Macros to make life easier
-##-------------------------------------
-#macro index <esc>1 "y1<return><return>" # ESC+1 takes to first INBOX
-#macro index <esc>2 "y5<return><return>" # ESC+2 takes to the second
+source /home/chilicuil/.mutt/accounts/fco.plj@gmail.com/account
