@@ -1,5 +1,5 @@
 #########################################################
-# Last review            Sun 01 May 2011 06:08:29 PM CDT
+# Last review            Thu 03 Jan 2013 04:12:04 AM CST
 #########################################################
 
 # vim: set ts=8 sw=4 tw=0 ft=muttrc : 
@@ -8,20 +8,18 @@
 # === General settings ====================================================================
 # =========================================================================================
 push <show-version>                                                           #show version
-set use_from
 set nomark_old                                                                #avoid marking unread msgs as old ones
 set nobeep                                                                    #plz dont be noisy
 set delete                = yes                                               #don't confirm
 set quit                  = yes                                               #don't confirm
 set imap_check_subscribed = yes                                               #automatically poll subscribed mailboxes for new mail
-# $ sudo pip install goobook
-set query_command         = "goobook query '%s'"          #autocomplete addresses, TODO
 set sort                  = "threads"
 #set sort_aux              = "last-date-received"
 set sort_aux              = "reverse-last-date-received"                      #like gmail
 set sort_re                                                                   # thread based on regex
 set reply_regexp          = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 set followup_to           = no                                                #http://larve.net/people/hugo/2000/07/ml-mutt
+set honor_followup_to     = no
 set pager_index_lines     = 10                                                # number of index lines to show 
 set pager_context         = 5                                                 # number of context lines to show
 set pager_stop                                                                # don't go to the next message automatically
@@ -29,18 +27,19 @@ unset markers                                                                 # 
 set menu_scroll
 set menu_context          = 5
 set quote_regexp          = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
-set honor_followup_to     = no
 set include               = yes                                               #automatically quote message
 set editor                = "vim +':call Word_mode()' + %s"                   #is there any other editor?
 set edit_headers          = yes                                               #you can add cc, bcc, or change ur from input
 set mail_check            = 90                                                #how often mutt will query gmail for new email
-set timeout               = 20
 set move                  = no                                                #don't ask to move read messages to mbox on exit
 set pipe_decode                                                               # strip headers and eval mimes when piping
 set thorough_search                                                           # strip headers and eval mimes before searching
 
+# $ sudo pip install goobook
+set query_command         = "goobook query '%s'"          #autocomplete addresses, TODO
+
 # formats
-set date_format         = "%m/%d/%y at %I:%M%P"
+set date_format         = "%d/%m/%y at %I:%M%P"
 set index_format        = "%3C %Z %D %-15.15L (%?l?%4l&%4c?) %s"
 set alias_format        = "%4n %t %-20a  %r"
 #set status_format goes in the account settings 
@@ -48,10 +47,9 @@ set alias_format        = "%4n %t %-20a  %r"
 # composing mail
 set envelope_from                                               # which from?
 set sig_dashes                                                  # dashes before my sig... sweet
-set edit_headers                                                # show headers when composing
 set fast_reply                                                  # skip to compose when replying
 #set sendmail_wait       = -1                                    # don't wait for sending... to complete
-set askcc                                                       # ask for CC:
+#set askcc                                                       # ask for CC:
 set fcc_attach                                                  # save attachments with the body
 unset mime_forward                                              # forward attachments as part of body
 set forward_format      = "Fwd: %s"                             # format for subject when forwarding
@@ -70,50 +68,48 @@ hdr_order from: to: cc: date: subject:                          # and in this or
 # =========================================================================================
 # === Mapping =============================================================================
 # =========================================================================================
-bind  pager   k     previous-line
-bind  pager   j     next-line
-bind editor  \t   complete-query
-bind editor       complete
-# bindings
-bind pager i            exit
-#bind pager n            next-undeleted
-#bind pager p            previous-undeleted
-bind pager /            search
-bind pager <up>         previous-line
-bind pager <down>       next-line
-bind pager k            previous-line
-bind pager j            next-line
-bind pager gg           top
-bind pager G            bottom
-bind pager K            previous-undeleted
-bind pager J            next-undeleted
 bind index gg           first-entry
 bind index G            last-entry
 bind index K            previous-thread
 bind index J            next-thread
-bind index,pager R      group-reply
+bind index,pager r      group-reply
 bind index,pager \#     noop
 bind index i            noop
+# Remap bounce-message function to "B"
+#bind index B            bounce-message
 #bind index I            noop
+
+bind  pager k           previous-line
+bind  pager j           next-line
+bind  pager i           exit
+bind  pager /           search
+bind  pager <up>        previous-line
+bind  pager <down>      next-line
+bind  pager gg          top
+bind  pager G           bottom
+bind  pager K           previous-undeleted
+bind  pager J           next-undeleted
+#bind pager n           next-undeleted
+#bind pager p           previous-undeleted
+
+bind editor \t          complete-query
+#bind editor           complete
 
 # =========================================================================================
 # === Macros ==============================================================================
 # =========================================================================================
-macro index B   "<limit>~b "                "search message bodies"
-macro index I   "<change-folder>!<enter>"   "go to Inbox"
+macro index B   "<limit>~b "                                "search message bodies"
+macro index I   "<change-folder>!<enter>"                   "go to Inbox"
 
 # save a decoded copy in ~
-macro index P   "<pipe-message>cat > ~/"    "save message as"
-macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
+macro index S        "<pipe-message>cat > ~/"               "save message as"
+macro index,pager a  "<pipe-message>goobook add<return>"    "add the sender address to Google contacts"
 # Reload goobook db
-macro index,pager   gr  "!goobook reload\n" "Goobook reload"
+macro index,pager gr "!goobook reload\n"                    "Goobook reload"
 
 # b toggles sidebar visibility
 macro index b '<enter-command>toggle sidebar_visible<enter>'
 macro pager b '<enter-command>toggle sidebar_visible<enter>'
-
-# Remap bounce-message function to "B"
-bind index B bounce-message
 
 # Mario Holbe suggests:
 # macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
@@ -185,25 +181,25 @@ color body  yellow black "[;:][)/(|]"
 color body  green black "[[:alpha:]]\+://[^ ]*"
 
 color index brightmagenta black ~N      # New
-color index yellow black ~O              # Old
-color index brightred black ~F      # Important
+color index yellow black ~O             # Old
+color index brightred black ~F          # Important
 color index red black ~T                # Tag
-color index blue black ~D       # Delete
+color index blue black ~D               # Delete
 
 # =========================================================================================
 # === Sidebar =============================================================================
 # =========================================================================================
-set sidebar_width=18
-
+set sidebar_width=15
 set sidebar_visible=yes
 set sidebar_delim='|'
-set sidebar_sort=no
+#set sidebar_sort=yes
+#set sidebar_sort=no
 
 # which mailboxes to list in the sidebar. useless?
-# mailboxes =inbox =ml
+#mailboxes =inbox =ml
 
 # color of folders with new mail
-color sidebar_new brightred default
+color sidebar_new brightmagenta default
 
 # ctrl-n, ctrl-p to select next, prev folder
 # ctrl-o to open selected folder
@@ -268,10 +264,9 @@ subscribe ubuntu-mx@lists.ubuntu.com
 # === Gnupg ===============================================================================
 # =========================================================================================
 set pgp_use_gpg_agent        = yes
-
-set pgp_autosign             = yes
+#set pgp_autosign             = yes
 set pgp_verify_sig           = yes
-#set pgp_sign_as              = 0xBC9C8902
+set pgp_sign_as              = 0xBC9C8902
 set pgp_replyencrypt         = yes
 set pgp_timeout              = 3600
 set pgp_good_sign            = "^gpg: Signed by "
