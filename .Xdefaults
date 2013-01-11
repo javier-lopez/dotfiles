@@ -80,10 +80,10 @@ URxvt*scrollTtyKeypress:    true
 URxvt.print-pipe:           cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
 
 !urlLauncher settings
-URxvt*perl-lib:           /usr/lib/urxvt/perl/
-!URxvt*perl-ext-common:    default,matcher,tabbed
-URxvt*perl-ext-common:    default,matcher
-URxvt*urlLauncher:        x-www-browser
+URxvt*perl-lib:            /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:    default,matcher,tabbed
+!URxvt*perl-ext-common:     default,matcher
+URxvt*urlLauncher:         x-www-browser
 !URxvt*urlLauncher:        firefox
 URxvt*matcher.button:     1
 
@@ -94,10 +94,10 @@ URxvt.perl-ext: selection
 URxvt.perl-ext: mark-yank-urls
 
 !Allows Tabs
-!URxvt.perl-ext-common : tabbed
-!URxvt.tabbed.tabbar-fg: 2
-!URxvt.tabbed.tabbar-bg: 0
-!URxvt.tabbed.tab-fg:    5
-!URxvt.tabbed.tab-bg:    0
+URxvt.perl-ext-common : tabbed
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    5
+URxvt.tabbed.tab-bg:    0
 
 !Xcursor.theme: tool
