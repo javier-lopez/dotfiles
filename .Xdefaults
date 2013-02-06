@@ -57,16 +57,6 @@ URxvt*scrollBar:        false
 URxvt.urgentOnBell:     true
 URxvt*cursorBlink:      true
 
-!URxvt.title:            buzz
-!boobs
-!URxvt.title:            ( . Y . )
-!listening music
-!URxvt.title:            d-_-b
-!boring
-!URxvt.title:            (¬_¬)
-!innocent face
-!URxvt.title:             ʘ‿ʘ
-
 !Scroll settings. Thx kazuo http://tinyurl.com/2dae24d
 !   -Scroll when output come but not when you go back in to the buffer (with mouse
 !   scroll or shift pgup). 
@@ -81,23 +71,23 @@ URxvt.print-pipe:           cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
 
 !urlLauncher settings
 URxvt*perl-lib:            /usr/lib/urxvt/perl/
-URxvt*perl-ext-common:    default,matcher,tabbed
-!URxvt*perl-ext-common:     default,matcher
+URxvt*perl-ext-common:     default,matcher
 URxvt*urlLauncher:         x-www-browser
-!URxvt*urlLauncher:        firefox
-URxvt*matcher.button:     1
+URxvt*matcher.button:      1
 
-URxvt.keysym.M-g: perl:mark-yank-urls:activate_mark_mode
+URxvt.keysym.M-g: perl:mark-yank-urls:  activate_mark_mode
+URxvt.perl-lib:                         /home/chilicuil/.urxvt/
+URxvt.perl-ext:                         selection,mark-yank-urls
 !URxvt.reverseVideo: true
-URxvt.perl-lib: /home/chilicuil/.urxvt/
-URxvt.perl-ext: selection
-URxvt.perl-ext: mark-yank-urls
 
 !Allows Tabs
-URxvt.perl-ext-common : tabbed
-URxvt.tabbed.tabbar-fg: 2
+URxvt.perl-ext-common : tabbedex
+URxvt.tabbed.title:     false
+URxvt.tabbed.title-fg:  10
+URxvt.tabbed.title-bg:  0
+URxvt.tabbed.tabbar-fg: 10
+!URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg:    5
 URxvt.tabbed.tab-bg:    0
-
-!Xcursor.theme: tool
+URxvt.tabbed.autohide:  true
