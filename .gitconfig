@@ -16,7 +16,7 @@
 ;Highlight whitespace in diffs
 
 [color]
-	ui = always
+    ui = always
 [color "diff"]
     whitespace = red reverse
 [core]

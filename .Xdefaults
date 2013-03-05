@@ -63,25 +63,27 @@ URxvt*cursorBlink:      true
 !   -Scroll back to the end on key press (on program stop running and prompt is back
 !   it go back to the end too).
 
-URxvt*scrollTtyOutput:      false
-URxvt*scrollWithBuffer:     true
-URxvt*scrollTtyKeypress:    true
+URxvt*scrollTtyOutput:  false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress:true
 
-URxvt.print-pipe:           cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
+URxvt.print-pipe:       cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
 
 !urlLauncher settings
-URxvt*perl-lib:            /usr/lib/urxvt/perl/
-URxvt*perl-ext-common:     default,matcher
-URxvt*urlLauncher:         x-www-browser
-URxvt*matcher.button:      1
+URxvt*perl-lib:         /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:  default,matcher
+URxvt*urlLauncher:      x-www-browser
+URxvt*matcher.button:   1
+URxvt*matcher.underline:true
 
-URxvt.keysym.M-g: perl:mark-yank-urls:  activate_mark_mode
-URxvt.perl-lib:                         /home/chilicuil/.urxvt/
-URxvt.perl-ext:                         selection,mark-yank-urls
+URxvt.keysym.M-g: perl:mark-yank-urls:activate_mark_mode
+URxvt.perl-lib:                       /home/chilicuil/.urxvt/
+URxvt.perl-ext:                       mark-yank-urls
+URxvt.perl-ext:                       selection,mark-yank-urls
 !URxvt.reverseVideo: true
 
 !Allows Tabs
-URxvt.perl-ext-common : tabbedex
+URxvt.perl-ext-common: tabbedex
 URxvt.tabbed.title:     false
 URxvt.tabbed.title-fg:  10
 URxvt.tabbed.title-bg:  0
