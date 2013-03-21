@@ -1,6 +1,9 @@
 #!/bin/sh
 
 #xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3 &
+
+mplayer -loop 0 -rootwin -ao null -noconsolecontrols /home/chilicuil/data/video/earth.mp4 &
+
 i3-msg workspace "1 www" &
 
 conky | $HOME/code/dzen/dzen2  -x 350 -y 749 -fn 'Inconsolata:size=9' -ta r -fg "#999999" -bg "#000000" &
@@ -9,8 +12,6 @@ conky | $HOME/code/dzen/dzen2  -x 350 -y 749 -fn 'Inconsolata:size=9' -ta r -fg 
 #conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
 
 /usr/bin/pcmanfm &
-autocutsel &                                   #sync X/Gnome clipboards
-autocutsel -s PRIMARY &
 
 #/usr/bin/workrave & #force to take a break ~/.workrave
 #xwrits breaktime=0:20 typetime=5:00 +mouse +lock #helps to take a break every 5 min
@@ -19,4 +20,12 @@ autocutsel -s PRIMARY &
 #urxvtd -q -f -o
 
 /usr/bin/x-terminal-emulator -name scratchpad -e bash &
-xrefresh &
+
+autocutsel &                                   #sync X/Gnome clipboards
+autocutsel -s PRIMARY &
+
+#xrefresh &
+
+redshift -l 19.41:-99.04 -t 6500:4500 -g 0.8 -v &
+#redshift -l 19.41:-99.04 -t 6500:3600 -g 0.8 -v &
+

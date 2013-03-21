@@ -1,7 +1,6 @@
 #-------------------------------------------------------------------------------
 #           Last review            Mon 02 May 2011 03:46:59 AM CDT
 #-------------------------------------------------------------------------------
-#This file is only executed on login consoles (ssh)
 
 if [ -f $HOME/.bashrc ]; then
    source $HOME/.bashrc

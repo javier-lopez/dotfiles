@@ -105,7 +105,7 @@ channels = (
   #{ name = "#i3"; chatnet = "tw"; autojoin = "Yes"; },
   #{ name = "##english-br"; chatnet = "fn"; autojoin = "Yes"; },
   #{ name = "##espanol-br"; chatnet = "fn"; autojoin = "Yes"; },
-  { name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
+  #{ name = "#ubuntu-mx"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#ubuntu-community-team"; chatnet = "fn"; autojoin = "Yes"; },
   { name = "#debian-ubuntu"; chatnet = "deb"; autojoin = "Yes"; },
   { name = "#debian-devel"; chatnet = "deb"; autojoin = "Yes"; },
