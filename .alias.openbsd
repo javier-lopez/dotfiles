@@ -1,5 +1,6 @@
+# Last review            Tue 25 Oct 2011 10:53:58 PM CDT
 # vim: tw=80 ft=sh
-# ===alias===
+# ===aliases=== $(sort -k 2)
 alias dir='gls --color=always -d */'
 #alias firefox='swiftfox'
 alias install='sudo pkg_add -vi'
@@ -18,6 +19,7 @@ alias lss='gls --color=always'
 alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
 alias ñ='gls --color=always'
 alias purge='/usr/local/bin/purge'
+alias rainy='mplayer http://173.193.205.68/audio1104/RainyMood.mp3'
 alias remove='/usr/local/bin/remove'
 alias s='gls --color=always -CF'
 #alias tree="tree -Fa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
