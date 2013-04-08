@@ -2,7 +2,7 @@
 
 # ~/.bash_logout: executed by bash(1) when login shell exits.
 # when leaving the console, kill gpg-agent & clear the screen
-kill -9 $SSH_AGENT_PID
+#kill -9 $SSH_AGENT_PID
 
 if [ "$SHLVL" = 1 ]; then
     [ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
