@@ -137,7 +137,7 @@ set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
                        "paste several lines of text so they won't
                        "be indented.
 "set mousehide          "hide the mouse while typying
-set mouse=nv            "set the mouse to work in console mode
+"set mouse=nv            "set the mouse to work in console mode
 set clipboard=unnamed
 "set clipboard=unnamedplus         "yanks go on clipboard instead, "+p to make recover the x11 clipboard
                                    "use xsel hacks if your vim version has no "clipboad-x11 support

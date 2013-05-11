@@ -1,0 +1,21 @@
+#  Last review            Wed 30 Mar 2011 05:40:24 PM CST
+#  vim: set ts=8 sw=4 tw=0 ft=muttrc :
+
+set from             = "Javier P.L. <chilicuil.vim@gmail.com>"
+set folder           = "imaps://imap.gmail.com:993"
+set spoolfile        = "imaps://imap.gmail.com:993/INBOX"
+set postponed        = "imaps://imap.gmail.com/[Gmail]/Drafts"
+set record           = "imaps://imap.gmail.com/[Gmail]/Sent Mail"
+set header_cache     = "$HOME/.mutt/cache/chilicuil.vim@gmail.com.headers"
+set message_cachedir = "$HOME/.mutt/cache/chilicuil.vim@gmail.com.bodies"
+set certificate_file = "$HOME/.mutt/certificates/chilicuil.vim@gmail.com.certificate"
+
+set imap_user        = "chilicuil.vim@gmail.com"
+set imap_pass        = $my_chilicuilDOTvimATgmailDOTcom
+set smtp_url         = "smtp://chilicuil.vim@smtp.gmail.com:587/"
+set smtp_pass        = $my_chilicuilDOTvimATgmailDOTcom
+
+set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]"
+#set status_format    = "-%r- %v ---[ Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? Size:%l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
+
+set signature        = "$HOME/.mutt/accounts/chilicuil.vim@gmail.com/signature"

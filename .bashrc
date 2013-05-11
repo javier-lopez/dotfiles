@@ -135,7 +135,7 @@ export EDITOR="vim" #exist other choice?
 export CSCOPE_EDITOR=vim
 export WCDHOME="$HOME/.wcd" #wcd magic
 export BROWSER="firefox"
-export DISPLAY=:0.0
+#export DISPLAY=:0.0
 
 #export BLACK=$'\e[0;30m'
 #export BLUE=$'\e[0;34m'
