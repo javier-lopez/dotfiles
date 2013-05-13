@@ -2,7 +2,7 @@
 
 #xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3 &
 
-mplayer -loop 0 -rootwin -ao null -noconsolecontrols /home/chilicuil/data/video/earth.mp4 &
+mplayer -loop 0 -rootwin -ao null -noconsolecontrols $HOME/data/video/earth.mp4 &
 
 i3-msg workspace "1 www" &
 

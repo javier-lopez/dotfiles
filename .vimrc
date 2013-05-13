@@ -273,18 +273,11 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:NERDTreeMouseMode   = 3
 
     Bundle 'msanders/snipmate.vim'
-        let g:snips_author      = "chilicuil"
-        let g:snips_authorEmail = "chilicuil@gmail.com"
+        let g:snips_author      = "Javier Lopez"
+        let g:snips_authorEmail = "m@javier.io"
         let g:snippets_dir      = "~/.vim/extra-snippets/"
 
     Bundle 'chilicuil/taglist.vim'
-    Bundle 'vim-scripts/AutoComplPop'
-        let g:acp_behaviorKeywordLength    = 4
-        let g:acp_mappingDriven            = 1
-        let g:acp_completeOption           = '.,w,b,t,k,i,d'
-        let g:acp_completeoptPreview       = 1
-        "let g:acp_behaviorSnipmateLength   = 2
-        let g:acp_behaviorPythonOmniLength = -1
 
     "Bundle 'Townk/vim-autoclose'
     "Bundle 'chilicuil/dbext.vim'
@@ -312,11 +305,11 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         map <Leader>t <Plug>TaskList
 
     Bundle 'godlygeek/csapprox'
-    Bundle 'vim-scripts/DrawIt'
+    "Bundle 'vim-scripts/DrawIt'
         "map <leader>di :DIstart <CR>
         "map <leader>ds :DIstop <CR>
 
-    Bundle 'vim-scripts/netrw.vim'
+    "Bundle 'vim-scripts/netrw.vim'
     Bundle 'ciaranm/securemodelines'
         "enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
         "let g:secure_modelines_verbose=1
@@ -340,14 +333,19 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "TODO 07-09-2011 11:32 => make it toogle (open/close), check nerdtree out
         map <silent><leader>e :Errors<CR>
 
-    Bundle 'gmarik/github-search.vim'
+    "Bundle 'gmarik/github-search.vim'
     Bundle 'kien/ctrlp.vim'
         let g:ctrlp_map = '<leader>f'
         let g:ctrlp_clear_cache_on_exit = 0
         "let g:ctrlp_user_command = 'find %s -type f'
+        "
     Bundle 'Lokaltog/vim-easymotion'
         let g:EasyMotion_leader_key = '<leader><leader>'
+
     Bundle 'chilicuil/vim-markdown'
+    Bundle 'mattn/zencoding-vim'
+        "let g:user_zen_leader_key = '<c-y>'
+        let g:use_zen_complete_tag = 1
 
 
     "===vim-scripts===, not hosted in github for some obscure reason
@@ -385,24 +383,29 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:easytags_suppress_ctags_warning = 1
         "set tags=./.tags;,~/ctags/tags
 
-    Bundle 'mattn/zencoding-vim'
-        "let g:user_zen_leader_key = '<c-y>'
-        let g:use_zen_complete_tag = 1
+    "Bundle 'jpalardy/vim-slime'
 
-    Bundle 'jpalardy/vim-slime'
 
-    "Bundle 'Lokaltog/vim-powerline'
+    "===discarted===
+    "Bundle 'chilicuil/conque'
+    "Bundle 'FindMate'                      "ctrlp.vim ftw!
+    "Bundle 'tomtom/viki_vim'
+
+    "Bundle 'vim-scripts/AutoComplPop'      "good for some time but finally abandoned
+        "let g:acp_behaviorKeywordLength    = 4
+        "let g:acp_mappingDriven            = 1
+        "let g:acp_completeOption           = '.,w,b,t,k,i,d'
+        "let g:acp_completeoptPreview       = 1
+        ""let g:acp_behaviorSnipmateLength   = 2
+        "let g:acp_behaviorPythonOmniLength = -1
+        
+    "Bundle 'Lokaltog/vim-powerline'        "I prefer my own powerline =)
         "let g:Powerline_cache_enabled = 1
         "let g:Powerline_symbols = 'compatible' "compatible, unicode, fancy
         "let g:Powerline_theme = 'default' "default, skwp
         "let g:Powerline_stl_path_style = 'short' "relative, filename, short, full
         "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
         "call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
-
-    "===discarted===
-    "Bundle 'chilicuil/conque'
-    "Bundle 'FindMate'
-    "Bundle 'tomtom/viki_vim'
 endif 
 "===============================================================================
 "================================== Mappings ===================================
