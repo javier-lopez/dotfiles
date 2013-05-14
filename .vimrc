@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Sun 02 Sep 2012 02:41:11 AM CDT
+"           Last review            Mon 13 May 2013 01:00:00 AM CDT
 "-------------------------------------------------------------------------------
 "
 "Plugins used:
@@ -15,44 +15,11 @@
 "[+] Modified versions                   => https://github.com/chilicuil
 
 "===============================================================================
-"==================================== Load guards ==============================
-"===============================================================================
-"Comment it to enable it, I know it's weird
-
-"let loaded_matchit           = 1
-"let loaded_crefvim           = 1
-"let loaded_nerd_tree         = 1
-"let loaded_snips             = 1
-"let loaded_taglist_mod       = 1
-"let loaded_acp               = 1
-"let loaded_AutoClose         = 1
-"let loaded_dbext             = 1
-"let loaded_LargeFile         = 1
-"let loaded_Matrix            = 1
-"let loaded_nextCS            = 1
-"let loaded_tetris            = 1
-"let qb_loaded                = 1
-"let loaded_surround          = 1
-"let loaded_repeat            = 1
-"let loaded_findMate          = 1
-"let indexed_search_plugin    = 1
-"let loaded_vimbuddy          = 1
-"let loaded_nerd_comments     = 1
-"let loaded_tasklist          = 1
-"let loaded_AlignMapsPlugin   = 1
-"let loaded_AlignPlugin       = 1
-"let CSApprox_loaded          = 1
-"let loaded_DrawItPlugin      = 1
-"let loaded_netrwPlugin       = 1
-"let loaded_gist_vim          = 1
-"let loaded_syntastic_plugin  = 1
-
-"===============================================================================
 "============================== General settings ===============================
 "===============================================================================
 
 if v:version < 700
-    echo "This vimrc file use features than are only available on vim 7.0 or greater versions"
+    echo "This vimrc file use features than are only available on vim 7.0 or greater"
 endif
 
 if has ('gui_running')
@@ -65,8 +32,7 @@ if has ('gui_running')
 else
     set background=dark    "I like dark colors
     colorscheme ir_black   "my favorite theme, it's a customized version
-    "colorscheme  molokai
-    "http://blog.infinitered.com/entries/show/6
+    "colorscheme  molokai  "http://blog.infinitered.com/entries/show/6
     "http://pastebin.com/ff366c16
     if &term == "linux"
         let g:CSApprox_loaded = 1
@@ -136,8 +102,8 @@ set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
                        "just press F5 when you are going to
                        "paste several lines of text so they won't
                        "be indented.
-"set mousehide          "hide the mouse while typying
-"set mouse=nv            "set the mouse to work in console mode
+"set mousehide         "hide the mouse while typying
+"set mouse=nv          "set the mouse to work in console mode
 set clipboard=unnamed
 "set clipboard=unnamedplus         "yanks go on clipboard instead, "+p to make recover the x11 clipboard
                                    "use xsel hacks if your vim version has no "clipboad-x11 support
@@ -277,7 +243,11 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:snips_authorEmail = "m@javier.io"
         let g:snippets_dir      = "~/.vim/extra-snippets/"
 
-    Bundle 'chilicuil/taglist.vim'
+    Bundle 'majutsushi/tagbar'
+        let g:tagbar_left  = 1
+        let g:tagbar_width = 25
+
+    "Bundle 'chilicuil/taglist.vim'
 
     "Bundle 'Townk/vim-autoclose'
     "Bundle 'chilicuil/dbext.vim'
@@ -361,18 +331,18 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     Bundle 'gnupg.vim'
 
     "===experimental===
-    "Bundle 'Shougo/neocomplcache'
-        "let g:neocomplcache_enable_at_startup = 1
-        "let g:neocomplcache_max_list = 20
-        "let g:neocomplcache_max_menu_width = 10
-        "let g:neocomplcache_auto_completion_start_length = 4
-        "let g:neocomplcache_manual_completion_start_length = 4
-        "let g:neocomplcache_enable_auto_select = 1
-        "let g:neocomplcache_enable_auto_delimiter = 1
-        "let g:neocomplcache_disable_auto_complete = 0
-        "let g:neocomplcache_enable_wildcard = 1
-        "let g:neocomplcache_enable_caching_message = 1
-        "imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+    Bundle 'Shougo/neocomplcache'
+        let g:neocomplcache_enable_at_startup = 1
+        let g:neocomplcache_max_list = 20
+        let g:neocomplcache_max_menu_width = 10
+        let g:neocomplcache_auto_completion_start_length = 4
+        let g:neocomplcache_manual_completion_start_length = 4
+        let g:neocomplcache_enable_auto_select = 1
+        let g:neocomplcache_enable_auto_delimiter = 1
+        let g:neocomplcache_disable_auto_complete = 0
+        let g:neocomplcache_enable_wildcard = 1
+        let g:neocomplcache_enable_caching_message = 1
+        imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
     "Bundle 'xolox/vim-easytags'
         "let g:easytags_file                    = '~/.ctags/tags'
@@ -384,6 +354,9 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "set tags=./.tags;,~/ctags/tags
 
     "Bundle 'jpalardy/vim-slime'
+    "Bundle 'Valloric/YouCompleteMe'
+    Bundle 'goldfeld/vim-seek'
+    Bundle 'jistr/vim-nerdtree-tabs'
 
 
     "===discarted===
@@ -407,6 +380,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
         "call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
 endif 
+
 "===============================================================================
 "================================== Mappings ===================================
 "===============================================================================
@@ -614,11 +588,11 @@ endfunction
 function! Nerd_tree() "need it to force close it, when changing between my
                       "custom modes (dev, spell, def)
     if exists ("s:nerd_tree")
-        NERDTreeClose
+        NERDTreeTabsClose
         wincmd p      "forces to return the focus to the window who call it
         unlet s:nerd_tree
     else
-        NERDTreeToggle
+        NERDTreeTabsToggle
         wincmd p      "forces to return the focus to the window who call it
         let s:nerd_tree = 1
     endif
@@ -626,10 +600,10 @@ endfunction
 
 function! Tag_list()
     if exists ("s:tag_list")
-        TlistClose
+        TagbarClose
         unlet s:tag_list
     else
-        TlistToggle
+        TagbarToggle
         let s:tag_list = 1
     endif
 endfunction
