@@ -25,3 +25,4 @@ if test -f /usr/bin/gpg-agent && grep -qs '^[[:space:]]*use-agent'\
         export GPG_AGENT_INFO
     fi
 fi
+_byobu_sourced=1 . /usr/bin/byobu-launch

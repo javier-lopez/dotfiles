@@ -173,6 +173,16 @@ ignores = (
       "#ubuntu-classroom-chat",
       "#ubuntu-classroom-es",
       "#ubuntu-community-team",
+      "#ubuntu-uds-appdev-1",
+      "#ubuntu-uds-appdev-2",
+      "#ubuntu-uds-client-1",
+      "#ubuntu-uds-client-2",
+      "#ubuntu-uds-community-1",
+      "#ubuntu-uds-community-2",
+      "#ubuntu-uds-servercloud-1",
+      "#ubuntu-uds-servercloud-2",
+      "#ubuntu-uds-foundations-1",
+      "#ubuntu-uds-plenary",
       "#anonymousbr",
       #"#fel-clan"
     );
@@ -181,8 +191,7 @@ ignores = (
   { level = "MODES"; channels = ( "&amp;bitlbee" ); network = "im"; },
   { mask = "nando"; level = "ALL"; },
   { mask = "nando_"; level = "ALL"; },
-  { mask = "FAMN"; level = "ALL"; },
-  { mask = "rengo"; level = "ALL"; }
+  { mask = "FAMN"; level = "ALL"; }
 );
 
 aliases = {

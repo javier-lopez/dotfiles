@@ -29,8 +29,8 @@ alias rainy='mplayer -ao alsa http://173.193.205.68/audio1104/RainyMood.mp3'
 alias remove='sudo apt-get remove'
 alias route.add.default.gw='sudo route add default gw'
 alias s='ls -CF'
-alias topcpu='ps auxf | sort -nr -k 3 | head -10'
-alias topmem='ps auxf | sort -nr -k 4 | head -10'
+alias top.cpu='ps auxf | sort -nr -k 3 | head -10'
+alias top.mem='ps auxf | sort -nr -k 4 | head -10'
 #alias update-cd='mkdir $HOME/.wcd; /usr/bin/wcd.exec -GN -j -xf $HOME/.ban.wcd -S $HOME -A /etc/ -A /opt/'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
@@ -57,28 +57,19 @@ alias ccache.ubuntu='CCACHE_DIR=$HOME/.ccache_ubuntu ccache'
 #see version installed vs the updated one (in repositories)
 alias policy='apt-cache policy'
 
-#alias pbuilder.lucid.i386='sudo DIST=lucid ARCH=i386 pbuilder'
-#alias pbuilder.natty.i386='sudo DIST=natty ARCH=i386 pbuilder'
-#alias pbuilder.oneiric.i386='sudo DIST=oneiric ARCH=i386 pbuilder'
 alias pbuilder.precise.i386='sudo DIST=precise ARCH=i386 pbuilder'
 alias pbuilder.quantal.i386='sudo DIST=quantal ARCH=i386 pbuilder'
 alias pbuilder.raring.i386='sudo DIST=raring ARCH=i386 pbuilder'
+alias pbuilder.saucy.i386='sudo DIST=saucy ARCH=i386 pbuilder'
 alias pbuilder.sid.i386='sudo DIST=sid ARCH=i386 pbuilder'
 
-#alias pbuilder.lucid.amd64='sudo DIST=lucid ARCH=amd64 pbuilder'
-#alias pbuilder.natty.amd64='sudo DIST=natty ARCH=amd64 pbuilder'
-#alias pbuilder.oneiric.amd64='sudo DIST=oneiric ARCH=amd64 pbuilder'
 alias pbuilder.precise.amd64='sudo DIST=precise ARCH=amd64 pbuilder'
 alias pbuilder.quantal.amd64='sudo DIST=quantal ARCH=amd64 pbuilder'
 alias pbuilder.raring.amd64='sudo DIST=raring ARCH=amd64 pbuilder'
+alias pbuilder.saucy.amd64='sudo DIST=saucy ARCH=amd64 pbuilder'
 alias pbuilder.sid.amd64='sudo DIST=sid ARCH=amd64 pbuilder'
 
 alias results='cd $HOME/misc/packaging/ubuntu/results/'
-#alias results.lucid='cd $HOME/misc/packaging/ubuntu/results/lucid-i386/'
-#alias results.maverick='cd $HOME/misc/packaging/ubuntu/results/maverick-i386/'
-
-alias ubuntu='cd $HOME/misc/packaging/ubuntu'
-alias ubuntu.tools='cd $HOME/misc/packaging/tools/'
 
 export DEBEMAIL="chilicuil@ubuntu.com"
 export DEBFULLNAME="Javier P.L."
