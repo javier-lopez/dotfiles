@@ -1,11 +1,11 @@
-# Last review            Tue 25 Oct 2011 10:53:58 PM CDT
+# Last review            Sat 25 May 2013 08:31:04 PM CDT
 # vim: tw=80 ft=sh
 
 [ -f /usr/local/bin/wcd ] && alias cd='. wcd'
 [ -f /usr/local/bin/rm_ ] && { alias rm.rf='rm_ -r'; alias rm='rm_'; } || alias rm.rf='rm -rf'
-[ -f /usr/bin/colormake ] && alias make='LANGUAGE=en CFLAGS="-g -Wall"
-colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
+[ -f /usr/bin/colormake ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
 [ -f /usr/local/bin/vw ] && alias feh='vw'
+[ -f /usr/local/bin/simple.server ] || alias simple.server='sudo python -m SimpleHTTPServer'
 
 # ===aliases=== $(sort -k 2)
 alias ssh.x='ssh -c arcfour,blowfish-cbc -XC'
@@ -44,7 +44,6 @@ alias pg='ping google.com'
 alias plugin='cd ~/.vim/plugin/'
 alias print.192.168.1.11='rlpr -h -Plp -H192.168.1.11'
 alias rip='abcde -o mp3'
-alias simple.server='sudo python -m SimpleHTTPServer'
 alias size='du -sh'
 alias so='source $HOME/.bashrc'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"

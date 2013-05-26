@@ -216,7 +216,7 @@ if !isdirectory(expand(expand("~/.vim/bundle/vundle/.git/")))
     "call inputsave()
     echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
     if nr2char(getchar()) ==? 'y'
-        !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        !git clone --dept=1 https://github.com/gmarik/vundle ~/.vim/bundle/vundle
     endif
     "call inputrestore()
 endif
