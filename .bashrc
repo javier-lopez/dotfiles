@@ -161,7 +161,7 @@ if [ -f $HOME/.dir_colors ]; then
 fi
 
 #show the todo list every 10 terminal invocations, aprox
-if [ -f /usr/local/bin/todo ] && [ -f "$HOME/.todo" ]; then
+if [ -f /usr/local/bin/todo ] && [ -d "$HOME/.todo" ]; then
     rnumber=$((RANDOM%10))
     if [ "$rnumber" = 5 ]; then
         todo ls +5
