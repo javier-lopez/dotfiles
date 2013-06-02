@@ -19,7 +19,6 @@ alias lss='gls --color=always'
 alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
 alias ñ='gls --color=always'
 alias purge='/usr/local/bin/purge'
-alias rainy='mplayer http://173.193.205.68/audio1104/RainyMood.mp3'
 alias remove='/usr/local/bin/remove'
 alias s='gls --color=always -CF'
 #alias tree="tree -Fa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"

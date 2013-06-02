@@ -40,7 +40,7 @@ export TERM=xterm-256color
 
 # PS1
 # Grabbed mostly from Yu-Jie Lin
-[[ $TERM == 'linux' ]] && STR_MAX_LENGTH=2 || STR_MAX_LENGTH=4
+[ "$TERM" = linux ] && STR_MAX_LENGTH=2 || STR_MAX_LENGTH=4
 NORMAL_COLOR='\[\e[00m\]'
 DATE_COLOR='\[\e[01;35m\]'
 HOST_COLOR='\e[0;32m'

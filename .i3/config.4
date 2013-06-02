@@ -205,7 +205,7 @@ bindsym $Altgr+Shift+m exec magnifier
 
 # irssi:
 #bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
-bindsym $Altgr+i exec /usr/bin/x-terminal-emulator -title "irssi" -e irssi
+bindsym $Altgr+i exec /usr/bin/x-terminal-emulator -title "irssi" -e bash -c "irssi --config=<(gpg -d $HOME/.irssi/config.gpg)"
 #bindsym Control+Shift+i exec /bin/sh -c irssi
 
 # pms: 

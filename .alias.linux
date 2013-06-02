@@ -11,6 +11,7 @@ alias eix.exact='eix --exact'
 alias install='sudo apt-get install --no-install-recommends'
 alias isntall='sudo apt-get install --no-install-recommends'
 alias kl='ls --color=auto'
+alias sl='ls --color=auto'
 alias k='ls -CF'
 alias ks='ls --color=auto'
 alias la='ls -A'
@@ -31,15 +32,12 @@ alias route.add.default.gw='sudo route add default gw'
 alias s='ls -CF'
 alias top.cpu='ps auxf | sort -nr -k 3 | head -10'
 alias top.mem='ps auxf | sort -nr -k 4 | head -10'
-#alias update-cd='mkdir $HOME/.wcd; /usr/bin/wcd.exec -GN -j -xf $HOME/.ban.wcd -S $HOME -A /etc/ -A /opt/'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
-alias wifi.eth1='iwlist eth1 s'
-alias wifi.wl='iwlist wl s'
 
 #====RANDOM VARS===
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
-export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+#export JAVA_HOME="/usr/lib/jvm/java-6-sun"
 
 #====PYTHON BREW===
 # http://chilicuil.github.com/all/random/2012/11/17/varias-versiones-python-ubuntu-pythonbrew.html
@@ -69,11 +67,8 @@ alias pbuilder.raring.amd64='sudo DIST=raring ARCH=amd64 pbuilder'
 alias pbuilder.saucy.amd64='sudo DIST=saucy ARCH=amd64 pbuilder'
 alias pbuilder.sid.amd64='sudo DIST=sid ARCH=amd64 pbuilder'
 
-alias results='cd $HOME/misc/packaging/ubuntu/results/'
-
 export DEBEMAIL="chilicuil@ubuntu.com"
-export DEBFULLNAME="Javier P.L."
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export DEBFULLNAME="Javier Lopez"
 export QUILT_PATCHES=debian/patches
 export QUILT_PUSH_ARGS="--color=auto"
 export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
