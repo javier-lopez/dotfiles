@@ -26,6 +26,8 @@ alias e='extract'
 alias .et='vim ~/.bash_eternal_history'
 alias fu-search="fu-search -c"
 alias gcc='LANGUAGE=en gcc'
+alias g='git'
+alias g.fast='git clone --dept=1'
 alias git.fast='git clone --dept=1'
 alias irssi='irssi --config=<(gpg -d $HOME/.irssi/config.gpg)'
 alias key.lookup='xev'
