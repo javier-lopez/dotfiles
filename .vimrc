@@ -257,8 +257,8 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
                     "\passwd=passwd:dbname=test1:host=localhost:port=3306'
 
     Bundle 'vim-scripts/LargeFile'
-    Bundle 'vim-scripts/matrix.vim--Yang'
-        map <leader>x :Matrix<CR>
+    "Bundle 'vim-scripts/matrix.vim--Yang'
+        "map <leader>x :Matrix<CR>
 
     Bundle 'chilicuil/nextCS'
     "Bundle 'chilicuil/TeTrIs.vim'
@@ -313,9 +313,9 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:EasyMotion_leader_key = '<leader><leader>'
 
     Bundle 'chilicuil/vim-markdown'
-    Bundle 'mattn/zencoding-vim'
+    "Bundle 'mattn/zencoding-vim'
         "let g:user_zen_leader_key = '<c-y>'
-        let g:use_zen_complete_tag = 1
+        "let g:use_zen_complete_tag = 1
 
 
     "===vim-scripts===, not hosted in github for some obscure reason
@@ -353,8 +353,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:easytags_suppress_ctags_warning = 1
         "set tags=./.tags;,~/ctags/tags
 
-    "Bundle 'jpalardy/vim-slime'
-    "Bundle 'Valloric/YouCompleteMe'
     Bundle 'goldfeld/vim-seek'
     Bundle 'jistr/vim-nerdtree-tabs'
 

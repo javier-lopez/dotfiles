@@ -118,13 +118,12 @@ export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=ignoreboth
 
+# path
+export PATH=$PATH:/sbin:/usr/local/sbin/:/usr/sbin:/usr/games
+
 # grep
 export GREP_COLOR='1;35' #purple
 export GREP_OPTIONS=--color=auto
-
-# android
-export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/tools/
-export PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/platform-tools/
 
 # gpg
 export GPGKEY=BC9C8902
