@@ -23,14 +23,15 @@
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [user]
-    name = chilicuil
-    email = chilicuil@gmail.com
+    name = Javier Lopez
+    email = m@javier.io
 
 [alias]
     cm = commit
     cmv = commit -v
     st = status
     br = branch
+    co = checkout
     unstage = reset HEAD --
     last = log -1 HEAD
     praise = blame
