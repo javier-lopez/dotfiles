@@ -130,6 +130,9 @@ else
     exit 1
 fi
 
+# gdebi resolution dep, requires gdebi-core
+[ -f /usr/bin/gdebi ] && PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdeb"
+
 # ccache
 #sudo mkdir -p "$PATH_PBUILDER/ccache"
 #sudo chmod a+w $PATH_PBUILDER/ccache"
