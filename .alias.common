@@ -1,6 +1,11 @@
 # Last review            Sat 25 May 2013 08:31:04 PM CDT
 # vim: tw=80 ft=sh
 
+di()
+{
+    translate "$@" | say -e
+}
+
 [ -f /usr/local/bin/wcd ] && alias cd='. wcd'
 [ -f /usr/local/bin/rm_ ] && { alias rm.rf='rm_ -r'; alias rm='rm_'; } || alias rm.rf='rm -rf'
 [ -f /usr/bin/colormake ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
@@ -8,6 +13,7 @@
 [ -f /usr/local/bin/simple.server ] || alias simple.server='sudo python -m SimpleHTTPServer'
 
 # ===aliases=== $(sort -k 2)
+alias apagar='sudo shutdown -h now'
 alias barstatus.off='killall conky dzen2 > /dev/null 2>&1'
 alias barstatus.on='barstatus.off; (conky | $HOME/code/dzen/dzen2  -x 350 -y 749 -fn Inconsolata:size=9 -ta r -fg "#999999" -bg "#000000" &) 2> /dev/null'
 alias .bashrc='$EDITOR $HOME/.bashrc'
@@ -45,7 +51,7 @@ alias so='source $HOME/.bashrc'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias ssh.x='ssh -c arcfour,blowfish-cbc -XC'
 alias sudo='sudo ' # http://tinyurl.com/6azvksf
-alias test.broadband='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+alias test.broadband='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 alias test.stress='dd if=/dev/zero of=/dev/null bs=1024k'
 alias traceroute='traceroute -T -p 80'
 alias tree="tree -CFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
