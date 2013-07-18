@@ -316,6 +316,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "Bundle 'mattn/zencoding-vim'
         "let g:user_zen_leader_key = '<c-y>'
         "let g:use_zen_complete_tag = 1
+    Bundle 'chilicuil/vim-sprunge'
 
 
     "===vim-scripts===, not hosted in github for some obscure reason
