@@ -286,6 +286,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "use this option to disable syntax checking on selected filetypes
         "let g:syntastic_disabled_filetypes = ['ruby', 'php']
         "TODO 07-09-2011 11:32 => make it toogle (open/close), check nerdtree out
+        let g:syntastic_ignore_files=['learn/sh']
         map <silent><leader>e :Errors<CR>
 
     "Bundle 'gmarik/github-search.vim'
