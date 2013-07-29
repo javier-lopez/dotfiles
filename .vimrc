@@ -2,18 +2,6 @@
 "           Last review            Mon 13 May 2013 01:00:00 AM CDT
 "-------------------------------------------------------------------------------
 "
-"Plugins used:
-"
-" vundle:
-"       matchit.vim crefvim.vim NERD_tree.vim [+]snipMate.vim [+]taglist.vim
-"       acp.vim autoclose.vim dbext.vim LargeFile.vim [+]Matrix.vim [+]nextCS.vim
-"       [+]tetris.vim qbuf.vim surround.vim repeat.vim findmate.vim
-"       IndexedSearch.vim [+]vimbuddy.vim NERD_commenter.vim tasklist.vim
-"       align.vim CSApprox.vim Drawit.vim netrw.vim securemodelines.vim
-"       irssilog.vim gist.vim syntastic.vim
-"
-"[+] Modified versions                   => https://github.com/chilicuil
-
 "===============================================================================
 "============================== General settings ===============================
 "===============================================================================
@@ -27,13 +15,11 @@ if has ('gui_running')
     set gfn=Monaco\ for\ Powerline\ 8
     "set gfn=Inconsolata\ Medium\ 10
     colorscheme ir_black
-    "colorscheme wombat     "http://files.werx.dk/wombat.vim
-    "colorscheme molokai
+    "colorscheme mustang
 else
     set background=dark    "I like dark colors
-    colorscheme ir_black   "my favorite theme, it's a customized version
-    "colorscheme  molokai  "http://blog.infinitered.com/entries/show/6
-    "http://pastebin.com/ff366c16
+    "colorscheme ir_black   "my favorite theme, it's a customized version
+    colorscheme mustang
     if &term == "linux"
         let g:CSApprox_loaded = 1
         if &lines > 47
@@ -189,7 +175,7 @@ set statusline+=%{&fileformat}]                          "file format
 if filereadable(expand("~/.vim/bundle/vimbuddy.vim/plugin/vimbuddy.vim"))
     set statusline+=\ %{VimBuddy()}                      "vim buddy
 endif
-set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
+"set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
 set statusline+=%=                                       "right align
 set statusline+=%2*%-8{strftime('%H:%M')}                "time
 set statusline+=%-7{FileSize()}                          "file size
@@ -274,20 +260,19 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "TODO 07-09-2011 11:30 => make it toggle (open/close)
         map <Leader>t <Plug>TaskList
 
-    Bundle 'godlygeek/csapprox'
+    "Bundle 'godlygeek/csapprox'
     "Bundle 'vim-scripts/DrawIt'
         "map <leader>di :DIstart <CR>
         "map <leader>ds :DIstop <CR>
 
     "Bundle 'vim-scripts/netrw.vim'
-    Bundle 'ciaranm/securemodelines'
+    "Bundle 'ciaranm/securemodelines'
         "enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
         "let g:secure_modelines_verbose=1
 
     Bundle 'mattn/webapi-vim'
     Bundle 'mattn/gist-vim'
 
-    Bundle 'vim-scripts/irssilog.vim'
     Bundle 'scrooloose/syntastic'
         set statusline+=\ %#warningmsg#
         set statusline+=%{SyntasticStatuslineFlag()}
@@ -318,20 +303,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:use_zen_complete_tag = 1
     Bundle 'chilicuil/vim-sprunge'
 
-
-    "===vim-scripts===, not hosted in github for some obscure reason
-    Bundle 'QuickBuf'
-        let g:qb_hotkey = "<F2>"
-
-    Bundle 'surround.vim'
-        " ds" / cs"' / ysiw'
-
-    Bundle 'repeat.vim'
-    Bundle 'IndexedSearch'
-    Bundle 'Align'
-    Bundle 'gnupg.vim'
-
-    "===experimental===
     Bundle 'Shougo/neocomplcache'
         let g:neocomplcache_enable_at_startup = 1
         let g:neocomplcache_max_list = 20
@@ -345,6 +316,21 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:neocomplcache_enable_caching_message = 1
         imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
+
+    "===vim-scripts===, not hosted in github for some obscure reason
+    Bundle 'QuickBuf'
+        let g:qb_hotkey = "<F2>"
+
+    Bundle 'surround.vim'
+        " ds" / cs"' / ysiw'
+
+    Bundle 'repeat.vim'
+    Bundle 'IndexedSearch'
+    Bundle 'gnupg.vim'
+
+
+    "===experimental===
+
     "Bundle 'xolox/vim-easytags'
         "let g:easytags_file                    = '~/.ctags/tags'
         "let g:easytags_always_enabled         = 1
@@ -356,6 +342,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
 
     Bundle 'goldfeld/vim-seek'
     Bundle 'jistr/vim-nerdtree-tabs'
+    Bundle 'dahu/Insertlessly'
 
 
     "===discarted===
@@ -370,7 +357,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:acp_completeoptPreview       = 1
         ""let g:acp_behaviorSnipmateLength   = 2
         "let g:acp_behaviorPythonOmniLength = -1
-        
+
     "Bundle 'Lokaltog/vim-powerline'        "I prefer my own powerline =)
         "let g:Powerline_cache_enabled = 1
         "let g:Powerline_symbols = 'compatible' "compatible, unicode, fancy
@@ -378,7 +365,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:Powerline_stl_path_style = 'short' "relative, filename, short, full
         "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
         "call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
-endif 
+endif
 
 "===============================================================================
 "================================== Mappings ===================================
@@ -424,8 +411,8 @@ map <c-w> :tabclose <CR>
 " Ctrl-L clears the highlight from the last search
 "noremap <C-l> :nohlsearch<CR><C-l>
 "noremap! <C-l> <ESC>:nohlsearch<CR><C-l>
-source $VIMRUNTIME/ftplugin/man.vim
-nnoremap K :Man <C-R><C-W><CR>
+"source $VIMRUNTIME/ftplugin/man.vim
+"nnoremap K :Man <C-R><C-W><CR>
 
 "exit keyboard shortcut
 map <c-x> :confirm qall<CR>
@@ -520,7 +507,7 @@ noremap <HOME> ^
 noremap <END> $
 
 "this will work only on the gui version, most terminal are unable to
-"determinate the difference between <home> and <m-home>, thanks to scroolose 
+"determinate the difference between <home> and <m-home>, thanks to scroolose
 "for the tip
 
 noremap <M-HOME> gg
@@ -1018,9 +1005,9 @@ endfunction
 
 "function! UpdateTags()
     "call writefile(getline(1, '$'), '.tmp.cc', 'b')
-    "call system('grep -v "	'.expand('%').'	" tags > tags2 && mv -f tags2 
+    "call system('grep -v "	'.expand('%').'	" tags > tags2 && mv -f tags2
     "tags')
-    "let tags = system('ctags --c++-kinds=+p --fields=+iaS --extra=+q -f 
+    "let tags = system('ctags --c++-kinds=+p --fields=+iaS --extra=+q -f
     "- .tmp.cc | sed "s/\t\.tmp\.cc\t/\t'.expand('%').'\t/" >> tags')
     "return ';'
 "endfunction

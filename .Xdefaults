@@ -9,8 +9,7 @@
 
 !#include "/home/chilicuil/.Xtheme/dark-I.theme"
 !#include "/home/chilicuil/.Xtheme/dark-II.theme"
-!#include "/home/chilicuil/.Xtheme/dark-III.theme"
-#include "/home/chilicuil/.Xtheme/dark-IV.theme"
+#include "/home/chilicuil/.Xtheme/dark-III.theme"
 !#include "/home/chilicuil/.Xtheme/darksoft-I.theme"
 
 !Xcursor*theme: tool
@@ -59,7 +58,7 @@ URxvt*cursorBlink:      true
 
 !Scroll settings. Thx kazuo http://tinyurl.com/2dae24d
 !   -Scroll when output come but not when you go back in to the buffer (with mouse
-!   scroll or shift pgup). 
+!   scroll or shift pgup).
 !   -Scroll back to the end on key press (on program stop running and prompt is back
 !   it go back to the end too).
 

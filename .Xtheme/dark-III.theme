@@ -1,22 +1,22 @@
-! Dark III
+! Dark I
 
 ! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 
 *background: rgb:00/00/00
 *foreground: rgb:cf/cf/cf
-*color0  : #2E3436
-*color1  : #a31604
-*color2  : #447241
-*color3  : #c1951a
-*color4  : #425387
-*color5  : #965d98
-*color6  : #06989A
-*color7  : #D3D7CF
-*color8  : #555753
-*color9  : #c60001
-*color10 : #27a343
-*color11 : #d5a30e
-*color12 : #4a5a8d
-*color13 : #893c8c
-*color14 : #12bccb
-*color15 : #EEEEEC
+*color0:      #000000
+*color1:      #CC0000
+*color2:      #4E9A06
+*color3:      #C4A000
+*color4:      #3465A4
+*color5:      #75507B
+*color6:      #06989A
+*color7:      #D3D7CF
+*color8:      #555753
+*color9:      #EF2929
+*color10:     #8AE234
+*color11:     #FCE94F
+*color12:     #729FCF
+*color13:     #AD7FA8
+*color14:     #34E2E2
+*color15:     #ECEDEE
