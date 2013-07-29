@@ -19,7 +19,7 @@ if has ('gui_running')
 else
     set background=dark    "I like dark colors
     "colorscheme ir_black   "my favorite theme, it's a customized version
-    colorscheme mustang
+    colorscheme hemisu
     if &term == "linux"
         let g:CSApprox_loaded = 1
         if &lines > 47
