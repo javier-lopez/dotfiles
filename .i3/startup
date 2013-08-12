@@ -2,13 +2,15 @@
 
 #xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3 &
 
-mplayer -loop 0 -rootwin -ao null -noconsolecontrols $HOME/data/video/earth.mp4 &
+#mplayer -loop 0 -rootwin -ao null -noconsolecontrols $HOME/data/video/earth.mp4 &
 
 i3-msg workspace "1 www" &
 
-conky | $HOME/code/dzen/dzen2  -x 350 -y 749 -fn 'Inconsolata:size=9' -ta r -fg "#999999" -bg "#000000" &
-#conky | $HOME/code/dzen/dzen2  -x 350 -y 749 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
-#conky | $HOME/code/dzen/dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
+#https://bugs.launchpad.net/ubuntu/+source/dzen2/+bug/486650
+conky | dzen2  -x 350 -y 749 -fn 'Inconsolata:size=9' -ta r -fg "#999999" -bg "#000000" &
+
+#conky | dzen2 -x 350 -y 749 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
+#conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
 #conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
 
 /usr/bin/pcmanfm &

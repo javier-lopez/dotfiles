@@ -68,7 +68,8 @@ alias pbuilder.saucy.amd64='sudo DIST=saucy ARCH=amd64 pbuilder'
 alias pbuilder.sid.amd64='sudo DIST=sid ARCH=amd64 pbuilder'
 
 export DEBEMAIL="chilicuil@ubuntu.com"
-export DEBFULLNAME="Javier Lopez"
+#export DEBFULLNAME="Javier Lopez"
+export DEBFULLNAME="Javier P.L."
 export QUILT_PATCHES=debian/patches
 export QUILT_PUSH_ARGS="--color=auto"
 export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
