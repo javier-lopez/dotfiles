@@ -7,7 +7,7 @@ di()
 }
 
 [ -f /usr/local/bin/wcd ] && alias cd='. wcd'
-[ -f /usr/local/bin/rm_ ] && { alias rm.rf='rm_ -r'; alias rm='rm_'; } || alias rm.rf='rm -rf'
+[ -f /usr/local/bin/rm_ ] && { alias rm.rf='rm_ -f'; alias rm='rm_'; } || alias rm.rf='rm -rf'
 [ -f /usr/bin/colormake ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
 [ -f /usr/local/bin/vw ] && alias feh='vw'
 [ -f /usr/local/bin/simple.server ] || alias simple.server='sudo python -m SimpleHTTPServer'
