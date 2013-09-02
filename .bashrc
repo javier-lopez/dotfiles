@@ -15,7 +15,7 @@ if [ $BASH_VERSINFO -ge 4 ]; then
 fi
 
 shopt -s checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
-shopt -s hostcomplete histappend
+shopt -s hostcomplete histappend histverify
 
 set match-hidden-files off
 set bind-tty-special-chars on
@@ -101,6 +101,8 @@ case ${TERM} in
         ;;
 esac
 
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+export HISTCONTROL=ignoreboth
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"\
 'echo $USER \ \ \ \ \ "$(history 1)" >> ~/.bash_eternal_history'
 
@@ -115,8 +117,6 @@ export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
-export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-export HISTCONTROL=ignoreboth
 
 # path
 export PATH=$PATH:/sbin:/usr/local/sbin/:/usr/sbin:/usr/games
