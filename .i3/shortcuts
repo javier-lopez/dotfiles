@@ -1,0 +1,71 @@
+Shortcuts
+---------
+
+f1                 => open help (this window)
+win + enter        => open terminal (requires urxvt)
+win + space        => open buffer terminal (fast)
+alt + esc          => exec run_program (requires dmenu)
+ImpPt              => make an screenshot (requires imagemagick)
+
+altgr + k          => close app (kill -15)
+altgr + l          => close app by name (requires dmenu)
+altgr + m          => open mail (requires mutt,gnupg)
+altgr + shift + m  => open magnifier (requires magnifier)
+altgr + i          => open instant messaging (requires irssi,gnupg)
+altgr + r          => open music player (requires mpd,ncmpcpp)
+altgr + w          => open network app (requires wicd)
+altgr + h          => open home files (requires pcmanfm)
+altgr + p          => play/stop music (requires mpd)
+altgr + ¿          => play next track (requires mpd)
+altgr + ´          => play previous track (requires mpd)
+altgr + .          => increase volume
+altgr + -          => decrease volume
+altgr + a          => multimonitor menu (requires dmenu,xrandr)
+altgr + s          => search song in mpd (requires dmenu,mpd)
+altgr + t          => tell something (requires mplayer)
+altgr + v          => exec a vm (requires dmenu,vbox)
+ctrl  + +          => record a desktop movie (requires ffmpeg)
+
+win + n            => change focus to <n> desk
+win + shift + n    => move app to <n> desk
+win + righ arrow   => change focus to next desk
+win + left arrow   => change focus to previous desk
+win + h            => change focus to left window
+win + l            => change focus to right window
+win + j            => change focus to upper window
+win + k            => change focus to down window
+win + shift + h    => move app to the left
+win + shift + l    => move app to the right
+win + shift + j    => move app up
+win + shift + k    => move app down
+
+win + h            => change focus to the left
+win + l            => change focus to the right
+win + j            => change focus up
+win + k            => change focus down
+
+win + m            => mark an app
+win + '            => go to a marked app
+
+ctrl + alt + supr  => open a session menu (requires dmenu)
+ctrl + alt + l     => lock the screen (requires i3lock)
+
+Modes
+-----
+
+win + f            => change to fullscreen mode
+win + d            => change to default mode
+win + s            => change to vertical stack mode
+win + a            => change to tabbed mode
+
+altgr + z          => enter resize mode
+h                  => +1 px to the left
+l                  => -1 px to the right
+j                  => -1 px down
+k                  => +1 px up
+altgr + x          => exit resize mode
+
+win + insert       => inserts app into buffer mode (advanced)
+
+win + shift + space     => window toggle mode
+win + righ click button => move

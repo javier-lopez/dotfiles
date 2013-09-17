@@ -53,6 +53,9 @@ set $Altgr Mod5
 # Use Mouse+$Win to drag floating windows to their wanted position
 floating_modifier $Win
 
+# custom script
+bindsym F1 exec i3_help
+
 # Fullscreen ($Win+f)
 bindcode $Win+41 fullscreen
 
@@ -201,10 +204,11 @@ bindcode Control+$Alt+119 exec dmenu_session
 # Toggle windows transparency
 #bindsym Control+Shift+t exec transset -p
 
-# magnifier:
+# mutt:
 bindsym $Altgr+m exec /usr/bin/x-terminal-emulator -title "mutt" -e mutt
-bindsym $Altgr+Shift+m exec magnifier
 #bindsym Control+Shift+m exec /bin/sh -c mutt
+# magnifier:
+bindsym $Altgr+Shift+m exec magnifier
 
 # irssi:
 #bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
@@ -310,6 +314,8 @@ bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
 
 # Just for i3.4
 for_window [class="Magnifier"] floating enable
+for_window [class="Xmessage"] floating enable
+for_window [class="Gxmessage"] floating enable
 for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
 for_window [class="^TeamViewer.exe$"] floating enable
 for_window [title="^TeamViewer$"] floating enable
