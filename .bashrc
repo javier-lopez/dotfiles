@@ -119,7 +119,7 @@ export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 
 # path
-export PATH=$PATH:/sbin:/usr/local/sbin/:/usr/sbin:/usr/games
+export PATH=$PATH:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/sbin:/usr/games
 
 # grep
 export GREP_COLOR='1;35' #purple
