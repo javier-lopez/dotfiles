@@ -13,7 +13,7 @@ alias barstatus.on='barstatus.off; (conky | $HOME/code/dzen/dzen2  -x 350 -y 749
 alias .bashrc='$EDITOR $HOME/.bashrc'
 alias bbc='echo "Select a station:";select s in 1 1x 2 3 4 5 6 7 "Asian Network an" "Nations & Local lcl";do break;done;mplayer -playlist "http://www.bbc.co.uk/radio/listen/live/r"$(echo "$s"|awk '\''{print $NF}'\'')".asx"'
 alias beep='echo -e "\007\c"'
-alias c='cd'
+alias c='compress'
 alias cc='LANGUAGE=en cc'
 alias ..='cd ..'
 alias ....='cd ../..'
@@ -41,7 +41,6 @@ alias pg='ping google.com'
 alias print.192.168.1.11='rlpr -h -Plp -H192.168.1.11'
 alias rip='abcde -o mp3'
 alias size='du -sh'
-alias refresh='source $HOME/.bashrc'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias ssh.x='ssh -c arcfour,blowfish-cbc -XC'
 alias sudo='sudo ' # http://tinyurl.com/6azvksf

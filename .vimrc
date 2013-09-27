@@ -342,8 +342,13 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "set tags=./.tags;,~/ctags/tags
 
     Bundle 'goldfeld/vim-seek'
-    Bundle 'jistr/vim-nerdtree-tabs'
-    Bundle 'dahu/Insertlessly'
+    "Bundle 'terryma/vim-multiple-cursors'
+    "Default mapping
+    "let g:multi_cursor_use_default_mapping=0
+    "let g:multi_cursor_next_key='<C-n>'
+    "let g:multi_cursor_prev_key='<C-p>'
+    "let g:multi_cursor_skip_key='<C-x>'
+    "let g:multi_cursor_quit_key='<Esc>'
 
 
     "===discarted===
@@ -366,6 +371,9 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:Powerline_stl_path_style = 'short' "relative, filename, short, full
         "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
         "call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
+
+    "Bundle 'jistr/vim-nerdtree-tabs'
+    "Bundle 'dahu/Insertlessly'
 endif
 
 "===============================================================================
