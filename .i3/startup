@@ -24,7 +24,7 @@ conky | dzen2  -x 350 -y 749 -fn 'Inconsolata:size=9' -ta r -fg "#999999" -bg "#
 /usr/bin/x-terminal-emulator -name scratchpad -e bash &
 
 autocutsel &                                   #sync X/Gnome clipboards
-autocutsel -s PRIMARY &
+#autocutsel -s PRIMARY &
 
 #xrefresh &
 
