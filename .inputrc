@@ -5,10 +5,8 @@ set editing-mode vi
 $if mode=vi
 
 set keymap vi-command
-"\ep": yank-last-arg                       # bind to Alt-p
 Control-l: clear-screen
 
 set keymap vi-insert
-"\ep": yank-last-arg
 Control-l: clear-screen
 $endif

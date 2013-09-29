@@ -40,6 +40,8 @@ URxvt*background:       #000000
 
 URxvt*font:             xft:Inconsolata:pixelsize=12
 !URxvt*font:             xft:Inconsolata for Powerline:pixelsize=12
+!URxvt*font:             xft:Monospace:pixelsize=12
+!URxvt*font:             xft:LiberationMono-Regular:pixelsize=12
 !URxvt*font:             xft:Monaco:style=Standard:pixelsize=12
 !URxvt*font:             xft:Monaco for Powerline:regular:size=8
 !URxvt*boldFont:         xft:Bitstream Vera Sans Mono:pixelsize=9
@@ -49,11 +51,12 @@ URxvt*font:             xft:Inconsolata:pixelsize=12
 
 URxvt*saveLines:        10000
 URxvt*scrollBar:        false
-!URxvt*internalBorder:   5
-!URxvt*fading: 25%
-!URxvt.scrollstyle:      plain
 URxvt.urgentOnBell:     true
 URxvt*cursorBlink:      true
+!URxvt.reverseVideo:     true
+!URxvt*fading:           25%
+!URxvt*internalBorder:   5
+!URxvt.scrollstyle:      plain
 
 !Scroll settings. Thx kazuo http://tinyurl.com/2dae24d
 !   -Scroll when output come but not when you go back in to the buffer (with mouse
@@ -66,22 +69,18 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress:true
 
 URxvt.print-pipe:       cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
+URxvt.cutchars:         "\\ `\"\'()*;<>[]{|}&,=?@^\:"
+
+! === Plugins ===
+URxvt.perl-lib:         /home/chilicuil/.urxvt/
+URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard
+!URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard,cursortail
 
 !urlLauncher settings
-URxvt*perl-lib:         /usr/lib/urxvt/perl/
-URxvt*perl-ext-common:  default,matcher
+URxvt.keysym.M-g:       perl:mark-yank-urls:activate_mark_mode
 URxvt*urlLauncher:      x-www-browser
-URxvt*matcher.button:   1
-URxvt*matcher.underline:true
 
-URxvt.keysym.M-g: perl:mark-yank-urls:activate_mark_mode
-URxvt.perl-lib:                       /home/chilicuil/.urxvt/
-URxvt.perl-ext:                       mark-yank-urls
-URxvt.perl-ext:                       selection,mark-yank-urls
-!URxvt.reverseVideo: true
-
-!Allows Tabs
-URxvt.perl-ext-common: tabbedex
+!tabbs
 URxvt.tabbed.title:     false
 URxvt.tabbed.title-fg:  10
 URxvt.tabbed.title-bg:  0
@@ -91,3 +90,14 @@ URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg:    5
 URxvt.tabbed.tab-bg:    0
 URxvt.tabbed.autohide:  true
+
+!font-resize
+URxvt.keysym.Control-plus:        perl:font-resize:increase
+URxvt.keysym.Control-minus:       perl:font-resize:decrease
+URxvt.keysym.Control-Shift-plus:  perl:font-resize:incglobal
+URxvt.keysym.Control-Shift-minus: perl:font-resize:decglobal
+
+!clipboard
+URxvt.iso14755: false
+URxvt.keysym.Control-Shift-V: perl:clipboard:paste
+URxvt.keysym.Control-Shift-C: perl:clipboard:copy
