@@ -35,6 +35,7 @@
     unstage = reset HEAD --
     last = log -1 HEAD
     praise = blame
+    glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
 
 [core]
     editor = vim
