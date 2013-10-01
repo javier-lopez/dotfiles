@@ -202,7 +202,8 @@ if !isdirectory(expand(expand("~/.vim/bundle/vundle/.git/")))
     "call inputsave()
     echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
     if nr2char(getchar()) ==? 'y'
-        !git clone --dept=1 https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        "!git clone --dept=1 https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        !git clone --dept=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
     endif
     "call inputrestore()
 endif
@@ -233,9 +234,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:tagbar_left  = 1
         let g:tagbar_width = 25
 
-    "Bundle 'chilicuil/taglist.vim'
-
-    "Bundle 'Townk/vim-autoclose'
     "Bundle 'chilicuil/dbext.vim'
         "let g:dbext_default_history_size = 100
         ""let g:dbext_default_profile     = 'mysql_test1'
@@ -265,7 +263,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "map <leader>di :DIstart <CR>
         "map <leader>ds :DIstop <CR>
 
-    "Bundle 'vim-scripts/netrw.vim'
     "Bundle 'ciaranm/securemodelines'
         "enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
         "let g:secure_modelines_verbose=1
@@ -289,7 +286,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:syntastic_ignore_files=['learn/sh']
         map <silent><leader>e :Errors<CR>
 
-    "Bundle 'gmarik/github-search.vim'
     Bundle 'kien/ctrlp.vim'
         let g:ctrlp_map = '<leader>f'
         let g:ctrlp_clear_cache_on_exit = 0
@@ -299,9 +295,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:EasyMotion_leader_key = '<leader><leader>'
 
     Bundle 'chilicuil/vim-markdown'
-    "Bundle 'mattn/zencoding-vim'
-        "let g:user_zen_leader_key = '<c-y>'
-        "let g:use_zen_complete_tag = 1
     Bundle 'chilicuil/vim-sprunge'
 
     Bundle 'Shougo/neocomplcache'
@@ -316,6 +309,11 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:neocomplcache_enable_wildcard = 1
         let g:neocomplcache_enable_caching_message = 1
         imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+
+    "Bundle 'mattn/zencoding-vim'
+        "let g:user_zen_leader_key = '<c-y>'
+        "let g:use_zen_complete_tag = 1
+    "Bundle 'gmarik/github-search.vim'
 
 
     "===vim-scripts===, not hosted in github for some obscure reason
@@ -342,6 +340,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "set tags=./.tags;,~/ctags/tags
 
     Bundle 'goldfeld/vim-seek'
+    Bundle 'bogado/file-line'
     "Bundle 'terryma/vim-multiple-cursors'
     "Default mapping
     "let g:multi_cursor_use_default_mapping=0
@@ -349,10 +348,14 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "let g:multi_cursor_prev_key='<C-p>'
     "let g:multi_cursor_skip_key='<C-x>'
     "let g:multi_cursor_quit_key='<Esc>'
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'gregsexton/gitv'
 
 
     "===discarted===
     "Bundle 'chilicuil/conque'
+    "Bundle 'chilicuil/taglist.vim'
+
     "Bundle 'FindMate'                      "ctrlp.vim ftw!
     "Bundle 'tomtom/viki_vim'
 
@@ -372,8 +375,9 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
         "call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
 
-    "Bundle 'jistr/vim-nerdtree-tabs'
-    "Bundle 'dahu/Insertlessly'
+    "Bundle 'jistr/vim-nerdtree-tabs'       "nerdtree is faster without it
+    "Bundle 'dahu/Insertlessly'             "what's this anyway?
+    "Bundle 'Townk/vim-autoclose'           "what's this anyway?
 endif
 
 "===============================================================================
