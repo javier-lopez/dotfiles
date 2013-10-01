@@ -54,7 +54,7 @@ set $Altgr Mod5
 floating_modifier $Win
 
 # custom script
-bindsym F1 exec i3_help
+bindsym F1 exec /usr/local/bin/i3-help
 
 # Fullscreen ($Win+f)
 bindcode $Win+41 fullscreen
@@ -174,19 +174,19 @@ bindcode $Win+Shift+33 move workspace 20 work
 # ----------------------------------<
 
 # $Win+Enter starts a new terminal
-bindcode $Win+36 exec /usr/bin/x-terminal-emulator
+bindcode $Win+36 exec x-terminal-emulator
 bindcode $Win+Shift+36 split h
-#bind $Win+36 exec /usr/bin/urxvtc
-bindsym Control+Shift+g exec /usr/bin/x-terminal-emulator
-#bindsym Control+Shift+g exec /usr/bin/urxvtc
+#bind $Win+36 exec urxvtc
+bindsym Control+Shift+g exec x-terminal-emulator
+#bindsym Control+Shift+g exec urxvtc
 
 # Control+Shift*f starts firefox
-#bind Control+Shift+41 exec /usr/bin/firefox
+#bind Control+Shift+41 exec firefox
 
 # $Alt+Esc dmenu_run
 # -sf purple
 #bindcode $Alt+9 exec dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
-bind $Alt+9 exec /usr/local/bin/dmenu_run
+bind $Alt+9 exec /usr/local/bin/dmenu-run
 
 # Control+$Alt+e exits i3
 #bindcode Control+$Alt+26 exit
@@ -199,75 +199,75 @@ bind $Alt+9 exec /usr/local/bin/dmenu_run
 bindcode Control+$Alt+46 exec  i3lock -i $HOME/.data/images/wallpapers/lock.png -n -t &
 
 # Control+$Alt+Supr starts a dmenu session menu
-bindcode Control+$Alt+119 exec dmenu_session
+bindcode Control+$Alt+119 exec /usr/local/bin/dmenu-session
 
 # Toggle windows transparency
 #bindsym Control+Shift+t exec transset -p
 
 # mutt:
-bindsym $Altgr+m exec /usr/bin/x-terminal-emulator -title "mutt" -e mutt
+bindsym $Altgr+m exec x-terminal-emulator -title "mutt" -e mutt
 #bindsym Control+Shift+m exec /bin/sh -c mutt
 # magnifier:
-bindsym $Altgr+Shift+m exec magnifier
+bindsym $Altgr+Shift+m exec /usr/local/bin/magnifier
 
 # irssi:
-#bindsym Control+Shift+i exec /usr/bin/x-terminal-emulator -e irssi
-bindsym $Altgr+i exec /usr/bin/x-terminal-emulator -title "irssi" -e bash -c "irssi --config=<(gpg -d $HOME/.irssi/config.gpg)"
+#bindsym Control+Shift+i exec x-terminal-emulator -e irssi
+bindsym $Altgr+i exec x-terminal-emulator -title "irssi" -e bash -c "irssi --config=<(gpg -d $HOME/.irssi/config.gpg)"
 #bindsym Control+Shift+i exec /bin/sh -c irssi
 
 # pms:
-bindsym $Altgr+r exec /usr/bin/x-terminal-emulator -e ncmpcpp
+bindsym $Altgr+r exec x-terminal-emulator -e ncmpcpp
 #bindsym Control+Shift+p exec sh -c pms
 
 # wicd-curses:
-bindsym $Altgr+w exec /usr/bin/x-terminal-emulator -e wicd-curses
+bindsym $Altgr+w exec x-terminal-emulator -e wicd-curses
 
 # alsamixer: Control+Shift+a
-#bindsym Control+Shift+a exec /usr/bin/x-terminal-emulator -e alsamixer
+#bindsym Control+Shift+a exec x-terminal-emulator -e alsamixer
 #bindsym Control+Shift+a exec /bin/sh -c alsamixer
 
 # pcmanfm:
-#bindsym Control+Shift+h exec /usr/bin/pcmanfm
-bindsym $Altgr+h exec /usr/bin/pcmanfm
+#bindsym Control+Shift+h exec pcmanfm
+bindsym $Altgr+h exec pcmanfm
 #bindsym Control+Shift+h exec nautilus
 
 # volume:
-#bindcode Control+Shift+20 exec /usr/bin/amixer set Master 1-
-bindcode $Altgr+59 exec /usr/bin/amixer set Master 1-
-#bind Control+Shift+21 exec /usr/bin/amixer set Master 1+
-bindcode $Altgr+60 exec /usr/bin/amixer set Master 1+
+#bindcode Control+Shift+20 exec amixer set Master 1-
+bindcode $Altgr+59 exec amixer set Master 1-
+#bind Control+Shift+21 exec amixer set Master 1+
+bindcode $Altgr+60 exec amixer set Master 1+
 
 # mpd:
-bindsym $Altgr+p exec /usr/local/bin/mpc_toggle
-#bind Control+Shift+60 exec /usr/bin/mpc next
-bind $Altgr+21 exec /usr/bin/mpc next
-#bind Control+Shift+59 exec /usr/bin/mpc prev
-bind $Altgr+34 exec /usr/bin/mpc prev
+bindsym $Altgr+p exec /usr/local/bin/mpc-toggle
+#bind Control+Shift+60 exec mpc next
+bind $Altgr+21 exec mpc next
+#bind Control+Shift+59 exec mpc prev
+bind $Altgr+34 exec mpc prev
 
 # kills the current app
 bindcode $Altgr+45 kill
 
 # killall shows up a menu to kill the choosen item
-bindcode $Altgr+46 exec dmenu_killall
+bindcode $Altgr+46 exec /usr/local/bin/dmenu-killall
 
 # song:
-bindsym $Altgr+s exec /usr/local/bin/dmenu_mpd
+bindsym $Altgr+s exec /usr/local/bin/dmenu-mpd
 
 # xrand:
-bindsym $Altgr+a exec /usr/local/bin/dmenu_xrandr
+bindsym $Altgr+a exec /usr/local/bin/dmenu-xrandr
 
 # vbox:
-bindsym $Altgr+v exec /usr/local/bin/dmenu_vbox
+bindsym $Altgr+v exec /usr/local/bin/dmenu-vbox
 
 # tell:
-bindsym $Altgr+t exec /usr/local/bin/dmenu_tell
+bindsym $Altgr+t exec /usr/local/bin/dmenu-tell
 
 # screenshot: ImpPt
 bind 107 exec /usr/local/bin/screenshot
 
 # record_desktop: TODO 29-09-2013 00:50 >> assign new shortcuts
-#bind Control+Shift+35 exec /usr/local/bin/screencast_record stop
-#bind Control+35 exec /usr/local/bin/screencast_record start
+#bind Control+Shift+35 exec /usr/local/bin/screencast-record stop
+#bind Control+35 exec /usr/local/bin/screencast-record start
 
 # go to the urgent flag set
 #bindsym $Win+x [urgent=latest] focus

@@ -583,11 +583,13 @@ endfunction
 function! Nerd_tree() "need it to force close it, when changing between my
                       "custom modes (dev, spell, def)
     if exists ("s:nerd_tree")
-        NERDTreeTabsClose
+        "NERDTreeTabsClose
+        NERDTreeClose
         wincmd p      "forces to return the focus to the window who call it
         unlet s:nerd_tree
     else
-        NERDTreeTabsToggle
+        "NERDTreeTabsToggle
+        NERDTreeToggle
         wincmd p      "forces to return the focus to the window who call it
         let s:nerd_tree = 1
     endif
