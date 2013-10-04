@@ -90,9 +90,9 @@ set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
                        "be indented.
 "set mousehide         "hide the mouse while typying
 "set mouse=nv          "set the mouse to work in console mode
-set clipboard=unnamed
-"set clipboard=unnamedplus         "yanks go on clipboard instead, "+p to make recover the x11 clipboard
-                                   "use xsel hacks if your vim version has no "clipboad-x11 support
+"set clipboard=unnamed
+set clipboard=unnamedplus         "yanks go on clipboard instead, "+p to make recover the x11 clipboard
+                                  "use xsel hacks if your vim version has no "clipboad-x11 support
 
 set backspace=indent,eol,start     "make backspace works like in other editors.
 filetype plugin indent on          "enable filetype-specific plugins
@@ -203,6 +203,7 @@ if !isdirectory(expand(expand("~/.vim/bundle/vundle/.git/")))
     echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
     if nr2char(getchar()) ==? 'y'
         "!git clone --dept=1 https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        "while upstream vundle doesn't merge shadow cloning, use own vundle version
         !git clone --dept=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
     endif
     "call inputrestore()
@@ -263,8 +264,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "map <leader>di :DIstart <CR>
         "map <leader>ds :DIstop <CR>
 
-    "Bundle 'ciaranm/securemodelines'
-        "enable secure modelines (http://www.vim.org/scripts/script.php?script_id=1876)
+    Bundle 'chilicuil/securemodelines'
         "let g:secure_modelines_verbose=1
 
     Bundle 'mattn/webapi-vim'
@@ -404,12 +404,6 @@ inoremap <c-h> <Esc><c-w>h
 "nmap <C-W>e :new \| vimshell bash<CR>
 "nmap <C-W>E :vnew \| vimshell bash<CR>
 
-"resize windows
-"noremap <c-left> <c-w><
-"noremap <c-right> <c-w>>
-"noremap <c-down> <c-w>-
-"noremap <c-up> <c-w>+
-
 "tabs manage
 map <c-n> :tabn <CR>
 map <c-p> :tabp <CR>
@@ -458,6 +452,12 @@ noremap <silent> <leader>{ za
 
 "update ~/.vimrc
 map <leader>s :source $MYVIMRC<CR>
+
+"resize windows
+noremap <silent><Leader>< :vertical resize -1<CR>
+noremap <silent><Leader>> :vertical resize +1<CR>
+noremap <silent><Leader>+ :resize -1<CR>
+noremap <silent><Leader>- :resize +1<CR>
 
 "clear highlighted searches
 nmap <silent> <leader>/ :nohlsearch<CR>

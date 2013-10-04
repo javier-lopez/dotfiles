@@ -35,6 +35,8 @@ snippet if
 snippet elif
 	elif [ ${1:condition} ]; then
 		${2:#statements}
+snippet [
+	[ ${1:-z} ${2:"$string"} ]${3}
 snippet for #var
 	for ${1:var}
 	do
