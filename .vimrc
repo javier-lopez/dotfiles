@@ -510,7 +510,8 @@ noremap SS :%!sudo tee > /dev/null %<CR>
 "ZZ :wq!
 
 "overwrite these annoying commands
-cabbr W w
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+"cabbr W w
 cabbr Q q
 cabbr wQ wq
 cabbr WQ wq
