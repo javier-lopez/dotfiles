@@ -494,7 +494,7 @@ snoremap <BS> <BS>i
 map e ea
 
 "make Y consistent with D and C
-nnoremap Y y$
+nnoremap Y "*y$
 
 "don't clobber registers when doing character deletes
 "nnoremap x "_x
