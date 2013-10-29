@@ -1,32 +1,6 @@
 # #!/bin/bash
-snippet header
-	#============================================================================
-	#
-	#          FILE:  `expand('%')`
-	#
-	#         USAGE:  ./`expand('%')`
-	#
-	#   DESCRIPTION:  ${1:---}
-	#
-	#       OPTIONS:  ${2:---}
-	#  REQUIREMENTS:  ${3:---}
-	#        AUTHOR:  ${4:`g:snips_author`} ${5:<`g:snips_authorEmail`>}
-	#       COMPANY:  ${6:---}
-	#       VERSION:  ${7:---}
-	#       CREATED:  `strftime("%d-%m-%Y %H:%M")` 
-	#      REVISION:  ${8:---}
-	#============================================================================
-	${9}
-snippet legal
-	#==========================================================================
-	#  This program is free software; you can redistribute it and/or modify 
-	#  it under the terms of the GNU General Public License as published by 
-	#  the Free Software Foundation; either version 2 of the License, or    
-	#  (at your option) any later version.                                  
-	#==========================================================================
-	${1}
 snippet #!
-	#!/usr/bin/env bash
+	#!/usr/bin/env sh
 	
 snippet if
 	if [ ${1:condition} ]; then
@@ -43,13 +17,17 @@ snippet for #var
 		${2:#statements}
 	done
 snippet for #counter
-	for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do
-		${3:#statements}
-	done
+	${2:i}=0 ; while [ "$$2" -lt $(expr ${1:count}) ]; do
+		$2=$(expr $$2 + 1); ${3:#statements}
+	done 
 snippet while
 	while [ ${1:condition} ]; do
 		${2:#statements}
 	done
+snippet whilec
+	${2:i}=0 ; while [ "$$2" -lt $(expr ${1:count}) ]; do
+		$2=$(expr $$2 + 1); ${3:#statements}
+	done 
 snippet until
 	until [ ${1:condition} ]; do
 		${2:#statements}
@@ -59,49 +37,14 @@ snippet case
 		${2:pattern})
 			${3};;
 	esac
-snippet echo #normal
-	echo -e "${1:String}"${2}
-snippet echo #confirm
-	echo -ne "$LIGHT_RED[*]$DEFAULT ${1:command}"${2}
 snippet fun
-	${1:function} (${2})
+	${1:function}(${2})
 	{
 	    ${3}
 	}
-snippet usage
-	VERSION="${1:0.0.1}"
-	
-	usage()
-	{
-	  echo -e "${2:$ 0}: ${3:General usage description}"
-	  echo -e "  -h  or --help     List available arguments and usage (this message)."
-	  echo -e "  -v  or --version  Print version."
-	  ${4}
-	}
-snippet options
-	if [ $# != 0 ]; then
-	  case ${1:$ 1} in
-	    -h | --help)
-	      usage
-	      exit 0
-	      ;;
-	    -v | --version)
-	      echo $VERSION
-	      exit 0
-	      ;;
-	   ${2:option})
-	      ${3}
-	    *)
-	      echo -e "Error, unknown option: \"$1\""
-	      usage
-	      exit 1
-	      ;;
-	  esac
-	fi
-snippet ifroot
-	# Need to be logged in as root
-	if [ "$(id -u)" != "0" ]; then
-		echo "  Need be root"
-		sleep 2
-		exit  1
-	fi
+snippet basename
+	expr "${1:var}" : '.*/\([^/]*\)'${2}
+snippet echo
+	printf "%s\\n" "${1:var}"${2}
+snippet printf
+	printf "%s\\n" "${1:var}"${2}

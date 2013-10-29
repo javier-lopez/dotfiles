@@ -284,6 +284,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:syntastic_disabled_filetypes = ['ruby', 'php']
         "TODO 07-09-2011 11:32 => make it toogle (open/close), check nerdtree out
         let g:syntastic_ignore_files=['learn/sh']
+        let g:syntastic_ignore_files=['chilicuil.github.com']
         map <silent><leader>e :Errors<CR>
 
     Bundle 'kien/ctrlp.vim'
@@ -456,8 +457,8 @@ map <leader>s :source $MYVIMRC<CR>
 "resize windows
 noremap <silent><Leader>< :vertical resize -1<CR>
 noremap <silent><Leader>> :vertical resize +1<CR>
-noremap <silent><Leader>+ :resize -1<CR>
-noremap <silent><Leader>- :resize +1<CR>
+noremap <silent><Leader>+ :resize +1<CR>
+noremap <silent><Leader>- :resize -1<CR>
 
 "clear highlighted searches
 nmap <silent> <leader>/ :nohlsearch<CR>
