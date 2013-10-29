@@ -185,7 +185,6 @@ bindsym Control+Shift+g exec x-terminal-emulator
 
 # $Alt+Esc dmenu_run
 # -sf purple
-#bindcode $Alt+9 exec dmenu_run -p ">" -i -nb \#000000 -nf \#FFFFFF -sb \#000000 -sf \#7541B9
 bind $Alt+9 exec /usr/local/bin/dmenu-run
 
 # Control+$Alt+e exits i3
@@ -237,12 +236,12 @@ bindcode $Altgr+59 exec amixer set Master 1-
 #bind Control+Shift+21 exec amixer set Master 1+
 bindcode $Altgr+60 exec amixer set Master 1+
 
-# mpd:
-bindsym $Altgr+p exec /usr/local/bin/mpc-toggle
+# mplayer|mpd:
+bindsym $Altgr+p exec /usr/local/bin/music-control pause
 #bind Control+Shift+60 exec mpc next
-bind $Altgr+21 exec mpc next
+bind $Altgr+21 exec /usr/local/bin/music-control next
 #bind Control+Shift+59 exec mpc prev
-bind $Altgr+34 exec mpc prev
+bind $Altgr+34 exec /usr/local/bin/music-control previous
 
 # kills the current app
 bindcode $Altgr+45 kill

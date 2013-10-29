@@ -132,12 +132,14 @@
 .mp3blaster
 .mplayer
 .msf*
+.mtpaint
 .mutt/cache/
 .mutt/certificates
 .mysql*
 .nautilus
 .nbi
 .ncmpcpp
+.neocomplcache
 .neocon
 .netx*
 .newsbeuter
@@ -150,6 +152,7 @@
 .opendict
 .openoffice.org
 .packages.list
+.Prismatik
 .pan2
 .pentadac*
 .pgadmin3
@@ -177,6 +180,7 @@
 .screen*
 .selected_editor
 .service_proxy_dir
+.shellshock
 .sig
 .silc
 .sjeng
