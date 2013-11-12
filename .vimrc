@@ -18,17 +18,13 @@ if has ('gui_running')
     "colorscheme mustang
 else
     set background=dark    "I like dark colors
-    "colorscheme ir_black   "my favorite theme, it's a customized version
+    "colorscheme ir_black
     colorscheme hemisu
-    if &term == "linux"
-        let g:CSApprox_loaded = 1
-        if &lines > 47
-            set lines=47
-        endif
-    endif
-    "if &term=="rxvt-unicode"
-        "set term=builtin_xterm
-        "set term=builtin_ansi
+    "if &term == "linux"
+        "let g:CSApprox_loaded = 1
+        "if &lines > 47
+            "set lines=47
+        "endif
     "endif
 endif
 
@@ -214,7 +210,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     call vundle#rc()
 
     "====github====
-    Bundle 'gmarik/vundle'
+    Bundle 'chilicuil/vundle'
     Bundle 'edsono/vim-matchit'
     "Bundle 'vim-scripts/CRefVim'
         "map <Leader>crn <Plug>CRV_CRefVimNormal
@@ -241,7 +237,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
                     "\passwd=passwd:dbname=test1:host=localhost:port=3306'
 
-    Bundle 'vim-scripts/LargeFile'
+    "Bundle 'vim-scripts/LargeFile'
     "Bundle 'vim-scripts/matrix.vim--Yang'
         "map <leader>x :Matrix<CR>
 
@@ -259,16 +255,12 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "TODO 07-09-2011 11:30 => make it toggle (open/close)
         map <Leader>t <Plug>TaskList
 
-    "Bundle 'godlygeek/csapprox'
     "Bundle 'vim-scripts/DrawIt'
         "map <leader>di :DIstart <CR>
         "map <leader>ds :DIstop <CR>
 
     Bundle 'chilicuil/securemodelines'
         "let g:secure_modelines_verbose=1
-
-    Bundle 'mattn/webapi-vim'
-    Bundle 'mattn/gist-vim'
 
     Bundle 'scrooloose/syntastic'
         set statusline+=\ %#warningmsg#
@@ -289,7 +281,9 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
 
     Bundle 'kien/ctrlp.vim'
         let g:ctrlp_map = '<leader>f'
+        let g:ctrlp_use_caching = 1
         let g:ctrlp_clear_cache_on_exit = 0
+        "let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
         "let g:ctrlp_user_command = 'find %s -type f'
         "
     Bundle 'Lokaltog/vim-easymotion'
@@ -314,7 +308,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "Bundle 'mattn/zencoding-vim'
         "let g:user_zen_leader_key = '<c-y>'
         "let g:use_zen_complete_tag = 1
-    "Bundle 'gmarik/github-search.vim'
+    Bundle 'bogado/file-line'
 
 
     "===vim-scripts===, not hosted in github for some obscure reason
@@ -330,7 +324,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
 
 
     "===experimental===
-
     "Bundle 'xolox/vim-easytags'
         "let g:easytags_file                    = '~/.ctags/tags'
         "let g:easytags_always_enabled         = 1
@@ -340,25 +333,11 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:easytags_suppress_ctags_warning = 1
         "set tags=./.tags;,~/ctags/tags
 
-    Bundle 'goldfeld/vim-seek'
-    Bundle 'bogado/file-line'
-    "Bundle 'terryma/vim-multiple-cursors'
-    "Default mapping
-    "let g:multi_cursor_use_default_mapping=0
-    "let g:multi_cursor_next_key='<C-n>'
-    "let g:multi_cursor_prev_key='<C-p>'
-    "let g:multi_cursor_skip_key='<C-x>'
-    "let g:multi_cursor_quit_key='<Esc>'
-    Bundle 'tpope/vim-fugitive'
-    Bundle 'gregsexton/gitv'
-
 
     "===discarted===
-    "Bundle 'chilicuil/conque'
-    "Bundle 'chilicuil/taglist.vim'
-
+    "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
     "Bundle 'FindMate'                      "ctrlp.vim ftw!
-    "Bundle 'tomtom/viki_vim'
+    "Bundle 'tomtom/viki_vim'               "what's this anyway?
 
     "Bundle 'vim-scripts/AutoComplPop'      "good for some time but finally abandoned
         "let g:acp_behaviorKeywordLength    = 4
@@ -379,6 +358,21 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "Bundle 'jistr/vim-nerdtree-tabs'       "nerdtree is faster without it
     "Bundle 'dahu/Insertlessly'             "what's this anyway?
     "Bundle 'Townk/vim-autoclose'           "what's this anyway?
+    "Bundle 'tpope/vim-fugitive'            "too slow
+    "Bundle 'godlygeek/csapprox'            "pretty but too slow
+    "Bundle 'mattn/webapi-vim'              "sprunge ftw!
+    "Bundle 'mattn/gist-vim'                "sprunge ftw!
+    "Bundle 'gmarik/github-search.vim'      "what's this anyway?
+    "Bundle 'goldfeld/vim-seek'             "easymotion.vim ftw!
+    "Bundle 'gregsexton/gitv'               "what's this anyway?
+    
+    "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
+    "Default mapping
+    "let g:multi_cursor_use_default_mapping=0
+    "let g:multi_cursor_next_key='<C-n>'
+    "let g:multi_cursor_prev_key='<C-p>'
+    "let g:multi_cursor_skip_key='<C-x>'
+    "let g:multi_cursor_quit_key='<Esc>'
 endif
 
 "===============================================================================
@@ -416,9 +410,6 @@ map <c-w> :tabclose <CR>
 " I write '*/' on --insert-- mode where '*' is a wildcard
 "map! <c-x> <esc>:confirm qall<CR>
 
-" Ctrl-L clears the highlight from the last search
-"noremap <C-l> :nohlsearch<CR><C-l>
-"noremap! <C-l> <ESC>:nohlsearch<CR><C-l>
 "source $VIMRUNTIME/ftplugin/man.vim
 "nnoremap K :Man <C-R><C-W><CR>
 
@@ -429,9 +420,6 @@ map <c-x> :confirm qall<CR>
 
 "m'ak'e
 map <silent> <leader>mk :make<CR>
-
-"online doc search
-map <silent> <leader>gs :call GoogleSnippets()<CR>
 
 "trailer map
 map <silent> <leader>v :call Trailer()<CR>
@@ -446,10 +434,6 @@ map <silent> <leader>w :WordMode<CR>
 map <silent> <leader>d :DevMode<CR>
 map <silent> <leader>p :PresentationMode<CR>
 map <silent> <leader>f :DefaultMode<CR>
-
-"folding
-map <silent> <leader>} :call Folding()<CR>
-noremap <silent> <leader>{ za
 
 "update ~/.vimrc
 map <leader>s :source $MYVIMRC<CR>
@@ -480,7 +464,7 @@ map ; :
 nnoremap ' `
 nnoremap ` '
 
-"you don't wanna go far away just to press <Esc>, take care when pasting stuff
+"I dont wanna go far away just to press <Esc>, take care when pasting stuff
 inoremap jj <Esc>
 
 "insert a space in normal mode
@@ -495,7 +479,7 @@ snoremap <BS> <BS>i
 map e ea
 
 "make Y consistent with D and C
-nnoremap Y "*y$
+nnoremap Y y$
 
 "don't clobber registers when doing character deletes
 "nnoremap x "_x
@@ -514,6 +498,7 @@ noremap SS :%!sudo tee > /dev/null %<CR>
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 "cabbr W w
 cabbr Q q
+cabbr Q q
 cabbr wQ wq
 cabbr WQ wq
 cabbr Wq wq
@@ -522,8 +507,7 @@ noremap <HOME> ^
 noremap <END> $
 
 "this will work only on the gui version, most terminal are unable to
-"determinate the difference between <home> and <m-home>, thanks to scroolose
-"for the tip
+"determinate the difference between <home> and <m-home>
 
 noremap <M-HOME> gg
 noremap <M-END> G
@@ -540,6 +524,7 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 "================================ Custom functions =============================
 "===============================================================================
 
+command! DevMode          call Dev_mode()
 command! WordMode         call Word_mode()
 command! DevMode          call Dev_mode()
 command! PresentationMode call Presentation_mode()
@@ -555,35 +540,6 @@ function! AddCscope() "Add a session only if doesn't exist a previous one
     catch /E563:/
         return
     endtry
-endfunction
-
-" vimtip #1354
-function! GoogleSnippets()
-    let s:browser         = "firefox" "or whatever browser you prefer
-    "TODO 17-11-2009 13:10 => Open it in a quickfix window
-    let s:wordUnderCursor = expand("<cword>")
-
-    if &ft == "cpp" || &ft == "c" || &ft == "ruby" || &ft == "php"
-        let s:url = "http://www.google.com/codesearch?q="
-                    \.s:wordUnderCursor."+lang:".&ft
-    elseif  &ft == "html" || &ft == "css" || &ft == "perl"
-        let s:url = "http://www.google.com/codesearch?q="
-                    \.s:wordUnderCursor."+lang:".&ft
-    elseif &ft == "java" || &ft == "sh" || &ft == "tex"
-        let s:url = "http://www.google.com/codesearch?q="
-                    \.s:wordUnderCursor."+lang:".&ft
-    elseif &ft == "vim" || &ft == "python" || &ft =="javascript"
-        let s:url = "http://www.google.com/codesearch?q="
-                    \.s:wordUnderCursor."+lang:".&ft
-    else
-        echohl WarningMsg| echo "Filetype unknown" |echohl None
-        return
-    endif
-
-    let s:cmd = "silent !" . s:browser . " " . s:url. " 2> /dev/null &"
-    execute  s:cmd
-    redraw!
-    echo "Looking google code (" . &ft . ") for \"" . s:wordUnderCursor . "\": " . s:url
 endfunction
 
 function! Nerd_tree() "need it to force close it, when changing between my
@@ -634,14 +590,6 @@ function! VCSInfo()
     return g:vcs_cache[l:path]
 endfunction
 
-function! <SID>FixMiniBufExplorerTitle()
-    if "-MiniBufExplorer-" == bufname("%")
-        setlocal statusline=%2*%-3.3n%0*
-        setlocal statusline+=\[Buffers\]
-        setlocal statusline+=%=%2*\ %<%P
-    endif
-endfunction
-
 "http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
@@ -671,18 +619,6 @@ function! Trailer()
         set fillchars=fold:-
         echo "[Trailer on]"
         let s:trailer = 1
-    endif
-endfunction
-
-function! Folding()
-    if exists ("s:folding")
-        set foldenable!                "off by default
-        echo "[Folding off]"
-        unlet s:folding
-    else
-        set foldenable!                "off by default
-        echo "[Folding on]"
-        let s:folding = 1
     endif
 endfunction
 
@@ -719,7 +655,6 @@ function! AppendModeline()
 endfunction
 
 function! SetProperties(_language)
-
     if (a:_language == "c")
         set syntax  =c
         set makeprg =LANGUAGE=en\ CFLAGS='-g\ -Wall'\ make\ %:r
