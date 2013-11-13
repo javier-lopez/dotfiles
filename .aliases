@@ -1,0 +1,45 @@
+#custom aliases
+[ -f /usr/local/bin/wcd ] && alias cd='. wcd'
+[ -f /usr/local/bin/rm_ ] && { alias rm.rf='rm_ -f'; alias rm='rm_'; } || alias rm.rf='rm -rf'
+[ -f /usr/local/bin/vw ] && alias feh='vw'
+[ -f /usr/bin/colormake ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
+
+alias a='aliazator'
+alias e='extract'
+alias c='compress'
+alias mkdir='mkdir -vp'
+alias md='mkdir -vp'
+alias mv='mv -v'
+alias cp='cp -v'
+alias ztup='setup'
+alias fu-search="fu-search -c"
+alias eix.exact='eix --exact'
+alias print.192.168.1.11='rlpr -h -Plp -H192.168.1.11'
+alias simple-server='sudo python -m SimpleHTTPServer'
+alias key.lookup='xev'
+alias rip='abcde -o mp3'
+alias barstatus.off='killall conky dzen2 > /dev/null 2>&1'
+alias barstatus.on='barstatus.off; (conky | dzen2  -x 350 -y 749 -fn Inconsolata:size=9 -ta r -fg "#999999" -bg "#000000" &) 2> /dev/null'
+alias irssi='irssi --config=<(gpg -d $HOME/.irssi/config.gpg)'
+alias pagekite='pagekite --optfile=<(gpg -d $HOME/.pagekite.rc.gpg)'
+alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
+alias listen-ports='sudo lsof -i -P | grep -i listen'
+
+#ubuntu-dev
+alias bzr.debuild='bzr bd -- -S -uc -us'
+alias ccache.ubuntu='CCACHE_DIR=$HOME/.ccache_ubuntu ccache'
+
+#see version installed vs the updated one (in repositories)
+alias policy='apt-cache policy'
+
+alias pbuilder.precise.i386='sudo DIST=precise ARCH=i386 pbuilder'
+alias pbuilder.quantal.i386='sudo DIST=quantal ARCH=i386 pbuilder'
+alias pbuilder.raring.i386='sudo DIST=raring ARCH=i386 pbuilder'
+alias pbuilder.saucy.i386='sudo DIST=saucy ARCH=i386 pbuilder'
+alias pbuilder.sid.i386='sudo DIST=sid ARCH=i386 pbuilder'
+
+alias pbuilder.precise.amd64='sudo DIST=precise ARCH=amd64 pbuilder'
+alias pbuilder.quantal.amd64='sudo DIST=quantal ARCH=amd64 pbuilder'
+alias pbuilder.raring.amd64='sudo DIST=raring ARCH=amd64 pbuilder'
+alias pbuilder.saucy.amd64='sudo DIST=saucy ARCH=amd64 pbuilder'
+alias pbuilder.sid.amd64='sudo DIST=sid ARCH=amd64 pbuilder'
