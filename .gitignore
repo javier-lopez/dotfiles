@@ -6,6 +6,7 @@
 
 #But ignore these
 .AbiSuite
+.arduino
 .sxiv
 .remmina
 .adobe
@@ -41,6 +42,7 @@
 .dmrc
 .DownloadManager
 .dreampie
+.dvdcss/
 .dynamag
 .e
 .easy_e17.conf*
@@ -181,6 +183,7 @@
 .selected_editor
 .service_proxy_dir
 .shellshock
+.shundle*
 .sig
 .silc
 .sjeng
@@ -211,6 +214,7 @@
 .tucan
 .update-*
 .vagalume
+.vagrant*
 .viminf*
 .vimperator/info
 .vim/.twitvim_token_file

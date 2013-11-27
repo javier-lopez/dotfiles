@@ -47,6 +47,7 @@ Shortcuts (~/.i3/config, ~/.i3/shortcuts)
 
 <ctrl><alt><supr>  => open a session menu (requires dmenu)
 <ctrl><alt><l>     => lock the screen (requires i3lock)
+<alt><right-shift> => change keyboard layout
 
 Modes
 -----
