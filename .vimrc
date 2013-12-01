@@ -324,6 +324,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
 
 
     "===experimental===
+    Bundle 'airblade/vim-gitgutter'
     "Bundle 'xolox/vim-easytags'
         "let g:easytags_file                    = '~/.ctags/tags'
         "let g:easytags_always_enabled         = 1
@@ -365,6 +366,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "Bundle 'gmarik/github-search.vim'      "what's this anyway?
     "Bundle 'goldfeld/vim-seek'             "easymotion.vim ftw!
     "Bundle 'gregsexton/gitv'               "what's this anyway?
+    "Bundle 'akiomik/git-gutter-vim'        "doesn't work
     
     "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
     "Default mapping
