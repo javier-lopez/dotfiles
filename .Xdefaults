@@ -73,8 +73,8 @@ URxvt.cutchars:         "\\ `\"\'()*;<>[]{|}&,=?@^\:"
 
 ! === Plugins ===
 URxvt.perl-lib:         /home/chilicuil/.urxvt/
-!URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard
-URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard,cursortail
+URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard
+!URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard,cursortail
 
 !urlLauncher settings
 URxvt.keysym.M-g:       perl:mark-yank-urls:activate_mark_mode
