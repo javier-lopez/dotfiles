@@ -53,7 +53,7 @@ TEXT
  | ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/diskette.xbm) ${fs_used_perc }%\
  ~ ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/diskette.xbm) ${fs_used_perc /home}%\
  | ${if_up wlan0}^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/wifi_01.xbm) wlan0 ${downspeed wlan0} ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/net_down_03.xbm) ${addr wlan0}${endif}\
-${if_up eth0}^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/net_wired.xbm) eth0 ${downspeed eth0} ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/net_down_03.xbm) ${addr eth0}${endif} \
+${if_up eth0} ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/net_wired.xbm) eth0 ${downspeed eth0} ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/net_down_03.xbm) ${addr eth0}${endif} \
 | ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/cpu.xbm) ${cpu cpu0}% \
 ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/mem.xbm) ${memperc}% | \
 ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/bat_full_01.xbm) ${battery_percent BAT1}%\
