@@ -29,4 +29,10 @@ highlight Type       term=bold ctermfg=magenta cterm=none guifg=magenta gui=none
 highlight String     term=none ctermfg=red     cterm=none guifg=red     gui=none
 highlight Number     term=none ctermfg=red     cterm=none guifg=red     gui=none
 
+hi SignifyLineAdd guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineChange guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineDelete guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifySignAdd guifg=#65b042 ctermfg=78
+hi SignifySignChange guifg=#3387cc ctermfg=105
+hi SignifySignDelete guifg=#ff0000 ctermfg=202
 " vim:ts=2:sw=2:et

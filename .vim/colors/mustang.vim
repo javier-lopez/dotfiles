@@ -54,3 +54,9 @@ hi Todo         guifg=#000000 guibg=#e6ea50 gui=italic
 " Code-specific colors
 hi pythonOperator guifg=#7e8aa2 gui=none ctermfg=103
 
+hi SignifyLineAdd guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineChange guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineDelete guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifySignAdd guifg=#65b042 ctermfg=78
+hi SignifySignChange guifg=#3387cc ctermfg=105
+hi SignifySignDelete guifg=#ff0000 ctermfg=202

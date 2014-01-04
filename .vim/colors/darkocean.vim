@@ -57,3 +57,10 @@ hi Error          gui=None            guibg=#b22222    guifg=#ffffe0
 hi Todo           gui=None            guibg=#507080    guifg=#3bcccc
 hi Ignore         gui=None            guibg=bg         guifg=#777777
 hi TagName        gui=None            guibg=#660000    guifg=#a7a7a7
+
+hi SignifyLineAdd guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineChange guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineDelete guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifySignAdd guifg=#65b042 ctermfg=78
+hi SignifySignChange guifg=#3387cc ctermfg=105
+hi SignifySignDelete guifg=#ff0000 ctermfg=202

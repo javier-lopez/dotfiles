@@ -206,5 +206,11 @@ hi link javaScriptNumber      Number
 " Special for CSharp
 hi  link csXmlTag             Keyword      
 
+hi SignifyLineAdd guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineChange guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineDelete guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifySignAdd guifg=#65b042 ctermfg=78
+hi SignifySignChange guifg=#3387cc ctermfg=105
+hi SignifySignDelete guifg=#ff0000 ctermfg=202
 
 " Special for PHP

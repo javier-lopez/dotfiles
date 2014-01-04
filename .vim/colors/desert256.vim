@@ -343,4 +343,11 @@ else
     hi Error         cterm=bold ctermfg=7 ctermbg=1
 endif
 
+hi SignifyLineAdd guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineChange guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifyLineDelete guifg=#7c7c7c guibg=#000000 gui=NONE
+hi SignifySignAdd guifg=#65b042 ctermfg=78
+hi SignifySignChange guifg=#3387cc ctermfg=105
+hi SignifySignDelete guifg=#ff0000 ctermfg=202
+
 " vim: set fdl=0 fdm=marker:
