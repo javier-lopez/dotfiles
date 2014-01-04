@@ -1,37 +1,31 @@
 "-------------------------------------------------------------------------------
-"           Last review            Mon 13 May 2013 01:00:00 AM CDT
+"           Last review            Sat 04 Jan 2014 02:03:58 AM CST
 "-------------------------------------------------------------------------------
 "
 "===============================================================================
 "============================== General settings ===============================
 "===============================================================================
 
+"TODO 04-01-2014 03:02 >> create plugins for as many functions as possible
+
 if v:version < 700
-    echo "This vimrc file use features than are only available on vim 7.0 or greater"
+    echoerr "This vimrc file use features than are only available on vim 7.0 or greater"
+    finish
 endif
 
 if has ('gui_running')
-    set background=dark     "I like dark colors
-    set gfn=Monaco\ for\ Powerline\ 8
+    set background=dark
+    set gfn=Monaco
     "set gfn=Inconsolata\ Medium\ 10
     colorscheme ir_black
-    "colorscheme mustang
 else
-    set background=dark    "I like dark colors
-    "colorscheme ir_black
+    set background=dark
     colorscheme hemisu
-    "if &term == "linux"
-        "let g:CSApprox_loaded = 1
-        "if &lines > 47
-            "set lines=47
-        "endif
-    "endif
 endif
 
 set modelines=0        "http://www.guninski.com/vim1.html
 set nocompatible       "breaks compatibility with vi, required
 set noexrc             "don't use local version of .(g)vimrc, .exrc
-syntax on
 set lazyredraw         "do not redraw the screen while macros are running. It
                        "improves performance
 set ttyfast            "indicates a fast terminal connection
@@ -40,13 +34,14 @@ set history=100        "record last 100 commands, press 'q:' to see a new
 set t_Co=256           "set 256 colors. Make sure your console supports it.
                        "gnome-terminal and konsole work well
 set report=0           "report any changes
-set nowritebackup
+set nowritebackup      "bye .swp madness
 set nobackup           "turn backup off
 set noswapfile
 set tabpagemax=200     "max open tabs at the same time
 set autowrite
 set autoread           "watch for file changes by other programs
 set encoding=utf-8     "utf is able to represent any character
+set fileencoding=utf-8
 set ruler              "show the cursor position all the time
 set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
@@ -67,10 +62,9 @@ set softtabstop=4      "vim sees 4 spaces as a tab
 set shiftwidth=4       "indentation
 set expandtab          "tabs mutate into spaces, if you wanna insert "real"
                        "tabs use Ctrl-v <tab> instance
-"set textwidth=80
 set splitright         "split vertically to the right.
 set splitbelow         "split horizontally below.
-"set cursorline         "highlight the screen line of the cursor
+"set cursorline         "highlight the screen line of the cursor, slow!
 set nostartofline
 set nofsync            "improves performance, let OS decide when to flush disk
 set showmatch          "when closing a block, show the matching bracket.
@@ -81,23 +75,19 @@ set cscopetag          "use both cscope and ctag for 'ctrl-]'
 set csto=0             "gives preference to cscope over ctag
 "set cscopeverbose
 set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
-                       "just press F5 when you are going to
-                       "paste several lines of text so they won't
-                       "be indented.
+                       "just press F5 when you are going to paste several lines
+                       "of text so they don't "be indented.
 "set mousehide         "hide the mouse while typying
 "set mouse=nv          "set the mouse to work in console mode
 "set clipboard=unnamed
-set clipboard=unnamedplus         "yanks go on clipboard instead, "+p to make recover the x11 clipboard
-                                  "use xsel hacks if your vim version has no "clipboad-x11 support
+set clipboard=unnamedplus      "yanks go on clipboard instead, "+p to make recover the x11 clipboard
+                               "use xsel hacks if your vim version has no "clipboad-x11 support
 
-set backspace=indent,eol,start     "make backspace works like in other editors.
-filetype plugin indent on          "enable filetype-specific plugins
-
-"remember not as much as possible
-set viminfo='100,<100,s10,h
+set backspace=indent,eol,start "make backspace works like in other editors.
+set viminfo='100,<100,s10,h    "remember not as much as possible
 
 "Folding
-set foldenable!                    "off by default
+set foldenable!                "off by default
 set foldmethod=syntax
 "set foldmarker={,}
 
@@ -105,40 +95,46 @@ set foldmethod=syntax
 let html_use_css       = 1
 let html_dynamic_folds = 1
 
-let mapleader = ","
+"<leader>
+let mapleader          = ","
+
+syntax on
+filetype plugin indent on                 "enable filetype-specific plugins
 setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 
 "===============================================================================
 "================================ Autoloads by events ==========================
 "===============================================================================
 
-" Go back to the position the cursor was on the last time this file was edited
 if has("autocmd")
+    "Go back to the position the cursor was on the last time this file was edited
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \|execute("normal '\"")|endif
 
-    "Sourced from vim tip: http://vim.wikia.com/wiki/Keep_folds_closed_while_inserting_text
-    "autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-    "autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
-endif
+    "turn off any existing search
+    autocmd VimEnter * nohls
 
-"Language specific settings
-if has("autocmd")
-    "Behaviour :
-    autocmd BufNewFile,BufEnter *.php,*.php3,*.php4                                     call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.php5,*.inc,*schema                                    call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.engine,*.ctp                                          call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.html,*.xml                                            call SetProperties("html")
-    autocmd BufNewFile,BufEnter *.c,*.h                                                 call SetProperties("c")
-    autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml                                     call SetProperties("perl")
-    autocmd BufNewFile,BufEnter *[mM]akefile,*.mk                                       call SetProperties("make")
-    autocmd BufNewFile,BufEnter *.java                                                  call SetProperties("java")
-    autocmd BufNewFile,BufEnter *.sh,*.bash                                             call SetProperties("bash")
-    autocmd BufNewFile,BufEnter *.{md,mdown,mkd,mkdn,markdown,mdwn,todo,notes,mn}       call SetProperties("markdown")
+    "quickly browse: http://vim.wikia.com/wiki/Mapping_to_quickly_browse_help
+    autocmd filetype help :nnoremap <buffer><CR> <c-]>
+    autocmd filetype help :nnoremap <buffer><BS> <c-T>
 
-    "Skeletons :
+    "behaviour per lang:
+    autocmd BufNewFile,BufEnter *.php,*.php3,*.php4  call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.php5,*.inc,*schema call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.engine,*.ctp       call SetProperties("php")
+    autocmd BufNewFile,BufEnter *.html,*.xml         call SetProperties("html")
+    autocmd BufNewFile,BufEnter *.c,*.h              call SetProperties("c")
+    autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml  call SetProperties("perl")
+    autocmd BufNewFile,BufEnter *[mM]akefile,*.mk    call SetProperties("make")
+    autocmd BufNewFile,BufEnter *.java               call SetProperties("java")
+    autocmd BufNewFile,BufEnter *.sh,*.bash          call SetProperties("bash")
+    autocmd BufNewFile,BufEnter *.{md,mdown,mkd}     call SetProperties("markdown")
+    autocmd BufNewFile,BufEnter *.{mkdn,markdown}    call SetProperties("markdown")
+    autocmd BufNewFile,BufEnter *.{mdwn,todo,notes}  call SetProperties("markdown")
+
+    "skeletons:
     autocmd BufNewFile *.rb,*.ruby,*.eruby           call Skel("ruby")
-    autocmd BufNewFile *.sh,*.bash                   call Skel("bash")
+    autocmd BufNewFile *.sh,*.bash                   call Skel("sh")
     autocmd BufNewFile *.tex                         call Skel("tex")
     autocmd BufNewFile *.py,*.python                 call Skel("python")
     autocmd BufNewFile *.html                        call Skel("html")
@@ -146,19 +142,11 @@ if has("autocmd")
     autocmd BufNewFile *.php,*.php3,*.php4,*.php5    call Skel("php")
     autocmd BufNewFile *schema,*.inc,*.engine,*.ctp  call Skel("php")
     autocmd BufNewFile *.c                           call Skel("c")
-
-    " turn off any existing search
-    autocmd VimEnter * nohls
-
-    " quickly browse : http://vim.wikia.com/wiki/Mapping_to_quickly_browse_help
-    autocmd filetype help :nnoremap <buffer><CR> <c-]>
-    autocmd filetype help :nnoremap <buffer><BS> <c-T>
 endif
 
 "====== Status Line ======
 "Nice statusline taken mostly from
 "http://github.com/ciaranm/dotfiles-ciaranm/raw/master/vimrc
-
 set laststatus=2                                         "always show statusline
 set statusline=
 set statusline+=%2*%-2n                                  "buffer number
@@ -180,29 +168,17 @@ set statusline+=%-7{FileSize()}                          "file size
 "set statusline+=%-14.(%l,%c%V%)\ %<%P                    "offset
 set statusline+=%-8.(%l,%c%V%)\ %P                       "offset
 
-" special statusbar for special windows
-if has("autocmd")
-    au FileType qf
-                \ if &buftype == "quickfix" |
-                \     setlocal statusline=%2*%-3.3n%0* |
-                \     setlocal statusline+=\ \[Compiler\ Messages\] |
-                \     setlocal statusline+=%=%2*\ %<%P |
-                \ endif
-endif
-
 "===============================================================================
 "================================ Plugins config  ==============================
 "===============================================================================
 
 if !isdirectory(expand(expand("~/.vim/bundle/vundle/.git/")))
-    "call inputsave()
     echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
     if nr2char(getchar()) ==? 'y'
         "!git clone --dept=1 https://github.com/gmarik/vundle ~/.vim/bundle/vundle
         "while upstream vundle doesn't merge shadow cloning, use own vundle version
         !git clone --dept=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
     endif
-    "call inputrestore()
 endif
 
 if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
@@ -216,55 +192,40 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "map <Leader>crn <Plug>CRV_CRefVimNormal
         "map <Leader>caw <Plug>CRV_CRefVimAsk
         "map <Leader>cvi <Plug>CRV_CRefVimInvoke
-
     Bundle 'scrooloose/nerdtree'
-        let g:NERDTreeWinPos      = 'right'
-        let g:NERDTreeWinSize     = 25
-        let g:NERDTreeMouseMode   = 3
-
+        let g:NERDTreeWinPos         = 'right'
+        let g:NERDTreeWinSize        = 25
+        let g:NERDTreeMouseMode      = 3
     Bundle 'msanders/snipmate.vim'
-        let g:snips_author      = "Javier Lopez"
-        let g:snips_authorEmail = "m@javier.io"
-        let g:snippets_dir      = "~/.vim/extra-snippets/"
-
+        let g:snips_author           = "Javier Lopez"
+        let g:snips_authorEmail      = "m@javier.io"
+        let g:snippets_dir           = "~/.vim/extra-snippets/"
     Bundle 'majutsushi/tagbar'
-        let g:tagbar_left  = 1
-        let g:tagbar_width = 25
-
-    "Bundle 'chilicuil/dbext.vim'
-        "let g:dbext_default_history_size = 100
-        ""let g:dbext_default_profile     = 'mysql_test1'
-        "let g:dbext_default_profile_mysql_test1 = 'type=MYSQL:user=chilicuil:
-                    "\passwd=passwd:dbname=test1:host=localhost:port=3306'
-
-    "Bundle 'vim-scripts/LargeFile'
+        let g:tagbar_left            = 1
+        let g:tagbar_width           = 25
+    Bundle 'vim-scripts/LargeFile'
     "Bundle 'vim-scripts/matrix.vim--Yang'
         "map <leader>x :Matrix<CR>
-
     Bundle 'chilicuil/nextCS'
     "Bundle 'chilicuil/TeTrIs.vim'
         "nmap <Leader>te :cal <SID>Main()<CR>
-
     Bundle 'chilicuil/vimbuddy.vim'
     Bundle 'scrooloose/nerdcommenter'
+        let g:NERDCustomDelimiters   = {'mkd': { 'left': '<!--', 'right': '-->'}}
     Bundle 'vim-scripts/TaskList.vim'
-        "let g:Tlist_Use_Right_Window = 1
-        let g:Tlist_WinWidth          = 25
-        let g:Tlist_Show_One_File     = 1
-        let Tlist_Enable_Fold_Column  = 0
+        let g:Tlist_WinWidth         = 25
+        let g:Tlist_Show_One_File    = 1
+        let Tlist_Enable_Fold_Column = 0
         "TODO 07-09-2011 11:30 => make it toggle (open/close)
         map <Leader>t <Plug>TaskList
-
     "Bundle 'vim-scripts/DrawIt'
         "map <leader>di :DIstart <CR>
         "map <leader>ds :DIstop <CR>
-
     Bundle 'chilicuil/securemodelines'
         "let g:secure_modelines_verbose=1
-
-    Bundle 'scrooloose/syntastic'
-        set statusline+=\ %#warningmsg#
-        set statusline+=%{SyntasticStatuslineFlag()}
+    "Bundle 'scrooloose/syntastic'
+        "set statusline+=\ %#warningmsg#
+        "set statusline+=%{SyntasticStatuslineFlag()}
         "use this option to tell syntastic to automatically open a list when a buffer
         "has errors (:Errors)
         "let g:syntastic_auto_loc_list=1
@@ -275,56 +236,63 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "use this option to disable syntax checking on selected filetypes
         "let g:syntastic_disabled_filetypes = ['ruby', 'php']
         "TODO 07-09-2011 11:32 => make it toogle (open/close), check nerdtree out
-        let g:syntastic_ignore_files=['learn/sh']
-        let g:syntastic_ignore_files=['chilicuil.github.com']
-        map <silent><leader>e :Errors<CR>
-
+        "let g:syntastic_ignore_files=['learn/sh']
+        "let g:syntastic_ignore_files=['chilicuil.github.com']
+        "map <silent><leader>e :Errors<CR>
     Bundle 'kien/ctrlp.vim'
-        let g:ctrlp_map = '<leader>f'
-        let g:ctrlp_use_caching = 1
-        let g:ctrlp_clear_cache_on_exit = 0
+        let g:ctrlp_map                                    = '<leader>f'
+        let g:ctrlp_use_caching                            = 1
+        let g:ctrlp_clear_cache_on_exit                    = 0
         "let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
         "let g:ctrlp_user_command = 'find %s -type f'
-        "
     Bundle 'Lokaltog/vim-easymotion'
-        let g:EasyMotion_leader_key = '<leader><leader>'
-
+        let g:EasyMotion_leader_key                        = '<leader><leader>'
     Bundle 'chilicuil/vim-markdown'
     Bundle 'chilicuil/vim-sprunge'
-
     Bundle 'Shougo/neocomplcache'
-        let g:neocomplcache_enable_at_startup = 1
-        let g:neocomplcache_max_list = 20
-        let g:neocomplcache_max_menu_width = 10
-        let g:neocomplcache_auto_completion_start_length = 4
+        let g:neocomplcache_enable_at_startup              = 1
+        let g:neocomplcache_max_list                       = 10
+        let g:neocomplcache_max_menu_width                 = 10
+        let g:neocomplcache_auto_completion_start_length   = 4
         let g:neocomplcache_manual_completion_start_length = 4
-        let g:neocomplcache_enable_auto_select = 1
-        let g:neocomplcache_enable_auto_delimiter = 1
-        let g:neocomplcache_disable_auto_complete = 0
-        let g:neocomplcache_enable_wildcard = 1
-        let g:neocomplcache_enable_caching_message = 1
-        imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-
+        let g:neocomplcache_enable_auto_select             = 1
+        let g:neocomplcache_enable_auto_delimiter          = 1
+        let g:neocomplcache_disable_auto_complete          = 0
+        let g:neocomplcache_enable_wildcard                = 1
+        let g:neocomplcache_enable_caching_message         = 1
     "Bundle 'mattn/zencoding-vim'
         "let g:user_zen_leader_key = '<c-y>'
         "let g:use_zen_complete_tag = 1
     Bundle 'bogado/file-line'
 
-
     "===vim-scripts===, not hosted in github for some obscure reason
     Bundle 'QuickBuf'
         let g:qb_hotkey = "<F2>"
-
     Bundle 'surround.vim'
         " ds" / cs"' / ysiw'
-
     Bundle 'repeat.vim'
     Bundle 'IndexedSearch'
     Bundle 'gnupg.vim'
 
-
     "===experimental===
-    Bundle 'airblade/vim-gitgutter'
+    Bundle 'mhinz/vim-signify'
+        let g:signify_vcs_list               = [ 'git' ]
+        let g:signify_sign_add               = '+'
+        let g:signify_sign_change            = '~'
+        let g:signify_sign_delete            = '-'
+        let g:signify_sign_delete_first_line = '‾'
+        hi SignifyLineAdd guifg=#7c7c7c guibg=#000000 gui=NONE
+        hi SignifyLineChange guifg=#7c7c7c guibg=#000000 gui=NONE
+        hi SignifyLineDelete guifg=#7c7c7c guibg=#000000 gui=NONE
+        hi SignifySignAdd guifg=#65b042 ctermfg=78
+        hi SignifySignChange guifg=#3387cc ctermfg=105
+        hi SignifySignDelete guifg=#ff0000 ctermfg=202
+    Bundle '2072/PHP-Indenting-for-VIm'
+    Bundle 'junegunn/vim-easy-align'
+        command! -nargs=* -range -bang Align
+        \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
+        vmap . <Plug>(EasyAlignRepeat)
+        nmap <Leader>a <Plug>(EasyAlign)
     "Bundle 'xolox/vim-easytags'
         "let g:easytags_file                    = '~/.ctags/tags'
         "let g:easytags_always_enabled         = 1
@@ -334,20 +302,17 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:easytags_suppress_ctags_warning = 1
         "set tags=./.tags;,~/ctags/tags
 
-
     "===discarted===
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
     "Bundle 'FindMate'                      "ctrlp.vim ftw!
     "Bundle 'tomtom/viki_vim'               "what's this anyway?
-
-    "Bundle 'vim-scripts/AutoComplPop'      "good for some time but finally abandoned
+    "Bundle 'vim-scripts/AutoComplPop'      "good for some time but finally deprecated
         "let g:acp_behaviorKeywordLength    = 4
         "let g:acp_mappingDriven            = 1
         "let g:acp_completeOption           = '.,w,b,t,k,i,d'
         "let g:acp_completeoptPreview       = 1
         ""let g:acp_behaviorSnipmateLength   = 2
         "let g:acp_behaviorPythonOmniLength = -1
-
     "Bundle 'Lokaltog/vim-powerline'        "I prefer my own powerline =)
         "let g:Powerline_cache_enabled = 1
         "let g:Powerline_symbols = 'compatible' "compatible, unicode, fancy
@@ -355,7 +320,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:Powerline_stl_path_style = 'short' "relative, filename, short, full
         "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
         "call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
-
     "Bundle 'jistr/vim-nerdtree-tabs'       "nerdtree is faster without it
     "Bundle 'dahu/Insertlessly'             "what's this anyway?
     "Bundle 'Townk/vim-autoclose'           "what's this anyway?
@@ -367,14 +331,9 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "Bundle 'goldfeld/vim-seek'             "easymotion.vim ftw!
     "Bundle 'gregsexton/gitv'               "what's this anyway?
     "Bundle 'akiomik/git-gutter-vim'        "doesn't work
-    
+    "Bundle 'luxflux/vim-git-inline-diff'   "too slow
+    "Bundle 'airblade/vim-gitgutter'        "doesn't work
     "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
-    "Default mapping
-    "let g:multi_cursor_use_default_mapping=0
-    "let g:multi_cursor_next_key='<C-n>'
-    "let g:multi_cursor_prev_key='<C-p>'
-    "let g:multi_cursor_skip_key='<C-x>'
-    "let g:multi_cursor_quit_key='<Esc>'
 endif
 
 "===============================================================================
@@ -526,22 +485,22 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 "================================ Custom functions =============================
 "===============================================================================
 
-command! DevMode          call Dev_mode()
-command! WordMode         call Word_mode()
-command! DevMode          call Dev_mode()
-command! PresentationMode call Presentation_mode()
-command! DefaultMode      call Default_mode()
+"TODO 18-12-2013 00:17 >> create plugin
+command! DevMode            call Dev_mode()
+command! WordMode           call Word_mode()
+command! DevMode            call Dev_mode()
+command! PresentationMode   call Presentation_mode()
+command! DefaultMode        call Default_mode()
+command! -nargs=? LongLines call LongLines('<args>')
 
-"TODO 17-11-2009 13:10 => find a way to make it work with differents langs
-function! AddCscope() "Add a session only if doesn't exist a previous one
-    try
-        if !(cscope_connection())
-            silent !cscope -R -b -q
-            cs add cscope.out
-        endif
-    catch /E563:/
-        return
-    endtry
+"got-ravings.blogspot.mx/2009/07/vim-pr0n-combating-long-lines.html
+function! LongLines(width)
+    let targetWidth = a:width != '' ? a:width : 80
+    if targetWidth > 0
+        exec 'match Todo /\%>' . (targetWidth) . 'v/'
+    else
+        echomsg "Usage: LongLines [natural number]"
+    endif
 endfunction
 
 function! Nerd_tree() "need it to force close it, when changing between my
@@ -833,19 +792,8 @@ function! Dev_mode_on()
     "Specific configuration for things that take a long time to finish.
     "TODO 07-11-2011 03:09 => wrap to another function, maybe the same SetProperties
     if &ft =="cpp" || &ft =="c"
-        "autocreate the cscope database and add it to
-        "the current session when we change to :dev mode
-        "call AddCscope()
+        "stuff
     endif
-
-    if &ft =="php" || &ft =="html"
-        "silent !find . -iname '*.php' -o -iname '*.html' > cscope.files\
-        "|cscope -R -b -q|rm cscope.files
-        "call AddCscope()
-    endif
-
-    "'b'uild the database of cscope 'r'ecursively and for all subdirectories.
-    "map <Tab>b <esc>:w<CR>:call AddCscope()<CR>
 
     if !exists("s:nerd_tree")
         call Nerd_tree()          "It allows you to explore your filesystem
