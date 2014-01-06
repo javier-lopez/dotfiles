@@ -15,7 +15,7 @@ endif
 
 if has ('gui_running')
     set background=dark
-    set gfn=Monaco
+    "set gfn=Monaco
     "set gfn=Inconsolata\ Medium\ 10
     colorscheme ir_black
 else
