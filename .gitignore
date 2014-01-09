@@ -140,8 +140,8 @@
 .mysql*
 .nautilus
 .nbi
-.ncmpcpp
 .neocomplcache
+.ncmpcpp/error.log
 .neocon
 .netx*
 .newsbeuter
