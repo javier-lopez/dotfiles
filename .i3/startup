@@ -1,34 +1,39 @@
 #!/bin/sh
 
-#numlockx on &                                 # numlock on
-#setxkbmap -option terminate:ctrl_alt_bksp &   # C-A-BS to kill X
+_exec() {
+    [ -z "$1" ] && return 1
+    if command -v "$1" >/dev/null; then
+        $@ &
+    fi
+}
 
-#xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3 &
-#mplayer -loop 0 -rootwin -ao null -noconsolecontrols $HOME/data/video/earth.mp4 &
+#_exec numlockx on                                 # numlock on
+#_exec setxkbmap -option terminate:ctrl_alt_bksp & # C-A-BS to kill X
+#_exec xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3        # pretty effects
 
-i3-msg workspace "1 www" &
+#_exec mplayer -loop 0 -rootwin -ao null -noconsolecontrols $HOME/data/video/earth.mp4
+
+_exec i3-msg workspace "1 www"
 
 #https://bugs.launchpad.net/ubuntu/+source/dzen2/+bug/486650
-conky | dzen2  -x 350 -y 749 -fn 'Inconsolata:size=9' -ta r -fg "#999999" -bg "#000000" &
+if (command -v "conky" >/dev/null) && (command -v "dzen2" >/dev/null) ; then
+    conky | dzen2  -x 350 -y 749 -fn 'Inconsolata:size=9' -ta r -fg "#999999" -bg "#000000" &
+    #conky | dzen2 -x 350 -y 749 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
+    #conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
+    #conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
+fi
 
-#conky | dzen2 -x 350 -y 749 -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
-#conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
-#conky | dzen2 -dock -fn -xos4-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-1 -ta r -fg "#999999" -bg "#000000" &
-
-/usr/bin/pcmanfm &
-
-#/usr/bin/workrave & #force to take a break ~/.workrave
-#xwrits breaktime=0:20 typetime=5:00 +mouse +lock #helps to take a break every 5 min
+_exec pcmanfm
 
 #urxvt server, nice but it breaks very often
 #urxvtd -q -f -o
 
-/usr/bin/x-terminal-emulator -name scratchpad -e bash &
+_exec x-terminal-emulator -name scratchpad -e bash
 
-autocutsel &                                   #sync X/Gnome clipboards
-#autocutsel -s PRIMARY &
+_exec autocutsel #sync X/Gnome clipboards
+#_exec autocutsel -s PRIMARY
 
-redshift -l 19.41:-99.04 -t 6500:4500 -g 0.8 -v & #protect eyes controlign the amount of light the screen outputs
-#redshift -l 19.41:-99.04 -t 6500:3600 -g 0.8 -v & 
+_exec redshift -l 19.41:-99.04 -t 6500:4500 -g 0.8 #protect eyes by controling the amount of light the screen outputs
+#_exec redshift -l 19.41:-99.04 -t 6500:3600 -g 0.8 -v
 
-unclutter -root -visible & #hide mouse coursor when it isn't used
+#_exec unclutter -root -visible #hide mouse coursor when it isn't used, nice addon, however it brings focus problems to i3

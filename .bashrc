@@ -7,7 +7,7 @@
 #===============================================================================
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && exit
+[ -z "$PS1" ] && return
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 [ $BASH_VERSINFO -ge 4 ] && shopt -s autocd cdspell dirspell
