@@ -1,8 +1,7 @@
 ######################################################################################
-# Last review            Thu 20 Dec 2012 07:00:35 AM CST
+# Last review            Thu 09 Jan 2014 03:20:06 AM CST
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf :
-#  TODO 02-03-2011 09:57 => xbindkeys
 
 # ###################################
 # ############ AUTOSTART ############
@@ -324,6 +323,7 @@ for_window [title="^TeamViewer$"] floating enable
 for_window [title="- TeamViewer -"] floating enable
 for_window [class="Firefox" title="^About Nightly"] floating enable
 for_window [class="Firefox" title="^About Aurora"] floating enable
+for_window [class="realvnc-vncviewer"] floating enable
 
 # popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
 #popup_during_fullscreen ignore
@@ -347,7 +347,6 @@ assign [class="Thunderbird"]                            "5 mail"
 assign [class="Liferea"]                                "8 news"
 assign [class="Pcmanfm"]                                "6 files"
 assign [class="Nautilus"]                               "6 files"
-#assign "workrave"        20
 
 # ###################################
 # ############# COLORS ##############
@@ -403,7 +402,7 @@ bar {
         inactive_workspace #333333 #000000 #999999
         urgent_workspace   #d11931 #000000 #999999
     }
-    status_command i3status
+    #status_command i3status
     tray_output none
     font pango:Inconsolata 9
     #mode hide
