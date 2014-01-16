@@ -6,3 +6,4 @@
 # absolute path. No other format is supported.
 # 
 XDG_DESKTOP_DIR="$HOME/./"
+XDG_DOWNLOAD_DIR="$HOME/./"
