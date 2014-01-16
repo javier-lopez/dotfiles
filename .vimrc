@@ -649,6 +649,9 @@ function! SetProperties(_language)
         set makeprg             =php\ -l\ %
         set errorformat         =%m\ in\ %f\ on\ line\ %l
 
+        set softtabstop         =2
+        set tabstop             =2
+        set shiftwidth          =2
         let php_sql_query       = 1
         let php_baselib         = 1
         let php_htmlInStrings   = 1
@@ -658,8 +661,9 @@ function! SetProperties(_language)
         "
     elseif (a:_language == "html")
         set syntax              =html
-        set softtabstop=2      "vim sees 4 spaces as a tab
-        set shiftwidth=2       "indentation
+        set softtabstop         =2
+        set tabstop             =2
+        set shiftwidth          =2
         "requires php-cli
         "set makeprg             =php\ -l\ %
         "set errorformat         =%m\ in\ %f\ on\ line\ %l
