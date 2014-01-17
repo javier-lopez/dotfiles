@@ -2,10 +2,11 @@ Shortcuts (~/.i3/config, ~/.i3/shortcuts)
 -----------------------------------------
 
 <f1>          => open help (this window)
+<ImpPt>       => take a screenshot (requires scrot)
+<alt><ImpPt>  => take a selective screenshot (requires scrot)
 <win><enter>  => open terminal (requires urxvt)
 <win><espace> => open buffer terminal (fast)
 <win><esc>    => exec run_program (requires dmenu)
-<ImpPt>       => make an screenshot (requires imagemagick)
 
 <altgr><k>    => close app (kill -15)
 <altgr><l>    => close app by name (requires dmenu)

@@ -175,16 +175,16 @@ bindcode $Win+Shift+33 move workspace 20 work
 # $Win+Enter starts a new terminal
 bindcode $Win+36 exec x-terminal-emulator
 bindcode $Win+Shift+36 split h
-#bind $Win+36 exec urxvtc
+#bindcode $Win+36 exec urxvtc
 bindsym Control+Shift+g exec x-terminal-emulator
 #bindsym Control+Shift+g exec urxvtc
 
 # Control+Shift*f starts firefox
-#bind Control+Shift+41 exec firefox
+#bindcode Control+Shift+41 exec firefox
 
 # $Alt+Esc dmenu_run
 # -sf purple
-bind $Alt+9 exec /usr/local/bin/dmenu-run
+bindcode $Alt+9 exec /usr/local/bin/dmenu-run
 
 # Control+$Alt+e exits i3
 #bindcode Control+$Alt+26 exit
@@ -232,15 +232,15 @@ bindsym $Altgr+h exec pcmanfm
 # volume:
 #bindcode Control+Shift+20 exec amixer set Master 1-
 bindcode $Altgr+59 exec amixer set Master 1-
-#bind Control+Shift+21 exec amixer set Master 1+
+#bindcode Control+Shift+21 exec amixer set Master 1+
 bindcode $Altgr+60 exec amixer set Master 1+
 
 # mplayer|mpd:
 bindsym $Altgr+p exec /usr/local/bin/music-control pause
-#bind Control+Shift+60 exec mpc next
-bind $Altgr+21 exec /usr/local/bin/music-control next
-#bind Control+Shift+59 exec mpc prev
-bind $Altgr+34 exec /usr/local/bin/music-control previous
+#bindcode Control+Shift+60 exec mpc next
+bindcode $Altgr+21 exec /usr/local/bin/music-control next
+#bindcode Control+Shift+59 exec mpc prev
+bindcode $Altgr+34 exec /usr/local/bin/music-control previous
 
 # shift input keyboard layouts
 bindcode $Alt+62 exec /usr/local/bin/shift-keyboard-layout
@@ -264,11 +264,13 @@ bindsym $Altgr+v exec /usr/local/bin/dmenu-vbox
 bindsym $Altgr+t exec /usr/local/bin/dmenu-tell
 
 # screenshot: ImpPt
-bind 107 exec /usr/local/bin/screenshot
+bindcode 107 exec /usr/local/bin/screenshot
+# selective screenshot: Shift+ImpPt
+bindcode $Alt+107 exec /usr/local/bin/screenshot -s
 
 # record_desktop: TODO 29-09-2013 00:50 >> assign new shortcuts
-#bind Control+Shift+35 exec /usr/local/bin/screencast-record stop
-#bind Control+35 exec /usr/local/bin/screencast-record start
+#bindcode Control+Shift+35 exec /usr/local/bin/screencast-record stop
+#bindcode Control+35 exec /usr/local/bin/screencast-record start
 
 # go to the urgent flag set
 #bindsym $Win+x [urgent=latest] focus
