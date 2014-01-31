@@ -1,16 +1,16 @@
 [color]
 [color "branch"]
     current = yellow reverse
-    local = yellow
-    remote = green
+    local   = yellow
+    remote  = green
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
-    old = red bold
-    new = green bold
+    old  = red bold
+    new  = green bold
 [color "status"]
-    added = yellow
-    changed = green
+    added     = yellow
+    changed   = green
     untracked = cyan
 
 ;Highlight whitespace in diffs
@@ -23,19 +23,24 @@
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [user]
-    name = Javier Lopez
+    name  = Javier Lopez
     email = m@javier.io
 
+[github]
+    user = chilicuil
+
 [alias]
-    cm = commit
-    cmv = commit -v
-    st = status
-    br = branch
-    co = checkout
+    d       = diff
+    cm      = commit
+    cmv     = commit -v
+    st      = status
+    br      = branch
+    co      = checkout
     unstage = reset HEAD --
-    last = log -1 HEAD
-    praise = blame
-    glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+    last    = log -1 HEAD
+    praise  = blame
+    discart = checkout --
+    glog    = log --all --pretty = 'format:%d %Cgreen%h%Creset %an - %s' --graph
 
 [core]
     editor = vim
@@ -55,5 +60,3 @@
    ;2. When using git pull on the master branch, with no remote and
       ;branch specified, use the default remote (origin) and merge in
       ;the changes from the master branch.
-[github]
-	user = chilicuil
