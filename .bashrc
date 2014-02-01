@@ -14,6 +14,15 @@
 shopt -s checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
 shopt -s hostcomplete histappend histverify
 
+bind "set match-hidden-files off"
+bind "set bind-tty-special-chars on"
+bind "set show-all-if-ambiguous on"
+bind "set completion-ignore-case on"
+set -o vi #this is sparta!
+
+# Do not show ^C when pressing Ctrl+C
+stty -ctlecho
+
 # bash completion, try to use bash_completion => 2.0, loads 3x faster
 #trap '. /etc/bash_completion ; trap USR2' USR2
 #{ sleep 0.01 ; builtin kill -USR2 $$ ; } & disown
@@ -21,14 +30,6 @@ shopt -s hostcomplete histappend histverify
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-set match-hidden-files off
-set bind-tty-special-chars on
-set completion-ignore-case on
-set -o vi #this is sparta!
-
-# Do not show ^C when pressing Ctrl+C
-stty -ctlecho
 
 #/etc/terminfo/*
 #export TERM=xterm-color
