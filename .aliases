@@ -30,17 +30,15 @@ alias ccache.ubuntu='CCACHE_DIR=$HOME/.ccache_ubuntu ccache'
 
 #see version installed vs the updated one (in repositories)
 alias policy='apt-cache policy'
+alias core.package='sh -c '\''apt-cache show "$1" | grep -i task >/dev/null && echo yes || echo no'\'' -'
 
 alias pbuilder.precise.i386='sudo DIST=precise ARCH=i386 pbuilder'
-alias pbuilder.quantal.i386='sudo DIST=quantal ARCH=i386 pbuilder'
-alias pbuilder.raring.i386='sudo DIST=raring ARCH=i386 pbuilder'
-alias pbuilder.saucy.i386='sudo DIST=saucy ARCH=i386 pbuilder'
 alias pbuilder.trusty.i386='sudo DIST=trusty ARCH=i386 pbuilder'
 alias pbuilder.sid.i386='sudo DIST=sid ARCH=i386 pbuilder'
 
 alias pbuilder.precise.amd64='sudo DIST=precise ARCH=amd64 pbuilder'
-alias pbuilder.quantal.amd64='sudo DIST=quantal ARCH=amd64 pbuilder'
-alias pbuilder.raring.amd64='sudo DIST=raring ARCH=amd64 pbuilder'
-alias pbuilder.saucy.amd64='sudo DIST=saucy ARCH=amd64 pbuilder'
 alias pbuilder.trusty.amd64='sudo DIST=trusty ARCH=amd64 pbuilder'
 alias pbuilder.sid.amd64='sudo DIST=sid ARCH=amd64 pbuilder'
+
+alias vim='vim -w ~/.vimlog $@'
+alias vi='vim -w ~/.vimlog "$*"'
