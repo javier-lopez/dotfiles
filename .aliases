@@ -39,6 +39,3 @@ alias pbuilder.sid.i386='sudo DIST=sid ARCH=i386 pbuilder'
 alias pbuilder.precise.amd64='sudo DIST=precise ARCH=amd64 pbuilder'
 alias pbuilder.trusty.amd64='sudo DIST=trusty ARCH=amd64 pbuilder'
 alias pbuilder.sid.amd64='sudo DIST=sid ARCH=amd64 pbuilder'
-
-alias vim='vim -w ~/.vimlog $@'
-alias vi='vim -w ~/.vimlog "$*"'
