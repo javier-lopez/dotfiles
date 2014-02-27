@@ -133,7 +133,7 @@ else
 fi
 
 # gdebi resolution dep, requires gdebi-core
-[ -f /usr/bin/gdebi ] && PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi"
+[ -f /usr/bin/gdebi ] && PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi" || true
 
 # ccache
 #sudo mkdir -p "$PATH_PBUILDER/ccache"
