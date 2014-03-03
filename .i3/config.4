@@ -326,8 +326,7 @@ for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpa
 for_window [class="^TeamViewer.exe$"] floating enable
 for_window [title="^TeamViewer$"] floating enable
 for_window [title="- TeamViewer -"] floating enable
-for_window [class="Firefox" title="^About Nightly"] floating enable
-for_window [class="Firefox" title="^About Aurora"] floating enable
+for_window [class="Firefox" title="^About.*"] floating enable
 for_window [class="realvnc-vncviewer"] floating enable
 
 # popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
@@ -408,6 +407,7 @@ bar {
         urgent_workspace   #d11931 #000000 #999999
     }
     #status_command i3status
+    position bottom
     tray_output none
     font pango:Inconsolata 9
     #mode hide
