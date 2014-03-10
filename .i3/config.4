@@ -231,9 +231,9 @@ bindsym $Altgr+h exec pcmanfm
 
 # volume:
 #bindcode Control+Shift+20 exec amixer set Master 1-
-bindcode $Altgr+59 exec amixer set Master 1-
-#bindcode Control+Shift+21 exec amixer set Master 1+
-bindcode $Altgr+60 exec amixer set Master 1+
+bindcode $Altgr+59 exec amixer -q set Master 1-
+#bindcode Control+Shift+21 exec amixer set Master 1+, unmute if mutted
+bindcode $Altgr+60 exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
 
 # mplayer|mpd:
 bindsym $Altgr+p exec /usr/local/bin/music-control pause
