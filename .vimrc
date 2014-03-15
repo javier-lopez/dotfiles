@@ -1,12 +1,10 @@
 "-------------------------------------------------------------------------------
-"           Last review            Sat 04 Jan 2014 02:03:58 AM CST
+"           Last review            Sat 15 Mar 2014 12:54:38 AM CST
 "-------------------------------------------------------------------------------
-"
+
 "===============================================================================
 "============================== General settings ===============================
 "===============================================================================
-
-"TODO 04-01-2014 03:02 >> create plugins for as many functions as possible
 
 if v:version < 700
     echoerr "This vimrc file use features than are only available on vim 7.0 or greater"
@@ -67,7 +65,7 @@ set splitbelow         "split horizontally below.
 "set cursorline         "highlight the screen line of the cursor, slow!
 set nostartofline
 set nofsync            "improves performance, let OS decide when to flush disk
-set showmatch          "when closing a block, show the matching bracket.
+set showmatch          "when closing a block, show matching bracket.
 "set matchtime=5        "how many tenths of a second to blink
                        "matching brackets for"
 set diffopt+=iwhite    "ignore whitespace in diff mode
@@ -75,21 +73,21 @@ set cscopetag          "use both cscope and ctag for 'ctrl-]'
 set csto=0             "gives preference to cscope over ctag
 "set cscopeverbose
 set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
-                       "just press F5 when you are going to paste several lines
+                       "press F5 when you are going to paste several lines
                        "of text so they don't "be indented.
 "set mousehide         "hide the mouse while typying
 "set mouse=nv          "set the mouse to work in console mode
+
+set foldenable!         "disable folding by default
+set foldmethod=syntax
+"set foldmarker={,}
+
 "set clipboard=unnamed
 set clipboard=unnamedplus      "yanks go on clipboard instead, "+p to make recover the x11 clipboard
                                "use xsel hacks if your vim version has no "clipboad-x11 support
 
 set backspace=indent,eol,start "make backspace works like in other editors.
 set viminfo='100,<100,s10,h    "remember not as much as possible
-
-"Folding
-set foldenable!                "off by default
-set foldmethod=syntax
-"set foldmarker={,}
 
 "Print to html
 let html_use_css       = 1
@@ -111,37 +109,12 @@ if has("autocmd")
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \|execute("normal '\"")|endif
 
-    "turn off any existing search
-    autocmd VimEnter * nohls
+    autocmd VimEnter * nohls "turn off any existing search
 
-    "quickly browse: http://vim.wikia.com/wiki/Mapping_to_quickly_browse_help
+    "browse documentation with <Enter>/<BS>
+    "http://vim.wikia.com/wiki/Mapping_to_quickly_browse_help
     autocmd filetype help :nnoremap <buffer><CR> <c-]>
     autocmd filetype help :nnoremap <buffer><BS> <c-T>
-
-    "behaviour per lang:
-    autocmd BufNewFile,BufEnter *.php,*.php3,*.php4  call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.php5,*.inc,*schema call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.engine,*.ctp       call SetProperties("php")
-    autocmd BufNewFile,BufEnter *.html,*.xml         call SetProperties("html")
-    autocmd BufNewFile,BufEnter *.c,*.h              call SetProperties("c")
-    autocmd BufNewFile,BufEnter *.pl,*.pm,*.t,*ptml  call SetProperties("perl")
-    autocmd BufNewFile,BufEnter *[mM]akefile,*.mk    call SetProperties("make")
-    autocmd BufNewFile,BufEnter *.java               call SetProperties("java")
-    autocmd BufNewFile,BufEnter *.sh,*.bash          call SetProperties("bash")
-    autocmd BufNewFile,BufEnter *.{md,mdown,mkd}     call SetProperties("markdown")
-    autocmd BufNewFile,BufEnter *.{mkdn,markdown}    call SetProperties("markdown")
-    autocmd BufNewFile,BufEnter *.{mdwn,todo,notes}  call SetProperties("markdown")
-
-    "skeletons:
-    autocmd BufNewFile *.rb,*.ruby,*.eruby           call Skel("ruby")
-    autocmd BufNewFile *.sh,*.bash                   call Skel("sh")
-    autocmd BufNewFile *.tex                         call Skel("tex")
-    autocmd BufNewFile *.py,*.python                 call Skel("python")
-    autocmd BufNewFile *.html                        call Skel("html")
-    autocmd BufNewFile *.pl,*.perl                   call Skel("perl")
-    autocmd BufNewFile *.php,*.php3,*.php4,*.php5    call Skel("php")
-    autocmd BufNewFile *schema,*.inc,*.engine,*.ctp  call Skel("php")
-    autocmd BufNewFile *.c                           call Skel("c")
 endif
 
 "====== Status Line ======
@@ -150,9 +123,11 @@ endif
 set laststatus=2                                         "always show statusline
 set statusline=
 set statusline+=%2*%-2n                                  "buffer number
-set statusline+=%*\ %-.50F\                              "file name (full)
-"set statusline+=%{VCSInfo()}                             "branch info
 set statusline+=%h%1*%m%r%w%0*                           "flags
+set statusline+=%*\ %-.50F\                              "file name (full)
+"if filereadable(expand("~/.vim/bundle/cutils/plugin/cutils.vim"))
+    "set statusline+=%-7{cutils#VCSInfo()}                "branch info
+"endif
 set statusline+=\[%{strlen(&ft)?&ft:'none'},             "filetype
 set statusline+=%{&encoding},                            "encoding
 set statusline+=%{&fileformat}]                          "file format
@@ -162,7 +137,9 @@ endif
 "set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
 set statusline+=%=                                       "right align
 set statusline+=%2*%-8{strftime('%H:%M')}                "time
-set statusline+=%-7{FileSize()}                          "file size
+if filereadable(expand("~/.vim/bundle/cutils/plugin/cutils.vim"))
+    set statusline+=%-7{cutils#FileSize()}               "file size
+endif
 "set statusline+=%2*%-3b,0x%-8B\                          "current char
 "set statusline+=0x%-4B\                                  "current char
 "set statusline+=%-14.(%l,%c%V%)\ %<%P                    "offset
@@ -175,8 +152,7 @@ set statusline+=%-8.(%l,%c%V%)\ %P                       "offset
 if !isdirectory(expand(expand("~/.vim/bundle/vundle/.git/")))
     echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
     if nr2char(getchar()) ==? 'y'
-        "!git clone --dept=1 https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-        "while upstream vundle doesn't merge shadow cloning, use own vundle version
+        "shadow cloning was never accepted
         !git clone --dept=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
     endif
 endif
@@ -223,30 +199,14 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "map <leader>ds :DIstop <CR>
     Bundle 'chilicuil/securemodelines'
         "let g:secure_modelines_verbose=1
-    "Bundle 'scrooloose/syntastic'
-        "set statusline+=\ %#warningmsg#
-        "set statusline+=%{SyntasticStatuslineFlag()}
-        "use this option to tell syntastic to automatically open a list when a buffer
-        "has errors (:Errors)
-        "let g:syntastic_auto_loc_list=1
-        "use this option to tell syntastic to use the |:sign| interface to mark errors
-        "let g:syntastic_enable_signs=1
-        "use this option if you only care about syntax errors, not warnings
-        "let g:syntastic_quiet_warnings=1
-        "use this option to disable syntax checking on selected filetypes
-        "let g:syntastic_disabled_filetypes = ['ruby', 'php']
-        "TODO 07-09-2011 11:32 => make it toogle (open/close), check nerdtree out
-        "let g:syntastic_ignore_files=['learn/sh']
-        "let g:syntastic_ignore_files=['chilicuil.github.com']
-        "map <silent><leader>e :Errors<CR>
     Bundle 'kien/ctrlp.vim'
-        let g:ctrlp_map                                    = '<leader>f'
-        let g:ctrlp_use_caching                            = 1
-        let g:ctrlp_clear_cache_on_exit                    = 0
-        "let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
-        "let g:ctrlp_user_command = 'find %s -type f'
+        let g:ctrlp_map                 = '<leader>f'
+        let g:ctrlp_use_caching         = 1
+        let g:ctrlp_clear_cache_on_exit = 0
+        "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
+        "let g:ctrlp_user_command       = 'find %s -type f'
     Bundle 'Lokaltog/vim-easymotion'
-        let g:EasyMotion_leader_key                        = '<leader><leader>'
+        let g:EasyMotion_leader_key     = '<leader><leader>'
     Bundle 'chilicuil/vim-markdown'
     Bundle 'chilicuil/vim-sprunge'
     Bundle 'Shougo/neocomplcache'
@@ -264,6 +224,12 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:user_zen_leader_key = '<c-y>'
         "let g:use_zen_complete_tag = 1
     Bundle 'bogado/file-line'
+    Bundle 'mhinz/vim-signify'
+        let g:signify_vcs_list               = [ 'git' ]
+        let g:signify_sign_add               = '+'
+        let g:signify_sign_change            = '~'
+        let g:signify_sign_delete            = '-'
+        let g:signify_sign_delete_first_line = '‾'
 
     "===vim-scripts===, not hosted in github for some obscure reason
     Bundle 'QuickBuf'
@@ -275,32 +241,24 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     Bundle 'gnupg.vim'
 
     "===experimental===
-    Bundle 'mhinz/vim-signify'
-        let g:signify_vcs_list               = [ 'git' ]
-        let g:signify_sign_add               = '+'
-        let g:signify_sign_change            = '~'
-        let g:signify_sign_delete            = '-'
-        let g:signify_sign_delete_first_line = '‾'
-        hi SignifyLineAdd guifg=#7c7c7c guibg=#000000 gui=NONE
-        hi SignifyLineChange guifg=#7c7c7c guibg=#000000 gui=NONE
-        hi SignifyLineDelete guifg=#7c7c7c guibg=#000000 gui=NONE
-        hi SignifySignAdd guifg=#65b042 ctermfg=78
-        hi SignifySignChange guifg=#3387cc ctermfg=105
-        hi SignifySignDelete guifg=#ff0000 ctermfg=202
     Bundle '2072/PHP-Indenting-for-VIm'
     Bundle 'junegunn/vim-easy-align'
         command! -nargs=* -range -bang Align
         \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
         vmap . <Plug>(EasyAlignRepeat)
         nmap <Leader>a <Plug>(EasyAlign)
-    "Bundle 'xolox/vim-easytags'
-        "let g:easytags_file                    = '~/.ctags/tags'
-        "let g:easytags_always_enabled         = 1
-        "let g:easytags_on_cursorhold          = 0 "disable the automatic refresh
-        "let g:easytags_autorecurse            = 1 "take care with this option!!!
-        "let g:easytags_include_members        = 1 "struct/classes for c++, java, etc
-        "let g:easytags_suppress_ctags_warning = 1
-        "set tags=./.tags;,~/ctags/tags
+    Bundle "chilicuil/pipe2eval"
+    Bundle "chilicuil/x-modes"
+        let g:x_modes_map_default      = '<Leader>D'
+        let g:x_modes_map_development  = '<Leader>d'
+        let g:x_modes_map_write        = '<Leader>w'
+        let g:x_modes_map_presentation = '<Leader>p'
+        map <silent> <Leader>n           :call xmodes#FileManagerToggle()<CR>
+        map <silent> <Leader>l           :call xmodes#FunctionBrowserToggle()<CR>
+    Bundle "chilicuil/cutils"
+        let g:cutils_map_longlines             = '<Leader>cul'
+        let g:cutils_map_whitespacehunter      = '<Leader>v'
+        let g:cutils_map_appendmodeline        = '<Leader>ml'
 
     "===discarted===
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
@@ -354,22 +312,11 @@ inoremap <c-j> <Esc><c-w>j
 inoremap <c-l> <Esc><c-w>l
 inoremap <c-h> <Esc><c-w>h
 
-" VIM-Shell
-" Ctrl_W e opens up a vimshell in a horizontally split window
-" Ctrl_W E opens up a vimshell in a vertically split window
-"nmap <C-W>e :new \| vimshell bash<CR>
-"nmap <C-W>E :vnew \| vimshell bash<CR>
-
 "tabs manage
-map <c-n> :tabn <CR>
-map <c-p> :tabp <CR>
-"Ctrl+Pageup & Ctrl+Pagedown should do the same
+map <c-n> :tabn<CR>
+map <c-p> :tabp<CR>
 
 map <c-w> :tabclose <CR>
-
-"for some unknown reason if I set this. it executes :confirm qall when
-" I write '*/' on --insert-- mode where '*' is a wildcard
-"map! <c-x> <esc>:confirm qall<CR>
 
 "source $VIMRUNTIME/ftplugin/man.vim
 "nnoremap K :Man <C-R><C-W><CR>
@@ -382,19 +329,7 @@ map <c-x> :confirm qall<CR>
 "m'ak'e
 map <silent> <leader>mk :make<CR>
 
-"trailer map
-map <silent> <leader>v :call Trailer()<CR>
-
-"keyboard shortcuts to close/open the two main plugins
-map <silent> <leader>n :call Nerd_tree()<CR>
-map <silent> <leader>l :call Tag_list()<CR>
-
 map <silent> <leader>m :set number!<CR>
-
-map <silent> <leader>w :WordMode<CR>
-map <silent> <leader>d :DevMode<CR>
-map <silent> <leader>p :PresentationMode<CR>
-map <silent> <leader>f :DefaultMode<CR>
 
 "update ~/.vimrc
 map <leader>s :source $MYVIMRC<CR>
@@ -407,11 +342,6 @@ noremap <silent><Leader>- :resize -1<CR>
 
 "clear highlighted searches
 nmap <silent> <leader>/ :nohlsearch<CR>
-
-"Select everything
-"noremap <Leader>gg ggVG
-
-nnoremap <silent><Leader>ml :call AppendModeline()<CR>
 
 "=== Tab Mappings ===
 map <Tab>c :cc<CR>
@@ -475,449 +405,6 @@ noremap <M-END> G
 
 "move between buffers
 map <Tab><Space> :bnext<CR>
-
-"Basically you press * or # to search for the current selection
-vnoremap <silent> * :call VisualSearch('f')<CR>
-vnoremap <silent> # :call VisualSearch('b')<CR>
-vnoremap <silent> gv :call VisualSearch('gv')<CR>
-
-"===============================================================================
-"================================ Custom functions =============================
-"===============================================================================
-
-"TODO 18-12-2013 00:17 >> create plugin
-command! DevMode            call Dev_mode()
-command! WordMode           call Word_mode()
-command! DevMode            call Dev_mode()
-command! PresentationMode   call Presentation_mode()
-command! DefaultMode        call Default_mode()
-command! -nargs=? LongLines call LongLines('<args>')
-
-"got-ravings.blogspot.mx/2009/07/vim-pr0n-combating-long-lines.html
-function! LongLines(width)
-    let targetWidth = a:width != '' ? a:width : 80
-    if targetWidth > 0
-        exec 'match Todo /\%>' . (targetWidth) . 'v/'
-    else
-        echomsg "Usage: LongLines [natural number]"
-    endif
-endfunction
-
-function! Nerd_tree() "need it to force close it, when changing between my
-                      "custom modes (dev, spell, def)
-    if exists ("s:nerd_tree")
-        "NERDTreeTabsClose
-        NERDTreeClose
-        wincmd p      "forces to return the focus to the window who call it
-        unlet s:nerd_tree
-    else
-        "NERDTreeTabsToggle
-        NERDTreeToggle
-        wincmd p      "forces to return the focus to the window who call it
-        let s:nerd_tree = 1
-    endif
-endfunction
-
-function! Tag_list()
-    if exists ("s:tag_list")
-        TagbarClose
-        unlet s:tag_list
-    else
-        TagbarToggle
-        let s:tag_list = 1
-    endif
-endfunction
-
-"TODO 17-11-2009 13:11 => Add support to other VCS, current: git, svn
-function! VCSInfo()
-    let g:vcs_cache = {}
-    let l:path = getcwd()
-    if ! has_key(g:vcs_cache, l:path)
-        if (isdirectory(l:path . "/.git"))
-            let g:vcs_cache[l:path] = "["
-                        \. substitute(readfile(l:path
-                        \. "/.git/HEAD", "", 1)[0],
-                        \ "^.*/", "", "") . "]"
-        elseif (isdirectory(l:path . "/.svn"))
-            let l:vcs_status = readfile(l:path . "/.svn/entries", "", 5)
-            let g:vcs_cache[l:path] = "["
-                        \. substitute(l:vcs_status[4], "^.*/", "", "")
-                        \. ":r" . l:vcs_status[3]
-                        \. "]"
-        else
-            let g:vcs_cache[l:path] = ""
-        endif
-    endif
-    return g:vcs_cache[l:path]
-endfunction
-
-"http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
-function! FileSize()
-    let bytes = getfsize(expand("%:p"))
-    if bytes <= 0
-        return ""
-    elseif bytes < 1024
-        return bytes . "b"
-    elseif bytes < 1048576
-        return(bytes / 1024) . "Kb"
-    else
-        return(bytes / 1048576) . "Mb"
-    endif
-endfunction
-
-function! Trailer()
-    if exists ("s:trailer")
-        set nolist
-        echo "[Trailer off]"
-        unlet s:trailer
-    else
-        if has("gui_running")
-            set list listchars=tab:▷⋅,trail:·,extends:…,nbsp:‗
-        else
-            " xterm + terminus hates these
-            set list listchars=tab:▷⋅,trail:·,extends:>,nbsp:_
-        endif
-        set fillchars=fold:-
-        echo "[Trailer on]"
-        let s:trailer = 1
-    endif
-endfunction
-
-" From an idea by Michael Naumann
-" http://amix.dk/blog/viewEntry/19334
-function! VisualSearch(direction) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern   = escape(@", '\\/.*$^~[]')
-    let l:pattern   = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
-
-" Append modeline after last line in buffer.
-" Use substitute() (not printf()) to handle '%%s' modeline in LaTeX files.
-" Taken from http://vim.wikia.com/wiki/Modeline_magic
-function! AppendModeline()
-  let save_cursor = getpos('.')
-  let append = ' vim: set ts='.&tabstop.' sw='.&shiftwidth.' tw='.&textwidth.' ft='.&filetype.' : '
-  $put =substitute(&commentstring, '%s', append, '')
-  call setpos('.', save_cursor)
-  redraw!
-  echo "Added modeline :)"
-endfunction
-
-function! SetProperties(_language)
-    if (a:_language == "c")
-        set syntax  =c
-        set makeprg =LANGUAGE=en\ CFLAGS='-g\ -Wall'\ make\ %:r
-
-        "TODO 07-11-2011 03:06 => work on this maps (run, make, etc)
-        "r'un
-        map <Leader>mr :!./%:r<CR>
-        "compile & run (make a'll)
-        map <Leader>ma :w<CR>:make && ./%:r<CR>
-
-    elseif (a:_language == "java")
-        set syntax   =java
-        set makeprg =javac\ %
-
-        "r'un
-        map <Leader>mr :!java %:r<CR>
-        "compile & run (a'll)
-        map <Leader>ma  :w<CR>:make && java %:r<CR>
-        "debug without arguments
-        map <Leader>md  :w<CR>:make && jdb %:r<CR>
-        "debug with arguments
-        map <Leader>mda :w<CR>:make && jdb %:r<SPACE>
-
-        let java_highlight_all       = 1
-        let java_highlight_functions = "style"
-        let java_allow_cpp_keywords  = 1
-
-    elseif (a:_language == "php")
-        set syntax              =php
-        "requires php-cli
-        set makeprg             =php\ -l\ %
-        set errorformat         =%m\ in\ %f\ on\ line\ %l
-
-        set softtabstop         =2
-        set tabstop             =2
-        set shiftwidth          =2
-        let php_sql_query       = 1
-        let php_baselib         = 1
-        let php_htmlInStrings   = 1
-        let php_folding         = 1
-        "don't show variables in freaking php
-        "let tlist_php_settings = 'php;c:class;d:constant;f:function'
-        "
-    elseif (a:_language == "html")
-        set syntax              =html
-        set softtabstop         =2
-        set tabstop             =2
-        set shiftwidth          =2
-        "requires php-cli
-        "set makeprg             =php\ -l\ %
-        "set errorformat         =%m\ in\ %f\ on\ line\ %l
-
-    elseif (a:_language == "perl")
-        set syntax       =perl
-        set makeprg      =$VIMRUNTIME/tools/efm_perl.pl\ -c\ %\ $*
-        set errorformat  =%f:%l:%m
-
-        nnoremap <silent><Leader>> :%!perltidy -q<CR>
-        vnoremap <silent><Leader>> :!perltidy -q<CR>
-
-        let perl_extended_vars           = 1
-        let perl_include_pod             = 1
-        let perl_fold                    = 1
-        let perl_fold_blocks             = 1
-        let perl_want_scope_in_variables = 1
-
-        "r'un
-        map <Leader>mr :!perl ./%<CR>
-        "run with arguments
-        map <Leader>mra :!perl ./%<SPACE>
-
-    elseif (a:_language == "python")
-        set filetype=python
-        set syntax=python
-        set foldmethod=indent
-        setlocal noexpandtab
-
-    elseif (a:_language == "make")
-        set syntax     =make
-        set foldmethod =indent
-        setlocal noexpandtab
-
-    elseif (a:_language == "bash")
-        set syntax  =sh
-        set makeprg =chmod\ +x\ %
-
-        "r'un
-        map <Leader>mr :!./%<CR>
-        "run with arguments
-        map <Leader>mra :!./%<SPACE>
-        "compile & run (a'll)
-        map <Leader>ma :w<CR>:make && ./%<CR>
-
-    elseif (a:_language == "markdown")
-        set filetype=mkd
-    endif
-endfunction
-
-" Found in a dot.org file
-function! Skel(_language)
-    let l:skeleton_file = expand("~/.vim/skeletons/skeleton.". a:_language)
-    if filereadable(l:skeleton_file)
-        execute "silent! 0read " . l:skeleton_file
-        " Delete last line:
-        normal! G
-        normal! dd
-        normal! gg
-        call search("++HERE++")
-        normal! xxxxxxxx
-        " (crude, but it works)
-        " To automatically switch to insert mode, uncomment the following line:
-        " startinsert
-    endif
-endfunction
-
-function! Spell(_language)
-    if (a:_language == "en_us")
-        let g:acp_completeOption = '.,w,b,t,k,kspell,i,d'
-        set spell spelllang=en_us
-    elseif (a:_language == "es_mx")
-        let g:acp_completeOption = '.,w,b,t,k,i,d'
-        set spell spelllang=es_mx
-    elseif (a:_language == "none")
-        let g:acp_completeOption = '.,w,t,k,i,d'
-        set nospell
-    endif
-endfunction
-
-function! Word_mode()
-    if exists ("s:Word_mode")
-        call Word_mode_off()
-        unlet s:Word_mode
-    else
-        call Word_mode_on()
-        let s:Word_mode = 1
-    endif
-endfunction
-
-function! Word_mode_on()
-    set linebreak
-    set nonumber
-    set textwidth=80
-    call Spell("en_us")
-
-    noremap <F3> :call Spell("es_mx")<CR>
-    noremap <F4> :call Spell("en_us")<CR>
-    inoremap <F3> <Esc>:call Spell("es_mx")<CR>a
-    inoremap <F4> <Esc>:call Spell("en_us")<CR>a
-
-    redraw!
-endfunction
-
-function! Word_mode_off()
-    set nolinebreak
-    unmap <F4>
-    unmap <F3>
-    iunmap <F4>
-    iunmap <F3>
-    call Spell("none")
-    redraw!
-endfu
-
-function! Dev_mode()
-    if exists ("s:Dev_mode")
-        call Dev_mode_off()
-        unlet s:Dev_mode
-    else
-        call Dev_mode_on()
-        let s:Dev_mode = 1
-    endif
-endfunction
-
-function! Dev_mode_on()
-    set number         "show the number of the lines on the left of the screen
-    set linebreak      "wrap at word
-    "set patchmode=.orig       "keeps filename.orig while editing
-
-    "Specific configuration for things that take a long time to finish.
-    "TODO 07-11-2011 03:09 => wrap to another function, maybe the same SetProperties
-    if &ft =="cpp" || &ft =="c"
-        "stuff
-    endif
-
-    if !exists("s:nerd_tree")
-        call Nerd_tree()          "It allows you to explore your filesystem
-    endif
-
-    if !exists("s:tag_list")
-        call Tag_list()           "Open one window with tags of current files
-    endif
-
-    redraw!
-endfunction
-
-function! Dev_mode_off()
-    "Plugins
-    if exists ("s:nerd_tree")
-        call Nerd_tree()
-    endif
-
-    if exists ("s:tag_list")
-        call Tag_list()
-    endif
-
-    "set nocursorline
-    set nonumber
-    set nolinebreak
-
-    if &ft == "cpp" || &ft=="c"
-        "SetProperties("none")?
-        "cs kill -1
-    endif
-
-    if &ft =="php" || &ft =="html"
-    endif
-
-    "unmap <Tab>b
-    redraw!
-endfunction
-
-function! Presentation_mode()
-    if exists ("s:Presentation_mode")
-        call Presentation_mode_off()
-        unlet s:Presentation_mode
-    else
-        call Presentation_mode_on()
-        let s:Presentation_mode = 1
-    endif
-endfunction
-
-function! Presentation_mode_on()
-    "this .vimrc config was created firstly by Vroom-0.23
-    set nocursorline         "highlight the screen line of the cursor
-
-    map <SPACE> :n<CR>:<CR>
-    map <BACKSPACE> :N<CR>:<CR>
-    map RR  :!vroom -run %<CR>
-    map VV :!vroom -vroom<CR>
-    map OO :!open <cWORD><CR><CR>
-    map EE :e <cWORD><CR>
-    map !! G:!open <cWORD><CR><CR>
-    map ?? :e .help<CR>
-    let g:old_statusline=&statusline
-
-    set statusline=
-    set statusline+=%2*%-.50f\                               "file name (!full)
-    set statusline+=%*\ \ \ Press\ \<Space\>\ or\ \<Backspace\>\ to\ continue
-    set statusline+=%h%1*%m%r%w%0*                           "flags
-    set statusline+=%=                                       "right align
-    set statusline+=%2*%-8{strftime('%H:%M')}                "time
-
-    redraw!
-endf
-
-function! Presentation_mode_off()
-    set cursorline         "highlight the screen line of the cursor
-    unmap <SPACE>
-    noremap <SPACE> i <Esc>
-    unmap <BACKSPACE>
-    unmap RR
-    unmap VV
-    unmap OO
-    unmap EE
-    unmap !!
-    unmap ??
-    let &statusline=g:old_statusline
-    redraw!
-endf
-
-function! Default_mode()
-    if exists ("s:Word_mode")
-        call Word_mode()
-    endif
-    if exists ("s:Dev_mode")
-        call Dev_mode()
-    endif
-    if exists ("s:Presentation_mode")
-        call Presentation_mode()
-    endif
-
-    if exists ("s:nerd_tree")
-        call Nerd_tree()
-    endif
-
-    if exists ("s:tag_list")
-        call Tag_list()
-    endif
-endfunction
-
-"===============================================================================
-"=============================== Experimental stuff ============================
-"===============================================================================
-
-"function! UpdateTags()
-    "call writefile(getline(1, '$'), '.tmp.cc', 'b')
-    "call system('grep -v "	'.expand('%').'	" tags > tags2 && mv -f tags2
-    "tags')
-    "let tags = system('ctags --c++-kinds=+p --fields=+iaS --extra=+q -f
-    "- .tmp.cc | sed "s/\t\.tmp\.cc\t/\t'.expand('%').'\t/" >> tags')
-    "return ';'
-"endfunction
-"inoremap <expr> ; UpdateTags()
 
 "===============================================================================
 "==================================Extra-notes==================================
