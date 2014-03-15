@@ -125,7 +125,7 @@ set statusline=
 set statusline+=%2*%-2n                                  "buffer number
 set statusline+=%h%1*%m%r%w%0*                           "flags
 set statusline+=%*\ %-.50F\                              "file name (full)
-"if filereadable(expand("~/.vim/bundle/cutils/plugin/cutils.vim"))
+"if filereadable(expand("~/.vim/bundle/vim-cutils/plugin/cutils.vim"))
     "set statusline+=%-7{cutils#VCSInfo()}                "branch info
 "endif
 set statusline+=\[%{strlen(&ft)?&ft:'none'},             "filetype
@@ -137,7 +137,7 @@ endif
 "set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
 set statusline+=%=                                       "right align
 set statusline+=%2*%-8{strftime('%H:%M')}                "time
-if filereadable(expand("~/.vim/bundle/cutils/plugin/cutils.vim"))
+if filereadable(expand("~/.vim/bundle/vim-cutils/plugin/cutils.vim"))
     set statusline+=%-7{cutils#FileSize()}               "file size
 endif
 "set statusline+=%2*%-3b,0x%-8B\                          "current char
@@ -255,7 +255,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:x_modes_map_presentation = '<Leader>p'
         map <silent> <Leader>n           :call xmodes#FileManagerToggle()<CR>
         map <silent> <Leader>l           :call xmodes#FunctionBrowserToggle()<CR>
-    Bundle "chilicuil/cutils"
+    Bundle "chilicuil/vim-cutils"
         let g:cutils_map_longlines             = '<Leader>cul'
         let g:cutils_map_whitespacehunter      = '<Leader>v'
         let g:cutils_map_appendmodeline        = '<Leader>ml'
