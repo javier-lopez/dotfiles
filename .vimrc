@@ -146,6 +146,118 @@ endif
 set statusline+=%-8.(%l,%c%V%)\ %P                       "offset
 
 "===============================================================================
+"================================== Mappings ===================================
+"===============================================================================
+
+"=== Ctrl Mappings===
+"map work on --normal--, --visual-- and --operator-- modes look at :help map-modes
+
+"move between split windows
+noremap <c-k> <c-w>k
+noremap <c-j> <c-w>j
+noremap <c-l> <c-w>l
+noremap <c-h> <c-w>h
+
+inoremap <c-k> <Esc><c-w>k
+inoremap <c-j> <Esc><c-w>j
+inoremap <c-l> <Esc><c-w>l
+inoremap <c-h> <Esc><c-w>h
+
+"tabs manage
+map <c-n> :tabn<CR>
+map <c-p> :tabp<CR>
+
+map <c-w> :tabclose <CR>
+
+"source $VIMRUNTIME/ftplugin/man.vim
+"nnoremap K :Man <C-R><C-W><CR>
+
+"exit keyboard shortcut
+map <c-x> :confirm qall<CR>
+
+"=== Leader Mappings(,)==
+
+"m'ak'e
+map <silent> <leader>mk :make<CR>
+
+map <silent> <leader>m :set number!<CR>
+
+"update ~/.vimrc
+map <leader>s :source $MYVIMRC<CR>
+
+"resize windows
+noremap <silent><Leader>< :vertical resize -1<CR>
+noremap <silent><Leader>> :vertical resize +1<CR>
+noremap <silent><Leader>+ :resize +1<CR>
+noremap <silent><Leader>- :resize -1<CR>
+
+"clear highlighted searches
+nmap <silent> <leader>/ :nohlsearch<CR>
+
+"=== Tab Mappings ===
+map <Tab>c :cc<CR>
+map <Tab>n :cnext<CR>
+map <Tab>p :cprevious<CR>
+
+"=== Misc Mappings===
+map ; :
+
+"let's switch these
+nnoremap ' `
+nnoremap ` '
+
+"I dont wanna go far away just to press <Esc>, take care when pasting stuff
+inoremap jj <Esc>
+
+"insert a space in normal mode
+noremap <Space> i <Esc>
+
+"use <BackSpace> for deleting visual selections
+xnoremap <BS> d
+snoremap <BS> <BS>i
+
+"Most of the time, the only reason you want to move to the end
+"of a word is to add text
+map e ea
+
+"make Y consistent with D and C
+nnoremap Y y$
+
+"don't clobber registers when doing character deletes
+"nnoremap x "_x
+"nnoremap X "_X
+"nnoremap s "_s
+
+"quit and save faster
+noremap zz :q!<CR>
+noremap ss :w<CR>
+noremap SS :%!sudo tee > /dev/null %<CR>
+
+"also check this one, It's set by default
+"ZZ :wq!
+
+"overwrite these annoying commands
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+"cabbr W w
+cabbr Q q
+cabbr Q q
+cabbr wQ wq
+cabbr WQ wq
+cabbr Wq wq
+
+noremap <HOME> ^
+noremap <END> $
+
+"this will work only on the gui version, most terminal are unable to
+"determinate the difference between <home> and <m-home>
+
+noremap <M-HOME> gg
+noremap <M-END> G
+
+"move between buffers
+map <Tab><Space> :bnext<CR>
+
+"===============================================================================
 "================================ Plugins config  ==============================
 "===============================================================================
 
@@ -293,118 +405,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "Bundle 'airblade/vim-gitgutter'        "doesn't work
     "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
 endif
-
-"===============================================================================
-"================================== Mappings ===================================
-"===============================================================================
-
-"=== Ctrl Mappings===
-"map work on --normal--, --visual-- and --operator-- modes look at :help map-modes
-
-"move between split windows
-noremap <c-k> <c-w>k
-noremap <c-j> <c-w>j
-noremap <c-l> <c-w>l
-noremap <c-h> <c-w>h
-
-inoremap <c-k> <Esc><c-w>k
-inoremap <c-j> <Esc><c-w>j
-inoremap <c-l> <Esc><c-w>l
-inoremap <c-h> <Esc><c-w>h
-
-"tabs manage
-map <c-n> :tabn<CR>
-map <c-p> :tabp<CR>
-
-map <c-w> :tabclose <CR>
-
-"source $VIMRUNTIME/ftplugin/man.vim
-"nnoremap K :Man <C-R><C-W><CR>
-
-"exit keyboard shortcut
-map <c-x> :confirm qall<CR>
-
-"=== Leader Mappings(,)==
-
-"m'ak'e
-map <silent> <leader>mk :make<CR>
-
-map <silent> <leader>m :set number!<CR>
-
-"update ~/.vimrc
-map <leader>s :source $MYVIMRC<CR>
-
-"resize windows
-noremap <silent><Leader>< :vertical resize -1<CR>
-noremap <silent><Leader>> :vertical resize +1<CR>
-noremap <silent><Leader>+ :resize +1<CR>
-noremap <silent><Leader>- :resize -1<CR>
-
-"clear highlighted searches
-nmap <silent> <leader>/ :nohlsearch<CR>
-
-"=== Tab Mappings ===
-map <Tab>c :cc<CR>
-map <Tab>n :cnext<CR>
-map <Tab>p :cprevious<CR>
-
-"=== Misc Mappings===
-map ; :
-
-"let's switch these
-nnoremap ' `
-nnoremap ` '
-
-"I dont wanna go far away just to press <Esc>, take care when pasting stuff
-inoremap jj <Esc>
-
-"insert a space in normal mode
-noremap <Space> i <Esc>
-
-"use <BackSpace> for deleting visual selections
-xnoremap <BS> d
-snoremap <BS> <BS>i
-
-"Most of the time, the only reason you want to move to the end
-"of a word is to add text
-map e ea
-
-"make Y consistent with D and C
-nnoremap Y y$
-
-"don't clobber registers when doing character deletes
-"nnoremap x "_x
-"nnoremap X "_X
-"nnoremap s "_s
-
-"quit and save faster
-noremap zz :q!<CR>
-noremap ss :w<CR>
-noremap SS :%!sudo tee > /dev/null %<CR>
-
-"also check this one, It's set by default
-"ZZ :wq!
-
-"overwrite these annoying commands
-cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
-"cabbr W w
-cabbr Q q
-cabbr Q q
-cabbr wQ wq
-cabbr WQ wq
-cabbr Wq wq
-
-noremap <HOME> ^
-noremap <END> $
-
-"this will work only on the gui version, most terminal are unable to
-"determinate the difference between <home> and <m-home>
-
-noremap <M-HOME> gg
-noremap <M-END> G
-
-"move between buffers
-map <Tab><Space> :bnext<CR>
 
 "===============================================================================
 "==================================Extra-notes==================================
