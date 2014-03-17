@@ -300,7 +300,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     Bundle 'chilicuil/vimbuddy.vim'
     Bundle 'scrooloose/nerdcommenter'
         let g:NERDCustomDelimiters   = {'mkd': { 'left': '<!--', 'right': '-->'}}
-    Bundle 'vim-scripts/TaskList.vim'
+    Bundle 'chilicuil/TaskList.vim'
         let g:Tlist_WinWidth         = 25
         let g:Tlist_Show_One_File    = 1
         let Tlist_Enable_Fold_Column = 0
