@@ -1,72 +1,80 @@
 Shortcuts (~/.i3/config, ~/.i3/shortcuts)
 -----------------------------------------
 
-<f1>          => open help (this window)
-<ImpPt>       => take a screenshot (requires scrot)
-<alt><ImpPt>  => take a selective screenshot (requires scrot)
-<win><enter>  => open terminal (requires urxvt)
-<win><espace> => open buffer terminal (fast)
-<win><esc>    => exec run_program (requires dmenu)
+<f1>         => help (this window)
+<alt><esc>   => launcher (requires dmenu)
 
-<altgr><k>    => close app (kill -15)
-<altgr><l>    => close app by name (requires dmenu)
-<altgr><m>    => open mail (requires mutt,gnupg)
-<altgr><M>    => open magnifier (requires magnifier)
-<altgr><i>    => open instant messaging (requires irssi,gnupg)
-<altgr><r>    => open music player (requires mpd,ncmpcpp)
-<altgr><w>    => open network app (requires wicd)
-<altgr><h>    => open home files (requires pcmanfm)
-<altgr><p>    => play/stop music (requires mpd)
-<altgr><¿>    => play next track (requires mpd)
-<altgr><´>    => play previous track (requires mpd)
-<altgr><.>    => increase volume
-<altgr><->    => decrease volume
-<altgr><a>    => multimonitor menu (requires dmenu,xrandr)
-<altgr><s>    => search song in mpd (requires dmenu,mpd)
-<altgr><t>    => tell something (requires dmenu,mplayer)
-<altgr><c>    => start a countdown (requires dmenu)
-<altgr><v>    => exec a vm (requires dmenu,vbox)
-<ctrl><+>     => increase font size (require terminal,firefox)
-<ctrl><->     => decrease font size (require terminal,firefox)
-<ctrl><C>     => copy to clipboard
-<ctrl><V>     => paste from clipboard
+<altgr><k>   => close app (kill -15)
+<altgr><l>   => close app by name (requires dmenu)
+<altgr><m>   => mail (requires mutt,gnupg)
+<altgr><M>   => magnifier (requires magnifier)
+<altgr><i>   => instant messaging (requires irssi,gnupg)
+<altgr><n>   => network app (requires wicd)
+<altgr><f>   => file browser (requires pcmanfm)
+<altgr><p>   => play/stop music (requires mpd)
+<altgr><P>   => music player (requires mpd,ncmpcpp)
+<altgr><¿>   => play next track (requires mpd)
+<altgr><´>   => play previous track (requires mpd)
+<altgr><.>   => increase volume
+<altgr><->   => decrease volume
+<altgr><x>   => X11 multimonitor menu (requires dmenu,xrandr)
+<altgr><s>   => search song in mpd (requires dmenu,mpd)
+<altgr><t>   => tell something (requires dmenu,mplayer)
+<altgr><c>   => countdown (requires dmenu)
+<altgr><v>   => launch virtual machine (requires dmenu,vbox)
 
-<win><n>           => change focus to <n> desk
-<win><N>           => move app to <n> desk
-<win><righ arrow>  => change focus to next desk
-<win><left arrow>  => change focus to previous desk
-<win><h>           => change focus to left window
-<win><l>           => change focus to right window
-<win><j>           => change focus to upper window
-<win><k>           => change focus to down window
-<win><H>           => move app to the left
-<win><L>           => move app to the right
-<win><J>           => move app up
-<win><K>           => move app down
+<ctrl><+>    => increase font size (require terminal,firefox)
+<ctrl><->    => decrease font size (require terminal,firefox)
+<ctrl><C>    => copy to clipboard
+<ctrl><V>    => paste from clipboard
 
-<win><m>           => mark an app
-<win><'>           => go to a marked app
+<win><enter> => open terminal (requires urxvt)
+<win><space> => open buffer terminal (fast)
 
-<ctrl><alt><supr>  => open a session menu (requires dmenu)
-<ctrl><alt><l>     => lock the screen (requires i3lock)
-<alt><right-shift> => change keyboard layout
+<win><n>     => change focus to <n> desk
+<win><N>     => move app to <n> desk
+<win><->>    => change focus to next desk
+<win><<->    => change focus to previous desk
+<win><h>     => change focus to left window
+<win><l>     => change focus to right window
+<win><j>     => change focus to upper window
+<win><k>     => change focus to down window
+<win><H>     => move app to the left
+<win><L>     => move app to the right
+<win><J>     => move app up
+<win><K>     => move app down
+
+<win><m>     => mark an app
+<win><'>     => go to a marked app
+
+<alt><rshift>       => change keyboard layout
+
+<ctrl><alt><supr>   => session menu (requires dmenu)
+<ctrl><alt><l>      => lock screen (requires i3lock)
+
+<ImpPt>             => screenshot (requires scrot)
+<alt><ImpPt>        => selective screenshot
+<win><ImpPt>        => start screencast (requires ffcast)
+<win><alt><ImpPt>   => start selective screencast
+<win><shift><ImpPt> => stop screencast
+<Control><ImpPt>        => start gif selective screencast (requires ffcast,convert)
 
 Modes
 -----
 
-<win><f>           => change to fullscreen mode
-<win><d>           => change to default mode
-<win><s>           => change to vertical stack mode
-<win><a>           => change to tabbed mode
+<win><f>     => change to fullscreen mode
+<win><d>     => change to default mode
+<win><s>     => change to vertical stack mode
+<win><a>     => change to tabbed mode
 
-<altgr><z>         => enter resize mode
-<h>                => +1 px to the left
-<l>                => -1 px to the right
-<j>                => -1 px down
-<k>                => +1 px up
-<altgr><x>         => exit resize mode
+<altgr><z>   => enter resize mode
+    <h>      => +1 px to the left
+    <l>      => -1 px to the right
+    <j>      => -1 px down
+    <k>      => +1 px up
+<altgr><x>   => exit resize mode
 
-<win><insert>      => inserts app into buffer mode (advanced)
+<win><insert> => inserts app into buffer mode (advanced)
 
-<win><shift><space>      => window toggle mode
-<win><righ click button> => move
+<win><shift><space> => window toggle mode
+<win><righ click>   => move
