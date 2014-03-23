@@ -28,7 +28,7 @@ set menu_scroll
 set menu_context          = 5
 set quote_regexp          = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 set include               = yes                                               #automatically quote message
-set editor                = "vim +':XwriteMode' + %s"                   #is there any other editor?
+set editor                = "vim -c XWriteMode '%s'"                   #is there any other editor?
 set edit_headers          = yes                                               #you can add cc, bcc, or change ur from input
 set mail_check            = 90                                                #how often mutt will query gmail for new email
 set move                  = no                                                #don't ask to move read messages to mbox on exit
