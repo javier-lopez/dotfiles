@@ -1,5 +1,5 @@
-Shortcuts (~/.i3/config, ~/.i3/shortcuts)
------------------------------------------
+Shortcuts (~/.i3/config)
+------------------------
 
 <f1>         => help (this window)
 <alt><esc>   => launcher (requires dmenu)
@@ -57,7 +57,7 @@ Shortcuts (~/.i3/config, ~/.i3/shortcuts)
 <win><ImpPt>        => start screencast (requires ffcast)
 <win><alt><ImpPt>   => start selective screencast
 <win><shift><ImpPt> => stop screencast
-<Control><ImpPt>        => start gif selective screencast (requires ffcast,convert)
+<Control><ImpPt>    => start gif selective screencast (requires ffcast,convert)
 
 Modes
 -----
