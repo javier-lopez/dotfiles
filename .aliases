@@ -1,17 +1,17 @@
 #custom aliases
-[ -f /usr/local/bin/wcd ] && alias cd='. wcd'
-[ -f /usr/local/bin/rm_ ] && { alias rm.rf='rm_ -f'; alias rm='rm_'; } || alias rm.rf='rm -rf'
-[ -f /usr/local/bin/vw ] && alias feh='vw'
-[ -f /usr/bin/colormake ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
+[ -f "$(command -v "wcd")" ]       && alias cd='. wcd'
+[ -f "$(command -v "rm_")" ]       && alias rm='rm_'
+[ -f "$(command -v "vw")" ]        && alias feh='vw'
+[ -f "$(command -v "colormake")" ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
 
 alias e='extract'
 alias c='compress'
 alias addgroup.touser='usermod -a -G'
 alias mkdir='mkdir -vp'
-alias md='mkdir -vp'
 alias mv='mv -v'
 alias cp='cp -v'
 alias ztup='setup'
+alias rm.rf='rm -rf'
 alias fu-search="fu-search -c"
 alias eix.exact='eix --exact'
 alias print.192.168.1.11='rlpr -h -Plp -H192.168.1.11'
@@ -23,6 +23,7 @@ alias irssi='irssi --config=<(gpg -d $HOME/.irssi/config.gpg)'
 alias pagekite='pagekite --optfile=<(gpg -d $HOME/.pagekite.rc.gpg)'
 alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
 alias share.internet='sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE; echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward'
+alias getpass='sh -c '\''printf "%s" "${1}" | md5sum | openssl enc -base64 | cut -c1-16'\'' -'
 
 #ubuntu-dev
 alias bzr.debuild='bzr bd -- -S -uc -us'
