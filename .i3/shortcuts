@@ -57,7 +57,7 @@ Shortcuts (~/.i3/config)
 <win><ImpPt>        => start screencast (requires ffcast)
 <win><alt><ImpPt>   => start selective screencast
 <win><shift><ImpPt> => stop screencast
-<Control><ImpPt>    => start gif selective screencast (requires ffcast,convert)
+<Control><ImpPt>    => start gif selective screencast
 
 Modes
 -----
