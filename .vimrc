@@ -315,6 +315,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:ctrlp_map                 = '<leader>f'
         let g:ctrlp_use_caching         = 1
         let g:ctrlp_clear_cache_on_exit = 0
+        let g:ctrlp_working_path        = 0
         "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
         "let g:ctrlp_user_command       = 'find %s -type f'
     Bundle 'Lokaltog/vim-easymotion'
@@ -359,20 +360,25 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
         vmap . <Plug>(EasyAlignRepeat)
         nmap <Leader>a <Plug>(EasyAlign)
-    Bundle "chilicuil/pipe2eval"
-    Bundle "chilicuil/x-modes"
+    Bundle 'chilicuil/pipe2eval'
+    Bundle 'chilicuil/x-modes'
         let g:x_modes_map_default      = '<Leader>D'
         let g:x_modes_map_development  = '<Leader>d'
         let g:x_modes_map_write        = '<Leader>w'
         let g:x_modes_map_presentation = '<Leader>p'
         map <silent> <Leader>n           :call xmodes#FileManagerToggle()<CR>
         map <silent> <Leader>l           :call xmodes#FunctionBrowserToggle()<CR>
-    Bundle "chilicuil/vim-cutils"
+    Bundle 'chilicuil/vim-cutils'
         let g:cutils_map_longlines             = '<Leader>cul'
         let g:cutils_map_whitespacehunter      = '<Leader>v'
         let g:cutils_map_appendmodeline        = '<Leader>ml'
 
+    command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
+    " shift-control-* Greps for the word under the cursor
+    nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
+
     "===discarted===
+    "Bundle 'chilicuil/conque'
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
     "Bundle 'FindMate'                      "ctrlp.vim ftw!
     "Bundle 'tomtom/viki_vim'               "what's this anyway?
