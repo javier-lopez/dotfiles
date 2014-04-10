@@ -1,7 +1,10 @@
-# #!/bin/bash
 snippet #!
 	#!/usr/bin/env sh
 	
+snippet $
+	${${1:var}}${2}
+snippet "
+	""
 snippet if
 	if [ ${1:condition} ]; then
 		${2:#statements}
@@ -10,15 +13,14 @@ snippet elif
 	elif [ ${1:condition} ]; then
 		${2:#statements}
 snippet [
-	[ ${1:-z} ${2:"$string"} ]${3}
+	[ ${1:-z} ${2:"$var"} ]${3}
 snippet for #var
-	for ${1:var}
-	do
+	for ${1:var}; do
 		${2:#statements}
 	done
 snippet for #counter
-	${2:i}=0 ; while [ "$$2" -lt $(expr ${1:count}) ]; do
-		$2=$(expr $$2 + 1); ${3:#statements}
+	${2:i}=0 ; while [ "$$2" -lt "$(expr ${1:count})" ]; do
+		$2="$(expr "$$2" + 1)"; ${3:#statements}
 	done 
 snippet while
 	while [ ${1:condition} ]; do
@@ -38,7 +40,7 @@ snippet case
 			${3};;
 	esac
 snippet fun
-	${1:function}(${2})
+	${1:_function}(${2})
 	{
 	    ${3}
 	}
