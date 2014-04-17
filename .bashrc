@@ -10,7 +10,7 @@
 [ -z "$PS1" ] && return
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
-[ $BASH_VERSINFO -ge 4 ] && shopt -s autocd cdspell dirspell
+[ "$BASH_VERSINFO" -ge "4" ] && shopt -s autocd cdspell dirspell
 shopt -s checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
 shopt -s hostcomplete histappend histverify
 
@@ -32,12 +32,12 @@ stty -ctlecho
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 #/etc/terminfo/*
-#export TERM=xterm-color
-export TERM=xterm-256color
+#export TERM="xterm-color"
+export TERM="xterm-256color"
 
 # Change the window title of X terminals
 # originally from /etc/bash/bashrc on Gentoo
-case ${TERM} in
+case "$TERM" in
     xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
         PROMPT_COMMAND='printf "%b" "\033]0;${PWD/$HOME/~}\007"'
         ;;
@@ -52,32 +52,32 @@ esac
 #===============================================================================
 
 # path
-export PATH=$PATH:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/sbin:/usr/games
+export PATH="${PATH}:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/sbin:/usr/games"
 
 # gpg
-export GPGKEY=BC9C8902
-export GPG_TTY=$(tty)
+export GPGKEY="BC9C8902"
+export GPG_TTY="$(tty)"
 
 # random vars
 export EDITOR="vim"
-export CSCOPE_EDITOR=vim
-export WCDHOME="$HOME/.wcd" #wcd magic
+export CSCOPE_EDITOR="vim"
+export WCDHOME="${HOME}/.wcd" #wcd magic
 export BROWSER="x-www-browser"
 
 #ubuntu-dev
 export DEBEMAIL="chilicuil@ubuntu.com"
 #export DEBFULLNAME="Javier Lopez"
 export DEBFULLNAME="Javier P.L."
-export QUILT_PATCHES=debian/patches
+export QUILT_PATCHES="debian/patches"
 export QUILT_PUSH_ARGS="--color=auto"
 export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
 export QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
 export QUILT_DIFF_OPTS='-p'
-#export PBUILDFOLDER="$HOME/.pbuilder"
+#export PBUILDFOLDER="${HOME}/.pbuilder"
 
-if [ -f /usr/bin/ccache ]; then
-    export PATH="$PATH:/usr/lib/ccache"
-    export CCACHE_DIR="$HOME/.ccache"
+if [ -f "$(command -v "ccache")" ]; then
+    export PATH="${PATH}:/usr/lib/ccache"
+    export CCACHE_DIR="${HOME}/.ccache"
     export CCACHE_SIZE="2G"
     #export CCACHE_PREFIX="distcc"
 fi
@@ -86,21 +86,20 @@ fi
 #================================= Modules =====================================
 #===============================================================================
 
-#if [ -d ~/.shundle/bundle/shundle/.git ]; then
 if [ -f ~/.shundle/bundle/shundle/shundle ]; then
     .  ~/.shundle/bundle/shundle/shundle
     Bundle='chilicuil/shundle'
-        SHUNDLE_ENV_VERBOSE=0
-        SHUNDLE_ENV_DEBUG=0
-        SHUNDLE_ENV_COLOR=1
+        SHUNDLE_ENV_VERBOSE="0"
+        SHUNDLE_ENV_DEBUG="0"
+        SHUNDLE_ENV_COLOR="1"
     #Bundle='chilicuil/shundle-plugins/todo-rememberator'
-        #REMEMBERATOREVERY=5
-    Bundle='gh:chilicuil/shundle-plugins/eternalize'
-        #ETERNALIZE_PATH=~/.eternalize
-    Bundle='github:chilicuil/shundle-plugins/colorize'
+        #REMEMBERATOREVERY="5"
+    Bundle="gh:chilicuil/shundle-plugins/eternalize"
+        #ETERNALIZE_PATH="~/.eternalize"
+    Bundle="github:chilicuil/shundle-plugins/colorize"
         #COLORIZE_THEME="blacky"
         #COLORIZE_PS="yujie"
-    Bundle='chilicuil/shundle-plugins/aliazator.git'
+    Bundle="chilicuil/shundle-plugins/aliazator.git"
         #ALIAZATOR_PLUGINS="none"
         #ALIAZATOR_PLUGINS="minimal"
         ALIAZATOR_PLUGINS="installed"
