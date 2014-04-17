@@ -1,8 +1,8 @@
 snippet #!
-	#!/usr/bin/env sh
+	#!/bin/sh
 	
 snippet $
-	${${1:var}}${2}
+	"${${1:var}}"${2}
 snippet "
 	""
 snippet if
@@ -13,22 +13,22 @@ snippet elif
 	elif [ ${1:condition} ]; then
 		${2:#statements}
 snippet [
-	[ ${1:-z} ${2:"$var"} ]${3}
+	[ ${1:-z} ${2:condition} ]
 snippet for #var
 	for ${1:var}; do
 		${2:#statements}
 	done
 snippet for #counter
-	${2:i}=0 ; while [ "$$2" -lt "$(expr ${1:count})" ]; do
-		$2="$(expr "$$2" + 1)"; ${3:#statements}
+	${2:i}="0" ; while [ "${$2}" -lt "${1:count}" ]; do
+		$2="$((${$2} + 1)"; ${3:#statements}
 	done 
 snippet while
 	while [ ${1:condition} ]; do
 		${2:#statements}
 	done
 snippet whilec
-	${2:i}=0 ; while [ "$$2" -lt $(expr ${1:count}) ]; do
-		$2=$(expr $$2 + 1); ${3:#statements}
+	${2:i}="0" ; while [ "${$2}" -lt "${1:count}" ]; do
+		$2="$((${$2} + 1)"; ${3:#statements}
 	done 
 snippet until
 	until [ ${1:condition} ]; do
@@ -47,6 +47,6 @@ snippet fun
 snippet basename
 	expr "${1:var}" : '.*/\([^/]*\)'${2}
 snippet echo
-	printf "%s\\n" "${1:var}"${2}
+	printf "%s\\n" ${1:"string"}
 snippet printf
-	printf "%s\\n" "${1:var}"${2}
+	printf "%s\\n" ${1:"string"}
