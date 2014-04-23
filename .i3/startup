@@ -36,4 +36,4 @@ _exec autocutsel #sync X/Gnome clipboards
 _exec redshift -l 19.41:-99.04 -t 6500:4500 -g 0.8 #protect eyes by controling the amount of light the screen outputs
 #_exec redshift -l 19.41:-99.04 -t 6500:3600 -g 0.8 -v
 
-#_exec unclutter -root -visible #hide mouse coursor when it isn't used, nice addon, however it brings focus problems to i3
+#_exec unclutter -root -visible #hide mouse coursor when it isn't used, nice addon but it brings focus problems to i3
