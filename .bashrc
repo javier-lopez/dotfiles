@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-#           Last review            Sun 13 Oct 2013 11:57:51 PM CDT
+#           Last review            Wed 23 Apr 2014 04:16:19 PM CDT
 #-------------------------------------------------------------------------------
 
 #===============================================================================
@@ -7,10 +7,10 @@
 #===============================================================================
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+[ -z "${PS1}" ] && return
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
-[ "$BASH_VERSINFO" -ge "4" ] && shopt -s autocd cdspell dirspell
+[ "${BASH_VERSINFO}" -ge "4" ] && shopt -s autocd cdspell dirspell
 shopt -s checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
 shopt -s hostcomplete histappend histverify
 
@@ -37,15 +37,12 @@ export TERM="xterm-256color"
 
 # Change the window title of X terminals
 # originally from /etc/bash/bashrc on Gentoo
-case "$TERM" in
+case "${TERM}" in
     xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
-        PROMPT_COMMAND='printf "%b" "\033]0;${PWD/$HOME/~}\007"'
-        ;;
+        PROMPT_COMMAND='printf "%b" "\033]0;${PWD/$HOME/~}\007"' ;;
     screen)
-        PROMPT_COMMAND='printf "%b" "\033_${PWD/$HOME/~}\033\\"'
-        ;;
+        PROMPT_COMMAND='printf "%b" "\033_${PWD/$HOME/~}\033\\"' ;;
 esac
-
 
 #===============================================================================
 #=============================== Environment  ==================================
@@ -61,12 +58,11 @@ export GPG_TTY="$(tty)"
 # random vars
 export EDITOR="vim"
 export CSCOPE_EDITOR="vim"
-export WCDHOME="${HOME}/.wcd" #wcd magic
+export WCDHOME="${HOME}/.wcd"
 export BROWSER="x-www-browser"
 
 #ubuntu-dev
 export DEBEMAIL="chilicuil@ubuntu.com"
-#export DEBFULLNAME="Javier Lopez"
 export DEBFULLNAME="Javier P.L."
 export QUILT_PATCHES="debian/patches"
 export QUILT_PUSH_ARGS="--color=auto"
