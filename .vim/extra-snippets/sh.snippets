@@ -40,9 +40,9 @@ snippet case
 			${3};;
 	esac
 snippet fun
-	${1:_function}(${2})
+	${1:_function}()
 	{
-	    ${3}
+	    ${2}
 	}
 snippet basename
 	expr "${1:var}" : '.*/\([^/]*\)'${2}
