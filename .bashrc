@@ -6,7 +6,7 @@
 #================================= General =====================================
 #===============================================================================
 
-# If not running interactively, don't do anything
+# do nothing if not running interactively
 [ -z "${PS1}" ] && return
 
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
@@ -23,20 +23,20 @@ set -o vi #this is sparta!
 # Do not show ^C when pressing Ctrl+C
 stty -ctlecho
 
-# bash completion, try to use bash_completion => 2.0, loads 3x faster
 #trap '. /etc/bash_completion ; trap USR2' USR2
 #{ sleep 0.01 ; builtin kill -USR2 $$ ; } & disown
 [ -f /etc/bash_completion ] && . /etc/bash_completion
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+if command -v "lesspipe" >/dev/null 2>&1; then
+    eval "$(SHELL=/bin/sh lesspipe)"
+fi
 
 #/etc/terminfo/*
 #export TERM="xterm-color"
 export TERM="xterm-256color"
 
-# Change the window title of X terminals
-# originally from /etc/bash/bashrc on Gentoo
+# Change the X terminal window title
 case "${TERM}" in
     xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
         PROMPT_COMMAND='printf "%b" "\033]0;${PWD/$HOME/~}\007"' ;;
@@ -61,7 +61,11 @@ export CSCOPE_EDITOR="vim"
 export WCDHOME="${HOME}/.wcd"
 export BROWSER="x-www-browser"
 
-#ubuntu-dev
+# ruby dev
+#[ -f "${HOME}/.rvm/bin" ] && export PATH="${PATH}:${HOME}/.rvm/bin"
+#[ -f "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+#ubuntu dev
 export DEBEMAIL="chilicuil@ubuntu.com"
 export DEBFULLNAME="Javier P.L."
 export QUILT_PATCHES="debian/patches"
@@ -69,7 +73,6 @@ export QUILT_PUSH_ARGS="--color=auto"
 export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
 export QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
 export QUILT_DIFF_OPTS='-p'
-#export PBUILDFOLDER="${HOME}/.pbuilder"
 
 if [ -f "$(command -v "ccache")" ]; then
     export PATH="${PATH}:/usr/lib/ccache"
