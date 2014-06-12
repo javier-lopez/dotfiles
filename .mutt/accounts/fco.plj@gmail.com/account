@@ -17,7 +17,7 @@ set imap_pass        = $my_fcoDOTpljATgmailDOTcom
 set smtp_url         = "smtp://fco.plj@smtp.gmail.com:587/"
 set smtp_pass        = $my_fcoDOTpljATgmailDOTcom
 
-set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]"
-#set status_format    = "-%r- %v ---[ Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? Size:%l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
+set status_format    = "%>═[Folder:m@javier.io/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]"
+#set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]"
 
 set signature        = "$HOME/.mutt/accounts/fco.plj@gmail.com/fco.plj@gmail.com.signature"

@@ -16,6 +16,5 @@ set smtp_url         = "smtp://lnthestqfgxyg@smtp.gmail.com:587/"
 set smtp_pass        = $my_lnthestqfgxygATgmailDOTcom
 
 set status_format    = "%>═[Folder:$imap_user/%f Msgs:%m%?n? New:%n?%?d? Del:%d?%?t? Tag:%t?%?l??]%?p?---- .: %p waiting to send :. ? [%P]"
-#set status_format    = "-%r- %v ---[ Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? Size:%l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
 
 set signature        = "/home/chilicuil/.mutt/accounts/lnthestqfgxyg@gmail.com/signature"
