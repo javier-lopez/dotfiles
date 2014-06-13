@@ -94,7 +94,7 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
     #Bundle='chilicuil/shundle-plugins/todo-rememberator'
         #REMEMBERATOREVERY="5"
     Bundle="gh:chilicuil/shundle-plugins/eternalize"
-        #ETERNALIZE_PATH="~/.eternalize"
+        ETERNALIZE_PATH="${HOME}/.eternalize-data"
     Bundle="github:chilicuil/shundle-plugins/colorize"
         #COLORIZE_THEME="blacky"
         #COLORIZE_PS="yujie"
