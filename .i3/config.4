@@ -1,5 +1,5 @@
 ######################################################################################
-# Last review            Thu 09 Jan 2014 03:20:06 AM CST
+# Last review            Thu 12 Jun 2014 10:57:25 PM CDT
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf :
 
@@ -7,7 +7,7 @@
 # ############ AUTOSTART ############
 # ###################################
 
-# execute my startup programs
+# execute startup programs
 # exec_always
 exec --no-startup-id ~/.i3/startup
 
@@ -34,8 +34,7 @@ font xft:Bahamas 9
 
 ### IPC INTERFACE ###
 
-# The IPC interface allows programs like an external workspace bar
-# (i3-wsbar) or i3-msg (can be used to "remote-control" i3) to work.
+# The IPC interface allows external programs to manipulate i3
 ipc-socket ~/.i3/ipc.sock
 
 # ###################################
@@ -45,15 +44,15 @@ ipc-socket ~/.i3/ipc.sock
 # This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
 # Mod4 is <Win> and Mod1 is <Alt>
-set $Win Mod4
-set $Alt Mod1
+set $Win   Mod4
+set $Alt   Mod1
 set $Altgr Mod5
 
-# Use Mouse+$Win to drag floating windows to their wanted position
+# Use $Win+Space to drag floating windows
 floating_modifier $Win
 
 # help
-bindsym F1 exec /usr/local/bin/minos-help
+bindsym F1 exec minos-help
 
 # fullscreen mode ($Win+f)
 bindcode $Win+41 fullscreen
@@ -76,16 +75,16 @@ bindcode $Win+44 focus down
 bindcode $Win+45 focus up
 bindcode $Win+46 focus right
 # alternatively, use cursor keys
-#bindsym $Win+Left focus left
-#bindsym $Win+Down focus down
-#bindsym $Win+Up focus up
+#bindsym $Win+Left  focus left
+#bindsym $Win+Down  focus down
+#bindsym $Win+Up    focus up
 #bindsym $Win+Right focus right
 
 # scratchpad, i3 => 4.x
 # send to scratchpad ($Win+Insert)
 bindcode $Win+118 move scratchpad
 # show scratchpad ($Win+Space)
-bindcode $Win+65 scratchpad show
+bindcode $Win+65  scratchpad show
 
 # focus container ($Alt+h/j/k/l)
 #bindcode $Alt+43 focus parent; focus left
@@ -94,14 +93,14 @@ bindcode $Win+65 scratchpad show
 #bindcode $Alt+46 focus parent; focus right
 
 # snap ($Win+Control+h/j/k/l)
-#bindcode $Win+Control+43 layout stacking
-#bindcode $Win+Control+44 layout stacking
-#bindcode $Win+Control+45 layout stacking
-#bindcode $Win+Control+46 layout stacking
+#bindcode $Win+Control+43   layout stacking
+#bindcode $Win+Control+44   layout stacking
+#bindcode $Win+Control+45   layout stacking
+#bindcode $Win+Control+46   layout stacking
 # (alternatively, you can use the cursor keys:)
-#bindsym $Win+Control+Left layout stacking
-#bindsym $Win+Control+Down layout stacking
-#bindsym $Win+Control+Up layout stacking
+#bindsym $Win+Control+Left  layout stacking
+#bindsym $Win+Control+Down  layout stacking
+#bindsym $Win+Control+Up    layout stacking
 #bindsym $Win+Control+Right layout stacking
 
 # move ($Win+Shift+h/j/k/l)
@@ -110,9 +109,9 @@ bindcode $Win+Shift+44 move down
 bindcode $Win+Shift+45 move up
 bindcode $Win+Shift+46 move right
 # (alternatively, use cursor keys:)
-#bindsym $Win+Shift+Left move left
-#bindsym $Win+Shift+Down move down
-#bindsym $Win+Shift+Up move up
+#bindsym $Win+Shift+Left  move left
+#bindsym $Win+Shift+Down  move down
+#bindsym $Win+Shift+Up    move up
 #bindsym $Win+Shift+Right move right
 
 # move container (Mod3+Shift+h/j/k/l)
@@ -144,7 +143,7 @@ bindcode $Win+32 workspace 19 work
 bindcode $Win+33 workspace 20 work
 
 bindsym $Win+Right workspace next
-bindsym $Win+Left workspace prev
+bindsym $Win+Left  workspace prev
 
 # move
 bindcode $Win+Shift+10 move workspace 1 www
@@ -173,17 +172,11 @@ bindcode $Win+Shift+33 move workspace 20 work
 # ----------------------------------<
 
 # terminal ($Win+Enter)
-bindcode $Win+36 exec x-terminal-emulator
-bindcode $Win+Shift+36 split h
-#bindcode $Win+36 exec urxvtc
-#bindsym Control+Shift+g exec x-terminal-emulator
-#bindsym Control+Shift+g exec urxvtc
-
-# firefox (Control+Shift*f)
-#bindcode Control+Shift+41 exec firefox
+bindcode $Win+36         exec x-terminal-emulator
+bindcode $Win+Shift+36   split h
 
 # dmenu-run ($Alt+Esc)
-bindcode $Alt+9 exec /usr/local/bin/dmenu-run
+bindcode $Alt+9 exec dmenu-run
 
 # exit i3 (Control+$Alt+e)
 #bindcode Control+$Alt+26 exit
@@ -192,40 +185,36 @@ bindcode $Alt+9 exec /usr/local/bin/dmenu-run
 #bindcode Control+$Alt+27 restart
 
 # lock session (Control+$Alt+l)
-#bindcode Control+$Alt+46 exec i3lock -i $HOME/data/images/wallpapers/sun.png -n -t &
-bindcode Control+$Alt+46 exec  i3lock -i $HOME/.data/images/wallpapers/lock.png -n -t &
+bindcode Control+$Alt+46  exec  i3lock -i $HOME/.data/images/wallpapers/lock.png -n -t &
 
 # dmenu-session (Control+$Alt+Supr)
-bindcode Control+$Alt+119 exec /usr/local/bin/dmenu-session
+bindcode Control+$Alt+119 exec dmenu-session
 
 # toggle windows transparency
 #bindsym Control+Shift+t exec transset -p
 
 # mutt
-bindsym $Altgr+m exec x-terminal-emulator -title "mutt" -e mutt
-#bindsym Control+Shift+m exec /bin/sh -c mutt
-# magnifier ($Altgr++)
-bindsym $Altgr+Shift+m exec /usr/local/bin/magnifier
+bindsym $Altgr+m         exec x-terminal-emulator -title "mutt" -e mutt
+
+# magnifier
+bindsym $Altgr+Shift+m   exec magnifier
 
 # irssi
 #bindsym Control+Shift+i exec x-terminal-emulator -e irssi
-bindsym $Altgr+i exec x-terminal-emulator -title "irssi" -e bash -c "irssi --config=<(gpg -d $HOME/.irssi/config.gpg)"
+bindsym $Altgr+i         exec x-terminal-emulator -title "irssi" -e bash -c "irssi --config=<(gpg -d $HOME/.irssi/config.gpg)"
 
 # ncmpcpp
-bindsym $Altgr+Shift+p exec x-terminal-emulator -e ncmpcpp
-#bindsym Control+Shift+p exec sh -c pms
+bindsym $Altgr+Shift+p   exec x-terminal-emulator -e ncmpcpp
 
 # wicd-curses
-bindsym $Altgr+n exec x-terminal-emulator -e wicd-curses
+bindsym $Altgr+n         exec x-terminal-emulator -e wicd-curses
 
 # alsamixer
 #bindsym Control+Shift+a exec x-terminal-emulator -e alsamixer
 #bindsym Control+Shift+a exec /bin/sh -c alsamixer
 
 # pcmanfm
-bindsym $Altgr+f exec pcmanfm
-#bindsym Control+Shift+f exec pcmanfm
-#bindsym Control+Shift+f exec nautilus
+bindsym $Altgr+f   exec pcmanfm
 
 # volume ($Altgr+,) ($Altgr+.)
 bindcode $Altgr+59 exec amixer -q set Master 1-
@@ -233,49 +222,48 @@ bindcode $Altgr+59 exec amixer -q set Master 1-
 bindcode $Altgr+60 exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
 
 # mplayer|mpd ($Altgr+¿) ($Altg+´)
-bindsym $Altgr+p exec /usr/local/bin/music-control pause
-bindcode $Altgr+21 exec /usr/local/bin/music-control next
-bindcode $Altgr+34 exec /usr/local/bin/music-control previous
+bindsym  $Altgr+p  exec music-control pause
+bindcode $Altgr+21 exec music-control next
+bindcode $Altgr+34 exec music-control previous
 
 # shift input keyboard layouts ($Alt+RightShift)
-bindcode $Alt+62 exec /usr/local/bin/shift-keyboard-layout
+bindcode $Alt+62   exec shift-keyboard-layout
+
+# toggle screen powersave ($Altgr+Space)
+bindcode $Altgr+65 exec movietime
 
 # kill ($Altgr+k)
 bindcode $Altgr+45 kill
 
 # dmenu-killall ($Altgr+l)
-bindcode $Altgr+46 exec /usr/local/bin/dmenu-killall
+bindcode $Altgr+46 exec dmenu-killall
 
 # song
-bindsym $Altgr+s exec /usr/local/bin/dmenu-mpd
+bindsym $Altgr+s   exec dmenu-mpd
 
 # xrandr
-bindsym $Altgr+x exec /usr/local/bin/dmenu-xrandr
+bindsym $Altgr+x   exec dmenu-xrandr
 
 # vbox
-bindsym $Altgr+v exec /usr/local/bin/dmenu-vbox
+bindsym $Altgr+v   exec dmenu-vbox
 
 # tell
-bindsym $Altgr+t exec /usr/local/bin/dmenu-tell
+bindsym $Altgr+t   exec dmenu-tell
 
 # dmenu-coundown
-bindsym $Altgr+c exec /usr/local/bin/dmenu-countdown
+bindsym $Altgr+c   exec dmenu-countdown
 
 # screenshot (ImpPt)
-bindcode 107 exec /usr/local/bin/screenshot
+bindcode 107       exec screenshot
 # selective screenshot ($Alt+ImpPt)
-bindcode $Alt+107 exec /usr/local/bin/screenshot -s
+bindcode $Alt+107  exec screenshot -s
 
 # screencast ($Win+ImpPt)
-bindcode $Win+107 exec ffcast
+bindcode $Win+107  exec ffcast
 # selective screenshot ($Win+Shift+ImpPt)
-bindcode $Win+$Alt+107 exec ffcast -s
-bindcode Control+107 exec /usr/local/bin/gifcast
+bindcode $Win+$Alt+107  exec ffcast -s
+bindcode Control+107    exec gifcast
 bindcode $Win+Shift+107 exec ffcast -k
-
-# record_desktop: TODO 29-09-2013 00:50 >> assign new shortcuts
-#bindcode Control+Shift+35 exec /usr/local/bin/screencast-record stop
-#bindcode Control+35 exec /usr/local/bin/screencast-record start
 
 # go to the urgent flag set
 #bindsym $Win+x [urgent=latest] focus
@@ -311,7 +299,7 @@ bindsym $Altgr+z mode "resize"
 #bindsym $Win+m [class="buzz" title="mutt"] focus
 
 # Read 1 character and mark the current window with this character
-bindsym $Win+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
+bindsym $Win+m   exec i3-input -p 'mark ' -l 1 -P 'Mark: '
 
 # Read 1 character and go to the window with the character
 bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '

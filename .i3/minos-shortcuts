@@ -2,36 +2,37 @@ Help (~/.i3/config)
 -------------------
 
         <f1>        ⇨  help (this window)
+
      <alt><esc>     ⇨  launcher
+    <win><enter>    ⇨  terminal emulator
+    <win><space>    ⇨  terminal in buffer mode
 
      <altgr><k>     ⇨  close app
      <altgr><l>     ⇨  close app by name
+
      <altgr><f>     ⇨  file browser
      <altgr><n>     ⇨  network app
      <altgr><m>     ⇨  mail
      <altgr><M>     ⇨  magnifier
      <altgr><i>     ⇨  instant messaging
-     <altgr><p>     ⇨  play/stop music
      <altgr><P>     ⇨  music player
-     <altgr><¿>     ⇨  play next track
-     <altgr><´>     ⇨  play previous track
-     <altgr><.>     ⇨  increase volume
-     <altgr><->     ⇨  decrease volume
-     <altgr><s>     ⇨  search song in mpd
-     <altgr><t>     ⇨  tell something
      <altgr><c>     ⇨  countdown
      <altgr><x>     ⇨  multimonitor menu
      <altgr><v>     ⇨  virtual machine launcher
 
+   <altgr><space>   ⇨  toggle screen powersave
+     <altgr><s>     ⇨  search song in mpd
+     <altgr><p>     ⇨  play/stop music
+     <altgr><¿>     ⇨  play next track
+     <altgr><´>     ⇨  play previous track
+     <altgr><.>     ⇨  increase volume
+     <altgr><->     ⇨  decrease volume
+     <altgr><t>     ⇨  tell something
+
      <ctrl><C>      ⇨  copy to clipboard
      <ctrl><V>      ⇨  paste from clipboard
-
      <ctrl><+>      ⇨  increase font size
      <ctrl><->      ⇨  decrease font size
-
-    <win><enter>    ⇨  open terminal (traditional)
-    <win><space>    ⇨  open buffer terminal (fast)
-    <win><insert>   ⇨  insert app into buffer mode
 
       <win><n>      ⇨  go to <n> desk
       <win><->>     ⇨  go to next desk
@@ -59,13 +60,11 @@ Help (~/.i3/config)
 <win><shift><ImpPt> ⇨  stop screencast
   <Control><ImpPt>  ⇨  gif selective screencast
 
-Modes
------
-
       <win><f>      ⇨  fullscreen
       <win><d>      ⇨  default
       <win><s>      ⇨  vertical stack
       <win><a>      ⇨  tabbed
+    <win><insert>   ⇨  insert app into buffer mode
 
      <altgr><z>     ⇨  enter resize mode
          <h>        ⇨  +1 px to the left
