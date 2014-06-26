@@ -51,9 +51,6 @@ set $Altgr Mod5
 # Use $Win+Space to drag floating windows
 floating_modifier $Win
 
-# help
-bindsym F1 exec minos-help
-
 # fullscreen mode ($Win+f)
 bindcode $Win+41 fullscreen
 
@@ -128,7 +125,7 @@ bindcode $Win+13 workspace 4 im
 bindcode $Win+14 workspace 5 mail
 bindcode $Win+15 workspace 6 files
 bindcode $Win+16 workspace 7 work
-bindcode $Win+17 workspace 8 news
+bindcode $Win+17 workspace 8 work
 bindcode $Win+18 workspace 9 work
 bindcode $Win+19 workspace 10 work
 bindcode $Win+24 workspace 11 work
@@ -153,7 +150,7 @@ bindcode $Win+Shift+13 move workspace 4 im
 bindcode $Win+Shift+14 move workspace 5 mail
 bindcode $Win+Shift+15 move workspace 6 files
 bindcode $Win+Shift+16 move workspace 7 work
-bindcode $Win+Shift+17 move workspace 8 news
+bindcode $Win+Shift+17 move workspace 8 work
 bindcode $Win+Shift+18 move workspace 9 work
 bindcode $Win+Shift+19 move workspace 10 work
 
@@ -171,9 +168,12 @@ bindcode $Win+Shift+32 move workspace 19 work
 bindcode $Win+Shift+33 move workspace 20 work
 # ----------------------------------<
 
+# help
+bindsym F1 exec  minos-help
+
 # terminal ($Win+Enter)
-bindcode $Win+36         exec x-terminal-emulator
-bindcode $Win+Shift+36   split h
+bindcode $Win+36       exec x-terminal-emulator
+bindcode $Win+Shift+36 split h
 
 # dmenu-run ($Alt+Esc)
 bindcode $Alt+9 exec dmenu-run
@@ -185,7 +185,7 @@ bindcode $Alt+9 exec dmenu-run
 #bindcode Control+$Alt+27 restart
 
 # lock session (Control+$Alt+l)
-bindcode Control+$Alt+46  exec  i3lock -i $HOME/.data/images/wallpapers/lock.png -n -t &
+bindcode Control+$Alt+46  exec dmenu-session lock
 
 # dmenu-session (Control+$Alt+Supr)
 bindcode Control+$Alt+119 exec dmenu-session
@@ -218,7 +218,7 @@ bindsym $Altgr+f   exec pcmanfm
 
 # volume ($Altgr+,) ($Altgr+.)
 bindcode $Altgr+59 exec amixer -q set Master 1-
-#unmute if mutted
+# unmute if mutted
 bindcode $Altgr+60 exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
 
 # mplayer|mpd ($Altgr+¿) ($Altg+´)
@@ -259,7 +259,7 @@ bindcode 107       exec screenshot
 bindcode $Alt+107  exec screenshot -s
 
 # screencast ($Win+ImpPt)
-bindcode $Win+107  exec ffcast
+bindcode $Win+107       exec ffcast
 # selective screenshot ($Win+Shift+ImpPt)
 bindcode $Win+$Alt+107  exec ffcast -s
 bindcode Control+107    exec gifcast
@@ -339,7 +339,6 @@ assign [class="Firefox"]                                "1 www"
 assign [class="^URxvt$" title="irssi"]                  "4 im"
 assign [class="^URxvt$" title="mutt"]                   "5 mail"
 assign [class="Thunderbird"]                            "5 mail"
-assign [class="Liferea"]                                "8 news"
 assign [class="Pcmanfm"]                                "6 files"
 assign [class="Nautilus"]                               "6 files"
 

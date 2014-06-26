@@ -96,8 +96,8 @@ BASETGZ="${PATH_PBUILDER}/${NAME}/${NAME}-base.tgz"
 # BASEPATH="$PATH_PBUILDER/$NAME/base.cow/"
 DISTRIBUTION="${DIST}"
 #use it only if you've followed http://viajemotu.wordpress.com/2010/08/10/notas-sobre-pbuilder/
-if [ -d "${HOME}/misc/ubuntu/release/results/${NAME}/" ]; then
-    export BUILDRESULT="${HOME}/misc/ubuntu/release/results/${NAME}/"
+if [ -d "${HOME}/code/ubuntu/release/results/${NAME}/" ]; then
+    export BUILDRESULT="${HOME}/code/ubuntu/release/results/${NAME}/"
 fi
 #otherwise uncomment the next line
 #export BUILDRESULT="/var/cache/pbuilder/$NAME/result/"

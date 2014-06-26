@@ -2,6 +2,8 @@
 # (c) holds no legal value ;)
 snippet author
 	${1:`g:snips_author`} <${2:`g:snips_authorEmail`}> `strftime("%Y")`${3}
+snippet minos
+	1:`strftime("%Y%m%d%H%M")`+git${1:7digitsHash}-minos${2}
 snippet c)
 	Copyright (c) `strftime("%Y")` ${1:`g:snips_author`} ${2:<`g:snips_authorEmail`>}${3}
 snippet date
@@ -14,8 +16,6 @@ snippet TODO
 	TODO `strftime("%d-%m-%Y %H:%M")` >> ${1:comment}
 snippet todo
 	TODO `strftime("%d-%m-%Y %H:%M")` >> ${1:comment}
-snippet alias
-	alias ${1:shortcut}='${2:long command}'${3}
 # Hash Pointer
 snippet .
 	=>
