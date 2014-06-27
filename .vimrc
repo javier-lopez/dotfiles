@@ -13,8 +13,9 @@ endif
 
 if has ('gui_running')
     set background=dark
-    "set gfn=Monaco
-    "set gfn=Inconsolata\ Medium\ 10
+    "set gfn=Monaco\ 9
+    "set gfn=Monospace\ 9
+    set gfn=Inconsolata\ Medium\ 10
     colorscheme hemisu
 else
     set background=dark
@@ -276,10 +277,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "====github====
     Bundle 'chilicuil/vundle'
     Bundle 'edsono/vim-matchit'
-    "Bundle 'vim-scripts/CRefVim'
-        "map <Leader>crn <Plug>CRV_CRefVimNormal
-        "map <Leader>caw <Plug>CRV_CRefVimAsk
-        "map <Leader>cvi <Plug>CRV_CRefVimInvoke
     Bundle 'scrooloose/nerdtree'
         let g:NERDTreeWinPos         = 'right'
         let g:NERDTreeWinSize        = 25
@@ -304,7 +301,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:Tlist_WinWidth         = 25
         let g:Tlist_Show_One_File    = 1
         let Tlist_Enable_Fold_Column = 0
-        "TODO 07-09-2011 11:30 => make it toggle (open/close)
         map <Leader>t <Plug>TaskList
     "Bundle 'vim-scripts/DrawIt'
         "map <leader>di :DIstart <CR>
@@ -333,9 +329,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:neocomplcache_disable_auto_complete          = 0
         let g:neocomplcache_enable_wildcard                = 1
         let g:neocomplcache_enable_caching_message         = 1
-    "Bundle 'mattn/zencoding-vim'
-        "let g:user_zen_leader_key = '<c-y>'
-        "let g:use_zen_complete_tag = 1
     Bundle 'bogado/file-line'
     Bundle 'mhinz/vim-signify'
         let g:signify_vcs_list               = [ 'git' ]
@@ -343,24 +336,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:signify_sign_change            = '~'
         let g:signify_sign_delete            = '-'
         let g:signify_sign_delete_first_line = '‾'
-
-    "===vim-scripts===, not hosted in github for some obscure reason
-    Bundle 'QuickBuf'
-        let g:qb_hotkey = "<F2>"
-    Bundle 'surround.vim'
-        " ds" / cs"' / ysiw'
-    Bundle 'repeat.vim'
-    Bundle 'IndexedSearch'
-    Bundle 'gnupg.vim'
-
-    "===experimental===
-    Bundle '2072/PHP-Indenting-for-VIm'
-    Bundle 'junegunn/vim-easy-align'
-        command! -nargs=* -range -bang Align
-        \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
-        vmap . <Plug>(EasyAlignRepeat)
-        nmap <Leader>a <Plug>(EasyAlign)
-    Bundle 'chilicuil/pipe2eval'
     Bundle 'chilicuil/x-modes'
         let g:x_modes_map_default      = '<Leader>D'
         let g:x_modes_map_development  = '<Leader>d'
@@ -372,6 +347,23 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:cutils_map_longlines             = '<Leader>cul'
         let g:cutils_map_whitespacehunter      = '<Leader>v'
         let g:cutils_map_appendmodeline        = '<Leader>ml'
+
+    "===vim-scripts===, not hosted in github for some obscure reason
+    Bundle 'QuickBuf'
+        let g:qb_hotkey = "<F2>"
+    Bundle 'surround.vim'
+        " ds" / cs"' / ysiw'
+    Bundle 'repeat.vim'
+    Bundle 'IndexedSearch'
+    Bundle 'gnupg.vim'
+
+    "===experimental===
+    Bundle 'junegunn/vim-easy-align'
+        command! -nargs=* -range -bang Align
+        \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
+        vmap . <Plug>(EasyAlignRepeat)
+        nmap <Leader>a <Plug>(EasyAlign)
+    Bundle 'chilicuil/pipe2eval'
 
     command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
     " shift-control-* Greps for the word under the cursor
@@ -410,6 +402,18 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "Bundle 'luxflux/vim-git-inline-diff'   "too slow
     "Bundle 'airblade/vim-gitgutter'        "doesn't work
     "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
+    "Bundle 'junegunn/goyo.vim'             "not worth a plugin
+        "let g:goyo_width         = 160
+        "let g:goyo_margin_top    = 5
+        "let g:goyo_margin_bottom = 5
+        "function! g:goyo_before()
+            "colorscheme jellybeans
+        "endfunction
+
+        "function! g:goyo_after()
+            "colorscheme hemisu
+        "endfunction
+        "let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
 endif
 
 "===============================================================================
