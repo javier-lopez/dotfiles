@@ -1,7 +1,6 @@
 #custom aliases
 [ -f "$(command -v "wcd")" ]       && alias cd='. wcd'
 [ -f "$(command -v "rm_")" ]       && alias rm='rm_'
-[ -f "$(command -v "vw")" ]        && alias feh='vw'
 [ -f "$(command -v "colormake")" ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
 
 alias e='extract'
