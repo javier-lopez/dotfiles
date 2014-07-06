@@ -7,6 +7,9 @@
 #But ignore these
 .AbiSuite
 .arduino
+.bosonx
+.esd_auth
+.kchmviewer
 .sxiv
 .remmina
 .adobe
@@ -131,7 +134,6 @@
 .mozilla
 .mozilla.back*
 .mp3blaster
-.mplayer
 .msf*
 .mtpaint
 .mutt/cache/
