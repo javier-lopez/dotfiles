@@ -1,17 +1,5 @@
 $include /etc/inputrc
 
-#press TAB once (instead of twice) to auto-complete
-#set show-all-if-ambiguous on
-
-#don't query user about viewing the number of possible completions
-#set completion-query-items -1
-
-#dsplay completions sorted horizontally, not vertically
-#set print-completions-horizontally on
-
-#don't use pager when showing completions
-#set page-completions off
-
 #vi mode
 set editing-mode vi
 $if mode=vi

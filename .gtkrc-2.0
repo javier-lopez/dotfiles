@@ -4,7 +4,7 @@
 gtk-theme-name="darkening"
 gtk-icon-theme-name="laga"
 gtk-font-name="Bahamas 9"
-gtk-cursor-theme-name="Tool"
+gtk-cursor-theme-name="tool"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
 gtk-toolbar-icon-size=GTK_ICON_SIZE_SMALL_TOOLBAR
