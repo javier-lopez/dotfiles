@@ -9,7 +9,7 @@
 
 # execute startup programs
 # exec_always
-exec --no-startup-id ~/.i3/startup
+exec --no-startup-id minos-startup
 
 # ###################################
 # ######## GENERAL SETTINGS #########
@@ -176,7 +176,7 @@ bindcode $Win+36       exec x-terminal-emulator
 bindcode $Win+Shift+36 split h
 
 # dmenu-run ($Alt+Esc)
-bindcode $Alt+9 exec dmenu-run
+bindcode $Alt+9 exec   dmenu-run
 
 # exit i3 (Control+$Alt+e)
 #bindcode Control+$Alt+26 exit
@@ -222,7 +222,7 @@ bindcode $Altgr+59 exec amixer -q set Master 1-
 bindcode $Altgr+60 exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
 
 # mplayer|mpd ($Altgr+¿) ($Altg+´)
-bindsym  $Altgr+p  exec music-control pause
+bindsym  $Altgr+p  exec music-control toggle
 bindcode $Altgr+21 exec music-control next
 bindcode $Altgr+34 exec music-control previous
 
@@ -348,46 +348,38 @@ assign [class="Nautilus"]                               "6 files"
 
 #  colorclass            border          background      text
 
-# arch linux
+# arch
 #client.focused          #1793D1         #1793D1         #ffffff
 #client.focused_inactive #666666         #666666         #ffffff
 #client.unfocused        #333333         #333333         #ffffff
 #client.urgent           #D11931         #D11931         #ffffff
-#bar.focused             #1793d1         #1793d1         #ffffff
-#bar.unfocused           #333333         #333333         #ffffff
-#bar.urgent              #d11931         #d11931         #ffffff
 
 # freebsd
-#client.focused         #990000         #990000         #ffffff
-#client.focused_inactive        #666666         #666666         #ffffff
-#client.unfocused       #333333         #333333         #ffffff
-#client.urgent          #D11931         #D11931         #ffffff
-#bar.focused            #990000         #990000         #ffffff
-#bar.unfocused          #333333         #333333         #ffffff
-#bar.urgent             #d11931         #d11931         #ffffff
+#client.focused          #990000         #990000         #ffffff
+#client.focused_inactive #666666         #666666         #ffffff
+#client.unfocused        #333333         #333333         #ffffff
+#client.urgent           #D11931         #D11931         #ffffff
 
 # gentoo
-#client.focused         #7a5ada         #7a5ada         #ffffff
-#client.focused_inactive        #45347b         #45347b         #ffffff
-#client.unfocused       #333333         #333333         #ffffff
-#client.urgent          #D11931         #D11931         #ffffff
-#bar.focused            #45347b         #45347b         #ffffff
-#bar.unfocused          #dddaec         #dddaec         #45347b
-#bar.urgent             #d11931         #d11931         #ffffff
+#client.focused          #7a5ada         #7a5ada         #ffffff
+#client.focused_inactive #45347b         #45347b         #ffffff
+#client.unfocused        #333333         #333333         #ffffff
+#client.urgent           #D11931         #D11931         #ffffff
 
 # dark
-client.focused            #999999      #999999      #000000
-client.focused_inactive   #333333      #333333      #999999
-client.unfocused          #333333      #333333      #999999
-client.urgent             #8C4665      #8C5665      #999999
-# XXX: REMOVED bar.focused, configure i3bar instead.
-#bar.focused               #999999      #000000      #999999
-#bar.unfocused             #333333      #000000      #999999
-#bar.urgent                #d11931      #000000      #999999
+client.focused          #999999      #999999      #000000
+client.focused_inactive #333333      #333333      #999999
+client.unfocused        #333333      #333333      #999999
+client.urgent           #8C4665      #8C5665      #999999
 
-# XXX: Automatically added a call to i3bar to provide a workspace bar
-#exec i3status | i3bar -d
 bar {
+    status_command minos-statusbar
+    position bottom
+    tray_output none
+    font pango:Inconsolata 9
+    workspace_buttons yes
+    #mode hide
+    #modifier $Win
     colors {
         background #000000
         statusline #ffffff
@@ -396,10 +388,4 @@ bar {
         inactive_workspace #333333 #000000 #999999
         urgent_workspace   #d11931 #000000 #999999
     }
-    #status_command i3status
-    position bottom
-    tray_output none
-    font pango:Inconsolata 9
-    #mode hide
-    #modifier $Win
 }

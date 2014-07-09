@@ -1,19 +1,14 @@
 # ######################################################
-# Last review            Mon 18 Mar 2013 01:52:47 AM CST
+# Last review            Thu 26 Jun 2014 09:48:02 AM CDT
 # ######################################################
-#  vim: set ts=8 sw=4 tw=0 ft=sh:
+# vim: set ts=8 sw=4 tw=0 ft=sh:
 
-#this file should only initialize wm, use ~/.i3/startup
-#to start user programs
-
-#background
-feh --bg-scale ~/.data/images/wallpapers/sun.png #fallback
-#xsetroot -solid "#000000"
+# This file should only initialize the window manager
+# use ~/.i3/startup to start additional programs
 
 /etc/X11/Xsession i3
 
-#start wm without /etc/X11/Xsession.d/ goodies (dbus, gpg-agent, etc)
-#exec /usr/bin/i3                              # start i3
-#exec /usr/bin/i3 >> ~/.i3/logfile             # start i3 with standard messages
-#exec /usr/bin/i3 -d all >> ~/.i3/logfile      # start i3 debug
-#exec /usr/bin/i3 -V -d all >> ~/.i3/logfile   # start i3 debug, super verbose mode
+#exec i3                            # start i3 without /etc/X11/Xsession.d/ goodies (dbus, gpg-agent, etc)
+#exec i3 >> ~/.i3/logfile           # start i3 with standard messages
+#exec i3 -d all >> ~/.i3/logfile    # start i3 in debug mode
+#exec i3 -V -d all >> ~/.i3/logfile # start i3 in super verbose mode
