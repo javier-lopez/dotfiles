@@ -1,0 +1,69 @@
+#minos configuration
+
+#general-wallpaper /usr/share/minos/wallpapers/sun.png
+general-wallpaper  $HOME/data/images/wallpapers/sun.png
+
+#lock-wallpaper    /usr/share/minos/wallpapers/cui.png
+#lock-wallpaper    "$HOME/data/images/wallpapers/cui.png"
+lock-wallpaper     "$HOME/data/images/wallpapers/cu i.png"
+
+#http://en.wikipedia.org/wiki/Web_colors#HTML_color_names
+#lock-color-inside              black
+#lock-color-inside-verification #fff
+#lock-color-inside-wrong        a52a2a
+#lock-color-ring                000000ff
+#lock-color-ring-verification   ffffffff
+#lock-color-ring-wrong          a52a2aff
+#lock-color-line                00000000
+#lock-color-keypress            1e90ff
+#lock-color-delpress            a52a2aff
+
+##blue
+#lock-color-keypress #00BFFF
+#lock-color-keypress #03a9f4
+#lock-color-keypress #00b8d4
+#lock-color-keypress #00bcd4
+
+##green
+#lock-color-keypress #20B2AA
+#lock-color-keypress #66CDAA
+#lock-color-keypress #008080
+#lock-color-keypress #9ACD32
+#lock-color-keypress #c6ff00
+
+##yellow
+#lock-color-keypress #FFFF00
+
+##pink
+#lock-color-keypress #FF69B4
+#lock-color-keypress #DDA0DD
+
+##purple
+#lock-color-keypress #4169E1
+#lock-color-keypress #5677fc
+#lock-color-keypress #9370DB
+
+##grey
+#lock-color-keypress #A9A9A9
+#lock-color-keypress #fafafa
+
+statusbar        no
+statusbar-icons  sm4tik
+#composition      yes
+#keyboard-layouts latam,us,ru
+#hibernate-bin    pm-hibernate
+#suspend-bin      pm-suspend
+
+#movietime-custom-script $HOME/.movietime
+
+#minos.io/s 
+setup-dotfiles    https://github.com/chilicuil/dotfiles
+setup-utils       https://github.com/chilicuil/learn/sh/tools
+setup-postinstall http://javier.io/s
+setup-preinstall  http://javier.io/s
+setup-apps-purge  xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda
+
+#mkdir ~/.minos
+#wget http://something/config -O ~/.minos/config
+#wget -qO- minos.io/s -O /tmp/s
+#sh /tmp/s d

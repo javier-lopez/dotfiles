@@ -1,0 +1,105 @@
+# Last review            Wed 09 Jul 2014 12:56:12 AM CDT
+
+background no
+update_interval 1.5
+#uptime_interval_on_battery 5.0
+total_run_times 0 #set to zero to run forever
+
+text_buffer_size 512
+if_up_strictness address
+
+TEXT
+[{"name": "time",\
+  "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/clock.xbm",\
+  "color":"\#999999",\
+  "full_text":"${time %H:%M %a(%d)-%b}"},\
+ {"name": "root",\
+   "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/diskette.xbm",\
+   "color": "\#999999",
+   "full_text": "${fs_used_perc }%",\
+   "separator": false},\
+ {"name": "home",
+  "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/diskette.xbm",\
+   "color": "\#999999",\
+   "full_text": "${fs_used_perc /home}%"},\
+ ${if_up wlan0}\
+   {"name":"wlan0",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/wifi_01.xbm",\
+    "color": "\#999999",\
+    "full_text": "wlan0 ${downspeed wlan0}",\
+    "separator": false},\
+   {"name":"wlan0ip",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/net_down_03.xbm",\
+    "color":"\#999999",\
+    "full_text": "${addr wlan0}"},\
+ ${endif}\
+ ${if_up wlan1}\
+   {"name":"wlan1",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/wifi_01.xbm",\
+    "color": "\#999999",\
+    "full_text": "wlan1 ${downspeed wlan1}",\
+    "separator": false},\
+   {"name":"wlan1ip",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/net_down_03.xbm",\
+    "color":"\#999999",\
+    "full_text": "${addr wlan1}"},\
+ ${endif}\
+ ${if_up eth0}\
+   {"name":"eth0",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/wifi_01.xbm",\
+    "color": "\#999999",\
+    "full_text": "eth0 ${downspeed eth0}",\
+    "separator": false},\
+   {"name":"eth0ip",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/net_down_03.xbm",\
+    "color":"\#999999",\
+    "full_text": "${addr eth0}"},\
+ ${endif}\
+ {"name": "cpu",\
+  "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/cpu.xbm",\
+  "color": "\#999999",\
+  "full_text": "${cpu cpu0}%",\
+  "separator": false},\
+ {"name": "memory",\
+  "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/mem.xbm",\
+  "color": "\#999999",\
+  "full_text": "${memperc}%"},\
+ ${if_existing /proc/acpi/battery/BAT0}\
+   {"name": "battery",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/bat_full_01.xbm",\
+    "color": "\#999999",\
+    "full_text": "${battery_percent BAT0}% ${battery_time BAT0}",\
+    "separator": false},\
+ ${else} ${if_existing /sys/class/power_supply/BAT0}\
+   {"name": "battery",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/bat_full_01.xbm",\
+    "color": "\#999999",\
+    "full_text": "${battery_percent BAT0}% ${battery_time BAT0}",\
+    "separator": false},\
+ ${else} ${if_existing /proc/acpi/battery/BAT1}\
+   {"name": "battery",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/bat_full_01.xbm",\
+    "color": "\#999999",\
+    "full_text": "${battery_percent BAT1}% ${battery_time BAT1}",\
+    "separator": false},\
+ ${else} ${if_existing /sys/class/power_supply/BAT1}\
+   {"name": "battery",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/bat_full_01.xbm",\
+    "color": "\#999999",\
+    "full_text": "${battery_percent BAT1}% ${battery_time BAT1}",\
+    "separator": false},\
+ ${endif}\
+ {"name": "temperature",\
+  "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/temp.xbm",\
+  "color": "\#999999",\
+  "full_text": "${acpitemp}°"},\
+ {"name": "volume", "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/spkr_01.xbm",\
+  "color": "\#999999",\
+  "full_text": "${exec sh -c 'amixer get 'Master',0 | egrep -m1 -o '[0-9]{1,3}%''}",\
+  "separator": false},\
+ ${if_mpd_playing}\
+   {"name": "mpd",\
+    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/phones.xbm",\
+    "color": "\#999999",\
+    "full_text": "${mpd_smart}"}\
+ ${endif}],
