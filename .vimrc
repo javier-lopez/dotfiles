@@ -224,6 +224,11 @@ map e ea
 "make Y consistent with D and C
 nnoremap Y y$
 
+"automatically jumpt to end of text you pasted
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
 "don't clobber registers when doing character deletes
 "nnoremap x "_x
 "nnoremap X "_X
@@ -254,6 +259,9 @@ noremap <END> $
 
 noremap <M-HOME> gg
 noremap <M-END> G
+
+nnoremap <CR> G
+nnoremap <BS> gg
 
 "move between buffers
 map <Tab><Space> :bnext<CR>
@@ -309,10 +317,12 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:secure_modelines_verbose=1
     Bundle 'kien/ctrlp.vim'
         let g:ctrlp_map                 = '<leader>f'
+        "let g:ctrlp_use_caching         = 0
         let g:ctrlp_use_caching         = 1
         let g:ctrlp_clear_cache_on_exit = 0
         let g:ctrlp_working_path        = 0
         "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
+        let g:ctrlp_user_command        = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
         "let g:ctrlp_user_command       = 'find %s -type f'
     Bundle 'Lokaltog/vim-easymotion'
         let g:EasyMotion_leader_key     = '<leader><leader>'
@@ -356,6 +366,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     Bundle 'repeat.vim'
     Bundle 'IndexedSearch'
     Bundle 'gnupg.vim'
+    "Bundle 'hexHighlight.vim'
 
     "===experimental===
     Bundle 'junegunn/vim-easy-align'
