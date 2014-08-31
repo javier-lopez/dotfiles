@@ -4,7 +4,7 @@
 # vim: set ts=8 sw=4 tw=0 ft=sh:
 
 # This file should only initialize the window manager
-# use ~/.i3/startup to start additional programs
+# use ~/.minos/startup to start additional programs
 
 /etc/X11/Xsession i3
 

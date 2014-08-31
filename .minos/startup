@@ -4,36 +4,39 @@ _exec()
 {
     [ -z "${1}" ] && return 1
     if command -v "${1}" >/dev/null; then
-        ${@} &
+        if ! pgrep -f "${1}" >/dev/null; then
+            ${@} &
+        fi
+    else
+        printf "%s\\n" "${1} was not found!" >&2
     fi
 }
 
 _exec i3-msg workspace "1 www"  # start on first virtual workspace by default
 
-if [ -f "$(get-minos general-wallpaper 2>/dev/null)" ]; then # wallpaper
-    _exec feh --bg-scale "$(get-minos general-wallpaper 2>/dev/null)"
+#_exec mplayer -loop 0 -rootwin -ao null -noconsolecontrols video.mp5 # video background
+if [ -f "$(minos-config general-wallpaper 2>/dev/null)" ]; then       # wallpaper
+    _exec feh --bg-scale "$(minos-config general-wallpaper 2>/dev/null)"
 else
-    _exec xsetroot -solid "#000000"
-fi
-
-if [ X"$(get-minos statusbar 2>/dev/null)" != X"no" ]; then # statusbar
-    conky | dzen2  -x 350 -y 749 -fn 'Inconsolata:size=9' -ta r -fg "#999999" -bg "#000000" &
+    _exec xsetroot -solid "#000000" # default to blackscreen
 fi
 
 _exec x-terminal-emulator -name scratchpad -e bash # terminal
 _exec pcmanfm                                      # file manager
-_exec redshift -l 19.41:-99.04 -t 6500:4500 -g 0.8 # controlls the amount of light the screen outputs
-_exec mkfifo /tmp/mplayer.fifo                     # mplayer fifo controller
 _exec autocutsel                                   # sync X/Gnome clipboards
 #_exec autocutsel -s PRIMARY
+_exec redshift                                     # save your eyes
 
-#_exec mplayer -loop 0 -rootwin -ao null -noconsolecontrols video.mp4 # video background
-if [ X"$(get-minos composition 2>/dev/null)" != X"no" ]; then
-    #_exec xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3        # pretty effects and fix for general tearing
-    _exec compton                                      # pretty effects and fix for general tearing
+if [ X"$(minos-config composition 2>/dev/null)" != X"no" ]; then
+    #_exec xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3    # pretty effects and fix for general tearing
+    _exec compton                                  # pretty effects and fix for general tearing
 fi
 
 #_exec urxvtd -q -f -o                             # urxvt server, nice but it breaks often
-#_exec unclutter -root -visible                    # hide mouse coursor when it isn't used, nice but it brings focus problems to i3
+#_exec unclutter -root -visible                    # hide mouse coursor when it isn't used, broken
+_exec xbanish                                      # hide mouse coursor when it isn't used
 #_exec numlockx on                                 # numlock on
 #_exec setxkbmap -option terminate:ctrl_alt_bksp & # Ctrl-Alt-Backspace to kill X
+[ -e /tmp/mplayer.fifo ] || _exec mkfifo /tmp/mplayer.fifo # mplayer fifo controller
+
+#_exec minos-welcome
