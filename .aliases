@@ -19,6 +19,8 @@ alias barstatus.on='barstatus.off; (conky | dzen2  -x 350 -y 749 -fn Inconsolata
 alias irssi='irssi --config=<(gpg -d "${HOME}"/.irssi/config.gpg)'
 alias pagekite='pagekite --optfile=<(gpg -d "${HOME}"/.pagekite.rc.gpg)'
 alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
+alias strip.mp3tags='sh -c '\''ffmpeg -i "${1}" -acodec copy -map_metadata -1 "${1}".tagsless.mp3 && mv "${1}".tagsless.mp3 "${1}"'\'' -'
+alias http.server='sudo python -m SimpleHTTPServer'
 alias share.internet='sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE; echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward'
 alias getpass='sh -c '\''printf "%s" "${1}" | md5sum | openssl enc -base64 | cut -c1-16'\'' -'
 
