@@ -260,8 +260,8 @@ noremap <END> $
 noremap <M-HOME> gg
 noremap <M-END> G
 
-nnoremap <CR> G
-nnoremap <BS> gg
+"nnoremap <CR> G
+"nnoremap <BS> gg
 
 "move between buffers
 map <Tab><Space> :bnext<CR>
