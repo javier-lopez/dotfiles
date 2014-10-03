@@ -28,8 +28,8 @@ _exec autocutsel                                   # sync X/Gnome clipboards
 _exec redshift                                     # save your eyes
 
 if [ X"$(minos-config composition 2>/dev/null)" != X"no" ]; then
-    #_exec xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3    # pretty effects and fix for general tearing
     _exec compton                                  # pretty effects and fix for general tearing
+    #_exec xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3    # pretty effects and fix for general tearing
 fi
 
 #_exec urxvtd -q -f -o                             # urxvt server, nice but it breaks often
