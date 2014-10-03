@@ -1,6 +1,6 @@
 #custom aliases
 [ -f "$(command -v "wcd")" ]       && alias cd='. wcd'
-[ -f "$(command -v "rm_")" ]       && alias rm='rm_'
+[ -f "$(command -v "trash")" ]     && alias rm='trash'
 [ -f "$(command -v "colormake")" ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
 
 alias e='extract'
@@ -17,7 +17,7 @@ alias rip='abcde -o mp3'
 alias barstatus.off='killall conky dzen2 > /dev/null 2>&1'
 alias barstatus.on='barstatus.off; (conky | dzen2  -x 350 -y 749 -fn Inconsolata:size=9 -ta r -fg "#999999" -bg "#000000" &) 2> /dev/null'
 alias irssi='irssi --config=<(gpg -d "${HOME}"/.irssi/config.gpg)'
-alias mail='mail --config <(gpg -d "${HOME}"/.mail.gpg)'
+alias mail='mailgun --config <(gpg -d "${HOME}"/.mailgun.gpg)'
 alias pagekite='pagekite --optfile=<(gpg -d "${HOME}"/.pagekite.rc.gpg)'
 alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
 alias strip.mp3tags='sh -c '\''ffmpeg -i "${1}" -acodec copy -map_metadata -1 "${1}".tagsless.mp3 && mv "${1}".tagsless.mp3 "${1}"'\'' -'
