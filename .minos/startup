@@ -22,7 +22,6 @@ else
 fi
 
 _exec x-terminal-emulator -name scratchpad -e bash # terminal
-_exec pcmanfm                                      # file manager
 _exec autocutsel                                   # sync X/Gnome clipboards
 #_exec autocutsel -s PRIMARY
 _exec redshift                                     # save your eyes
@@ -39,4 +38,8 @@ _exec xbanish                                      # hide mouse coursor when it 
 #_exec setxkbmap -option terminate:ctrl_alt_bksp & # Ctrl-Alt-Backspace to kill X
 [ -e /tmp/mplayer.fifo ] || _exec mkfifo /tmp/mplayer.fifo # mplayer fifo controller
 
-#_exec minos-welcome
+_exec minos-welcome
+
+if [ -x "${HOME}"/.minos/startup ] && [ X"${0}" != X"${HOME}"/.minos/startup ]; then
+    exec "${HOME}"/.minos/startup
+fi
