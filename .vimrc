@@ -326,6 +326,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:ctrlp_user_command       = 'find %s -type f'
     Bundle 'Lokaltog/vim-easymotion'
         let g:EasyMotion_leader_key     = '<leader><leader>'
+        let g:EasyMotion_keys           = 'asdfghjklqwertyuiopzxcvbnm'
     Bundle 'chilicuil/vim-markdown'
     Bundle 'chilicuil/vim-sprunge'
     Bundle 'Shougo/neocomplcache'
@@ -375,6 +376,7 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         vmap . <Plug>(EasyAlignRepeat)
         nmap <Leader>a <Plug>(EasyAlign)
     Bundle 'chilicuil/pipe2eval'
+    Bundle 'ntpeters/vim-better-whitespace'
 
     command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
     " shift-control-* Greps for the word under the cursor
