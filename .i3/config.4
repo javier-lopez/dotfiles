@@ -1,5 +1,5 @@
 # ####################################################################################
-# Last review            Thu 12 Jun 2014 10:57:25 PM CDT
+# Last review            Mon 13 Oct 2014 01:15:00 PM CDT
 # #####################################################################################
 #  vim: set ts=8 sw=4 tw=0 ft=conf :
 
@@ -24,8 +24,27 @@ new_window 1pixel
 #hide_edge_borders <none|vertical|horizontal|both>
 # ----------------------------------<
 
-# workspace names
-# XXX: workspace name will end up in the corresponding bindings.
+# workspaces
+set $w1 www
+set $w2 work
+set $w3 work
+set $w4 im
+set $w5 mail
+set $w6 files
+set $w7 work
+set $w8 work
+set $w9 work
+set $w10 work
+set $w11 work
+set $w12 work
+set $w13 work
+set $w14 work
+set $w15 work
+set $w16 work
+set $w17 work
+set $w18 work
+set $w19 work
+set $w20 work
 
 # ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -47,30 +66,38 @@ ipc-socket ~/.i3/ipc.sock
 set $Win   Mod4
 set $Alt   Mod1
 set $Altgr Mod5
+set $Shift_R 62
+
+set $Esc      9
+set $Enter   36
+set $Space   65
+set $Insert 118
+set $Supr   119
+set $ImpPt  107
 
 # Use $Win+Space to drag floating windows
 floating_modifier $Win
 
-# fullscreen mode ($Win+f)
-bindcode $Win+41 fullscreen
+# fullscreen mode
+bindsym $Win+f fullscreen
 
-# stacking mode ($Win+s)
-bindcode $Win+39 layout stacking
+# stacking mode
+bindsym $Win+s layout stacking
 
-# tabbed mode ($Win+a)
-bindcode $Win+38 layout tabbed
+# tabbed mode
+bindsym $Win+a layout tabbed
 
-# default mode ($Win+d)
-bindcode $Win+40 layout default
+# default mode
+bindsym $Win+d layout default
 
-# toggle tiling/floating of current window ($Win+Shift+Space)
-bindcode $Win+Shift+65 floating toggle
+# toggle tiling/floating of current window
+bindcode $Win+Shift+$Space floating toggle
 
-# change focus ($Win+h/j/k/l)
-bindcode $Win+43 focus left
-bindcode $Win+44 focus down
-bindcode $Win+45 focus up
-bindcode $Win+46 focus right
+# change focus
+bindsym $Win+h      focus left
+bindsym $Win+j      focus down
+bindsym $Win+k      focus up
+bindsym $Win+l      focus right
 # alternatively, use cursor keys
 #bindsym $Win+Left  focus left
 #bindsym $Win+Down  focus down
@@ -78,126 +105,126 @@ bindcode $Win+46 focus right
 #bindsym $Win+Right focus right
 
 # scratchpad, i3 => 4.x
-# send to scratchpad ($Win+Insert)
-bindcode $Win+118 move scratchpad
-# show scratchpad ($Win+Space)
-bindcode $Win+65  scratchpad show
+# send to scratchpad
+bindcode $Win+$Insert move scratchpad
+# show scratchpad
+bindcode $Win+$Space  scratchpad show
 
-# focus container ($Alt+h/j/k/l)
-#bindcode $Alt+43 focus parent; focus left
-#bindcode $Alt+44 focus parent; focus down
-#bindcode $Alt+45 focus parent; focus up
-#bindcode $Alt+46 focus parent; focus right
+# focus container
+#bindsym $Alt+h focus parent; focus left
+#bindsym $Alt+j focus parent; focus down
+#bindsym $Alt+k focus parent; focus up
+#bindsym $Alt+l focus parent; focus right
 
-# snap ($Win+Control+h/j/k/l)
-#bindcode $Win+Control+43   layout stacking
-#bindcode $Win+Control+44   layout stacking
-#bindcode $Win+Control+45   layout stacking
-#bindcode $Win+Control+46   layout stacking
+# snap
+#bindsym $Win+Control+h     layout stacking
+#bindsym $Win+Control+j     layout stacking
+#bindsym $Win+Control+k     layout stacking
+#bindsym $Win+Control+l     layout stacking
 # (alternatively, you can use the cursor keys:)
 #bindsym $Win+Control+Left  layout stacking
 #bindsym $Win+Control+Down  layout stacking
 #bindsym $Win+Control+Up    layout stacking
 #bindsym $Win+Control+Right layout stacking
 
-# move ($Win+Shift+h/j/k/l)
-bindcode $Win+Shift+43 move left
-bindcode $Win+Shift+44 move down
-bindcode $Win+Shift+45 move up
-bindcode $Win+Shift+46 move right
+# move
+bindsym $Win+Shift+h      move left
+bindsym $Win+Shift+j      move down
+bindsym $Win+Shift+k      move up
+bindsym $Win+Shift+l      move right
 # (alternatively, use cursor keys:)
 #bindsym $Win+Shift+Left  move left
 #bindsym $Win+Shift+Down  move down
 #bindsym $Win+Shift+Up    move up
 #bindsym $Win+Shift+Right move right
 
-# move container (Mod3+Shift+h/j/k/l)
-#bindcode $Alt+$Win+Shift+43 focus parent; move left
-#bindcode $Alt+$Win+Shift+44 focus parent; move down
-#bindcode $Alt+$Win+Shift+45 focus parent; move up
-#bindcode $Alt+$Win+Shift+46 focus parent; move right
+# move container
+#bindsym $Alt+$Win+Shift+$h focus parent; move left
+#bindsym $Alt+$Win+Shift+$j focus parent; move down
+#bindsym $Alt+$Win+Shift+$k focus parent; move up
+#bindsym $Alt+$Win+Shift+$l focus parent; move right
 
-# workspaces ($Win+1/2/…)
-bindcode $Win+10 workspace 1 www
-bindcode $Win+11 workspace 2 work
-bindcode $Win+12 workspace 3 work
-bindcode $Win+13 workspace 4 im
-bindcode $Win+14 workspace 5 mail
-bindcode $Win+15 workspace 6 files
-bindcode $Win+16 workspace 7 work
-bindcode $Win+17 workspace 8 work
-bindcode $Win+18 workspace 9 work
-bindcode $Win+19 workspace 10 work
-bindcode $Win+24 workspace 11 work
-bindcode $Win+25 workspace 12 work
-bindcode $Win+26 workspace 13 work
-bindcode $Win+27 workspace 14 work
-bindcode $Win+28 workspace 15 work
-bindcode $Win+29 workspace 16 work
-bindcode $Win+30 workspace 17 work
-bindcode $Win+31 workspace 18 work
-bindcode $Win+32 workspace 19 work
-bindcode $Win+33 workspace 20 work
+# workspaces
+bindsym $Win+1 workspace 1 $w1
+bindsym $Win+2 workspace 2 $w2
+bindsym $Win+3 workspace 3 $w3
+bindsym $Win+4 workspace 4 $w4
+bindsym $Win+5 workspace 5 $w5
+bindsym $Win+6 workspace 6 $w6
+bindsym $Win+7 workspace 7 $w7
+bindsym $Win+8 workspace 8 $w8
+bindsym $Win+9 workspace 9 $w9
+bindsym $Win+0 workspace 10 $w10
+bindsym $Win+q workspace 11 $w11
+bindsym $Win+w workspace 12 $w12
+bindsym $Win+e workspace 13 $w13
+bindsym $Win+r workspace 14 $w14
+bindsym $Win+t workspace 15 $w15
+bindsym $Win+y workspace 16 $w16
+bindsym $Win+u workspace 17 $w17
+bindsym $Win+i workspace 18 $w18
+bindsym $Win+o workspace 19 $w19
+bindsym $Win+p workspace 20 $w20
 
 bindsym $Win+Right workspace next
 bindsym $Win+Left  workspace prev
 
 # move
-bindcode $Win+Shift+10 move workspace 1 www
-bindcode $Win+Shift+11 move workspace 2 work
-bindcode $Win+Shift+12 move workspace 3 work
-bindcode $Win+Shift+13 move workspace 4 im
-bindcode $Win+Shift+14 move workspace 5 mail
-bindcode $Win+Shift+15 move workspace 6 files
-bindcode $Win+Shift+16 move workspace 7 work
-bindcode $Win+Shift+17 move workspace 8 work
-bindcode $Win+Shift+18 move workspace 9 work
-bindcode $Win+Shift+19 move workspace 10 work
+bindsym $Win+Shift+1 move workspace 1 $w1
+bindsym $Win+Shift+2 move workspace 2 $w2
+bindsym $Win+Shift+3 move workspace 3 $w3
+bindsym $Win+Shift+4 move workspace 4 $w4
+bindsym $Win+Shift+5 move workspace 5 $w5
+bindsym $Win+Shift+6 move workspace 6 $w6
+bindsym $Win+Shift+7 move workspace 7 $w7
+bindsym $Win+Shift+8 move workspace 8 $w8
+bindsym $Win+Shift+9 move workspace 9 $w9
+bindsym $Win+Shift+0 move workspace 10 $w10
 
 # i3 => 4.x
 # ---------------------------------->
-bindcode $Win+Shift+24 move workspace 11 work
-bindcode $Win+Shift+25 move workspace 12 work
-bindcode $Win+Shift+26 move workspace 13 work
-bindcode $Win+Shift+27 move workspace 14 work
-bindcode $Win+Shift+28 move workspace 15 work
-bindcode $Win+Shift+29 move workspace 16 work
-bindcode $Win+Shift+30 move workspace 17 work
-bindcode $Win+Shift+31 move workspace 18 work
-bindcode $Win+Shift+32 move workspace 19 work
-bindcode $Win+Shift+33 move workspace 20 work
+bindsym $Win+Shift+q move workspace 11 $w11
+bindsym $Win+Shift+w move workspace 12 $w12
+bindsym $Win+Shift+e move workspace 13 $w13
+bindsym $Win+Shift+r move workspace 14 $w14
+bindsym $Win+Shift+t move workspace 15 $w15
+bindsym $Win+Shift+y move workspace 16 $w16
+bindsym $Win+Shift+u move workspace 17 $w17
+bindsym $Win+Shift+i move workspace 18 $w18
+bindsym $Win+Shift+o move workspace 19 $w19
+bindsym $Win+Shift+p move workspace 20 $w20
 # ----------------------------------<
 
 # help
 bindsym F1 exec  minos-help
 
-# terminal ($Win+Enter)
-bindcode $Win+36       exec x-terminal-emulator
-bindcode $Win+Shift+36 split h
+# terminal
+bindcode $Win+$Enter       exec x-terminal-emulator
+bindcode $Win+Shift+$Enter split h
 
-# dmenu-run ($Alt+Esc)
-bindcode $Alt+9 exec   dmenu-run
+# dmenu-run
+bindcode $Alt+$Esc exec    dmenu-run
 
-# exit i3 (Control+$Alt+e)
-#bindcode Control+$Alt+26 exit
+# exit i3
+#bindsym Control+$Alt+e exit
 
-# restarts i3 inplace (Control+$Alt+r)
-#bindcode Control+$Alt+27 restart
+# restarts i3 inplace
+#bindsym Control+$Alt+r restart
 
-# lock session (Control+$Alt+l)
-bindcode Control+$Alt+46  exec dmenu-session lock
+# lock session
+bindsym Control+$Alt+l exec dmenu-session lock
 
-# dmenu-session (Control+$Alt+Supr)
-bindcode Control+$Alt+119 exec dmenu-session
+# dmenu-session
+bindcode Control+$Alt+$Supr exec dmenu-session
 
 # toggle windows transparency
 #bindsym Control+Shift+t exec transset -p
 
 # mutt
-bindsym $Altgr+m         exec x-terminal-emulator -title "mutt" -e mutt
+bindsym $Altgr+m exec x-terminal-emulator -title "mutt" -e mutt
 
 # magnifier
-bindsym $Altgr+Shift+m   exec magnifier
+bindsym $Altgr+Shift+M exec magnifier
 
 # irssi
 #bindsym Control+Shift+i exec x-terminal-emulator -e irssi
@@ -221,49 +248,65 @@ bindcode $Altgr+59 exec amixer -q set Master 1-
 # unmute if mutted
 bindcode $Altgr+60 exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
 
+# volume, multimedia keys
+bindsym XF86AudioRaiseVolume exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
+bindsym XF86AudioLowerVolume exec amixer -q set Master 1-
+bindsym XF86AudioMute        exec amixer -q set Master toggle
+
 # mplayer|mpd ($Altgr+¿) ($Altg+´)
 bindsym  $Altgr+p  exec music-control toggle
 bindcode $Altgr+21 exec music-control next
 bindcode $Altgr+34 exec music-control previous
 
-# shift input keyboard layouts ($Alt+RightShift)
-bindcode $Alt+62   exec shift-keyboard-layout
+# mplayer|mpd multimedia keys
+bindsym XF86AudioPlay exec music-control toggle
+bindsym XF86AudioStop exec music-control toggle
+bindsym XF86AudioNext exec music-control next
+bindsym XF86AudioPrev exec music-control previous
 
-# toggle screen powersave ($Altgr+Space)
-bindcode $Altgr+65 exec movietime
+# brightness control
+bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 1
+bindsym XF86MonBrightnessUp   exec xbacklight -steps 1 -time 0 -inc 1
+
+# shift input keyboard layouts
+bindcode $Alt+$Shift_R   exec shift-keyboard-layout
+
+# toggle screen powersave
+bindcode $Altgr+$Space exec movietime
 
 # kill ($Altgr+k)
-bindcode $Altgr+45 kill
+bindsym $Altgr+k kill
 
-# dmenu-killall ($Altgr+l)
-bindcode $Altgr+46 exec dmenu-killall
+# dmenu-killall
+bindsym $Altgr+l exec dmenu-killall
 
 # song
-bindsym $Altgr+s   exec dmenu-mpd
+bindsym $Altgr+s exec dmenu-mpd
 
 # xrandr
-bindsym $Altgr+x   exec dmenu-xrandr
+bindsym $Altgr+x    exec dmenu-xrandr
+bindsym XF86Display exec dmenu-xrandr
 
 # vbox
-bindsym $Altgr+v   exec dmenu-vbox
+bindsym $Altgr+v exec dmenu-vbox
 
 # tell
-bindsym $Altgr+t   exec dmenu-tell
+bindsym $Altgr+t exec dmenu-tell
 
 # dmenu-coundown
-bindsym $Altgr+c   exec dmenu-countdown
+bindsym $Altgr+c exec dmenu-countdown
 
-# screenshot (ImpPt)
-bindcode 107       exec screenshot
-# selective screenshot ($Alt+ImpPt)
-bindcode $Alt+107  exec screenshot -s
+# screenshot
+bindcode $ImpPt      exec screenshot
+# selective screenshot
+bindcode $Alt+$ImpPt exec screenshot -s
 
-# screencast ($Win+ImpPt)
-bindcode $Win+107       exec ffcast
-# selective screenshot ($Win+Shift+ImpPt)
-bindcode $Win+$Alt+107  exec ffcast -s
-bindcode Control+107    exec gifcast
-bindcode $Win+Shift+107 exec ffcast -k
+# screencast
+bindcode $Win+$ImpPt       exec ffcast
+# selective screenshot
+bindcode $Win+$Alt+$ImpPt  exec ffcast -s
+bindcode Control+$ImpPt    exec gifcast
+bindcode $Win+Shift+$ImpPt exec ffcast -k
 
 # go to the urgent flag set
 #bindsym $Win+x [urgent=latest] focus
@@ -310,7 +353,7 @@ bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
 
 # Just for i3.4
 for_window [class="Magnifier"] floating enable
-for_window [class="Xmessage"] floating enable
+for_window [class="Xmessage"]  floating enable
 for_window [class="Gxmessage"] floating enable
 for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
 for_window [class="^TeamViewer.exe$"] floating enable
@@ -330,17 +373,17 @@ workspace_auto_back_and_forth yes
 
 # Assigns default monitor for workspaces
 #workspace "1 www" output VGA1
-workspace "1 www" output HDMI1
+workspace "1 \$w1" output HDMI1
 
 # Assigns default workspaces for app
 # assign ["]window class[/window title]["] [→] [~ | workspace]
 
-assign [class="Firefox"]                                "1 www"
-assign [class="^URxvt$" title="irssi"]                  "4 im"
-assign [class="^URxvt$" title="mutt"]                   "5 mail"
-assign [class="Thunderbird"]                            "5 mail"
-assign [class="Pcmanfm"]                                "6 files"
-assign [class="Nautilus"]                               "6 files"
+assign [class="Firefox"]               1 $w1
+assign [class="^URxvt$" title="irssi"] 4 $w4
+assign [class="^URxvt$" title="mutt"]  5 $w5
+assign [class="Thunderbird"]           5 $w5
+assign [class="Pcmanfm"]               6 $w6
+assign [class="Nautilus"]              6 $w6
 
 # ###################################
 # ############# COLORS ##############
