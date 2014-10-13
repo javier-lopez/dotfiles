@@ -40,6 +40,6 @@ _exec xbanish                                      # hide mouse coursor when it 
 
 _exec minos-welcome
 
-if [ -x "${HOME}"/.minos/startup ] && [ X"${0}" != X"${HOME}"/.minos/startup ]; then
-    exec "${HOME}"/.minos/startup
+if [ -x "${HOME}"/.minos/autostart ] && [ X"${0}" != X"${HOME}"/.minos/autostart ]; then
+    exec "${HOME}"/.minos/autostart
 fi

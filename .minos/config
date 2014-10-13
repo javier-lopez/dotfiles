@@ -50,8 +50,8 @@ lock-wallpaper     "$HOME/data/images/wallpapers/o@o.png"
 #lock-color-keypress #A9A9A9
 #lock-color-keypress #fafafa
 
-#startup             yes
-#startup-custom      /etc/minos/startup
+#autostart           yes
+#autostart-custom    /etc/minos/autostart
 
 #statusbar           yes
 #statusbar-icons     sm4tik
