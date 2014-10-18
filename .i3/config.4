@@ -1,39 +1,22 @@
 # ####################################################################################
 # Last review            Mon 13 Oct 2014 01:15:00 PM CDT
 # #####################################################################################
-#  vim: set ts=8 sw=4 tw=0 ft=conf :
-
-# ###################################
-# ############ AUTOSTART ############
-# ###################################
-
-# execute startup programs
-# exec_always
-exec --no-startup-id minos-autostart
+# vim: set ts=8 sw=4 tw=0 ft=conf :
 
 # ###################################
 # ######## GENERAL SETTINGS #########
 # ###################################
 
-# Window border style:
-# bn: border normal, with window title bar;
-# bp: border only, no window title bar;
-# bb: no berder or window title bar.
-new_window 1pixel
-#default_orientation auto | vertical | horizontal
-#hide_edge_borders <none|vertical|horizontal|both>
-# ----------------------------------<
-
 # workspaces
-set $w1 www
-set $w2 work
-set $w3 work
-set $w4 im
-set $w5 mail
-set $w6 files
-set $w7 work
-set $w8 work
-set $w9 work
+set $w1  www
+set $w2  work
+set $w3  work
+set $w4  im
+set $w5  mail
+set $w6  files
+set $w7  work
+set $w8  work
+set $w9  work
 set $w10 work
 set $w11 work
 set $w12 work
@@ -46,6 +29,14 @@ set $w18 work
 set $w19 work
 set $w20 work
 
+# Window border style:
+# bn: border normal, with window title bar;
+# bp: border only, no window title bar;
+# bb: no berder or window title bar.
+new_window 1pixel
+# default_orientation auto | vertical | horizontal
+# hide_edge_borders <none|vertical|horizontal|both>
+
 # ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font xft:Bahamas 9
@@ -55,6 +46,14 @@ font xft:Bahamas 9
 
 # The IPC interface allows external programs to manipulate i3
 ipc-socket ~/.i3/ipc.sock
+
+# ###################################
+# ############ AUTOSTART ############
+# ###################################
+
+# exec_always
+# see /etc/minos/autostart and ~/.minos/autostart
+exec --no-startup-id minos-autostart
 
 # ###################################
 # ######## KEYBOARD BINDINGS ########
@@ -75,7 +74,7 @@ set $Insert 118
 set $Supr   119
 set $ImpPt  107
 
-# Use $Win+Space to drag floating windows
+# use $Win+Space to drag floating windows
 floating_modifier $Win
 
 # fullscreen mode
@@ -121,7 +120,7 @@ bindcode $Win+$Space  scratchpad show
 #bindsym $Win+Control+j     layout stacking
 #bindsym $Win+Control+k     layout stacking
 #bindsym $Win+Control+l     layout stacking
-# (alternatively, you can use the cursor keys:)
+# (or using cursor keys)
 #bindsym $Win+Control+Left  layout stacking
 #bindsym $Win+Control+Down  layout stacking
 #bindsym $Win+Control+Up    layout stacking
@@ -132,7 +131,7 @@ bindsym $Win+Shift+h      move left
 bindsym $Win+Shift+j      move down
 bindsym $Win+Shift+k      move up
 bindsym $Win+Shift+l      move right
-# (alternatively, use cursor keys:)
+# (or using cursor keys)
 #bindsym $Win+Shift+Left  move left
 #bindsym $Win+Shift+Down  move down
 #bindsym $Win+Shift+Up    move up
@@ -196,7 +195,7 @@ bindsym $Win+Shift+p move workspace 20 $w20
 # ----------------------------------<
 
 # help
-bindsym F1 exec  minos-help
+bindsym F1 exec minos-help
 
 # terminal
 bindcode $Win+$Enter       exec x-terminal-emulator
@@ -216,9 +215,6 @@ bindsym Control+$Alt+l exec dmenu-session lock
 
 # dmenu-session
 bindcode Control+$Alt+$Supr exec dmenu-session
-
-# toggle windows transparency
-#bindsym Control+Shift+t exec transset -p
 
 # mutt
 bindsym $Altgr+m exec x-terminal-emulator -title "mutt" -e mutt
@@ -241,7 +237,7 @@ bindsym $Altgr+n         exec x-terminal-emulator -e wicd-curses
 #bindsym Control+Shift+a exec /bin/sh -c alsamixer
 
 # pcmanfm
-bindsym $Altgr+f   exec pcmanfm
+bindsym $Altgr+f exec pcmanfm
 
 # volume ($Altgr+,) ($Altgr+.)
 bindcode $Altgr+59 exec amixer -q set Master 1-
@@ -269,7 +265,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 1
 bindsym XF86MonBrightnessUp   exec xbacklight -steps 1 -time 0 -inc 1
 
 # shift input keyboard layouts
-bindcode $Alt+$Shift_R   exec shift-keyboard-layout
+bindcode $Alt+$Shift_R exec shift-keyboard-layout
 
 # toggle screen powersave
 bindcode $Altgr+$Space exec movietime
@@ -331,11 +327,11 @@ mode "resize" {
         bindsym l resize shrink left 10 px
 
         #Exit resize mode
-        bindsym $Altgr+x mode "default"
+        bindsym $Altgr+r mode "default"
 }
 
 # Enter resize mode
-bindsym $Altgr+z mode "resize"
+bindsym $Altgr+r mode "resize"
 
 # Get me to the next open VIM instance
 #bindsym $Win+v [class="buzz" title="VIM"] focus
@@ -364,12 +360,8 @@ for_window [class="realvnc-vncviewer"] floating enable
 for_window [class="Xarchiver" title="Xarchiver$"] floating enable
 
 # popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
-#popup_during_fullscreen ignore
+# popup_during_fullscreen ignore
 workspace_auto_back_and_forth yes
-
-# makes the window floating as soon as I change
-# directory to ~/work
-#for_window [title="x200: ~/work"] floating enable
 
 # Assigns default monitor for workspaces
 #workspace "1 www" output VGA1
@@ -386,30 +378,30 @@ assign [class="Pcmanfm"]               6 $w6
 assign [class="Nautilus"]              6 $w6
 
 # ###################################
-# ############# COLORS ##############
+# ############# THEMES ##############
 # ###################################
 
-#  colorclass            border          background      text
+# colorclass            border          background      text
 
-# arch
+# arch/blue
 #client.focused          #1793D1         #1793D1         #ffffff
 #client.focused_inactive #666666         #666666         #ffffff
 #client.unfocused        #333333         #333333         #ffffff
 #client.urgent           #D11931         #D11931         #ffffff
 
-# freebsd
+# freebsd/red
 #client.focused          #990000         #990000         #ffffff
 #client.focused_inactive #666666         #666666         #ffffff
 #client.unfocused        #333333         #333333         #ffffff
 #client.urgent           #D11931         #D11931         #ffffff
 
-# gentoo
+# gentoo/purple
 #client.focused          #7a5ada         #7a5ada         #ffffff
 #client.focused_inactive #45347b         #45347b         #ffffff
 #client.unfocused        #333333         #333333         #ffffff
 #client.urgent           #D11931         #D11931         #ffffff
 
-# dark
+# minos/dark
 client.focused          #999999      #999999      #000000
 client.focused_inactive #333333      #333333      #999999
 client.unfocused        #333333      #333333      #999999
