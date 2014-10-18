@@ -66,12 +66,12 @@ Help
       <win><a>      ⇨  tabbed
     <win><insert>   ⇨  insert app into buffer mode
 
-     <altgr><z>     ⇨  enter resize mode
+     <altgr><r>     ⇨  enter resize mode
          <h>        ⇨  +1 px to the left
          <l>        ⇨  -1 px to the right
          <j>        ⇨  -1 px down
          <k>        ⇨  +1 px up
-      <altgr><x>    ⇨  exit resize mode
+     <altgr><r>     ⇨  exit resize mode
 
   <win><righ click> ⇨  resize app
 <win><shift><space> ⇨  window toggle mode

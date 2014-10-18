@@ -65,7 +65,7 @@ lock-wallpaper     "$HOME/data/images/wallpapers/o@o.png"
 
 #movietime-custom-script $HOME/.movietime
 
-#minos.io/s 
+#minos.io/s
 setup-dotfiles    https://github.com/chilicuil/dotfiles
 setup-utils       https://github.com/chilicuil/learn/sh/tools
 setup-postinstall http://javier.io/postinstall
