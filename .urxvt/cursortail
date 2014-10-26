@@ -3,7 +3,7 @@
 # Based on the digital clock example
 
 # USAGE EXAMPLE:
-# urxvt -rv -tr -sh 30 -ls +sb -vb -fade 30 -fn "xft:Bitstream Vera Sans Mono:pixelsize=12" --urgentOnBell --perl-lib ./ -pe cursortail 
+# urxvt -rv -tr -sh 30 -ls +sb -vb -fade 30 -fn "xft:Bitstream Vera Sans Mono:pixelsize=12" --urgentOnBell --perl-lib ./ -pe cursortail
 
 use strict;
 
@@ -29,7 +29,7 @@ my @color_list = qw(
 #my @color_list = qw(
 #0 104 104 61 10 10 237 238 239 235 234 1 199
 #);
- 
+
 #red
 #my @color_list = qw(
 #200 54 54 90 90 126 126 162 162 199 234 1
