@@ -9,6 +9,9 @@
 # do nothing if not running interactively
 [ -z "${PS1}" ] && return
 
+set -o vi #this is sparta!
+stty -ctlecho #don't show ^C when pressing Ctrl+C
+
 # http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 [ "${BASH_VERSINFO}" -ge "4" ] && shopt -s autocd cdspell dirspell
 shopt -s checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
@@ -18,14 +21,10 @@ bind "set match-hidden-files off"
 bind "set bind-tty-special-chars on"
 bind "set show-all-if-ambiguous on"
 bind "set completion-ignore-case on"
-set -o vi #this is sparta!
-
-# Do not show ^C when pressing Ctrl+C
-stty -ctlecho
 
 #trap '. /etc/bash_completion ; trap USR2' USR2
 #{ sleep 0.01 ; builtin kill -USR2 $$ ; } & disown
-[ -f /etc/bash_completion ] && . /etc/bash_completion
+[ -z "${BASH_COMPLETION_COMPAT_DIR}" ] && [ -f /etc/bash_completion ] && . /etc/bash_completion
 
 # make less more friendly for non-text input files, see lesspipe(1)
 if command -v "lesspipe" >/dev/null 2>&1; then
@@ -34,7 +33,7 @@ fi
 
 #/etc/terminfo/*
 #export TERM="xterm-color"
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 # Change the X terminal window title
 case "${TERM}" in
@@ -49,15 +48,15 @@ esac
 #===============================================================================
 
 # path
-export PATH="${PATH}:/sbin:/usr/local/sbin/:/usr/local/bin:/usr/sbin:/usr/games"
+export PATH="/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
 
 # gpg
 export GPGKEY="BC9C8902"
 export GPG_TTY="$(tty)"
 
 # random vars
-export EDITOR="vim"
-export CSCOPE_EDITOR="vim"
+export EDITOR="editor"
+export CSCOPE_EDITOR="editor"
 export WCDHOME="${HOME}/.wcd"
 export BROWSER="x-www-browser"
 
@@ -88,22 +87,21 @@ fi
 if [ -f ~/.shundle/bundle/shundle/shundle ]; then
     .  ~/.shundle/bundle/shundle/shundle
     Bundle='chilicuil/shundle'
-        SHUNDLE_ENV_VERBOSE="0"
-        SHUNDLE_ENV_DEBUG="0"
+        #SHUNDLE_ENV_VERBOSE="0"
+        #SHUNDLE_ENV_DEBUG="0"
         SHUNDLE_ENV_COLOR="1"
     #Bundle='chilicuil/shundle-plugins/todo-rememberator'
         #REMEMBERATOREVERY="5"
     Bundle="gh:chilicuil/shundle-plugins/eternalize"
         ETERNALIZE_PATH="${HOME}/.eternalize-data"
     Bundle="github:chilicuil/shundle-plugins/colorize"
-        #COLORIZE_THEME="blacky"
-        #COLORIZE_PS="yujie"
+        COLORIZE_THEME="blacky"
+        COLORIZE_PS="yujie"
     Bundle="chilicuil/shundle-plugins/aliazator.git"
         #ALIAZATOR_PLUGINS="none"
         #ALIAZATOR_PLUGINS="minimal"
         ALIAZATOR_PLUGINS="installed"
         #ALIAZATOR_PLUGINS="all"
         #ALIAZATOR_PLUGINS="custom:minimal,git,apt-get,vagrant,vim"
-        ALIAZATOR_CLOUD="url"
-        #TODO 03-11-2013 04:34 >> alias.sh
+        #ALIAZATOR_CLOUD="url"
 fi

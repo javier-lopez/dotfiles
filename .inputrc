@@ -1,7 +1,6 @@
 $include /etc/inputrc
 
 #vi mode
-set editing-mode vi
 $if mode=vi
 
 set keymap vi-command
