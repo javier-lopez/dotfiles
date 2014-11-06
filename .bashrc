@@ -17,9 +17,9 @@ stty -ctlecho #don't show ^C when pressing Ctrl+C
 shopt -s checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
 shopt -s hostcomplete histappend histverify
 
-bind "set match-hidden-files off"
-bind "set bind-tty-special-chars on"
-bind "set show-all-if-ambiguous on"
+bind "set match-hidden-files off"     #don't match hidden files
+bind "set bind-tty-special-chars on"  #punctuations are not word delimiters
+bind "set show-all-if-ambiguous on"   #enable single tab completion
 bind "set completion-ignore-case on"
 
 #trap '. /etc/bash_completion ; trap USR2' USR2
