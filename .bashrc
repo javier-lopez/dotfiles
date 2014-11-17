@@ -48,7 +48,8 @@ esac
 #===============================================================================
 
 # path
-export PATH="/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
+#export PATH="/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin/X11:/usr/games"
 
 # gpg
 export GPGKEY="BC9C8902"
@@ -81,7 +82,7 @@ if [ -f "$(command -v "ccache")" ]; then
 fi
 
 #===============================================================================
-#================================= Modules =====================================
+#================================= Plugins =====================================
 #===============================================================================
 
 if [ -f ~/.shundle/bundle/shundle/shundle ]; then
@@ -91,7 +92,7 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #SHUNDLE_ENV_DEBUG="0"
         SHUNDLE_ENV_COLOR="1"
     #Bundle='chilicuil/shundle-plugins/todo-rememberator'
-        #REMEMBERATOREVERY="5"
+        #REMEMBERATOR_EVERY="5"
     Bundle="gh:chilicuil/shundle-plugins/eternalize"
         ETERNALIZE_PATH="${HOME}/.eternalize-data"
     Bundle="github:chilicuil/shundle-plugins/colorize"
@@ -104,4 +105,6 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #ALIAZATOR_PLUGINS="all"
         #ALIAZATOR_PLUGINS="custom:minimal,git,apt-get,vagrant,vim"
         #ALIAZATOR_CLOUD="url"
+    Bundle="gh:chilicuil/shundle-plugins/autocd"
+        #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
 fi
