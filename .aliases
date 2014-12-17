@@ -14,6 +14,7 @@ alias fu-search="fu-search -c"
 alias eix.exact='eix --exact'
 alias print.192.168.1.11='rlpr -h -Plp -H192.168.1.11'
 alias rip='abcde -o mp3'
+alias paint='mtpaint'
 alias barstatus.off='killall conky dzen2 > /dev/null 2>&1'
 alias barstatus.on='barstatus.off; (conky | dzen2  -x 350 -y 749 -fn Inconsolata:size=9 -ta r -fg "#999999" -bg "#000000" &) 2> /dev/null'
 alias irssi='irssi --config=<(gpg -d "${HOME}"/.irssi/config.gpg)'
@@ -23,6 +24,7 @@ alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
 alias strip.mp3tags='sh -c '\''ffmpeg -i "${1}" -acodec copy -map_metadata -1 "${1}".tagsless.mp3 && mv "${1}".tagsless.mp3 "${1}"'\'' -'
 alias share.internet='sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE; echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward'
 alias getpass='sh -c '\''printf "%s" "${1}" | md5sum | openssl enc -base64 | cut -c1-16'\'' -'
+alias uu='update && upgrade'
 
 #ubuntu-dev
 alias bzr.debuild='bzr bd -- -S -uc -us'
