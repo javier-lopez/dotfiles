@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Sat 15 Mar 2014 12:54:38 AM CST
+"           Last review            Fri 19 Dec 2014 12:31:54 AM CST
 "-------------------------------------------------------------------------------
 
 "===============================================================================
@@ -13,17 +13,17 @@ endif
 
 if has ('gui_running')
     set background=dark
+    set gfn=Inconsolata\ Medium\ 10
     "set gfn=Monaco\ 9
     "set gfn=Monospace\ 9
-    set gfn=Inconsolata\ Medium\ 10
     colorscheme hemisu
 else
     set background=dark
     colorscheme hemisu
 endif
 
-set modelines=0        "http://www.guninski.com/vim1.html
 set nocompatible       "breaks compatibility with vi, required
+set modelines=0        "http://www.guninski.com/vim1.html
 set noexrc             "don't use local version of .(g)vimrc, .exrc
 set lazyredraw         "do not redraw the screen while macros are running. It
                        "improves performance
@@ -31,14 +31,14 @@ set ttyfast            "indicates a fast terminal connection
 set history=100        "record last 100 commands, press 'q:' to see a new
                        "window (normal mode) with the full history
 set t_Co=256           "set 256 colors. Make sure your console supports it.
-                       "gnome-terminal and konsole work well
+                       "gnome-terminal, konsole and urxvt work well
 set report=0           "report any changes
+set nobackup           "git btw!
 set nowritebackup      "bye .swp madness
-set nobackup           "turn backup off
 set noswapfile
 set tabpagemax=200     "max open tabs at the same time
 set autowrite
-set autoread           "watch for file changes by other programs
+set autoread           "watch file changes by other programs
 set encoding=utf-8     "utf is able to represent any character
 set fileencoding=utf-8
 set ruler              "show the cursor position all the time
@@ -46,142 +46,122 @@ set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
 set wildignore=*/.svn/*,CVS,*/.git,*/.hg/*,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp
-set hidden             "allow open other file without saving current file
-set autochdir          "change to the current directory
-set winminheight=1     "never let a window to be less than 1px height
+set hidden            "allow open other file without saving current file
+set autochdir         "change to the current directory
+set winminheight=1    "never let a window to be less than 1px height
 set winminwidth=1
-set scrolloff=3        "show enough context
+set scrolloff=3       "show enough context
 set sidescrolloff=2
-set hlsearch           "highlight search
-set incsearch          "incremental search, search as you type
-set showfulltag        "show as much as possible
-set ignorecase         "ignore case when searching
-set showcmd            "show the command you're typing
-set softtabstop=4      "vim sees 4 spaces as a tab
-set shiftwidth=4       "indentation
-set expandtab          "tabs mutate into spaces, if you wanna insert "real"
-                       "tabs use Ctrl-v <tab> instance
-set splitright         "split vertically to the right.
-set splitbelow         "split horizontally below.
-"set cursorline         "highlight the screen line of the cursor, slow!
-set nostartofline
-set nofsync            "improves performance, let OS decide when to flush disk
-set showmatch          "when closing a block, show matching bracket.
-"set matchtime=5        "how many tenths of a second to blink
-                       "matching brackets for"
-set diffopt+=iwhite    "ignore whitespace in diff mode
-set cscopetag          "use both cscope and ctag for 'ctrl-]'
-set csto=0             "gives preference to cscope over ctag
-"set cscopeverbose
-set pastetoggle=<C-p>  "pastetoggle (sane indentation on pastes)
-                       "press <Ctrl>-<p> when you are going to paste several
-                       "lines of text so they don't "be indented.
-"set mousehide         "hide the mouse while typying
-"set mouse=nv          "set the mouse to work in console mode
-
-set foldenable!         "disable folding by default
+set hlsearch          "highlight search
+set incsearch         "search as you type
+set ignorecase        "ignore case when searching
+set showcmd           "show the command being typed
+set softtabstop=4     "vim sees 4 spaces as a tab
+set shiftwidth=4
+set showfulltag       "when autocompleting show as much as possible
+set expandtab         "tabs mutate into spaces, if you wanna insert "real"
+                      "tabs use Ctrl-v <tab> instance
+set splitright        "split vertically to the right.
+set splitbelow        "split horizontally below.
+"set cursorline        "highlight the screen line of the cursor, slow!
+set nostartofline     "keep the cursor on the same column
+set nofsync           "improves performance, let OS decide when to flush disk
+set showmatch         "when closing a block, show matching bracket.
+"set matchtime=5       "how many tenths of a second to blink
+set diffopt+=iwhite   "ignore whitespace in diff mode
+set cscopetag         "use both cscope and ctag for 'ctrl-]'
+set csto=0            "gives preference to cscope over ctag
+set pastetoggle=<C-p> "pastetoggle, sane indentation on pastes
+"set mousehide        "hide the mouse while typying
+"set mouse=nv         "set the mouse to work in console mode
+set foldenable!       "disable folding by default
 set foldmethod=syntax
 "set foldmarker={,}
-
 "set clipboard=unnamed
-set clipboard=unnamedplus      "yanks go on clipboard instead, "+p to make recover the x11 clipboard
-                               "use xsel hacks if your vim version has no "clipboad-x11 support
-
-set backspace=indent,eol,start "make backspace works like in other editors.
-set viminfo='100,<100,s10,h    "remember not as much as possible
+set clipboard=unnamedplus      "yanks go to clipboard, "+p to recover
+set viminfo='100,<100,s10,h    "remember just a little
+set backspace=indent,eol,start "backspace deletes as in other editors
 
 "Print to html
 let html_use_css       = 1
 let html_dynamic_folds = 1
-
-"<leader>
-let mapleader          = ","
 
 syntax on
 filetype plugin indent on                 "enable filetype-specific plugins
 setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 
 "===============================================================================
-"================================ Autoloads by events ==========================
+"==================================== Autoloads ================================
 "===============================================================================
 
 if has("autocmd")
     "Go back to the position the cursor was on the last time this file was edited
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \|execute("normal '\"")|endif
-
     autocmd VimEnter * nohls "turn off any existing search
-
     "browse documentation with <Enter>/<BS>
-    "http://vim.wikia.com/wiki/Mapping_to_quickly_browse_help
     autocmd filetype help :nnoremap <buffer><CR> <c-]>
     autocmd filetype help :nnoremap <buffer><BS> <c-T>
 endif
 
 "====== Status Line ======
-"Nice statusline taken mostly from
-"http://github.com/ciaranm/dotfiles-ciaranm/raw/master/vimrc
-set laststatus=2                                         "always show statusline
-set statusline=
-set statusline+=%2*%-2n                                  "buffer number
-set statusline+=%h%1*%m%r%w%0*                           "flags
-set statusline+=%*\ %-.50F\                              "file name (full)
+"mostly taken from http://github.com/ciaranm/dotfiles-ciaranm/raw/master/vimrc
+set laststatus=2                             "always show statusline
+set statusline=                              "init definition
+set statusline+=%2*%-2n                      "buffer number
+set statusline+=%h%1*%m%r%w%0*               "flags
+set statusline+=%*\ %-.50F\                  "file name (full)
 "if filereadable(expand("~/.vim/bundle/vim-cutils/plugin/cutils.vim"))
-    "set statusline+=%-7{cutils#VCSInfo()}                "branch info
+    "set statusline+=%-7{cutils#VCSInfo()}   "branch info
 "endif
-set statusline+=\[%{strlen(&ft)?&ft:'none'},             "filetype
-set statusline+=%{&encoding},                            "encoding
-set statusline+=%{&fileformat}]                          "file format
+set statusline+=\[%{strlen(&ft)?&ft:'none'}, "filetype
+set statusline+=%{&encoding},                "encoding
+set statusline+=%{&fileformat}]              "file format
 if filereadable(expand("~/.vim/bundle/vimbuddy.vim/plugin/vimbuddy.vim"))
-    set statusline+=\ %{VimBuddy()}                      "vim buddy
+    set statusline+=\ %{VimBuddy()}          "cui o@o!
 endif
 "set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
-set statusline+=%=                                       "right align
-set statusline+=%2*%-8{strftime('%H:%M')}                "time
+set statusline+=%=                           "right align
+set statusline+=%2*%-8{strftime('%H:%M')}    "time
 if filereadable(expand("~/.vim/bundle/vim-cutils/plugin/cutils.vim"))
-    set statusline+=%-7{cutils#FileSize()}               "file size
+    set statusline+=%-7{cutils#FileSize()}   "file size
 endif
-"set statusline+=%2*%-3b,0x%-8B\                          "current char
-"set statusline+=0x%-4B\                                  "current char
-"set statusline+=%-14.(%l,%c%V%)\ %<%P                    "offset
-set statusline+=%-8.(%l,%c%V%)\ %P                       "offset
+"set statusline+=%2*%-3b,0x%-8B\             "current char
+"set statusline+=0x%-4B\                     "current char
+"set statusline+=%-14.(%l,%c%V%)\ %<%P       "offset
+set statusline+=%-8.(%l,%c%V%)\ %P           "offset
 
 "===============================================================================
 "================================== Mappings ===================================
 "===============================================================================
 
 "=== Ctrl Mappings===
-"map work on --normal--, --visual-- and --operator-- modes look at :help map-modes
-
-"move between split windows
-noremap <c-k> <c-w>k
-noremap <c-j> <c-w>j
-noremap <c-l> <c-w>l
-noremap <c-h> <c-w>h
-
+"windows
+noremap  <c-k> <c-w>k
+noremap  <c-j> <c-w>j
+noremap  <c-l> <c-w>l
+noremap  <c-h> <c-w>h
 inoremap <c-k> <Esc><c-w>k
 inoremap <c-j> <Esc><c-w>j
 inoremap <c-l> <Esc><c-w>l
 inoremap <c-h> <Esc><c-w>h
 
-"tabs manage
+"tabs
 map <c-n> :tabn<CR>
 map <c-p> :tabp<CR>
-
 map <c-w> :tabclose <CR>
 
-"source $VIMRUNTIME/ftplugin/man.vim
-"nnoremap K :Man <C-R><C-W><CR>
-
-"exit keyboard shortcut
+"exit
 map <c-x> :confirm qall<CR>
 
 "=== Leader Mappings(,)==
+let mapleader = ","
 
-"m'ak'e
-map <silent> <leader>mk :make<CR>
+"m'ake
+map <silent> <leader>m :make<CR>
 
-map <silent> <leader>m :set number!<CR>
+"toggle numbering
+map <silent> <leader>1 :set number!<CR>
 
 "reload ~/.vimrc
 map <leader>r :source $MYVIMRC<CR>
@@ -193,52 +173,46 @@ noremap <silent><Leader>+ :resize +1<CR>
 noremap <silent><Leader>- :resize -1<CR>
 
 "clear highlighted searches
-nmap <silent> <leader>/ :nohlsearch<CR>
+nmap <silent> <leader>/   :nohlsearch<CR>
 
 "=== Tab Mappings ===
 map <Tab>c :cc<CR>
 map <Tab>n :cnext<CR>
 map <Tab>p :cprevious<CR>
+"move between buffers
+map <Tab><Space> :bnext<CR>
 
 "=== Misc Mappings===
-map ; :
-
 "let's switch these
+map      ; :
 nnoremap ' `
 nnoremap ` '
 
-"I dont wanna go far away just to press <Esc>, take care when pasting stuff
+"<Esc> isn't really confortable, be carefull when pasting stuff
 inoremap jj <Esc>
 
-"insert a space in normal mode
+"insert spaces in normal mode
 noremap <Space> i <Esc>
 
 "use <BackSpace> for deleting visual selections
 xnoremap <BS> d
 snoremap <BS> <BS>i
 
-"Most of the time, the only reason you want to move to the end
-"of a word is to add text
+"edit at the end of the word
 map e ea
+
 "make Y consistent with D and C
 nnoremap Y y$
 
-"automatically jumpt to end of text you pasted
+"automatically jump to end of text you pasted
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
-
-"don't clobber registers when doing character deletes
-"nnoremap x "_x
-"nnoremap X "_X
-"nnoremap s "_s
 
 "quit and save faster
 noremap zz :q!<CR>
 noremap ss :w<CR>
 noremap SS :%!sudo tee > /dev/null %<CR>
-
-"also check this one, It's set by default
 "ZZ :wq!
 
 "overwrite these annoying commands
@@ -249,24 +223,16 @@ cabbr Q q
 cabbr wQ wq
 cabbr WQ wq
 cabbr Wq wq
-
 noremap <HOME> ^
 noremap <END> $
 
-"this will work only on the gui version, most terminal are unable to
-"determinate the difference between <home> and <m-home>
-
+"this will work only in the gui version, most terminals are unable
+"to determinate differences between <home> and <m-home>
 noremap <M-HOME> gg
 noremap <M-END> G
 
-"nnoremap <CR> G
-"nnoremap <BS> gg
-
-"move between buffers
-map <Tab><Space> :bnext<CR>
-
 "===============================================================================
-"================================ Plugins config  ==============================
+"=================================== Plugins ===================================
 "===============================================================================
 
 if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
@@ -286,56 +252,38 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/vundle'
     "TODO 18-12-2014 03:30 >> add lazy loading
     Bundle 'edsono/vim-matchit'
-    Bundle 'scrooloose/nerdtree'     , { 'on': 'NERDTreeToggle' }
-        let g:NERDTreeWinPos         = 'right'
-        let g:NERDTreeWinSize        = 25
-        let g:NERDTreeMouseMode      = 3
-    Bundle 'msanders/snipmate.vim'   , { 'on': 'insert' }
-        let g:snips_author           = "Javier Lopez"
-        let g:snips_authorEmail      = "m@javier.io"
-        let g:snippets_dir           = "~/.vim/extra-snippets/"
-    Bundle 'majutsushi/tagbar'       , { 'on': 'TagbarToggle' }
-        let g:tagbar_left            = 1
-        let g:tagbar_width           = 25
-    Bundle 'chilicuil/QuickBuf'      , { 'on': ['<Plug>QuickBuf'] }
-        map <F2> <Plug>QuickBuf
-        "let g:qb_hotkey = "<F2>"
+    Bundle 'scrooloose/nerdtree'   , { 'on': 'NERDTreeToggle' }
+        let g:NERDTreeWinPos       = 'right'
+        let g:NERDTreeWinSize      = 25
+        let g:NERDTreeMouseMode    = 3
+        map <silent> <leader>n     :NERDTreeToggle<CR>
+    Bundle 'msanders/snipmate.vim' , { 'on': 'insert' }
+        let g:snips_author         = "Javier Lopez"
+        let g:snips_authorEmail    = "m@javier.io"
+        let g:snippets_dir         = "~/.vim/extra-snippets/"
+    Bundle 'majutsushi/tagbar'     , { 'on': 'TagbarToggle' }
+        let g:tagbar_left          = 1
+        let g:tagbar_width         = 25
+        map <silent> <leader>l     :TagbarToggle<CR>
     Bundle 'mhinz/vim-hugefile'
     Bundle 'henrik/vim-indexed-search'
-    Bundle 'chilicuil/nextCS'        , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
-        map <F12> <Plug>NextCS
-        map <F11> <Plug>PreviousCS
-    Bundle 'chilicuil/vimbuddy.vim'
-    "TODO 18-12-2014 03:30 >> add lazy loading
-    Bundle 'scrooloose/nerdcommenter'
-        let g:NERDCustomDelimiters   = {'mkd': { 'left': '<!--', 'right': '-->'}}
-    Bundle 'chilicuil/TaskList.vim'  , { 'on': '<Plug>TaskList' }
-        let g:Tlist_WinWidth         = 25
-        let g:Tlist_Show_One_File    = 1
-        let Tlist_Enable_Fold_Column = 0
-        map <Leader>t <Plug>TaskList
-    "Bundle 'vim-scripts/DrawIt'
-        "map <leader>di :DIstart <CR>
-        "map <leader>ds :DIstop <CR>
-    Bundle 'chilicuil/securemodelines'
-        "let g:secure_modelines_verbose=1
-    Bundle 'kien/ctrlp.vim'            , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMRU', 'CtrlPMixed'] }
+    Bundle 'tomtom/tcomment_vim'   , { 'on': '<Plug>TComment_<c-_><c-_>' }
+        map <leader>c<space>       <Plug>TComment_<c-_><c-_>
+        map <leader>cs             <Plug>TComment_<c-_><c-_>
+    Bundle 'kien/ctrlp.vim'             , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMRU', 'CtrlPMixed'] }
         "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
         let g:ctrlp_use_caching         = 1
         let g:ctrlp_clear_cache_on_exit = 0
         let g:ctrlp_working_path        = 0
         let g:ctrlp_user_command        = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
         "let g:ctrlp_user_command       = 'find %s -type f'
-        "let g:ctrlp_map                 = '<leader>f'
+        let g:ctrlp_map                 = '<leader>f'
         map <leader>f                  :CtrlP<CR>
     Bundle 'Lokaltog/vim-easymotion'   , { 'on': ['<Plug>(easymotion-prefix)'] }
         "let g:EasyMotion_leader_key     = '<leader><leader>'
         map <leader><leader>            <Plug>(easymotion-prefix)
         let g:EasyMotion_keys           = 'asdfghjklqwertyuiopzxcvbnm'
-    Bundle 'chilicuil/vim-markdown'
-    Bundle 'chilicuil/vim-sprunge'      , { 'on': ['<Plug>Sprunge'] }
-        map <leader>s                   <Plug>Sprunge
-    Bundle 'Shougo/neocomplcache'       , { 'on': 'insert' }
+    Bundle 'Shougo/neocomplcache'                          , { 'on': 'insert' }
         let g:neocomplcache_enable_at_startup              = 1
         let g:neocomplcache_max_list                       = 10
         let g:neocomplcache_max_menu_width                 = 10
@@ -346,21 +294,35 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:neocomplcache_disable_auto_complete          = 0
         let g:neocomplcache_enable_wildcard                = 1
         let g:neocomplcache_enable_caching_message         = 1
-    Bundle 'chilicuil/file-line'
     Bundle 'mhinz/vim-signify'
-        let g:signify_vcs_list               = [ 'git' ]
-        let g:signify_sign_add               = '+'
-        let g:signify_sign_change            = '~'
-        let g:signify_sign_delete            = '-'
-        let g:signify_sign_delete_first_line = '‾'
-    "TODO 18-12-2014 03:30 >> add lazy loading
-    Bundle 'chilicuil/x-modes'
-        let g:x_modes_map_default      = '<Leader>D'
-        let g:x_modes_map_development  = '<Leader>d'
-        let g:x_modes_map_write        = '<Leader>w'
-        let g:x_modes_map_presentation = '<Leader>p'
-        map <silent> <Leader>n           :call xmodes#FileManagerToggle()<CR>
-        map <silent> <Leader>l           :call xmodes#FunctionBrowserToggle()<CR>
+        let g:signify_vcs_list        = [ 'git' ]
+        let g:signify_sign_add        = '+'
+        let g:signify_sign_change     = '~'
+        let g:signify_sign_delete     = '-'
+    Bundle 'chilicuil/QuickBuf'      , { 'on': ['<Plug>QuickBuf'] }
+        map <F2> <Plug>QuickBuf
+        "let g:qb_hotkey = "<F2>"
+    Bundle 'chilicuil/nextCS'        , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
+        map <F12> <Plug>NextCS
+        map <F11> <Plug>PreviousCS
+    Bundle 'chilicuil/vimbuddy.vim'
+    Bundle 'chilicuil/TaskList.vim'  , { 'on': '<Plug>TaskList' }
+        let g:Tlist_WinWidth         = 25
+        let g:Tlist_Show_One_File    = 1
+        let Tlist_Enable_Fold_Column = 0
+        map <Leader>t <Plug>TaskList
+    Bundle 'chilicuil/securemodelines'
+        "let g:secure_modelines_verbose=1
+    Bundle 'chilicuil/gnupg.vim'
+    Bundle 'chilicuil/vim-markdown'
+    Bundle 'chilicuil/vim-sprunge'   , { 'on': ['<Plug>Sprunge'] }
+        map <leader>s                <Plug>Sprunge
+    Bundle 'chilicuil/file-line'
+    Bundle 'chilicuil/x-modes' , { 'on': ['<Plug>XDefaultMode', '<Plug>XDevelopmentMode', '<Plug>XWriteMode', '<Plug>XPresentationMode'] }
+        map <silent> <leader>D <Plug>XDefaultMode
+        map <silent> <leader>d <Plug>XDevelopmentMode
+        map <silent> <leader>w <Plug>XWriteMode
+        map <silent> <leader>p <Plug>XPresentationMode
     Bundle 'chilicuil/vim-cutils'
         let g:cutils_map_longlines        = '<Leader>cul'
         let g:cutils_map_whitespacehunter = '<Leader>v'
@@ -371,8 +333,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         " ds" / cs"' / ysiw'
     "TODO 18-12-2014 03:30 >> add lazy loading
     Bundle 'repeat.vim'
-    "TODO 18-12-2014 03:30 >> separate functions on autoload
-    Bundle 'gnupg.vim'
     "Bundle 'hexHighlight.vim'
 
     "===experimental===
@@ -401,17 +361,16 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
 
     "===discarted===
-    "Bundle 'chilicuil/conque'
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
     "Bundle 'FindMate'                      "ctrlp.vim ftw!
-    "Bundle 'vim-scripts/AutoComplPop'      "good for some time but finally deprecated
+    "Bundle 'vim-scripts/AutoComplPop'      "neocomplcache is better
         "let g:acp_behaviorKeywordLength    = 4
         "let g:acp_mappingDriven            = 1
         "let g:acp_completeOption           = '.,w,b,t,k,i,d'
         "let g:acp_completeoptPreview       = 1
         ""let g:acp_behaviorSnipmateLength   = 2
         "let g:acp_behaviorPythonOmniLength = -1
-    "Bundle 'Lokaltog/vim-powerline'        "I prefer my own powerline =)
+    "Bundle 'Lokaltog/vim-powerline'        "still prefer my own powerline =)
         "let g:Powerline_cache_enabled = 1
         "let g:Powerline_symbols = 'compatible' "compatible, unicode, fancy
         "let g:Powerline_theme = 'default' "default, skwp
@@ -427,6 +386,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'airblade/vim-gitgutter'        "doesn't work
     "Bundle 'luxflux/vim-git-inline-diff'   "too slow
     "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
+    "Bundle 'scrooloose/nerdcommenter'      "wasn't able to configure it with lazy loading
+        "let g:NERDCustomDelimiters      = {'mkd': { 'left': '<!--', 'right': '-->'}}
 endif
 
 "===============================================================================
@@ -444,12 +405,12 @@ endif
 " "H" moves to the top line on the screen
 " "M" moves to the middle line on the screen
 " "L" moves to the last line on the screen
-" "(" moves to beginning of current sentence
-" ")" moves to beginning of next sentence
-" "{" moves to beginning of current paragraph
-" "}" moves to beginning of next paragraph
-" "[[" moves to beginning of current section
-" "]]" moves to beginning of next section
+" "(" moves to the beginning of the current sentence
+" ")" moves to the beginning of the next sentence
+" "{" moves to the beginning of the current paragraph
+" "}" moves to the beginning of the next paragraph
+" "[[" moves to the beginning of the current section
+" "]]" moves to the beginning of the next section
 " "w" moves the cursor forward one word
 " "b" moves backward to the start of the previous word.
 " "e" moves to the next end of a word
@@ -540,7 +501,6 @@ endif
 " ":help 42"
 " ":help quotes"
 " ":help holy-grail"
-" ":w !sudo tee %" you can use sudo inside vim
 " "zo" Open a folder
 " "zO" Open a folder recursively
 " "zc" Close a folder
