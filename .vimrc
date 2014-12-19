@@ -73,9 +73,9 @@ set diffopt+=iwhite    "ignore whitespace in diff mode
 set cscopetag          "use both cscope and ctag for 'ctrl-]'
 set csto=0             "gives preference to cscope over ctag
 "set cscopeverbose
-set pastetoggle=<F5>   "pastetoggle (sane indentation on pastes)
-                       "press F5 when you are going to paste several lines
-                       "of text so they don't "be indented.
+set pastetoggle=<C-p>  "pastetoggle (sane indentation on pastes)
+                       "press <Ctrl>-<p> when you are going to paste several
+                       "lines of text so they don't "be indented.
 "set mousehide         "hide the mouse while typying
 "set mouse=nv          "set the mouse to work in console mode
 
@@ -183,8 +183,8 @@ map <silent> <leader>mk :make<CR>
 
 map <silent> <leader>m :set number!<CR>
 
-"update ~/.vimrc
-map <leader>s :source $MYVIMRC<CR>
+"reload ~/.vimrc
+map <leader>r :source $MYVIMRC<CR>
 
 "resize windows
 noremap <silent><Leader>< :vertical resize -1<CR>
@@ -220,7 +220,6 @@ snoremap <BS> <BS>i
 "Most of the time, the only reason you want to move to the end
 "of a word is to add text
 map e ea
-
 "make Y consistent with D and C
 nnoremap Y y$
 
@@ -270,42 +269,47 @@ map <Tab><Space> :bnext<CR>
 "================================ Plugins config  ==============================
 "===============================================================================
 
-if !isdirectory(expand(expand("~/.vim/bundle/vundle/.git/")))
+if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
     echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
     if nr2char(getchar()) ==? 'y'
         "shadow cloning was never accepted
-        !git clone --dept=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
+        "!git clone --depth=1 https://github.com/chilicuil/vundle-legacy.git ~/.vim/bundle/vundle
+        !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
     endif
 endif
 
-if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
+if isdirectory(expand("~/.vim/bundle/vundle/"))
     set runtimepath+=~/.vim/bundle/vundle/
     call vundle#rc()
 
     "====github====
     Bundle 'chilicuil/vundle'
+    "TODO 18-12-2014 03:30 >> add lazy loading
     Bundle 'edsono/vim-matchit'
-    Bundle 'scrooloose/nerdtree'
+    Bundle 'scrooloose/nerdtree'     , { 'on': 'NERDTreeToggle' }
         let g:NERDTreeWinPos         = 'right'
         let g:NERDTreeWinSize        = 25
         let g:NERDTreeMouseMode      = 3
-    Bundle 'msanders/snipmate.vim'
+    Bundle 'msanders/snipmate.vim'   , { 'on': 'insert' }
         let g:snips_author           = "Javier Lopez"
         let g:snips_authorEmail      = "m@javier.io"
         let g:snippets_dir           = "~/.vim/extra-snippets/"
-    Bundle 'majutsushi/tagbar'
+    Bundle 'majutsushi/tagbar'       , { 'on': 'TagbarToggle' }
         let g:tagbar_left            = 1
         let g:tagbar_width           = 25
-    Bundle 'vim-scripts/LargeFile'
-    "Bundle 'vim-scripts/matrix.vim--Yang'
-        "map <leader>x :Matrix<CR>
-    Bundle 'chilicuil/nextCS'
-    "Bundle 'chilicuil/TeTrIs.vim'
-        "nmap <Leader>te :cal <SID>Main()<CR>
+    Bundle 'chilicuil/QuickBuf'      , { 'on': ['<Plug>QuickBuf'] }
+        map <F2> <Plug>QuickBuf
+        "let g:qb_hotkey = "<F2>"
+    Bundle 'mhinz/vim-hugefile'
+    Bundle 'henrik/vim-indexed-search'
+    Bundle 'chilicuil/nextCS'        , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
+        map <F12> <Plug>NextCS
+        map <F11> <Plug>PreviousCS
     Bundle 'chilicuil/vimbuddy.vim'
+    "TODO 18-12-2014 03:30 >> add lazy loading
     Bundle 'scrooloose/nerdcommenter'
         let g:NERDCustomDelimiters   = {'mkd': { 'left': '<!--', 'right': '-->'}}
-    Bundle 'chilicuil/TaskList.vim'
+    Bundle 'chilicuil/TaskList.vim'  , { 'on': '<Plug>TaskList' }
         let g:Tlist_WinWidth         = 25
         let g:Tlist_Show_One_File    = 1
         let Tlist_Enable_Fold_Column = 0
@@ -315,21 +319,23 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "map <leader>ds :DIstop <CR>
     Bundle 'chilicuil/securemodelines'
         "let g:secure_modelines_verbose=1
-    Bundle 'kien/ctrlp.vim'
-        let g:ctrlp_map                 = '<leader>f'
-        "let g:ctrlp_use_caching         = 0
+    Bundle 'kien/ctrlp.vim'            , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMRU', 'CtrlPMixed'] }
+        "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
         let g:ctrlp_use_caching         = 1
         let g:ctrlp_clear_cache_on_exit = 0
         let g:ctrlp_working_path        = 0
-        "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
         let g:ctrlp_user_command        = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
         "let g:ctrlp_user_command       = 'find %s -type f'
-    Bundle 'Lokaltog/vim-easymotion'
-        let g:EasyMotion_leader_key     = '<leader><leader>'
+        "let g:ctrlp_map                 = '<leader>f'
+        map <leader>f                  :CtrlP<CR>
+    Bundle 'Lokaltog/vim-easymotion'   , { 'on': ['<Plug>(easymotion-prefix)'] }
+        "let g:EasyMotion_leader_key     = '<leader><leader>'
+        map <leader><leader>            <Plug>(easymotion-prefix)
         let g:EasyMotion_keys           = 'asdfghjklqwertyuiopzxcvbnm'
     Bundle 'chilicuil/vim-markdown'
-    Bundle 'chilicuil/vim-sprunge'
-    Bundle 'Shougo/neocomplcache'
+    Bundle 'chilicuil/vim-sprunge'      , { 'on': ['<Plug>Sprunge'] }
+        map <leader>s                   <Plug>Sprunge
+    Bundle 'Shougo/neocomplcache'       , { 'on': 'insert' }
         let g:neocomplcache_enable_at_startup              = 1
         let g:neocomplcache_max_list                       = 10
         let g:neocomplcache_max_menu_width                 = 10
@@ -340,13 +346,14 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         let g:neocomplcache_disable_auto_complete          = 0
         let g:neocomplcache_enable_wildcard                = 1
         let g:neocomplcache_enable_caching_message         = 1
-    Bundle 'bogado/file-line'
+    Bundle 'chilicuil/file-line'
     Bundle 'mhinz/vim-signify'
         let g:signify_vcs_list               = [ 'git' ]
         let g:signify_sign_add               = '+'
         let g:signify_sign_change            = '~'
         let g:signify_sign_delete            = '-'
         let g:signify_sign_delete_first_line = '‾'
+    "TODO 18-12-2014 03:30 >> add lazy loading
     Bundle 'chilicuil/x-modes'
         let g:x_modes_map_default      = '<Leader>D'
         let g:x_modes_map_development  = '<Leader>d'
@@ -355,28 +362,39 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         map <silent> <Leader>n           :call xmodes#FileManagerToggle()<CR>
         map <silent> <Leader>l           :call xmodes#FunctionBrowserToggle()<CR>
     Bundle 'chilicuil/vim-cutils'
-        let g:cutils_map_longlines             = '<Leader>cul'
-        let g:cutils_map_whitespacehunter      = '<Leader>v'
-        let g:cutils_map_appendmodeline        = '<Leader>ml'
+        let g:cutils_map_longlines        = '<Leader>cul'
+        let g:cutils_map_whitespacehunter = '<Leader>v'
+        let g:cutils_map_appendmodeline   = '<Leader>ml'
 
     "===vim-scripts===, not hosted in github for some obscure reason
-    Bundle 'QuickBuf'
-        let g:qb_hotkey = "<F2>"
-    Bundle 'surround.vim'
+    Bundle 'surround.vim' , { 'on': 'insert' }
         " ds" / cs"' / ysiw'
+    "TODO 18-12-2014 03:30 >> add lazy loading
     Bundle 'repeat.vim'
-    Bundle 'IndexedSearch'
+    "TODO 18-12-2014 03:30 >> separate functions on autoload
     Bundle 'gnupg.vim'
     "Bundle 'hexHighlight.vim'
 
     "===experimental===
-    Bundle 'junegunn/vim-easy-align'
+    Bundle 'junegunn/vim-easy-align' , { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
         command! -nargs=* -range -bang Align
         \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
         vmap . <Plug>(EasyAlignRepeat)
         nmap <Leader>a <Plug>(EasyAlign)
-    Bundle 'chilicuil/pipe2eval'
     Bundle 'ntpeters/vim-better-whitespace'
+    Bundle 'chilicuil/goyo.vim' , { 'on': '<Plug>Goyo' }
+        map <leader>y <Plug>Goyo
+        "let g:goyo_width         = 160
+        "let g:goyo_margin_top    = 5
+        "let g:goyo_margin_bottom = 5
+        "function! g:goyo_before()
+            "colorscheme jellybeans
+        "endfunction
+
+        "function! g:goyo_after()
+            "colorscheme hemisu
+        "endfunction
+        "let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
 
     command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
     " shift-control-* Greps for the word under the cursor
@@ -386,7 +404,6 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
     "Bundle 'chilicuil/conque'
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
     "Bundle 'FindMate'                      "ctrlp.vim ftw!
-    "Bundle 'tomtom/viki_vim'               "what's this anyway?
     "Bundle 'vim-scripts/AutoComplPop'      "good for some time but finally deprecated
         "let g:acp_behaviorKeywordLength    = 4
         "let g:acp_mappingDriven            = 1
@@ -401,32 +418,15 @@ if isdirectory(expand(expand("~/.vim/bundle/vundle/")))
         "let g:Powerline_stl_path_style = 'short' "relative, filename, short, full
         "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
         "call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
-    "Bundle 'jistr/vim-nerdtree-tabs'       "nerdtree is faster without it
-    "Bundle 'dahu/Insertlessly'             "what's this anyway?
-    "Bundle 'Townk/vim-autoclose'           "what's this anyway?
     "Bundle 'tpope/vim-fugitive'            "too slow
-    "Bundle 'godlygeek/csapprox'            "pretty but too slow
+    "Bundle 'godlygeek/csapprox'            "pretty but slow
     "Bundle 'mattn/webapi-vim'              "sprunge ftw!
     "Bundle 'mattn/gist-vim'                "sprunge ftw!
-    "Bundle 'gmarik/github-search.vim'      "what's this anyway?
     "Bundle 'goldfeld/vim-seek'             "easymotion.vim ftw!
-    "Bundle 'gregsexton/gitv'               "what's this anyway?
     "Bundle 'akiomik/git-gutter-vim'        "doesn't work
-    "Bundle 'luxflux/vim-git-inline-diff'   "too slow
     "Bundle 'airblade/vim-gitgutter'        "doesn't work
+    "Bundle 'luxflux/vim-git-inline-diff'   "too slow
     "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
-    "Bundle 'junegunn/goyo.vim'             "not worth a plugin
-        "let g:goyo_width         = 160
-        "let g:goyo_margin_top    = 5
-        "let g:goyo_margin_bottom = 5
-        "function! g:goyo_before()
-            "colorscheme jellybeans
-        "endfunction
-
-        "function! g:goyo_after()
-            "colorscheme hemisu
-        "endfunction
-        "let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
 endif
 
 "===============================================================================
