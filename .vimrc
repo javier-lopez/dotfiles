@@ -36,7 +36,7 @@ set report=0           "report any changes
 set nobackup           "git btw!
 set nowritebackup      "bye .swp madness
 set noswapfile
-set tabpagemax=200     "max open tabs at the same time
+set tabpagemax=100     "max open tabs at the same time
 set autowrite
 set autoread           "watch file changes by other programs
 set encoding=utf-8     "utf is able to represent any character
@@ -45,7 +45,8 @@ set ruler              "show the cursor position all the time
 set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
-set wildignore=*/.svn/*,CVS,*/.git,*/.hg/*,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp
+set wildignore=*/.svn,CVS,*/.git,*/.hg,*.o,*.a,*.class,*.mo,*.la,*.so
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.obj,*.swp
 set hidden            "allow open other file without saving current file
 set autochdir         "change to the current directory
 set winminheight=1    "never let a window to be less than 1px height
@@ -71,7 +72,7 @@ set showmatch         "when closing a block, show matching bracket.
 set diffopt+=iwhite   "ignore whitespace in diff mode
 set cscopetag         "use both cscope and ctag for 'ctrl-]'
 set csto=0            "gives preference to cscope over ctag
-set pastetoggle=<C-p> "pastetoggle, sane indentation on pastes
+set pastetoggle=<c-p> "pastetoggle, sane indentation on pastes
 "set mousehide        "hide the mouse while typying
 "set mouse=nv         "set the mouse to work in console mode
 set foldenable!       "disable folding by default
@@ -141,46 +142,47 @@ noremap  <c-k> <c-w>k
 noremap  <c-j> <c-w>j
 noremap  <c-l> <c-w>l
 noremap  <c-h> <c-w>h
-inoremap <c-k> <Esc><c-w>k
-inoremap <c-j> <Esc><c-w>j
-inoremap <c-l> <Esc><c-w>l
-inoremap <c-h> <Esc><c-w>h
+inoremap <c-k> <esc><c-w>k
+inoremap <c-j> <esc><c-w>j
+inoremap <c-l> <esc><c-w>l
+inoremap <c-h> <esc><c-w>h
 
 "tabs
-map <c-n> :tabn<CR>
-map <c-p> :tabp<CR>
-map <c-w> :tabclose <CR>
+map <c-t> <esc>:tabnew<cr>
+map [6^ :tabn<cr>
+map [5^ :tabp<cr>
+map <c-w> :tabclose <cr>
 
 "exit
-map <c-x> :confirm qall<CR>
+map <c-x> :confirm qall<cr>
 
 "=== Leader Mappings(,)==
 let mapleader = ","
 
 "m'ake
-map <silent> <leader>m :make<CR>
+map <silent> <leader>m :make<cr>
 
 "toggle numbering
-map <silent> <leader>1 :set number!<CR>
+map <silent> <leader>1 :set number!<cr>
 
 "reload ~/.vimrc
-map <leader>r :source $MYVIMRC<CR>
+map <leader>r :source $MYVIMRC<cr>
 
 "resize windows
-noremap <silent><Leader>< :vertical resize -1<CR>
-noremap <silent><Leader>> :vertical resize +1<CR>
-noremap <silent><Leader>+ :resize +1<CR>
-noremap <silent><Leader>- :resize -1<CR>
+noremap <silent><leader>< :vertical resize -1<cr>
+noremap <silent><leader>> :vertical resize +1<cr>
+noremap <silent><leader>+ :resize +1<cr>
+noremap <silent><leader>- :resize -1<cr>
 
 "clear highlighted searches
-nmap <silent> <leader>/   :nohlsearch<CR>
+nmap <silent> <leader>/   :nohlsearch<cr>
 
 "=== Tab Mappings ===
-map <Tab>c :cc<CR>
-map <Tab>n :cnext<CR>
-map <Tab>p :cprevious<CR>
+map <tab>c :cc<cr>
+map <tab>n :cnext<cr>
+map <tab>p :cprevious<cr>
 "move between buffers
-map <Tab><Space> :bnext<CR>
+map <tab><space> :bnext<cr>
 
 "=== Misc Mappings===
 "let's switch these
@@ -188,15 +190,15 @@ map      ; :
 nnoremap ' `
 nnoremap ` '
 
-"<Esc> isn't really confortable, be carefull when pasting stuff
-inoremap jj <Esc>
+"<esc> isn't really confortable, be carefull when pasting stuff
+inoremap jj <esc>
 
 "insert spaces in normal mode
-noremap <Space> i <Esc>
+noremap <space> i <esc>
 
-"use <BackSpace> for deleting visual selections
-xnoremap <BS> d
-snoremap <BS> <BS>i
+"use <backspace> for deleting visual selections
+xnoremap <bs> d
+snoremap <bs> <bs>i
 
 "edit at the end of the word
 map e ea
@@ -210,9 +212,9 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
 "quit and save faster
-noremap zz :q!<CR>
-noremap ss :w<CR>
-noremap SS :%!sudo tee > /dev/null %<CR>
+noremap zz :q!<cr>
+noremap ss :w<cr>
+noremap SS :%!sudo tee > /dev/null %<cr>
 "ZZ :wq!
 
 "overwrite these annoying commands
@@ -223,13 +225,13 @@ cabbr Q q
 cabbr wQ wq
 cabbr WQ wq
 cabbr Wq wq
-noremap <HOME> ^
-noremap <END> $
+noremap <home> ^
+noremap <end>  $
 
 "this will work only in the gui version, most terminals are unable
 "to determinate differences between <home> and <m-home>
-noremap <M-HOME> gg
-noremap <M-END> G
+noremap <m-home> gg
+noremap <m-end>  G
 
 "===============================================================================
 "=================================== Plugins ===================================
@@ -256,7 +258,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:NERDTreeWinPos       = 'right'
         let g:NERDTreeWinSize      = 25
         let g:NERDTreeMouseMode    = 3
-        map <silent> <leader>n     :NERDTreeToggle<CR>
+        map <silent> <leader>n     :NERDTreeToggle<cr>
     Bundle 'msanders/snipmate.vim' , { 'on': 'insert' }
         let g:snips_author         = "Javier Lopez"
         let g:snips_authorEmail    = "m@javier.io"
@@ -264,23 +266,31 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'majutsushi/tagbar'     , { 'on': 'TagbarToggle' }
         let g:tagbar_left          = 1
         let g:tagbar_width         = 25
-        map <silent> <leader>l     :TagbarToggle<CR>
+        map <silent> <leader>l     :TagbarToggle<cr>
     Bundle 'mhinz/vim-hugefile'
     Bundle 'henrik/vim-indexed-search'
-    Bundle 'tomtom/tcomment_vim'   , { 'on': '<Plug>TComment_<c-_><c-_>' }
-        map <leader>c<space>       <Plug>TComment_<c-_><c-_>
-        map <leader>cs             <Plug>TComment_<c-_><c-_>
-    Bundle 'kien/ctrlp.vim'             , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMRU', 'CtrlPMixed'] }
+    Bundle 'tomtom/tcomment_vim'       , { 'on': '<Plug>TComment_<c-_><c-_>' }
+        map <leader>c<space>           <Plug>TComment_<c-_><c-_>
+        map <leader>cs                 <Plug>TComment_<c-_><c-_>
+    Bundle 'kien/ctrlp.vim'             , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "frozen
+    " Bundle 'ctrlpvim/ctrlp.vim'         , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
         "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
         let g:ctrlp_use_caching         = 1
         let g:ctrlp_clear_cache_on_exit = 0
         let g:ctrlp_working_path        = 0
-        let g:ctrlp_user_command        = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-        "let g:ctrlp_user_command       = 'find %s -type f'
-        let g:ctrlp_map                 = '<leader>f'
-        map <leader>f                  :CtrlP<CR>
-    Bundle 'Lokaltog/vim-easymotion'   , { 'on': ['<Plug>(easymotion-prefix)'] }
-        "let g:EasyMotion_leader_key     = '<leader><leader>'
+        " let g:ctrlp_user_command        = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+        let g:ctrlp_match_window        = 'bottom,order:ttb,min:1,max:10,results:100'
+        let g:ctrlp_extensions          = ['smarttabs']
+        " let g:ctrlp_map               = '<leader>f'
+        map <leader>f                   :CtrlP<cr>
+        map <leader>b                   :CtrlPBuffer<cr>
+    " Bundle 'DavidEGx/ctrlp-smarttabs'   , { 'on': ['CtrlPSmartTabs'] }
+    Bundle 'chilicuil/ctrlp-smarttabs'   , { 'on': ['CtrlPSmartTabs'] }
+        let g:ctrlp_smarttabs_reverse        = 0
+        let g:ctrlp_smarttabs_modify_tabline = 0
+        map <leader>t                   :call vundle#load('ctrlp.vim')<cr>:CtrlPSmartTabs<cr>
+    Bundle 'Lokaltog/vim-easymotion'    , { 'on': ['<Plug>(easymotion-prefix)'] }
+        "let g:EasyMotion_leader_key    = '<leader><leader>'
         map <leader><leader>            <Plug>(easymotion-prefix)
         let g:EasyMotion_keys           = 'asdfghjklqwertyuiopzxcvbnm'
     Bundle 'Shougo/neocomplcache'                          , { 'on': 'insert' }
@@ -310,7 +320,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:Tlist_WinWidth         = 25
         let g:Tlist_Show_One_File    = 1
         let Tlist_Enable_Fold_Column = 0
-        map <Leader>t <Plug>TaskList
+        map <leader>o <Plug>TaskList
     Bundle 'chilicuil/securemodelines'
         "let g:secure_modelines_verbose=1
     Bundle 'chilicuil/gnupg.vim'
@@ -324,13 +334,13 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <silent> <leader>w <Plug>XWriteMode
         map <silent> <leader>p <Plug>XPresentationMode
     Bundle 'chilicuil/vim-cutils'
-        let g:cutils_map_longlines        = '<Leader>cul'
-        let g:cutils_map_whitespacehunter = '<Leader>v'
-        let g:cutils_map_appendmodeline   = '<Leader>ml'
+        let g:cutils_map_longlines        = '<leader>cul'
+        let g:cutils_map_appendmodeline   = '<leader>am'
 
     "===vim-scripts===, not hosted in github for some obscure reason
-    Bundle 'surround.vim' , { 'on': 'insert' }
+    Bundle 'surround.vim'    , { 'on': 'insert' }
         " ds" / cs"' / ysiw'
+    Bundle 'delimitMate.vim' , { 'on': 'insert' }
     "TODO 18-12-2014 03:30 >> add lazy loading
     Bundle 'repeat.vim'
     "Bundle 'hexHighlight.vim'
@@ -340,7 +350,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         command! -nargs=* -range -bang Align
         \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
         vmap . <Plug>(EasyAlignRepeat)
-        nmap <Leader>a <Plug>(EasyAlign)
+        nmap <leader>a <Plug>(EasyAlign)
     Bundle 'ntpeters/vim-better-whitespace'
     Bundle 'chilicuil/goyo.vim' , { 'on': '<Plug>Goyo' }
         map <leader>y <Plug>Goyo
