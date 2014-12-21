@@ -45,8 +45,8 @@ set ruler              "show the cursor position all the time
 set noerrorbells       "disable annoying beeps
 "set visualbell        "this one too
 set wildmenu           "enhance command completion
-set wildignore=*/.svn,CVS,*/.git,*/.hg,*.o,*.a,*.class,*.mo,*.la,*.so
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.obj,*.swp
+set wildignore=*/.svn,CVS,*/.git,*/.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.swp,*/tmp/*
+set wildignore=*.pdf,*.png,*.jpg,*.jpeg,*.mp3,*mp4,*.avi,*.mkv,*.mpeg,*.mpg,*.rm
 set hidden            "allow open other file without saving current file
 set autochdir         "change to the current directory
 set winminheight=1    "never let a window to be less than 1px height
@@ -269,31 +269,36 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <silent> <leader>l     :TagbarToggle<cr>
     Bundle 'mhinz/vim-hugefile'
     Bundle 'henrik/vim-indexed-search'
-    Bundle 'tomtom/tcomment_vim'       , { 'on': '<Plug>TComment_<c-_><c-_>' }
-        map <leader>c<space>           <Plug>TComment_<c-_><c-_>
-        map <leader>cs                 <Plug>TComment_<c-_><c-_>
-    Bundle 'kien/ctrlp.vim'             , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "frozen
-    " Bundle 'ctrlpvim/ctrlp.vim'         , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
-        "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
-        let g:ctrlp_use_caching         = 1
+    Bundle 'tomtom/tcomment_vim'   , { 'on': '<Plug>TComment_<c-_><c-_>' }
+        map <leader>c<space>       <Plug>TComment_<c-_><c-_>
+        map <leader>cs             <Plug>TComment_<c-_><c-_>
+    Bundle 'kien/ctrlp.vim'         , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "frozen
+    " Bundle 'ctrlpvim/ctrlp.vim'     , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
+        "let g:ctrlp_cache_dir      = $HOME.'/.cache/ctrlp'
+        let g:ctrlp_use_caching     = 1
         let g:ctrlp_clear_cache_on_exit = 0
-        let g:ctrlp_working_path        = 0
-        " let g:ctrlp_user_command        = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-        let g:ctrlp_match_window        = 'bottom,order:ttb,min:1,max:10,results:100'
-        let g:ctrlp_extensions          = ['smarttabs']
-        " let g:ctrlp_map               = '<leader>f'
-        map <leader>f                   :CtrlP<cr>
-        map <leader>b                   :CtrlPBuffer<cr>
-    " Bundle 'DavidEGx/ctrlp-smarttabs'   , { 'on': ['CtrlPSmartTabs'] }
-    Bundle 'chilicuil/ctrlp-smarttabs'   , { 'on': ['CtrlPSmartTabs'] }
+        let g:ctrlp_working_path    = 0
+        let g:ctrlp_match_window    = 'bottom,order:ttb,min:1,max:10,results:100'
+        let g:ctrlp_extensions      = ['smarttabs']
+        " let g:ctrlp_map           = '<leader>f'
+        map <leader>f               :CtrlP<cr>
+        map <leader>b               :CtrlPBuffer<cr>
+        if has('python') | let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' } | endif
+        if executable("ag")
+            let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup
+            \ --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store
+            \ --ignore *.pyc --ignore *.mp3 --ignore *.png --ignore *.jpg -g ""'
+        endif
+    Bundle 'FelikZ/ctrlp-py-matcher'
+    Bundle 'DavidEGx/ctrlp-smarttabs' , { 'on': ['CtrlPSmartTabs'] }
         let g:ctrlp_smarttabs_reverse        = 0
         let g:ctrlp_smarttabs_modify_tabline = 0
-        map <leader>t                   :call vundle#load('ctrlp.vim')<cr>:CtrlPSmartTabs<cr>
-    Bundle 'Lokaltog/vim-easymotion'    , { 'on': ['<Plug>(easymotion-prefix)'] }
-        "let g:EasyMotion_leader_key    = '<leader><leader>'
-        map <leader><leader>            <Plug>(easymotion-prefix)
-        let g:EasyMotion_keys           = 'asdfghjklqwertyuiopzxcvbnm'
-    Bundle 'Shougo/neocomplcache'                          , { 'on': 'insert' }
+        map <leader>t :call vundle#load('ctrlp.vim')<cr>:CtrlPSmartTabs<cr>
+    Bundle 'Lokaltog/vim-easymotion'  , { 'on': ['<Plug>(easymotion-prefix)'] }
+        "let g:EasyMotion_leader_key  = '<leader><leader>'
+        map <leader><leader>          <Plug>(easymotion-prefix)
+        let g:EasyMotion_keys         = 'asdfghjklqwertyuiopzxcvbnm'
+    Bundle 'Shougo/neocomplcache'     , { 'on': 'insert' }
         let g:neocomplcache_enable_at_startup              = 1
         let g:neocomplcache_max_list                       = 10
         let g:neocomplcache_max_menu_width                 = 10
@@ -305,14 +310,14 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:neocomplcache_enable_wildcard                = 1
         let g:neocomplcache_enable_caching_message         = 1
     Bundle 'mhinz/vim-signify'
-        let g:signify_vcs_list        = [ 'git' ]
-        let g:signify_sign_add        = '+'
-        let g:signify_sign_change     = '~'
-        let g:signify_sign_delete     = '-'
-    Bundle 'chilicuil/QuickBuf'      , { 'on': ['<Plug>QuickBuf'] }
+        let g:signify_vcs_list    = [ 'git' ]
+        let g:signify_sign_add    = '+'
+        let g:signify_sign_change = '~'
+        let g:signify_sign_delete = '-'
+    Bundle 'chilicuil/QuickBuf'   , { 'on': ['<Plug>QuickBuf'] }
         map <F2> <Plug>QuickBuf
         "let g:qb_hotkey = "<F2>"
-    Bundle 'chilicuil/nextCS'        , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
+    Bundle 'chilicuil/nextCS'     , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
         map <F12> <Plug>NextCS
         map <F11> <Plug>PreviousCS
     Bundle 'chilicuil/vimbuddy.vim'
@@ -325,8 +330,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:secure_modelines_verbose=1
     Bundle 'chilicuil/gnupg.vim'
     Bundle 'chilicuil/vim-markdown'
-    Bundle 'chilicuil/vim-sprunge'   , { 'on': ['<Plug>Sprunge'] }
-        map <leader>s                <Plug>Sprunge
+    Bundle 'chilicuil/vim-sprunge' , { 'on': ['<Plug>Sprunge'] }
+        map <leader>s              <Plug>Sprunge
     Bundle 'chilicuil/file-line'
     Bundle 'chilicuil/x-modes' , { 'on': ['<Plug>XDefaultMode', '<Plug>XDevelopmentMode', '<Plug>XWriteMode', '<Plug>XPresentationMode'] }
         map <silent> <leader>D <Plug>XDefaultMode
@@ -334,8 +339,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <silent> <leader>w <Plug>XWriteMode
         map <silent> <leader>p <Plug>XPresentationMode
     Bundle 'chilicuil/vim-cutils'
-        let g:cutils_map_longlines        = '<leader>cul'
-        let g:cutils_map_appendmodeline   = '<leader>am'
+        let g:cutils_map_longlines      = '<leader>cul'
+        let g:cutils_map_appendmodeline = '<leader>am'
 
     "===vim-scripts===, not hosted in github for some obscure reason
     Bundle 'surround.vim'    , { 'on': 'insert' }
@@ -378,7 +383,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:acp_mappingDriven            = 1
         "let g:acp_completeOption           = '.,w,b,t,k,i,d'
         "let g:acp_completeoptPreview       = 1
-        ""let g:acp_behaviorSnipmateLength   = 2
+        "let g:acp_behaviorSnipmateLength   = 2
         "let g:acp_behaviorPythonOmniLength = -1
     "Bundle 'Lokaltog/vim-powerline'        "still prefer my own powerline =)
         "let g:Powerline_cache_enabled = 1
@@ -397,7 +402,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'luxflux/vim-git-inline-diff'   "too slow
     "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
     "Bundle 'scrooloose/nerdcommenter'      "wasn't able to configure it with lazy loading
-        "let g:NERDCustomDelimiters      = {'mkd': { 'left': '<!--', 'right': '-->'}}
+        "let g:NERDCustomDelimiters         = {'mkd': { 'left': '<!--', 'right': '-->'}}
 endif
 
 "===============================================================================
