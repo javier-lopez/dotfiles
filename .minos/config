@@ -1,17 +1,14 @@
-#minos configuration, minos.io/doc/config
-#/etc/minos/config
-#~/.minos/config
+#minos configuration, minos.io/docs/config
+#/etc/minos/config, ~/.minos/config
 
-#general-wallpaper /usr/share/minos/wallpapers/sunlight.png
-general-wallpaper  $HOME/data/images/wallpapers/sunlight.png
+#general-wallpaper /usr/share/minos/wallpapers/minos.png
+general-wallpaper $HOME/data/images/wallpapers/sunlight.png
 
-#lock-wallpaper    /usr/share/minos/wallpapers/cui.png
-lock-wallpaper     "$HOME/data/images/wallpapers/o@o.png"
-#lock-wallpaper    "$HOME/data/images/wallpapers/cu i.png"
+#lock-wallpaper   /usr/share/minos/wallpapers/o@o.png
+lock-wallpaper    "$HOME/data/images/wallpapers/o@o.png"
 
-#lock settings
 #http://en.wikipedia.org/wiki/Web_colors#HTML_color_names
-#lock-color-inside              black
+#lock-color-inside              white
 #lock-color-inside-verification #fff
 #lock-color-inside-wrong        a52a2a
 #lock-color-ring                000000ff
@@ -20,57 +17,75 @@ lock-wallpaper     "$HOME/data/images/wallpapers/o@o.png"
 #lock-color-line                00000000
 #lock-color-keypress            1e90ff
 #lock-color-delpress            a52a2aff
-
 ##blue
 #lock-color-keypress #00BFFF
 #lock-color-keypress #03a9f4
 #lock-color-keypress #00b8d4
 #lock-color-keypress #00bcd4
-
 ##green
 #lock-color-keypress #20B2AA
 #lock-color-keypress #66CDAA
 #lock-color-keypress #008080
 #lock-color-keypress #9ACD32
 #lock-color-keypress #c6ff00
-
 ##yellow
 #lock-color-keypress #FFFF00
-
 ##pink
 #lock-color-keypress #FF69B4
 #lock-color-keypress #DDA0DD
-
 ##purple
 #lock-color-keypress #4169E1
 #lock-color-keypress #5677fc
 #lock-color-keypress #9370DB
-
 ##grey
 #lock-color-keypress #A9A9A9
 #lock-color-keypress #fafafa
 
+m-autostart          minos-autostart
 #autostart           yes
-#autostart-custom    /etc/minos/autostart
+#composition         yes
+#eyeshield           yes
+#clipboard           yes
+#autostart-config    /etc/minos/autostart
 
+m-composition        compton
+m-eyeshield          redshift
+m-clipboard          autocutsel
+
+m-statusbar          minos-statusbar
 #statusbar           yes
 #statusbar-icons     sm4tik
-#statusbar-custom    command
-
-#composition         yes
+#statusbar-config    /etc/minos/statusbar
 
 #keyboard-layouts    latam,us,ru
-#hibernate-bin       pm-hibernate
-#suspend-bin         pm-suspend
+m-hibernate          pm-hibernate
+m-suspend            pm-suspend
+#movietime-hook      $HOME/.movietime
 
-#movietime-custom-script $HOME/.movietime
+#minos-meta
+m-help               minos-help
+m-launcher           dmenu-run
+m-killer             dmenu-killall
+m-session-manager    dmenu-session
+m-multimonitor       dmenu-xrandr
+m-mail               mutt:cli
+m-im                 'irssi --config=<(gpg -d "${HOME}"/.irssi/config.gpg)':cli
+m-pdf                zathura
+m-music-player       ncmpcpp
+m-video-player       mplayer
+m-terminal           x-terminal-emulator
+m-browser            x-www-browser
+m-file-manager       pcmanfm
+m-network-manager    wicd-curses
+m-magnifier          magnifier
 
 #minos.io/s
-setup-dotfiles    https://github.com/chilicuil/dotfiles
-setup-utils       https://github.com/chilicuil/learn/sh/tools
-setup-postinstall http://javier.io/postinstall
-setup-preinstall  http://javier.io/preinstall
-setup-apps-purge  xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda
+setup-dotfiles       https://github.com/chilicuil/dotfiles
+setup-utils          https://github.com/chilicuil/learn/sh/tools
+setup-preinstall     http://javier.io/preinstall
+setup-postinstall    http://javier.io/postinstall
+setup-apps-install   mozilla-firefox mozilla-flashplayer
+setup-apps-purge     xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda
 
 #mkdir ~/.minos
 #wget http://something/config -O ~/.minos/config

@@ -10,15 +10,17 @@ Help
      <altgr><k>     ⇨  close app
      <altgr><l>     ⇨  close app by name
 
-     <altgr><f>     ⇨  file browser
-     <altgr><n>     ⇨  network app
-     <altgr><m>     ⇨  mail
-     <altgr><M>     ⇨  magnifier
-     <altgr><i>     ⇨  instant messaging
-     <altgr><P>     ⇨  music player
-     <altgr><c>     ⇨  countdown
-     <altgr><x>     ⇨  multimonitor menu
+     <altgr><w>     ⇨  web  browser
+     <altgr><f>     ⇨  file manager
+     <altgr><m>     ⇨  mail reader
+     <altgr><i>     ⇨  instant messenger
+     <altgr><n>     ⇨  network manager
+     <altgr><c>     ⇨  countdown alarm
+     <altgr><x>     ⇨  multimonitor manager
      <altgr><v>     ⇨  virtual machine launcher
+     <altgr><z>     ⇨  zoom lent
+     <altgr><M>     ⇨  music player
+     <altgr><V>     ⇨  video player
 
    <altgr><space>   ⇨  toggle screen powersave
      <altgr><s>     ⇨  search song in mpd
@@ -27,12 +29,22 @@ Help
      <altgr><´>     ⇨  play previous track
      <altgr><.>     ⇨  increase volume
      <altgr><->     ⇨  decrease volume
-     <altgr><t>     ⇨  tell something
+     <altgr><t>     ⇨  word teller
+
+  <ctrl><alt><supr> ⇨  session manager
+   <ctrl><alt><l>   ⇨  lock screen
+    <alt><rshift>   ⇨  change keyboard layout
 
      <ctrl><C>      ⇨  copy to clipboard
      <ctrl><V>      ⇨  paste from clipboard
      <ctrl><+>      ⇨  increase font size
      <ctrl><->      ⇨  decrease font size
+
+      <win><f>      ⇨  fullscreen
+      <win><d>      ⇨  default
+      <win><s>      ⇨  vertical stack
+      <win><a>      ⇨  tabbed
+    <win><insert>   ⇨  insert app into buffer mode
 
       <win><n>      ⇨  go to <n> desk
       <win><->>     ⇨  go to next desk
@@ -42,29 +54,24 @@ Help
       <win><j>      ⇨  go to upper window
       <win><k>      ⇨  go to down window
       <win><N>      ⇨  move app to <n> desk
+      <win><H>      ⇨  move app to the left
       <win><L>      ⇨  move app to the right
-      <win><J>      ⇨  move app up
-      <win><K>      ⇨  move app down
+      <win><J>      ⇨  move app down
+      <win><K>      ⇨  move app up
 
       <win><m>      ⇨  mark an app
       <win><'>      ⇨  go to a marked app
-
-  <ctrl><alt><supr> ⇨  session menu
-   <ctrl><alt><l>   ⇨  lock screen
-    <alt><rshift>   ⇨  change keyboard layout
 
       <ImpPt>       ⇨  screenshot
     <alt><ImpPt>    ⇨  selective screenshot
     <win><ImpPt>    ⇨  screencast
   <win><alt><ImpPt> ⇨  selective screencast
 <win><shift><ImpPt> ⇨  stop screencast
-  <Control><ImpPt>  ⇨  gif selective screencast
+   <ctrl><ImpPt>    ⇨  gif selective screencast
 
-      <win><f>      ⇨  fullscreen
-      <win><d>      ⇨  default
-      <win><s>      ⇨  vertical stack
-      <win><a>      ⇨  tabbed
-    <win><insert>   ⇨  insert app into buffer mode
+<win><shift><space> ⇨  window toggle mode
+  <win><left click> ⇨  move window
+  <win><righ click> ⇨  resize window
 
      <altgr><r>     ⇨  enter resize mode
          <h>        ⇨  +1 px to the left
@@ -72,6 +79,3 @@ Help
          <j>        ⇨  -1 px down
          <k>        ⇨  +1 px up
      <altgr><r>     ⇨  exit resize mode
-
-  <win><righ click> ⇨  resize app
-<win><shift><space> ⇨  window toggle mode
