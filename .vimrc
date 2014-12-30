@@ -72,7 +72,8 @@ set showmatch         "when closing a block, show matching bracket.
 set diffopt+=iwhite   "ignore whitespace in diff mode
 set cscopetag         "use both cscope and ctag for 'ctrl-]'
 set csto=0            "gives preference to cscope over ctag
-set pastetoggle=<c-p> "pastetoggle, sane indentation on pastes
+set pastetoggle=<c-insert> "pastetoggle, sane indentation on pastes
+"TODO 29-12-2014 14:08 >> make it work in terminal emulators
 "set mousehide        "hide the mouse while typying
 "set mouse=nv         "set the mouse to work in console mode
 set foldenable!       "disable folding by default
@@ -333,7 +334,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/vim-sprunge' , { 'on': ['<Plug>Sprunge'] }
         map <leader>s              <Plug>Sprunge
     Bundle 'chilicuil/file-line'
-    Bundle 'chilicuil/x-modes' , { 'on': ['<Plug>XDefaultMode', '<Plug>XDevelopmentMode', '<Plug>XWriteMode', '<Plug>XPresentationMode'] }
+    Bundle 'chilicuil/x-modes' , { 'on': ['<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
         map <silent> <leader>D <Plug>XDefaultMode
         map <silent> <leader>d <Plug>XDevelopmentMode
         map <silent> <leader>w <Plug>XWriteMode
