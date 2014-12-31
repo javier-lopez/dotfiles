@@ -52,7 +52,7 @@ esac
 export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin/X11:/usr/games"
 
 # gpg
-export GPGKEY="BC9C8902"
+export GPGKEY="C92C604E"
 export GPG_TTY="$(tty)"
 
 # random vars
