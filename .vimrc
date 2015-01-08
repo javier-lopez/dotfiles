@@ -22,29 +22,29 @@ else
     colorscheme hemisu
 endif
 
-set nocompatible       "breaks compatibility with vi, required
-set modelines=0        "http://www.guninski.com/vim1.html
-set noexrc             "don't use local version of .(g)vimrc, .exrc
-set lazyredraw         "do not redraw the screen while macros are running. It
-                       "improves performance
-set ttyfast            "indicates a fast terminal connection
-set history=100        "record last 100 commands, press 'q:' to see a new
-                       "window (normal mode) with the full history
-set t_Co=256           "set 256 colors. Make sure your console supports it.
-                       "gnome-terminal, konsole and urxvt work well
-set report=0           "report any changes
-set nobackup           "git btw!
-set nowritebackup      "bye .swp madness
+set nocompatible      "breaks compatibility with vi, required
+set modelines=0       "http://www.guninski.com/vim1.html
+set noexrc            "don't use local version of .(g)vimrc, .exrc
+set lazyredraw        "do not redraw the screen while macros are running. It
+                      "improves performance
+set ttyfast           "indicates a fast terminal connection
+set history=100       "record last 100 commands, press 'q:' to see a new
+                      "window (normal mode) with the full history
+set t_Co=256          "set 256 colors. Make sure your console supports it.
+                      "gnome-terminal, konsole and urxvt work well
+set report=0          "report any changes
+set nobackup          "git btw!
+set nowritebackup     "bye .swp madness
 set noswapfile
-set tabpagemax=100     "max open tabs at the same time
+set tabpagemax=100    "max open tabs at the same time
 set autowrite
-set autoread           "watch file changes by other programs
-set encoding=utf-8     "utf is able to represent any character
+set autoread          "watch file changes by other programs
+set encoding=utf-8    "utf is able to represent any character
 set fileencoding=utf-8
-set ruler              "show the cursor position all the time
-set noerrorbells       "disable annoying beeps
-"set visualbell        "this one too
-set wildmenu           "enhance command completion
+set ruler             "show the cursor position all the time
+set noerrorbells      "disable annoying beeps
+"set visualbell       "this one too
+set wildmenu          "enhance command completion
 set wildignore=*/.svn,CVS,*/.git,*/.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.swp,*/tmp/*
 set wildignore=*.pdf,*.png,*.jpg,*.jpeg,*.mp3,*mp4,*.avi,*.mkv,*.mpeg,*.mpg,*.rm
 set hidden            "allow open other file without saving current file
@@ -64,16 +64,14 @@ set expandtab         "tabs mutate into spaces, if you wanna insert "real"
                       "tabs use Ctrl-v <tab> instance
 set splitright        "split vertically to the right.
 set splitbelow        "split horizontally below.
-"set cursorline        "highlight the screen line of the cursor, slow!
+"set cursorline       "highlight the screen line of the cursor, slow!
 set nostartofline     "keep the cursor on the same column
 set nofsync           "improves performance, let OS decide when to flush disk
 set showmatch         "when closing a block, show matching bracket.
-"set matchtime=5       "how many tenths of a second to blink
+"set matchtime=5      "how many tenths of a second to blink
 set diffopt+=iwhite   "ignore whitespace in diff mode
 set cscopetag         "use both cscope and ctag for 'ctrl-]'
 set csto=0            "gives preference to cscope over ctag
-set pastetoggle=<c-insert> "pastetoggle, sane indentation on pastes
-"TODO 29-12-2014 14:08 >> make it work in terminal emulators
 "set mousehide        "hide the mouse while typying
 "set mouse=nv         "set the mouse to work in console mode
 set foldenable!       "disable folding by default
@@ -83,8 +81,10 @@ set foldmethod=syntax
 set clipboard=unnamedplus      "yanks go to clipboard, "+p to recover
 set viminfo='100,<100,s10,h    "remember just a little
 set backspace=indent,eol,start "backspace deletes as in other editors
-
-"Print to html
+set pastetoggle=<c-insert>     "pastetoggle, sane indentation on pastes
+                               "doesn't work in most terminal emulators
+                               ":set paste/nopaste are friends there
+"print to html
 let html_use_css       = 1
 let html_dynamic_folds = 1
 
@@ -260,6 +260,10 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:NERDTreeWinSize      = 25
         let g:NERDTreeMouseMode    = 3
         map <silent> <leader>n     :NERDTreeToggle<cr>
+    Bundle 'chilicuil/nerdcommenter', {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
+       map <leader>c<space>        <Plug>NERDCommenterToggle
+       map <leader>cs              <Plug>NERDCommenterSexy
+       let g:NERDCustomDelimiters  = {'mkd': { 'left': '<!--', 'right': '-->'}}
     Bundle 'msanders/snipmate.vim' , { 'on': 'insert' }
         let g:snips_author         = "Javier Lopez"
         let g:snips_authorEmail    = "m@javier.io"
@@ -270,11 +274,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <silent> <leader>l     :TagbarToggle<cr>
     Bundle 'mhinz/vim-hugefile'
     Bundle 'henrik/vim-indexed-search'
-    Bundle 'tomtom/tcomment_vim'   , { 'on': '<Plug>TComment_<c-_><c-_>' }
-        map <leader>c<space>       <Plug>TComment_<c-_><c-_>
-        map <leader>cs             <Plug>TComment_<c-_><c-_>
     Bundle 'kien/ctrlp.vim'         , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "frozen
-    " Bundle 'ctrlpvim/ctrlp.vim'     , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
+    "Bundle 'ctrlpvim/ctrlp.vim'     , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
         "let g:ctrlp_cache_dir      = $HOME.'/.cache/ctrlp'
         let g:ctrlp_use_caching     = 1
         let g:ctrlp_clear_cache_on_exit = 0
@@ -334,7 +335,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/vim-sprunge' , { 'on': ['<Plug>Sprunge'] }
         map <leader>s              <Plug>Sprunge
     Bundle 'chilicuil/file-line'
-    Bundle 'chilicuil/x-modes' , { 'on': ['<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
+    Bundle 'chilicuil/x-modes' , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
         map <silent> <leader>D <Plug>XDefaultMode
         map <silent> <leader>d <Plug>XDevelopmentMode
         map <silent> <leader>w <Plug>XWriteMode
@@ -358,6 +359,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         vmap . <Plug>(EasyAlignRepeat)
         nmap <leader>a <Plug>(EasyAlign)
     Bundle 'ntpeters/vim-better-whitespace'
+    Bundle 'mbbill/undotree'    , { 'on': 'UndotreeToggle'}
+        map <leader>u :UndotreeToggle<cr>
     Bundle 'chilicuil/goyo.vim' , { 'on': '<Plug>Goyo' }
         map <leader>y <Plug>Goyo
         "let g:goyo_width         = 160
@@ -402,8 +405,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'airblade/vim-gitgutter'        "doesn't work
     "Bundle 'luxflux/vim-git-inline-diff'   "too slow
     "Bundle 'terryma/vim-multiple-cursors'  "nice idea but too slow
-    "Bundle 'scrooloose/nerdcommenter'      "wasn't able to configure it with lazy loading
-        "let g:NERDCustomDelimiters         = {'mkd': { 'left': '<!--', 'right': '-->'}}
+    "Bundle 'tomtom/tcomment_vim' , { 'on': '<Plug>TComment_<c-_><c-_>' }
+    "    map <leader>c<space> <Plug>TComment_<c-_><c-_>
+    "    map <leader>cs       <Plug>TComment_<c-_><c-_>
 endif
 
 "===============================================================================
