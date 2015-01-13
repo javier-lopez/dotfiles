@@ -350,7 +350,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'delimitMate.vim' , { 'on': 'insert' }
     "TODO 18-12-2014 03:30 >> add lazy loading
     Bundle 'repeat.vim'
-    "Bundle 'hexHighlight.vim'
+    Bundle 'ntpeters/vim-better-whitespace'
+    Bundle 'mbbill/undotree'    , { 'on': 'UndotreeToggle'}
+        map <leader>u :UndotreeToggle<cr>
 
     "===experimental===
     Bundle 'junegunn/vim-easy-align' , { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
@@ -358,9 +360,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
         vmap . <Plug>(EasyAlignRepeat)
         nmap <leader>a <Plug>(EasyAlign)
-    Bundle 'ntpeters/vim-better-whitespace'
-    Bundle 'mbbill/undotree'    , { 'on': 'UndotreeToggle'}
-        map <leader>u :UndotreeToggle<cr>
     Bundle 'chilicuil/goyo.vim' , { 'on': '<Plug>Goyo' }
         map <leader>y <Plug>Goyo
         "let g:goyo_width         = 160
@@ -374,6 +373,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
             "colorscheme hemisu
         "endfunction
         "let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
+    "Bundle 'lilydjwg/colorizer'
 
     command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
     " shift-control-* Greps for the word under the cursor
