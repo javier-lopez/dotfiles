@@ -1,67 +1,52 @@
-# ####################################################################################
-# Last review            Mon 13 Oct 2014 01:15:00 PM CDT
-# #####################################################################################
-# vim: set ts=8 sw=4 tw=0 ft=conf :
+#Last review: Mon 13 Oct 2014 01:15:00 PM CDT
+#vim: set ts=8 sw=4 tw=0 ft=conf :
 
-# ###################################
-# ######## GENERAL SETTINGS #########
-# ###################################
+####################################
+######### GENERAL SETTINGS #########
+####################################
 
-# workspaces
-set $w1  www
-set $w2  work
-set $w3  work
-set $w4  im
-set $w5  mail
-set $w6  files
-set $w7  work
-set $w8  work
-set $w9  work
-set $w10 work
-set $w11 work
-set $w12 work
-set $w13 work
-set $w14 work
-set $w15 work
-set $w16 work
-set $w17 work
-set $w18 work
-set $w19 work
-set $w20 work
+#workspaces
+set $w1   1 www
+set $w2   2 work
+set $w3   3 work
+set $w4   4 im
+set $w5   5 mail
+set $w6   6 files
+set $w7   7 work
+set $w8   8 work
+set $w9   9 work
+set $w10 10 work
+set $w11 11 work
+set $w12 12 work
+set $w13 13 work
+set $w14 14 work
+set $w15 15 work
+set $w16 16 work
+set $w17 17 work
+set $w18 18 work
+set $w19 19 work
+set $w20 20 work
 
-# Window border style:
-# bn: border normal, with window title bar;
-# bp: border only, no window title bar;
-# bb: no berder or window title bar.
+#window border style:
 new_window 1pixel
-# default_orientation auto | vertical | horizontal
-# hide_edge_borders <none|vertical|horizontal|both>
 
-# ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font xft:Bahamas 9
 #font -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1
+font xft:Bahamas 9
 
-### IPC INTERFACE ###
-
-# The IPC interface allows external programs to manipulate i3
 ipc-socket ~/.i3/ipc.sock
 
-# ###################################
-# ############ AUTOSTART ############
-# ###################################
+#autostart: see /etc/minos/autostart and ~/.minos/autostart
+#exec_always m-autostart
+exec --no-startup-id m-autostart
 
-# exec_always
-# see /etc/minos/autostart and ~/.minos/autostart
-exec --no-startup-id minos-autostart
+####################################
+######### KEYBOARD BINDINGS ########
+####################################
 
-# ###################################
-# ######## KEYBOARD BINDINGS ########
-# ###################################
-
-# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
-# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-# Mod4 is <Win> and Mod1 is <Alt>
+#This configuration uses Mod1 and Mod3. Make sure they are mapped
+#properly using xev(1) and xmodmap(1). Usually, Mod1 is Alt (Alt_L)
+#Mod3 is Windows (Super_L), Mod4 is <Win> and Mod1 is <Alt>
 set $Win   Mod4
 set $Alt   Mod1
 set $Altgr Mod5
@@ -74,59 +59,46 @@ set $Insert 118
 set $Supr   119
 set $ImpPt  107
 
-# use $Win+Space to drag floating windows
+#use $Win+space to drag floating windows
 floating_modifier $Win
 
-# fullscreen mode
 bindsym $Win+f fullscreen
-
-# stacking mode
 bindsym $Win+s layout stacking
-
-# tabbed mode
 bindsym $Win+a layout tabbed
-
-# default mode
 bindsym $Win+d layout default
-
-# toggle tiling/floating of current window
+#toggle tiling/floating mode
 bindcode $Win+Shift+$Space floating toggle
-
-# change focus
+#change focus
 bindsym $Win+h      focus left
 bindsym $Win+j      focus down
 bindsym $Win+k      focus up
 bindsym $Win+l      focus right
-# alternatively, use cursor keys
+#or using cursor keys
 #bindsym $Win+Left  focus left
 #bindsym $Win+Down  focus down
 #bindsym $Win+Up    focus up
 #bindsym $Win+Right focus right
 
-# scratchpad, i3 => 4.x
-# send to scratchpad
 bindcode $Win+$Insert move scratchpad
-# show scratchpad
 bindcode $Win+$Space  scratchpad show
 
-# focus container
+#focus container
 #bindsym $Alt+h focus parent; focus left
 #bindsym $Alt+j focus parent; focus down
 #bindsym $Alt+k focus parent; focus up
 #bindsym $Alt+l focus parent; focus right
-
-# snap
+#snap
 #bindsym $Win+Control+h     layout stacking
 #bindsym $Win+Control+j     layout stacking
 #bindsym $Win+Control+k     layout stacking
 #bindsym $Win+Control+l     layout stacking
-# (or using cursor keys)
+# (or with cursor keys)
 #bindsym $Win+Control+Left  layout stacking
 #bindsym $Win+Control+Down  layout stacking
 #bindsym $Win+Control+Up    layout stacking
 #bindsym $Win+Control+Right layout stacking
 
-# move
+#goto
 bindsym $Win+Shift+h      move left
 bindsym $Win+Shift+j      move down
 bindsym $Win+Shift+k      move up
@@ -137,111 +109,102 @@ bindsym $Win+Shift+l      move right
 #bindsym $Win+Shift+Up    move up
 #bindsym $Win+Shift+Right move right
 
-# move container
+#containers
 #bindsym $Alt+$Win+Shift+$h focus parent; move left
 #bindsym $Alt+$Win+Shift+$j focus parent; move down
 #bindsym $Alt+$Win+Shift+$k focus parent; move up
 #bindsym $Alt+$Win+Shift+$l focus parent; move right
 
-# workspaces
-bindsym $Win+1 workspace 1 $w1
-bindsym $Win+2 workspace 2 $w2
-bindsym $Win+3 workspace 3 $w3
-bindsym $Win+4 workspace 4 $w4
-bindsym $Win+5 workspace 5 $w5
-bindsym $Win+6 workspace 6 $w6
-bindsym $Win+7 workspace 7 $w7
-bindsym $Win+8 workspace 8 $w8
-bindsym $Win+9 workspace 9 $w9
-bindsym $Win+0 workspace 10 $w10
-bindsym $Win+q workspace 11 $w11
-bindsym $Win+w workspace 12 $w12
-bindsym $Win+e workspace 13 $w13
-bindsym $Win+r workspace 14 $w14
-bindsym $Win+t workspace 15 $w15
-bindsym $Win+y workspace 16 $w16
-bindsym $Win+u workspace 17 $w17
-bindsym $Win+i workspace 18 $w18
-bindsym $Win+o workspace 19 $w19
-bindsym $Win+p workspace 20 $w20
+#workspaces
+bindsym $Win+1 workspace $w1
+bindsym $Win+2 workspace $w2
+bindsym $Win+3 workspace $w3
+bindsym $Win+4 workspace $w4
+bindsym $Win+5 workspace $w5
+bindsym $Win+6 workspace $w6
+bindsym $Win+7 workspace $w7
+bindsym $Win+8 workspace $w8
+bindsym $Win+9 workspace $w9
+bindsym $Win+0 workspace $w10
+bindsym $Win+q workspace $w11
+bindsym $Win+w workspace $w12
+bindsym $Win+e workspace $w13
+bindsym $Win+r workspace $w14
+bindsym $Win+t workspace $w15
+bindsym $Win+y workspace $w16
+bindsym $Win+u workspace $w17
+bindsym $Win+i workspace $w18
+bindsym $Win+o workspace $w19
+bindsym $Win+p workspace $w20
 
 bindsym $Win+Right workspace next
 bindsym $Win+Left  workspace prev
 
-# move
-bindsym $Win+Shift+1 move workspace 1 $w1
-bindsym $Win+Shift+2 move workspace 2 $w2
-bindsym $Win+Shift+3 move workspace 3 $w3
-bindsym $Win+Shift+4 move workspace 4 $w4
-bindsym $Win+Shift+5 move workspace 5 $w5
-bindsym $Win+Shift+6 move workspace 6 $w6
-bindsym $Win+Shift+7 move workspace 7 $w7
-bindsym $Win+Shift+8 move workspace 8 $w8
-bindsym $Win+Shift+9 move workspace 9 $w9
-bindsym $Win+Shift+0 move workspace 10 $w10
+bindsym $Win+Shift+1 move workspace $w1
+bindsym $Win+Shift+2 move workspace $w2
+bindsym $Win+Shift+3 move workspace $w3
+bindsym $Win+Shift+4 move workspace $w4
+bindsym $Win+Shift+5 move workspace $w5
+bindsym $Win+Shift+6 move workspace $w6
+bindsym $Win+Shift+7 move workspace $w7
+bindsym $Win+Shift+8 move workspace $w8
+bindsym $Win+Shift+9 move workspace $w9
+bindsym $Win+Shift+0 move workspace $w10
+bindsym $Win+Shift+q move workspace $w11
+bindsym $Win+Shift+w move workspace $w12
+bindsym $Win+Shift+e move workspace $w13
+bindsym $Win+Shift+r move workspace $w14
+bindsym $Win+Shift+t move workspace $w15
+bindsym $Win+Shift+y move workspace $w16
+bindsym $Win+Shift+u move workspace $w17
+bindsym $Win+Shift+i move workspace $w18
+bindsym $Win+Shift+o move workspace $w19
+bindsym $Win+Shift+p move workspace $w20
 
-# i3 => 4.x
-# ---------------------------------->
-bindsym $Win+Shift+q move workspace 11 $w11
-bindsym $Win+Shift+w move workspace 12 $w12
-bindsym $Win+Shift+e move workspace 13 $w13
-bindsym $Win+Shift+r move workspace 14 $w14
-bindsym $Win+Shift+t move workspace 15 $w15
-bindsym $Win+Shift+y move workspace 16 $w16
-bindsym $Win+Shift+u move workspace 17 $w17
-bindsym $Win+Shift+i move workspace 18 $w18
-bindsym $Win+Shift+o move workspace 19 $w19
-bindsym $Win+Shift+p move workspace 20 $w20
-# ----------------------------------<
+#apps
+bindsym  F1                   exec m-help
+bindcode $Win+$Enter          exec m-terminal
+bindcode $Win+Shift+$Enter    split h
+bindcode $Alt+$Esc            exec m-launcher
+bindsym $Altgr+k              kill
+bindsym $Altgr+l              exec m-killer
+bindsym $Altgr+w              exec m-browser
+bindsym $Altgr+f              exec m-file-manager
+bindsym $Altgr+m              exec m-mail
+bindsym $Altgr+z              exec m-magnifier
+bindsym $Altgr+i              exec m-im
+bindsym $Altgr+Shift+m        exec m-music-player
+bindsym $Altgr+Shift+v        exec m-video-player
+bindsym $Altgr+n              exec m-network-manager
+bindcode Control+$Alt+$Supr   exec m-session-manager
+bindsym Control+$Alt+l        exec m-session-manager lock
+bindcode $Alt+$Shift_R        exec m-keyboard
+bindcode $Altgr+$Space        exec m-movietime
+bindsym $Altgr+x              exec m-multimonitor
+bindsym XF86Display           exec m-multimonitor
+bindsym  $Altgr+p             exec multimedia-control toggle
+bindcode $Altgr+21            exec multimedia-control next
+bindcode $Altgr+34            exec multimedia-control previous
+bindsym XF86AudioPlay         exec multimedia-control toggle
+bindsym XF86AudioStop         exec multimedia-control toggle
+bindsym XF86AudioNext         exec multimedia-control next
+bindsym XF86AudioPrev         exec multimedia-control previous
+bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 1
+bindsym XF86MonBrightnessUp   exec xbacklight -steps 1 -time 0 -inc 1
+bindcode $ImpPt               exec m-screenshot
+bindcode $Alt+$ImpPt          exec m-screenshot -s
+bindcode $Win+$ImpPt          exec m-screencast
+bindcode $Win+$Alt+$ImpPt     exec m-screencast -s
+bindcode Control+$ImpPt       exec gifcast
+bindcode $Win+Shift+$ImpPt    exec m-screencast -k
+bindsym $Altgr+s              exec dmenu-mpd
+bindsym $Altgr+v              exec dmenu-vbox
+bindsym $Altgr+t              exec dmenu-tell
+bindsym $Altgr+c              exec dmenu-countdown
 
-# help
-bindsym F1 exec minos-help
-
-# terminal
-bindcode $Win+$Enter       exec x-terminal-emulator
-bindcode $Win+Shift+$Enter split h
-
-# dmenu-run
-bindcode $Alt+$Esc exec    dmenu-run
-
-# exit i3
-#bindsym Control+$Alt+e exit
-
-# restarts i3 inplace
-#bindsym Control+$Alt+r restart
-
-# lock session
-bindsym Control+$Alt+l exec dmenu-session lock
-
-# dmenu-session
-bindcode Control+$Alt+$Supr exec dmenu-session
-
-# mutt
-bindsym $Altgr+m exec x-terminal-emulator -title "mutt" -e mutt
-
-# magnifier
-bindsym $Altgr+Shift+M exec magnifier
-
-# irssi
-#bindsym Control+Shift+i exec x-terminal-emulator -e irssi
-bindsym $Altgr+i         exec x-terminal-emulator -title "irssi" -e bash -c "irssi --config=<(gpg -d $HOME/.irssi/config.gpg)"
-
-# ncmpcpp
-bindsym $Altgr+Shift+p   exec x-terminal-emulator -e ncmpcpp
-
-# wicd-curses
-bindsym $Altgr+n         exec x-terminal-emulator -e wicd-curses
-
-# alsamixer
-#bindsym Control+Shift+a exec x-terminal-emulator -e alsamixer
-#bindsym Control+Shift+a exec /bin/sh -c alsamixer
-
-# pcmanfm
-bindsym $Altgr+f exec pcmanfm
-
-# volume ($Altgr+,) ($Altgr+.)
+#volume down ($Altgr+,) ($Altgr+.)
 bindcode $Altgr+59 exec amixer -q set Master 1-
-# unmute if mutted
+#volume up, unmute if mutted
 bindcode $Altgr+60 exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
 
 # volume, multimedia keys
@@ -249,105 +212,45 @@ bindsym XF86AudioRaiseVolume exec sh -c 'amixer -q set Master 1+ && [ -n "$(amix
 bindsym XF86AudioLowerVolume exec amixer -q set Master 1-
 bindsym XF86AudioMute        exec amixer -q set Master toggle
 
-# mplayer|mpd ($Altgr+¿) ($Altg+´)
-bindsym  $Altgr+p  exec music-control toggle
-bindcode $Altgr+21 exec music-control next
-bindcode $Altgr+34 exec music-control previous
+#bindsym Control+Shift+a exec x-terminal-emulator -e alsamixer
+#bindsym Control+Shift+a exec /bin/sh -c alsamixer
 
-# mplayer|mpd multimedia keys
-bindsym XF86AudioPlay exec music-control toggle
-bindsym XF86AudioStop exec music-control toggle
-bindsym XF86AudioNext exec music-control next
-bindsym XF86AudioPrev exec music-control previous
+#bindsym Control+$Alt+e exit
+#bindsym Control+$Alt+r restart
 
-# brightness control
-bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 1
-bindsym XF86MonBrightnessUp   exec xbacklight -steps 1 -time 0 -inc 1
-
-# shift input keyboard layouts
-bindcode $Alt+$Shift_R exec shift-keyboard-layout
-
-# toggle screen powersave
-bindcode $Altgr+$Space exec movietime
-
-# kill ($Altgr+k)
-bindsym $Altgr+k kill
-
-# dmenu-killall
-bindsym $Altgr+l exec dmenu-killall
-
-# song
-bindsym $Altgr+s exec dmenu-mpd
-
-# xrandr
-bindsym $Altgr+x    exec dmenu-xrandr
-bindsym XF86Display exec dmenu-xrandr
-
-# vbox
-bindsym $Altgr+v exec dmenu-vbox
-
-# tell
-bindsym $Altgr+t exec dmenu-tell
-
-# dmenu-coundown
-bindsym $Altgr+c exec dmenu-countdown
-
-# screenshot
-bindcode $ImpPt      exec screenshot
-# selective screenshot
-bindcode $Alt+$ImpPt exec screenshot -s
-
-# screencast
-bindcode $Win+$ImpPt       exec ffcast
-# selective screenshot
-bindcode $Win+$Alt+$ImpPt  exec ffcast -s
-bindcode Control+$ImpPt    exec gifcast
-bindcode $Win+Shift+$ImpPt exec ffcast -k
-
-# go to the urgent flag set
+#go to the urgent flag set
 #bindsym $Win+x [urgent=latest] focus
 
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    #These bindings trigger as soon as you enter the resize mode
 
-        # They resize the border in the direction you pressed, e.g.
-        # when pressing left, the window is resized so that it has
-        # more space on its left
+    #They resize the border in the direction you pressed, e.g.
+    #when pressing left, the window is resized so that it has
+    #more space on its left
 
-        bindsym h resize grow left 10 px
-        #bindsym Shift+h resize grow left 10 px
+    bindsym h resize grow left 10 px
+    bindsym j resize shrink up 10 px
+    bindsym k resize grow up 10 px
+    bindsym l resize shrink left 10 px
 
-        #bindsym t resize shrink up 10 px
-        bindsym j resize shrink up 10 px
-
-        bindsym k resize grow up 10 px
-        #bindsym Shift+k resize grow down 10 px
-
-        #bindsym l resize grow right 10 px
-        bindsym l resize shrink left 10 px
-
-        #Exit resize mode
-        bindsym $Altgr+r mode "default"
+    #Exit resize mode
+    bindsym $Altgr+r mode "default"
 }
 
-# Enter resize mode
+#Enter resize mode
 bindsym $Altgr+r mode "resize"
 
-# Get me to the next open VIM instance
+#Get me to the next open VIM instance
 #bindsym $Win+v [class="buzz" title="VIM"] focus
 #bindsym $Win+m [class="buzz" title="mutt"] focus
 
-# Read 1 character and mark the current window with this character
 bindsym $Win+m   exec i3-input -p 'mark ' -l 1 -P 'Mark: '
-
-# Read 1 character and go to the window with the character
 bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
 
-# ###################################
-# ############# ASSIGNS #############
-# ###################################
+####################################
+############## ASSIGNS #############
+####################################
 
-# Just for i3.4
 for_window [class="Magnifier"] floating enable
 for_window [class="Xmessage"]  floating enable
 for_window [class="Gxmessage"] floating enable
@@ -359,49 +262,48 @@ for_window [class="Firefox" title="^About.*"] floating enable
 for_window [class="realvnc-vncviewer"] floating enable
 for_window [class="Xarchiver" title="Xarchiver$"] floating enable
 
-# popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
-# popup_during_fullscreen ignore
+#popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
+#popup_during_fullscreen ignore
 workspace_auto_back_and_forth yes
 
-# Assigns default monitor for workspaces
+#Assigns default monitor for workspaces
 #workspace "1 www" output VGA1
-workspace "1 \$w1" output HDMI1
+workspace "$w1" output HDMI1
 
-# Assigns default workspaces for app
-# assign ["]window class[/window title]["] [→] [~ | workspace]
+#Assigns default workspaces for app
+#assign ["]window class[/window title]["] [→] [~ | workspace]
+assign [class="Firefox"]               $w1
+assign [class="^URxvt$" title="irssi"] $w4
+assign [class="^URxvt$" title="mutt"]  $w5
+assign [class="Thunderbird"]           $w5
+assign [class="Pcmanfm"]               $w6
+assign [class="Nautilus"]              $w6
 
-assign [class="Firefox"]               1 $w1
-assign [class="^URxvt$" title="irssi"] 4 $w4
-assign [class="^URxvt$" title="mutt"]  5 $w5
-assign [class="Thunderbird"]           5 $w5
-assign [class="Pcmanfm"]               6 $w6
-assign [class="Nautilus"]              6 $w6
+####################################
+############## THEMES ##############
+####################################
 
-# ###################################
-# ############# THEMES ##############
-# ###################################
+#colorclass              border          background      text
 
-# colorclass            border          background      text
-
-# arch/blue
+#arch/blue
 #client.focused          #1793D1         #1793D1         #ffffff
 #client.focused_inactive #666666         #666666         #ffffff
 #client.unfocused        #333333         #333333         #ffffff
 #client.urgent           #D11931         #D11931         #ffffff
 
-# freebsd/red
+#freebsd/red
 #client.focused          #990000         #990000         #ffffff
 #client.focused_inactive #666666         #666666         #ffffff
 #client.unfocused        #333333         #333333         #ffffff
 #client.urgent           #D11931         #D11931         #ffffff
 
-# gentoo/purple
+#gentoo/purple
 #client.focused          #7a5ada         #7a5ada         #ffffff
 #client.focused_inactive #45347b         #45347b         #ffffff
 #client.unfocused        #333333         #333333         #ffffff
 #client.urgent           #D11931         #D11931         #ffffff
 
-# minos/dark
+#minos/dark
 client.focused          #999999      #999999      #000000
 client.focused_inactive #333333      #333333      #999999
 client.unfocused        #333333      #333333      #999999

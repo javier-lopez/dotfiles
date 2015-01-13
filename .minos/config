@@ -1,9 +1,29 @@
-#minos configuration, minos.io/docs/config
+#minos configuration, minos.io/doc/config
 #/etc/minos/config, ~/.minos/config
 
-#general-wallpaper /usr/share/minos/wallpapers/minos.png
-general-wallpaper $HOME/data/images/wallpapers/sunlight.png
+m-autostart       minos-autostart
+#autostart-config /etc/minos/autostart
+#autostart-config $HOME/.minos/autostart
+#wallpaper        /usr/share/minos/wallpapers/minos.png
+wallpaper         $HOME/data/images/wallpapers/sunlight.png
+#autostart        yes
+#composition      yes
+#eyeshield        yes
+#clipboard        yes
 
+m-composition     compton
+m-eyeshield       redshift
+m-clipboard       autocutsel
+
+m-statusbar       minos-statusbar
+#statusbar        yes
+#statusbar-icons  sm4tik
+#statusbar-config /etc/minos/statusbar
+
+m-session-manager dmenu-session
+m-hibernate       pm-hibernate
+m-suspend         pm-suspend
+m-lock            i3lock
 #lock-wallpaper   /usr/share/minos/wallpapers/o@o.png
 lock-wallpaper    "$HOME/data/images/wallpapers/o@o.png"
 
@@ -41,43 +61,32 @@ lock-wallpaper    "$HOME/data/images/wallpapers/o@o.png"
 #lock-color-keypress #A9A9A9
 #lock-color-keypress #fafafa
 
-m-autostart          minos-autostart
-#autostart           yes
-#composition         yes
-#eyeshield           yes
-#clipboard           yes
-#autostart-config    /etc/minos/autostart
-
-m-composition        compton
-m-eyeshield          redshift
-m-clipboard          autocutsel
-
-m-statusbar          minos-statusbar
-#statusbar           yes
-#statusbar-icons     sm4tik
-#statusbar-config    /etc/minos/statusbar
-
+m-keyboard           shift-keyboard-layout
 #keyboard-layouts    latam,us,ru
-m-hibernate          pm-hibernate
-m-suspend            pm-suspend
+m-movietime          movietime
 #movietime-hook      $HOME/.movietime
 
-#minos-meta
+#/etc/cron.d/watch-battery
+watch-battery-action m-session-manager hibernate
+watch-battery-at     15,10,7,5
+
+#shortcuts
 m-help               minos-help
 m-launcher           dmenu-run
 m-killer             dmenu-killall
-m-session-manager    dmenu-session
-m-multimonitor       dmenu-xrandr
-m-mail               mutt:cli
-m-im                 'irssi --config=<(gpg -d "${HOME}"/.irssi/config.gpg)':cli
-m-pdf                zathura
-m-music-player       ncmpcpp
-m-video-player       mplayer
-m-terminal           x-terminal-emulator
 m-browser            x-www-browser
 m-file-manager       pcmanfm
-m-network-manager    wicd-curses
+m-terminal           x-terminal-emulator
+m-mail               mutt:terminal
+m-im                 'irssi --config=<(gpg -d "${HOME}"/.irssi/config.gpg)':terminal
+m-pdf                zathura
+m-music-player       ncmpcpp:terminal
+m-video-player       umplayer
+m-multimonitor       dmenu-xrandr
+m-network-manager    wicd-curses:terminal
 m-magnifier          magnifier
+m-screenshot         screenshot
+m-screencast         ffcast
 
 #minos.io/s
 setup-dotfiles       https://github.com/chilicuil/dotfiles

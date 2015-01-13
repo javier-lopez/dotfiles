@@ -14,8 +14,8 @@ _exec()
 
 _execm()
 {
-    [ X"$(minos-config "${1#m-}")" = X"no" ] && return
-    _execm_var_tool="$(minos-config "${1}")"
+    [ X"$(minos-config "${1#m-}" 2>/dev/null)" = X"no" ] && return
+    _execm_var_tool="$(minos-config "${1}" 2>/dev/null)"
     if [ -z "${_execm_var_tool}" ]; then
         shift; _exec ${@}
     else
@@ -27,15 +27,14 @@ _execm()
 _exec i3-msg workspace "1 www" # force to start on first virtual workspace
 
 #_exec mplayer -loop 0 -rootwin -ao null -noconsolecontrols video.mp4 # video background
-general_wallpaper="$(minos-config general-wallpaper)"
+wallpaper="$(minos-config wallpaper 2>/dev/null)"
 #if no wallpaper default to black
-[ -z "${general_wallpaper}" ] && _exec xsetroot -solid "#000000" || \
-    _exec feh --bg-scale "${general_wallpaper}"
+[ -z "${wallpaper}" ] && _exec xsetroot -solid "#000000" || \
+    _exec feh --bg-scale "${wallpaper}"
 
-#TODO 06-12-2014 05:41 >> launch default shell instead of forcing bash
-terminal_emulator="$(minos-config x-terminal)"
+terminal_emulator="$(minos-config x-terminal 2>/dev/null)"
 [ -z "${terminal_emulator}" ] && terminal_emulator="x-terminal-emulator"
-_exec "${terminal_emulator}" -name scratchpad -e bash
+_exec "${terminal_emulator}" -name scratchpad -e "${SHELL}"
 _execm m-clipboard autocutsel # sync X/Gnome clipboards
 _execm m-eyeshield redshift   # save your eyes
 (sleep 1.5 && _execm m-composition compton)& # eyecandy + fix for general tearing
