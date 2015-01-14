@@ -11,17 +11,6 @@ if v:version < 700
     finish
 endif
 
-if has ('gui_running')
-    set background=dark
-    set gfn=Inconsolata\ Medium\ 10
-    "set gfn=Monaco\ 9
-    "set gfn=Monospace\ 9
-    colorscheme hemisu
-else
-    set background=dark
-    colorscheme hemisu
-endif
-
 set nocompatible      "breaks compatibility with vi, required
 set modelines=0       "http://www.guninski.com/vim1.html
 set noexrc            "don't use local version of .(g)vimrc, .exrc
@@ -267,7 +256,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'msanders/snipmate.vim' , { 'on': 'insert' }
         let g:snips_author         = "Javier Lopez"
         let g:snips_authorEmail    = "m@javier.io"
-        let g:snippets_dir         = "~/.vim/extra-snippets/"
+        let g:snippets_dir         = "~/.vim/bundle/vim-snippets/snipmate/"
+    Bundle 'chilicuil/vim-snippets'
     Bundle 'majutsushi/tagbar'     , { 'on': 'TagbarToggle' }
         let g:tagbar_left          = 1
         let g:tagbar_width         = 25
@@ -322,6 +312,19 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/nextCS'     , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
         map <F12> <Plug>NextCS
         map <F11> <Plug>PreviousCS
+    Bundle 'chilicuil/vim-colors'
+        if isdirectory(expand("~/.vim/bundle/vim-colors/"))
+            if has ('gui_running')
+                set background=dark
+                set gfn=Inconsolata\ Medium\ 10
+                "set gfn=Monaco\ 9
+                "set gfn=Monospace\ 9
+                colorscheme hemisu
+            else
+                set background=dark
+                colorscheme hemisu
+            endif
+        endif
     Bundle 'chilicuil/vimbuddy.vim'
     Bundle 'chilicuil/TaskList.vim'  , { 'on': '<Plug>TaskList' }
         let g:Tlist_WinWidth         = 25
