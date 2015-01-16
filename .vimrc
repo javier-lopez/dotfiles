@@ -257,7 +257,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:snips_author         = "Javier Lopez"
         let g:snips_authorEmail    = "m@javier.io"
         let g:snippets_dir         = "~/.vim/bundle/vim-snippets/snipmate/"
-    Bundle 'chilicuil/vim-snippets'
+    Bundle 'chilicuil/vim-snippets', { 'on': 'insert' }
     Bundle 'majutsushi/tagbar'     , { 'on': 'TagbarToggle' }
         let g:tagbar_left          = 1
         let g:tagbar_width         = 25
@@ -359,8 +359,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
 
     "===experimental===
     Bundle 'junegunn/vim-easy-align' , { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
-        command! -nargs=* -range -bang Align
-        \ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
+        "command! -nargs=* -range -bang Align
+        "\ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
+        command! -nargs=* -range -bang Align <line1>,<line2>EasyAlign
         vmap . <Plug>(EasyAlignRepeat)
         nmap <leader>a <Plug>(EasyAlign)
     Bundle 'chilicuil/goyo.vim' , { 'on': '<Plug>Goyo' }
