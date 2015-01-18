@@ -78,7 +78,7 @@ m-browser            x-www-browser
 m-file-manager       pcmanfm
 m-terminal           x-terminal-emulator
 m-mail               mutt:terminal
-m-im                 'irssi --config=<(gpg -d "${HOME}"/.irssi/config.gpg)':terminal
+m-im                 'irssi --config=<(gpg -d ~/.irssi/config.gpg)':terminal
 m-pdf                zathura
 m-music-player       ncmpcpp:terminal
 m-video-player       umplayer
