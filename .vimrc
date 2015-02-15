@@ -1,5 +1,5 @@
 "-------------------------------------------------------------------------------
-"           Last review            Fri 19 Dec 2014 12:31:54 AM CST
+"           Last review            Sun 15 Feb 2015 01:45:01 PM CST
 "-------------------------------------------------------------------------------
 
 "===============================================================================
@@ -81,10 +81,7 @@ syntax on
 filetype plugin indent on                 "enable filetype-specific plugins
 setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 
-"===============================================================================
-"==================================== Autoloads ================================
-"===============================================================================
-
+"====== Autoloads ======
 if has("autocmd")
     "Go back to the position the cursor was on the last time this file was edited
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -242,8 +239,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
 
     "====github====
     Bundle 'chilicuil/vundle'
-    "TODO 18-12-2014 03:30 >> add lazy loading
-    Bundle 'edsono/vim-matchit'
+    Bundle 'edsono/vim-matchit'    , { 'on': 'delay 10' } "triggered by CursorHold/CursorMoved hooks
     Bundle 'scrooloose/nerdtree'   , { 'on': 'NERDTreeToggle' }
         let g:NERDTreeWinPos       = 'right'
         let g:NERDTreeWinSize      = 25
@@ -263,25 +259,25 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:tagbar_width         = 25
         map <silent> <leader>l     :TagbarToggle<cr>
     Bundle 'mhinz/vim-hugefile'
-    Bundle 'henrik/vim-indexed-search'
-    Bundle 'kien/ctrlp.vim'         , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "frozen
-    "Bundle 'ctrlpvim/ctrlp.vim'     , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
-        "let g:ctrlp_cache_dir      = $HOME.'/.cache/ctrlp'
-        let g:ctrlp_use_caching     = 1
+    Bundle 'henrik/vim-indexed-search'  , { 'on': 'delay' } "by default delay 10 steps
+    Bundle 'kien/ctrlp.vim'             , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "frozen
+    "Bundle 'ctrlpvim/ctrlp.vim'        , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
+        "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
+        let g:ctrlp_use_caching         = 1
         let g:ctrlp_clear_cache_on_exit = 0
-        let g:ctrlp_working_path    = 0
-        let g:ctrlp_match_window    = 'bottom,order:ttb,min:1,max:10,results:100'
-        let g:ctrlp_extensions      = ['smarttabs']
-        " let g:ctrlp_map           = '<leader>f'
-        map <leader>f               :CtrlP<cr>
-        map <leader>b               :CtrlPBuffer<cr>
+        let g:ctrlp_working_path        = 0
+        let g:ctrlp_match_window        = 'bottom,order:ttb,min:1,max:10,results:100'
+        let g:ctrlp_extensions          = ['smarttabs']
+        " let g:ctrlp_map               = '<leader>f'
+        map <leader>f                   :CtrlP<cr>
+        map <leader>b                   :CtrlPBuffer<cr>
         if has('python') | let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' } | endif
         if executable("ag")
             let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup
             \ --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store
             \ --ignore *.pyc --ignore *.mp3 --ignore *.png --ignore *.jpg -g ""'
         endif
-    Bundle 'FelikZ/ctrlp-py-matcher'
+    Bundle 'FelikZ/ctrlp-py-matcher'  , { 'on': 'delay' }
     Bundle 'DavidEGx/ctrlp-smarttabs' , { 'on': ['CtrlPSmartTabs'] }
         let g:ctrlp_smarttabs_reverse        = 0
         let g:ctrlp_smarttabs_modify_tabline = 0
@@ -346,16 +342,15 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/vim-cutils'
         let g:cutils_map_longlines      = '<leader>cul'
         let g:cutils_map_appendmodeline = '<leader>am'
+    Bundle 'ntpeters/vim-better-whitespace' , { 'on': 'delay' }
+    Bundle 'mbbill/undotree'    , { 'on': 'UndotreeToggle'}
+        map <leader>u :UndotreeToggle<cr>
 
     "===vim-scripts===, not hosted in github for some obscure reason
     Bundle 'surround.vim'    , { 'on': 'insert' }
         " ds" / cs"' / ysiw'
     Bundle 'delimitMate.vim' , { 'on': 'insert' }
-    "TODO 18-12-2014 03:30 >> add lazy loading
-    Bundle 'repeat.vim'
-    Bundle 'ntpeters/vim-better-whitespace'
-    Bundle 'mbbill/undotree'    , { 'on': 'UndotreeToggle'}
-        map <leader>u :UndotreeToggle<cr>
+    Bundle 'repeat.vim'      , { 'on': 'delay' }
 
     "===experimental===
     Bundle 'junegunn/vim-easy-align' , { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
@@ -383,6 +378,12 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     " shift-control-* Greps for the word under the cursor
     nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
 
+    Bundle 'zah/nimrod.vim'
+    Bundle 'paradigm/TextObjectify'   , { 'on': 'delay' }
+    Bundle 'wellle/tmux-complete.vim' , { 'on': 'insert' }
+        let g:tmuxcomplete#trigger = ''
+        "let g:tmuxcomplete#trigger = 'omnifunc'
+
     "===discarted===
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
     "Bundle 'FindMate'                      "ctrlp.vim ftw!
@@ -393,7 +394,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:acp_completeoptPreview       = 1
         "let g:acp_behaviorSnipmateLength   = 2
         "let g:acp_behaviorPythonOmniLength = -1
-    "Bundle 'Lokaltog/vim-powerline'        "still prefer my own powerline =)
+    "Bundle 'Lokaltog/vim-powerline'        "prefer my own powerline =)
         "let g:Powerline_cache_enabled = 1
         "let g:Powerline_symbols = 'compatible' "compatible, unicode, fancy
         "let g:Powerline_theme = 'default' "default, skwp
@@ -412,6 +413,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'tomtom/tcomment_vim' , { 'on': '<Plug>TComment_<c-_><c-_>' }
     "    map <leader>c<space> <Plug>TComment_<c-_><c-_>
     "    map <leader>cs       <Plug>TComment_<c-_><c-_>
+    "    let g:tcommentOptions = {'whitespace': 'no'} "nerdcommenter ftw!
 endif
 
 "===============================================================================
