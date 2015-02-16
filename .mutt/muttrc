@@ -151,7 +151,7 @@ alternative_order text/enriched text/plain text
 color attachment brightmagenta black
 color error brightwhite red   # errors yell at you in red
 color hdrdefault red black   # headers
-color indicator white magenta # currently selected message
+color indicator brightwhite magenta #currently selected message
 color markers brightcyan black  # the + for wrapped pager lines
 color message brightcyan black  # informational messages, not mail
 color normal white black    # plain text
