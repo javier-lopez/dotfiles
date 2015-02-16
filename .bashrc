@@ -60,6 +60,7 @@ export EDITOR="editor"
 export CSCOPE_EDITOR="editor"
 export WCDHOME="${HOME}/.wcd"
 export BROWSER="x-www-browser"
+#export LC_ALL=C
 
 # ruby dev
 #[ -f "${HOME}/.rvm/bin" ] && export PATH="${PATH}:${HOME}/.rvm/bin"
@@ -96,8 +97,9 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
     Bundle="gh:chilicuil/shundle-plugins/eternalize"
         ETERNALIZE_PATH="${HOME}/.eternalize-data"
     Bundle="github:chilicuil/shundle-plugins/colorize"
-        COLORIZE_THEME="blacky"
+        COLORIZE_THEME="default-dark"
         COLORIZE_PS="yujie"
+        COLORIZE_UTILS="sky"
     Bundle="chilicuil/shundle-plugins/aliazator.git"
         #ALIAZATOR_PLUGINS="none"
         #ALIAZATOR_PLUGINS="minimal"
