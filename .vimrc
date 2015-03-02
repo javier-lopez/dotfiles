@@ -343,6 +343,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:cutils_map_longlines      = '<leader>cul'
         let g:cutils_map_appendmodeline = '<leader>am'
     Bundle 'ntpeters/vim-better-whitespace' , { 'on': 'delay' }
+        set list
+        set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
     Bundle 'mbbill/undotree'    , { 'on': 'UndotreeToggle'}
         map <leader>u :UndotreeToggle<cr>
 
