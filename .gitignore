@@ -1,4 +1,4 @@
-#Last review            Fri 09 Sep 2011 01:28:57 PM CDT
+#Last review            Sun 15 Feb 2015 02:23:02 PM CST
 #Ignore everything
 /*
 #Don't ignore dotfiles
@@ -34,10 +34,13 @@
 .config/htop/
 .config/inkscape/
 .config/LightTable/
+.config/mps/
+.config/Popcorn-Time/
 .config/sublime-text-2/
 .config/sublime-text-3/
 .config/terminology/
 .config/transmission/
+.config/umplayer/
 .config/vlc/
 .config/wesnoth/
 .config/xarchiver/
@@ -235,6 +238,7 @@
 .virtaal/tm.db
 .VirtualBox
 .vlc
+.vnc/
 .w3m
 .wcd
 .wesnoth*
