@@ -4,7 +4,7 @@
 # run lintian on generated deb files
 #!/bin/sh
 # run lintian
- 
+
 echo "I: installing lintian and running it on the package"
 apt-get install -y --force-yes lintian &>/dev/null
 echo "++++ Lintian output ++++"
