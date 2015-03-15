@@ -4,17 +4,6 @@
 ! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 
 !======================================================
-!======================== Theme =======================
-!======================================================
-
-!#include "/home/chilicuil/.Xtheme/dark-I.theme"
-!#include "/home/chilicuil/.Xtheme/dark-II.theme"
-#include "/home/chilicuil/.Xtheme/dark-III.theme"
-!#include "/home/chilicuil/.Xtheme/darksoft-I.theme"
-
-!Xcursor*theme: tool
-
-!======================================================
 !======================= General ======================
 !======================================================
 !Xft.dpi:        96
@@ -22,6 +11,16 @@
 !Xft.rgba:       rgb
 !Xft.hinting:    true
 !Xft.hintstyle:  hintslight
+
+!======================================================
+!======================== Theme =======================
+!======================================================
+
+!#include ".Xtheme/dark-I.theme"
+!#include ".Xtheme/dark-II.theme"
+#include ".Xtheme/dark-III.theme"
+!#include ".Xtheme/darksoft-I.theme"
+!#include ".Xtheme/gray-I.theme"
 
 !======================================================
 !======================== Urxvt =======================
@@ -39,6 +38,8 @@
 URxvt*background:       #000000
 
 URxvt*font:             xft:Inconsolata:pixelsize=12
+!URxvt*font:             xft:Inconsolata+Awesome.ttf:pixelsize=12
+!URxvt*font:             xft:ProFont:pixelsize=9
 !URxvt*font:             xft:Inconsolata for Powerline:pixelsize=12
 !URxvt*font:             xft:Monospace:pixelsize=12
 !URxvt*font:             xft:Monaco:style=Standard:pixelsize=12
@@ -71,7 +72,8 @@ URxvt.print-pipe:       cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
 URxvt.cutchars:         "\\ `\"\'()*;<>[]{|}&,=?@^\:"
 
 ! === Plugins ===
-URxvt.perl-lib:         /home/chilicuil/.urxvt/
+!URxvt.perl-lib:         .urxvt/
+URxvt.perl-lib:         /usr/lib/minos/urxvt/
 URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard
 !URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard,cursortail
 
