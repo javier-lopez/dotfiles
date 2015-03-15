@@ -1,10 +1,14 @@
 fixed-vo="1"
 #noborder="1"
 nojoystick="1"
-# Use accelerated Xorg output for best performance
+#use accelerated Xorg output for best performance
 vo="xv"
-# Enable zoommode when using mplayer without GUI
+#enable zoommode when using mplayer without GUI
 #zoom="1"
 ao=alsa
 input=file=/tmp/mplayer.fifo
 nolirc="1"
+
+#life is good
+msgmodule=1
+msgcolor=1
