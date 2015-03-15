@@ -2,7 +2,7 @@
 #           Last review            Sat 17 May 2014 10:26:15 AM CDT
 #-------------------------------------------------------------------------------
 
-[ -f "${HOME}/.bashrc" ] && source "${HOME}/.bashrc"
+[ -f "${HOME}/.bashrc" ] && . "${HOME}/.bashrc"
 
 #/etc/X11/Xsession.d/90gpg-agent
 if command -v "gpg-agent" >/dev/null 2>&1 &&
@@ -25,4 +25,12 @@ if command -v "gpg-agent" >/dev/null 2>&1 &&
     fi
 fi
 
-_byobu_sourced=1 . /usr/bin/byobu-launch
+if [ -n "${SSH_CONNECTION}" ] && [ -z "${TMUX}" ]; then
+    if command -v "tmux" >/dev/null 2>&1; then
+        if tmux has-session >/dev/null 2>&1; then
+            exec tmux attach
+        else
+            exec tmux new
+        fi
+    fi
+fi
