@@ -36,18 +36,18 @@ terminal_emulator="$(minos-config x-terminal 2>/dev/null)"
 [ -z "${terminal_emulator}" ] && terminal_emulator="x-terminal-emulator"
 _exec "${terminal_emulator}" -name scratchpad -e "${SHELL}"
 _execm m-clipboard autocutsel # sync X/Gnome clipboards
-_execm m-eyeshield redshift   # save your eyes
+_execm m-eyesaver  redshift   # save your eyes
+_execm m-handsaver workrave   # save your hands
 (sleep 1.5 && _execm m-composition compton)& # eyecandy + fix for general tearing
-# (sleep 1 && _execm m-composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
+#(sleep 1 && _execm m-composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
+[ -e /tmp/mplayer.fifo ] || _exec mkfifo /tmp/mplayer.fifo # mplayer fifo controller
+_exec minos-welcome
 
-#_exec urxvtd -q -f -o          # urxvt server, improves performance but it breaks often
+#_exec urxvtd -q -f -o          # urxvt server, improves performance breaks often
 #_exec xbanish                  # hide mouse coursor when it isn't used, broken
 #_exec unclutter -root -visible # hide mouse coursor when it isn't used, broken
 #_exec numlockx on              # numlock on
 #_exec setxkbmap -option terminate:ctrl_alt_bksp # Ctrl-Alt-Backspace to kill X
-[ -e /tmp/mplayer.fifo ] || _exec mkfifo /tmp/mplayer.fifo # mplayer fifo controller
-
-_exec minos-welcome
 
 if [ -x "${HOME}"/.minos/autostart ] && [ X"${0}" != X"${HOME}"/.minos/autostart ]; then
     exec "${HOME}"/.minos/autostart
