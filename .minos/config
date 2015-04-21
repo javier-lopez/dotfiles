@@ -1,74 +1,44 @@
 #minos configuration, minos.io/doc/config
 #/etc/minos/config, ~/.minos/config
 
-m-autostart       minos-autostart
-#autostart-config /etc/minos/autostart
-#autostart-config $HOME/.minos/autostart
-#wallpaper        /usr/share/minos/wallpapers/minos.png
-wallpaper         $HOME/data/images/wallpapers/sunlight.png
-#autostart        yes
-#composition      yes
-#eyeshield        yes
-#clipboard        yes
+#wallpaper          /usr/share/minos/wallpapers/minos.png
+wallpaper           $HOME/data/images/wallpapers/sunlight.png
+#lock-wallpaper     /usr/share/minos/wallpapers/o@o.png
+lock-wallpaper      "$HOME/data/images/wallpapers/o@o.png"
 
-m-composition     compton
-m-eyeshield       redshift
-m-clipboard       autocutsel
+#autostart          yes
+#composition        yes
+#eyesaver           yes
+#handsaver          yes
+#clipboard          yes
+#statusbar          yes
 
-m-statusbar       minos-statusbar
-#statusbar        yes
-#statusbar-icons  sm4tik
-#statusbar-config /etc/minos/statusbar
+m-autostart         minos-autostart
+#m-autostart-config /etc/minos/autostart
+#m-autostart-config $HOME/.minos/autostart
+m-composition       compton
+m-eyesaver          redshift
+m-handsaver         workrave
+m-clipboard         autocutsel
+m-statusbar         minos-statusbar
+#m-statusbar-icons  sm4tik
+#m-statusbar-config /etc/minos/statusbar
+#m-statusbar-config $HOME/.minos/statusbar
 
-m-session-manager dmenu-session
-m-hibernate       pm-hibernate
-m-suspend         pm-suspend
-m-lock            i3lock
-#lock-wallpaper   /usr/share/minos/wallpapers/o@o.png
-lock-wallpaper    "$HOME/data/images/wallpapers/o@o.png"
-
-#http://en.wikipedia.org/wiki/Web_colors#HTML_color_names
-#lock-color-inside              white
-#lock-color-inside-verification #fff
-#lock-color-inside-wrong        a52a2a
-#lock-color-ring                000000ff
-#lock-color-ring-verification   ffffffff
-#lock-color-ring-wrong          a52a2aff
-#lock-color-line                00000000
-#lock-color-keypress            1e90ff
-#lock-color-delpress            a52a2aff
-##blue
-#lock-color-keypress #00BFFF
-#lock-color-keypress #03a9f4
-#lock-color-keypress #00b8d4
-#lock-color-keypress #00bcd4
-##green
-#lock-color-keypress #20B2AA
-#lock-color-keypress #66CDAA
-#lock-color-keypress #008080
-#lock-color-keypress #9ACD32
-#lock-color-keypress #c6ff00
-##yellow
-#lock-color-keypress #FFFF00
-##pink
-#lock-color-keypress #FF69B4
-#lock-color-keypress #DDA0DD
-##purple
-#lock-color-keypress #4169E1
-#lock-color-keypress #5677fc
-#lock-color-keypress #9370DB
-##grey
-#lock-color-keypress #A9A9A9
-#lock-color-keypress #fafafa
-
-m-keyboard           shift-keyboard-layout
-#keyboard-layouts    latam,us,ru
-m-movietime          movietime
-#movietime-hook      $HOME/.movietime
+m-session-manager   dmenu-session
+#m-session-manager-config /etc/minos/session-manager
+#m-session-manager-config $HOME/.minos/session-manager
+m-hibernate         pm-hibernate
+m-suspend           pm-suspend
+m-lock              i3lock
+m-keyboard          shift-keyboard-layout
+#m-keyboard-config  latam,us,ru
+m-movietime         movietime
+#m-movietime-config $HOME/.minos/movietime
 
 #/etc/cron.d/watch-battery
-watch-battery-action m-session-manager hibernate
-watch-battery-at     15,10,7,5
+m-battery           watch-battery
+m-battery-config    15,10,7,5
 
 #shortcuts
 m-help               minos-help
@@ -84,6 +54,8 @@ m-music-player       ncmpcpp:terminal
 m-video-player       umplayer
 m-multimonitor       dmenu-xrandr
 m-network-manager    wicd-curses:terminal
+m-network-manager    ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
+#m-network-manager    connman-curses:terminal
 m-magnifier          magnifier
 m-screenshot         screenshot
 m-screencast         ffcast
