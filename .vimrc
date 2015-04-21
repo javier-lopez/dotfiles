@@ -227,7 +227,6 @@ noremap <m-end>  G
 if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
     echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
     if nr2char(getchar()) ==? 'y'
-        "shadow cloning was never accepted
         "!git clone --depth=1 https://github.com/chilicuil/vundle-legacy.git ~/.vim/bundle/vundle
         !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
     endif
@@ -239,6 +238,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
 
     "====github====
     Bundle 'chilicuil/vundle'
+    Bundle 'paradigm/TextObjectify', { 'on': 'delay' }
     Bundle 'edsono/vim-matchit'    , { 'on': 'delay 10' } "triggered by CursorHold/CursorMoved hooks
     Bundle 'scrooloose/nerdtree'   , { 'on': 'NERDTreeToggle' }
         let g:NERDTreeWinPos       = 'right'
@@ -381,7 +381,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
 
     Bundle 'zah/nimrod.vim'
-    Bundle 'paradigm/TextObjectify'   , { 'on': 'delay' }
     Bundle 'wellle/tmux-complete.vim' , { 'on': 'insert' }
         let g:tmuxcomplete#trigger = ''
         "let g:tmuxcomplete#trigger = 'omnifunc'

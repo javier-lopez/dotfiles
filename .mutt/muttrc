@@ -102,6 +102,7 @@ bind editor \t          complete-query
 # =========================================================================================
 macro index B   "<limit>~b "                                "search message bodies"
 macro index I   "<change-folder>!<enter>"                   "go to Inbox"
+macro index s '<sync-mailbox>'
 
 # save a decoded copy in ~
 macro index S        "<pipe-message>cat > ~/"               "save message as"
