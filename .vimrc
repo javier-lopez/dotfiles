@@ -25,6 +25,8 @@ set report=0          "report any changes
 set nobackup          "git btw!
 set nowritebackup     "bye .swp madness
 set noswapfile
+"set undofile          "persist the undo tree to a file
+"set undodir='~/.vim/undo/'
 set tabpagemax=100    "max open tabs at the same time
 set autowrite
 set autoread          "watch file changes by other programs
@@ -45,6 +47,7 @@ set sidescrolloff=2
 set hlsearch          "highlight search
 set incsearch         "search as you type
 set ignorecase        "ignore case when searching
+set smartcase         "ignores ignorecase when pattern contains uppercase characters"
 set showcmd           "show the command being typed
 set softtabstop=4     "vim sees 4 spaces as a tab
 set shiftwidth=4
@@ -56,7 +59,7 @@ set splitbelow        "split horizontally below.
 "set cursorline       "highlight the screen line of the cursor, slow!
 set nostartofline     "keep the cursor on the same column
 set nofsync           "improves performance, let OS decide when to flush disk
-set showmatch         "when closing a block, show matching bracket.
+set showmatch         "show matching bracket
 "set matchtime=5      "how many tenths of a second to blink
 set diffopt+=iwhite   "ignore whitespace in diff mode
 set cscopetag         "use both cscope and ctag for 'ctrl-]'
@@ -163,6 +166,12 @@ noremap <silent><leader>- :resize -1<cr>
 
 "clear highlighted searches
 nmap <silent> <leader>/   :nohlsearch<cr>
+
+"use the repeat operator with a visual selection
+vnoremap <leader>. :normal .<cr>
+
+"repeat a macro on a visual selection of lines
+vnoremap <leader>@ :normal @
 
 "=== Tab Mappings ===
 map <tab>c :cc<cr>
@@ -376,14 +385,17 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
     "Bundle 'lilydjwg/colorizer'
 
-    command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
-    " shift-control-* Greps for the word under the cursor
-    nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
-
     Bundle 'zah/nimrod.vim'
+    Bundle 'wting/gitsessions.vim'
+        command! -nargs=* SessionSave   GitSessionSave
+        command! -nargs=* SessionDelete GitSessionDelete
     Bundle 'wellle/tmux-complete.vim' , { 'on': 'insert' }
         let g:tmuxcomplete#trigger = ''
         "let g:tmuxcomplete#trigger = 'omnifunc'
+
+    command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
+    " shift-control-* Greps for the word under the cursor
+    nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
 
     "===discarted===
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
