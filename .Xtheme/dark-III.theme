@@ -1,4 +1,4 @@
-! Dark I
+! Dark III
 
 ! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 
@@ -6,17 +6,17 @@
 *foreground: rgb:cf/cf/cf
 *color0:      #000000
 *color1:      #CC0000
-*color2:      #4E9A06
+*color2:      #308888
 *color3:      #C4A000
 *color4:      #3465A4
-*color5:      #75507B
+*color5:      #87005f
 *color6:      #06989A
 *color7:      #D3D7CF
 *color8:      #555753
 *color9:      #EF2929
-*color10:     #8AE234
+*color10:     #89E134
 *color11:     #FCE94F
 *color12:     #729FCF
-*color13:     #AD7FA8
+*color13:     #AF5FFF
 *color14:     #34E2E2
 *color15:     #ECEDEE
