@@ -1,7 +1,7 @@
 #  Last review            Wed 30 Mar 2011 05:40:24 PM CST
 #  vim: set ts=8 sw=4 tw=0 ft=muttrc :
 
-alternates           "chilicuil@ubuntu.com|contact@javier.io|contacto@javier.io|cuicui@ccand.cc|io@javier.io|j@ccand.cc|j@tinochtin.com|j@umbpd.com|j@umbstudio.com|javier@ccand.cc|javier@tinochtin.com|javier@umbpd.com|javier@umbstudio.com|m@javier.io"
+alternates           "chilicuil@ubuntu.com|contact@javier.io|contacto@javier.io|io@javier.io|m@javier.io|m@linuxparatodos.tk|linux@correo.io|lpt@correo.io"
 
 set from             = "Javier López <m@javier.io>"
 set folder           = "imaps://imap.gmail.com:993"

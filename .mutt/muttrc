@@ -164,7 +164,7 @@ color hdrdefault cyan default
 color attachment black default
 color error red default # error messages
 color message white default # message informational messages
-color indicator brightblack white # indicator for the "current message"
+color indicator brightwhite green # indicator for the "current message"
 color status brightwhite default # status lines in the folder index
 color tree red default # the "tree" display of threads within the folder index
 color search white blue # search matches found with search within the internal pager
@@ -172,11 +172,11 @@ color markers red default # The markers indicate a wrapped line
 # Index
 color index blue default '~O' # Old messages
 color index cyan default '~P' # From myself
-color index brightwhite default '~R' # Readed messages
+color index default default '~R' # Readed messages
 color index green default '~N' # New messages
 color index brightmagenta default '~F' # Flagged Messages are important!
 color index white default '~Q' # Replied
-color index red default '~D' # Deleted Mails
+color index brightwhite brightred '~D' # Deleted Mails
 
 # =========================================================================================
 # === Color ===============================================================================
@@ -234,7 +234,7 @@ set sidebar_delim='|'
 #mailboxes =inbox =ml
 
 # color of folders with new mail
-color sidebar_new brightmagenta default
+color sidebar_new magenta default
 
 # ctrl-n, ctrl-p to select next, prev folder
 # ctrl-o to open selected folder
