@@ -1,0 +1,27 @@
+! Base16 atelierforest-light
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+
+*color0:rgb:1b/19/18
+*color1:rgb:f2/2c/40
+*color2:rgb:5a/b7/38
+*color3:rgb:d5/91/1a
+*color4:rgb:40/7e/e7
+*color5:rgb:66/66/ea
+*color6:rgb:00/ad/9c
+*color7:rgb:a8/a1/9f
+*color8:rgb:76/6e/6b
+*color9:rgb:db/2d/20
+*color10:rgb:01/a2/52
+*color11:rgb:fd/ed/02
+*color12:rgb:01/a0/e4
+*color13:rgb:a1/6a/94
+*color14:rgb:b5/e4/f4
+*color15:rgb:f1/ef/ee
+*color16:rgb:df/53/20
+*color17:rgb:c3/3f/f3
+*color18:rgb:2c/24/21
+*color19:rgb:68/61/5e
+*color20:rgb:9c/94/91
+*color21:rgb:e6/e2/e0
+*foreground:rgb:68/61/5e
+*background:rgb:f1/ef/ee

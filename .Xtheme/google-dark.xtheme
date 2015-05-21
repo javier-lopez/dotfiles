@@ -1,0 +1,27 @@
+! Base16 google-dark
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+
+*color0:rgb:1d/1f/21
+*color1:rgb:CC/34/2B
+*color2:rgb:19/88/44
+*color3:rgb:FB/A9/22
+*color4:rgb:39/71/ED
+*color5:rgb:A3/6A/C7
+*color6:rgb:39/71/ED
+*color7:rgb:c5/c8/c6
+*color8:rgb:96/98/96
+*color9:rgb:db/2d/20
+*color10:rgb:01/a2/52
+*color11:rgb:fd/ed/02
+*color12:rgb:01/a0/e4
+*color13:rgb:a1/6a/94
+*color14:rgb:b5/e4/f4
+*color15:rgb:ff/ff/ff
+*color16:rgb:1d/1f/21
+*color17:rgb:39/71/ED
+*color18:rgb:28/2a/2e
+*color19:rgb:37/3b/41
+*color20:rgb:b4/b7/b4
+*color21:rgb:e0/e0/e0
+*foreground:rgb:c5/c8/c6
+*background:rgb:1d/1f/21

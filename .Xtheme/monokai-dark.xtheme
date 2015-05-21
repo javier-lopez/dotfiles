@@ -1,0 +1,27 @@
+! Base16 monokai-dark
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+
+*color0:rgb:27/28/22
+*color1:rgb:f9/26/72
+*color2:rgb:a6/e2/2e
+*color3:rgb:f4/bf/75
+*color4:rgb:66/d9/ef
+*color5:rgb:ae/81/ff
+*color6:rgb:a1/ef/e4
+*color7:rgb:f8/f8/f2
+*color8:rgb:75/71/5e
+*color9:rgb:db/2d/20
+*color10:rgb:01/a2/52
+*color11:rgb:fd/ed/02
+*color12:rgb:01/a0/e4
+*color13:rgb:a1/6a/94
+*color14:rgb:b5/e4/f4
+*color15:rgb:f9/f8/f5
+*color16:rgb:27/28/22
+*color17:rgb:cc/66/33
+*color18:rgb:38/38/30
+*color19:rgb:49/48/3e
+*color20:rgb:a5/9f/85
+*color21:rgb:f5/f4/f1
+*foreground:rgb:f8/f8/f2
+*background:rgb:27/28/22

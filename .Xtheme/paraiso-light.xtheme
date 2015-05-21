@@ -1,0 +1,27 @@
+! Base16 paraiso-light
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+
+*color0:rgb:2f/1e/2e
+*color1:rgb:ef/61/55
+*color2:rgb:48/b6/85
+*color3:rgb:fe/c4/18
+*color4:rgb:06/b6/ef
+*color5:rgb:81/5b/a4
+*color6:rgb:5b/c4/bf
+*color7:rgb:a3/9e/9b
+*color8:rgb:77/6e/71
+*color9:rgb:db/2d/20
+*color10:rgb:01/a2/52
+*color11:rgb:fd/ed/02
+*color12:rgb:01/a0/e4
+*color13:rgb:a1/6a/94
+*color14:rgb:b5/e4/f4
+*color15:rgb:e7/e9/db
+*color16:rgb:f9/9b/15
+*color17:rgb:e9/6b/a8
+*color18:rgb:41/32/3f
+*color19:rgb:4f/42/4c
+*color20:rgb:8d/86/87
+*color21:rgb:b9/b6/b0
+*foreground:rgb:4f/42/4c
+*background:rgb:e7/e9/db
