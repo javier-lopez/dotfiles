@@ -150,10 +150,10 @@ alternative_order text/enriched text/plain text
 # === Color ===============================================================================
 # =========================================================================================
 # Header
-color header green default "From: "
-color header magenta default "Subject: "
+color header yellow default "From: "
+color header brightblue default "Subject: "
 color header cyan default "Date: "
-color header cyan default "To: "
+color header red default "To: "
 # Quoted
 color quoted green default
 color quoted1 cyan default
@@ -234,7 +234,7 @@ set sidebar_delim='|'
 #mailboxes =inbox =ml
 
 # color of folders with new mail
-color sidebar_new magenta default
+color sidebar_new green default
 
 # ctrl-n, ctrl-p to select next, prev folder
 # ctrl-o to open selected folder

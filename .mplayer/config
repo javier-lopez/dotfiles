@@ -8,7 +8,8 @@ vo="xv"
 ao=alsa
 input=file=/tmp/mplayer.fifo
 nolirc="1"
+use-filename-title="1"
 
-#life is good
+#colorize =)
 msgmodule=1
 msgcolor=1

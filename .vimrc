@@ -139,8 +139,10 @@ inoremap <c-h> <esc><c-w>h
 
 "tabs
 map <c-t> <esc>:tabnew<cr>
-map [6^ :tabn<cr>
-map [5^ :tabp<cr>
+map <c-tab> :tabnext<cr>
+map <c-s-tab> :tabprevious<cr>
+map [6^ :tabnext<cr>
+map [5^ :tabprevious<cr>
 map <c-w> :tabclose <cr>
 
 "exit
@@ -254,6 +256,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:NERDTreeWinSize      = 25
         let g:NERDTreeMouseMode    = 3
         map <silent> <leader>n     :NERDTreeToggle<cr>
+        "let g:NERDTreeMapOpenSplit="-"
+        "let g:NERDTreeMapOpenVSplit="|"
     Bundle 'chilicuil/nerdcommenter', {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
        map <leader>c<space>        <Plug>NERDCommenterToggle
        map <leader>cs              <Plug>NERDCommenterSexy

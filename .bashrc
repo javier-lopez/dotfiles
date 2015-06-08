@@ -109,4 +109,7 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #ALIAZATOR_CLOUD="url"
     Bundle="gh:chilicuil/shundle-plugins/autocd"
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
+else
+    alias shundle-get='git clone --depth=1 https://github.com/chilicuil/shundle ~/.shundle/bundle/shundle'
+    alias shundle-install='shundle-get; . ~/.bashrc; shundle install; . ~/.bashrc'
 fi

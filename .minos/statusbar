@@ -12,7 +12,7 @@ TEXT
 [{"name": "time",\
   "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/clock.xbm",\
   "color":"\#999999",\
-  "full_text":"${time %H:%M %a(%d)-%b}"},\
+  "full_text":"${time %H:%M %a-%d-%b}"},\
  {"name": "root",\
    "icon":"/home/chilicuil/.data/images/icons/dzen2/sm4tik/diskette.xbm",\
    "color": "\#999999",

@@ -1,17 +1,17 @@
 #minos configuration, minos.io/doc/config
 #/etc/minos/config, ~/.minos/config
 
-#wallpaper          /usr/share/minos/wallpapers/minos.png
-wallpaper           $HOME/data/images/wallpapers/sunlight.png
-#lock-wallpaper     /usr/share/minos/wallpapers/o@o.png
-lock-wallpaper      "$HOME/data/images/wallpapers/o@o.png"
-
 #autostart          yes
 #composition        yes
 #eyesaver           yes
 #handsaver          yes
 #clipboard          yes
 #statusbar          yes
+
+#wallpaper          /usr/share/minos/wallpapers/minos.png
+wallpaper           $HOME/data/images/wallpapers/sunlight.png
+#lock-wallpaper     /usr/share/minos/wallpapers/o@o.png
+lock-wallpaper      "$HOME/data/images/wallpapers/o@o.png"
 
 m-autostart         minos-autostart
 #m-autostart-config /etc/minos/autostart
@@ -47,6 +47,7 @@ m-killer             dmenu-killall
 m-browser            x-www-browser
 m-file-manager       pcmanfm
 m-terminal           x-terminal-emulator
+#m-terminal          x-terminal-emulator -e tmux
 m-mail               mutt:terminal
 m-im                 'irssi --config=<(gpg -d ~/.irssi/config.gpg)':terminal
 m-pdf                zathura
@@ -54,19 +55,18 @@ m-music-player       ncmpcpp:terminal
 m-video-player       umplayer
 m-multimonitor       dmenu-xrandr
 m-network-manager    wicd-curses:terminal
-m-network-manager    ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
+#m-network-manager    ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
 #m-network-manager    connman-curses:terminal
 m-magnifier          magnifier
+m-window-jumper      dmenu-i3-window-jumper
 m-screenshot         screenshot
 m-screencast         ffcast
 
 #minos.io/s
 setup-dotfiles       https://github.com/chilicuil/dotfiles
-setup-utils          https://github.com/chilicuil/learn/sh/tools
-setup-preinstall     http://javier.io/preinstall
-setup-postinstall    http://javier.io/postinstall
-setup-apps-install   mozilla-firefox mozilla-flashplayer
-setup-apps-purge     xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda
+setup-hook           http://minos.io/hook
+setup-app-install    mozilla-firefox mozilla-flashplayer
+setup-app-purge      xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda
 
 #mkdir ~/.minos
 #wget http://something/config -O ~/.minos/config

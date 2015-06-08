@@ -18,6 +18,7 @@
 */.gconf*
 */.config
 */.frostwire*
+*/.vim/sessions*
 */src
 */lib
 */php

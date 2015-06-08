@@ -49,7 +49,7 @@ if_up_strictness address
 #pre_exec curl ifconfig.me
 
 TEXT
-^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/clock.xbm) ${time %H:%M %a(%d)-%b} \
+^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/clock.xbm) ${time %H:%M %a-%d-%b} \
 | ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/diskette.xbm) ${fs_used_perc }% \
 ~ ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/diskette.xbm) ${fs_used_perc /home}% \
 |${if_up wlan0} ^i(/home/chilicuil/.data/images/icons/dzen2/sm4tik/wifi.xbm) wlan0 ${downspeed wlan0} \
