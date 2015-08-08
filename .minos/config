@@ -66,6 +66,7 @@ m-screencast         ffcast
 setup-dotfiles       https://github.com/chilicuil/dotfiles
 setup-hook           http://minos.io/hook
 setup-app-install    mozilla-firefox mozilla-flashplayer
+#core,desktop?
 setup-app-purge      xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda
 
 #mkdir ~/.minos
