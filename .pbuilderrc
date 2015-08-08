@@ -130,6 +130,11 @@ if command -v "gdebi" >/dev/null 2>&1; then
     PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi" || true
 fi
 
+# faster compress/decompress ratio
+if command -v "pigz" >/dev/null 2>&1; then
+    COMPRESSPROG="pigz"
+fi
+
 # ccache
 #sudo mkdir -p "$PATH_PBUILDER/ccache"
 #sudo chmod a+w $PATH_PBUILDER/ccache"
