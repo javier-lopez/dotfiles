@@ -1,6 +1,3 @@
-#Last review: Mon 13 Oct 2014 01:15:00 PM CDT
-#vim: set ts=8 sw=4 tw=0 ft=conf :
-
 ####################################
 ######### GENERAL SETTINGS #########
 ####################################
@@ -31,7 +28,10 @@ set $w20 20 work
 new_window 1pixel
 
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -*-anorexia-medium-*-*-*-11-*-*-*-*-*-iso10646-1
+#font -*-drift-medium-*-*-*-*-*-*-*-*-*-*-*
 #font -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1
+#font pango:Inconsolata 8, FontAwesome
 font xft:Bahamas 9
 
 ipc-socket ~/.i3/ipc.sock
@@ -168,6 +168,7 @@ bindcode $Win+Shift+$Enter    split h
 bindcode $Alt+$Esc            exec m-launcher
 bindsym $Altgr+k              kill
 bindsym $Altgr+l              exec m-killer
+bindsym $Alt+Tab              exec m-window-jumper
 bindsym $Altgr+w              exec m-browser
 bindsym $Altgr+f              exec m-file-manager
 bindsym $Altgr+m              exec m-mail
@@ -198,6 +199,7 @@ bindcode $Win+$Alt+$ImpPt     exec m-screencast -s
 bindcode Control+$ImpPt       exec gifcast
 bindcode $Win+Shift+$ImpPt    exec m-screencast -k
 bindsym $Altgr+s              exec dmenu-mpd
+bindsym Control+$Alt+v        exec vim-anywhere
 bindsym $Altgr+v              exec dmenu-vbox
 bindsym $Altgr+t              exec dmenu-tell
 bindsym $Altgr+c              exec dmenu-countdown
@@ -261,14 +263,16 @@ for_window [title="- TeamViewer -"] floating enable
 for_window [class="Firefox" title="^About.*"] floating enable
 for_window [class="realvnc-vncviewer"] floating enable
 for_window [class="Xarchiver" title="Xarchiver$"] floating enable
+for_window [class="Gvim" window_role="vim-anywhere"] floating enable
+for_window [class="Screenkey"] floating enable
 
 #popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
 #popup_during_fullscreen ignore
 workspace_auto_back_and_forth yes
 
 #Assigns default monitor for workspaces
-#workspace "1 www" output VGA1
 workspace "$w1" output HDMI1
+#workspace "$w1" output VGA1
 
 #Assigns default workspaces for app
 #assign ["]window class[/window title]["] [→] [~ | workspace]
@@ -326,3 +330,5 @@ bar {
         urgent_workspace   #d11931 #000000 #999999
     }
 }
+
+#vim: set ts=8 sw=4 tw=0 ft=conf :
