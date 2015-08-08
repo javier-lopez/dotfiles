@@ -396,6 +396,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'wellle/tmux-complete.vim' , { 'on': 'insert' }
         let g:tmuxcomplete#trigger = ''
         "let g:tmuxcomplete#trigger = 'omnifunc'
+    Bundle 'tmux-plugins/vim-tmux'
 
     command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
     " shift-control-* Greps for the word under the cursor

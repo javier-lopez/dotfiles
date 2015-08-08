@@ -48,8 +48,8 @@ esac
 #===============================================================================
 
 # path
-#export PATH="/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
-export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin/X11:/usr/games"
+export PATH="$HOME/tmux/bin:/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
+#export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin/X11:/usr/games"
 
 # gpg
 export GPGKEY="C92C604E"
@@ -109,7 +109,4 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #ALIAZATOR_CLOUD="url"
     Bundle="gh:chilicuil/shundle-plugins/autocd"
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
-else
-    alias shundle-get='git clone --depth=1 https://github.com/chilicuil/shundle ~/.shundle/bundle/shundle'
-    alias shundle-install='shundle-get; . ~/.bashrc; shundle install; . ~/.bashrc'
 fi

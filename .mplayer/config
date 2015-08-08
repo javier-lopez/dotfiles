@@ -13,3 +13,8 @@ use-filename-title="1"
 #colorize =)
 msgmodule=1
 msgcolor=1
+
+#fontconfig = yes
+#font = "Arial Unicode MS"
+#subfont-text-scale = 3
+subfont-text-scale=6

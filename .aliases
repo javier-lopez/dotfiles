@@ -1,6 +1,7 @@
 #custom aliases
 [ -f "$(command -v "wcd")" ]       && alias cd='. wcd'
 [ -f "$(command -v "trash")" ]     && alias rm='trash'
+[ -f "$(command -v "xdg-open")" ]  && alias open='xdg-open'
 [ -f "$(command -v "colormake")" ] && alias make='LANGUAGE=en CFLAGS="-g -Wall" colormake' || alias make='LANGUAGE=en CFLAGS="-g -Wall" make'
 
 alias e='extract'
@@ -29,6 +30,11 @@ alias share.internet='_si() { sudo iptables -t nat -A POSTROUTING -o "${1}" -j M
 alias youtube-dl='youtube-dl -f 43'
 alias getpass='_getpass() { _g=$(printf "%s" "${*}" | md5sum | openssl enc -base64 | cut -c1-16); printf "%s" "${_g}"|xclip -selection clipboard 2>/dev/null|| printf "%s\\n" "${_g}"; }; _getpass'
 alias uu='update && upgrade'
+
+#the best games in history
+alias aom='xhost + >/dev/null; mkdir -p ~/.aom-savegame >/dev/null; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.aom-pbuilderrc --basetgz ~/code/games/age-of-mythology-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
+alias aoe2='xhost + >/dev/null; mkdir -p ~/.aoe2-savegame ~/.aoe2-player >/dev/null; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.aoe2-pbuilderrc --basetgz ~/code/games/age-of-empires-II-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
+alias warcraft3='xhost + >/dev/null; mkdir -p ~/.warcraft3-savegame >/dev/null; xrandr | awk "/+$/ {print \$1}" | sort -nr | awk "{print \$1; exit}" > ~/.warcraft3-savegame/max-resolution; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.warcraft3-pbuilderrc --basetgz ~/code/games/warcraft3-frozen-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
 
 #ubuntu-dev
 alias bzr.debuild='bzr bd -- -S -uc -us'
