@@ -60,7 +60,7 @@ UBUNTU_MIRROR="us.archive.ubuntu.com"
 if [ -z "${DIST}" ] && [ -r "debian/changelog" ]; then
     DIST="$(dpkg-parsechangelog | awk '/^Distribution: / {print $2}')"
     # Use the unstable suite for certain suite values.
-    if $(echo "experimental UNRELEASED" | grep "${DIST}" >/dev/null 2>&1); then
+    if $(printf "%s\\n" "experimental UNRELEASED" | grep "${DIST}" >/dev/null 2>&1); then
         DIST="${UNSTABLE_CODENAME}"
     fi
 fi
@@ -107,30 +107,43 @@ BUILDPLACE="${PATH_PBUILDER}/${NAME}/build/"
 HOOKDIR="${HOME}/.pbuilder-hooks/"
 ###################################################################################
 
-if $(echo ${DEBIAN_SUITES[@]} | grep ${DIST} >/dev/null 2>&1); then
-    # Debian configuration
+if $(printf "%s\\n" "${DEBIAN_SUITES[@]}" | grep ${DIST} >/dev/null 2>&1); then
+    #debian configuration
     MIRRORSITE="http://${DEBIAN_MIRROR}/debian/"
     COMPONENTS="main contrib non-free"
-    # This is for enabling backports for the Debian stable suite.
-    if $(echo "${STABLE_CODENAME} stable" | grep ${DIST} >/dev/null 2>&1); then
+    #this is for enabling backports for the Debian stable suite.
+    if $(printf "%s\\n" "${STABLE_CODENAME} stable" | grep ${DIST} >/dev/null 2>&1); then
         EXTRAPACKAGES="${EXTRAPACKAGES} debian-backports-keyring"
         OTHERMIRROR="${OTHERMIRROR} | deb http://www.backports.org/debian ${STABLE_BACKPORTS_SUITE} ${COMPONENTS}"
     fi
-elif $(echo ${UBUNTU_SUITES[@]} | grep ${DIST} >/dev/null 2>&1); then
-    # Ubuntu configuration
+elif $(printf "%s\\n" "${UBUNTU_SUITES[@]}" | grep ${DIST} >/dev/null 2>&1); then
+    #ubuntu configuration
     MIRRORSITE="http://${UBUNTU_MIRROR}/ubuntu/"
     COMPONENTS="main restricted universe multiverse"
 else
-    echo "Unknown distribution: ${DIST}"
+    printf "%s\\n" "Unknown distribution: ${DIST}"
     exit 1
 fi
 
-# gdebi resolution dep, requires gdebi-core
-if command -v "gdebi" >/dev/null 2>&1; then
-    PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi" || true
+#http://askubuntu.com/questions/323557/resolving-dependencies-inside-a-pbuilder-environment-instead-of-on-the-host-syst
+#if the pbuilder env has a different architecture than the local one use aptitude, otherwise gdebi
+if [ "${ARCH}" = "$(dpkg --print-architecture)" ]; then
+    #gdebi resolution, requires gdebi-core
+    if command -v "gdebi" >/dev/null 2>&1; then
+        PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi" || true
+        rm -rf "${HOOKDIR}/D01install_aptitude_resolver"
+    else
+        printf "%s\\n" '#!/bin/sh' > "${HOOKDIR}/D01install_aptitude_resolver"
+        printf "%s\\n" 'apt-get install -y --no-install-recommends aptitude' >> "${HOOKDIR}/D01install_aptitude_resolver"
+        chmod +x "${HOOKDIR}/D01install_aptitude_resolver"
+    fi
+else
+    printf "%s\\n" '#!/bin/sh' > "${HOOKDIR}/D01install_aptitude_resolver"
+    printf "%s\\n" 'apt-get install -y --no-install-recommends aptitude' >> "${HOOKDIR}/D01install_aptitude_resolver"
+    chmod +x "${HOOKDIR}/D01install_aptitude_resolver"
 fi
 
-# faster compress/decompress ratio
+#faster compress/decompress ratio
 if command -v "pigz" >/dev/null 2>&1; then
     COMPRESSPROG="pigz"
 fi
