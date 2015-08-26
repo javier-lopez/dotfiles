@@ -1,5 +1,5 @@
 #########################################################
-# Last review            Thu 03 Jan 2013 04:12:04 AM CST
+# Last review            Tue 25 Aug 2015 03:43:57 PM CDT
 #########################################################
 
 # vim: set ts=8 sw=4 tw=0 ft=muttrc :
@@ -7,38 +7,38 @@
 # =========================================================================================
 # === General settings ====================================================================
 # =========================================================================================
-push <show-version>                                                           #show version
-set nomark_old                                                                #avoid marking unread msgs as old ones
-set nobeep                                                                    #plz dont be noisy
-set delete                = yes                                               #don't confirm
-set quit                  = yes                                               #don't confirm
-set imap_check_subscribed = yes                                               #automatically poll subscribed mailboxes for new mail
+push <show-version>                                      #show version
+set nomark_old                                           #avoid marking unread msgs as old ones
+set nobeep                                               #plz dont be noisy
+set delete                = yes                          #don't confirm
+set quit                  = yes                          #don't confirm
+set imap_check_subscribed = yes                          #automatically poll subscribed mailboxes for new mail
 set sort                  = "threads"
 #set sort_aux              = "last-date-received"
-set sort_aux              = "reverse-last-date-received"                      #like gmail
-set sort_re                                                                   # thread based on regex
+set sort_aux              = "reverse-last-date-received" #like gmail
+set sort_re                                              # thread based on regex
 set reply_regexp          = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
-set followup_to           = no                                                #http://larve.net/people/hugo/2000/07/ml-mutt
+set followup_to           = no                           #http://larve.net/people/hugo/2000/07/ml-mutt
 set honor_followup_to     = no
-set pager_index_lines     = 10                                                # number of index lines to show
-set pager_context         = 5                                                 # number of context lines to show
-set pager_stop                                                                # don't go to the next message automatically
-unset markers                                                                 # no ugly plus signs
+set pager_index_lines     = 10                           # number of index lines to show
+set pager_context         = 5                            # number of context lines to show
+set pager_stop                                           # don't go to the next message automatically
+unset markers                                            # no ugly plus signs
 set menu_scroll
 set menu_context          = 5
 set quote_regexp          = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
-set include               = yes                                               #automatically quote message
-set editor                = "vim -c XWriteMode '%s'"                          #is there any other editor?
-set edit_headers          = yes                                               #you can add cc, bcc, or change ur from input
-set mail_check            = 90                                                #how often mutt will query gmail for new email
+set include               = yes                          #automatically quote message
+set editor                = "vim -c XWriteMode '%s'"     #is there any other editor?
+set edit_headers          = yes                          #you can add cc, bcc, or change ur from input
+set mail_check            = 90                           #how often mutt will query gmail for new email
 set timeout               = 15
 set imap_keepalive        = 120
-set move                  = no                                                #don't ask to move read messages to mbox on exit
-set pipe_decode                                                               # strip headers and eval mimes when piping
-set thorough_search                                                           # strip headers and eval mimes before searching
+set move                  = no                           #don't ask to move read messages to mbox on exit
+set pipe_decode                                          # strip headers and eval mimes when piping
+set thorough_search                                      # strip headers and eval mimes before searching
 
 # $ sudo pip install goobook
-set query_command         = "goobook query '%s'"          #autocomplete addresses, TODO
+#set query_command         = "goobook query '%s'"        #autocomplete addresses, TODO
 
 # formats
 set date_format         = "%d/%m/%y at %I:%M%P"
@@ -47,25 +47,25 @@ set alias_format        = "%4n %t %-20a  %r"
 #set status_format goes in the account settings
 
 # composing mail
-set envelope_from                                               # which from?
-set sig_dashes                                                  # dashes before my sig... sweet
-set fast_reply                                                  # skip to compose when replying
-#set sendmail_wait       = -1                                    # don't wait for sending... to complete
-#set askcc                                                       # ask for CC:
-set fcc_attach                                                  # save attachments with the body
-unset mime_forward                                              # forward attachments as part of body
-set forward_format      = "Fwd: %s"                             # format for subject when forwarding
-set forward_decode                                              # decode when forwarding
-set attribution         = "On %d, %n wrote:"                    # set the attribution
-set reply_to                                                    # reply to Reply to: field
-set reverse_name                                                # reply as whomever it was to
-set include                                                     # include message in replies
-set forward_quote                                               # include message in forwards
+set envelope_from                            # which from?
+set sig_dashes                               # dashes before my sig... sweet
+set fast_reply                               # skip to compose when replying
+#set sendmail_wait       = -1                # don't wait for sending... to complete
+#set askcc                                   # ask for CC:
+set fcc_attach                               # save attachments with the body
+unset mime_forward                           # forward attachments as part of body
+set forward_format      = "Fwd: %s"          # format for subject when forwarding
+set forward_decode                           # decode when forwarding
+set attribution         = "On %d, %n wrote:" # set the attribution
+set reply_to                                 # reply to Reply to: field
+set reverse_name                             # reply as whomever it was to
+set include                                  # include message in replies
+set forward_quote                            # include message in forwards
 
 # headers to show
-ignore *                                                        # ignore all headers
-unignore from: to: cc: date: subject:                           # show only these
-hdr_order from: to: cc: date: subject:                          # and in this order
+ignore *                                     # ignore all headers
+unignore from: to: cc: date: subject:        # show only these
+hdr_order from: to: cc: date: subject:       # and in this order
 
 # =========================================================================================
 # === Mapping =============================================================================
@@ -100,15 +100,16 @@ bind editor \t          complete-query
 # =========================================================================================
 # === Macros ==============================================================================
 # =========================================================================================
-macro index B   "<limit>~b "                                "search message bodies"
-macro index I   "<change-folder>!<enter>"                   "go to Inbox"
+macro index B   "<limit>~b "              "search message bodies"
+macro index I   "<change-folder>!<enter>" "go to Inbox"
 macro index s '<sync-mailbox>'
 
 # save a decoded copy in ~
-macro index S        "<pipe-message>cat > ~/"               "save message as"
-macro index,pager a  "<pipe-message>goobook add<return>"    "add the sender address to Google contacts"
+macro index S        "<pipe-message>cat > ~/" "save message as"
+macro index,pager a  "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
+
 # Reload goobook db
-macro index,pager gr "!goobook reload\n"                    "Goobook reload"
+#macro index,pager gr "!goobook reload\n"                 "Goobook reload"
 
 # b toggles sidebar visibility
 macro index b '<enter-command>toggle sidebar_visible<enter>'
@@ -120,10 +121,6 @@ macro pager b '<enter-command>toggle sidebar_visible<enter>'
 
 macro index 1 '<sync-mailbox><enter-command>source ~/.mutt/accounts/fco.plj@gmail.com/account<enter><change-folder>!<enter>'
 macro index 2 '<sync-mailbox><enter-command>source ~/.mutt/accounts/chilicuil@gmail.com/account<enter><change-folder>!<enter>'
-macro index 3 '<sync-mailbox><enter-command>source ~/.mutt/accounts/chilicuil.vim@gmail.com/account<enter><change-folder>!<enter>'
-macro index 4 '<sync-mailbox><enter-command>source ~/.mutt/accounts/perez.lopez.francisco.javier@gmail.com/account<enter><change-folder>!<enter>'
-macro index 5 '<sync-mailbox><enter-command>source ~/.mutt/accounts/ubuntuclassroomes@gmail.com/account<enter><change-folder>!<enter>'
-macro index 6 '<sync-mailbox><enter-command>source ~/.mutt/accounts/ugjmexico@gmail.com/account<enter><change-folder>!<enter>'
 
 # =========================================================================================
 # === Mime ================================================================================
@@ -258,44 +255,6 @@ bind pager \CO sidebar-open
 # sidebar-scroll-down
 
 # =========================================================================================
-# === Lists ===============================================================================
-# =========================================================================================
-subscribe asterisk-users@lists.digium.com
-subscribe freebsd-announce@freebsd.org
-subscribe crypto@securityfocus.com
-subscribe current@FreeBSD.org
-subscribe current-users@NetBSD.org
-subscribe doc-es@lists.php.net
-subscribe enlightenment-devel@lists.sourceforge.net
-subscribe framework@spool.metasploit.com
-subscribe freebsd-advocacy@freebsd.org
-subscribe freebsd-chat@freebsd.org
-subscribe freebsd-hackers@freebsd.org
-subscribe freebsd-questions@freebsd.org
-subscribe full-disclosure@lists.grok.org.uk
-subscribe linux-kernel@vger.kernel.org
-subscribe misc@openbsd.org
-subscribe netbsd-docs@netbsd.org
-subscribe pkgsrc-users@netbsd.org
-subscribe security-basics@securityfocus.com
-subscribe tech-kern@NetBSD.org
-subscribe tech@openbsd.org
-subscribe vim_use@googlegroups.com
-subscribe wikies-l@lists.wikimedia.org
-subscribe wireshark-users@wireshark.org
-subscribe netbsd-users@netbsd.org
-subscribe pen-test@securityfocus.com
-subscribe ubuntu-server@lists.ubuntu.com
-subscribe ubuntu-cloud@lists.ubuntu.com
-subscribe ubuntu-devel@lists.ubuntu.com
-subscribe ubuntu-devel-discuss@lists.ubuntu.com
-subscribe ubuntu-devel-announce@lists.ubuntu.com
-subscribe ubuntu-quality@lists.ubuntu.com
-subscribe ubuntu-bugsquad@lists.ubuntu.com
-subscribe papercuts-ninja@lists.launchpad.net
-subscribe ubuntu-mx@lists.ubuntu.com
-
-# =========================================================================================
 # === Gnupg ===============================================================================
 # =========================================================================================
 set pgp_use_gpg_agent        = yes
@@ -337,12 +296,6 @@ set pgp_list_secring_command = "gpg --no-verbose --batch --with-colons --list-se
 set my_decrypt=`gpg -o $HOME/.mutt/accounts/passwd.gpg.tmp -d $HOME/.mutt/accounts/passwd.gpg`
 set my_fcoDOTpljATgmailDOTcom=`awk '/fco.plj@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_chilicuilATgmailDOTcom=`awk '/chilicuil@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
-set my_lnthestqfgxygATgmailDOTcom=`awk '/lnthestqfgxyg@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
-set my_chilicuilDOTvimATgmailDOTcom=`awk '/chilicuil.vim@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
-set my_perezDOTlopezDOTfranciscoDOTjavierATgmailDOTcom=`awk '/perez.lopez.francisco.javier@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
-set my_mnDOTcuentaATgmailDOTcom=`awk '/mn.cuenta@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
-set my_ubuntuclassroomesATgmailDOTcom=`awk '/ubuntuclassroomes@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
-set my_ugjmexicoATgmailDOTcom=`awk '/ugjmexico@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_rm=`rm -f $HOME/.mutt/accounts/passwd.gpg.tmp`
 
 # default
