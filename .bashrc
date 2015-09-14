@@ -48,7 +48,7 @@ esac
 #===============================================================================
 
 # path
-export PATH="$HOME/tmux/bin:/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
+export PATH="$HOME/code/tmux/bin:/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
 #export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin/X11:/usr/games"
 
 # gpg
@@ -61,6 +61,9 @@ export CSCOPE_EDITOR="editor"
 export WCDHOME="${HOME}/.wcd"
 export BROWSER="x-www-browser"
 #export LC_ALL=C
+
+#fix java ugliness
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 
 # ruby dev
 #[ -f "${HOME}/.rvm/bin" ] && export PATH="${PATH}:${HOME}/.rvm/bin"
