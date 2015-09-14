@@ -202,7 +202,8 @@ bindsym $Altgr+s              exec dmenu-mpd
 bindsym Control+$Alt+v        exec vim-anywhere
 bindsym $Altgr+v              exec dmenu-vbox
 bindsym $Altgr+t              exec dmenu-tell
-bindsym $Altgr+c              exec dmenu-countdown
+#bindsym $Altgr+c              exec dmenu-countdown
+bindsym $Altgr+c              exec dmenu-countdown -p mplayer -t ~/tmp_music/Rammstein\ -\ Moskau.mp3
 
 #volume down ($Altgr+,) ($Altgr+.)
 bindcode $Altgr+59 exec amixer -q set Master 1-
@@ -254,6 +255,7 @@ bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
 ####################################
 
 for_window [class="Magnifier"] floating enable
+for_window [title="^xzoom"] border none; floating enable
 for_window [class="Xmessage"]  floating enable
 for_window [class="Gxmessage"] floating enable
 for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad

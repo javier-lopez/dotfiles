@@ -38,7 +38,8 @@ m-movietime         movietime
 
 #/etc/cron.d/watch-battery
 m-battery           watch-battery
-m-battery-config    15,10,7,5
+#m-battery-config    15,10,7,5
+m-battery-config    20,15,12,10
 
 #shortcuts
 m-help               minos-help
@@ -58,18 +59,15 @@ m-network-manager    wicd-curses:terminal
 #m-network-manager    ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
 #m-network-manager    connman-curses:terminal
 m-magnifier          magnifier
+#m-magnifier          xzoom
 m-window-jumper      dmenu-i3-window-jumper
 m-screenshot         screenshot
 m-screencast         ffcast
 
 #minos.io/s
 setup-dotfiles       https://github.com/chilicuil/dotfiles
-setup-hook           http://minos.io/hook
-setup-app-install    mozilla-firefox mozilla-flashplayer
+#setup-hook           http://minos.io/hook
+setup-app-core       mozilla-firefox mozilla-flashplayer
+setup-app-desktop    mozilla-firefox mozilla-flashplayer
 #core,desktop?
-setup-app-purge      xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda
-
-#mkdir ~/.minos
-#wget http://something/config -O ~/.minos/config
-#wget -qO- minos.io/s -O /tmp/s
-#sh /tmp/s
+setup-app-purge      xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie
