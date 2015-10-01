@@ -4,25 +4,15 @@
 
 #workspaces
 set $w1   1 www
-set $w2   2 work
-set $w3   3 work
+set $w2   2 fm
+set $w3   3 mail
 set $w4   4 im
-set $w5   5 mail
-set $w6   6 files
-set $w7   7 work
-set $w8   8 work
-set $w9   9 work
-set $w10 10 work
-set $w11 11 work
-set $w12 12 work
-set $w13 13 work
-set $w14 14 work
-set $w15 15 work
-set $w16 16 work
-set $w17 17 work
-set $w18 18 work
-set $w19 19 work
-set $w20 20 work
+set $w5   5 term
+set $w6   7 term
+set $w7   7 term
+set $w8   8 term
+set $w9   9 term
+set $w10 10 term
 
 #window border style:
 new_window 1pixel
@@ -49,7 +39,8 @@ exec --no-startup-id m-autostart
 #Mod3 is Windows (Super_L), Mod4 is <Win> and Mod1 is <Alt>
 set $Win   Mod4
 set $Alt   Mod1
-set $Altgr Mod5
+set $Altgr   Mod5
+#set $Altgr   108
 set $Shift_R 62
 
 set $Esc      9
@@ -69,10 +60,10 @@ bindsym $Win+d layout default
 #toggle tiling/floating mode
 bindcode $Win+Shift+$Space floating toggle
 #change focus
-bindsym $Win+h      focus left
-bindsym $Win+j      focus down
-bindsym $Win+k      focus up
-bindsym $Win+l      focus right
+bindsym $Win+h focus left
+bindsym $Win+j focus down
+bindsym $Win+k focus up
+bindsym $Win+l focus right
 #or using cursor keys
 #bindsym $Win+Left  focus left
 #bindsym $Win+Down  focus down
@@ -81,85 +72,44 @@ bindsym $Win+l      focus right
 
 bindcode $Win+$Insert move scratchpad
 bindcode $Win+$Space  scratchpad show
-
-#focus container
-#bindsym $Alt+h focus parent; focus left
-#bindsym $Alt+j focus parent; focus down
-#bindsym $Alt+k focus parent; focus up
-#bindsym $Alt+l focus parent; focus right
-#snap
-#bindsym $Win+Control+h     layout stacking
-#bindsym $Win+Control+j     layout stacking
-#bindsym $Win+Control+k     layout stacking
-#bindsym $Win+Control+l     layout stacking
-# (or with cursor keys)
-#bindsym $Win+Control+Left  layout stacking
-#bindsym $Win+Control+Down  layout stacking
-#bindsym $Win+Control+Up    layout stacking
-#bindsym $Win+Control+Right layout stacking
+bindsym  $Win+r       exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 #goto
-bindsym $Win+Shift+h      move left
-bindsym $Win+Shift+j      move down
-bindsym $Win+Shift+k      move up
-bindsym $Win+Shift+l      move right
+bindsym $Win+Shift+h  move left
+bindsym $Win+Shift+j  move down
+bindsym $Win+Shift+k  move up
+bindsym $Win+Shift+l  move right
 # (or using cursor keys)
 #bindsym $Win+Shift+Left  move left
 #bindsym $Win+Shift+Down  move down
 #bindsym $Win+Shift+Up    move up
 #bindsym $Win+Shift+Right move right
 
-#containers
-#bindsym $Alt+$Win+Shift+$h focus parent; move left
-#bindsym $Alt+$Win+Shift+$j focus parent; move down
-#bindsym $Alt+$Win+Shift+$k focus parent; move up
-#bindsym $Alt+$Win+Shift+$l focus parent; move right
-
 #workspaces
-bindsym $Win+1 workspace $w1
-bindsym $Win+2 workspace $w2
-bindsym $Win+3 workspace $w3
-bindsym $Win+4 workspace $w4
-bindsym $Win+5 workspace $w5
-bindsym $Win+6 workspace $w6
-bindsym $Win+7 workspace $w7
-bindsym $Win+8 workspace $w8
-bindsym $Win+9 workspace $w9
-bindsym $Win+0 workspace $w10
-bindsym $Win+q workspace $w11
-bindsym $Win+w workspace $w12
-bindsym $Win+e workspace $w13
-bindsym $Win+r workspace $w14
-bindsym $Win+t workspace $w15
-bindsym $Win+y workspace $w16
-bindsym $Win+u workspace $w17
-bindsym $Win+i workspace $w18
-bindsym $Win+o workspace $w19
-bindsym $Win+p workspace $w20
+bindsym $Win+1 workspace number 1
+bindsym $Win+2 workspace number 2
+bindsym $Win+3 workspace number 3
+bindsym $Win+4 workspace number 4
+bindsym $Win+5 workspace number 5
+bindsym $Win+6 workspace number 6
+bindsym $Win+7 workspace number 7
+bindsym $Win+8 workspace number 8
+bindsym $Win+9 workspace number 9
+bindsym $Win+0 workspace number 10
 
 bindsym $Win+Right workspace next
 bindsym $Win+Left  workspace prev
 
-bindsym $Win+Shift+1 move workspace $w1
-bindsym $Win+Shift+2 move workspace $w2
-bindsym $Win+Shift+3 move workspace $w3
-bindsym $Win+Shift+4 move workspace $w4
-bindsym $Win+Shift+5 move workspace $w5
-bindsym $Win+Shift+6 move workspace $w6
-bindsym $Win+Shift+7 move workspace $w7
-bindsym $Win+Shift+8 move workspace $w8
-bindsym $Win+Shift+9 move workspace $w9
-bindsym $Win+Shift+0 move workspace $w10
-bindsym $Win+Shift+q move workspace $w11
-bindsym $Win+Shift+w move workspace $w12
-bindsym $Win+Shift+e move workspace $w13
-bindsym $Win+Shift+r move workspace $w14
-bindsym $Win+Shift+t move workspace $w15
-bindsym $Win+Shift+y move workspace $w16
-bindsym $Win+Shift+u move workspace $w17
-bindsym $Win+Shift+i move workspace $w18
-bindsym $Win+Shift+o move workspace $w19
-bindsym $Win+Shift+p move workspace $w20
+bindsym $Win+Shift+1 move workspace number 1
+bindsym $Win+Shift+2 move workspace number 2
+bindsym $Win+Shift+3 move workspace number 3
+bindsym $Win+Shift+4 move workspace number 4
+bindsym $Win+Shift+5 move workspace number 5
+bindsym $Win+Shift+6 move workspace number 6
+bindsym $Win+Shift+7 move workspace number 7
+bindsym $Win+Shift+8 move workspace number 8
+bindsym $Win+Shift+9 move workspace number 9
+bindsym $Win+Shift+0 move workspace number 10
 
 #apps
 bindsym  F1                   exec m-help
@@ -183,13 +133,13 @@ bindcode $Alt+$Shift_R        exec m-keyboard
 bindcode $Altgr+$Space        exec m-movietime
 bindsym $Altgr+x              exec m-multimonitor
 bindsym XF86Display           exec m-multimonitor
-bindsym  $Altgr+p             exec multimedia-control toggle
-bindcode $Altgr+21            exec multimedia-control next
-bindcode $Altgr+34            exec multimedia-control previous
-bindsym XF86AudioPlay         exec multimedia-control toggle
-bindsym XF86AudioStop         exec multimedia-control toggle
-bindsym XF86AudioNext         exec multimedia-control next
-bindsym XF86AudioPrev         exec multimedia-control previous
+bindsym  $Altgr+p             exec player-ctrl toggle
+bindcode $Altgr+21            exec player-ctrl next
+bindcode $Altgr+34            exec player-ctrl previous
+bindsym XF86AudioPlay         exec player-ctrl toggle
+bindsym XF86AudioStop         exec player-ctrl toggle
+bindsym XF86AudioNext         exec player-ctrl next
+bindsym XF86AudioPrev         exec player-ctrl previous
 bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 1
 bindsym XF86MonBrightnessUp   exec xbacklight -steps 1 -time 0 -inc 1
 bindcode $ImpPt               exec m-screenshot
@@ -201,7 +151,7 @@ bindcode $Win+Shift+$ImpPt    exec m-screencast -k
 bindsym $Altgr+s              exec dmenu-mpd
 bindsym Control+$Alt+v        exec vim-anywhere
 bindsym $Altgr+v              exec dmenu-vbox
-bindsym $Altgr+t              exec dmenu-tell
+bindsym $Altgr+t              exec dmenu-txt2speech
 #bindsym $Altgr+c              exec dmenu-countdown
 bindsym $Altgr+c              exec dmenu-countdown -p mplayer -t ~/tmp_music/Rammstein\ -\ Moskau.mp3
 
@@ -278,12 +228,13 @@ workspace "$w1" output HDMI1
 
 #Assigns default workspaces for app
 #assign ["]window class[/window title]["] [→] [~ | workspace]
+
 assign [class="Firefox"]               $w1
+assign [class="Pcmanfm"]               $w2
+assign [class="Nautilus"]              $w2
 assign [class="^URxvt$" title="irssi"] $w4
-assign [class="^URxvt$" title="mutt"]  $w5
-assign [class="Thunderbird"]           $w5
-assign [class="Pcmanfm"]               $w6
-assign [class="Nautilus"]              $w6
+assign [class="^URxvt$" title="mutt"]  $w3
+assign [class="Thunderbird"]           $w3
 
 ####################################
 ############## THEMES ##############
@@ -321,6 +272,7 @@ bar {
     tray_output none
     font pango:Inconsolata 9
     workspace_buttons yes
+    separator_symbol "|"
     #mode hide
     #modifier $Win
     colors {
