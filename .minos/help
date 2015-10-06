@@ -1,81 +1,81 @@
 Help
 ----
 
-        <f1>        ⇨  help (this window)
+        <f1>         ⇨  help (this window)
 
-     <alt><esc>     ⇨  launcher
-    <win><space>    ⇨  terminal in buffer mode
-    <win><enter>    ⇨  new terminal emulator
+     <alt><esc>      ⇨  launcher
+    <win><space>     ⇨  terminal in buffer mode
+    <win><enter>     ⇨  new terminal emulator
 
-     <altgr><k>     ⇨  close app
-     <altgr><l>     ⇨  close app by name
+     <altgr><k>      ⇨  close app
+     <altgr><l>      ⇨  close app by name
 
-     <altgr><w>     ⇨  web  browser
-     <altgr><f>     ⇨  file manager
-     <altgr><m>     ⇨  mail reader
-     <altgr><i>     ⇨  instant messenger
-     <altgr><n>     ⇨  network manager
-     <altgr><c>     ⇨  countdown alarm
-     <altgr><x>     ⇨  multimonitor manager
-     <altgr><v>     ⇨  virtual machine launcher
-     <altgr><z>     ⇨  zoom lent
-     <altgr><M>     ⇨  music player
-     <altgr><V>     ⇨  video player
+     <altgr><w>      ⇨  web  browser
+     <altgr><f>      ⇨  file manager
+     <altgr><m>      ⇨  mail reader
+     <altgr><i>      ⇨  instant messenger
+     <altgr><n>      ⇨  network manager
+     <altgr><x>      ⇨  multimonitor manager
+     <altgr><M>      ⇨  music player
+     <altgr><V>      ⇨  video player
+     <altgr><t>      ⇨  text2speech
+     <altgr><v>      ⇨  virtual machine launcher
+     <altgr><z>      ⇨  zoom lent
+     <altgr><c>      ⇨  countdown alarm
 
-   <altgr><space>   ⇨  toggle screen powersave
-     <altgr><s>     ⇨  search song in mpd
-     <altgr><p>     ⇨  play/stop music
-     <altgr><¿>     ⇨  play next track
-     <altgr><´>     ⇨  play previous track
-     <altgr><.>     ⇨  increase volume
-     <altgr><->     ⇨  decrease volume
-     <altgr><t>     ⇨  word teller
+     <altgr><s>      ⇨  search song
+    XF86AudioPlay    ⇨  play/stop music
+    XF86AudioNext    ⇨  play next track
+    XF86AudioPrev    ⇨  play previous track
+XF86AudioRaiseVolume ⇨  increase volume
+XF86AudioLowerVolume ⇨  decrease volume
+   <altgr><space>    ⇨  toggle screen powersave
 
-  <ctrl><alt><supr> ⇨  session manager
-   <ctrl><alt><l>   ⇨  lock screen
-    <alt><rshift>   ⇨  change keyboard layout
+      <ImpPt>        ⇨  screenshot
+    <alt><ImpPt>     ⇨  selective screenshot
+    <win><ImpPt>     ⇨  screencast
+  <win><alt><ImpPt>  ⇨  selective screencast
+<win><shift><ImpPt>  ⇨  stop screencast
+   <ctrl><ImpPt>     ⇨  gif selective screencast
 
-     <ctrl><C>      ⇨  copy to clipboard
-     <ctrl><V>      ⇨  paste from clipboard
-     <ctrl><+>      ⇨  increase font size
-     <ctrl><->      ⇨  decrease font size
+     <ctrl><C>       ⇨  copy to clipboard
+     <ctrl><V>       ⇨  paste from clipboard
+     <ctrl><+>       ⇨  increase font size
+     <ctrl><->       ⇨  decrease font size
 
-      <win><f>      ⇨  fullscreen
-      <win><d>      ⇨  default
-      <win><s>      ⇨  vertical stack
-      <win><a>      ⇨  tabbed
-    <win><insert>   ⇨  insert app into buffer mode
+  <ctrl><alt><supr>  ⇨  session manager
+   <ctrl><alt><l>    ⇨  lock screen
+    <alt><rshift>    ⇨  change keyboard layout
 
-      <win><n>      ⇨  go to <n> desk
-      <win><->>     ⇨  go to next desk
-      <win><<->     ⇨  go to previous desk
-      <win><h>      ⇨  go to left window
-      <win><l>      ⇨  go to right window
-      <win><j>      ⇨  go to upper window
-      <win><k>      ⇨  go to down window
-      <win><N>      ⇨  move app to <n> desk
-      <win><H>      ⇨  move app to the left
-      <win><L>      ⇨  move app to the right
-      <win><J>      ⇨  move app down
-      <win><K>      ⇨  move app up
+      <win><f>       ⇨  fullscreen mode
+      <win><d>       ⇨  default mode
+      <win><s>       ⇨  vertical stack mode
+      <win><a>       ⇨  tabbed mode
+    <win><insert>    ⇨  move app into buffer mode
+<win><shift><space>  ⇨  toggle floating mode
 
-      <win><m>      ⇨  mark an app
-      <win><'>      ⇨  go to a marked app
+      <win><n>       ⇨  go to <n> desk
+      <win><->>      ⇨  go to next desk
+      <win><<->      ⇨  go to previous desk
+      <win><h>       ⇨  go to left window
+      <win><l>       ⇨  go to right window
+      <win><j>       ⇨  go to upper window
+      <win><k>       ⇨  go to down window
+      <win><N>       ⇨  move app to <n> desk
+      <win><H>       ⇨  move app to the left
+      <win><L>       ⇨  move app to the right
+      <win><J>       ⇨  move app down
+      <win><K>       ⇨  move app up
+      <win><r>       ⇨  rename desk
+  <win><left click>  ⇨  move window
+  <win><righ click>  ⇨  resize window
 
-      <ImpPt>       ⇨  screenshot
-    <alt><ImpPt>    ⇨  selective screenshot
-    <win><ImpPt>    ⇨  screencast
-  <win><alt><ImpPt> ⇨  selective screencast
-<win><shift><ImpPt> ⇨  stop screencast
-   <ctrl><ImpPt>    ⇨  gif selective screencast
+      <win><m>       ⇨  mark an app
+      <win><'>       ⇨  go to a marked app
 
-<win><shift><space> ⇨  window toggle mode
-  <win><left click> ⇨  move window
-  <win><righ click> ⇨  resize window
-
-     <altgr><r>     ⇨  enter resize mode
-         <h>        ⇨  +1 px to the left
-         <l>        ⇨  -1 px to the right
-         <j>        ⇨  -1 px down
-         <k>        ⇨  +1 px up
-     <altgr><r>     ⇨  exit resize mode
+     <altgr><r>      ⇨  enter resize mode
+         <h>         ⇨  +1 px to the left
+         <l>         ⇨  -1 px to the right
+         <j>         ⇨  -1 px down
+         <k>         ⇨  +1 px up
+     <altgr><r>      ⇨  exit resize mode

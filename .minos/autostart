@@ -23,14 +23,17 @@ _execm()
     fi
 }
 
-#TODO 23-12-2014 16:44 >> fix it
-_exec i3-msg workspace "1 www" # force to start on first virtual workspace
+ #force to start on first virtual workspace
+ w1="$(cat /etc/i3/config ~/.i3/config 2>/dev/null | \
+     awk '/set \$w1 / {$1=""; $2=""; sub(/^[ \t]+/, ""); print}' | tail -1)"
+ if [ -n "${w1}" ]; then
+    _exec i3-msg workspace "${w1}"
+ fi
 
 #_exec mplayer -loop 0 -rootwin -ao null -noconsolecontrols video.mp4 # video background
 wallpaper="$(minos-config wallpaper 2>/dev/null)"
-#if no wallpaper default to black
-[ -z "${wallpaper}" ] && _exec xsetroot -solid "#000000" || \
-    _exec feh --bg-scale "${wallpaper}"
+#if no wallpaper is set default to black
+[ -z "${wallpaper}" ] && _exec xsetroot -solid "#000000" || _exec feh --bg-scale "${wallpaper}"
 
 terminal_emulator="$(minos-config x-terminal 2>/dev/null)"
 [ -z "${terminal_emulator}" ] && terminal_emulator="x-terminal-emulator"
@@ -39,11 +42,14 @@ _execm m-clipboard autocutsel # sync X/Gnome clipboards
 _execm m-eyesaver  redshift   # save your eyes
 _execm m-handsaver workrave   # save your hands
 (sleep 1.5 && _execm m-composition compton)& # eyecandy + fix for general tearing
-#(sleep 1 && _execm m-composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
-[ -e /tmp/mplayer.fifo ] || _exec mkfifo /tmp/mplayer.fifo # mplayer fifo controller
+#(sleep 1.5 && _execm m-composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
+#mplayer fifo controller
+mplayer__fifo="$(cat etc/mplayer/mplayer.conf ~/.mplayer/config 2>/dev/null | \
+                 awk '/^input=file=/ {sub(/^input=file=/, ""); print}' | tail -1)"
+[ -n "${mplayer__fifo}" ] && [ ! -e "${mplayer__fifo}" ] && mkfifo "${mplayer__fifo}"
 _exec minos-welcome
 
-#_exec urxvtd -q -f -o          # urxvt server, improves performance breaks often
+#_exec urxvtd -q -f -o          # urxvt server, improves performance but breaks often
 #_exec xbanish                  # hide mouse coursor when it isn't used, broken
 #_exec unclutter -root -visible # hide mouse coursor when it isn't used, broken
 #_exec numlockx on              # numlock on
