@@ -39,8 +39,7 @@ exec --no-startup-id m-autostart
 #Mod3 is Windows (Super_L), Mod4 is <Win> and Mod1 is <Alt>
 set $Win   Mod4
 set $Alt   Mod1
-set $Altgr   Mod5
-#set $Altgr   108
+set $Altgr Mod5
 set $Shift_R 62
 
 set $Esc      9
@@ -116,24 +115,39 @@ bindsym  F1                   exec m-help
 bindcode $Win+$Enter          exec m-terminal
 bindcode $Win+Shift+$Enter    split h
 bindcode $Alt+$Esc            exec m-launcher
-bindsym $Altgr+k              kill
-bindsym $Altgr+l              exec m-killer
-bindsym $Alt+Tab              exec m-window-jumper
-bindsym $Altgr+w              exec m-browser
-bindsym $Altgr+f              exec m-file-manager
-bindsym $Altgr+m              exec m-mail
-bindsym $Altgr+z              exec m-magnifier
-bindsym $Altgr+i              exec m-im
-bindsym $Altgr+Shift+m        exec m-music-player
-bindsym $Altgr+Shift+v        exec m-video-player
-bindsym $Altgr+n              exec m-network-manager
+
+#starting i3 v4.11 bindsys is hardly useful
+#for latam keyboards, therefore keyshortcuts
+#are defined as bindcode entries
+#        $Altgr+k
+bindcode $Altgr+45            kill
+#        $Altgr+l
+bindcode $Altgr+46            exec m-killer
+bindsym  $Alt+Tab             exec m-window-jumper
+#        $Altgr+w
+bindcode $Altgr+25            exec m-browser
+#        $Altgr+f
+bindcode $Altgr+41            exec m-file-manager
+#        $Altgr+m
+bindcode $Altgr+58            exec m-mail
+#        $Altgr+z
+bindcode $Altgr+52            exec m-magnifier
+#        $Altgr+i
+bindcode $Altgr+31            exec m-im
+#        $Altgr+Shift+m
+bindcode $Altgr+Shift+58      exec m-music-player
+#        $Altgr+Shift+v
+bindcode $Altgr+Shift+55      exec m-video-player
+bindsym  $Altgr+n             exec m-network-manager
 bindcode Control+$Alt+$Supr   exec m-session-manager
 bindsym Control+$Alt+l        exec m-session-manager lock
 bindcode $Alt+$Shift_R        exec m-keyboard
 bindcode $Altgr+$Space        exec m-movietime
-bindsym $Altgr+x              exec m-multimonitor
-bindsym XF86Display           exec m-multimonitor
-bindsym  $Altgr+p             exec player-ctrl toggle
+#        $Altgr+x
+bindcode $Altgr+53            exec m-multimonitor
+bindsym  XF86Display          exec m-multimonitor
+#        $Altgr+p
+bindcode $Altgr+33            exec player-ctrl toggle
 bindcode $Altgr+21            exec player-ctrl next
 bindcode $Altgr+34            exec player-ctrl previous
 bindsym XF86AudioPlay         exec player-ctrl toggle
@@ -148,12 +162,15 @@ bindcode $Win+$ImpPt          exec m-screencast
 bindcode $Win+$Alt+$ImpPt     exec m-screencast -s
 bindcode Control+$ImpPt       exec gifcast
 bindcode $Win+Shift+$ImpPt    exec m-screencast -k
-bindsym $Altgr+s              exec dmenu-mpd
+#        $Altgr+s
+bindcode $Altgr+39            exec dmenu-mpd
 bindsym Control+$Alt+v        exec vim-anywhere
-bindsym $Altgr+v              exec dmenu-vbox
-bindsym $Altgr+t              exec dmenu-txt2speech
-#bindsym $Altgr+c              exec dmenu-countdown
-bindsym $Altgr+c              exec dmenu-countdown -p mplayer -t ~/tmp_music/Rammstein\ -\ Moskau.mp3
+#        $Altgr+v
+bindcode $Altgr+55            exec dmenu-vbox
+#        $Altgr+t
+bindcode $Altgr+28            exec dmenu-txt2speech
+#bindsym $Altgr+c             exec dmenu-countdown
+bindcode $Altgr+54            exec dmenu-countdown -p mplayer -t ~/data/music/rock\ industrial/Rammstein/Rammstein\ -\ Moskau.mp3
 
 #volume down ($Altgr+,) ($Altgr+.)
 bindcode $Altgr+59 exec amixer -q set Master 1-
@@ -187,11 +204,13 @@ mode "resize" {
     bindsym l resize shrink left 10 px
 
     #Exit resize mode
-    bindsym $Altgr+r mode "default"
+    #        $Altgr+r
+    bindcode $Altgr+27 mode "default"
 }
 
 #Enter resize mode
-bindsym $Altgr+r mode "resize"
+#        $Altgr+r
+bindcode $Altgr+27 mode "resize"
 
 #Get me to the next open VIM instance
 #bindsym $Win+v [class="buzz" title="VIM"] focus
