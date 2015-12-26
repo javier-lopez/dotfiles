@@ -30,8 +30,16 @@ alias share.internet='_si() { sudo iptables -t nat -A POSTROUTING -o "${1}" -j M
 alias youtube-dl='youtube-dl -f 43'
 alias getpass='_getpass() { _g=$(printf "%s" "${*}" | md5sum | openssl enc -base64 | cut -c1-16); printf "%s" "${_g}"|xclip -selection clipboard 2>/dev/null|| printf "%s\\n" "${_g}"; }; _getpass'
 alias uu='update && upgrade'
+alias suspend.in='_suspend.in() { printf "%s\\n" "sleep ${1} && m-session-manager suspend"; sleep "${1}" && m-session-manager suspend; }; _suspend.in'
 
-#the best games in history
+#watch series/anime in streaming
+alias watch.dragon.ball.z='livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_animes worst'
+alias watch.simpsons='livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_simpson worst'
+alias watch.peliculas.terror='livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_extremo worst'
+alias watch.malcom='livestreamer -l debug -p mplayer http://vaughnlive.tv/megamalcolm worst'
+alias watch.peliculas.accion='livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_movieshd worst'
+
+#best games in history
 alias aom='xhost + >/dev/null; mkdir -p ~/.aom-savegame >/dev/null; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.aom-pbuilderrc --basetgz ~/code/games/age-of-mythology-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
 alias aoe2='xhost + >/dev/null; mkdir -p ~/.aoe2-savegame ~/.aoe2-player >/dev/null; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.aoe2-pbuilderrc --basetgz ~/code/games/age-of-empires-II-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
 alias warcraft3='xhost + >/dev/null; mkdir -p ~/.warcraft3-savegame >/dev/null; xrandr | awk "/+$/ {print \$1}" | sort -nr | awk "{print \$1; exit}" > ~/.warcraft3-savegame/max-resolution; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.warcraft3-pbuilderrc --basetgz ~/code/games/warcraft3-frozen-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
