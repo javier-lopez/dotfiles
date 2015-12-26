@@ -170,7 +170,7 @@ bindcode $Altgr+55            exec dmenu-vbox
 #        $Altgr+t
 bindcode $Altgr+28            exec dmenu-txt2speech
 #bindsym $Altgr+c             exec dmenu-countdown
-bindcode $Altgr+54            exec dmenu-countdown -p mplayer -t ~/data/music/rock\ industrial/Rammstein/Rammstein\ -\ Moskau.mp3
+bindcode $Altgr+54            exec dmenu-countdown -e 'mplayer "~/data/music/rock (industrial)/Rammstein/Rammstein - Moskau.mp3"'
 
 #volume down ($Altgr+,) ($Altgr+.)
 bindcode $Altgr+59 exec amixer -q set Master 1-
@@ -223,19 +223,15 @@ bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
 ############## ASSIGNS #############
 ####################################
 
-for_window [class="Magnifier"] floating enable
-for_window [title="^xzoom"] border none; floating enable
-for_window [class="Xmessage"]  floating enable
-for_window [class="Gxmessage"] floating enable
-for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
-for_window [class="^TeamViewer.exe$"] floating enable
-for_window [title="^TeamViewer$"] floating enable
-for_window [title="- TeamViewer -"] floating enable
-for_window [class="Firefox" title="^About.*"] floating enable
+for_window [class="Magnifier|Xmessage|Gxmessage|Screenkey"] floating enable
+for_window [class="^TeamViewer.exe$|^TeamViewer$|- TeamViewer -"] floating enable
 for_window [class="realvnc-vncviewer"] floating enable
+for_window [title="^xzoom"] border none; floating enable
+for_window [class="Firefox" title="^About.*"] floating enable
 for_window [class="Xarchiver" title="Xarchiver$"] floating enable
 for_window [class="Gvim" window_role="vim-anywhere"] floating enable
-for_window [class="Screenkey"] floating enable
+for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
+for_window [class="MPlayer|mplayer2"] fullscreen
 
 #popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
 #popup_during_fullscreen ignore
