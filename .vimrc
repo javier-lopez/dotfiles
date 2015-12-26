@@ -249,8 +249,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
 
     "====github====
     Bundle 'chilicuil/vundle'
-    Bundle 'paradigm/TextObjectify', { 'on': 'delay' }
-    Bundle 'edsono/vim-matchit'    , { 'on': 'delay 10' } "triggered by CursorHold/CursorMoved hooks
+    Bundle 'paradigm/TextObjectify', { 'on': 'delay' } "triggered by CursorHold/CursorMoved hooks
+    Bundle 'edsono/vim-matchit'    , { 'on': 'delay 10' }
     Bundle 'scrooloose/nerdtree'   , { 'on': 'NERDTreeToggle' }
         let g:NERDTreeWinPos       = 'right'
         let g:NERDTreeWinSize      = 25
@@ -360,6 +360,12 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
     Bundle 'mbbill/undotree'    , { 'on': 'UndotreeToggle'}
         map <leader>u :UndotreeToggle<cr>
+    Bundle 'junegunn/vim-easy-align' , { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
+        "command! -nargs=* -range -bang Align
+        "\ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
+        command! -nargs=* -range -bang Align <line1>,<line2>EasyAlign
+        vmap . <Plug>(EasyAlignRepeat)
+        nmap <leader>a <Plug>(EasyAlign)
 
     "===vim-scripts===, not hosted in github for some obscure reason
     Bundle 'surround.vim'    , { 'on': 'insert' }
@@ -368,12 +374,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'repeat.vim'      , { 'on': 'delay' }
 
     "===experimental===
-    Bundle 'junegunn/vim-easy-align' , { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
-        "command! -nargs=* -range -bang Align
-        "\ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
-        command! -nargs=* -range -bang Align <line1>,<line2>EasyAlign
-        vmap . <Plug>(EasyAlignRepeat)
-        nmap <leader>a <Plug>(EasyAlign)
     Bundle 'chilicuil/goyo.vim' , { 'on': '<Plug>Goyo' }
         map <leader>y <Plug>Goyo
         "let g:goyo_width         = 160
@@ -390,6 +390,10 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'lilydjwg/colorizer'
 
     Bundle 'zah/nimrod.vim'
+    if v:version < 704
+        Bundle 'google/vim-ft-go'
+    endif
+    Bundle 'gastonsimone/vim-dokumentary'
     Bundle 'wting/gitsessions.vim'
         command! -nargs=* SessionSave   GitSessionSave
         command! -nargs=* SessionDelete GitSessionDelete
