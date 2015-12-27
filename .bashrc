@@ -1,18 +1,18 @@
 #-------------------------------------------------------------------------------
-#           Last review            Wed 23 Apr 2014 04:16:19 PM CDT
+#           Last review            Sat 26 Dec 2015 09:25:34 PM CST
 #-------------------------------------------------------------------------------
 
 #===============================================================================
 #================================= General =====================================
 #===============================================================================
 
-# do nothing if not running interactively
+#do nothing if not running interactively
 [ -z "${PS1}" ] && return
 
 set -o vi #this is sparta!
 stty -ctlecho #don't show ^C when pressing Ctrl+C
 
-# http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
+#http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 [ "${BASH_VERSINFO}" -ge "4" ] && shopt -s autocd cdspell dirspell
 shopt -s checkhash checkwinsize cmdhist expand_aliases histreedit mailwarn
 shopt -s hostcomplete histappend histverify
@@ -26,7 +26,7 @@ bind "set completion-ignore-case on"
 #{ sleep 0.01 ; builtin kill -USR2 $$ ; } & disown
 [ -z "${BASH_COMPLETION_COMPAT_DIR}" ] && [ -f /etc/bash_completion ] && . /etc/bash_completion
 
-# make less more friendly for non-text input files, see lesspipe(1)
+#make less more friendly for non-text input files, see lesspipe(1)
 if command -v "lesspipe" >/dev/null 2>&1; then
     eval "$(SHELL=/bin/sh lesspipe)"
 fi
@@ -35,7 +35,7 @@ fi
 #export TERM="xterm-color"
 #export TERM="xterm-256color"
 
-# Change the X terminal window title
+#change X terminal window title
 case "${TERM}" in
     xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
         PROMPT_COMMAND='printf "%b" "\033]0;${PWD/$HOME/~}\007"' ;;
@@ -47,15 +47,14 @@ esac
 #=============================== Environment  ==================================
 #===============================================================================
 
-# path
 export PATH="$HOME/code/tmux/bin:/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
 #export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin/X11:/usr/games"
 
-# gpg
+#gpg
 export GPGKEY="C92C604E"
 export GPG_TTY="$(tty)"
 
-# random vars
+#random vars
 export EDITOR="editor"
 export CSCOPE_EDITOR="editor"
 export WCDHOME="${HOME}/.wcd"
@@ -113,5 +112,8 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
     Bundle="gh:chilicuil/shundle-plugins/autocd"
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
 else
-    alias shundle-install='git clone --depth=1 https://github.com/chilicuil/shundle ~/.shundle/bundle/shundle'
+    alias shundle-install='git clone --depth=1 \
+    https://github.com/chilicuil/shundle ~/.shundle/bundle/shundle && \
+    . ~/.bashrc && ~/.shundle/bundle/shundle/bin/shundle install   && \
+    bash'
 fi
