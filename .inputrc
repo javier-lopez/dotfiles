@@ -65,6 +65,10 @@ Control-l: clear-screen
 "di>": "lF<lmtf>d`t"
 "ci>": "di>i"
 "ca>": "da>i"
+"da/": "lF/df/"
+"di/": "lF/lmtf/d`t"
+"ci/": "di/i"
+"ca/": "da/i"
 "gg": beginning-of-history
 "G": end-of-history
 ?: reverse-search-history

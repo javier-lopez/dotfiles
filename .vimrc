@@ -239,7 +239,9 @@ if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
     echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
     if nr2char(getchar()) ==? 'y'
         "!git clone --depth=1 https://github.com/chilicuil/vundle-legacy.git ~/.vim/bundle/vundle
-        !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
+        silent !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
+        silent !printf "Installing vundle plugins ..."
+        silent !vim -es -u "${HOME}"/.vimrc -c "BundleInstall" -c qa
     endif
 endif
 
@@ -250,7 +252,10 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "====github====
     Bundle 'chilicuil/vundle'
     Bundle 'paradigm/TextObjectify', { 'on': 'delay' } "triggered by CursorHold/CursorMoved hooks
-    Bundle 'edsono/vim-matchit'    , { 'on': 'delay 10' }
+    Bundle 'edsono/vim-matchit'    ", { 'on': 'delay 10' }
+    Bundle 'gregsexton/MatchTag'   ", { 'on': 'delay 10' }
+    "complex alternative, requires +python
+    "Bundle 'valloric/MatchTagAlways'
     Bundle 'scrooloose/nerdtree'   , { 'on': 'NERDTreeToggle' }
         let g:NERDTreeWinPos       = 'right'
         let g:NERDTreeWinSize      = 25
@@ -272,7 +277,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:tagbar_width         = 25
         map <silent> <leader>l     :TagbarToggle<cr>
     Bundle 'mhinz/vim-hugefile'
-    Bundle 'henrik/vim-indexed-search'  , { 'on': 'delay' } "by default delay 10 steps
+    Bundle 'henrik/vim-indexed-search'  , { 'on': 'delay' }
     Bundle 'kien/ctrlp.vim'             , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "frozen
     "Bundle 'ctrlpvim/ctrlp.vim'        , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
         "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
@@ -335,11 +340,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
             endif
         endif
     Bundle 'chilicuil/vimbuddy.vim'
-    Bundle 'chilicuil/TaskList.vim'  , { 'on': '<Plug>TaskList' }
-        let g:Tlist_WinWidth         = 25
-        let g:Tlist_Show_One_File    = 1
-        let Tlist_Enable_Fold_Column = 0
-        map <leader>o <Plug>TaskList
     Bundle 'chilicuil/securemodelines'
         "let g:secure_modelines_verbose=1
     Bundle 'chilicuil/gnupg.vim'
@@ -353,12 +353,16 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <silent> <leader>w <Plug>XWriteMode
         map <silent> <leader>p <Plug>XPresentationMode
     Bundle 'chilicuil/vim-cutils'
+        "cutils#VCSInfo
+        "cutils#FileSize
+        "cutils#CUSkel, create own plugin?
+        "cutils#CUSetProperties
         let g:cutils_map_longlines      = '<leader>cul'
         let g:cutils_map_appendmodeline = '<leader>am'
     Bundle 'ntpeters/vim-better-whitespace' , { 'on': 'delay' }
         set list
         set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-    Bundle 'mbbill/undotree'    , { 'on': 'UndotreeToggle'}
+    Bundle 'mbbill/undotree'         , { 'on': 'UndotreeToggle'}
         map <leader>u :UndotreeToggle<cr>
     Bundle 'junegunn/vim-easy-align' , { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
         "command! -nargs=* -range -bang Align
@@ -366,11 +370,28 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         command! -nargs=* -range -bang Align <line1>,<line2>EasyAlign
         vmap . <Plug>(EasyAlignRepeat)
         nmap <leader>a <Plug>(EasyAlign)
+    Bundle 'scrooloose/syntastic'
+        if filereadable(expand("~/.vim/bundle/syntastic/plugin/syntastic.vim"))
+            set statusline+=%#warningmsg#
+            set statusline+=%{SyntasticStatuslineFlag()}
+            set statusline+=%*
+        endif
+        let g:syntastic_always_populate_loc_list = 1
+        let g:syntastic_auto_loc_list            = 1
+        let g:syntastic_check_on_open            = 1
+        let g:syntastic_check_on_wq              = 0
+        let g:syntastic_python_python_exec       = "python2"
+        let g:syntastic_html_tidy_exec           = "tidy"
+
+    if v:version < 704
+        Bundle 'google/vim-ft-go'
+    endif
 
     "===vim-scripts===, not hosted in github for some obscure reason
-    Bundle 'surround.vim'    , { 'on': 'insert' }
+    Bundle 'surround.vim'    , { 'on': 'insert' } "vim objects on steroids
         " ds" / cs"' / ysiw'
-    Bundle 'delimitMate.vim' , { 'on': 'insert' }
+    Bundle 'delimitMate.vim' , { 'on': 'insert' } "autocomplete pairs
+        au FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
     Bundle 'repeat.vim'      , { 'on': 'delay' }
 
     "===experimental===
@@ -390,9 +411,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'lilydjwg/colorizer'
 
     Bundle 'zah/nimrod.vim'
-    if v:version < 704
-        Bundle 'google/vim-ft-go'
-    endif
     Bundle 'gastonsimone/vim-dokumentary'
     Bundle 'wting/gitsessions.vim'
         command! -nargs=* SessionSave   GitSessionSave
@@ -401,6 +419,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:tmuxcomplete#trigger = ''
         "let g:tmuxcomplete#trigger = 'omnifunc'
     Bundle 'tmux-plugins/vim-tmux'
+    Bundle 'ap/vim-css-color'
+    Bundle 'alvan/vim-closetag' , { 'on': 'insert' }
+        let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 
     command! -nargs=+ Grep execute 'silent grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e <args>' | copen | execute 'silent /<args>'
     " shift-control-* Greps for the word under the cursor
