@@ -19,7 +19,7 @@ m-autostart         minos-autostart
 m-composition       compton
 m-eyesaver          redshift
 m-handsaver         workrave
-m-clipboard         autocutsel
+m-clipboard         autocutsel -fork && autocutsel -selection PRIMARY -fork
 m-statusbar         minos-statusbar
 #m-statusbar-icons  sm4tik
 #m-statusbar-config /etc/minos/statusbar
@@ -65,9 +65,9 @@ m-screenshot         screenshot
 m-screencast         ffcast
 
 #minos.io/s
-dotfiles       https://github.com/chilicuil/dotfiles
-hook           http://minos.io/hook
-app-core       mozilla-firefox mozilla-flashplayer
-app-desktop    mozilla-firefox mozilla-flashplayer
+dotfiles             https://github.com/chilicuil/dotfiles
+hook                 http://minos.io/hook
+app-core             mozilla-firefox mozilla-flashplayer
+app-desktop          mozilla-firefox mozilla-flashplayer
 #core,desktop?
-app-purge      xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie
+app-purge            xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie

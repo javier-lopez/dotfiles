@@ -1,59 +1,56 @@
 #!/bin/sh
 
-_exec()
-{
+_exec() {
     [ -z "${1}" ] && return 1
-    if command -v "${1}" >/dev/null; then
-        if ! pgrep -f "${1}" >/dev/null; then
-            ${@} &
+    if command -v "${1%% *}" >/dev/null; then
+        if ! pgrep -f "${1%% *}" >/dev/null; then
+            (eval "${@}") &
         fi
     else
         printf "%s\\n" "${1} was not found!" >&2
     fi
 }
 
-_execm()
-{
+_execm() {
     [ X"$(minos-config "${1#m-}" 2>/dev/null)" = X"no" ] && return
-    _execm_var_tool="$(minos-config "${1}" 2>/dev/null)"
-    if [ -z "${_execm_var_tool}" ]; then
-        shift; _exec ${@}
+    _execm__tool="$(minos-config "${1}" 2>/dev/null)"
+    if [ -z "${_execm__tool}" ]; then
+        shift; _exec "${@}"
     else
-        _exec ${_execm_var_tool}; _execm_var_tool=""
+        _exec "${_execm__tool}"; unset _execm__tool
     fi
 }
 
- #force to start on first virtual workspace
- w1="$(cat /etc/i3/config ~/.i3/config 2>/dev/null | \
-     awk '/set \$w1 / {$1=""; $2=""; sub(/^[ \t]+/, ""); print}' | tail -1)"
- if [ -n "${w1}" ]; then
-    _exec i3-msg workspace "${w1}"
- fi
+#force to start in the 1st virtual workspace
+w1="$(cat /etc/i3/config ~/.i3/config 2>/dev/null | \
+    awk '/set \$w1 / {$1=""; $2=""; sub(/^[ \t]+/, ""); print; exit}' | tail -1)"
+[ -n "${w1}" ] && _exec i3-msg workspace "${w1}"
 
-#_exec mplayer -loop 0 -rootwin -ao null -noconsolecontrols video.mp4 # video background
+#_exec mplayer -loop 0 -rootwin -ao null -noconsolecontrols video.mp4 #video background
 wallpaper="$(minos-config wallpaper 2>/dev/null)"
-#if no wallpaper is set default to black
+#if no wallpaper, set background to black; otherwise apply the wallpaper
 [ -z "${wallpaper}" ] && _exec xsetroot -solid "#000000" || _exec feh --bg-scale "${wallpaper}"
 
 terminal_emulator="$(minos-config x-terminal 2>/dev/null)"
-[ -z "${terminal_emulator}" ] && terminal_emulator="x-terminal-emulator"
+terminal_emulator="${terminal_emulator:-x-terminal-emulator}"
 _exec "${terminal_emulator}" -name scratchpad -e "${SHELL}"
-_execm m-clipboard autocutsel # sync X/Gnome clipboards
-_execm m-eyesaver  redshift   # save your eyes
-_execm m-handsaver workrave   # save your hands
-(sleep 1.5 && _execm m-composition compton)& # eyecandy + fix for general tearing
-#(sleep 1.5 && _execm m-composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
+
+_execm m-clipboard autocutsel #sync X/Gnome clipboards
+_execm m-eyesaver  redshift   #save your eyes
+_execm m-handsaver workrave   #save your hands
+(sleep 2 && _execm m-composition compton)& #eyecandy + fix for general tearing
+#(sleep 2 && _execm m-composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
 #mplayer fifo controller
 mplayer__fifo="$(cat etc/mplayer/mplayer.conf ~/.mplayer/config 2>/dev/null | \
                  awk '/^input=file=/ {sub(/^input=file=/, ""); print}' | tail -1)"
 [ -n "${mplayer__fifo}" ] && [ ! -e "${mplayer__fifo}" ] && mkfifo "${mplayer__fifo}"
 _exec minos-welcome
 
-#_exec urxvtd -q -f -o          # urxvt server, improves performance but breaks often
-#_exec xbanish                  # hide mouse coursor when it isn't used, broken
-#_exec unclutter -root -visible # hide mouse coursor when it isn't used, broken
-#_exec numlockx on              # numlock on
-#_exec setxkbmap -option terminate:ctrl_alt_bksp # Ctrl-Alt-Backspace to kill X
+#_exec urxvtd -q -f -o          #urxvt server, improves performance but breaks often
+#_exec xbanish                  #hide mouse coursor when it isn't used, broken
+#_exec unclutter -root -visible #hide mouse coursor when it isn't used, broken
+#_exec numlockx on              #numlock on
+#_exec setxkbmap -option terminate:ctrl_alt_bksp #Ctrl-Alt-Backspace to kill X
 
 if [ -x "${HOME}"/.minos/autostart ] && [ X"${0}" != X"${HOME}"/.minos/autostart ]; then
     exec "${HOME}"/.minos/autostart
