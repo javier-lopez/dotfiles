@@ -67,7 +67,7 @@ set csto=0            "gives preference to cscope over ctag
 "set mousehide        "hide the mouse while typying
 "set mouse=nv         "set the mouse to work in console mode
 set foldenable!       "disable folding by default
-set foldmethod=syntax
+"set foldmethod=indent "other options are marker|expr|manual
 "set foldmarker={,}
 "set clipboard=unnamed
 set clipboard=unnamedplus      "yanks go to clipboard, "+p to recover
@@ -86,13 +86,20 @@ setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 
 "====== Autoloads ======
 if has("autocmd")
+    augroup vimrc
     "Go back to the position the cursor was on the last time this file was edited
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \|execute("normal '\"")|endif
     autocmd VimEnter * nohls "turn off any existing search
+
     "browse documentation with <Enter>/<BS>
     autocmd filetype help :nnoremap <buffer><CR> <c-]>
     autocmd filetype help :nnoremap <buffer><BS> <c-T>
+
+    "set foldmethod to manual after initial automatic indent recognition
+    "autocmd BufReadPre  * setlocal foldmethod=indent
+    "autocmd BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+    augroup END
 endif
 
 "====== Status Line ======
