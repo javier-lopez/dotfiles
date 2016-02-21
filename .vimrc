@@ -86,12 +86,13 @@ setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
 
 "====== Autoloads ======
 if has("autocmd")
-    augroup vimrc
     "Go back to the position the cursor was on the last time this file was edited
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \|execute("normal '\"")|endif
-    autocmd VimEnter * nohls "turn off any existing search
 
+    augroup vimrc "cannon be used with the above line, otherwise the cursor
+                  "will jump randomly upon the first insert mode change
+    autocmd VimEnter * nohls "turn off any existing search
     "browse documentation with <Enter>/<BS>
     autocmd filetype help :nnoremap <buffer><CR> <c-]>
     autocmd filetype help :nnoremap <buffer><BS> <c-T>
@@ -359,7 +360,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/gnupg.vim'
     Bundle 'chilicuil/vim-markdown'
     Bundle 'chilicuil/vim-sprunge' , { 'on': ['<Plug>Sprunge'] }
-        map <leader>s          <Plug>Sprunge
+        map <leader>s <Plug>Sprunge
+    Bundle 'chilicuil/vim-checksum' , { 'on': ['<Plug>Checksum'] }
+        map <leader>c <Plug>Checksum
     Bundle 'chilicuil/file-line'
     Bundle 'chilicuil/x-modes' , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
         map <silent> <leader>D <Plug>XDefaultMode
