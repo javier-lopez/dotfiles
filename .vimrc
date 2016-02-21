@@ -281,9 +281,20 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:snips_authorEmail    = "m@javier.io"
         let g:snippets_dir         = "~/.vim/bundle/vim-snippets/snipmate/"
     Bundle 'chilicuil/vim-snippets', { 'on': 'insert' }
-    Bundle 'majutsushi/tagbar'     , { 'on': 'TagbarToggle' }
+    Bundle 'majutsushi/tagbar' , { 'on': 'TagbarToggle', 'do': 'wget --no-check-certificate https://raw.githubusercontent.com/chilicuil/learn/master/python/mkd2ctags && chmod +x mkd2ctags' }
         let g:tagbar_left          = 1
         let g:tagbar_width         = 25
+        let g:tagbar_type_mkd      = {
+            \ 'ctagstype': 'markdown',
+            \ 'ctagsbin' : '~/.vim/bundle/tagbar/mkd2ctags',
+            \ 'ctagsargs' : '-f - --sort=yes',
+            \ 'kinds' : [
+                \ 's:sections',
+                \ 'l:links',
+                \ 'i:images'
+            \ ],
+            \ 'sort': 0
+        \ }
         map <silent> <leader>l     :TagbarToggle<cr>
     Bundle 'mhinz/vim-hugefile'
 
@@ -359,7 +370,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:secure_modelines_verbose=1
     Bundle 'chilicuil/gnupg.vim'
     Bundle 'chilicuil/vim-markdown'
-    Bundle 'chilicuil/vim-sprunge' , { 'on': ['<Plug>Sprunge'] }
+    Bundle 'chilicuil/vim-sprunge'  , { 'on': ['<Plug>Sprunge'] }
         map <leader>s <Plug>Sprunge
     Bundle 'chilicuil/vim-checksum' , { 'on': ['<Plug>Checksum'] }
         map <leader>c <Plug>Checksum
