@@ -19,7 +19,8 @@ m-autostart         minos-autostart
 m-composition       compton
 m-eyesaver          redshift
 m-handsaver         workrave
-m-clipboard         autocutsel -fork && autocutsel -selection PRIMARY -fork
+m-clipboard         autocutsel -fork
+#m-clipboard         autocutsel -fork && autocutsel -selection PRIMARY -fork
 m-statusbar         minos-statusbar
 #m-statusbar-icons  sm4tik
 #m-statusbar-config /etc/minos/statusbar
