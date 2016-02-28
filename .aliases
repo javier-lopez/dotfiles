@@ -30,7 +30,7 @@ alias share.internet='_si() { sudo iptables -t nat -A POSTROUTING -o "${1}" -j M
 alias youtube-dl.audio='youtube-dl --extract-audio --audio-quality 0'
 #alias getpass='_getpass() { _g=$(printf "%s" "${*}" | md5sum | openssl enc -base64 | cut -c1-16); printf "%s" "${_g}"|xclip -selection clipboard 2>/dev/null|| printf "%s\\n" "${_g}"; }; _getpass'
 alias uu='update && upgrade'
-alias suspend.in='_suspend.in() { printf "%s\\n" "sleep ${1} && m-session-manager suspend"; sleep "${1}" && m-session-manager suspend; }; _suspend.in'
+alias suspend.in='_suspend_in() { printf "%s\\n" "sleep ${1} && m-session-manager suspend"; sleep "${1}" && m-session-manager suspend; }; _suspend_in'
 
 #watch series/anime in streaming
 alias watch.dragon.ball.z='if rtmpdump -h >/dev/null 2>&1; then livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_animes worst; else printf "install rtmpdump and livestreamer to continue\\n"; fi'
@@ -59,3 +59,20 @@ alias pbuilder.sid.i386='sudo DIST="sid" ARCH=i386 pbuilder'
 alias pbuilder.precise.amd64='sudo DIST="precise" ARCH=amd64 pbuilder'
 alias pbuilder.trusty.amd64='sudo DIST="trusty" ARCH=amd64 pbuilder'
 alias pbuilder.sid.amd64='sudo DIST="sid" ARCH=amd64 pbuilder'
+
+#what to eat today?
+#alias que.comer='_que_comer() { awk "/^\[/ {print \$0 \" ${1}\" \":\" NR}" "${1}" | shuf | head -1;}; _que_comer ~/misc/notes/comidas.notes'
+alias que.comer='_que_comer() { qc="$(awk "/^\[/ {print \"${1}\" \":\" NR \"|\" \$0 }" "${1}" | \
+                shuf | head -1 | tr "|" "\n")"; [ -z "${qc}" ] && return 1; \
+                printf "%s\\n" "${qc}"; printf "Abriendo receta en 3 segundos ...\\n"; sleep 3s; \
+                vim "$(printf "%s\\n" "${qc}" | head -1)"; }; _que_comer ~/misc/notes/comidas.notes'
+#alias que.desayunar='_que_desayunar() { awk "/^\[/ {print \$0 \" ${1}\" \":\" NR}" "${1}" | shuf | head -1;}; _que_desayunar ~/misc/notes/desayunos.notes'
+alias que.desayunar='_que_desayunar() { qc="$(awk "/^\[/ {print \"${1}\" \":\" NR \"|\" \$0 }" "${1}" | \
+                shuf | head -1 | tr "|" "\n")"; [ -z "${qc}" ] && return 1; \
+                printf "%s\\n" "${qc}"; printf "Abriendo receta en 3 segundos ...\\n"; sleep 3s; \
+                vim "$(printf "%s\\n" "${qc}" | head -1)"; }; _que_desayunar ~/misc/notes/desayunos.notes'
+#alias que.cenar='_que_cenar() { awk "/^\[/ {print \$0 \" ${1}\" \":\" NR}" "${1}" | shuf | head -1;}; _que_cenar ~/misc/notes/cenas.notes'
+alias que.cenar='_que_cenar() { qc="$(awk "/^\[/ {print \"${1}\" \":\" NR \"|\" \$0 }" "${1}" | \
+                shuf | head -1 | tr "|" "\n")"; [ -z "${qc}" ] && return 1; \
+                printf "%s\\n" "${qc}"; printf "Abriendo receta en 3 segundos ...\\n"; sleep 3s; \
+                vim "$(printf "%s\\n" "${qc}" | head -1)"; }; _que_cenar ~/misc/notes/cenas.notes'
