@@ -28,7 +28,7 @@ w1="$(cat /etc/i3/config ~/.i3/config 2>/dev/null | \
 
 #_exec mplayer -loop 0 -rootwin -ao null -noconsolecontrols video.mp4 #video background
 wallpaper="$(minos-config wallpaper 2>/dev/null)"
-#if no wallpaper, set background to black; otherwise apply the wallpaper
+#if no wallpaper, set background to black; otherwise apply wallpaper
 [ -z "${wallpaper}" ] && _exec xsetroot -solid "#000000" || _exec feh --bg-scale "${wallpaper}"
 
 terminal_emulator="$(minos-config x-terminal 2>/dev/null)"

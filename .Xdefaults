@@ -1,7 +1,6 @@
-!-----------------------------------------------------------------------------
-!           Last review            Sun 02 Sep 2012 01:41:11 AM CDT
-!-----------------------------------------------------------------------------
-! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+!------------------------------------------------------
+! Last review           Mon 29 Feb 2016 12:07:57 AM CST
+!------------------------------------------------------
 
 !======================================================
 !======================= General ======================
@@ -71,7 +70,7 @@ URxvt.cutchars:         "\\ `\"\'()*;<>[]{|}&,=?@^\:"
 
 ! === Plugins ===
 !URxvt.perl-lib:         .urxvt/
-URxvt.perl-lib:         /usr/lib/minos/urxvt/
+URxvt.perl-lib:         /usr/share/minos/urxvt/
 URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard
 !URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard,cursortail
 
@@ -104,3 +103,5 @@ URxvt.keysym.Control-Shift-minus: perl:font-resize:decglobal
 URxvt.iso14755: false
 URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 URxvt.keysym.Control-Shift-C: perl:clipboard:copy
+
+/* vim: set ts=4 sw=4 tw=0 ft=xdefaults :*/
