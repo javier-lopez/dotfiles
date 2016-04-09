@@ -11,6 +11,10 @@ if v:version < 700
     finish
 endif
 
+if has('win32') || has('win64')
+    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+
 set nocompatible      "breaks compatibility with vi, required
 set modelines=0       "http://www.guninski.com/vim1.html
 set noexrc            "don't use local version of .(g)vimrc, .exrc
@@ -70,7 +74,9 @@ set foldenable!       "disable folding by default
 "set foldmethod=indent "other options are marker|expr|manual
 "set foldmarker={,}
 "set clipboard=unnamed
-set clipboard=unnamedplus      "yanks go to clipboard, "+p to recover
+"yanks go to clipboard, "+p to recover, only works on X11
+if has ('unnamedplus') | set clipboard=unnamedplus | endif
+
 set viminfo='100,<100,s10,h    "remember just a little
 set backspace=indent,eol,start "backspace deletes as in other editors
 set pastetoggle=<c-insert>     "pastetoggle, sane indentation on pastes
@@ -244,12 +250,21 @@ noremap <m-end>  G
 "===============================================================================
 
 if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
-    echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
-    if nr2char(getchar()) ==? 'y'
+    if has("gui_running")
         "!git clone --depth=1 https://github.com/chilicuil/vundle-legacy.git ~/.vim/bundle/vundle
         silent !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
-        silent !printf "Installing vundle plugins ..."
-        silent !vim -es -u "${HOME}"/.vimrc -c "BundleInstall" -c qa
+        if isdirectory(expand("~/.vim/bundle/vundle/.git/"))
+            echon "Run :BundleInstall to finish the installation"
+            fi
+        else
+            echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
+            if nr2char(getchar()) ==? 'y'
+                "!git clone --depth=1 https://github.com/chilicuil/vundle-legacy.git ~/.vim/bundle/vundle
+                silent !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
+                silent !printf "Installing vundle plugins ..."
+                silent !vim -es -u "${MYVIMRC}" -c "BundleInstall" -c qa
+            endif
+        endif
     endif
 endif
 
@@ -372,6 +387,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/vim-markdown'
     Bundle 'chilicuil/vim-sprunge'  , { 'on': ['<Plug>Sprunge'] }
         map <leader>s <Plug>Sprunge
+        let g:sprunge_flush_left = 1
     Bundle 'chilicuil/vim-checksum' , { 'on': ['<Plug>Checksum'] }
         map <leader>c <Plug>Checksum
     Bundle 'chilicuil/file-line'
@@ -443,9 +459,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'wting/gitsessions.vim' , { 'on': ['GitSessionSave', 'GitSessionDelete'] }
         command! -nargs=* SessionSave   GitSessionSave
         command! -nargs=* SessionDelete GitSessionDelete
-    "Bundle 'wellle/tmux-complete.vim'    , { 'on': 'insert' } "too slow
-    "Bundle 'chilicuil/tmux-complete.vim' , { 'on': 'insert' } "too slow
-        "let g:tmuxcomplete#trigger = ''
     Bundle 'tmux-plugins/vim-tmux' "syntax file
     Bundle 'zah/nimrod.vim'        "syntax file
     Bundle 'ap/vim-css-color'
@@ -498,6 +511,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "    map <leader>cs       <Plug>TComment_<c-_><c-_>
     "    let g:tcommentOptions = {'whitespace': 'no'} "nerdcommenter ftw!
     "Bundle 'lilydjwg/colorizer' "way slower than 'ap/vim-css-color'
+    "Bundle 'wellle/tmux-complete.vim' , { 'on': 'insert' } "too slow
 endif
 
 "===============================================================================
