@@ -1,7 +1,3 @@
-#-------------------------------------------------------------------------------
-#           Last review            Sat 26 Dec 2015 09:25:34 PM CST
-#-------------------------------------------------------------------------------
-
 #===============================================================================
 #================================= General =====================================
 #===============================================================================
@@ -21,6 +17,7 @@ bind "set match-hidden-files off"     #don't match hidden files
 bind "set bind-tty-special-chars on"  #punctuations are not word delimiters
 bind "set show-all-if-ambiguous on"   #enable single tab completion
 bind "set completion-ignore-case on"
+#}1
 
 #trap '. /etc/bash_completion ; trap USR2' USR2
 #{ sleep 0.01 ; builtin kill -USR2 $$ ; } & disown
@@ -41,7 +38,7 @@ case "${TERM}" in
         PROMPT_COMMAND='printf "%b" "\033]0;${PWD/$HOME/~}\007"' ;;
     screen)
         PROMPT_COMMAND='printf "%b" "\033_${PWD/$HOME/~}\033\\"' ;;
-esac
+esac #{2
 
 #===============================================================================
 #=============================== Environment  ==================================
@@ -63,6 +60,7 @@ export BROWSER="x-www-browser"
 
 #fix java ugliness
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+#}2
 
 # ruby dev
 #[ -f "${HOME}/.rvm/bin" ] && export PATH="${PATH}:${HOME}/.rvm/bin"
@@ -77,12 +75,14 @@ export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
 export QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
 export QUILT_DIFF_OPTS='-p'
 
+#{3
 if [ -f "$(command -v "ccache")" ]; then
     export PATH="${PATH}:/usr/lib/ccache"
     export CCACHE_DIR="${HOME}/.ccache"
     export CCACHE_SIZE="2G"
     #export CCACHE_PREFIX="distcc"
 fi
+#}3
 
 #===============================================================================
 #================================= Plugins =====================================

@@ -44,6 +44,7 @@
 .compiz
 .config/LightTable/
 .config/Popcorn-Time/
+.config/VirtualBox
 .config/feh/
 .config/gpick/
 .config/htop/

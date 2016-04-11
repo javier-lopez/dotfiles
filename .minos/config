@@ -1,5 +1,7 @@
-#minos configuration, minos.io/doc/config
-#/etc/minos/config, ~/.minos/config
+######################################
+# http://minos.io/doc/config         #
+# /etc/minos/config, ~/.minos/config #
+######################################
 
 #autostart          yes
 #composition        yes
@@ -20,7 +22,7 @@ m-composition       compton
 m-eyesaver          redshift
 m-handsaver         workrave
 m-clipboard         autocutsel -fork
-#m-clipboard         autocutsel -fork && autocutsel -selection PRIMARY -fork
+#m-clipboard        autocutsel -fork && autocutsel -selection PRIMARY -fork
 m-statusbar         minos-statusbar
 #m-statusbar-icons  sm4tik
 #m-statusbar-config /etc/minos/statusbar
@@ -40,7 +42,7 @@ m-movietime         movietime
 #/etc/cron.d/watch-battery
 m-battery           watch-battery
 #m-battery-config    15,10,7,5
-m-battery-config    20,15,12,10
+m-battery-config    25,20,17,15
 
 #shortcuts
 m-help               minos-help
@@ -57,17 +59,17 @@ m-music-player       ncmpcpp:terminal
 m-video-player       umplayer
 m-multimonitor       dmenu-xrandr
 m-network-manager    wicd-curses:terminal
-#m-network-manager    ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
-#m-network-manager    connman-curses:terminal
+#m-network-manager   ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
+#m-network-manager   connman-curses:terminal
 m-magnifier          magnifier
-#m-magnifier          xzoom
+#m-magnifier         xzoom
 m-window-jumper      dmenu-i3-window-jumper
 m-screenshot         screenshot
 m-screencast         ffcast
 
 #minos.io/s
-dotfiles             https://github.com/chilicuil/dotfiles
-hook                 http://minos.io/hook
+#dotfiles            https://github.com/user/dotfiles
+#hook                http://minos.io/hook
 app-core             curl
 app-desktop          mozilla-firefox mozilla-flashplayer
 #core,desktop?

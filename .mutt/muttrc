@@ -2,43 +2,41 @@
 # Last review            Tue 25 Aug 2015 03:43:57 PM CDT
 #########################################################
 
-# vim: set ts=8 sw=4 tw=0 ft=muttrc :
-
-# =========================================================================================
-# === General settings ====================================================================
-# =========================================================================================
-push <show-version>                                      #show version
-set nomark_old                                           #avoid marking unread msgs as old ones
-set nobeep                                               #plz dont be noisy
-set delete                = yes                          #don't confirm
-set quit                  = yes                          #don't confirm
-set imap_check_subscribed = yes                          #automatically poll subscribed mailboxes for new mail
+# =============================================================================
+# === General settings ========================================================
+# =============================================================================
+push <show-version>             #show version
+set nomark_old                  #avoid marking unread msgs as old ones
+set nobeep                      #plz dont be noisy
+set delete                = yes #don't confirm
+set quit                  = yes #don't confirm
+set imap_check_subscribed = yes #automatically poll subscribed mailboxes for new mail
 set sort                  = "threads"
 #set sort_aux              = "last-date-received"
 set sort_aux              = "reverse-last-date-received" #like gmail
-set sort_re                                              # thread based on regex
+set sort_re                     #thread based on regex
 set reply_regexp          = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
-set followup_to           = no                           #http://larve.net/people/hugo/2000/07/ml-mutt
+set followup_to           = no  #http://larve.net/people/hugo/2000/07/ml-mutt
 set honor_followup_to     = no
-set pager_index_lines     = 10                           # number of index lines to show
-set pager_context         = 5                            # number of context lines to show
-set pager_stop                                           # don't go to the next message automatically
-unset markers                                            # no ugly plus signs
+set pager_index_lines     = 10  #number of index lines to show
+set pager_context         = 5   #number of context lines to show
+set pager_stop                  #don't go to the next message automatically
+unset markers                   #no ugly plus signs
 set menu_scroll
 set menu_context          = 5
 set quote_regexp          = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
-set include               = yes                          #automatically quote message
-set editor                = "vim -c XWriteMode '%s'"     #is there any other editor?
-set edit_headers          = yes                          #you can add cc, bcc, or change ur from input
-set mail_check            = 90                           #how often mutt will query gmail for new email
+set include               = yes #automatically quote message
+set editor                = "vim -c XWriteMode '%s'" #is there any other editor?
+set edit_headers          = yes #you can add cc, bcc, or change ur from input
+set mail_check            = 90  #how often mutt will query gmail for new email
 set timeout               = 15
 set imap_keepalive        = 120
-set move                  = no                           #don't ask to move read messages to mbox on exit
-set pipe_decode                                          # strip headers and eval mimes when piping
-set thorough_search                                      # strip headers and eval mimes before searching
+set move                  = no  #don't ask to move read messages to mbox on exit
+set pipe_decode                 # strip headers and eval mimes when piping
+set thorough_search             # strip headers and eval mimes before searching
 
-# $ sudo pip install goobook
-#set query_command         = "goobook query '%s'"        #autocomplete addresses, TODO
+# $ sudo pip install goobook #autocomplete email addresses
+#set query_command         = "goobook query '%s'"
 
 # formats
 set date_format         = "%d/%m/%y at %I:%M%P"
@@ -47,29 +45,29 @@ set alias_format        = "%4n %t %-20a  %r"
 #set status_format goes in the account settings
 
 # composing mail
-set envelope_from                            # which from?
-set sig_dashes                               # dashes before my sig... sweet
-set fast_reply                               # skip to compose when replying
-#set sendmail_wait       = -1                # don't wait for sending... to complete
-#set askcc                                   # ask for CC:
-set fcc_attach                               # save attachments with the body
-unset mime_forward                           # forward attachments as part of body
-set forward_format      = "Fwd: %s"          # format for subject when forwarding
-set forward_decode                           # decode when forwarding
-set attribution         = "On %d, %n wrote:" # set the attribution
-set reply_to                                 # reply to Reply to: field
-set reverse_name                             # reply as whomever it was to
-set include                                  # include message in replies
-set forward_quote                            # include message in forwards
+set envelope_from               #which from?
+set sig_dashes                  #dashes before my sig... sweet
+set fast_reply                  #skip to compose when replying
+#set sendmail_wait       = -1   #don't wait for sending... to complete
+#set askcc                      #ask for CC:
+set fcc_attach                  #save attachments with the body
+unset mime_forward              #forward attachments as part of body
+set forward_format      = "Fwd: %s" #format for subject when forwarding
+set forward_decode              #decode when forwarding
+set attribution         = "On %d, %n wrote:" #set the attribution
+set reply_to                    #reply to Reply to: field
+set reverse_name                #reply as whomever it was to
+set include                     #include message in replies
+set forward_quote               #include message in forwards
 
 # headers to show
-ignore *                                     # ignore all headers
-unignore from: to: cc: date: subject:        # show only these
-hdr_order from: to: cc: date: subject:       # and in this order
+ignore *                        #ignore all headers
+unignore from: to: cc: date: subject: #show only these
+hdr_order from: to: cc: date: subject:#and in this order
 
-# =========================================================================================
-# === Mapping =============================================================================
-# =========================================================================================
+# =============================================================================
+# === Mapping =================================================================
+# =============================================================================
 bind index gg           first-entry
 bind index G            last-entry
 bind index K            previous-thread
@@ -97,9 +95,9 @@ bind  pager J           next-undeleted
 bind editor \t          complete-query
 #bind editor           complete
 
-# =========================================================================================
-# === Macros ==============================================================================
-# =========================================================================================
+# =============================================================================
+# === Macros ==================================================================
+# =============================================================================
 macro index B   "<limit>~b "              "search message bodies"
 macro index I   "<change-folder>!<enter>" "go to Inbox"
 macro index s '<sync-mailbox>'
@@ -109,7 +107,7 @@ macro index S        "<pipe-message>cat > ~/" "save message as"
 macro index,pager a  "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
 
 # Reload goobook db
-#macro index,pager gr "!goobook reload\n"                 "Goobook reload"
+#macro index,pager gr "!goobook reload\n"
 
 # b toggles sidebar visibility
 macro index b '<enter-command>toggle sidebar_visible<enter>'
@@ -122,9 +120,9 @@ macro pager b '<enter-command>toggle sidebar_visible<enter>'
 macro index 1 '<sync-mailbox><enter-command>source ~/.mutt/accounts/fco.plj@gmail.com/account<enter><change-folder>!<enter>'
 macro index 2 '<sync-mailbox><enter-command>source ~/.mutt/accounts/chilicuil@gmail.com/account<enter><change-folder>!<enter>'
 
-# =========================================================================================
-# === Mime ================================================================================
-# =========================================================================================
+# =============================================================================
+# === Mime ====================================================================
+# =============================================================================
 # Tell mutt which MIME types to auto-view
 auto_view application/zip
 auto_view application/x-gzip
@@ -143,9 +141,9 @@ auto_view image/tiff
 
 alternative_order text/enriched text/plain text
 
-# =========================================================================================
-# === Color ===============================================================================
-# =========================================================================================
+# =============================================================================
+# === Color ===================================================================
+# =============================================================================
 # Header
 color header yellow default "From: "
 color header brightblue default "Subject: "
@@ -159,42 +157,42 @@ color quoted3 brightcyan default
 # Misc
 color hdrdefault cyan default
 color attachment black default
-color error red default # error messages
-color message white default # message informational messages
-color indicator brightwhite green # indicator for the "current message"
-color status brightwhite default # status lines in the folder index
-color tree red default # the "tree" display of threads within the folder index
-color search white blue # search matches found with search within the internal pager
-color markers red default # The markers indicate a wrapped line
+color error red default     #error messages
+color message white default #message informational messages
+color indicator brightwhite green #indicator for the "current message"
+color status brightwhite default  #status lines in the folder index
+color tree red default      #the "tree" display of threads within the folder index
+color search white blue     #search matches found with search within the internal pager
+color markers red default   #The markers indicate a wrapped line
 # Index
-color index blue default '~O' # Old messages
-color index cyan default '~P' # From myself
-color index default default '~R' # Readed messages
-color index green default '~N' # New messages
-color index brightmagenta default '~F' # Flagged Messages are important!
-color index white default '~Q' # Replied
-color index brightwhite brightred '~D' # Deleted Mails
+color index blue default '~O' #Old messages
+color index cyan default '~P' #From myself
+color index default default '~R' #Readed messages
+color index green default '~N'   #New messages
+color index brightmagenta default '~F' #Flagged Messages are important!
+color index white default '~Q'         #Replied
+color index brightwhite brightred '~D' #Deleted Mails
 
-# =========================================================================================
-# === Color ===============================================================================
-# =========================================================================================
+# =============================================================================
+# === Color ===================================================================
+# =============================================================================
 #color attachment brightmagenta black
-#color error brightwhite red   # errors yell at you in red
-#color hdrdefault red black   # headers
+#color error brightwhite red  #errors yell at you in red
+#color hdrdefault red black   #headers
 #color indicator brightwhite magenta #currently selected message
-#color markers brightcyan black  # the + for wrapped pager lines
-#color message brightcyan black  # informational messages, not mail
-#color normal white black    # plain text
-#color quoted green black  # quoted text
-#color search brightgreen black # hilite search patterns in the pager
-#color signature red black    # signature (after "-- ") is red
-#color status brightcyan black # status bar is brightcyan *on black*
-#color tilde blue black  # ~'s after message body
-#color tree red black    # thread tree in index menu is magenta
+#color markers brightcyan black  #the + for wrapped pager lines
+#color message brightcyan black  #informational messages, not mail
+#color normal white black  #plain text
+#color quoted green black  #quoted text
+#color search brightgreen black #hilite search patterns in the pager
+#color signature red black      #signature (after "-- ") is red
+#color status brightcyan black  #status bar is brightcyan *on black*
+#color tilde blue black  #~'s after message body
+#color tree red black    #thread tree in index menu is magenta
 #color signature brightred black
 #color underline yellow black
-#color header cyan black ^(From|Subject): # Important headers
-#color body magenta black "(ftp|http)://[^ ]+"  # picks up URLs
+#color header cyan black ^(From|Subject): #Important headers
+#color body magenta black "(ftp|http)://[^ ]+" #picks up URLs
 #color body magenta black [-a-z_0-9.]+@[-a-z_0-9.]+
 
 ##  Coloring quoted text - coloring the first 7 levels:
@@ -212,15 +210,15 @@ color index brightwhite brightred '~D' # Deleted Mails
 #color body  yellow black "[;:][)/(|]"
 #color body  green black "[[:alpha:]]\+://[^ ]*"
 
-#color index brightmagenta black ~N      # New
-#color index yellow black ~O             # Old
-#color index brightred black ~F          # Important
-#color index red black ~T                # Tag
-#color index blue black ~D               # Delete
+#color index brightmagenta black ~N #New
+#color index yellow black ~O        #Old
+#color index brightred black ~F     #Important
+#color index red black ~T           #Tag
+#color index blue black ~D          #Delete
 
-# =========================================================================================
-# === Sidebar =============================================================================
-# =========================================================================================
+# =============================================================================
+# === Sidebar =================================================================
+# =============================================================================
 set sidebar_width=15
 set sidebar_visible=yes
 set sidebar_delim='|'
@@ -254,9 +252,9 @@ bind pager \CO sidebar-open
 # sidebar-scroll-up
 # sidebar-scroll-down
 
-# =========================================================================================
-# === Gnupg ===============================================================================
-# =========================================================================================
+# =============================================================================
+# === Gnupg ===================================================================
+# =============================================================================
 set pgp_use_gpg_agent        = yes
 #set pgp_autosign             = yes
 set pgp_verify_sig           = yes
@@ -266,7 +264,7 @@ set pgp_timeout              = 3600
 set pgp_good_sign            = "^gpg: Signed by "
 set pgp_auto_decode          = yes
 
-#==================================================================================
+# =============================================================================
 #--passphrase-fd 0 is required if you're not running gpg-agent
 #set pgp_decode_command       = "gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
 #set pgp_decrypt_command      = "gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
@@ -279,7 +277,7 @@ set pgp_decrypt_command      = "gpg --no-verbose --batch --output - %f"
 set pgp_sign_command         = "gpg --no-verbose --batch --output - --armor --detach-sign --textmode %?a?-u %a? %f"
 set pgp_clearsign_command    = "gpg --no-verbose --batch --output - --armor --textmode --clearsign %?a?-u %a? %f"
 set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust -- -r %r -- %f"
-#==================================================================================
+# =============================================================================
 
 set pgp_verify_command       = "gpg --no-verbose --batch --output - --verify %s %f"
 set pgp_encrypt_only_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust -- -r %r -- %f"
@@ -289,9 +287,9 @@ set pgp_verify_key_command   = "gpg --no-verbose --batch --fingerprint --check-s
 set pgp_list_pubring_command = "gpg --no-verbose --batch --with-colons --list-keys %r"
 set pgp_list_secring_command = "gpg --no-verbose --batch --with-colons --list-secret-keys %r"
 
-# =========================================================================================
-# === Accounts  ===========================================================================
-# =========================================================================================
+# =============================================================================
+# === Accounts  ===============================================================
+# =============================================================================
 # passwd management
 set my_decrypt=`gpg -o $HOME/.mutt/accounts/passwd.gpg.tmp -d $HOME/.mutt/accounts/passwd.gpg`
 set my_fcoDOTpljATgmailDOTcom=`awk '/fco.plj@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
@@ -299,4 +297,6 @@ set my_chilicuilATgmailDOTcom=`awk '/chilicuil@gmail.com:/ {print $2}' $HOME/.mu
 set my_rm=`rm -f $HOME/.mutt/accounts/passwd.gpg.tmp`
 
 # default
-source /home/chilicuil/.mutt/accounts/fco.plj@gmail.com/account
+source ~/.mutt/accounts/fco.plj@gmail.com/account
+
+# vim: set ts=8 sw=4 tw=0 ft=muttrc :

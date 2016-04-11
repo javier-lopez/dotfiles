@@ -1,7 +1,3 @@
-#-------------------------------------------------------------------------------
-#           Last review            Fri 13 Jul 2012 04:01:42 PM CDT
-#-------------------------------------------------------------------------------
-#
 ##### connection settings #####
 ## set it in order to make tag editor and renaming files work properly
 #mpd_host               = "localhost"
