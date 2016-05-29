@@ -1,5 +1,8 @@
 #custom aliases
 [ -f "$(command -v "wcd")" ]       && alias cd='. wcd'
+[ -f "$(command -v "commacd")" ]   && . commacd #alias ,='. commacd' && alias ,,='. commacd' && alias ,,,='. commacd'
+[ -f "$(command -v "extract")" ]   && alias e='extract'
+[ -f "$(command -v "compress")" ]  && alias c='compress'
 [ -f "$(command -v "trash")" ]     && alias rm='trash'
 [ -f "$(command -v "xdg-open")" ]  && alias open='xdg-open'
 [ -f "$(command -v "linphonec")" ] && alias voip='linphonec' && alias call='linphonec'
@@ -8,8 +11,6 @@
 [ -f "${HOME}/.mailgun.gpg" ]      && alias mail='mailgun --config <(gpg -d "${HOME}"/.mailgun.gpg)'
 [ -f "${HOME}/.pagekite.rc.gpg" ]  && alias pagekite='pagekite --optfile=<(gpg -d "${HOME}"/.pagekite.rc.gpg)'
 
-alias e='extract'
-alias c='compress'
 alias addgroup.touser='usermod -a -G'
 alias mkdir='mkdir -vp'
 alias mv='mv -v'

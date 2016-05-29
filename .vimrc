@@ -282,7 +282,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:NERDTreeMapOpenSplit="-"
         "let g:NERDTreeMapOpenVSplit="|"
 
-    Bundle 'chilicuil/nerdcommenter' , {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
+    Bundle 'scrooloose/nerdcommenter' , {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
+    "Bundle 'chilicuil/nerdcommenter' , {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
        map <leader>c<space>        <Plug>NERDCommenterToggle
        map <leader>cs              <Plug>NERDCommenterSexy
        let g:NERDCustomDelimiters  = {'mkd': { 'left': '<!--', 'right': '-->'}}
