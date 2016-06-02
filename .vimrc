@@ -287,10 +287,12 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
        map <leader>c<space>        <Plug>NERDCommenterToggle
        map <leader>cs              <Plug>NERDCommenterSexy
        let g:NERDCustomDelimiters  = {'mkd': { 'left': '<!--', 'right': '-->'}}
-    Bundle 'msanders/snipmate.vim' , { 'on': 'insert' }
-        let g:snips_author         = "Javier Lopez"
-        let g:snips_authorEmail    = "m@javier.io"
-        let g:snippets_dir         = "~/.vim/bundle/vim-snippets/snipmate/"
+    "Bundle 'msanders/snipmate.vim' , { 'on': 'insert' }
+    Bundle 'chilicuil/snipmate.vim' , { 'on': 'insert' }
+        let g:snips_author            = "Javier Lopez"
+        let g:snips_authorEmail       = "m@javier.io"
+        let g:snippets_dir            = "~/.vim/bundle/vim-snippets/snipmate/"
+        let g:snipmate_default_choice = 1
     Bundle 'chilicuil/vim-snippets', { 'on': 'insert' }
     Bundle 'majutsushi/tagbar' , { 'on': 'TagbarToggle', 'do': 'wget --no-check-certificate https://raw.githubusercontent.com/chilicuil/learn/master/python/mkd2ctags && chmod +x mkd2ctags' }
         let g:tagbar_left          = 1
