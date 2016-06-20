@@ -194,7 +194,6 @@ map <tab><space> :bnext<cr>
 
 "=== Misc Mappings===
 "let's switch these
-map      ; :
 nnoremap ' `
 nnoremap ` '
 
