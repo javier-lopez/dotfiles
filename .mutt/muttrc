@@ -256,13 +256,14 @@ bind pager \CO sidebar-open
 # === Gnupg ===================================================================
 # =============================================================================
 set pgp_use_gpg_agent        = yes
-#set pgp_autosign             = yes
 set pgp_verify_sig           = yes
-set pgp_sign_as              = 0xBC9C8902
+set pgp_autosign             = yes
+#set pgp_autoencrypt          = yes
 set pgp_replyencrypt         = yes
-set pgp_timeout              = 3600
-set pgp_good_sign            = "^gpg: Signed by "
 set pgp_auto_decode          = yes
+set pgp_timeout              = 3600 #1 hr
+set pgp_sign_as              = 0x6ACFB9D8
+set pgp_good_sign            = "^gpg: Good signature from "
 
 # =============================================================================
 #--passphrase-fd 0 is required if you're not running gpg-agent
@@ -270,22 +271,21 @@ set pgp_auto_decode          = yes
 #set pgp_decrypt_command      = "gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
 #set pgp_sign_command         = "gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
 #set pgp_clearsign_command    = "gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
-#set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xBC9C8902 -- -r %r -- %f"
+#set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0x6ACFB9D8 -- -r %r -- %f"
 #
 set pgp_decode_command       = "gpg --no-verbose --batch --output - %f"
+set pgp_verify_command       = "gpg --no-verbose --batch --output - --verify %s %f"
 set pgp_decrypt_command      = "gpg --no-verbose --batch --output - %f"
 set pgp_sign_command         = "gpg --no-verbose --batch --output - --armor --detach-sign --textmode %?a?-u %a? %f"
 set pgp_clearsign_command    = "gpg --no-verbose --batch --output - --armor --textmode --clearsign %?a?-u %a? %f"
-set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust -- -r %r -- %f"
-# =============================================================================
-
-set pgp_verify_command       = "gpg --no-verbose --batch --output - --verify %s %f"
 set pgp_encrypt_only_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust -- -r %r -- %f"
+set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust -- -r %r -- %f"
 set pgp_import_command       = "gpg --no-verbose --import -v %f"
 set pgp_export_command       = "gpg --no-verbose --export --armor %r"
 set pgp_verify_key_command   = "gpg --no-verbose --batch --fingerprint --check-sigs %r"
 set pgp_list_pubring_command = "gpg --no-verbose --batch --with-colons --list-keys %r"
 set pgp_list_secring_command = "gpg --no-verbose --batch --with-colons --list-secret-keys %r"
+my_hdr X-PGP-Key: http://javier.io/pubkey.asc
 
 # =============================================================================
 # === Accounts  ===============================================================
