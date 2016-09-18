@@ -222,6 +222,10 @@ nnoremap <silent> p p`]
 noremap zz :q!<cr>
 noremap ss :w<cr>
 noremap SS :%!sudo tee > /dev/null %<cr>
+
+"execute current line, only vim scripting
+"TODO: add support for other langs
+"nnoremap ygl :<C-u><C-r>=getline('.')<cr><cr>
 "ZZ :wq!
 
 "overwrite these annoying commands
@@ -476,6 +480,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'KabbAmine/lazyList.vim', { 'on': 'delay' } #broken in vim73
     Bundle 'chilicuil/lazyList.vim', { 'on': 'delay' }
         let g:lazylist_maps = [ 'gl', { 'l': '', '1': '%1% ', '-': '- ', '*': '* ' } ]
+    Bundle 'junegunn/vader.vim' , { 'on': ['Vader'] }   "tdd for vim plugin dev
+    Bundle 'Olical/vim-enmasse' , { 'on': ['EnMasse'] } "edit quicklist results, grep/ag
 
     "===discarted===
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
