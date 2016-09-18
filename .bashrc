@@ -44,11 +44,10 @@ esac #{2
 #=============================== Environment  ==================================
 #===============================================================================
 
-export PATH="$HOME/code/tmux/bin:/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/games"
-#export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin/X11:/usr/games"
+[ -d "$HOME/code/tmux/bin" ] && export PATH="${HOME}/code/tmux/bin:${PATH}"
 
 #gpg
-export GPGKEY="C92C604E"
+export GPGKEY="6ACFB9D8"
 export GPG_TTY="$(tty)"
 
 #random vars
@@ -68,7 +67,7 @@ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 
 #ubuntu dev
 export DEBEMAIL="chilicuil@ubuntu.com"
-export DEBFULLNAME="Javier P.L."
+export DEBFULLNAME="Javier López"
 export QUILT_PATCHES="debian/patches"
 export QUILT_PUSH_ARGS="--color=auto"
 export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
