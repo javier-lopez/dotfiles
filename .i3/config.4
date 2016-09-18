@@ -121,6 +121,9 @@ bindcode $Alt+$Esc            exec m-launcher
 #are defined as bindcode entries
 #        $Altgr+k
 bindcode $Altgr+45            kill
+#right click kills window
+bindsym --release button3     kill
+#bindmouse Button3             kill
 #        $Altgr+l
 bindcode $Altgr+46            exec m-killer
 bindsym  $Alt+Tab             exec m-window-jumper
@@ -139,6 +142,7 @@ bindcode $Altgr+Shift+58      exec m-music-player
 #        $Altgr+Shift+v
 bindcode $Altgr+Shift+55      exec m-video-player
 bindsym  $Altgr+n             exec m-network-manager
+bindcode $Altgr+$Supr         exec m-session-manager
 bindcode Control+$Alt+$Supr   exec m-session-manager
 bindsym Control+$Alt+l        exec m-session-manager lock
 bindcode $Alt+$Shift_R        exec m-keyboard
@@ -246,10 +250,12 @@ workspace "$w1" output HDMI1
 #Assigns default workspaces for app
 #assign ["]window class[/window title]["] [→] [~ | workspace]
 
+#use xprop to find windows name/classes
 assign [class="Firefox"]               $w1
 assign [class="Pcmanfm"]               $w2
 assign [class="Nautilus"]              $w2
 assign [class="^URxvt$" title="irssi"] $w4
+assign [title="^Skype.*"]              $w4
 assign [class="^URxvt$" title="mutt"]  $w3
 assign [class="Thunderbird"]           $w3
 

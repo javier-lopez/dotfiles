@@ -8,6 +8,7 @@ Help
     <win><enter>     ⇨  new terminal emulator
 
      <altgr><k>      ⇨  close app
+  [secondary][title] ⇨  close app
      <altgr><l>      ⇨  close app by name
 
      <altgr><w>      ⇨  web  browser
@@ -44,6 +45,7 @@ XF86AudioLowerVolume ⇨  decrease volume
      <ctrl><->       ⇨  decrease font size
 
   <ctrl><alt><supr>  ⇨  session manager
+    <altgr><supr>    ⇨  session manager
    <ctrl><alt><l>    ⇨  lock screen
     <alt><rshift>    ⇨  change keyboard layout
 
