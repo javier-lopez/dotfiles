@@ -23,7 +23,7 @@
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [user]
-    name  = Javier Lopez
+    name  = Javier López
     email = m@javier.io
 
 [github]
