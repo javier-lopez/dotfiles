@@ -4,7 +4,8 @@ _exec() {
     [ -z "${1}" ] && return 1
     if command -v "${1%% *}" >/dev/null; then
         if ! pgrep -f "${1%% *}" >/dev/null; then
-            (eval "${@}") &
+            #(eval "${@}") &
+            ("${@}") &
         fi
     else
         printf "%s\\n" "${1} was not found!" >&2
@@ -33,7 +34,8 @@ wallpaper="$(minos-config wallpaper 2>/dev/null)"
 
 terminal_emulator="$(minos-config x-terminal 2>/dev/null)"
 terminal_emulator="${terminal_emulator:-x-terminal-emulator}"
-_exec "${terminal_emulator}" -name scratchpad -e "${SHELL}"
+#_exec "${terminal_emulator}" -name scratchpad -e "${SHELL}"
+_exec  "${terminal_emulator}" -name scratchpad -e  "${SHELL}" -c "tmux attach -t scratchpad || tmux new -s scratchpad"
 
 _execm m-clipboard autocutsel #sync X/Gnome clipboards
 _execm m-eyesaver  redshift   #save your eyes
