@@ -48,6 +48,7 @@ URxvt*font:             xft:Inconsolata for Powerline:pixelsize=12
 !URxvt*font:             xft:Metrickal:pixelsize=12
 !URxvt*font:             xft:monoOne:pixelsize=12
 !URxvt*font:             xft:Monaco for Powerline:regular:size=8
+!URxvt*font:             xft:Symbola:pixelsize=12
 URxvt*letterSpace:      -1
 
 URxvt*saveLines:        10000
