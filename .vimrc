@@ -477,11 +477,12 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         else
             let g:ackprg = "grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e"
         endif
-    "Bundle 'KabbAmine/lazyList.vim', { 'on': 'delay' } #broken in vim73
-    Bundle 'chilicuil/lazyList.vim', { 'on': 'delay' }
+    Bundle 'KabbAmine/lazyList.vim', { 'on': 'delay' } "broken in vim73
+    "Bundle 'chilicuil/lazyList.vim', { 'on': 'delay' }
         let g:lazylist_maps = [ 'gl', { 'l': '', '1': '%1% ', '-': '- ', '*': '* ' } ]
     Bundle 'junegunn/vader.vim' , { 'on': ['Vader'] }   "tdd for vim plugin dev
     Bundle 'Olical/vim-enmasse' , { 'on': ['EnMasse'] } "edit quicklist results, grep/ag
+    Bundle 'pbrisbin/vim-mkdir'
 
     "===discarted===
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
