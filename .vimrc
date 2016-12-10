@@ -297,7 +297,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:snippets_dir            = "~/.vim/bundle/vim-snippets/snipmate/"
         let g:snipmate_default_choice = 1
     Bundle 'chilicuil/vim-snippets', { 'on': 'insert' }
-    Bundle 'majutsushi/tagbar' , { 'on': 'TagbarToggle', 'do': 'wget --no-check-certificate https://raw.githubusercontent.com/chilicuil/learn/master/python/mkd2ctags && chmod +x mkd2ctags' }
+    Bundle 'majutsushi/tagbar' , { 'on': 'TagbarToggle', 'do': 'wget --no-check-certificate https://raw.githubusercontent.com/chilicuil/learn/master/python/tools/mkd2ctags && chmod +x mkd2ctags' }
         let g:tagbar_left          = 1
         let g:tagbar_width         = 25
         let g:tagbar_type_mkd      = {
@@ -483,6 +483,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'junegunn/vader.vim' , { 'on': ['Vader'] }   "tdd for vim plugin dev
     Bundle 'Olical/vim-enmasse' , { 'on': ['EnMasse'] } "edit quicklist results, grep/ag
     Bundle 'pbrisbin/vim-mkdir'
+    "Bundle 'Two-Finger/hardmode'
+        "let g:hardmode = 1
+        "nnoremap <Leader>H <Esc>:call ToggleHardMode()<CR>
 
     "===discarted===
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
