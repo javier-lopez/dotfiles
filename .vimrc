@@ -34,6 +34,7 @@ set encoding=utf-8    "utf is able to represent any character
 set fileencoding=utf-8
 set ruler             "show the cursor position all the time
 set noerrorbells      "disable annoying beeps
+set path+=**          "search through subdirectories
 "set visualbell       "this one too
 set wildmenu          "enhance command completion
 set wildignore=*/.svn,CVS,*/.git,*/.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.swp,*/tmp/*
@@ -271,36 +272,59 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     call vundle#rc()
 
     "====github====
-    Bundle 'chilicuil/vundle'
+    Bundle 'chilicuil/vundle' "vim plugin manager
+    "define additional text :h objects
     Bundle 'paradigm/TextObjectify' , { 'on': 'delay' } "triggered by CursorHold/CursorMoved hooks
-    Bundle 'edsono/vim-matchit'    ", { 'on': 'delay 10' }
-    Bundle 'gregsexton/MatchTag'   ", { 'on': 'delay 10' }
-    "complex alternative, require +python
+    Bundle 'edsono/vim-matchit'    ", { 'on': 'delay 10' }, match pairs {,(,',etc
+    Bundle 'gregsexton/MatchTag'   ", { 'on': 'delay 10' }  match even more pairs xml|html tags
+    "complex alternative, requires +python
     "Bundle 'valloric/MatchTagAlways'
-    Bundle 'scrooloose/nerdtree'   , { 'on': 'NERDTreeToggle' }
-        let g:NERDTreeWinPos       = 'right'
-        let g:NERDTreeWinSize      = 25
-        let g:NERDTreeMouseMode    = 3
-        map <silent> <leader>n     :NERDTreeToggle<cr>
+    Bundle 'mhinz/vim-hugefile'  "optimizer for huge files, disable expansive vim features
+    Bundle 'chilicuil/file-line' "jump to line on startup, eg: $ vim file:23 => goes to the 23rd line
+    Bundle 'pbrisbin/vim-mkdir'  "create missing directories on saving
+    Bundle 'chilicuil/gnupg.vim' "pgp viewer
+    Bundle 'henrik/vim-indexed-search' , { 'on': 'delay' } "count and index search results
+    Bundle 'chilicuil/vimbuddy.vim'    "o@o/
+    Bundle 'chilicuil/securemodelines' "disable insecure vim options
+        "let g:secure_modelines_verbose=1
+    "pastebin client
+    Bundle 'chilicuil/vim-sprunge'  , { 'on': ['<Plug>Sprunge'] }
+        map <leader>s <Plug>Sprunge
+        let g:sprunge_flush_left = 1
+    "checksum generator
+    Bundle 'chilicuil/vim-checksum' , { 'on': ['<Plug>Checksum'] }
+        map <leader>c <Plug>Checksum
+    "whitespace heater
+    Bundle 'ntpeters/vim-better-whitespace' , { 'on': 'delay' }
+        set list
+        set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+
+    Bundle 'mhinz/vim-signify' "git|svn|etc modification viewer
+        let g:signify_vcs_list    = [ 'git' ]
+        let g:signify_sign_add    = '+'
+        let g:signify_sign_change = '~'
+        let g:signify_sign_delete = '-'
+    Bundle 'mbbill/undotree' , { 'on': 'UndotreeToggle'} "undo navigation bar
+        map <leader>u :UndotreeToggle<cr>
+
+    Bundle 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' } "file viewer
+        let g:NERDTreeWinPos      = 'right'
+        let g:NERDTreeWinSize     = 25
+        let g:NERDTreeMouseMode   = 3
+        map <silent> <leader>n    :NERDTreeToggle<cr>
         "let g:NERDTreeMapOpenSplit="-"
         "let g:NERDTreeMapOpenVSplit="|"
-
+    "toggle comments
     Bundle 'scrooloose/nerdcommenter' , {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
-    "Bundle 'chilicuil/nerdcommenter' , {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
-       map <leader>c<space>        <Plug>NERDCommenterToggle
-       map <leader>cs              <Plug>NERDCommenterSexy
+       map <leader>c<space> <Plug>NERDCommenterToggle
+       map <leader>cs       <Plug>NERDCommenterSexy
        let g:NERDCustomDelimiters  = {'mkd': { 'left': '<!--', 'right': '-->'}}
-    "Bundle 'msanders/snipmate.vim' , { 'on': 'insert' }
-    Bundle 'chilicuil/snipmate.vim' , { 'on': 'insert' }
-        let g:snips_author            = "Javier Lopez"
-        let g:snips_authorEmail       = "m@javier.io"
-        let g:snippets_dir            = "~/.vim/bundle/vim-snippets/snipmate/"
-        let g:snipmate_default_choice = 1
-    Bundle 'chilicuil/vim-snippets', { 'on': 'insert' }
+
+    "class/function/var browser
     Bundle 'majutsushi/tagbar' , { 'on': 'TagbarToggle', 'do': 'wget --no-check-certificate https://raw.githubusercontent.com/chilicuil/learn/master/python/tools/mkd2ctags && chmod +x mkd2ctags' }
-        let g:tagbar_left          = 1
-        let g:tagbar_width         = 25
-        let g:tagbar_type_mkd      = {
+        let g:tagbar_left         = 1
+        let g:tagbar_width        = 25
+        let g:tagbar_type_mkd     = {
             \ 'ctagstype': 'markdown',
             \ 'ctagsbin' : '~/.vim/bundle/tagbar/mkd2ctags',
             \ 'ctagsargs' : '-f - --sort=yes',
@@ -311,12 +335,11 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
             \ ],
             \ 'sort': 0
         \ }
-        map <silent> <leader>l     :TagbarToggle<cr>
-    Bundle 'mhinz/vim-hugefile'
+        map <silent> <leader>l    :TagbarToggle<cr>
 
-    Bundle 'henrik/vim-indexed-search'  , { 'on': 'delay' }
-    Bundle 'kien/ctrlp.vim'             , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "frozen
-    "Bundle 'ctrlpvim/ctrlp.vim'        , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
+    "fuzzy file|buffer|etc finder
+    Bundle 'kien/ctrlp.vim'      , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] }
+    "Bundle 'ctrlpvim/ctrlp.vim' , { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMixed'] } "active fork
         "let g:ctrlp_cache_dir          = $HOME.'/.cache/ctrlp'
         let g:ctrlp_use_caching         = 1
         let g:ctrlp_clear_cache_on_exit = 0
@@ -332,18 +355,24 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
             \ --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store
             \ --ignore *.pyc --ignore *.mp3 --ignore *.png --ignore *.jpg -g ""'
         endif
-
     Bundle 'FelikZ/ctrlp-py-matcher'  , { 'on': 'delay 5' }
     Bundle 'DavidEGx/ctrlp-smarttabs' , { 'on': ['CtrlPSmartTabs'] }
         let g:ctrlp_smarttabs_reverse        = 0
         let g:ctrlp_smarttabs_modify_tabline = 0
         map <leader>t :call vundle#load('ctrlp.vim')<cr>:CtrlPSmartTabs<cr>
+    "vim motions on steroids
     Bundle 'Lokaltog/vim-easymotion'  , { 'on': ['<Plug>(easymotion-prefix)'] }
         "let g:EasyMotion_leader_key  = '<leader><leader>'
         map <leader><leader>          <Plug>(easymotion-prefix)
         let g:EasyMotion_keys         = 'asdfghjklqwertyuiopzxcvbnm'
 
-    Bundle 'Shougo/neocomplcache'     , { 'on': 'insert' }
+    Bundle 'chilicuil/snipmate.vim' , { 'on': 'insert' } "snippet support
+        let g:snips_author            = "Javier Lopez"
+        let g:snips_authorEmail       = "m@javier.io"
+        let g:snippets_dir            = "~/.vim/bundle/vim-snippets/snipmate/"
+        let g:snipmate_default_choice = 1
+    Bundle 'chilicuil/vim-snippets' , { 'on': 'insert' } "my snippet definitions
+    Bundle 'Shougo/neocomplcache'   , { 'on': 'insert' } "autocompletion
         let g:neocomplcache_enable_at_startup              = 1
         let g:neocomplcache_max_list                       = 10
         let g:neocomplcache_max_menu_width                 = 10
@@ -355,19 +384,11 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:neocomplcache_enable_wildcard                = 1
         let g:neocomplcache_enable_caching_message         = 1
 
-    Bundle 'mhinz/vim-signify'
-        let g:signify_vcs_list    = [ 'git' ]
-        let g:signify_sign_add    = '+'
-        let g:signify_sign_change = '~'
-        let g:signify_sign_delete = '-'
-    Bundle 'chilicuil/QuickBuf'   , { 'on': ['<Plug>QuickBuf'] }
-        "let g:qb_hotkey = "<F2>"
-        map <F2> <Plug>QuickBuf
-    Bundle 'chilicuil/nextCS'     , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
+    "colorscheme manager
+    Bundle 'chilicuil/nextCS' , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
         map <F12> <Plug>NextCS
         map <F11> <Plug>PreviousCS
-
-    Bundle 'chilicuil/vim-colors'
+    Bundle 'chilicuil/vim-colors' "my colorschemes
         if isdirectory(expand("~/.vim/bundle/vim-colors/"))
             if has ('gui_running')
                 set background=dark
@@ -381,44 +402,30 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
             endif
         endif
 
-    Bundle 'chilicuil/vimbuddy.vim'
-    Bundle 'chilicuil/securemodelines'
-        "let g:secure_modelines_verbose=1
-    Bundle 'chilicuil/gnupg.vim'
-    Bundle 'chilicuil/vim-markdown'
-    Bundle 'chilicuil/vim-sprunge'  , { 'on': ['<Plug>Sprunge'] }
-        map <leader>s <Plug>Sprunge
-        let g:sprunge_flush_left = 1
-    Bundle 'chilicuil/vim-checksum' , { 'on': ['<Plug>Checksum'] }
-        map <leader>c <Plug>Checksum
-    Bundle 'chilicuil/file-line'
-    Bundle 'chilicuil/x-modes' , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
-        map <silent> <leader>D <Plug>XDefaultMode
-        map <silent> <leader>d <Plug>XDevelopmentMode
-        map <silent> <leader>w <Plug>XWriteMode
-        map <silent> <leader>p <Plug>XPresentationMode
-
-    Bundle 'chilicuil/vim-cutils'
-        "cutils#VCSInfo
-        "cutils#FileSize
-        "cutils#CUSkel, create own plugin?
-        "cutils#CUSetProperties
-        let g:cutils_map_longlines      = '<leader>cul'
-        let g:cutils_map_appendmodeline = '<leader>am'
-
-    Bundle 'ntpeters/vim-better-whitespace' , { 'on': 'delay' }
-        set list
-        set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-
-    Bundle 'mbbill/undotree'         , { 'on': 'UndotreeToggle'}
-        map <leader>u :UndotreeToggle<cr>
+    "align columns on characters
     Bundle 'junegunn/vim-easy-align' , { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
         "command! -nargs=* -range -bang Align
         "\ <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
         command! -nargs=* -range -bang Align <line1>,<line2>EasyAlign
         vmap . <Plug>(EasyAlignRepeat)
         nmap <leader>a <Plug>(EasyAlign)
-    Bundle 'scrooloose/syntastic'    , { 'on': 'delay' }
+
+    Bundle 'chilicuil/vim-cutils' "random helpers
+        "cutils#VCSInfo
+        "cutils#FileSize
+        "cutils#CUSkel, create own plugin?
+        "cutils#CUSetProperties
+        let g:cutils_map_longlines      = '<leader>cul'
+        let g:cutils_map_appendmodeline = '<leader>am'
+    "my ways
+    Bundle 'chilicuil/x-modes' , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
+        map <silent> <leader>D <Plug>XDefaultMode
+        map <silent> <leader>d <Plug>XDevelopmentMode
+        map <silent> <leader>w <Plug>XWriteMode
+        map <silent> <leader>p <Plug>XPresentationMode
+    if v:version < 704 | Bundle 'google/vim-ft-go' | endif
+
+    Bundle 'scrooloose/syntastic' , { 'on': 'delay' } "syntax checker
         let g:syntastic_always_populate_loc_list = 1
         let g:syntastic_auto_loc_list            = 1
         let g:syntastic_check_on_open            = 1
@@ -429,21 +436,29 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:syntastic_error_symbol            = "E!"
         "let g:syntastic_warning_symbol          = "W"
 
-    if v:version < 704
-        Bundle 'google/vim-ft-go'
-    endif
+    Bundle 'mileszs/ack.vim' , { 'on': ['Ack'] } "grep|ag search integration
+        "let g:ackpreview = 1
+        let g:ackhighlight = 1
+        let g:ack_mappings = { "O": "<CR>zz", "o": "<CR>zz:ccl<CR>", "p": "<CR>zz<C-W>p", "i": "<C-W><CR><C-W>x<C-W>p", }
+        command! -nargs=* Grep Ack! <q-args>
+        nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
+        if executable("ag")
+            let g:ackprg = "ag --vimgrep"
+        else
+            let g:ackprg = "grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e"
+        endif
 
-    "===vim-scripts===, not hosted in github
-    Bundle 'surround.vim'    , { 'on': 'insert' } "vim objects on steroids
+    "===http://www.vim.org/scripts/===
+    Bundle 'surround.vim'    , { 'on': 'insert' } "text :h objects on steroids
         " ds"   => delete surrounding quotes
         " cs"'  => replace surrounding quotes with single quotes
         " ysiw' => wrap word in surrounding single quotes
     Bundle 'delimitMate.vim' , { 'on': 'insert' } "autocomplete pairs
         autocmd FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
-    Bundle 'repeat.vim'      , { 'on': 'delay'  }
+    Bundle 'repeat.vim'      , { 'on': 'delay'  } " .|repeat support for plugins
 
     "===experimental===
-    Bundle 'chilicuil/goyo.vim' , { 'on': '<Plug>Goyo' }
+    Bundle 'chilicuil/goyo.vim' , { 'on': '<Plug>Goyo' } "zen write mode
         map <leader>y <Plug>Goyo
         "let g:goyo_width         = 160
         "let g:goyo_margin_top    = 5
@@ -456,34 +471,24 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "endfunction
         "let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
 
-    Bundle 'gastonsimone/vim-dokumentary' "try to replace it, cannot be loaded on demand
+    "documentation viewer (K in normal mode)
+    Bundle 'gastonsimone/vim-dokumentary' "replace it, cannot load on demand
     Bundle 'wting/gitsessions.vim' , { 'on': ['GitSessionSave', 'GitSessionDelete'] }
         command! -nargs=* SessionSave   GitSessionSave
         command! -nargs=* SessionDelete GitSessionDelete
-    Bundle 'tmux-plugins/vim-tmux' "syntax file
-    Bundle 'zah/nimrod.vim'        "syntax file
-    Bundle 'ap/vim-css-color'
-    Bundle 'alvan/vim-closetag' , { 'on': 'insert' }
+    Bundle 'tmux-plugins/vim-tmux'  "syntax file
+    Bundle 'zah/nimrod.vim'         "syntax file
+    Bundle 'chilicuil/vim-markdown' "syntax file
+    Bundle 'ap/vim-css-color'       "colorize #hex, rgb tags
+    Bundle 'alvan/vim-closetag' , { 'on': 'insert' } "autoclose xml|html tags
         let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 
-    Bundle 'mileszs/ack.vim' , { 'on': ['Ack'] }
-        "let g:ackpreview = 1
-        let g:ackhighlight = 1
-        let g:ack_mappings = { "O": "<CR>zz", "o": "<CR>zz:ccl<CR>", "p": "<CR>zz<C-W>p", "i": "<C-W><CR><C-W>x<C-W>p", }
-        command! -nargs=* Grep Ack! <q-args>
-        nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
-        if executable("ag")
-            let g:ackprg = "ag --vimgrep"
-        else
-            let g:ackprg = "grep -rni --exclude-dir={.git,.svn,.bzr,.hg,.pc,CVS} --binary-files=without-match . -e"
-        endif
-    Bundle 'KabbAmine/lazyList.vim', { 'on': 'delay' } "broken in vim73
+    Bundle 'KabbAmine/lazyList.vim', { 'on': 'delay' } "helps creating lists
     "Bundle 'chilicuil/lazyList.vim', { 'on': 'delay' }
         let g:lazylist_maps = [ 'gl', { 'l': '', '1': '%1% ', '-': '- ', '*': '* ' } ]
-    Bundle 'junegunn/vader.vim' , { 'on': ['Vader'] }   "tdd for vim plugin dev
+    Bundle 'junegunn/vader.vim' , { 'on': ['Vader'] }   "tdd for vim plugin development
     Bundle 'Olical/vim-enmasse' , { 'on': ['EnMasse'] } "edit quicklist results, grep/ag
-    Bundle 'pbrisbin/vim-mkdir'
-    "Bundle 'Two-Finger/hardmode'
+    "Bundle 'Two-Finger/hardmode' "use vim the right way
         "let g:hardmode = 1
         "nnoremap <Leader>H <Esc>:call ToggleHardMode()<CR>
 
