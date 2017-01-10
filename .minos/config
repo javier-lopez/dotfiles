@@ -10,10 +10,8 @@
 #clipboard          yes
 #statusbar          yes
 
-#wallpaper          /usr/share/minos/wallpapers/minos.png
-wallpaper           $HOME/data/images/wallpapers/sunlight.png
-#lock-wallpaper     /usr/share/minos/wallpapers/o@o.png
-lock-wallpaper      "$HOME/data/images/wallpapers/o@o.png"
+wallpaper           /usr/share/minos/wallpapers/sunlight.png
+lock-wallpaper      /usr/share/minos/wallpapers/locked.png
 
 m-autostart         minos-autostart
 #m-autostart-config /etc/minos/autostart
@@ -41,36 +39,34 @@ m-movietime         movietime
 
 #/etc/cron.d/watch-battery
 m-battery           watch-battery
-#m-battery-config    15,10,7,5
-m-battery-config    25,20,17,15
+m-battery-config    15,10,7,5
 
 #shortcuts
-m-help               minos-help
-m-launcher           dmenu-run
-m-killer             dmenu-killall
-m-browser            x-www-browser
-m-file-manager       pcmanfm
-m-terminal           x-terminal-emulator
-#m-terminal          x-terminal-emulator -e tmux
-m-mail               mutt:terminal
-m-im                 'irssi --config=<(gpg -d ~/.irssi/config.gpg)':terminal
-m-pdf                zathura
-m-music-player       ncmpcpp:terminal
-m-video-player       umplayer
-m-multimonitor       dmenu-xrandr
-m-network-manager    wicd-curses:terminal
-#m-network-manager   ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
-#m-network-manager   connman-curses:terminal
-m-magnifier          magnifier
-#m-magnifier         xzoom
-m-window-jumper      dmenu-i3-window-jumper
-m-screenshot         screenshot
-m-screencast         ffcast
+m-help              minos-help
+m-launcher          dmenu-run
+m-killer            dmenu-killall
+m-browser           x-www-browser
+m-file-manager      pcmanfm
+m-terminal          x-terminal-emulator
+#m-terminal         x-terminal-emulator -e tmux
+m-mail              mutt:terminal
+m-im                'irssi --config=<(gpg -d ~/.irssi/config.gpg)':terminal
+m-pdf               zathura
+m-music-player      ncmpcpp:terminal
+m-video-player      umplayer
+m-multimonitor      dmenu-xrandr
+m-network-manager   wicd-curses:terminal
+#m-network-manager  ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
+#m-network-manager  connman-curses:terminal
+m-magnifier         magnifier
+#m-magnifier        xzoom
+m-window-jumper     dmenu-i3-window-jumper
+m-screenshot        screenshot
+m-screencast        ffcast
 
 #minos.io/s
-#dotfiles            https://github.com/user/dotfiles
-#hook                http://minos.io/hook
-app-core             curl
-app-desktop          mozilla-firefox mozilla-flashplayer
-#core,desktop?
-app-purge            xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie
+#dotfiles           https://github.com/user/dotfiles
+#hook               http://minos.io/hook
+app-core            curl
+app-desktop         mozilla-firefox mozilla-flashplayer
+app-purge           xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie rpcbind postfix bind9-host bind9utils cifs-utils samba samba-common samba-common-bin samba-libs python-samba samba-libs
