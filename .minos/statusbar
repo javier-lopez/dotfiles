@@ -20,16 +20,16 @@ TEXT
   "icon":"$HOME/.data/images/icons/dzen2/sm4tik/diskette.xbm",\
    "color": "\#999999",\
    "full_text": "${fs_used_perc /home}%"},\
- ${if_up wlan0}\
-   {"name":"wlan0",\
+ ${if_up wlo1}\
+   {"name":"wlo1",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/wifi.xbm",\
     "color": "\#999999",\
-    "full_text": "wlan0 ${downspeed wlan0}",\
+    "full_text": "wlo1 ${downspeed wlo1}",\
     "separator": false},\
-   {"name":"wlan0ip",\
+   {"name":"wlo1ip",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/net_download_speed.xbm",\
     "color":"\#999999",\
-    "full_text": "${addr wlan0}"},\
+    "full_text": "${addr wlo1}"},\
  ${endif}\
  ${if_up wlan1}\
    {"name":"wlan1",\
@@ -42,16 +42,16 @@ TEXT
     "color":"\#999999",\
     "full_text": "${addr wlan1}"},\
  ${endif}\
- ${if_up eth0}\
-   {"name":"eth0",\
+ ${if_up eno1}\
+   {"name":"eno1",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/wifi.xbm",\
     "color": "\#999999",\
-    "full_text": "eth0 ${downspeed eth0}",\
+    "full_text": "eno1 ${downspeed eno1}",\
     "separator": false},\
-   {"name":"eth0ip",\
+   {"name":"eno1ip",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/net_download_speed.xbm",\
     "color":"\#999999",\
-    "full_text": "${addr eth0}"},\
+    "full_text": "${addr eno1}"},\
  ${endif}\
  {"name": "cpu",\
   "icon":"$HOME/.data/images/icons/dzen2/sm4tik/cpu.xbm",\
@@ -95,9 +95,8 @@ TEXT
   "color": "\#999999",\
   "full_text": "${exec amixer get 'Master',0|egrep -m1 -o '[0-9]{1,3}%'}",\
   "separator": false}\
- ${if_mpd_playing}\
-   ,{"name": "mpd",\
+   ,{"name": "music",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/phones.xbm",\
     "color": "\#999999",\
-    "full_text": "${exec mpc status|awk 'NR == 1 {gsub(/"/,""); gsub(/\\/,"/"); print}'}"}\
- ${endif}],
+    "full_text": "${exec player-ctrl print title}"}\
+ ],
