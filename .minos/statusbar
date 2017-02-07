@@ -20,38 +20,27 @@ TEXT
   "icon":"$HOME/.data/images/icons/dzen2/sm4tik/diskette.xbm",\
    "color": "\#999999",\
    "full_text": "${fs_used_perc /home}%"},\
- ${if_up wlo1}\
-   {"name":"wlo1",\
+ ${if_up WL_INTERFACE}\
+   {"name":"WL_INTERFACE",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/wifi.xbm",\
     "color": "\#999999",\
-    "full_text": "wlo1 ${downspeed wlo1}",\
+    "full_text": "WL_INTERFACE ${downspeed WL_INTERFACE}",\
     "separator": false},\
-   {"name":"wlo1ip",\
+   {"name":"WL_INTERFACEip",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/net_download_speed.xbm",\
     "color":"\#999999",\
-    "full_text": "${addr wlo1}"},\
+    "full_text": "${addr WL_INTERFACE}"},\
  ${endif}\
- ${if_up wlan1}\
-   {"name":"wlan1",\
+ ${if_up EN_INTERFACE}\
+   {"name":"EN_INTERFACE",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/wifi.xbm",\
     "color": "\#999999",\
-    "full_text": "wlan1 ${downspeed wlan1}",\
+    "full_text": "EN_INTERFACE ${downspeed EN_INTERFACE}",\
     "separator": false},\
-   {"name":"wlan1ip",\
+   {"name":"EN_INTERFACEip",\
     "icon":"$HOME/.data/images/icons/dzen2/sm4tik/net_download_speed.xbm",\
     "color":"\#999999",\
-    "full_text": "${addr wlan1}"},\
- ${endif}\
- ${if_up eno1}\
-   {"name":"eno1",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/wifi.xbm",\
-    "color": "\#999999",\
-    "full_text": "eno1 ${downspeed eno1}",\
-    "separator": false},\
-   {"name":"eno1ip",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/net_download_speed.xbm",\
-    "color":"\#999999",\
-    "full_text": "${addr eno1}"},\
+    "full_text": "${addr EN_INTERFACE}"},\
  ${endif}\
  {"name": "cpu",\
   "icon":"$HOME/.data/images/icons/dzen2/sm4tik/cpu.xbm",\
