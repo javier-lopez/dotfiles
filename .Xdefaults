@@ -75,7 +75,7 @@ URxvt.cutchars:         "\\ `\"\'()*;<>[]{|}&,=?@^\:"
 
 ! === Plugins ===
 !URxvt.perl-lib:         .urxvt/
-URxvt.perl-lib:         /usr/share/minos/urxvt/
+URxvt.perl-lib:         /usr/lib/urxvt/perl/
 URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard
 !URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard,cursortail
 
