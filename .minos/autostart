@@ -13,10 +13,9 @@ _exec() {
 }
 
 _execm() {
-    [ X"$(minos-config "${1#m-}" 2>/dev/null)" = X"no" ] && return
     _execm__tool="$(minos-config "${1}" 2>/dev/null)"
     if [ -z "${_execm__tool}" ]; then
-        shift; _exec "${@}"
+        shift && _exec "${@}"
     else
         _exec "${_execm__tool}"; unset _execm__tool
     fi
@@ -32,21 +31,24 @@ wallpaper="$(minos-config wallpaper 2>/dev/null)"
 #if no wallpaper, set background to black; otherwise apply wallpaper
 [ -z "${wallpaper}" ] && _exec xsetroot -solid "#000000" || _exec feh --bg-scale "${wallpaper}"
 
-terminal_emulator="$(minos-config x-terminal 2>/dev/null)"
+terminal_emulator="$(minos-config terminal 2>/dev/null)"
 terminal_emulator="${terminal_emulator:-x-terminal-emulator}"
 #_exec "${terminal_emulator}" -name scratchpad -e "${SHELL}"
 _exec  "${terminal_emulator}" -name scratchpad -e  "${SHELL}" -c "tmux attach -t scratchpad || tmux new -s scratchpad"
 
-_execm m-clipboard autocutsel #sync X/Gnome clipboards
-_execm m-eyesaver  redshift   #save your eyes
-_execm m-handsaver workrave   #save your hands
-(sleep 2 && _execm m-composition compton)& #eyecandy + fix for general tearing
-#(sleep 2 && _execm m-composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
+_execm clipboard autocutsel #sync X/Gnome clipboards
+#_execm eyesaver  xflux -l 23.6345 -g 102.5528 #local
+_execm eyesaver  redshift   #save your eyes
+_execm handsaver workrave   #save your hands
+(sleep 2 && _execm composition compton)& #eyecandy + fix for general tearing
+#(sleep 2 && _execm composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
 #mplayer fifo controller
 mplayer__fifo="$(cat etc/mplayer/mplayer.conf ~/.mplayer/config 2>/dev/null | \
                  awk '/^input=file=/ {sub(/^input=file=/, ""); print}' | tail -1)"
 [ -n "${mplayer__fifo}" ] && [ ! -e "${mplayer__fifo}" ] && mkfifo "${mplayer__fifo}"
 _exec minos-welcome
+_exec skype-apulse #local
+_exec spotify      #local
 
 #_exec urxvtd -q -f -o          #urxvt server, improves performance but breaks often
 #_exec xbanish                  #hide mouse coursor when it isn't used, broken

@@ -3,70 +3,54 @@
 # /etc/minos/config, ~/.minos/config #
 ######################################
 
-#autostart          yes
-#composition        yes
-#eyesaver           yes
-#handsaver          yes
-#clipboard          yes
-#statusbar          yes
+wallpaper        /usr/share/minos/wallpapers/audifonos.png
+lock-wallpaper   /usr/share/minos/wallpapers/audifonos.png
 
-wallpaper           /usr/share/minos/wallpapers/sunlight.png
-lock-wallpaper      /usr/share/minos/wallpapers/locked.png
+autostart        minos-autostart
+composition      compton
+eyesaver         redshift
+handsaver        workrave
+clipboard        autocutsel -fork
+#clipboard       autocutsel -fork && autocutsel -selection PRIMARY -fork
+statusbar        minos-statusbar
+statusbar-icons  sm4tik
 
-m-autostart         minos-autostart
-#m-autostart-config /etc/minos/autostart
-#m-autostart-config $HOME/.minos/autostart
-m-composition       compton
-m-eyesaver          redshift
-m-handsaver         workrave
-m-clipboard         autocutsel -fork
-#m-clipboard        autocutsel -fork && autocutsel -selection PRIMARY -fork
-m-statusbar         minos-statusbar
-#m-statusbar-icons  sm4tik
-#m-statusbar-config /etc/minos/statusbar
-#m-statusbar-config $HOME/.minos/statusbar
-
-m-session-manager   dmenu-session
-#m-session-manager-config /etc/minos/session-manager
-#m-session-manager-config $HOME/.minos/session-manager
-m-hibernate         pm-hibernate
-m-suspend           pm-suspend
-m-lock              i3lock
-m-keyboard          shift-keyboard-layout
-#m-keyboard-config  latam,us,ru
-m-movietime         movietime
-#m-movietime-config $HOME/.minos/movietime
+session-manager  dmenu-session
+hibernate        pm-hibernate
+suspend          pm-suspend
+lock             i3lock
+keyboard         shift-keyboard-layout
+keyboard-layouts latam,us,ru
+movietime        movietime
 
 #/etc/cron.d/watch-battery
-m-battery           watch-battery
-m-battery-config    15,10,7,5
+battery          watch-battery
+battery-alerts   15,10,7,5 #in minutes
 
 #shortcuts
-m-help              minos-help
-m-launcher          dmenu-run
-m-killer            dmenu-killall
-m-browser           x-www-browser
-m-file-manager      pcmanfm
-m-terminal          x-terminal-emulator
-#m-terminal         x-terminal-emulator -e tmux
-m-mail              mutt:terminal
-m-im                'irssi --config=<(gpg -d ~/.irssi/config.gpg)':terminal
-m-pdf               zathura
-m-music-player      ncmpcpp:terminal
-m-video-player      umplayer
-m-multimonitor      dmenu-xrandr
-m-network-manager   wicd-curses:terminal
-#m-network-manager  ~/code/minos/dev/connman/connman-json-client-issue7/connman_ncurses:terminal
-#m-network-manager  connman-curses:terminal
-m-magnifier         magnifier
-#m-magnifier        xzoom
-m-window-jumper     dmenu-i3-window-jumper
-m-screenshot        screenshot
-m-screencast        ffcast
+help             minos-help
+launcher         dmenu-run
+killer           dmenu-killall
+browser          x-www-browser
+file-manager     pcmanfm
+terminal         x-terminal-emulator
+#terminal        x-terminal-emulator -e tmux
+mail             mutt:terminal
+im               'irssi --config=<(gpg -d ~/.irssi/config.gpg)':terminal
+pdf              zathura
+music-player     ncmpcpp:terminal
+video-player     umplayer
+multimonitor     dmenu-xrandr
+network-manager  wicd-curses:terminal
+magnifier        magnifier
+#magnifier       xzoom
+window-jumper    dmenu-i3-window-jumper
+screenshot       screenshot
+screencast       ffcast
 
 #minos.io/s
-#dotfiles           https://github.com/user/dotfiles
-#hook               http://minos.io/hook
-app-core            curl
-app-desktop         mozilla-firefox mozilla-flashplayer
-app-purge           xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie rpcbind postfix bind9-host bind9utils cifs-utils samba samba-common samba-common-bin samba-libs python-samba samba-libs
+#dotfiles        https://github.com/user/dotfiles
+#hook            http://minos.io/hook
+app-core         curl
+app-desktop      mozilla-firefox mozilla-flashplayer
+app-purge        xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie rpcbind postfix bind9-host bind9utils cifs-utils samba samba-common samba-common-bin samba-libs python-samba samba-libs
