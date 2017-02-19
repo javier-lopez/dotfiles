@@ -48,7 +48,7 @@ set $Space   65
 set $Insert 118
 set $Supr   119
 set $ImpPt  107
-set $F1     67
+set $F1      67
 
 #use $Win+space to drag floating windows
 floating_modifier $Win
@@ -125,7 +125,7 @@ bindcode $Alt+$Esc            exec m-launcher
 bindcode $Altgr+45            kill
 #right click kills window
 bindsym --release button3     kill
-#bindmouse Button3             kill
+#bindmouse Button3            kill
 #        $Altgr+l
 bindcode $Altgr+46            exec m-killer
 bindsym  $Alt+Tab             exec m-window-jumper
@@ -141,6 +141,7 @@ bindcode $Altgr+52            exec m-magnifier
 bindcode $Altgr+31            exec m-im
 #        $Altgr+Shift+m
 bindcode $Altgr+Shift+58      exec m-music-player
+
 #        $Altgr+Shift+v
 bindcode $Altgr+Shift+55      exec m-video-player
 bindsym  $Altgr+n             exec m-network-manager
@@ -168,6 +169,7 @@ bindcode $Win+$ImpPt          exec m-screencast
 bindcode $Win+$Alt+$ImpPt     exec m-screencast -s
 bindcode Control+$ImpPt       exec gifcast
 bindcode $Win+Shift+$ImpPt    exec m-screencast -k
+
 #        $Altgr+s
 bindcode $Altgr+39            exec dmenu-mpd
 bindsym Control+$Alt+v        exec vim-anywhere
@@ -203,7 +205,6 @@ mode "resize" {
     #They resize the border in the direction you pressed, e.g.
     #when pressing left, the window is resized so that it has
     #more space on its left
-
     bindsym h resize grow left 10 px
     bindsym j resize shrink up 10 px
     bindsym k resize grow up 10 px

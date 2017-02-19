@@ -33,6 +33,7 @@
     d       = diff
     cm      = commit
     cmv     = commit -v
+    s       = show
     st      = status
     br      = branch
     co      = checkout
