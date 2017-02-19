@@ -1,5 +1,5 @@
 #########################################################
-# Last review            Tue 25 Aug 2015 03:43:57 PM CDT
+# Last review            Tue 07 Feb 2017 05:10:50 PM CST
 #########################################################
 
 # =============================================================================
@@ -116,9 +116,6 @@ macro pager b '<enter-command>toggle sidebar_visible<enter>'
 # Mario Holbe suggests:
 # macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
 # macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
-
-macro index 1 '<sync-mailbox><enter-command>source ~/.mutt/accounts/fco.plj@gmail.com/account<enter><change-folder>!<enter>'
-macro index 2 '<sync-mailbox><enter-command>source ~/.mutt/accounts/chilicuil@gmail.com/account<enter><change-folder>!<enter>'
 
 # =============================================================================
 # === Mime ====================================================================
@@ -285,18 +282,24 @@ set pgp_export_command       = "gpg --no-verbose --export --armor %r"
 set pgp_verify_key_command   = "gpg --no-verbose --batch --fingerprint --check-sigs %r"
 set pgp_list_pubring_command = "gpg --no-verbose --batch --with-colons --list-keys %r"
 set pgp_list_secring_command = "gpg --no-verbose --batch --with-colons --list-secret-keys %r"
-my_hdr X-PGP-Key: http://javier.io/pubkey.asc
+#my_hdr X-PGP-Key: http://javier.io/pubkey.asc
 
 # =============================================================================
 # === Accounts  ===============================================================
 # =============================================================================
 # passwd management
 set my_decrypt=`gpg -o $HOME/.mutt/accounts/passwd.gpg.tmp -d $HOME/.mutt/accounts/passwd.gpg`
+set my_javierDOTlopezATadbansysDOTcom=`awk '/javier.lopez@adbansys.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_fcoDOTpljATgmailDOTcom=`awk '/fco.plj@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_chilicuilATgmailDOTcom=`awk '/chilicuil@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_rm=`rm -f $HOME/.mutt/accounts/passwd.gpg.tmp`
 
 # default
-source ~/.mutt/accounts/fco.plj@gmail.com/account
+source ~/.mutt/accounts/javier.lopez@adbansys.com/account
+
+# other accounts
+macro index 1 '<sync-mailbox><enter-command>source ~/.mutt/accounts/javier.lopez@adbansys.com/account<enter><change-folder>!<enter>'
+macro index 2 '<sync-mailbox><enter-command>source ~/.mutt/accounts/fco.plj@gmail.com/account<enter><change-folder>!<enter>'
+macro index 3 '<sync-mailbox><enter-command>source ~/.mutt/accounts/chilicuil@gmail.com/account<enter><change-folder>!<enter>'
 
 # vim: set ts=8 sw=4 tw=0 ft=muttrc :
