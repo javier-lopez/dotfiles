@@ -16,5 +16,5 @@ msgcolor=1
 
 #fontconfig = yes
 #font = "Arial Unicode MS"
-#subfont-text-scale = 3
-subfont-text-scale=6
+subfont-text-scale = 3
+#subfont-text-scale=6
