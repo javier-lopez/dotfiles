@@ -71,12 +71,12 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress:true
 
 URxvt.print-pipe:       cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
-URxvt.cutchars:         "\\ `\"\'()*;<>[]{|}&,=?@^\:"
+URxvt.cutchars:         "\\ `\"\'()*;<>[]{|}&,=?@^\:│─"
 
 ! === Plugins ===
-!URxvt.perl-lib:         .urxvt/
 URxvt.perl-lib:         /usr/lib/urxvt/perl/
 URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard
+!URxvt.perl-lib:         .urxvt/
 !URxvt.perl-ext:         mark-yank-urls,tabbedex,font-resize,clipboard,cursortail
 
 !urlLauncher settings
