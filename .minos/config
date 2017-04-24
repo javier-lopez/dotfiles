@@ -29,7 +29,7 @@ battery-alerts   15,10,7,5 #in minutes
 
 #shortcuts
 help             minos-help
-launcher         dmenu-run
+launcher         dmenu-launcher
 killer           dmenu-killall
 browser          x-www-browser
 file-manager     pcmanfm
