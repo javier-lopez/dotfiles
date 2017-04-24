@@ -1,252 +1,5 @@
 "===============================================================================
-"============================== General settings ===============================
-"===============================================================================
-
-if v:version < 700
-    echoerr "This vimrc file use features than are only available on vim 7.0 or greater"
-    finish
-endif
-
-if has('win32') || has('win64')
-    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-endif
-
-set nocompatible      "breaks compatibility with vi, required
-set modelines=0       "http://www.guninski.com/vim1.html
-set noexrc            "don't use local version of .(g)vimrc, .exrc
-set lazyredraw        "do not redraw the screen while macros are running. It
-                      "improves performance
-set ttyfast           "indicates a fast terminal connection
-set history=100       "record last 100 commands, press 'q:' to see a new
-                      "window (normal mode) with the full history
-set t_Co=256          "set 256 colors. Make sure your console supports it.
-                      "gnome-terminal, konsole and urxvt work well
-set report=0          "report any changes
-set nobackup          "git btw!
-set nowritebackup     "bye .swp madness
-set noswapfile
-"set undofile          "persist the undo tree to a file
-"set undodir='~/.vim/undo/'
-set tabpagemax=100    "max open tabs at the same time
-set autowrite
-set autoread          "watch file changes by other programs
-set encoding=utf-8    "utf is able to represent any character
-set fileencoding=utf-8
-set ruler             "show the cursor position all the time
-set noerrorbells      "disable annoying beeps
-set path+=**          "search through subdirectories
-"set visualbell       "this one too
-set wildmenu          "enhance command completion
-set wildignore=*/.svn,CVS,*/.git,*/.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.swp,*/tmp/*
-set wildignore=*.pdf,*.png,*.jpg,*.jpeg,*.mp3,*mp4,*.avi,*.mkv,*.mpeg,*.mpg,*.rm
-set hidden            "allow open other file without saving current file
-set autochdir         "change to the current directory
-set winminheight=1    "never let a window to be less than 1px height
-set winminwidth=1
-set scrolloff=3       "show enough context
-set sidescrolloff=2
-set hlsearch          "highlight search
-set incsearch         "search as you type
-set ignorecase        "ignore case when searching
-set smartcase         "ignores ignorecase when pattern contains uppercase characters"
-set showcmd           "show the command being typed
-set softtabstop=4     "vim sees 4 spaces as a tab
-set shiftwidth=4
-set showfulltag       "when autocompleting show as much as possible
-set expandtab         "tabs mutate into spaces, if you wanna insert "real"
-                      "tabs use Ctrl-v <tab> instance
-set splitright        "split vertically to the right.
-set splitbelow        "split horizontally below.
-"set cursorline       "highlight the screen line of the cursor, slow!
-set nostartofline     "keep the cursor on the same column
-set nofsync           "improves performance, let OS decide when to flush disk
-set showmatch         "show matching bracket
-"set matchtime=5      "how many tenths of a second to blink
-set diffopt+=iwhite   "ignore whitespace in diff mode
-set cscopetag         "use both cscope and ctag for 'ctrl-]'
-set csto=0            "gives preference to cscope over ctag
-"set mousehide        "hide the mouse while typying
-"set mouse=nv         "set the mouse to work in console mode
-set foldenable!       "disable folding by default
-"set foldmethod=indent "other options are marker|expr|manual
-"set foldmarker={,}
-"set clipboard=unnamed
-"yanks go to clipboard, "+p to recover, only works on X11
-if has ('unnamedplus') | set clipboard=unnamedplus | endif
-
-set viminfo='100,<100,s10,h    "remember just a little
-set backspace=indent,eol,start "backspace deletes as in other editors
-set pastetoggle=<c-insert>     "pastetoggle, sane indentation on pastes
-                               "doesn't work in most terminal emulators
-                               ":set paste/nopaste are friends there
-"print to html
-let html_use_css       = 1
-let html_dynamic_folds = 1
-
-syntax on
-filetype plugin indent on                 "enable filetype-specific plugins
-setlocal omnifunc=syntaxcomplete#Complete "Omni-completion <C-x><C-o>
-
-"====== Autoloads ======
-if has("autocmd")
-    "Go back to the position the cursor was on the last time this file was edited
-    autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-                \|execute("normal '\"")|endif
-
-    augroup vimrc "cannon be used with the above line, otherwise the cursor
-                  "will jump randomly upon the first insert mode change
-    autocmd VimEnter * nohls "turn off any existing search
-    "browse documentation with <Enter>/<BS>
-    autocmd filetype help :nnoremap <buffer><CR> <c-]>
-    autocmd filetype help :nnoremap <buffer><BS> <c-T>
-
-    "set foldmethod to manual after initial automatic indent recognition
-    "autocmd BufReadPre  * setlocal foldmethod=indent
-    "autocmd BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
-    augroup END
-endif
-
-"====== Status Line ======
-"mostly taken from http://github.com/ciaranm/dotfiles-ciaranm/raw/master/vimrc
-set laststatus=2                             "always show statusline
-set statusline=                              "init definition
-set statusline+=%2*%-2n                      "buffer number
-set statusline+=%h%1*%m%r%w%0*               "flags
-set statusline+=%*\ %-.50F\                  "file name (full)
-"if filereadable(expand("~/.vim/bundle/vim-cutils/plugin/cutils.vim"))
-    "set statusline+=%-7{cutils#VCSInfo()}   "branch info
-"endif
-set statusline+=\[%{strlen(&ft)?&ft:'none'}, "filetype
-set statusline+=%{&encoding},                "encoding
-set statusline+=%{&fileformat}]              "file format
-if filereadable(expand("~/.vim/bundle/vimbuddy.vim/plugin/vimbuddy.vim"))
-    set statusline+=\ %{VimBuddy()}          "cui o@o!
-endif
-"set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
-set statusline+=%=                           "right align
-set statusline+=%2*%-8{strftime('%H:%M')}    "time
-if filereadable(expand("~/.vim/bundle/vim-cutils/plugin/cutils.vim"))
-    set statusline+=%-7{cutils#FileSize()}   "file size
-endif
-"set statusline+=%2*%-3b,0x%-8B\             "current char
-"set statusline+=0x%-4B\                     "current char
-"set statusline+=%-14.(%l,%c%V%)\ %<%P       "offset
-set statusline+=%-8.(%l,%c%V%)\ %P           "offset
-
-"===============================================================================
-"================================== Mappings ===================================
-"===============================================================================
-
-"=== Ctrl Mappings===
-"windows
-noremap  <c-k> <c-w>k
-noremap  <c-j> <c-w>j
-noremap  <c-l> <c-w>l
-noremap  <c-h> <c-w>h
-inoremap <c-k> <esc><c-w>k
-inoremap <c-j> <esc><c-w>j
-inoremap <c-l> <esc><c-w>l
-inoremap <c-h> <esc><c-w>h
-
-"tabs
-map <c-t> <esc>:tabnew<cr>
-map <c-tab> :tabnext<cr>
-map <c-s-tab> :tabprevious<cr>
-map [6^ :tabnext<cr>
-map [5^ :tabprevious<cr>
-map <c-w> :tabclose <cr>
-
-"exit
-map <c-x> :confirm qall<cr>
-
-"=== Leader Mappings(,)==
-let mapleader = ","
-
-"m'ake
-map <silent> <leader>m :make<cr>
-
-"toggle numbering
-map <silent> <leader>1 :set number!<cr>
-
-"reload ~/.vimrc
-map <leader>r :source $MYVIMRC<cr>
-
-"resize windows
-noremap <silent><leader>< :vertical resize -1<cr>
-noremap <silent><leader>> :vertical resize +1<cr>
-noremap <silent><leader>+ :resize +1<cr>
-noremap <silent><leader>- :resize -1<cr>
-
-"clear highlighted searches
-nmap <silent> <leader>/   :nohlsearch<cr>
-
-"use the repeat operator with a visual selection
-vnoremap <leader>. :normal .<cr>
-
-"repeat a macro on a visual selection of lines
-vnoremap <leader>@ :normal @
-
-"=== Tab Mappings ===
-map <tab>c :cc<cr>
-map <tab>n :cnext<cr>
-map <tab>p :cprevious<cr>
-"move between buffers
-map <tab><space> :bnext<cr>
-
-"=== Misc Mappings===
-"let's switch these
-nnoremap ' `
-nnoremap ` '
-
-"<esc> isn't really confortable, be carefull when pasting stuff
-inoremap jj <esc>
-
-"insert spaces in normal mode
-noremap <space> i <esc>
-
-"use <backspace> for deleting visual selections
-xnoremap <bs> d
-snoremap <bs> <bs>i
-
-"edit at the end of the word
-map e ea
-
-"make Y consistent with D and C
-nnoremap Y y$
-
-"automatically jump to end of text you pasted
-vnoremap <silent> y y`]
-vnoremap <silent> p p`]
-nnoremap <silent> p p`]
-
-"quit and save faster
-noremap zz :q!<cr>
-noremap ss :w<cr>
-noremap SS :%!sudo tee > /dev/null %<cr>
-
-"execute current line, only vim scripting
-"TODO: add support for other langs
-"nnoremap ygl :<C-u><C-r>=getline('.')<cr><cr>
-"ZZ :wq!
-
-"overwrite these annoying commands
-cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
-"cabbr W w
-cabbr Q q
-cabbr Q q
-cabbr wQ wq
-cabbr WQ wq
-cabbr Wq wq
-noremap <home> ^
-noremap <end>  $
-
-"this will work only in the gui version, most terminals are unable
-"to determinate differences between <home> and <m-home>
-noremap <m-home> gg
-noremap <m-end>  G
-
-"===============================================================================
-"=================================== Plugins ===================================
+"================================== Bootstrap ==================================
 "===============================================================================
 
 if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
@@ -267,16 +20,27 @@ if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
     endif
 endif
 
+"===============================================================================
+"=================================== Plugins ===================================
+"===============================================================================
+
 if isdirectory(expand("~/.vim/bundle/vundle/"))
     set runtimepath+=~/.vim/bundle/vundle/
     call vundle#rc()
 
     "====github====
     Bundle 'chilicuil/vundle' "vim plugin manager
+
+    "personal settings
+    Bundle 'chilicuil/my-vim-sensible'  "general settings
+    Bundle 'chilicuil/my-vim-autoloads'
+    Bundle 'chilicuil/my-vim-statusline'
+    Bundle 'chilicuil/my-vim-mappings'
+        let mapleader = ","
+
     "define additional text :h objects
     Bundle 'paradigm/TextObjectify' , { 'on': 'delay' } "triggered by CursorHold/CursorMoved hooks
     Bundle 'edsono/vim-matchit'    ", { 'on': 'delay 10' }, match pairs {,(,',etc
-    Bundle 'gregsexton/MatchTag'   ", { 'on': 'delay 10' }  match even more pairs xml|html tags
     "complex alternative, requires +python
     "Bundle 'valloric/MatchTagAlways'
     Bundle 'mhinz/vim-hugefile'  "optimizer for huge files, disable expansive vim features
@@ -423,6 +187,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <silent> <leader>d <Plug>XDevelopmentMode
         map <silent> <leader>w <Plug>XWriteMode
         map <silent> <leader>p <Plug>XPresentationMode
+
     if v:version < 704 | Bundle 'google/vim-ft-go' | endif
 
     Bundle 'scrooloose/syntastic' , { 'on': 'delay' } "syntax checker
@@ -491,6 +256,13 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'Two-Finger/hardmode' "use vim the right way
         "let g:hardmode = 1
         "nnoremap <Leader>H <Esc>:call ToggleHardMode()<CR>
+    Bundle 'chilicuil/vim-relative-number'
+    Bundle 'szw/vim-g'
+        let g:vim_g_open_command = "xdg-open"
+        "let g:vim_g_open_command = "google-chrome"
+        "let g:vim_g_query_url    = "http://google.com/search?q="
+        "let g:vim_g_command      = "Go"
+        "let g:vim_g_f_command    = "Gf"
 
     "===discarted===
     "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
@@ -525,128 +297,3 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'lilydjwg/colorizer' "way slower than 'ap/vim-css-color'
     "Bundle 'wellle/tmux-complete.vim' , { 'on': 'insert' } "too slow
 endif
-
-"===============================================================================
-"==================================Extra-notes==================================
-"===============================================================================
-
-" ==Movement==
-" "Ctrl-f" scrolls forward one screen
-" "Ctrl-b" scrolls backward one screen
-" "Ctrl-d" scrolls backward half screen
-" "Ctrl-u" scrolls backward half screen
-" "z-<CR>" moves current line to top of screen and scroll
-" "z-." moves current line to center of screen and scroll
-" "z--" moves current line to bottom of screen and scroll
-" "H" moves to the top line on the screen
-" "M" moves to the middle line on the screen
-" "L" moves to the last line on the screen
-" "(" moves to the beginning of the current sentence
-" ")" moves to the beginning of the next sentence
-" "{" moves to the beginning of the current paragraph
-" "}" moves to the beginning of the next paragraph
-" "[[" moves to the beginning of the current section
-" "]]" moves to the beginning of the next section
-" "w" moves the cursor forward one word
-" "b" moves backward to the start of the previous word.
-" "e" moves to the next end of a word
-" "ge" moves to the previous end of a word.
-" "gg" puts the cursor in the first line.
-" "G" puts the cursor in the last line
-" "'0" returns to the last mark
-" "Ctrl-w f" goes to the file under the cursor
-" "Ctrl-]" jumps to the function's definition :tags
-" "Ctrl-T" jumps back
-
-" ==Text objects==
-" "daw" deletes word under cursor, see :h text-objects, (c)hange & (y)ank
-" "caw" changes word under cursor  ======================================
-" "yaw" copies word under cursor   ======================================
-" "das" deletes sentence
-" "dap" deletes paragraph
-" "da{" deletes {} block
-" "di{" deletes text inside {}
-" "da[" deletes [] block
-" "di[" deletes text inside []
-" "da<" deletes <> block
-" "di<" deletes text inside <>
-" "da"" deletes "" block
-" "di"" deletes text inside ""
-" "dat" deletes tag block (html, xml)
-" "dit" deletes text inside tag words
-" ":%d" deletes all the lines in a file
-
-" ==Search & reemplace==
-" ":%s/\s\+$//" removes all whitespaces at the end of every line
-" ":%s/old/new/gc" it'll confirm each replacement before it's made
-" ":g/old/s//new/gc" same to the above sentence
-" ":g/\(old\) \(stuff\)/s//\2 \1/gc" changes "old stuff" to "stuff old"
-" ":%s/\(old\) \(stuff\)/\2 \1/gc" same to the above sentence
-" ":1,10s/.*/(&)/" surrounds each line from 1 to 10 with parenthesis
-" "%s/yes, doctor/\uyes, \udoctor/gc" changes 'yes doctor' to 'Yes, Doctor'
-" ":%s/\([:.]\)  */\1  /g" replaces one or more spaces following a period
-"                          or a colon with two spaces
-" ":g/^[ tab]*$/d" deletes all blank lines, plus any lines that contain
-"                  only whitespace
-" ":%s/.*/\U&/"
-" ":%s/./\U&/g" changes every letter in a file to uppercase
-" ":windo %s/old/new/g" replaces 'old' with 'new' in all windows
-" ":bufdo set nonumber" set nonumber option in all buffers
-" ":g/^/move 0" reverses the order of lines in a file
-" ":g!/^[[:digit:]]/move $" for any line that doesn't begin with a number,
-"                           moves the line to the end of the file
-" "&" repeats the last substitution
-" ":%&g" repeats the last substitution globally
-" "/\<thi" matches all the words who start with "thi" like 'things'
-" "/ing\>" matches all the words who end with "ing", like 'using'
-" ":vimgrep /\%1l/ **/filename" find all files given a name at any depth
-"                               in the current directory or below
-" ":copen" open the list generated by vimgrep
-" "f<character>" searches for the character
-" ";" goes to the next match
-" "," goes to the previous match
-" "F<character>" searches to the left.
-" "d/key-word" deletes from the cursor to the key-word, it also
-"              works with ?
-" "[I" finds global identifiers in included files
-
-" ==Edit==
-" "J" joins two lines together
-" "." repeats the last change on --insert-- mode
-" "~" changes case of the character under the cursor
-" "gqG" gives format to the whole file
-" "]s" moves to next misspelled word after the cursor
-" ":e!" goes to the latest saved file version
-" "g Ctrl-g" counts the words in the whole file
-" "+p    " paste text from system clipboard
-" "+yy   " copy from vim to the system clipboard
-" "+dd   " cut from vim to the sysyem clipboard
-
-" ==Misc stuff==
-" "K" goes to the man page of the word under the cursor
-" "Ctrl-w r" rotates windows
-" "Ctrl-w x" rotates windows and cursor focus at the same time
-" "Ctrl-w T" moves the current window to a new tab
-" "Ctrl-w H | J | K | L" moves the current window to the left,
-"                        bottom, top and right of the screen
-" "vim + file" opens file at last line
-" "find . | vim -" you can take the output of any command and
-"                  send it into a vim session
-" ":sball" opens all buffers in new windows
-" ":ped file" open in a help window a second file
-" ":help 42"
-" ":help quotes"
-" ":help holy-grail"
-" "zo" Open a folder
-" "zO" Open a folder recursively
-" "zc" Close a folder
-" "zC" Close a folder recursively
-" ":map" List maps
-" ":registers" Show what is in each register
-" "set all" show all the options
-" "q/" gives the search history window
-" "q:" gives the comand history window
-" ":%! nl -ba" numbers all lines in a file
-" ":%! cat -n %" same as above
-" Vim can be suspended like any other program with Ctrl-z and
-" be restarted with --fg--
