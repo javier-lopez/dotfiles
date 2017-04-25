@@ -83,11 +83,11 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:syntastic_auto_jump                = 2
         "let g:syntastic_error_symbol            = "E!"
         "let g:syntastic_warning_symbol          = "W"
-    Bundle 'repeat.vim'                     , { 'on': 'delay' } "repeat|. support for plugins
+    Bundle 'tpope/vim-repeat'               , { 'on': 'delay' } "repeat|. support for plugins
     Bundle 'ntpeters/vim-better-whitespace' , { 'on': 'delay' } "whitespace heater
         set list
         set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-    Bundle 'surround.vim'                   , { 'on': 'delay' } "text :h objects on steroids
+    Bundle 'tpope/vim-surround'             , { 'on': 'delay' } "text :h objects on steroids
         " ds"   => delete surrounding quotes
         " cs"'  => replace surrounding quotes with single quotes
         " ysiw' => wrap word in surrounding single quotes
