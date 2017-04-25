@@ -96,6 +96,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'valloric/MatchTagAlways' "complex alternative, requires +python
     Bundle 'henrik/vim-indexed-search'      , { 'on': 'delay 3' } "count and index search results
     Bundle 'pbrisbin/vim-mkdir'             , { 'on': 'delay 3' } "create missing directories on saving
+    Bundle 'cohama/lexima.vim'              , { 'on': 'delay 3' } "autocomplete pairs
 
     "=================================
     "==== Lazy loading on action =====
@@ -216,9 +217,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:neocomplcache_disable_auto_complete          = 0
         let g:neocomplcache_enable_wildcard                = 1
         let g:neocomplcache_enable_caching_message         = 1
-
-    Bundle 'delimitMate.vim'        , { 'on': 'insert' } "autocomplete pairs
-        autocmd FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
 
     "=================================
     "========== Experimental =========
