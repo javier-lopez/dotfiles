@@ -31,10 +31,10 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "=================================
     "=== Personal general settings ===
     "=================================
-    Bundle 'chilicuil/my-vim-sensible'
-    Bundle 'chilicuil/my-vim-autoloads'
-    Bundle 'chilicuil/my-vim-statusline'
-    Bundle 'chilicuil/my-vim-mappings'
+    Bundle 'chilicuil/my-sensible.vim'
+    Bundle 'chilicuil/my-autoloads.vim'
+    Bundle 'chilicuil/my-statusline.vim'
+    Bundle 'chilicuil/my-mappings.vim'
         let mapleader = ","
 
     "=================================
@@ -45,15 +45,15 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/file-line'       "jump to line on startup, eg: $ vim file:23
     Bundle 'chilicuil/vimbuddy.vim'    "o@o/
     Bundle 'chilicuil/gnupg.vim'       "pgp viewer, run from autoload
-    Bundle 'chilicuil/vim-cutils'      "random helpers
+    Bundle 'chilicuil/cutils.vim'      "random helpers
         "cutils#VCSInfo
         "cutils#FileSize
         "cutils#CUSkel, create own plugin?
         "cutils#CUSetProperties
         let g:cutils_map_longlines      = '<leader>cul'
         let g:cutils_map_appendmodeline = '<leader>am'
-    Bundle 'chilicuil/vim-colors' "colorschemes collection
-        if isdirectory(expand("~/.vim/bundle/vim-colors/"))
+    Bundle 'chilicuil/colors.vim' "colorschemes collection
+        if isdirectory(expand("~/.vim/bundle/colors.vim/"))
             set background=dark
             silent! colorscheme hemisu
             if has ('gui_running')
@@ -92,8 +92,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         " cs"'  => replace surrounding quotes with single quotes
         " ysiw' => wrap word in surrounding single quotes
     Bundle 'paradigm/TextObjectify'         , { 'on': 'delay 3' } "define additional text :h objects
-    Bundle 'edsono/vim-matchit'             , { 'on': 'delay 3' } "match pairs {,(,',etc
-    "Bundle 'valloric/MatchTagAlways' "complex alternative, requires +python
     Bundle 'henrik/vim-indexed-search'      , { 'on': 'delay 3' } "count and index search results
     Bundle 'pbrisbin/vim-mkdir'             , { 'on': 'delay 3' } "create missing directories on saving
     Bundle 'cohama/lexima.vim'              , { 'on': 'delay 3' } "autocomplete pairs
@@ -101,16 +99,16 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "=================================
     "==== Lazy loading on action =====
     "=================================
-    Bundle 'chilicuil/vim-sprunge'     , { 'on': ['<Plug>Sprunge'] }  "pastebin client
+    Bundle 'chilicuil/sprunge.vim'     , { 'on': ['<Plug>Sprunge'] }  "pastebin client
         map <leader>s <Plug>Sprunge
         let g:sprunge_flush_left = 1
     "colorscheme manager
-    Bundle 'chilicuil/nextCS'          , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
+    Bundle 'chilicuil/nextCS.vim'      , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
         map <F12> <Plug>NextCS
         map <F11> <Plug>PreviousCS
-    Bundle 'chilicuil/vim-checksum'    , { 'on': ['<Plug>Checksum'] } "checksum generator
+    Bundle 'chilicuil/checksum.vim'    , { 'on': ['<Plug>Checksum'] } "checksum generator
         map <leader>c <Plug>Checksum
-    Bundle 'chilicuil/x-modes'         , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
+    Bundle 'chilicuil/x-modes.vim'     , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
         map <silent> <leader>D <Plug>XDefaultMode
         map <silent> <leader>d <Plug>XDevelopmentMode
         map <silent> <leader>w <Plug>XWriteMode
@@ -124,9 +122,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:NERDTreeMapOpenVSplit   = "|"
         map <silent> <leader>n  :NERDTreeToggle<cr>
     Bundle 'scrooloose/nerdcommenter'  , {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
-       map <leader>c<space> <Plug>NERDCommenterToggle
-       map <leader>cs       <Plug>NERDCommenterSexy
-       let g:NERDCustomDelimiters  = {'mkd': { 'left': '<!--', 'right': '-->'}}
+        map <leader>c<space> <Plug>NERDCommenterToggle
+        map <leader>cs       <Plug>NERDCommenterSexy
+        let g:NERDCustomDelimiters  = {'mkd': { 'left': '<!--', 'right': '-->'}}
 
     "class/function/var browser
     Bundle 'majutsushi/tagbar' , { 'on': 'TagbarToggle', 'do': 'wget --no-check-certificate https://raw.githubusercontent.com/chilicuil/learn/master/python/tools/mkd2ctags && chmod +x mkd2ctags' }
@@ -202,9 +200,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'chilicuil/snipmate.vim' , { 'on': 'insert' } "snippet support
         let g:snips_author            = "Javier Lopez"
         let g:snips_authorEmail       = "m@javier.io"
-        let g:snippets_dir            = "~/.vim/bundle/vim-snippets/snipmate/"
+        let g:snippets_dir            = "~/.vim/bundle/snippets.vim/snipmate/"
         let g:snipmate_default_choice = 1
-    Bundle 'chilicuil/vim-snippets' , { 'on': 'insert' } "snippet definitions
+    Bundle 'chilicuil/snippets.vim' , { 'on': 'insert' } "snippet definitions
 
     Bundle 'Shougo/neocomplcache'   , { 'on': 'insert' } "autocompletion
         let g:neocomplcache_enable_at_startup              = 1
@@ -221,7 +219,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "=================================
     "========== Experimental =========
     "=================================
-    Bundle 'chilicuil/vim-relative-number'
+    Bundle 'chilicuil/relative-number.vim'
         map <Leader>N <Plug>RelativeNumberToggle
     "better syntax support
     Bundle 'sheerun/vim-polyglot' , { 'do': 'cd syntax; cp markdown.vim mkd.vim' }
@@ -281,4 +279,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "    let g:tcommentOptions = {'whitespace': 'no'} "nerdcommenter ftw!
     "Bundle 'lilydjwg/colorizer' "way slower than 'ap/vim-css-color'
     "Bundle 'wellle/tmux-complete.vim' , { 'on': 'insert' } "too slow
+    "Bundle 'edsono/vim-matchit' , { 'on': 'delay 3' } "added to vanilla vim
+    "Bundle 'valloric/MatchTagAlways' "complex alternative, requires +python
 endif
