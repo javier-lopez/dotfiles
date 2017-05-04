@@ -3,6 +3,31 @@
 "===============================================================================
 
 if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
+    if !executable('git')
+        echo "Couldn't find vundle nor `git`, using vanilla vim ..."
+        finish
+    endif
+
+    "this will be the case when a vimrc is specified manually (-Nu|-u)
+    if $MYVIMRC == ""
+        function! GetMYVIMRC()
+            if has('unix')
+                let l:vim_argv   = split(system('tr "\0" " " </proc/' . getpid() . '/cmdline'))
+                for l:arg in l:vim_argv
+                    if exists("l:user_vimrc_found")
+                        let l:user_vimrc = l:arg
+                        break
+                    endif
+                    if (l:arg == '-Nu' || l:arg == '-NU' || l:arg == '-u' || l:arg == '-U')
+                        let l:user_vimrc_found = 1
+                    endif
+                endfor
+                return exists('l:user_vimrc') ? l:user_vimrc : ''
+            endif
+        endf
+        let $MYVIMRC = GetMYVIMRC()
+    endif
+
     if has("gui_running")
         "!git clone --depth=1 https://github.com/chilicuil/vundle-legacy.git ~/.vim/bundle/vundle
         silent !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
@@ -94,7 +119,6 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'paradigm/TextObjectify'         , { 'on': 'delay 3' } "define additional text :h objects
     Bundle 'henrik/vim-indexed-search'      , { 'on': 'delay 3' } "count and index search results
     Bundle 'pbrisbin/vim-mkdir'             , { 'on': 'delay 3' } "create missing directories on saving
-    Bundle 'cohama/lexima.vim'              , { 'on': 'delay 3' } "autocomplete pairs
 
     "=================================
     "==== Lazy loading on action =====
@@ -244,6 +268,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'Two-Finger/hardmode' "use vim the right way
         "let g:hardmode = 1
         "nnoremap <Leader>H <Esc>:call ToggleHardMode()<CR>
+    "Bundle 'cohama/lexima.vim'              , { 'on': 'delay 3' } "autocomplete pairs, <Enter> smash with Shougo/neocomplcache
 
     "=================================
     "============ Discarted ==========
