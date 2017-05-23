@@ -4,11 +4,11 @@
 
 if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
     if !executable('git')
-        echo "Couldn't find vundle nor `git`, using vanilla vim ..."
+        echo "Couldn't find vundle nor `git`, skipping initialization ..."
         finish
     endif
 
-    "this will be the case when a vimrc is specified manually (-Nu|-u)
+    "this will be the case when vimrc is specified manually (-Nu|-u)
     if $MYVIMRC == ""
         function! GetMYVIMRC()
             if has('unix')
@@ -29,16 +29,16 @@ if !isdirectory(expand("~/.vim/bundle/vundle/.git/"))
     endif
 
     if has("gui_running")
-        "!git clone --depth=1 https://github.com/chilicuil/vundle-legacy.git ~/.vim/bundle/vundle
-        silent !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
+        "!git clone --depth=1 https://github.com/javier-lopez/vundle-legacy.git ~/.vim/bundle/vundle
+        silent !git clone --depth=1 https://github.com/javier-lopez/vundle.git ~/.vim/bundle/vundle
         if isdirectory(expand("~/.vim/bundle/vundle/.git/"))
             echon "Run :BundleInstall to finish the installation"
         endif
     else
         echon "Setting up vundle, this may take a while, wanna continue? (y/n): "
         if nr2char(getchar()) ==? 'y'
-            "!git clone --depth=1 https://github.com/chilicuil/vundle-legacy.git ~/.vim/bundle/vundle
-            silent !git clone --depth=1 https://github.com/chilicuil/vundle.git ~/.vim/bundle/vundle
+            "!git clone --depth=1 https://github.com/javier-lopez/vundle-legacy.git ~/.vim/bundle/vundle
+            silent !git clone --depth=1 https://github.com/javier-lopez/vundle.git ~/.vim/bundle/vundle
             silent !printf "Installing vundle plugins ..."
             silent !vim -es -u "${MYVIMRC}" -c "BundleInstall" -c qa
         endif
@@ -56,28 +56,28 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "=================================
     "=== Personal general settings ===
     "=================================
-    Bundle 'chilicuil/my-sensible.vim'
-    Bundle 'chilicuil/my-autoloads.vim'
-    Bundle 'chilicuil/my-statusline.vim'
-    Bundle 'chilicuil/my-mappings.vim'
+    Bundle 'javier-lopez/my-sensible.vim'
+    Bundle 'javier-lopez/my-autoloads.vim'
+    Bundle 'javier-lopez/my-statusline.vim'
+    Bundle 'javier-lopez/my-mappings.vim'
         let mapleader = ","
 
     "=================================
     "====== Sourced on startup =======
     "=================================
-    Bundle 'chilicuil/vundle'          "plugin manager (custom revision, vundle + vim-plug)
-    Bundle 'chilicuil/securemodelines' "disable insecure vim options
-    Bundle 'chilicuil/file-line'       "jump to line on startup, eg: $ vim file:23
-    Bundle 'chilicuil/vimbuddy.vim'    "o@o/
-    Bundle 'chilicuil/gnupg.vim'       "pgp viewer, run from autoload
-    Bundle 'chilicuil/cutils.vim'      "random helpers
+    Bundle 'javier-lopez/vundle'          "plugin manager (custom revision, vundle + vim-plug)
+    Bundle 'javier-lopez/securemodelines' "disable insecure vim options
+    Bundle 'javier-lopez/file-line'       "jump to line on startup, eg: $ vim file:23
+    Bundle 'javier-lopez/vimbuddy.vim'    "o@o/
+    Bundle 'javier-lopez/gnupg.vim'       "pgp viewer, run from autoload
+    Bundle 'javier-lopez/cutils.vim'      "random helpers
         "cutils#VCSInfo
         "cutils#FileSize
         "cutils#CUSkel, create own plugin?
         "cutils#CUSetProperties
         let g:cutils_map_longlines      = '<leader>cul'
         let g:cutils_map_appendmodeline = '<leader>am'
-    Bundle 'chilicuil/colors.vim' "colorschemes collection
+    Bundle 'javier-lopez/colors.vim' "colorschemes collection
         if isdirectory(expand("~/.vim/bundle/colors.vim/"))
             set background=dark
             silent! colorscheme hemisu
@@ -123,16 +123,16 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "=================================
     "==== Lazy loading on action =====
     "=================================
-    Bundle 'chilicuil/sprunge.vim'     , { 'on': ['<Plug>Sprunge'] }  "pastebin client
+    Bundle 'javier-lopez/sprunge.vim'     , { 'on': ['<Plug>Sprunge'] }  "pastebin client
         map <leader>s <Plug>Sprunge
         let g:sprunge_flush_left = 1
     "colorscheme manager
-    Bundle 'chilicuil/nextCS.vim'      , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
+    Bundle 'javier-lopez/nextCS.vim'      , { 'on': ['<Plug>NextCS', '<Plug>PreviousCS'] }
         map <F12> <Plug>NextCS
         map <F11> <Plug>PreviousCS
-    Bundle 'chilicuil/checksum.vim'    , { 'on': ['<Plug>Checksum'] } "checksum generator
+    Bundle 'javier-lopez/checksum.vim'    , { 'on': ['<Plug>Checksum'] } "checksum generator
         map <leader>c <Plug>Checksum
-    Bundle 'chilicuil/x-modes.vim'     , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
+    Bundle 'javier-lopez/x-modes.vim'     , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
         map <silent> <leader>D <Plug>XDefaultMode
         map <silent> <leader>d <Plug>XDevelopmentMode
         map <silent> <leader>w <Plug>XWriteMode
@@ -151,7 +151,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:NERDCustomDelimiters  = {'mkd': { 'left': '<!--', 'right': '-->'}}
 
     "class/function/var browser
-    Bundle 'majutsushi/tagbar' , { 'on': 'TagbarToggle', 'do': 'wget --no-check-certificate https://raw.githubusercontent.com/chilicuil/learn/master/python/tools/mkd2ctags && chmod +x mkd2ctags' }
+    Bundle 'majutsushi/tagbar' , { 'on': 'TagbarToggle', 'do': 'wget --no-check-certificate https://raw.githubusercontent.com/javier-lopez/learn/master/python/tools/mkd2ctags && chmod +x mkd2ctags' }
         let g:tagbar_left      = 1
         let g:tagbar_width     = 25
         let g:tagbar_type_mkd  = {
@@ -221,12 +221,12 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <leader>t :call vundle#load('ctrlp.vim')<cr>:CtrlPSmartTabs<cr>
     Bundle 'FelikZ/ctrlp-py-matcher'  , { 'on': 'delay 5' }
 
-    Bundle 'chilicuil/snipmate.vim' , { 'on': 'insert' } "snippet support
+    Bundle 'javier-lopez/snipmate.vim' , { 'on': 'insert' } "snippet support
         let g:snips_author            = "Javier Lopez"
         let g:snips_authorEmail       = "m@javier.io"
         let g:snippets_dir            = "~/.vim/bundle/snippets.vim/snipmate/"
         let g:snipmate_default_choice = 1
-    Bundle 'chilicuil/snippets.vim' , { 'on': 'insert' } "snippet definitions
+    Bundle 'javier-lopez/snippets.vim' , { 'on': 'insert' } "snippet definitions
 
     Bundle 'Shougo/neocomplcache'   , { 'on': 'insert' } "autocompletion
         let g:neocomplcache_enable_at_startup              = 1
@@ -243,7 +243,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "=================================
     "========== Experimental =========
     "=================================
-    Bundle 'chilicuil/relative-number.vim'
+    Bundle 'javier-lopez/relative-number.vim'
         map <Leader>N <Plug>RelativeNumberToggle
     "better syntax support
     Bundle 'sheerun/vim-polyglot' , { 'do': 'cd syntax; cp markdown.vim mkd.vim' }
@@ -268,12 +268,12 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'Two-Finger/hardmode' "use vim the right way
         "let g:hardmode = 1
         "nnoremap <Leader>H <Esc>:call ToggleHardMode()<CR>
-    "Bundle 'cohama/lexima.vim'              , { 'on': 'delay 3' } "autocomplete pairs, <Enter> smash with Shougo/neocomplcache
+    "Bundle 'cohama/lexima.vim'  , { 'on': 'delay 3' } "autocomplete pairs, <Enter> smash with Shougo/neocomplcache
 
     "=================================
     "============ Discarted ==========
     "=================================
-    "Bundle 'chilicuil/taglist.vim'         "tagbar looks better
+    "Bundle 'javier-lopez/taglist.vim'      "tagbar looks better
     "Bundle 'FindMate'                      "ctrlp.vim ftw!
     "Bundle 'vim-scripts/AutoComplPop'      "neocomplcache is better
         "let g:acp_behaviorKeywordLength    = 4
