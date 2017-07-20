@@ -1,0 +1,13 @@
+#!/bin/sh
+
+LOCAL_REPO="/home/javier/code/minos/i3-pkg/deps"
+echo "local deps repository: ${LOCAL_REPO}"
+/usr/bin/dpkg-scanpackages "${LOCAL_REPO}" /dev/null > "${LOCAL_REPO}"/Packages
+echo "deb file:${LOCAL_REPO} ./" >> /etc/apt/sources.list
+
+cp "${LOCAL_REPO}"/*.deb /var/cache/apt/archives/
+
+echo 'APT::Get::Assume-Yes "true";'  >  /etc/apt/apt.conf.d/90forceyes
+echo 'APT::Get::force-yes "true";'   >> /etc/apt/apt.conf.d/90forceyes
+
+# vim: set ts=8 sw=4 tw=0 ft=sh :

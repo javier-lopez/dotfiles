@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "deb http://ppa.launchpad.net/minos-archive/main/ubuntu trusty main" >> /etc/apt/sources.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 69B4B061
+
+# vim: set ts=8 sw=4 tw=0 ft=sh :

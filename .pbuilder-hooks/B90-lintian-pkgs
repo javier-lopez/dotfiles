@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # example file to be used with --hookdir
 #
 # run lintian on generated deb files
@@ -10,3 +10,5 @@ apt-get install -y --force-yes lintian &>/dev/null
 echo "++++ Lintian output ++++"
 lintian --allow-root --color=always -I /tmp/buildd/*.changes | tee /tmp/buildd/lintian
 echo "++++ End lintian output ++++"
+
+# vim: set ts=8 sw=4 tw=0 ft=sh :

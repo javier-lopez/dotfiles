@@ -1,6 +1,0 @@
-#!/bin/sh
-# apt update
-
-echo "deb http://ppa.launchpad.net/minos-archive/main/ubuntu precise main" >> /etc/apt/sources.list
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 69B4B061
-apt-get update

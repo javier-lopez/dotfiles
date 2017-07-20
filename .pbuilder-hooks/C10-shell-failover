@@ -22,3 +22,5 @@ echo "To invoke any hook (e.g. the list-missing one) use /tmp/hooks/NAMEOFHOOK."
 echo ""
 
 /bin/bash < /dev/tty > /dev/tty 2> /dev/tty
+
+# vim: set ts=8 sw=4 tw=0 ft=sh :

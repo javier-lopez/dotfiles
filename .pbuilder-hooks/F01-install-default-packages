@@ -1,4 +1,7 @@
 #!/bin/sh
+
 packages="vim-tiny less wget"
 echo "I: Installing additional packages : $packages ..."
 apt-get install $packages -y 2>&1 >/dev/null
+
+# vim: set ts=8 sw=4 tw=0 ft=sh :
