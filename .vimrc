@@ -128,7 +128,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <F12> <Plug>NextCS
         map <F11> <Plug>PreviousCS
     "write/dev/presentation modes
-    Bundle 'javier-lopez/x-modes.vim'  , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', 'XWriteMode', '<Plug>XPresentationMode'] }
+    Bundle 'javier-lopez/x-modes.vim'  , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', '<Plug>XPresentationMode'] }
         map <silent> <leader>D <Plug>XDefaultMode
         map <silent> <leader>d <Plug>XDevelopmentMode
         map <silent> <leader>w <Plug>XWriteMode
@@ -275,8 +275,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         command! -nargs=* SessionSave   GitSessionSave
         command! -nargs=* SessionDelete GitSessionDelete
         let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
-    Bundle 'alvan/vim-closetag'  , { 'on': 'insert' } "autoclose xml|html tags
-    Bundle 'javier-lopez/vlide.vim'
+    Bundle 'alvan/vim-closetag'    , { 'on': 'insert' } "autoclose xml|html tags
+    Bundle 'javier-lopez/vlide.vim', { 'on': [ 'Vlide', 'VlideReferenceSlide' ] }
     "Bundle 'Two-Finger/hardmode' "use vim the right way
         "let g:hardmode = 1
         "nnoremap <Leader>H <Esc>:call ToggleHardMode()<CR>
