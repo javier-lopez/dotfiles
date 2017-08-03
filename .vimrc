@@ -128,7 +128,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <F12> <Plug>NextCS
         map <F11> <Plug>PreviousCS
     "write/dev/presentation modes
-    Bundle 'javier-lopez/x-modes.vim'  , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', '<Plug>XPresentationMode'] }
+    Bundle 'javier-lopez/x-modes.vim'  , { 'on': [ '<Plug>XDevelopmentMode', '<Plug>XWriteMode', '<Plug>XPresentationMode', 'XWriteMode'] }
         map <silent> <leader>D <Plug>XDefaultMode
         map <silent> <leader>d <Plug>XDevelopmentMode
         map <silent> <leader>w <Plug>XWriteMode
@@ -243,6 +243,10 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         command! -nargs=* -range -bang Align <line1>,<line2>EasyAlign
         vmap . <Plug>(EasyAlignRepeat)
         nmap <leader>a <Plug>(EasyAlign)
+    "tmux like zoom panel
+    Bundle 'szw/vim-maximizer', { 'on': ['MaximizerToggle'] }
+        let g:maximizer_set_default_mapping = 0
+        map <Leader>z :MaximizerToggle<CR>
 
     "zen write mode
     Bundle 'junegunn/goyo.vim'        , { 'on': 'Goyo' }
