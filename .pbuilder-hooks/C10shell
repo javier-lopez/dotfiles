@@ -1,0 +1,24 @@
+#!/bin/sh
+# invoke shell if build fails.
+
+if [ "$EDITOR" = "" ]; then
+    EDITOR="vim-tiny"
+fi
+
+apt-get install -y --force-yes $EDITOR less bash
+if [ "$?" != "0" ]; then
+    apt-get install -y --force-yes vim-tiny less bash
+fi
+
+cd /tmp/buildd/*/debian/..
+
+echo "FTBFS"
+echo "DROPPING TO SHELL"
+echo "Use ... dpkg-buildpackage -us -uc -nc ... to restart build."
+echo "Please note that this will not copy the debs outside this chroot,"
+echo "if you want them, you will have to copy them yourself."
+echo ""
+echo "To invoke any hook (e.g. the list-missing one) use /tmp/hooks/NAMEOFHOOK."
+echo ""
+
+/bin/bash < /dev/tty > /dev/tty 2> /dev/tty
