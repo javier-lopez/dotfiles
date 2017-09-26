@@ -289,16 +289,16 @@ set pgp_list_secring_command = "gpg --no-verbose --batch --with-colons --list-se
 # =============================================================================
 # passwd management
 set my_decrypt=`gpg -o $HOME/.mutt/accounts/passwd.gpg.tmp -d $HOME/.mutt/accounts/passwd.gpg`
-set my_javierDOTlopezATadbansysDOTcom=`awk '/javier.lopez@adbansys.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
+set my_jlopezATpaloitDOTcom=`awk '/jlopez@palo-it.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_fcoDOTpljATgmailDOTcom=`awk '/fco.plj@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_chilicuilATgmailDOTcom=`awk '/chilicuil@gmail.com:/ {print $2}' $HOME/.mutt/accounts/passwd.gpg.tmp`
 set my_rm=`rm -f $HOME/.mutt/accounts/passwd.gpg.tmp`
 
 # default
-source ~/.mutt/accounts/javier.lopez@adbansys.com/account
+source ~/.mutt/accounts/jlopez@palo-it.com/account
 
 # other accounts
-macro index 1 '<sync-mailbox><enter-command>source ~/.mutt/accounts/javier.lopez@adbansys.com/account<enter><change-folder>!<enter>'
+macro index 1 '<sync-mailbox><enter-command>source ~/.mutt/accounts/jlopez@palo-it.com/account<enter><change-folder>!<enter>'
 macro index 2 '<sync-mailbox><enter-command>source ~/.mutt/accounts/fco.plj@gmail.com/account<enter><change-folder>!<enter>'
 macro index 3 '<sync-mailbox><enter-command>source ~/.mutt/accounts/chilicuil@gmail.com/account<enter><change-folder>!<enter>'
 
