@@ -8,84 +8,84 @@ if_up_strictness address
 
 TEXT
 [{"name": "time",\
-  "icon":"$HOME/.data/images/icons/dzen2/sm4tik/clock.xbm",\
+  "icon":"/usr/share/minos/bitmaps/sm4tik/clock.xbm",\
   "color":"\#999999",\
   "full_text":"${time %H:%M %a-%d-%b}"},\
  {"name": "root",\
-   "icon":"$HOME/.data/images/icons/dzen2/sm4tik/diskette.xbm",\
+   "icon":"/usr/share/minos/bitmaps/sm4tik/diskette.xbm",\
    "color": "\#999999",
    "full_text": "${fs_used_perc }%",\
    "separator": false},\
  {"name": "home",
-  "icon":"$HOME/.data/images/icons/dzen2/sm4tik/diskette.xbm",\
+  "icon":"/usr/share/minos/bitmaps/sm4tik/diskette.xbm",\
    "color": "\#999999",\
    "full_text": "${fs_used_perc /home}%"},\
- ${if_up WL_INTERFACE}\
-   {"name":"WL_INTERFACE",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/wifi.xbm",\
+ ${if_up wlp3s0}\
+   {"name":"wlp3s0",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/wifi.xbm",\
     "color": "\#999999",\
-    "full_text": "WL_INTERFACE ${downspeed WL_INTERFACE}",\
+    "full_text": "wlp3s0 ${downspeed wlp3s0}",\
     "separator": false},\
-   {"name":"WL_INTERFACEip",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/net_download_speed.xbm",\
+   {"name":"wlp3s0ip",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/net_download_speed.xbm",\
     "color":"\#999999",\
-    "full_text": "${addr WL_INTERFACE}"},\
+    "full_text": "${addr wlp3s0}"},\
  ${endif}\
- ${if_up EN_INTERFACE}\
-   {"name":"EN_INTERFACE",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/wifi.xbm",\
+ ${if_up enp0s25}\
+   {"name":"enp0s25",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/wifi.xbm",\
     "color": "\#999999",\
-    "full_text": "EN_INTERFACE ${downspeed EN_INTERFACE}",\
+    "full_text": "enp0s25 ${downspeed enp0s25}",\
     "separator": false},\
-   {"name":"EN_INTERFACEip",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/net_download_speed.xbm",\
+   {"name":"enp0s25ip",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/net_download_speed.xbm",\
     "color":"\#999999",\
-    "full_text": "${addr EN_INTERFACE}"},\
+    "full_text": "${addr enp0s25}"},\
  ${endif}\
  {"name": "cpu",\
-  "icon":"$HOME/.data/images/icons/dzen2/sm4tik/cpu.xbm",\
+  "icon":"/usr/share/minos/bitmaps/sm4tik/cpu.xbm",\
   "color": "\#999999",\
   "full_text": "${cpu cpu0}%",\
   "separator": false},\
  {"name": "memory",\
-  "icon":"$HOME/.data/images/icons/dzen2/sm4tik/mem.xbm",\
+  "icon":"/usr/share/minos/bitmaps/sm4tik/mem.xbm",\
   "color": "\#999999",\
   "full_text": "${memperc}%"},\
  ${if_existing /proc/acpi/battery/BAT0}\
    {"name": "battery",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/bat_full.xbm",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/bat_full.xbm",\
     "color": "\#999999",\
     "full_text": "${battery_percent BAT0}% ${battery_time BAT0}",\
     "separator": false},\
  ${else} ${if_existing /sys/class/power_supply/BAT0}\
    {"name": "battery",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/bat_full.xbm",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/bat_full.xbm",\
     "color": "\#999999",\
     "full_text": "${battery_percent BAT0}% ${battery_time BAT0}",\
     "separator": false},\
  ${else} ${if_existing /proc/acpi/battery/BAT1}\
    {"name": "battery",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/bat_full.xbm",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/bat_full.xbm",\
     "color": "\#999999",\
     "full_text": "${battery_percent BAT1}% ${battery_time BAT1}",\
     "separator": false},\
  ${else} ${if_existing /sys/class/power_supply/BAT1}\
    {"name": "battery",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/bat_full.xbm",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/bat_full.xbm",\
     "color": "\#999999",\
     "full_text": "${battery_percent BAT1}% ${battery_time BAT1}",\
     "separator": false},\
  ${endif}\
  {"name": "temperature",\
-  "icon":"$HOME/.data/images/icons/dzen2/sm4tik/temp.xbm",\
+  "icon":"/usr/share/minos/bitmaps/sm4tik/temp.xbm",\
   "color": "\#999999",\
   "full_text": "${acpitemp}°"},\
- {"name": "volume", "icon":"$HOME/.data/images/icons/dzen2/sm4tik/speaker.xbm",\
+ {"name": "volume", "icon":"/usr/share/minos/bitmaps/sm4tik/speaker.xbm",\
   "color": "\#999999",\
   "full_text": "${exec amixer get 'Master',0|egrep -m1 -o '[0-9]{1,3}%'}",\
   "separator": false}\
    ,{"name": "music",\
-    "icon":"$HOME/.data/images/icons/dzen2/sm4tik/phones.xbm",\
+    "icon":"/usr/share/minos/bitmaps/sm4tik/phones.xbm",\
     "color": "\#999999",\
     "full_text": "${exec player-ctrl print title}"}\
  ],
