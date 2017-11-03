@@ -23,6 +23,7 @@ alias rip='abcde -o mp3'
 alias paint='mtpaint'
 alias barstatus.off='killall conky dzen2 > /dev/null 2>&1'
 alias barstatus.on='barstatus.off; (conky | dzen2  -x 350 -y 749 -fn Inconsolata:size=9 -ta r -fg "#999999" -bg "#000000" &) 2> /dev/null'
+alias ag='ag --nogroup'
 alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
 alias strip.idtags='sh -c '\''ffmpeg -i "${1}" -acodec copy -vcodec copy -map_metadata -1 "${1}".tagsless."${1##*.}" && mv "${1}".tagsless."${1##*.}" "${1}"'\'' -'
 alias share.internet='_si() { sudo iptables -t nat -A POSTROUTING -o "${1}" -j MASQUERADE; echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward }; _si'
@@ -32,17 +33,10 @@ alias uu='update && upgrade'
 alias suspend.in='_suspend_in() { printf "%s\\n" "sleep ${1} && m-session-manager suspend"; sleep "${1}" && m-session-manager suspend; }; _suspend_in'
 alias hibernate.in='_hibernate_in() { printf "%s\\n" "sleep ${1} && m-session-manager hibernate"; sleep "${1}" && m-session-manager hibernate; }; _hibernate_in'
 
-#watch series/anime in streaming
-alias watch.dragon.ball.z='if rtmpdump -h >/dev/null 2>&1; then livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_animes worst; else printf "install rtmpdump and livestreamer to continue\\n"; fi'
-alias watch.simpsons='if rtmpdump -h >/dev/null 2>&1; then livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_simpson worst; else printf "install rtmpdump and livestreamer to continue\\n"; fi'
-alias watch.peliculas.terror='if rtmpdump -h >/dev/null 2>&1; then livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_extremo worst;  else printf "install rtmpdump and livestreamer to continue\\n"; fi'
-alias watch.malcom='if rtmpdump -h >/dev/null 2>&1; then livestreamer -l debug -p mplayer http://vaughnlive.tv/megamalcolm worst; else printf "install rtmpdump and livestreamer to continue\\n"; fi'
-alias watch.peliculas.accion='if rtmpdump -h >/dev/null 2>&1; then livestreamer -l debug -p mplayer http://vaughnlive.tv/mega_movieshd worst; else printf "install rtmpdump and livestreamer to continue \\n"; fi'
-
 #best games in history
-alias aom='xhost + >/dev/null; mkdir -p ~/.aom-savegame >/dev/null; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.aom-pbuilderrc --basetgz ~/code/games/age-of-mythology-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
-alias aoe2='xhost + >/dev/null; mkdir -p ~/.aoe2-savegame ~/.aoe2-player >/dev/null; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.aoe2-pbuilderrc --basetgz ~/code/games/age-of-empires-II-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
-alias warcraft3='xhost + >/dev/null; mkdir -p ~/.warcraft3-savegame >/dev/null; xrandr | awk "/+$/ {print \$1}" | sort -nr | awk "{print \$1; exit}" > ~/.warcraft3-savegame/max-resolution; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.warcraft3-pbuilderrc --basetgz ~/code/games/warcraft3-frozen-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
+alias aom='xhost + >/dev/null; mkdir -p ~/.aom-savegame >/dev/null; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.aom-pbuilderrc --basetgz ~/data/bin/images/pbuilder/age-of-mythology-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
+alias aoe2='xhost + >/dev/null; mkdir -p ~/.aoe2-savegame ~/.aoe2-player >/dev/null; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.aoe2-pbuilderrc --basetgz ~/data/bin/images/pbuilder/age-of-empires-II-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
+alias warcraft3='xhost + >/dev/null; mkdir -p ~/.warcraft3-savegame >/dev/null; xrandr | awk "/+$/ {print \$1}" | sort -nr | awk "{print \$1; exit}" > ~/.warcraft3-savegame/max-resolution; sudo DIST="precise" ARCH=i386 pbuilder --login --configfile ~/.warcraft3-pbuilderrc --basetgz ~/data/bin/images/pbuilder/warcraft3-wine-ubuntu-precise-i386.base.tgz --hookdir /dev/null'
 
 #ubuntu-dev
 alias bzr.debuild='bzr bd -- -S -uc -us'
