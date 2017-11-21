@@ -36,7 +36,7 @@ URxvt*background:       #000000
 
 !URxvt*font:             xft:Inconsolata:pixelsize=12
 !URxvt*font:             xft:Inconsolata for Powerline:pixelsize=12
-URxvt*font:             xft:Inconsolata for Powerline:pixelsize=14
+URxvt*font:              xft:Inconsolata for Powerline:pixelsize=18
 !URxvt*font:             xft:Anonymous Pro Minus:pixelsize=12
 !URxvt*font:             xft:M+ 2m:pixelsize=12
 !URxvt*font:             xft:Iosevka:pixelsize=12
