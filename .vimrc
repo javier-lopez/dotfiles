@@ -106,6 +106,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:syntastic_python_python_exec       = "python2"
         let g:syntastic_html_tidy_exec           = "tidy"
         let g:syntastic_auto_jump                = 2
+        let g:syntastic_ignore_files             = ['\mVagrantfile$']
         "let g:syntastic_error_symbol            = "E!"
         "let g:syntastic_warning_symbol          = "W"
     Bundle 'tpope/vim-repeat'               , { 'on': 'delay' } "repeat|. support for plugins
@@ -285,6 +286,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:hardmode = 1
         "nnoremap <Leader>H <Esc>:call ToggleHardMode()<CR>
     "Bundle 'cohama/lexima.vim'  , { 'on': 'delay 3' } "autocomplete pairs, <Enter> smash with Shougo/neocomplcache
+    "Bundle 'vim-scripts/DrawIt'
+    "Bundle 'gyim/vim-boxdraw'
 
     "=================================
     "============ Discarted ==========
