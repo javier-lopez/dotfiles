@@ -71,4 +71,7 @@ alias que.desayunar='_que_desayunar() { qc="$(awk "/^\[/ {print \"${1}\" \":\" N
 alias que.cenar='_que_cenar() { qc="$(awk "/^\[/ {print \"${1}\" \":\" NR \"|\" \$0 }" "${1}" | \
                 shuf | head -1 | tr "|" "\n")"; [ -z "${qc}" ] && return 1; \
                 printf "%s\\n" "${qc}"; printf "Abriendo receta en 3 segundos ...\\n"; sleep 3s; \
-                vim "$(printf "%s\\n" "${qc}" | head -1)"; }; _que_cenar ~/misc/notes/cenas.notes'
+o                vim "$(printf "%s\\n" "${qc}" | head -1)"; }; _que_cenar ~/misc/notes/cenas.notes'
+alias block-youtube='ussh root@10.9.8.7 block-youtube'
+alias unblock-youtube='ussh root@10.9.8.7 unblock-youtube'
+alias docker-compose.fix.tmp='sudo mount /tmp -o remount,exec'
