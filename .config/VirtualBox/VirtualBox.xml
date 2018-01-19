@@ -9,22 +9,41 @@
   <Global>
     <ExtraData>
       <ExtraDataItem name="GUI/DetailsPageBoxes" value="general,system,preview,display,storage,audio,network,usb,sharedFolders,description"/>
-      <ExtraDataItem name="GUI/GroupDefinitions/" value="m=4a376e45-5f63-47ce-8d53-9d35ccee21a3,m=c508d6c4-0e0e-4fc4-8e93-c6709413b7a5,m=2754016e-cfca-41f1-bc69-1567a765eeb4,m=694872ad-5005-4f2c-8225-ad75cf25cc3b"/>
+      <ExtraDataItem name="GUI/GroupDefinitions/" value="m=3d8e1c4c-7d94-4047-b740-538156dca586,m=8653bbb2-5b45-436c-b34a-9685154525e2,m=b1214626-876f-4ed1-8550-d649b385cea0,m=e8d53746-55ff-4168-8bef-9d001512dcc8"/>
       <ExtraDataItem name="GUI/HideDescriptionForWizards" value="NewVD"/>
-      <ExtraDataItem name="GUI/LastItemSelected" value="m=rhel-7.4-vbox_1509336720226_84788"/>
+      <ExtraDataItem name="GUI/LastItemSelected" value="m=rhel-7.4-vbox_1511299957128_3462"/>
       <ExtraDataItem name="GUI/LastWindowPosition" value="1,16,1364,733"/>
+      <ExtraDataItem name="GUI/RecentFolderCD" value="/home/javier/data/bin/images/iso"/>
+      <ExtraDataItem name="GUI/RecentListCD" value="/home/javier/data/bin/images/iso/xubuntu-16.04.3-desktop-amd64.iso"/>
       <ExtraDataItem name="GUI/RegistrationData" value="triesLeft=0"/>
       <ExtraDataItem name="GUI/SplitterSizes" value="367,993"/>
       <ExtraDataItem name="GUI/SuppressMessages" value="confirmInputCapture,remindAboutAutoCapture,remindAboutMouseIntegrationOff,remindAboutMouseIntegrationOn,remindAboutWrongColorDepth"/>
-      <ExtraDataItem name="GUI/UpdateCheckCount" value="65"/>
-      <ExtraDataItem name="GUI/UpdateDate" value="1 d, 2017-11-22, stable, 5.1.28"/>
+      <ExtraDataItem name="GUI/Toolbar/MachineTools/Order" value="Details"/>
+      <ExtraDataItem name="GUI/UpdateCheckCount" value="62"/>
+      <ExtraDataItem name="GUI/UpdateDate" value="1 d, 2018-01-19, stable, 5.2.6"/>
       <ExtraDataItem name="HostOnly/vboxnet0/IPAddress" value="10.10.10.1"/>
       <ExtraDataItem name="HostOnly/vboxnet0/IPNetMask" value="255.255.255.0"/>
+      <ExtraDataItem name="HostOnly/vboxnet1/IPAddress" value="172.28.128.1"/>
+      <ExtraDataItem name="HostOnly/vboxnet1/IPNetMask" value="255.255.255.0"/>
+      <ExtraDataItem name="HostOnly/vboxnet2/IPAddress" value="192.168.1.1"/>
+      <ExtraDataItem name="HostOnly/vboxnet2/IPNetMask" value="255.255.255.0"/>
+      <ExtraDataItem name="HostOnly/vboxnet3/IPAddress" value="10.10.11.1"/>
+      <ExtraDataItem name="HostOnly/vboxnet3/IPNetMask" value="255.255.255.0"/>
+      <ExtraDataItem name="HostOnly/vboxnet4/IPAddress" value="10.10.12.1"/>
+      <ExtraDataItem name="HostOnly/vboxnet4/IPNetMask" value="255.255.255.0"/>
+      <ExtraDataItem name="HostOnly/vboxnet5/IPAddress" value="172.16.15.1"/>
+      <ExtraDataItem name="HostOnly/vboxnet5/IPNetMask" value="255.255.255.0"/>
     </ExtraData>
-    <MachineRegistry/>
+    <MachineRegistry>
+      <MachineEntry uuid="{3d8e1c4c-7d94-4047-b740-538156dca586}" src="/home/javier/.config/VirtualBox/boxes/rhel-7.4-vbox_1511299957128_3462/rhel-7.4-vbox_1511299957128_3462.vbox"/>
+      <MachineEntry uuid="{8653bbb2-5b45-436c-b34a-9685154525e2}" src="/home/javier/.config/VirtualBox/boxes/desktop-16.04_1515885823295_38455/desktop-16.04_1515885823295_38455.vbox"/>
+      <MachineEntry uuid="{b1214626-876f-4ed1-8550-d649b385cea0}" src="/home/javier/.config/VirtualBox/boxes/core-16.04_1516138996600_21449/core-16.04_1516138996600_21449.vbox"/>
+      <MachineEntry uuid="{e8d53746-55ff-4168-8bef-9d001512dcc8}" src="/home/javier/.config/VirtualBox/boxes/docker-ci.example.com_1516143006989_85495/docker-ci.example.com_1516143006989_85495.vbox"/>
+    </MachineRegistry>
     <NetserviceRegistry>
       <DHCPServers>
         <DHCPServer networkName="HostInterfaceNetworking-vboxnet0" IPAddress="192.168.56.100" networkMask="255.255.255.0" lowerIP="192.168.56.101" upperIP="192.168.56.254" enabled="1"/>
+        <DHCPServer networkName="HostInterfaceNetworking-vboxnet1" IPAddress="172.28.128.2" networkMask="255.255.255.0" lowerIP="172.28.128.3" upperIP="172.28.128.254" enabled="1"/>
       </DHCPServers>
     </NetserviceRegistry>
     <SystemProperties defaultMachineFolder="/home/javier/.config/VirtualBox/boxes" defaultHardDiskFormat="VDI" VRDEAuthLibrary="VBoxAuth" webServiceAuthLibrary="VBoxAuth" LogHistoryCount="3" exclusiveHwVirt="true"/>
