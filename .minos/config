@@ -3,8 +3,8 @@
 # /etc/minos/config, ~/.minos/config #
 ######################################
 
-wallpaper        /usr/share/minos/wallpapers/audifonos.png
-lock-wallpaper   /usr/share/minos/wallpapers/audifonos.png
+wallpaper        /usr/share/minos/wallpapers/minos.png
+lock-wallpaper   ~/data/images/wallpapers/simplicity.png
 
 autostart        minos-autostart
 composition      compton
@@ -53,4 +53,4 @@ screencast       ffcast
 #hook            http://minos.io/hook
 app-core         curl
 app-desktop      mozilla-firefox mozilla-flashplayer
-app-purge        xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie rpcbind postfix bind9-host bind9utils cifs-utils samba samba-common samba-common-bin samba-libs python-samba samba-libs
+#app-purge        xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie rpcbind postfix bind9-host bind9utils cifs-utils samba samba-common samba-common-bin samba-libs python-samba samba-libs
