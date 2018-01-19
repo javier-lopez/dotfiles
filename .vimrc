@@ -272,8 +272,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:vim_g_query_url    = "http://google.com/search?q="
         "let g:vim_g_command      = "Google"
         "let g:vim_g_f_command    = "Googlef"
-    Bundle 'KabbAmine/lazyList.vim', { 'on': 'delay' } "helps creating lists
-        let g:lazylist_maps = [ 'gl', { 'l': '', '1': '%1% ', '-': '- ', '*': '* ' } ]
+    Bundle 'dkarter/bullets.vim', { 'on': 'delay' } "helps creating lists
+    "Bundle 'KabbAmine/lazyList.vim', { 'on': 'delay' } "helps creating lists
+        "let g:lazylist_maps = [ 'gl', { 'l': '', '1': '%1% ', '-': '- ', '*': '* ' } ]
     Bundle 'junegunn/vader.vim'  , { 'on': ['Vader'], 'for': 'vader' } "vim tdd
     Bundle 'Olical/vim-enmasse'  , { 'on': ['EnMasse'] } "edit quicklist results, grep/ag
     Bundle 'wting/gitsessions.vim'  , { 'on': ['GitSessionSave', 'GitSessionDelete'] }
@@ -282,6 +283,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
     Bundle 'alvan/vim-closetag'    , { 'on': 'insert' } "autoclose xml|html tags
     Bundle 'javier-lopez/vlide.vim', { 'on': [ 'Vlide', 'VlideReferenceSlide' ] }
+    "Bundle 'jaxbot/semantic-highlight.vim'
     "Bundle 'Two-Finger/hardmode' "use vim the right way
         "let g:hardmode = 1
         "nnoremap <Leader>H <Esc>:call ToggleHardMode()<CR>
