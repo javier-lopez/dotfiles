@@ -1,1 +1,19 @@
-token="BQCsZPMtqAff_82ozhmJVpsm9rIMvzs1To_PnxAgpPA3oXkr5p9uz5Y9vYRVEj0EeFfzjQT0XtmBdC8TeQAXdOmlDfCNYlOahNpZZPWn7Fa7UrM2faTutyh0d0tTR4r_fyyCW36FhuUA4gpKAqI9ARdoSl9N-XBsqjvR0zmIYVDtwP-5R3f6Jxn_eSkbSL9i9moVx-hfsj-P4EvzRzgkGWEWeHDBmYhJM80uB9GNfUCiP60c0mZ3pANWHpnS"
+#https://developer.spotify.com/documentation/general/guides/authorization-guide/#authorization-code-flow
+#
+#it's a fucking nightmare to request spotify tokens !nOn, follows procedure:
+#
+# 1. go to https://developer.spotify.com/ and create a new 'website' app
+# 2. grab your client_id / private_id keys, default ctrl-player's are: 43e8830355074eb8b73bba56d95b8b81:06e8c6c3d0284e0ca5dfc7e5dd1da15e
+# 3. go to https://accounts.spotify.com/authorize/?client_id=43e8830355074eb8b73bba56d95b8b81&response_type=code&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback&scope=user-read-playback-state%20user-modify-playback-state%20user-read-currently-playing'
+# 4. grab your code callback key, default ctrl-player is AQC-mvKHEqu9Nhk2zgQAK5Kkar6_b-b84ODj5CfnRCYgkh6H8a-dFmB8XwjiGik_eRqxL3psERHBpzXMbvG5aFax9GhFlb6MaByOX6Fk6XPyWTDBNk9OGPARTc7s5XcySfSnfy0BQF9OifPQx5QQjHE36GfCtcJgPj7Ep3cros-QfQWfLYvvyiRGeFpw8Ds2O7rSbPaRqV4SZnBppXMjcQMNfA0DvCCe85rsp0X1axAeNyjz21iiDsry1k40YzSElXmSyFWmBRKvLMh-cvkjsI2vCgYwJjbRfn4bnGqLm3W0cwZqOg
+# 5. request access / refresh tokens:
+#    $ curl -H "Authorization: Basic $(printf 43e8830355074eb8b73bba56d95b8b81:06e8c6c3d0284e0ca5dfc7e5dd1da15e | base64 | tr -d '\n')" -d grant_type=authorization_code -d code=AQC-mvKHEqu9Nhk2zgQAK5Kkar6_b-b84ODj5CfnRCYgkh6H8a-dFmB8XwjiGik_eRqxL3psERHBpzXMbvG5aFax9GhFlb6MaByOX6Fk6XPyWTDBNk9OGPARTc7s5XcySfSnfy0BQF9OifPQx5QQjHE36GfCtcJgPj7Ep3cros-QfQWfLYvvyiRGeFpw8Ds2O7rSbPaRqV4SZnBppXMjcQMNfA0DvCCe85rsp0X1axAeNyjz21iiDsry1k40YzSElXmSyFWmBRKvLMh-cvkjsI2vCgYwJjbRfn4bnGqLm3W0cwZqOg -d redirect_uri=https%3A%2F%2Fexample.com%2Fcallback https://accounts.spotify.com/api/token
+# 6. grab your access / refresh tokens, default ctrl-player's are:
+# BQDQvSc0PHM8W878mox_5LwMzXTGeZ4PnhJqeYiMV71AVJeS8yY3klg-CPfHe2alODBYC6SITt9-b-XRDcGHm-5L84zr2TI6kVu3OeLZd9wkcLNDQuwgGIeOAMtHdwNMab4deP2BD1ZxkFJ4CYWav9fkoA
+# AQCvB7m-iIA5MW2r2O1aVQjoEPKK18VCTLK839uE9_0s_Gl76XasdbJr0EwzKfovTf9svZEjkzEULuIJSYbSMRrmZNayKDYl0rz7n7VfeXjn0XvW76R-K7xD6xvTp7a-6M4
+
+app_client_id="43e8830355074eb8b73bba56d95b8b81"
+app_private_id="06e8c6c3d0284e0ca5dfc7e5dd1da15e"
+#refresh_token="AQCvB7m-iIA5MW2r2O1aVQjoEPKK18VCTLK839uE9_0s_Gl76XasdbJr0EwzKfovTf9svZEjkzEULuIJSYbSMRrmZNayKDYl0rz7n7VfeXjn0XvW76R-K7xD6xvTp7a-6M4"
+
+# with the refresh token, spotify apps must create access keys on demand which are finally used to access spotify web api
