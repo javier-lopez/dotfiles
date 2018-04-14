@@ -118,7 +118,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         " cs"'  => replace surrounding quotes with single quotes
         " ysiw' => wrap word in surrounding single quotes
     Bundle 'paradigm/TextObjectify'         , { 'on': 'delay 3' } "define additional text :h objects
-    Bundle 'henrik/vim-indexed-search'      , { 'on': 'delay 3' } "count and index search results
+    Bundle 'google/vim-searchindex'         , { 'on': 'delay 3' } "count and index search results
     Bundle 'pbrisbin/vim-mkdir'             , { 'on': 'delay 3' } "create missing directories on saving
 
     "=================================
