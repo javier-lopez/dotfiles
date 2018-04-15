@@ -75,3 +75,5 @@ o                vim "$(printf "%s\\n" "${qc}" | head -1)"; }; _que_cenar ~/misc
 alias block-youtube='ussh root@10.9.8.7 block-youtube'
 alias unblock-youtube='ussh root@10.9.8.7 unblock-youtube'
 alias docker-compose.fix.tmp='sudo mount /tmp -o remount,exec'
+alias spotify.disable.remote.control='sed -i "s:^refresh_token:#refresh_token:" ~/.spotify'
+alias spotify.enable.remote.control=' sed -i "s:^#refresh_token:refresh_token:" ~/.spotify'
