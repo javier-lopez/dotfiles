@@ -290,6 +290,13 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "Bundle 'cohama/lexima.vim'  , { 'on': 'delay 3' } "autocomplete pairs, <Enter> smash with Shougo/neocomplcache
     "Bundle 'vim-scripts/DrawIt'
     "Bundle 'gyim/vim-boxdraw'
+    Bundle 'mattn/emmet-vim'
+        "let g:user_emmet_leader_key = '<C-h>'  "[h]tml
+        "let g:user_emmet_leader_key = '<C-e>' "[e]mmet
+        let g:user_emmet_install_global = 0
+        let g:user_emmet_expandabbr_key = '<C-y>e'
+        let g:user_emmet_expandword_key = '<C-y>E'
+        autocmd FileType html,css EmmetInstall
 
     "=================================
     "============ Discarted ==========
