@@ -34,22 +34,22 @@
 !                            Red/Blue/Green/Alpha
 URxvt*background:       #000000
 
-!URxvt*font:             xft:Inconsolata:pixelsize=12
-!URxvt*font:             xft:Inconsolata for Powerline:pixelsize=12
-URxvt*font:              xft:Inconsolata for Powerline:pixelsize=18
-!URxvt*font:             xft:Anonymous Pro Minus:pixelsize=12
-!URxvt*font:             xft:M+ 2m:pixelsize=12
-!URxvt*font:             xft:Iosevka:pixelsize=12
-!URxvt*font:             xft:ProFontWindows:pixelsize=11
-!URxvt*font:             xft:Cousine:pixelsize=12
-!URxvt*font:             xft:Bront:pixelsize=12 ###
-!URxvt*font:             xft:Fira Code Retina:pixelsize=12
-!URxvt*font:             xft:Luculent:pixelsize=12
-!URxvt*font:             xft:Mensch:pixelsize=12
-!URxvt*font:             xft:Metrickal:pixelsize=12
-!URxvt*font:             xft:monoOne:pixelsize=12
-!URxvt*font:             xft:Monaco for Powerline:regular:size=8
-!URxvt*font:             xft:Symbola:pixelsize=12
+!URxvt*font:            xft:Inconsolata:pixelsize=12
+URxvt*font:             xft:Inconsolata for Powerline:pixelsize=18
+!URxvt*font:            xft:Inconsolata Awesome:pixelsize=18
+!URxvt*font:            xft:Anonymous Pro Minus:pixelsize=12
+!URxvt*font:            xft:M+ 2m:pixelsize=12
+!URxvt*font:            xft:Iosevka:pixelsize=12
+!URxvt*font:            xft:ProFontWindows:pixelsize=11
+!URxvt*font:            xft:Cousine:pixelsize=18
+!URxvt*font:            xft:Bront:pixelsize=18
+!URxvt*font:            xft:Fira Code Retina:pixelsize=18
+!URxvt*font:            xft:Luculent:pixelsize=12
+!URxvt*font:            xft:Mensch:pixelsize=12
+!URxvt*font:            xft:Metrickal:pixelsize=12
+!URxvt*font:            xft:monoOne:pixelsize=12
+!URxvt*font:            xft:Monaco for Powerline:regular:size=8
+!URxvt*font:            xft:Symbola:pixelsize=18
 URxvt*letterSpace:      -1
 
 URxvt*saveLines:        10000
