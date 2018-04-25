@@ -297,6 +297,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:user_emmet_expandabbr_key = '<C-y>e'
         let g:user_emmet_expandword_key = '<C-y>E'
         autocmd FileType html,css EmmetInstall
+    Bundle 'javier-lopez/math.vim', { 'on': ['VimSum'] }
 
     "=================================
     "============ Discarted ==========
