@@ -9,18 +9,18 @@
   <Global>
     <ExtraData>
       <ExtraDataItem name="GUI/DetailsPageBoxes" value="general,system,preview,display,storage,audio,network,usb,sharedFolders,description"/>
-      <ExtraDataItem name="GUI/GroupDefinitions/" value="m=3d8e1c4c-7d94-4047-b740-538156dca586,m=8653bbb2-5b45-436c-b34a-9685154525e2,m=b1214626-876f-4ed1-8550-d649b385cea0,m=e8d53746-55ff-4168-8bef-9d001512dcc8"/>
+      <ExtraDataItem name="GUI/GroupDefinitions/" value="m=c8fb8ba0-f4e8-4906-9780-4abcf110d0db,m=37bab932-bb11-45e0-9486-9f9504b8e8f5,m=7f816a67-40d3-42ca-8e1c-41b4bf83e7f5"/>
       <ExtraDataItem name="GUI/HideDescriptionForWizards" value="NewVD"/>
-      <ExtraDataItem name="GUI/LastItemSelected" value="m=rhel-7.4-vbox_1511299957128_3462"/>
-      <ExtraDataItem name="GUI/LastWindowPosition" value="1,16,1364,733"/>
+      <ExtraDataItem name="GUI/LastItemSelected" value="m=it-dojo-load-balancer_1525145232300_37313"/>
+      <ExtraDataItem name="GUI/LastWindowPosition" value="684,1,689,748"/>
       <ExtraDataItem name="GUI/RecentFolderCD" value="/home/javier/data/bin/images/iso"/>
       <ExtraDataItem name="GUI/RecentListCD" value="/home/javier/data/bin/images/iso/xubuntu-16.04.3-desktop-amd64.iso"/>
       <ExtraDataItem name="GUI/RegistrationData" value="triesLeft=0"/>
-      <ExtraDataItem name="GUI/SplitterSizes" value="367,993"/>
-      <ExtraDataItem name="GUI/SuppressMessages" value="confirmInputCapture,remindAboutAutoCapture,remindAboutMouseIntegrationOff,remindAboutMouseIntegrationOn,remindAboutWrongColorDepth"/>
+      <ExtraDataItem name="GUI/SplitterSizes" value="174,511"/>
+      <ExtraDataItem name="GUI/SuppressMessages" value="all"/>
       <ExtraDataItem name="GUI/Toolbar/MachineTools/Order" value="Details"/>
-      <ExtraDataItem name="GUI/UpdateCheckCount" value="62"/>
-      <ExtraDataItem name="GUI/UpdateDate" value="1 d, 2018-01-19, stable, 5.2.6"/>
+      <ExtraDataItem name="GUI/UpdateCheckCount" value="74"/>
+      <ExtraDataItem name="GUI/UpdateDate" value="1 d, 2018-05-16, stable, 5.2.10"/>
       <ExtraDataItem name="HostOnly/vboxnet0/IPAddress" value="10.10.10.1"/>
       <ExtraDataItem name="HostOnly/vboxnet0/IPNetMask" value="255.255.255.0"/>
       <ExtraDataItem name="HostOnly/vboxnet1/IPAddress" value="172.28.128.1"/>
@@ -33,17 +33,28 @@
       <ExtraDataItem name="HostOnly/vboxnet4/IPNetMask" value="255.255.255.0"/>
       <ExtraDataItem name="HostOnly/vboxnet5/IPAddress" value="172.16.15.1"/>
       <ExtraDataItem name="HostOnly/vboxnet5/IPNetMask" value="255.255.255.0"/>
+      <ExtraDataItem name="HostOnly/vboxnet6/IPAddress" value="192.168.99.1"/>
+      <ExtraDataItem name="HostOnly/vboxnet6/IPNetMask" value="255.255.255.0"/>
     </ExtraData>
     <MachineRegistry>
-      <MachineEntry uuid="{3d8e1c4c-7d94-4047-b740-538156dca586}" src="/home/javier/.config/VirtualBox/boxes/rhel-7.4-vbox_1511299957128_3462/rhel-7.4-vbox_1511299957128_3462.vbox"/>
-      <MachineEntry uuid="{8653bbb2-5b45-436c-b34a-9685154525e2}" src="/home/javier/.config/VirtualBox/boxes/desktop-16.04_1515885823295_38455/desktop-16.04_1515885823295_38455.vbox"/>
-      <MachineEntry uuid="{b1214626-876f-4ed1-8550-d649b385cea0}" src="/home/javier/.config/VirtualBox/boxes/core-16.04_1516138996600_21449/core-16.04_1516138996600_21449.vbox"/>
-      <MachineEntry uuid="{e8d53746-55ff-4168-8bef-9d001512dcc8}" src="/home/javier/.config/VirtualBox/boxes/docker-ci.example.com_1516143006989_85495/docker-ci.example.com_1516143006989_85495.vbox"/>
+      <MachineEntry uuid="{c8fb8ba0-f4e8-4906-9780-4abcf110d0db}" src="/home/javier/.config/VirtualBox/boxes/it-dojo-load-balancer_1525145232300_37313/it-dojo-load-balancer_1525145232300_37313.vbox"/>
+      <MachineEntry uuid="{37bab932-bb11-45e0-9486-9f9504b8e8f5}" src="/home/javier/.config/VirtualBox/boxes/it-dojo-docker_1525145291988_10392/it-dojo-docker_1525145291988_10392.vbox"/>
+      <MachineEntry uuid="{7f816a67-40d3-42ca-8e1c-41b4bf83e7f5}" src="/home/javier/.config/VirtualBox/boxes/desktop-16.04_1525720248047_69722/desktop-16.04_1525720248047_69722.vbox"/>
+      <MachineEntry uuid="{692b610c-fbe4-4572-bca4-b5c510256354}" src="/home/javier/.config/VirtualBox/boxes/load-balancer.001.it-dojo.io/load-balancer.001.it-dojo.io.vbox"/>
+      <MachineEntry uuid="{c94ff235-6fc3-4a2f-a2fd-f7aad77c42d0}" src="/home/javier/.config/VirtualBox/boxes/docker-manager.001.it-dojo.io/docker-manager.001.it-dojo.io.vbox"/>
+      <MachineEntry uuid="{b48bef59-b3e4-49cf-a07f-6ab0c337d484}" src="/home/javier/.config/VirtualBox/boxes/docker-worker.001.it-dojo.io/docker-worker.001.it-dojo.io.vbox"/>
+      <MachineEntry uuid="{09bab947-19c1-4828-85b7-c7fa5d880650}" src="/home/javier/.config/VirtualBox/boxes/packer-virtualbox-iso-1500492040_1526835564625_65101/packer-virtualbox-iso-1500492040_1526835564625_65101.vbox"/>
+      <MachineEntry uuid="{061a15d2-79ad-4b9b-8da6-09edec4bb9ee}" src="/home/javier/.config/VirtualBox/boxes/core-16.04_1528417716328_25412/core-16.04_1528417716328_25412.vbox"/>
     </MachineRegistry>
     <NetserviceRegistry>
       <DHCPServers>
         <DHCPServer networkName="HostInterfaceNetworking-vboxnet0" IPAddress="192.168.56.100" networkMask="255.255.255.0" lowerIP="192.168.56.101" upperIP="192.168.56.254" enabled="1"/>
         <DHCPServer networkName="HostInterfaceNetworking-vboxnet1" IPAddress="172.28.128.2" networkMask="255.255.255.0" lowerIP="172.28.128.3" upperIP="172.28.128.254" enabled="1"/>
+        <DHCPServer networkName="HostInterfaceNetworking-vboxnet4" IPAddress="0.0.0.0" networkMask="0.0.0.0" lowerIP="0.0.0.0" upperIP="0.0.0.0" enabled="0"/>
+        <DHCPServer networkName="HostInterfaceNetworking-vboxnet2" IPAddress="0.0.0.0" networkMask="0.0.0.0" lowerIP="0.0.0.0" upperIP="0.0.0.0" enabled="0"/>
+        <DHCPServer networkName="HostInterfaceNetworking-vboxnet5" IPAddress="0.0.0.0" networkMask="0.0.0.0" lowerIP="0.0.0.0" upperIP="0.0.0.0" enabled="0"/>
+        <DHCPServer networkName="HostInterfaceNetworking-vboxnet3" IPAddress="0.0.0.0" networkMask="0.0.0.0" lowerIP="0.0.0.0" upperIP="0.0.0.0" enabled="0"/>
+        <DHCPServer networkName="HostInterfaceNetworking-vboxnet6" IPAddress="192.168.99.15" networkMask="255.255.255.0" lowerIP="192.168.99.100" upperIP="192.168.99.254" enabled="1"/>
       </DHCPServers>
     </NetserviceRegistry>
     <SystemProperties defaultMachineFolder="/home/javier/.config/VirtualBox/boxes" defaultHardDiskFormat="VDI" VRDEAuthLibrary="VBoxAuth" webServiceAuthLibrary="VBoxAuth" LogHistoryCount="3" exclusiveHwVirt="true"/>
