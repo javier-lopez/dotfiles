@@ -197,10 +197,12 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:ctrlp_working_path        = 0
         let g:ctrlp_match_window        = 'bottom,order:ttb,min:1,max:10,results:100'
         let g:ctrlp_extensions          = ['smarttabs']
-        " let g:ctrlp_map               = '<leader>f'
+        let g:ctrlp_map                 = '<leader>f'
         map <leader>f                   :CtrlP<CR>
         map <leader>b                   :CtrlPBuffer<CR>
-        if has('python') | let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' } | endif
+        if has('python')
+            let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+        endif
         if executable("ag")
             let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup
             \ --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store
