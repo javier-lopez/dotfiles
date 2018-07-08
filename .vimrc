@@ -158,15 +158,24 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'mbbill/undotree' , { 'on': 'UndotreeToggle' }
         map <leader>u :UndotreeToggle<cr>
 
+    "modern buffer manager
+    "Bundle 'zefei/vim-wintabs'
+
    "file viewer
-    Bundle 'scrooloose/nerdtree'       , { 'on': 'NERDTreeToggle' }
+    Bundle 'scrooloose/nerdtree'       , { 'on': ['NERDTreeToggle', '<Plug>NERDTreeTabsToggle']}
         let g:NERDTreeWinPos           = 'right'
         let g:NERDTreeWinSize          = 25
         let g:NERDTreeMouseMode        = 3
+        let g:NERDTreeMinimalUI        = 1
+        let g:NERDTreeDirArrows        = 1
         "let g:NERDTreeMapOpenSplit    = "-"
         "let g:NERDTreeMapOpenVSplit   = "|"
-        map <silent> <leader>n  :NERDTreeToggle<cr>
+        "map <silent> <leader>n  :NERDTreeToggle<cr>
+        "https://stackoverflow.com/questions/11227721/make-nerdtree-open-a-file-where-the-cursor-was-last
+        "set hidden
     "toggle comments
+    Bundle 'jistr/vim-nerdtree-tabs'   ", { 'on': '<Plug>NERDTreeTabsToggle' }
+        map <silent> <leader>n  <Plug>NERDTreeTabsToggle<cr>
     Bundle 'scrooloose/nerdcommenter'  , {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
         map <leader>c<space> <Plug>NERDCommenterToggle
         map <leader>cs       <Plug>NERDCommenterSexy
