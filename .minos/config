@@ -25,7 +25,8 @@ movietime        movietime
 
 #/etc/cron.d/watch-battery
 battery          watch-battery
-battery-alerts   15,10,7,5 #in minutes
+battery-alerts   20,15,10 #in minutes
+battery-action   dmenu-session suspend
 
 #shortcuts
 help             minos-help
