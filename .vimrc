@@ -179,7 +179,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     Bundle 'scrooloose/nerdcommenter'  , {'on': ['<Plug>NERDCommenterToggle', '<Plug>NERDCommenterSexy'] }
         map <leader>c<space> <Plug>NERDCommenterToggle
         map <leader>cs       <Plug>NERDCommenterSexy
-        let g:NERDCustomDelimiters  = {'mkd': { 'left': '<!--', 'right': '-->'}}
+        let g:NERDCustomDelimiters  = {'mkd':    {'left':'<!--', 'right':'-->'},
+                                      \'jinja2': {'left':'{# ',  'right':' #}'},
+                                      \}
     "pastebin client
     Bundle 'javier-lopez/sprunge.vim'  , { 'on': ['<Plug>Sprunge'] }
         map <leader>s <Plug>Sprunge
