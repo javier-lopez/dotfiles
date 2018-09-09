@@ -185,6 +185,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "pastebin client
     Bundle 'javier-lopez/sprunge.vim'  , { 'on': ['<Plug>Sprunge'] }
         map <leader>s <Plug>Sprunge
+        let g:sprunge_providers = 'ix,sprunge'
         let g:sprunge_flush_left = 1
     "checksum generator
     Bundle 'javier-lopez/checksum.vim' , { 'on': ['<Plug>Checksum'] }
@@ -276,6 +277,22 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         map <Leader>N <Plug>RelativeNumberToggle
     "better syntax support
     Bundle 'sheerun/vim-polyglot' , { 'do': 'cd syntax; cp markdown.vim mkd.vim' }
+    Bundle 'javier-lopez/vim-restructuredtext'
+        let g:rst_syntax_code_list = {
+            \ 'vim':        ['vim'],
+            \ 'java':       ['java'],
+            \ 'cpp':        ['cpp', 'c++'],
+            \ 'lisp':       ['lisp'],
+            \ 'dosini':     ['dosini', 'ini'],
+            \ 'jinja2':     ['jinja2', 'j2'],
+            \ 'php':        ['php'],
+            \ 'python':     ['python'],
+            \ 'yaml':       ['yaml'],
+            \ 'perl':       ['perl'],
+            \ 'ruby':       ['ruby'],
+            \ 'sh':         ['sh'],
+            \ 'dockerfile': ['docker', 'dockerfile'],
+            \ }
     Bundle 'junegunn/vim-peekaboo' "preview registers
     Bundle 'gastonsimone/vim-dokumentary' "documentation viewer (K in normal mode)
     Bundle 'ap/vim-css-color'      "colorize #hex, rgb tags
