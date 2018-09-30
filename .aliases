@@ -75,3 +75,7 @@ alias unblock-youtube='ussh root@10.9.8.7 unblock-youtube'
 alias docker-compose.fix.tmp='sudo mount /tmp -o remount,exec'
 alias spotify.disable.remote.control='sed -i "s:^refresh_token:#refresh_token:" ~/.spotify'
 alias spotify.enable.remote.control=' sed -i "s:^#refresh_token:refresh_token:" ~/.spotify'
+
+alias play.with.python.3='docker run -v $PWD:/usr/src/app -w /usr/src/app -t -i python:3.6.4 /bin/bash'
+alias play.with.ubuntu.16.04='docker run -v $PWD:/ubuntu -w /ubuntu -t -i ubuntu:16.04 /bin/bash'
+alias play.with.ubuntu.18.04='docker run -v $PWD:/ubuntu -w /ubuntu -t -i ubuntu:18.04 /bin/bash'
