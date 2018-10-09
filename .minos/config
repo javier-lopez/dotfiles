@@ -24,7 +24,7 @@ keyboard-layouts latam,us,ru
 movietime        movietime
 
 #/etc/cron.d/watch-battery
-battery          watch-battery
+#battery         disabled #watch-battery
 battery-alerts   20,15,10 #in minutes
 battery-action   dmenu-session suspend
 
