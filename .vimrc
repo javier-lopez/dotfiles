@@ -327,7 +327,10 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:user_emmet_expandabbr_key = '<C-y>e'
         let g:user_emmet_expandword_key = '<C-y>E'
         autocmd FileType html,css EmmetInstall
-    Bundle 'javier-lopez/math.vim', { 'on': ['VimSum'] }
+    Bundle 'javier-lopez/math.vim',    { 'on': ['VimSum'] }
+    Bundle 'liuchengxu/vim-which-key', { 'on': ['WhichKey'] }
+        nnoremap <silent> <leader> :WhichKey '<leader>'<CR>
+        set timeoutlen=500
 
     "=================================
     "============ Discarted ==========
