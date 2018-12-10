@@ -166,7 +166,7 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:NERDTreeWinPos           = 'right'
         let g:NERDTreeWinSize          = 25
         let g:NERDTreeMouseMode        = 3
-        let g:NERDTreeMinimalUI        = 1
+        let g:NERDTreeMinimalUI        = 0
         let g:NERDTreeDirArrows        = 1
         "let g:NERDTreeMapOpenSplit    = "-"
         "let g:NERDTreeMapOpenVSplit   = "|"
