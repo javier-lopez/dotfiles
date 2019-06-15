@@ -324,8 +324,9 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         "let g:user_emmet_leader_key = '<C-h>'  "[h]tml
         "let g:user_emmet_leader_key = '<C-e>' "[e]mmet
         let g:user_emmet_install_global = 0
-        let g:user_emmet_expandabbr_key = '<C-y>e'
-        let g:user_emmet_expandword_key = '<C-y>E'
+        let g:user_emmet_leader_key='<C-e>'
+        let g:user_emmet_expandabbr_key = '<C-e>e'
+        let g:user_emmet_expandword_key = '<C-e>E'
         autocmd FileType html,css EmmetInstall
     Bundle 'javier-lopez/math.vim',    { 'on': ['VimSum'] }
     Bundle 'liuchengxu/vim-which-key', { 'on': ['WhichKey'] }
