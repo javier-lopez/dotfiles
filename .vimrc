@@ -154,6 +154,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
         let g:neocomplcache_disable_auto_complete          = 0
         let g:neocomplcache_enable_wildcard                = 1
         let g:neocomplcache_enable_caching_message         = 1
+    Bundle 'davidhalter/jedi-vim' "python autocompletion
+        let g:jedi#show_call_signatures = "2"
     "undo navigation bar
     Bundle 'mbbill/undotree' , { 'on': 'UndotreeToggle' }
         map <leader>u :UndotreeToggle<cr>
