@@ -1,5 +1,4 @@
 # A list of files to exclude when backing up *nix home directories using rsync.
-
 .gvfs
 .local/share/gvfs-metadata
 
@@ -9,3 +8,7 @@
 .config/google-chrome/Default/Session Storage
 .config/google-chrome/Default/Application Cache
 .config/google-chrome/Default/History Index *
+
+.config/VirtualBox/
+
+.vagrant.d
