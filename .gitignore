@@ -9,6 +9,8 @@
 .3T/
 .AbiSuite
 .DownloadManager
+.GA_C*
+.ICAC*
 .ICEauthority
 .NERDTreeBookmarks
 .Prismatik
@@ -47,8 +49,13 @@
 .ccache*
 .cccache/
 .checkbox
+.chromecastize/
 .com.zerog.registry.xml
 .compiz
+.config/3T/
+.config/Code/
+.config/Debauchee/
+.config/Expo*
 .config/Kingsoft/
 .config/LightTable/
 .config/Popcorn-Time/
@@ -56,8 +63,10 @@
 .config/Skype/
 .config/Thunar/
 .config/VirtualBox
+.config/blender/
 .config/dconf/
 .config/feh/
+.config/ghb/
 .config/google-chrome/
 .config/gpick/
 .config/gtk-2.0/
@@ -82,6 +91,7 @@
 .config/wesnoth/
 .config/xarchiver/
 .config/xfce4/
+.config/zoomus.conf
 .covers
 .cpan/
 .ctags
@@ -338,3 +348,4 @@
 .yast*
 .zathura
 .zenmap
+.zoom/
