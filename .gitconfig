@@ -4,10 +4,10 @@
     local   = yellow
     remote  = green
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old  = red bold
-    new  = green bold
+	meta = 11
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "status"]
     added     = yellow
     changed   = green
@@ -16,9 +16,10 @@
 ;Highlight whitespace in diffs
 
 [color]
-    ui = always
+	ui = true
 [color "diff"]
-    whitespace = red reverse
+	whitespace = red reverse
+	commit = yellow bold
 [core]
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
@@ -45,6 +46,7 @@
 
 [core]
     editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [merge]
     tool = vimdiff
@@ -65,3 +67,8 @@
 	default = matching
 [credential]
 	helper = cache --timeout=3600
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
