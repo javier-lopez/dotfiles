@@ -94,6 +94,7 @@
 .config/zoomus.conf
 .covers
 .cpan/
+.credentials
 .ctags
 .ctrlp_cache
 .cups
@@ -200,6 +201,7 @@
 .minetest/
 .mixxx
 .mono
+.movietime*
 .movietime-suspend-inhibit
 .mozilla
 .mozilla-backups/
@@ -282,6 +284,7 @@
 .ssh/known_hosts
 .ssh/known_hosts.old
 .ssh/ugj*
+.static-get
 .sticky-notes*
 .subversion
 .sudo_as_admin_successful
