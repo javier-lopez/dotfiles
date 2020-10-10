@@ -26,7 +26,7 @@ alias barstatus.on='barstatus.off; (conky | dzen2  -x 350 -y 749 -fn Inconsolata
 alias ag='ag --ignore-dir my-assets --nogroup --pager="less -XFR"'
 alias cdrecord='wodim -eject -v speed=4 dev=/dev/scd0'
 alias share.internet='_si() { sudo iptables -t nat -A POSTROUTING -o "${1}" -j MASQUERADE; echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward }; _si'
-alias youtube-dl.audio='youtube-dl --extract-audio --audio-quality 0'
+alias youtube-dl.audio='youtube-dl --extract-audio --audio-quality 0 --audio-format mp3'
 alias uu='update && upgrade'
 alias suspend.in='_suspend_in() { printf "%s\\n" "sleep ${1} && m-session-manager suspend"; sleep "${1}" && m-session-manager suspend; }; _suspend_in'
 alias hibernate.in='_hibernate_in() { printf "%s\\n" "sleep ${1} && m-session-manager hibernate"; sleep "${1}" && m-session-manager hibernate; }; _hibernate_in'
@@ -82,3 +82,5 @@ alias play.with.ubuntu.18.04='docker run -v $PWD:/ubuntu -w /ubuntu -t -i ubuntu
 
 alias barrier='barriers --enable-crypto'
 alias synergy='barrier'
+alias diff='diff --exclude=".git*"'
+alias matrix='cmatrix'
