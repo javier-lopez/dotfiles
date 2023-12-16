@@ -44,7 +44,7 @@ esac #{2
 #=============================== Environment  ==================================
 #===============================================================================
 
-[ -d "$HOME/code/tmux/bin" ] && export PATH="${HOME}/code/tmux/bin:${PATH}"
+[ -d "$HOME/.bin" ] && export PATH="${HOME}/.bin:${PATH}"
 
 #gpg
 export GPGKEY="6ACFB9D8"
