@@ -275,8 +275,8 @@ if isdirectory(expand("~/.vim/bundle/vundle/"))
     "=================================
     "========== Experimental =========
     "=================================
-    Bundle 'javier-lopez/relative-number.vim'
-        map <Leader>N <Plug>RelativeNumberToggle
+    "Bundle 'javier-lopez/relative-number.vim'
+        "map <Leader>N <Plug>RelativeNumberToggle
     "better syntax support
     Bundle 'sheerun/vim-polyglot' , { 'do': 'cd syntax; cp markdown.vim mkd.vim' }
     Bundle 'javier-lopez/vim-restructuredtext'
