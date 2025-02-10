@@ -77,6 +77,7 @@ require("lazy").setup({ -- :Lazy
     },
 
     { "scrooloose/nerdtree",
+        event="VeryLazy",
         init = function()
             vim.cmd("let g:NERDTreeWinPos     = 'right'")
             vim.cmd("let g:NERDTreeWinSize    = 25")
@@ -85,7 +86,7 @@ require("lazy").setup({ -- :Lazy
             vim.cmd("let g:NERDTreeDirArrows  = 1")
         end,
     },
-    { "jistr/vim-nerdtree-tabs", init = function() vim.keymap.set("n", "<leader>n", "<Plug>NERDTreeTabsToggle<CR>") end, },
+    { "jistr/vim-nerdtree-tabs", event="VimEnter", init = function() vim.keymap.set("n", "<leader>n", "<Plug>NERDTreeTabsToggle<CR>") end, },
 
     { "scrooloose/nerdcommenter",
         init = function()
@@ -548,6 +549,42 @@ require("lazy").setup({ -- :Lazy
                         },
                     },
                 },
+
+                yamlls = { -- Have to add this for yamlls to understand that we support line folding
+                    capabilities = {
+                        textDocument = {
+                            foldingRange = {
+                                dynamicRegistration = false,
+                                lineFoldingOnly = true,
+                            },
+                        },
+                    },
+                    -- lazy-load schemastore when needed
+                    on_new_config = function(new_config)
+                        new_config.settings.yaml.schemas = vim.tbl_deep_extend(
+                            "force",
+                            new_config.settings.yaml.schemas or {},
+                            require("schemastore").yaml.schemas()
+                        )
+                    end,
+                    settings = {
+                        redhat = { telemetry = { enabled = false } },
+                        yaml = {
+                            keyOrdering = false,
+                            format = {
+                                enable = true,
+                            },
+                            validate = true,
+                            schemaStore = {
+                                -- Must disable built-in schemaStore support to use
+                                -- schemas from SchemaStore.nvim plugin
+                                enable = false,
+                                -- Avoid TypeError: Cannot read properties of undefined (reading 'length')
+                                url = "",
+                            },
+                        },
+                    },
+                },
             }
 
             -- Ensure the servers and tools above are installed
@@ -750,6 +787,12 @@ require("lazy").setup({ -- :Lazy
                 -- height = 0.4,
                 -- row = 1
             -- },
+            mappings = {
+                reset = { -- override <control>l default mapping
+                    normal = "<leader>clear",
+                    insert = "<leader>clear",
+                },
+            },
         },
 
         keys = {
@@ -866,6 +909,13 @@ require("lazy").setup({ -- :Lazy
         --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
         --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
         --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    },
+
+    { "ramilito/kubectl.nvim",
+        config = function()
+            require("kubectl").setup()
+            vim.keymap.set("n", "<leader>k", '<cmd>lua require("kubectl").toggle()<cr>', { noremap = true, silent = true })
+        end,
     },
 
     {   "piersolenski/wtf.nvim", -- Debug diagnostic with AI
