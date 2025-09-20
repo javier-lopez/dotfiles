@@ -1,0 +1,14 @@
+[General]
+max_thumb_size=15245
+single_click=1
+terminal=x-terminal-emulator
+
+[Window]
+width=1364
+height=730
+splitter_pos=164
+maximized=1
+
+[Desktop]
+[Interface]
+hide_folder_content_border=1

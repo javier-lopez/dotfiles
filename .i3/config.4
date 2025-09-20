@@ -1,0 +1,318 @@
+####################################
+######### GENERAL SETTINGS #########
+####################################
+
+#workspaces
+set $w1   1 www
+set $w2   2 fm
+set $w3   3 mail
+set $w4   4 im
+set $w5   5 term
+set $w6   7 term
+set $w7   7 term
+set $w8   8 term
+set $w9   9 term
+set $w10 10 term
+
+#window border style:
+new_window 1pixel
+
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -*-anorexia-medium-*-*-*-11-*-*-*-*-*-iso10646-1
+#font -*-drift-medium-*-*-*-*-*-*-*-*-*-*-*
+#font -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1
+#font pango:Inconsolata 8, FontAwesome
+font xft:Bahamas 9
+
+ipc-socket ~/.i3/ipc.sock
+
+#autostart: see /etc/minos/autostart and ~/.minos/autostart
+#exec_always m-autostart
+exec --no-startup-id m-autostart
+
+####################################
+######### KEYBOARD BINDINGS ########
+####################################
+
+#This configuration uses Mod1 and Mod3. Make sure they are mapped
+#properly using xev(1) and xmodmap(1). Usually, Mod1 is Alt (Alt_L)
+#Mod3 is Windows (Super_L), Mod4 is <Win> and Mod1 is <Alt>
+set $Win   Mod4
+set $Alt   Mod1
+set $Altgr Mod5
+set $Shift_R 62
+
+set $Esc      9
+set $Enter   36
+set $Space   65
+set $Insert 118
+set $Supr   119
+set $ImpPt  107
+set $F1      67
+
+#use $Win+space to drag floating windows
+floating_modifier $Win
+
+bindsym $Win+f fullscreen
+bindsym $Win+s layout stacking
+bindsym $Win+a layout tabbed
+bindsym $Win+d layout default
+#toggle tiling/floating mode
+bindcode $Win+Shift+$Space floating toggle
+#change focus
+bindsym $Win+h focus left
+bindsym $Win+j focus down
+bindsym $Win+k focus up
+bindsym $Win+l focus right
+#or using cursor keys
+#bindsym $Win+Left  focus left
+#bindsym $Win+Down  focus down
+#bindsym $Win+Up    focus up
+#bindsym $Win+Right focus right
+
+bindcode $Win+$Insert move scratchpad
+bindcode $Win+$Space  scratchpad show
+bindsym  $Win+r       exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+
+#goto
+bindsym $Win+Shift+h  move left
+bindsym $Win+Shift+j  move down
+bindsym $Win+Shift+k  move up
+bindsym $Win+Shift+l  move right
+# (or using cursor keys)
+#bindsym $Win+Shift+Left  move left
+#bindsym $Win+Shift+Down  move down
+#bindsym $Win+Shift+Up    move up
+#bindsym $Win+Shift+Right move right
+
+#workspaces
+bindsym $Win+1 workspace number 1
+bindsym $Win+2 workspace number 2
+bindsym $Win+3 workspace number 3
+bindsym $Win+4 workspace number 4
+bindsym $Win+5 workspace number 5
+bindsym $Win+6 workspace number 6
+bindsym $Win+7 workspace number 7
+bindsym $Win+8 workspace number 8
+bindsym $Win+9 workspace number 9
+bindsym $Win+0 workspace number 10
+
+bindsym $Win+Right workspace next
+bindsym $Win+Left  workspace prev
+
+bindsym $Win+Shift+1 move workspace number 1
+bindsym $Win+Shift+2 move workspace number 2
+bindsym $Win+Shift+3 move workspace number 3
+bindsym $Win+Shift+4 move workspace number 4
+bindsym $Win+Shift+5 move workspace number 5
+bindsym $Win+Shift+6 move workspace number 6
+bindsym $Win+Shift+7 move workspace number 7
+bindsym $Win+Shift+8 move workspace number 8
+bindsym $Win+Shift+9 move workspace number 9
+bindsym $Win+Shift+0 move workspace number 10
+
+#apps
+bindsym  F1                   exec m-help
+bindcode $Win+$F1             exec m-help
+bindcode $Win+$Enter          exec m-terminal
+bindcode $Win+Shift+$Enter    split h
+bindcode $Alt+$Esc            exec m-launcher
+
+#starting i3 v4.11 bindsys is hardly useful
+#for latam keyboards, therefore keyshortcuts
+#are defined as bindcode entries
+#        $Altgr+k
+bindcode $Altgr+45            kill
+#right click kills window
+#bindsym --release button3    kill
+#bindmouse Button3            kill
+#        $Altgr+l
+bindcode $Altgr+46            exec m-killer
+bindsym  $Alt+Tab             exec m-window-jumper
+#        $Altgr+w
+bindcode $Altgr+25            exec m-browser
+#        $Altgr+f
+bindcode $Altgr+41            exec m-file-manager
+#        $Altgr+m
+bindcode $Altgr+58            exec m-mail
+#        $Altgr+z
+bindcode $Altgr+52            exec m-magnifier
+#        $Altgr+i
+bindcode $Altgr+31            exec m-im
+#        $Altgr+Shift+m
+bindcode $Altgr+Shift+58      exec m-music-player
+
+#        $Altgr+Shift+v
+bindcode $Altgr+Shift+55      exec m-video-player
+bindsym  $Altgr+n             exec m-network-manager
+bindcode $Altgr+$Supr         exec m-session-manager
+bindcode Control+$Alt+$Supr   exec m-session-manager
+bindsym Control+$Alt+l        exec m-session-manager lock
+bindcode $Alt+$Shift_R        exec m-keyboard
+bindcode $Altgr+$Space        exec m-movietime
+#        $Altgr+x
+bindcode $Altgr+53            exec m-multimonitor
+bindsym  XF86Display          exec m-multimonitor
+#        $Altgr+p
+bindcode $Altgr+33            exec player-ctrl toggle
+bindcode $Altgr+21            exec player-ctrl next
+bindcode $Altgr+34            exec player-ctrl previous
+bindsym XF86AudioPlay         exec player-ctrl toggle
+bindsym XF86AudioStop         exec player-ctrl toggle
+bindsym XF86AudioNext         exec player-ctrl next
+bindsym XF86AudioPrev         exec player-ctrl previous
+bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 1
+bindsym XF86MonBrightnessUp   exec xbacklight -steps 1 -time 0 -inc 1
+bindcode $ImpPt               exec m-screenshot
+bindcode $Alt+$ImpPt          exec m-screenshot -s
+bindcode $Win+$ImpPt          exec m-screencast
+bindcode $Win+$Alt+$ImpPt     exec m-screencast -s
+bindcode Control+$ImpPt       exec gifcast
+bindcode $Win+Shift+$ImpPt    exec m-screencast -k
+
+#        $Altgr+s
+bindcode $Altgr+39            exec dmenu-mpd
+bindsym Control+$Alt+v        exec vim-anywhere
+#        $Altgr+v
+bindcode $Altgr+55            exec dmenu-vbox
+#        $Altgr+t
+bindcode $Altgr+28            exec dmenu-txt2speech
+#bindsym $Altgr+a
+bindcode $Altgr+38            exec dmenu-alarm -e 'mplayer "~/data/music/rock (industrial)/Rammstein/Rammstein - Moskau.mp3"'
+
+#volume down ($Altgr+,) ($Altgr+.)
+bindcode $Altgr+59 exec amixer -q set Master 1-
+#volume up, unmute if mutted
+bindcode $Altgr+60 exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
+
+# volume, multimedia keys
+bindsym XF86AudioRaiseVolume exec sh -c 'amixer -q set Master 1+ && [ -n "$(amixer | awk /Master/-/Mono:/ | head -2 | awk /off/)" ] && amixer -q set Master unmute || true'
+bindsym XF86AudioLowerVolume exec amixer -q set Master 1-
+bindsym XF86AudioMute        exec amixer -q set Master toggle
+
+#bindsym Control+Shift+a exec x-terminal-emulator -e alsamixer
+#bindsym Control+Shift+a exec /bin/sh -c alsamixer
+
+#bindsym Control+$Alt+e exit
+#bindsym Control+$Alt+r restart
+
+#go to the urgent flag set
+#bindsym $Win+x [urgent=latest] focus
+
+mode "resize" {
+    #These bindings trigger as soon as you enter the resize mode
+
+    #They resize the border in the direction you pressed, e.g.
+    #when pressing left, the window is resized so that it has
+    #more space on its left
+    bindsym h resize grow left 10 px
+    bindsym H resize grow left 10 px
+    bindsym j resize shrink up 10 px
+    bindsym J resize shrink up 10 px
+    bindsym k resize grow up 10 px
+    bindsym K resize grow up 10 px
+    bindsym l resize shrink left 10 px
+    bindsym L resize shrink left 10 px
+
+    #Exit resize mode
+    #        $Altgr+r
+    bindcode $Altgr+27 mode "default"
+}
+
+#Enter resize mode
+#        $Altgr+r
+bindcode $Altgr+27 mode "resize"
+
+#Get me to the next open VIM instance
+#bindsym $Win+v [class="buzz" title="VIM"] focus
+#bindsym $Win+m [class="buzz" title="mutt"] focus
+
+bindsym $Win+m   exec i3-input -p 'mark ' -l 1 -P 'Mark: '
+bindcode $Win+20 exec i3-input -p 'goto ' -l 1 -P 'Go: '
+
+####################################
+############## ASSIGNS #############
+####################################
+
+#use xprop to find windows name/classes
+for_window [class="Magnifier|Xmessage|Gxmessage|Screenkey"] floating enable
+for_window [class="^TeamViewer.exe$|^TeamViewer$|- TeamViewer -"] floating enable
+for_window [class="realvnc-vncviewer"] floating enable
+for_window [title="^xzoom"] border none; floating enable
+for_window [class="Firefox" title="^About.*"] floating enable
+for_window [class="Xarchiver" title="Xarchiver$"] floating enable
+for_window [class="Gvim" window_role="vim-anywhere"] floating enable
+for_window [class="^URxvt$" title="^getpass$"] floating enable
+for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
+for_window [class="MPlayer|mplayer2"] fullscreen
+
+#popup_during_fullscreen <smart|ignore|leave_fullscreen> smart is default
+#popup_during_fullscreen ignore
+workspace_auto_back_and_forth yes
+
+#Assigns default monitor for workspaces
+workspace "$w1" output HDMI1
+#workspace "$w1" output VGA1
+
+#Assigns default workspaces for app
+#assign ["]window class[/window title]["] [→] [~ | workspace]
+
+#use xprop to find windows name/classes
+assign [class="Firefox"]               $w1
+assign [class="Pcmanfm"]               $w2
+assign [class="Nautilus"]              $w2
+assign [class="^URxvt$" title="irssi"] $w4
+assign [title="^Skype.*"]              $w4
+assign [class="^URxvt$" title="mutt"]  $w3
+assign [class="Thunderbird"]           $w3
+
+####################################
+############## THEMES ##############
+####################################
+
+#colorclass              border          background      text
+
+#arch/blue
+#client.focused          #1793D1         #1793D1         #ffffff
+#client.focused_inactive #666666         #666666         #ffffff
+#client.unfocused        #333333         #333333         #ffffff
+#client.urgent           #D11931         #D11931         #ffffff
+
+#freebsd/red
+#client.focused          #990000         #990000         #ffffff
+#client.focused_inactive #666666         #666666         #ffffff
+#client.unfocused        #333333         #333333         #ffffff
+#client.urgent           #D11931         #D11931         #ffffff
+
+#gentoo/purple
+#client.focused          #7a5ada         #7a5ada         #ffffff
+#client.focused_inactive #45347b         #45347b         #ffffff
+#client.unfocused        #333333         #333333         #ffffff
+#client.urgent           #D11931         #D11931         #ffffff
+
+#minos/dark
+client.focused          #999999      #999999      #000000
+client.focused_inactive #333333      #333333      #999999
+client.unfocused        #333333      #333333      #999999
+client.urgent           #8C4665      #8C5665      #999999
+
+bar {
+    status_command minos-statusbar
+    position bottom
+    tray_output none
+    font pango:Inconsolata 9
+    workspace_buttons yes
+    separator_symbol "|"
+    #mode hide
+    #modifier $Win
+    colors {
+        background #000000
+        statusline #ffffff
+        focused_workspace  #999999 #000000 #999999
+        active_workspace   #999999 #000000 #999999
+        inactive_workspace #333333 #000000 #999999
+        urgent_workspace   #d11931 #000000 #999999
+    }
+}
+
+#vim: set ts=8 sw=4 tw=0 ft=conf :

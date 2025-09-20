@@ -1,0 +1,20 @@
+fixed-vo="1"
+#noborder="1"
+nojoystick="1"
+#use accelerated Xorg output for best performance
+vo="xv"
+#enable zoommode when using mplayer without GUI
+#zoom="1"
+ao=alsa
+input=file=/tmp/mplayer.fifo
+nolirc="1"
+use-filename-title="1"
+
+#colorize =)
+msgmodule=1
+msgcolor=1
+
+#fontconfig = yes
+#font = "Arial Unicode MS"
+subfont-text-scale = 3
+#subfont-text-scale=6

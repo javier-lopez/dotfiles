@@ -1,0 +1,57 @@
+######################################
+# http://minos.io/doc/config         #
+# /etc/minos/config, ~/.minos/config #
+######################################
+
+wallpaper        /usr/share/minos/wallpapers/minos.png
+lock-wallpaper   ~/data/images/wallpapers/simplicity.png
+
+autostart        minos-autostart
+composition      compton
+eyesaver         redshift
+handsaver        workrave
+clipboard        autocutsel -fork
+#clipboard       autocutsel -fork && autocutsel -selection PRIMARY -fork
+statusbar        minos-statusbar
+statusbar-icons  sm4tik
+
+session-manager  dmenu-session
+hibernate        pm-hibernate
+suspend          pm-suspend
+lock             i3lock
+keyboard         shift-keyboard-layout
+keyboard-layouts latam,us,ru
+movietime        movietime
+
+#/etc/cron.d/watch-battery
+#battery         disabled #watch-battery
+battery-alerts   20,15,10 #in minutes
+battery-action   dmenu-session suspend
+
+#shortcuts
+help             minos-help
+launcher         dmenu-launcher
+killer           dmenu-killall
+browser          x-www-browser
+file-manager     pcmanfm
+terminal         x-terminal-emulator
+#terminal        x-terminal-emulator -e tmux
+mail             mutt:terminal
+im               'irssi --config=<(gpg -d ~/.irssi/config.gpg)':terminal
+pdf              zathura
+music-player     ncmpcpp:terminal
+video-player     umplayer
+multimonitor     dmenu-xrandr
+network-manager  wicd-curses:terminal
+magnifier        magnifier
+#magnifier       xzoom
+window-jumper    dmenu-i3-window-jumper
+screenshot       screenshot
+screencast       ffcast
+
+#minos.io/s
+#dotfiles        https://github.com/user/dotfiles
+#hook            http://minos.io/hook
+app-core         curl
+app-desktop      mozilla-firefox mozilla-flashplayer
+#app-purge        xinetd sasl2-bin sendmail sendmail-base sendmail-bin sensible-mda rmail bsd-mailx apache2.2-common apache2 nano bind9 whoopsie rpcbind postfix bind9-host bind9utils cifs-utils samba samba-common samba-common-bin samba-libs python-samba samba-libs
