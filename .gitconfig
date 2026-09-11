@@ -66,9 +66,17 @@
 [push]
 	default = matching
 [credential]
-	helper = cache --timeout=3600
+	helper = store
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[safe]
+	directory = /home/m/tucastigo.com.bkp
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

@@ -17,16 +17,13 @@ bind "set match-hidden-files off"     #don't match hidden files
 bind "set bind-tty-special-chars on"  #punctuations are not word delimiters
 bind "set show-all-if-ambiguous on"   #enable single tab completion
 bind "set completion-ignore-case on"
-#}1
 
-#trap '. /etc/bash_completion ; trap USR2' USR2
-#{ sleep 0.01 ; builtin kill -USR2 $$ ; } & disown
 [ -z "${BASH_COMPLETION_COMPAT_DIR}" ] && [ -f /etc/bash_completion ] && . /etc/bash_completion
 
 #make less more friendly for non-text input files, see lesspipe(1)
-if command -v "lesspipe" >/dev/null 2>&1; then
-    eval "$(SHELL=/bin/sh lesspipe)"
-fi
+#if command -v "lesspipe" >/dev/null 2>&1; then
+    #eval "$(SHELL=/bin/sh lesspipe)"
+#fi
 
 #/etc/terminfo/*
 #export TERM="xterm-color"
@@ -38,13 +35,15 @@ case "${TERM}" in
         PROMPT_COMMAND='printf "%b" "\033]0;${PWD/$HOME/~}\007"' ;;
     screen)
         PROMPT_COMMAND='printf "%b" "\033_${PWD/$HOME/~}\033\\"' ;;
-esac #{2
+esac
 
 #===============================================================================
 #=============================== Environment  ==================================
 #===============================================================================
 
-[ -d "$HOME/.bin" ] && export PATH="${HOME}/.bin:${PATH}"
+[ -d "$HOME/bin" ]        && export PATH="${HOME}/bin:${PATH}"
+[ -d "$HOME/.local/bin" ] && export PATH="${HOME}/.local/bin:${PATH}"
+[ -d "$HOME/.bin" ]       && export PATH="${HOME}/.bin:${PATH}"
 
 #gpg
 export GPGKEY="6ACFB9D8"
@@ -59,11 +58,15 @@ export BROWSER="x-www-browser"
 
 #fix java ugliness
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
-#}2
 
 # ruby dev
 #[ -f "${HOME}/.rvm/bin" ] && export PATH="${PATH}:${HOME}/.rvm/bin"
 #[ -f "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ]          && . "$NVM_DIR/nvm.sh"           # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #ubuntu dev
 export DEBEMAIL="javier-lopez@ubuntu.com"
@@ -74,14 +77,14 @@ export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
 export QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
 export QUILT_DIFF_OPTS='-p'
 
-#{3
 if [ -f "$(command -v "ccache")" ]; then
     export PATH="${PATH}:/usr/lib/ccache"
     export CCACHE_DIR="${HOME}/.ccache"
     export CCACHE_SIZE="2G"
-    #export CCACHE_PREFIX="distcc"
 fi
-#}3
+
+# claude, feeds the official GitHub MCP server (plugin:github:github)
+export GITHUB_PERSONAL_ACCESS_TOKEN="$(gh auth token)"
 
 #===============================================================================
 #================================= Plugins =====================================
@@ -105,6 +108,7 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #ALIAZATOR_PLUGINS="none"
         #ALIAZATOR_PLUGINS="minimal"
         ALIAZATOR_PLUGINS="installed"
+        ALIAZATOR_SHADOW="size install gs"
         #ALIAZATOR_PLUGINS="all"
         #ALIAZATOR_PLUGINS="custom:minimal,git,apt-get,vagrant,vim"
         #ALIAZATOR_CLOUD="url"
