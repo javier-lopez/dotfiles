@@ -42,7 +42,7 @@
     last    = log -1 HEAD
     praise  = blame
     discart = checkout --
-    glog    = log --all --pretty = 'format:%d %Cgreen%h%Creset %an - %s' --graph
+    glog    = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
 
 [core]
     editor = vim
@@ -64,7 +64,7 @@
       ;branch specified, use the default remote (origin) and merge in
       ;the changes from the master branch.
 [push]
-	default = matching
+	default = simple
 [credential]
 	helper = store
 [color "diff-highlight"]
