@@ -18,6 +18,8 @@ every change made to it, by you or by a tool.
 - `.profile.ps1` holds PowerShell settings for Windows (see [Windows](#windows)).
 - `README.md` is this file. It sits outside every machine's sparse checkout,
   so it never lands in `~`.
+- `test/dot.sh` tests `.bin/dot` under throwaway homes; run `sh test/dot.sh`
+  from a clone. Like this README, it never lands in `~`.
 
 ## Bootstrap a machine
 
@@ -28,7 +30,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/javier-lopez/dotfiles/mast
 
 `dot bootstrap` clones the repo into `~/.dotfiles.git`, configures it (not
 bare, untracked listing off, fast-forward-only pulls, no autostash) and checks
-out only what this machine already has, plus `.gitignore` and `.bin/dot`.
+out only what this machine already has, plus what every machine gets:
+`.gitignore`, `.bin/dot` and the Claude Code instructions, `.claude/CLAUDE.md`
+with the two files it points to (`RTK.md`, `parallel-sessions.md`).
 Everything else stays in the repo; to take one more file, run
 `dot sparse-checkout add /<path>`. Until `~/.bashrc` puts `~/.bin` on `PATH`,
 call the helper as `~/.bin/dot`.

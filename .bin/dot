@@ -61,15 +61,18 @@ _bootstrap() {
     _git fetch -q origin && _git branch -q -u "origin/${branch}" "${branch}" || exit
     _git reset -q || exit #fills the index only, no file under ~ is touched
 
-    #check out only what this machine already has, plus .gitignore and this
-    #helper; the rest stays in the repo until 'dot sparse-checkout add /<path>'
+    #check out only what this machine already has, plus what every machine
+    #gets: the ignore rules, this helper and the Claude Code instructions
+    #(CLAUDE.md imports RTK.md and points to parallel-sessions.md). The rest
+    #stays in the repo until 'dot sparse-checkout add /<path>'
+    always=".gitignore .bin/dot .claude/CLAUDE.md .claude/RTK.md .claude/parallel-sessions.md"
     { _git -c core.quotePath=false ls-files | while IFS= read -r file; do
           [ -e "${HOME}/${file}" ] && printf "/%s\\n" "${file}"
       done
-      printf "%s\\n" "/.gitignore" "/.bin/dot"
+      for file in ${always}; do printf "/%s\\n" "${file}"; done
     } | _git sparse-checkout set --no-cone --stdin || exit
 
-    for file in .gitignore .bin/dot; do
+    for file in ${always}; do
         [ -e "${HOME}/${file}" ] || _git checkout -- "${file}" || exit
     done
 

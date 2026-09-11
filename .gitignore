@@ -371,5 +371,6 @@
 /.git-credentials
 /.config/gh/
 
-#README.md lives at the root, which /* ignores
+#README.md and the tests live at the root, which /* ignores
 !/README.md
+!/test/
