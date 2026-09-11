@@ -373,5 +373,5 @@
 /.config/gh/
 
 #README.md is the only non-dotfile at the root, which /* ignores; everything
-#else belongs inside a dotdir (tests in /.bin/test/, Neovim in /.nvim/)
+#else belongs inside a dotdir (tests in /.bin/test/, Neovim in /.config/nvim/)
 !/README.md

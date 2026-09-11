@@ -17,11 +17,13 @@ every change made to it, by you or by a tool.
   through untouched, so any git command works as `dot <command>`. It lands in
   `~/.bin/dot`; the other scripts in `~/.bin` come from the
   [learn](https://github.com/javier-lopez/learn) repo and are not versioned here.
-- `.nvim/init.lua` is the Neovim config.
+- `.config/nvim/init.lua` is the Neovim config, at the path Neovim itself
+  reads (`$XDG_CONFIG_HOME/nvim`), so `dot get /.config/nvim/init.lua` makes it
+  live on a machine.
 - `.profile.ps1` holds PowerShell settings for Windows (see [Windows](#windows)).
 - `README.md` is this file, and the only file at the root that is not a
   dotfile: `/*` ignores every other one, so anything new belongs inside a
-  dotdir (the tests in `.bin/test/`, the Neovim config in `.nvim/`). It sits
+  dotdir (the tests in `.bin/test/`, the Neovim config in `.config/nvim/`). It sits
   outside every machine's sparse checkout, so it never lands in `~`.
 - `.bin/test/dot.sh` tests `.bin/dot` under throwaway homes; run
   `sh .bin/test/dot.sh` from a clone. Like this README, it never lands in `~`.

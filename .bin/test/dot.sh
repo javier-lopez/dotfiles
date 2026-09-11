@@ -76,7 +76,7 @@ _t 'test ! -e "${HOME}/.claude/settings.json"'
 _t 'test ! -e "${HOME}/.vimrc"'
 _t 'test ! -e "${HOME}/README.md"'
 _t 'test ! -e "${HOME}/.bin/test"'
-_t 'test ! -e "${HOME}/.nvim"'
+_t 'test ! -e "${HOME}/.config/nvim"'
 _t 'test X"$(cd "${HOME}/project" && dot ls-files | wc -l)" = X"$(dot ls-files | wc -l)"'
 _t 'dot check-ignore -q --no-index .bin/other'
 _t 'dot check-ignore -q --no-index .bin/dot; test X"${?}" = X"1"'
@@ -86,8 +86,8 @@ _t 'dot check-ignore -q --no-index .bin/test/dot.sh; test X"${?}" = X"1"'
 #get: one more tracked path into ~, with or without the leading slash
 _t 'dot get /.vimrc && test -f "${HOME}/.vimrc"'
 _t 'dot sparse-checkout list | grep -qx "/.vimrc"'
-_t 'dot get .nvim/init.lua && test -f "${HOME}/.nvim/init.lua"'
-_t 'dot sparse-checkout list | grep -qx "/.nvim/init.lua"'
+_t 'dot get .config/nvim/init.lua && test -f "${HOME}/.config/nvim/init.lua"'
+_t 'dot sparse-checkout list | grep -qx "/.config/nvim/init.lua"'
 
 #a second run would reset the index: refused, index untouched
 INDEX="$(dot ls-files -s | cksum)"
