@@ -151,15 +151,6 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "mcp__playwright__",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo \"[PW-HOOK] $(date +%H:%M:%S) PRE lock\" >> /tmp/pw-hook.log && /home/m/tucastigo.com/scripts/playwright-overlay.sh lock && echo \"[PW-HOOK] $(date +%H:%M:%S) PRE lock DONE\" >> /tmp/pw-hook.log"
-          }
-        ]
-      },
-      {
         "matcher": "Bash",
         "hooks": [
           {
@@ -170,15 +161,6 @@
       }
     ],
     "PostToolUse": [
-      {
-        "matcher": "mcp__playwright__",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo \"[PW-HOOK] $(date +%H:%M:%S) POST unlock\" >> /tmp/pw-hook.log && /home/m/tucastigo.com/scripts/playwright-overlay.sh unlock && echo \"[PW-HOOK] $(date +%H:%M:%S) POST unlock DONE\" >> /tmp/pw-hook.log"
-          }
-        ]
-      },
       {
         "matcher": "Edit|Write",
         "hooks": [
