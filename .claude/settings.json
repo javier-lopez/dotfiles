@@ -93,8 +93,6 @@
       "Bash(bash scripts/run.sh dev tests)",
       "Bash(gh issue:*)",
       "Bash(gh api:*)",
-      "Bash(sudo cp:*)",
-      "Bash(sudo chmod:*)",
       "Bash(gh search:*)",
       "WebFetch(domain:docs.windsurf.com)",
       "WebFetch(domain:claudefa.st)",
