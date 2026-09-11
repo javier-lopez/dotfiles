@@ -1,0 +1,103 @@
+#!/bin/sh
+#description: git for the dotfiles repo, with $HOME as its work tree
+#usage: dot [git command] [args]... | dot bootstrap [url]
+
+#example: sh -c "$(curl -fsSL https://raw.githubusercontent.com/javier-lopez/dotfiles/master/.bin/dot)" dot bootstrap
+#example: dot status
+#example: dot add .claude/settings.json && dot commit -m "claude: allow jq"
+
+#refuses the commands whose blast radius is the whole home directory; the
+#setup it expects is described in https://github.com/javier-lopez/dotfiles
+
+DOT_DIR="${HOME}/.dotfiles.git"
+DOT_URL="https://github.com/javier-lopez/dotfiles.git"
+
+_usage() {
+    printf "%s\\n" "Usage: ${PROGNAME} [git command] [args]..."
+    printf "%s\\n" "       ${PROGNAME} bootstrap [url]"
+    printf "%s\\n" "Run git on the dotfiles repo (~/.dotfiles.git) with \$HOME as its work tree."
+    printf "\\n"
+    printf "%s\\n" "  bootstrap    clone the repo and set ~ up as its work tree, local files win"
+    printf "%s\\n" "  -h, --help   show this help message and exit"
+    printf "\\n"
+    printf "%s\\n" "Refused: clean, add -A/--all/., reset --hard, checkout -f, switch -f,"
+    printf "%s\\n" "switch --discard-changes and --autostash on pull, merge or rebase."
+}
+
+_die() {
+    [ -z "${1}" ] || printf "%s\\n" "${*}" >&2
+    _usage >&2; exit 1
+}
+
+_refuse() {
+    printf "%s\\n" "${PROGNAME}: refused: ${*}" >&2
+    exit 1
+}
+
+_git() {
+    #run from $HOME: every cwd under ~ is inside the work tree, and git makes
+    #ls-files output and pathspecs relative to it (an empty ls-files once built
+    #an empty sparse pattern that dropped clean dotfiles). Paths are ~-relative.
+    git -C "${HOME}" --git-dir="${DOT_DIR}" --work-tree="${HOME}" "${@}"
+}
+
+_bootstrap() {
+    #overwrites nothing: a file that already exists under ~ keeps its content
+    #and shows up in 'dot diff' as a change against the repo
+    [ -f "${DOT_DIR}/index" ] && _refuse "'bootstrap' already ran" \
+        "(${DOT_DIR}/index exists, a new reset would drop what is staged there)"
+
+    #a run that died after the clone resumes from it
+    [ -d "${DOT_DIR}" ] || git clone --bare "${1:-${DOT_URL}}" "${DOT_DIR}" || exit
+
+    _git config core.bare false &&
+    _git config status.showUntrackedFiles no &&
+    _git config pull.ff only &&
+    _git config rebase.autoStash false &&
+    _git config merge.autoStash false &&
+    _git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' || exit
+
+    branch="$(_git symbolic-ref --short HEAD)" || exit
+    _git fetch -q origin && _git branch -q -u "origin/${branch}" "${branch}" || exit
+    _git reset -q || exit #fills the index only, no file under ~ is touched
+
+    #check out only what this machine already has, plus .gitignore and this
+    #helper; the rest stays in the repo until 'dot sparse-checkout add /<path>'
+    { _git -c core.quotePath=false ls-files | while IFS= read -r file; do
+          [ -e "${HOME}/${file}" ] && printf "/%s\\n" "${file}"
+      done
+      printf "%s\\n" "/.gitignore" "/.bin/dot"
+    } | _git sparse-checkout set --no-cone --stdin || exit
+
+    for file in .gitignore .bin/dot; do
+        [ -e "${HOME}/${file}" ] || _git checkout -- "${file}" || exit
+    done
+
+    printf "%s\\n" "${PROGNAME}: bootstrapped; M = local content kept, compare with: ~/.bin/dot diff"
+    _git status --short
+}
+
+PROGNAME="${0##*/}"
+
+[ "${#}" -eq "0" ] && _die
+
+case "${1}" in
+    -h|--help) _usage && exit ;;
+    bootstrap) shift; _bootstrap "${@}"; exit ;;
+    clean) _refuse "'clean' deletes untracked files across \$HOME (ssh keys, non-repo dirs)" ;;
+esac
+
+for arg in "${@}"; do
+    case "${1}:${arg}" in
+        add:-A|add:--all|add:.)
+            _refuse "'add ${arg}' stages every untracked dotfile; add explicit paths" ;;
+        reset:--hard|checkout:-f|checkout:--force|switch:-f|switch:--force|switch:--discard-changes)
+            _refuse "'${1} ${arg}' overwrites local dotfiles" ;;
+        pull:--autostash|merge:--autostash|rebase:--autostash)
+            _refuse "'--autostash' leaves conflict markers in live files" ;;
+    esac
+done
+
+_git "${@}"
+
+# vim: set ts=8 sw=4 tw=0 ft=sh :

@@ -40,6 +40,10 @@
 .bashdb*
 .bazaar
 .bin
+#except this repo's own helper, ~/.bin/dot
+!/.bin/
+/.bin/*
+!/.bin/dot
 .bittorrent
 .bosonx
 .boumlrc
@@ -352,3 +356,20 @@
 .zathura
 .zenmap
 .zoom/
+
+#Claude Code: curated config only, never state or credentials
+/.claude/*
+!/.claude/CLAUDE.md
+!/.claude/RTK.md
+!/.claude/parallel-sessions.md
+!/.claude/settings.json
+/.claude.json
+/.claude.json.*
+/.claude.lock
+
+#Credentials the rules above miss
+/.git-credentials
+/.config/gh/
+
+#README.md lives at the root, which /* ignores
+!/README.md
