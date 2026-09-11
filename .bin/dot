@@ -1,10 +1,11 @@
 #!/bin/sh
 #description: git for the dotfiles repo, with $HOME as its work tree
-#usage: dot [git command] [args]... | dot bootstrap [url]
+#usage: dot [git command] [args]... | dot bootstrap [url] | dot get <path>...
 
 #example: sh -c "$(curl -fsSL https://raw.githubusercontent.com/javier-lopez/dotfiles/master/.bin/dot)" dot bootstrap
 #example: dot status
 #example: dot add .claude/settings.json && dot commit -m "claude: allow jq"
+#example: dot get /.vimrc
 
 #refuses the commands whose blast radius is the whole home directory; the
 #setup it expects is described in https://github.com/javier-lopez/dotfiles
@@ -15,9 +16,12 @@ DOT_URL="https://github.com/javier-lopez/dotfiles.git"
 _usage() {
     printf "%s\\n" "Usage: ${PROGNAME} [git command] [args]..."
     printf "%s\\n" "       ${PROGNAME} bootstrap [url]"
-    printf "%s\\n" "Run git on the dotfiles repo (~/.dotfiles.git) with \$HOME as its work tree."
+    printf "%s\\n" "       ${PROGNAME} get <path>..."
+    printf "%s\\n" "A wrapper around git for the dotfiles repo (~/.dotfiles.git), with \$HOME as"
+    printf "%s\\n" "its work tree: every command but the ones below is passed through to git."
     printf "\\n"
     printf "%s\\n" "  bootstrap    clone the repo and set ~ up as its work tree, local files win"
+    printf "%s\\n" "  get          check one more tracked path out into ~"
     printf "%s\\n" "  -h, --help   show this help message and exit"
     printf "\\n"
     printf "%s\\n" "Refused: clean, add -A/--all/., reset --hard, checkout -f, switch -f,"
@@ -64,7 +68,7 @@ _bootstrap() {
     #check out only what this machine already has, plus what every machine
     #gets: the ignore rules, this helper and the Claude Code instructions
     #(CLAUDE.md imports RTK.md and points to parallel-sessions.md). The rest
-    #stays in the repo until 'dot sparse-checkout add /<path>'
+    #stays in the repo until 'dot get /<path>'
     always=".gitignore .bin/dot .claude/CLAUDE.md .claude/RTK.md .claude/parallel-sessions.md"
     { _git -c core.quotePath=false ls-files | while IFS= read -r file; do
           [ -e "${HOME}/${file}" ] && printf "/%s\\n" "${file}"
@@ -80,6 +84,24 @@ _bootstrap() {
     _git status --short
 }
 
+_get() {
+    #'sparse-checkout add' with the leading slash its patterns need: they are
+    #gitignore patterns, so an unanchored '.vimrc' would also take '.vim/.vimrc'
+    [ -z "${1}" ] && _die "'get' needs a path, e.g. '${PROGNAME} get /.vimrc'"
+
+    _get__pending="${#}"
+    while [ "${_get__pending}" -gt "0" ]; do
+        case "${1}" in
+            /*) set -- "${@}" "${1}"  ;;
+             *) set -- "${@}" "/${1}" ;;
+        esac
+        shift
+        _get__pending="$((_get__pending - 1))"
+    done
+
+    _git sparse-checkout add "${@}"
+}
+
 PROGNAME="${0##*/}"
 
 [ "${#}" -eq "0" ] && _die
@@ -87,6 +109,7 @@ PROGNAME="${0##*/}"
 case "${1}" in
     -h|--help) _usage && exit ;;
     bootstrap) shift; _bootstrap "${@}"; exit ;;
+    get)       shift; _get "${@}"; exit ;;
     clean) _refuse "'clean' deletes untracked files across \$HOME (ssh keys, non-repo dirs)" ;;
 esac
 

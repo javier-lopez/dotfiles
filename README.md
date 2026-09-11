@@ -11,15 +11,20 @@ every change made to it, by you or by a tool.
 - `.gitignore` ignores everything (`/*`), re-includes dotfiles (`!.*`), then
   excludes the dotfiles that must never be published. This is a **public**
   repo: secrets are committed only as `.gpg` files.
-- `.bin/dot` is the helper that runs git on this repo. It lands in
+- `.bin/dot` is the helper: **a wrapper around `git`** that points it at this
+  repo with `~` as the work tree, refuses the commands whose blast radius is
+  the whole home, and adds `bootstrap` and `get`. Everything else is passed
+  through untouched, so any git command works as `dot <command>`. It lands in
   `~/.bin/dot`; the other scripts in `~/.bin` come from the
   [learn](https://github.com/javier-lopez/learn) repo and are not versioned here.
-- `init.lua` is the Neovim config. It is not a dotfile and is not mapped to `~`.
+- `.nvim/init.lua` is the Neovim config.
 - `.profile.ps1` holds PowerShell settings for Windows (see [Windows](#windows)).
-- `README.md` is this file. It sits outside every machine's sparse checkout,
-  so it never lands in `~`.
-- `test/dot.sh` tests `.bin/dot` under throwaway homes; run `sh test/dot.sh`
-  from a clone. Like this README, it never lands in `~`.
+- `README.md` is this file, and the only file at the root that is not a
+  dotfile: `/*` ignores every other one, so anything new belongs inside a
+  dotdir (the tests in `.bin/test/`, the Neovim config in `.nvim/`). It sits
+  outside every machine's sparse checkout, so it never lands in `~`.
+- `.bin/test/dot.sh` tests `.bin/dot` under throwaway homes; run
+  `sh .bin/test/dot.sh` from a clone. Like this README, it never lands in `~`.
 
 ## Bootstrap a machine
 
@@ -34,7 +39,7 @@ out only what this machine already has, plus what every machine gets:
 `.gitignore`, `.bin/dot` and the Claude Code instructions, `.claude/CLAUDE.md`
 with the two files it points to (`RTK.md`, `parallel-sessions.md`).
 Everything else stays in the repo; to take one more file, run
-`dot sparse-checkout add /<path>`. Until `~/.bashrc` puts `~/.bin` on `PATH`,
+`dot get /<path>`. Until `~/.bashrc` puts `~/.bin` on `PATH`,
 call the helper as `~/.bin/dot`.
 
 `sh -c "$(curl ...)"` runs the script only once it is fully downloaded: a
@@ -56,6 +61,7 @@ files outside a sparse pattern stay out.
 dot status               # tracked files only (the untracked listing is off)
 dot diff                 # what changed locally
 dot add <path>           # always an explicit path
+dot get /<path>          # check one more tracked file out into ~
 dot commit -m "..." && dot push
 dot pull                 # fast-forward only; aborts if a local change is in the way
 ```
@@ -111,5 +117,5 @@ Never versioned: `~/.claude.json` (account and MCP servers, with tokens),
 ## Editing this README
 
 It lives outside the sparse checkout. Edit it on GitHub, or bring it into `~`
-with `dot sparse-checkout add /README.md`, then drop that line from
-`dot sparse-checkout list` and `set` the rest when done.
+with `dot get /README.md`, then drop that line from `dot sparse-checkout list`
+and `set` the rest when done.

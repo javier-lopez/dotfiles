@@ -1,10 +1,10 @@
 #!/bin/sh
 #description: tests for .bin/dot, every case under a throwaway $HOME
-#usage: sh test/dot.sh
+#usage: sh .bin/test/dot.sh
 
-#example: git clone https://github.com/javier-lopez/dotfiles && sh dotfiles/test/dot.sh
+#example: git clone https://github.com/javier-lopez/dotfiles && sh dotfiles/.bin/test/dot.sh
 
-REPO="$(cd "$(dirname "${0}")/.." && pwd)"
+REPO="$(cd "$(dirname "${0}")/../.." && pwd)"
 TMP="$(mktemp -d)" || exit 1
 trap 'rm -rf "${TMP}"' EXIT
 trap 'exit 1' INT TERM
@@ -41,6 +41,8 @@ _t 'dot reset --hard; test X"${?}" = X"1"'
 _t 'dot checkout -f; test X"${?}" = X"1"'
 _t 'dot switch --discard-changes master; test X"${?}" = X"1"'
 _t 'dot pull --autostash; test X"${?}" = X"1"'
+_t 'dot get; test X"${?}" = X"1"'
+_t 'dot get 2>&1 | grep -q "needs a path"'
 _t 'test X"$(dot clean 2>&1 | cut -d: -f1-2)" = X"dot: refused"'
 _t 'test X"$(dot add -A 2>&1 | cut -d: -f1-2)" = X"dot: refused"'
 _t 'test X"$(dot reset --hard 2>&1 | cut -d: -f1-2)" = X"dot: refused"'
@@ -73,11 +75,19 @@ _t 'test -f "${HOME}/.claude/parallel-sessions.md"'
 _t 'test ! -e "${HOME}/.claude/settings.json"'
 _t 'test ! -e "${HOME}/.vimrc"'
 _t 'test ! -e "${HOME}/README.md"'
-_t 'test ! -e "${HOME}/test"'
+_t 'test ! -e "${HOME}/.bin/test"'
+_t 'test ! -e "${HOME}/.nvim"'
 _t 'test X"$(cd "${HOME}/project" && dot ls-files | wc -l)" = X"$(dot ls-files | wc -l)"'
 _t 'dot check-ignore -q --no-index .bin/other'
 _t 'dot check-ignore -q --no-index .bin/dot; test X"${?}" = X"1"'
 _t 'dot check-ignore -q --no-index .config/x/.bin/y'
+_t 'dot check-ignore -q --no-index .bin/test/dot.sh; test X"${?}" = X"1"'
+
+#get: one more tracked path into ~, with or without the leading slash
+_t 'dot get /.vimrc && test -f "${HOME}/.vimrc"'
+_t 'dot sparse-checkout list | grep -qx "/.vimrc"'
+_t 'dot get .nvim/init.lua && test -f "${HOME}/.nvim/init.lua"'
+_t 'dot sparse-checkout list | grep -qx "/.nvim/init.lua"'
 
 #a second run would reset the index: refused, index untouched
 INDEX="$(dot ls-files -s | cksum)"

@@ -40,10 +40,11 @@
 .bashdb*
 .bazaar
 .bin
-#except this repo's own helper, ~/.bin/dot
+#except this repo's own helper, ~/.bin/dot, and its tests
 !/.bin/
 /.bin/*
 !/.bin/dot
+!/.bin/test/
 .bittorrent
 .bosonx
 .boumlrc
@@ -371,6 +372,6 @@
 /.git-credentials
 /.config/gh/
 
-#README.md and the tests live at the root, which /* ignores
+#README.md is the only non-dotfile at the root, which /* ignores; everything
+#else belongs inside a dotdir (tests in /.bin/test/, Neovim in /.nvim/)
 !/README.md
-!/test/
