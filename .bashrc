@@ -100,6 +100,8 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #REMEMBERATOR_EVERY="5"
     Bundle="gh:javier-lopez/shundle-plugins/eternalize"
         ETERNALIZE_PATH="${HOME}/.eternalize-data"
+        ETERNALIZE_IGNORE="cd,cd *,ls,ls *,pwd,exit,clear,history,history *"
+        ETERNALIZE_BIND='"\C-r"' #control-r gets overrided for history search
     Bundle="github:javier-lopez/shundle-plugins/colorize"
         COLORIZE_THEME="default-dark"
         COLORIZE_PS="yujie"
