@@ -12,6 +12,9 @@
 
 DOT_DIR="${HOME}/.dotfiles.git"
 DOT_URL="https://github.com/javier-lopez/dotfiles.git"
+#the plugin manager the versioned .bashrc configures; overridable so the tests
+#can point at a local repo and keep the network out of the suite
+[ -z "${DOT_SHUNDLE_URL}" ] && DOT_SHUNDLE_URL="https://github.com/javier-lopez/shundle"
 
 _usage() {
     printf "%s\\n" "Usage: ${PROGNAME} [git command] [args]..."
@@ -20,7 +23,8 @@ _usage() {
     printf "%s\\n" "A wrapper around git for the dotfiles repo (~/.dotfiles.git), with \$HOME as"
     printf "%s\\n" "its work tree: every command but the ones below is passed through to git."
     printf "\\n"
-    printf "%s\\n" "  bootstrap    clone the repo and set ~ up as its work tree, local files win"
+    printf "%s\\n" "  bootstrap    clone the repo and set ~ up as its work tree, local files win;"
+    printf "%s\\n" "               installs shundle when the .bashrc in ~ asks for it"
     printf "%s\\n" "  get          check one more tracked path out into ~"
     printf "%s\\n" "  -h, --help   show this help message and exit"
     printf "\\n"
@@ -82,6 +86,34 @@ _bootstrap() {
 
     printf "%s\\n" "${PROGNAME}: bootstrapped; M = local content kept, compare with: ~/.bin/dot diff"
     _git status --short
+    _bootstrap_shundle
+}
+
+_bootstrap_shundle() {
+    #the tracked .bashrc configures shundle, so the machine is only finished
+    #once that plugin manager exists. But bootstrap keeps a local .bashrc, and
+    #a machine that shipped its own has no 'Bundle=' line yet: installing then
+    #would clone shundle to bring zero plugins, so say what is missing instead
+    #always this home's own ~/.shundle: SHUNDLE_HOME is exported by shundle
+    #itself, so honouring it would let the shell that runs bootstrap redirect
+    #the install into another home
+    _bootstrap_shundle__home="${HOME}/.shundle"
+
+    if ! grep -q '^[^#]*Bundle=' "${HOME}/.bashrc" 2>/dev/null; then
+        printf "%s\\n" "${PROGNAME}: no 'Bundle=' line in ~/.bashrc, so shundle was left alone"
+        printf "%s\\n" "${PROGNAME}: to take the repo's one: ${PROGNAME} restore .bashrc && shundle install"
+        return 0
+    fi
+
+    if [ ! -f "${_bootstrap_shundle__home}/bundle/shundle/shundle" ]; then
+        git clone -q --depth=1 "${DOT_SHUNDLE_URL}" \
+            "${_bootstrap_shundle__home}/bundle/shundle" || return 1
+    fi
+
+    #shundle reads the Bundle lines from the rc file SHUNDLE_RC names; without
+    #it an installer running outside an interactive shell finds none
+    SHUNDLE_RC="${HOME}/.bashrc" SHUNDLE_HOME="${_bootstrap_shundle__home}" \
+        "${_bootstrap_shundle__home}/bundle/shundle/bin/shundle" install
 }
 
 _get() {

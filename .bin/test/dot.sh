@@ -56,15 +56,27 @@ git --git-dir="${TMP}/remote.git" update-ref refs/heads/master HEAD
 git --git-dir="${TMP}/remote.git" symbolic-ref HEAD refs/heads/master
 REMOTE="file://${TMP}/remote.git"
 
+#a stub shundle, so bootstrap's install step is exercised without the network:
+#its installer only records that it ran and with which rc file
+mkdir -p "${TMP}/shundle/bin"
+printf "%s\\n" "#stub" > "${TMP}/shundle/shundle"
+printf "%s\\n" "#!/bin/sh" "printf \"%s\\n\" \"install \${SHUNDLE_RC}\" >> \"${TMP}/shundle-ran\"" \
+    > "${TMP}/shundle/bin/shundle"
+chmod +x "${TMP}/shundle/bin/shundle"
+(cd "${TMP}/shundle" && git init -q . && git add -A . &&
+ git -c user.name=t -c user.email=t@t commit -qm stub) >/dev/null 2>&1
+DOT_SHUNDLE_URL="file://${TMP}/shundle"; export DOT_SHUNDLE_URL
+
+#this machine's .bashrc asks for plugins, so bootstrap must set shundle up
 HOME="${TMP}/home"; export HOME; mkdir -p "${HOME}/project"
-printf "%s\\n" "local bashrc" > "${HOME}/.bashrc"
+printf "%s\\n" "local bashrc" "Bundle='javier-lopez/shundle'" > "${HOME}/.bashrc"
 git --git-dir="${TMP}/remote.git" show HEAD:.inputrc > "${HOME}/.inputrc"
 
 #run it the way the README does: sh -c "$(curl ...)" dot bootstrap
 sh -c "$(cat "${REPO}/.bin/dot")" dot bootstrap "${REMOTE}" >/dev/null 2>&1
 BOOTSTRAP="${?}"
 _t 'test X"${BOOTSTRAP}" = X"0"'
-_t 'test X"$(cat "${HOME}/.bashrc")" = X"local bashrc"'
+_t 'test X"$(head -1 "${HOME}/.bashrc")" = X"local bashrc"'
 _t 'test X"$(dot status --short)" = X" M .bashrc"'
 _t 'dot sparse-checkout list | grep -qx "/.inputrc"'
 _t 'test -x "${HOME}/.bin/dot"'
@@ -82,6 +94,11 @@ _t 'dot check-ignore -q --no-index .bin/other'
 _t 'dot check-ignore -q --no-index .bin/dot; test X"${?}" = X"1"'
 _t 'dot check-ignore -q --no-index .config/x/.bin/y'
 _t 'dot check-ignore -q --no-index .bin/test/dot.sh; test X"${?}" = X"1"'
+
+#shundle: cloned from DOT_SHUNDLE_URL and told which rc file to read
+_t 'test -f "${HOME}/.shundle/bundle/shundle/shundle"'
+_t 'grep -qx "install ${HOME}/.bashrc" "${TMP}/shundle-ran"'
+_t 'test X"$(wc -l < "${TMP}/shundle-ran")" = X"1"'
 
 #get: one more tracked path into ~, with or without the leading slash
 _t 'dot get /.vimrc && test -f "${HOME}/.vimrc"'
@@ -101,12 +118,18 @@ _t 'test X"$(dot ls-files -s | cksum)" = X"${INDEX}"'
 HOME="${TMP}/resume"; export HOME; mkdir -p "${HOME}/.claude"
 printf "%s\\n" "local claude" > "${HOME}/.claude/CLAUDE.md"
 git clone -q --bare "${REMOTE}" "${HOME}/.dotfiles.git"
-dot bootstrap "${REMOTE}" >/dev/null 2>&1
+dot bootstrap "${REMOTE}" > "${TMP}/resume.out" 2>&1
 RESUME="${?}"
 _t 'test X"${RESUME}" = X"0"'
 _t 'test -x "${HOME}/.bin/dot"'
 _t 'test X"$(cat "${HOME}/.claude/CLAUDE.md")" = X"local claude"'
 _t 'test X"$(dot status --short)" = X" M .claude/CLAUDE.md"'
+
+#no .bashrc here, so there is no 'Bundle=' line: shundle is left alone and the
+#next step is printed instead of cloning something that would bring no plugins
+_t 'test ! -e "${HOME}/.shundle"'
+_t 'grep -q "Bundle=" "${TMP}/resume.out"'
+_t 'grep -q "restore .bashrc" "${TMP}/resume.out"'
 
 printf "%s\\n" "dot: ${PASS} passed, ${FAIL} failed"
 [ "${FAIL}" -eq "0" ]

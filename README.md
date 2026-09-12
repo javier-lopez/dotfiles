@@ -44,6 +44,14 @@ Everything else stays in the repo; to take one more file, run
 `dot get /<path>`. Until `~/.bashrc` puts `~/.bin` on `PATH`,
 call the helper as `~/.bin/dot`.
 
+It finishes with [shundle](https://github.com/javier-lopez/shundle), the plugin
+manager the tracked `.bashrc` configures: if the `.bashrc` that ended up in `~`
+has a `Bundle=` line and `~/.shundle/bundle/shundle` is missing, bootstrap
+clones shundle (from `DOT_SHUNDLE_URL`) and runs `shundle install`. A machine
+that shipped its own `.bashrc` keeps it, and that one has no `Bundle=` line, so
+nothing is installed — shundle with no bundles configured is an empty clone —
+and the next step is printed instead: `dot restore .bashrc && shundle install`.
+
 `sh -c "$(curl ...)"` runs the script only once it is fully downloaded: a
 `curl | sh` pipe would run a cut-off download as far as it got. Bootstrapping
 twice is refused: it would reset the index and drop whatever is staged there.
