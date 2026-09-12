@@ -102,15 +102,19 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         ETERNALIZE_PATH="${HOME}/.eternalize-data"
         ETERNALIZE_IGNORE="cd,cd *,ls,ls *,pwd,exit,clear,history,history *"
         ETERNALIZE_BIND='"\C-r"' #control-r gets overrided for history search
+        PostInstall='wget -qO- \
+            https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_amd64.tar.gz | \
+            tar xz -C ~/.local/bin fzf && chmod +x ~/.local/bin/fzf'
     Bundle="github:javier-lopez/shundle-plugins/colorize"
         COLORIZE_THEME="default-dark"
         COLORIZE_PS="yujie"
         COLORIZE_UTILS="sky"
+        COLORIZE_GITPROMPT="branch" #dirty marks changes, at one git per prompt
     Bundle="javier-lopez/shundle-plugins/aliazator.git"
         #ALIAZATOR_PLUGINS="none"
         #ALIAZATOR_PLUGINS="minimal"
         ALIAZATOR_PLUGINS="installed"
-        ALIAZATOR_SHADOW="size install gs"
+        ALIAZATOR_OVERRIDE="size install gs"
         #ALIAZATOR_PLUGINS="all"
         #ALIAZATOR_PLUGINS="custom:minimal,git,apt-get,vagrant,vim"
         #ALIAZATOR_CLOUD="url"
