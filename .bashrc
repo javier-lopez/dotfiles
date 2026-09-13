@@ -96,8 +96,6 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #SHUNDLE_ENV_VERBOSE="0"
         #SHUNDLE_ENV_DEBUG="0"
         SHUNDLE_ENV_COLOR="1"
-        #SHUNDLE_HOME="${HOME}/.shundle" #where bundles are cloned
-        #SHUNDLE_BIN="${HOME}/.bin"      #where Expose links their commands
     #Bundle='javier-lopez/shundle-plugins/todo-rememberator'
         #REMEMBERATOR_EVERY="5"
     Bundle="gh:javier-lopez/shundle-plugins/eternalize"
@@ -127,7 +125,8 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
     Bundle="gh:javier-lopez/shundle-plugins/autocd"
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
 
-    Bundle="gh:javier-lopez/learn" #repository of commands
+    Bundle="gh:javier-lopez/learn"  #repository of commands
+        #SHUNDLE_BIN="${HOME}/.bin" #where Expose links their commands
         Expose="sh/tools"
         Expose="perl: !simple-cat !simple-grep"
         Expose="python/tools: mailgun monkey_typewriter"
