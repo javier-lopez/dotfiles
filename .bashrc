@@ -96,6 +96,8 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #SHUNDLE_ENV_VERBOSE="0"
         #SHUNDLE_ENV_DEBUG="0"
         SHUNDLE_ENV_COLOR="1"
+        #SHUNDLE_HOME="${HOME}/.shundle" #where bundles are cloned
+        #SHUNDLE_BIN="${HOME}/.bin"      #where Expose links their commands
     #Bundle='javier-lopez/shundle-plugins/todo-rememberator'
         #REMEMBERATOR_EVERY="5"
     Bundle="gh:javier-lopez/shundle-plugins/eternalize"
@@ -124,10 +126,8 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #ALIAZATOR_PLUGINS="custom:minimal,git,apt-get,vagrant,vim"
     Bundle="gh:javier-lopez/shundle-plugins/autocd"
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
-    #not a plugin, a repository of commands. Expose names which of its paths
-    #are ones, and those are all that gets cloned, downloaded and linked into
-    #~/.bin: 1.6MB of the 8.9MB the whole thing weighs
-    Bundle="gh:javier-lopez/learn"
+
+    Bundle="gh:javier-lopez/learn" #repository of commands
         Expose="sh/tools"
         Expose="perl: !simple-cat !simple-grep"
         Expose="python/tools: mailgun monkey_typewriter"
