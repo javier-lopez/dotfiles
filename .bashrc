@@ -121,7 +121,6 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         ALIAZATOR_OVERRIDE="size install gs"
         #ALIAZATOR_PLUGINS="all"
         #ALIAZATOR_PLUGINS="custom:minimal,git,apt-get,vagrant,vim"
-        #ALIAZATOR_CLOUD="url"
     Bundle="gh:javier-lopez/shundle-plugins/autocd"
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
 else
