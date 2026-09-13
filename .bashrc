@@ -64,8 +64,23 @@ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 #[ -f "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # node
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ]          && . "$NVM_DIR/nvm.sh"           # This loads nvm
+export NVM_DIR="$HOME/.nvm" #hack to improve nvm load time
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh" --no-use
+    _nvm_want="$(cat "${NVM_DIR}/alias/default" 2>/dev/null)"
+    _nvm_hops=0
+    while [ -n "${_nvm_want}" ] && [ ! -d "${NVM_DIR}/versions/node/${_nvm_want}" ] && [ "${_nvm_hops}" -lt 4 ]; do
+        _nvm_want="$(cat "${NVM_DIR}/alias/${_nvm_want}" 2>/dev/null)"
+        _nvm_hops=$(( _nvm_hops + 1 ))
+    done
+    if [ -d "${NVM_DIR}/versions/node/${_nvm_want}/bin" ]; then
+        export PATH="${NVM_DIR}/versions/node/${_nvm_want}/bin:${PATH}"
+    else #the alias did not lead anywhere: pay the half second rather than
+         #leave a shell with no node in it
+        nvm use --silent default >/dev/null 2>&1
+    fi
+    unset _nvm_want _nvm_hops
+fi
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #ubuntu dev
