@@ -99,17 +99,18 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
     #Bundle='javier-lopez/shundle-plugins/todo-rememberator'
         #REMEMBERATOR_EVERY="5"
     Bundle="gh:javier-lopez/shundle-plugins/eternalize"
-        ETERNALIZE_PATH="${HOME}/.eternalize-data"
-        ETERNALIZE_IGNORE="cd,cd *,ls,ls *,pwd,exit,clear,history,history *"
-        ETERNALIZE_BIND='"\C-r"' #control-r gets overrided for history search
         PostInstall='wget -qO- \
             https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_amd64.tar.gz | \
             tar xz -C ~/.local/bin fzf && chmod +x ~/.local/bin/fzf'
+        ETERNALIZE_PATH="${HOME}/.eternalize-data"
+        ETERNALIZE_IGNORE="cd,cd *,ls,ls *,pwd,exit,clear,history,history *"
+        ETERNALIZE_BIND='"\C-r"' #control-r gets overrided for history search
+
     Bundle="github:javier-lopez/shundle-plugins/colorize"
         COLORIZE_THEME="default-dark"
         COLORIZE_PS="yujie"
         COLORIZE_UTILS="sky"
-        COLORIZE_GITPROMPT="branch" #dirty marks changes, at one git per prompt
+        COLORIZE_GITPROMPT="branch" #'dirty' marks changes, at one git per prompt
         #COLORIZE_ELAPSED_MIN="60"  #how long a command must take to be timed
     Bundle="gh:javier-lopez/shundle-plugins/runner"
         #RUNNER_NAME="r"
@@ -123,6 +124,13 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #ALIAZATOR_PLUGINS="custom:minimal,git,apt-get,vagrant,vim"
     Bundle="gh:javier-lopez/shundle-plugins/autocd"
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
+    #not a plugin, a repository of commands. Expose names which of its paths
+    #are ones, and those are all that gets cloned, downloaded and linked into
+    #~/.bin: 1.6MB of the 8.9MB the whole thing weighs
+    Bundle="gh:javier-lopez/learn"
+        Expose="sh/tools"
+        Expose="perl: !simple-cat !simple-grep"
+        Expose="python/tools: mailgun monkey_typewriter"
 else
     alias shundle-install='git clone --depth=1 \
     https://github.com/javier-lopez/shundle ~/.shundle/bundle/shundle && \
