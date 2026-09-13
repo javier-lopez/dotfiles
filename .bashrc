@@ -108,8 +108,23 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
     Bundle="github:javier-lopez/shundle-plugins/colorize"
         COLORIZE_THEME="default-dark"
         COLORIZE_PS="yujie"
-        COLORIZE_UTILS="sky"
+        COLORIZE_UTILS="modern"     #eza, bat and delta, dressed in the theme
+        COLORIZE_UTILS_BASE="sky"   #the classic set modern builds on
         COLORIZE_GITPROMPT="branch" #dirty marks changes, at one git per prompt
+        #COLORIZE_ELAPSED_MIN="60"  #how long a command must take to be timed
+        #musl, so the binary does not care which libc the box has. Versions are
+        #pinned: an unattended wget of "latest" is a moving target
+        PostInstall='wget -qO- \
+            https://github.com/eza-community/eza/releases/download/v0.23.5/eza_x86_64-unknown-linux-musl.tar.gz | \
+            tar xz -C ~/.local/bin ./eza; \
+            wget -qO- https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz | \
+            tar xz -C ~/.local/bin --strip-components=1 bat-v0.26.1-x86_64-unknown-linux-musl/bat; \
+            wget -qO- https://github.com/dandavison/delta/releases/download/0.19.2/delta-0.19.2-x86_64-unknown-linux-musl.tar.gz | \
+            tar xz -C ~/.local/bin --strip-components=1 delta-0.19.2-x86_64-unknown-linux-musl/delta; \
+            chmod +x ~/.local/bin/eza ~/.local/bin/bat ~/.local/bin/delta'
+    Bundle="gh:javier-lopez/shundle-plugins/runner"
+        #RUNNER_NAME="r"
+        #RUNNER_FILES="scripts/run.sh run.sh justfile Makefile package.json"
     Bundle="javier-lopez/shundle-plugins/aliazator.git"
         #ALIAZATOR_PLUGINS="none"
         #ALIAZATOR_PLUGINS="minimal"
