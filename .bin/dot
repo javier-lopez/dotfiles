@@ -70,17 +70,33 @@ _bootstrap() {
     _git reset -q || exit #fills the index only, no file under ~ is touched
 
     #check out only what this machine already has, plus what every machine
-    #gets: the ignore rules, this helper and the Claude Code instructions
-    #(CLAUDE.md imports RTK.md and points to parallel-sessions.md). The rest
-    #stays in the repo until 'dot get /<path>'
-    always=".gitignore .bin/dot .claude/CLAUDE.md .claude/RTK.md .claude/parallel-sessions.md"
+    #gets. That second list is the repo's own, .dot/include, so adding a file
+    #to every machine is a commit there and not a new version of this script.
+    #It is read with 'show' because at this point nothing exists in the work
+    #tree yet. The rest stays in the repo until 'dot get /<path>'
+    always="$(_git show HEAD:.dot/include 2>/dev/null | sed \
+        -e '/^[[:space:]]*#/d' -e 's/[[:space:]]*$//' -e 's|^/*||' -e '/^$/d')"
+
+    #a repo without the file, or with an empty one, still has to bootstrap
+    #into something that can go and get the rest: the ignore rules so the
+    #home is not read as 157 untracked files, and this script so 'dot get'
+    #exists. That is a floor, not a default - .dot/include lists them too
+    [ -n "${always}" ] || always=".gitignore
+.bin/dot"
+
+    #the list becomes "$@": split on newlines alone so a tracked path with a
+    #space in it survives, with globbing off so a '*' in it stays a literal.
+    #$1 held the optional clone url, which the clone above already used
+    IFS="
+"; set -f; set -- ${always}; set +f; unset IFS
+
     { _git -c core.quotePath=false ls-files | while IFS= read -r file; do
           [ -e "${HOME}/${file}" ] && printf "/%s\\n" "${file}"
       done
-      for file in ${always}; do printf "/%s\\n" "${file}"; done
+      for file in "${@}"; do printf "/%s\\n" "${file}"; done
     } | _git sparse-checkout set --no-cone --stdin || exit
 
-    for file in ${always}; do
+    for file in "${@}"; do
         [ -e "${HOME}/${file}" ] || _git checkout -- "${file}" || exit
     done
 

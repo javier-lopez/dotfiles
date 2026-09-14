@@ -89,6 +89,10 @@ _t 'test ! -e "${HOME}/.vimrc"'
 _t 'test ! -e "${HOME}/README.md"'
 _t 'test ! -e "${HOME}/.bin/test"'
 _t 'test ! -e "${HOME}/.config/nvim"'
+_t 'test -f "${HOME}/.dot/include"'
+_t 'test -f "${HOME}/.ban.wcd"'
+_t 'dot sparse-checkout list | grep -qx "/.dot/include"'
+_t 'dot sparse-checkout list | grep -qx "/.ban.wcd"'
 _t 'test X"$(cd "${HOME}/project" && dot ls-files | wc -l)" = X"$(dot ls-files | wc -l)"'
 _t 'dot check-ignore -q --no-index .bin/other'
 _t 'dot check-ignore -q --no-index .bin/dot; test X"${?}" = X"1"'
@@ -130,6 +134,46 @@ _t 'test X"$(dot status --short)" = X" M .claude/CLAUDE.md"'
 _t 'test ! -e "${HOME}/.shundle"'
 _t 'grep -q "Bundle=" "${TMP}/resume.out"'
 _t 'grep -q "restore .bashrc" "${TMP}/resume.out"'
+
+#.dot/include is what decides that list, so a repo without one has to keep
+#bootstrapping: dot falls back to its floor, the ignore rules and itself, and
+#brings nothing else - not the Claude instructions, not the wcd ban list
+git clone -q --bare "${REMOTE}" "${TMP}/nolist.git"
+git clone -q "${TMP}/nolist.git" "${TMP}/nolist-work" 2>/dev/null
+(cd "${TMP}/nolist-work" && git rm -rq .dot &&
+ git -c user.name=t -c user.email=t@t commit -qm "no list" &&
+ git push -q origin master) >/dev/null 2>&1
+
+HOME="${TMP}/floor"; export HOME; mkdir -p "${HOME}"
+dot bootstrap "file://${TMP}/nolist.git" >/dev/null 2>&1
+FLOOR="${?}"
+_t 'test X"${FLOOR}" = X"0"'
+_t 'test -x "${HOME}/.bin/dot"'
+_t 'test -f "${HOME}/.gitignore"'
+_t 'test ! -e "${HOME}/.claude/CLAUDE.md"'
+_t 'test ! -e "${HOME}/.ban.wcd"'
+_t 'test ! -e "${HOME}/.dot"'
+
+#and when there is a list, it is the whole answer: the floor is not merged
+#into it. Comments, blank lines, indentation, a leading slash and trailing
+#blanks are read the way the file says they are
+git clone -q --bare "${REMOTE}" "${TMP}/oddlist.git"
+git clone -q "${TMP}/oddlist.git" "${TMP}/oddlist-work" 2>/dev/null
+printf "%s\n" "#a comment" "" "   #an indented comment" "/.vimrc  " ".inputrc" \
+    > "${TMP}/oddlist-work/.dot/include"
+(cd "${TMP}/oddlist-work" && git add .dot/include &&
+ git -c user.name=t -c user.email=t@t commit -qm "odd list" &&
+ git push -q origin master) >/dev/null 2>&1
+
+HOME="${TMP}/odd"; export HOME; mkdir -p "${HOME}"
+dot bootstrap "file://${TMP}/oddlist.git" >/dev/null 2>&1
+ODD="${?}"
+_t 'test X"${ODD}" = X"0"'
+_t 'test -f "${HOME}/.vimrc"'
+_t 'test -f "${HOME}/.inputrc"'
+_t 'test ! -e "${HOME}/.gitignore"'
+_t 'test ! -e "${HOME}/.bin/dot"'
+_t 'test X"$(dot sparse-checkout list | wc -l)" = X"2"'
 
 printf "%s\\n" "dot: ${PASS} passed, ${FAIL} failed"
 [ "${FAIL}" -eq "0" ]

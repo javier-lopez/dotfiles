@@ -1,0 +1,30 @@
+#paths every machine checks out at bootstrap, whatever it already carries.
+#One per line, relative to $HOME, leading slash optional. A line whose first
+#non-blank character is # is a comment.
+#
+#dot reads this out of the repository itself (git show HEAD:.dot/include),
+#before anything is in the work tree, so adding a file to every machine is a
+#commit here and not a new version of ~/.bin/dot. Everything else stays in
+#the repository until 'dot get /<path>' asks for it.
+#
+#A repository without this file still bootstraps: dot falls back to
+#.gitignore and .bin/dot, which is the least a machine needs to fetch the
+#rest. Keep that pair listed here anyway - the fallback is a floor, not a
+#default.
+
+.gitignore
+.bin/dot
+
+#this file, so a machine can read and edit the list it was built from
+.dot/include
+
+#Claude Code's instructions. CLAUDE.md imports RTK.md and points at
+#parallel-sessions.md, so the three only make sense together
+.claude/CLAUDE.md
+.claude/RTK.md
+.claude/parallel-sessions.md
+
+#the directories wcd's index must never learn: caches, build trees and
+#version-control internals. Without it the first nightly rebuild on a new
+#machine walks every node_modules it can reach
+.ban.wcd
