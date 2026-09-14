@@ -156,10 +156,11 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
 
     Bundle="gh:javier-lopez/learn"  #repository of commands
-        #wcd carries its own index and its own nightly rebuild: this builds the
-        #index on a machine that has none and puts the cron line in, both
-        #idempotent. Removing the bundle takes the cron line back out, from the
-        #.shundle-remove that ships inside the repository
+        #wcd carries its own index and its own nightly rebuild: this builds
+        #the index on a machine that has none and puts the cron line in, both
+        #idempotent. Nothing takes the cron line back out when this bundle
+        #goes - shundle has no counterpart to PostInstall and the TODO above
+        #_shundle_remove says why - so that one is by hand: wcd --no-cron
         PostInstall='sh/tools/wcd --update && sh/tools/wcd --cron'
         #SHUNDLE_BIN="${HOME}/.bin" #where Expose links their commands
         Expose="sh/tools"
