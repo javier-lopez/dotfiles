@@ -5,6 +5,21 @@
 #do nothing if not running interactively
 [ -z "${PS1}" ] && return
 
+#wsl performance hack START
+_rc_winpath=""
+case ":${PATH}:" in *:/mnt/*)
+    _rc_path=""; _rc_ifs="${IFS}"; IFS=":"
+    for _rc_d in ${PATH}; do
+        case "${_rc_d}" in
+            /mnt/*) _rc_winpath="${_rc_winpath:+${_rc_winpath}:}${_rc_d}" ;;
+            *)      _rc_path="${_rc_path:+${_rc_path}:}${_rc_d}" ;;
+        esac
+    done
+    IFS="${_rc_ifs}"; unset _rc_d _rc_ifs
+    [ -n "${_rc_winpath}" ] && PATH="${_rc_path}"
+    unset _rc_path ;;
+esac
+
 set -o vi #this is sparta!
 stty -ctlecho #don't show ^C when pressing Ctrl+C
 
@@ -92,7 +107,7 @@ export QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
 export QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
 export QUILT_DIFF_OPTS='-p'
 
-if [ -f "$(command -v "ccache")" ]; then
+if command -v "ccache" >/dev/null 2>&1; then
     export PATH="${PATH}:/usr/lib/ccache"
     export CCACHE_DIR="${HOME}/.ccache"
     export CCACHE_SIZE="2G"
@@ -151,5 +166,10 @@ else
     . ~/.bashrc && ~/.shundle/bundle/shundle/bin/shundle install   && \
     bash'
 fi
+
+#wsl performance hack END
+[ -n "${_rc_winpath}" ] && PATH="${PATH}:${_rc_winpath}"
+unset _rc_winpath
+export PATH
 
 [ -f ~/.credentials ] && . ~/.credentials
