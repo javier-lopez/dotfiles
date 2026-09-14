@@ -107,6 +107,27 @@ any of: entering a repo this session did not start in · starting or stopping a
 stack · taking a host port · creating or deleting a data volume · cherry-picking
 between projects · merging to main · dispatching a subagent into these repos.
 
+# Push notifications to the phone
+
+The owner works with Remote Control and the Claude app on their phone. The
+harness already pushes a notification when a question or a permission blocks
+the session (`inputNeededNotifEnabled`), but the "task finished" notice
+is NOT automatic: `agentPushNotifEnabled` only authorizes Claude to call
+`PushNotification` on its own initiative, and that tool's default guidance is
+to stay quiet unless the user has explicitly asked for it.
+
+This is that explicit request:
+
+- When you finish any task that took more than ~30 seconds, call
+  `PushNotification` before closing the turn.
+- The message goes on one line, no markdown, under 200 characters, and says
+  WHAT happened, not that you "finished": "tests green, 3 files touched",
+  "deploy to prod ok", "build failed: 2 auth tests".
+- If the task failed or was left half-done, the push matters MORE, not less.
+- You don't need to judge whether it's "worth it". That's already been judged.
+- A "not sent" result is normal and expected: it means the owner is in front of
+  the terminal and the push would be redundant. Don't retry it or comment on it.
+
 <!-- CODEGRAPH_START -->
 ## CodeGraph
 
