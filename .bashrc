@@ -5,7 +5,7 @@
 #do nothing if not running interactively
 [ -z "${PS1}" ] && return
 
-#wsl performance hack START
+#WSL performance hack START ====================================================
 _rc_winpath=""
 case ":${PATH}:" in *:/mnt/*)
     _rc_path=""; _rc_ifs="${IFS}"; IFS=":"
@@ -19,6 +19,7 @@ case ":${PATH}:" in *:/mnt/*)
     [ -n "${_rc_winpath}" ] && PATH="${_rc_path}"
     unset _rc_path ;;
 esac
+#===============================================================================
 
 set -o vi #this is sparta!
 stty -ctlecho #don't show ^C when pressing Ctrl+C
@@ -67,7 +68,6 @@ export GPG_TTY="$(tty)"
 #random vars
 export EDITOR="editor"
 export CSCOPE_EDITOR="editor"
-export WCDHOME="${HOME}/.wcd"
 export BROWSER="x-www-browser"
 #export LC_ALL=C
 
@@ -149,17 +149,23 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
         #ALIAZATOR_PLUGINS="none"
         #ALIAZATOR_PLUGINS="minimal"
         ALIAZATOR_PLUGINS="installed"
-        ALIAZATOR_OVERRIDE="size install gs"
+        ALIAZATOR_OVERRIDE="size install gs cd"
         #ALIAZATOR_PLUGINS="all"
         #ALIAZATOR_PLUGINS="custom:minimal,git,apt-get,vagrant,vim"
     Bundle="gh:javier-lopez/shundle-plugins/autocd"
         #AUTOCD_FILE="/tmp/autocd.59YlpZ50"
 
     Bundle="gh:javier-lopez/learn"  #repository of commands
+        #wcd carries its own index and its own nightly rebuild: this builds the
+        #index on a machine that has none and puts the cron line in, both
+        #idempotent. Removing the bundle takes the cron line back out, from the
+        #.shundle-remove that ships inside the repository
+        PostInstall='sh/tools/wcd --update && sh/tools/wcd --cron'
         #SHUNDLE_BIN="${HOME}/.bin" #where Expose links their commands
         Expose="sh/tools"
         Expose="perl: !simple-cat !simple-grep"
         Expose="python/tools: mailgun monkey_typewriter"
+        #export WCD_LS_MAX="80"
 else
     alias shundle-install='git clone --depth=1 \
     https://github.com/javier-lopez/shundle ~/.shundle/bundle/shundle && \
@@ -167,9 +173,10 @@ else
     bash'
 fi
 
-#wsl performance hack END
+#wsl performance hack END ======================================================
 [ -n "${_rc_winpath}" ] && PATH="${PATH}:${_rc_winpath}"
 unset _rc_winpath
 export PATH
+#===============================================================================
 
 [ -f ~/.credentials ] && . ~/.credentials
