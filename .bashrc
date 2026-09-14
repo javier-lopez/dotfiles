@@ -34,7 +34,19 @@ bind "set bind-tty-special-chars on"  #punctuations are not word delimiters
 bind "set show-all-if-ambiguous on"   #enable single tab completion
 bind "set completion-ignore-case on"
 
-[ -z "${BASH_COMPLETION_COMPAT_DIR}" ] && [ -f /etc/bash_completion ] && . /etc/bash_completion
+#a login shell already got this from /etc/profile.d/bash_completion.sh, so the
+#VERSINFO guard - the one that script itself uses - keeps a second 20ms load
+#out of every WSL terminal. BASH_COMPLETION_COMPAT_DIR, which used to sit
+#here, is only read and never written since 2.11: it guarded nothing.
+#/etc/bash_completion is the Debian shim; the real path is what other distros
+#ship. Same block /etc/skel/.bashrc gives every user who kept theirs.
+if [ -z "${BASH_COMPLETION_VERSINFO-}" ] && ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
 
 #make less more friendly for non-text input files, see lesspipe(1)
 #if command -v "lesspipe" >/dev/null 2>&1; then
