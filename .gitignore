@@ -280,15 +280,11 @@
 .skel
 .soapuios/
 .sqldeveloper/
-.ssh/authorized_keys
-.ssh/correo.io.id_rsa
-.ssh/correo.io.id_rsa.pub
-.ssh/deploy
-.ssh/deploy.pub
-.ssh/id*
-.ssh/known_hosts
-.ssh/known_hosts.old
-.ssh/ugj*
+#everything under .ssh but config. A key carries whatever name it was made
+#with, so the rule names the directory and not a list of files: the list
+#missed minos_lan.id_rsa and shipped it for a year
+.ssh/*
+!.ssh/config
 .static-get
 .sticky-notes*
 .subversion

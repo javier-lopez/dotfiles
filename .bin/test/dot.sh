@@ -98,6 +98,8 @@ _t 'dot check-ignore -q --no-index .bin/other'
 _t 'dot check-ignore -q --no-index .bin/dot; test X"${?}" = X"1"'
 _t 'dot check-ignore -q --no-index .config/x/.bin/y'
 _t 'dot check-ignore -q --no-index .bin/test/dot.sh; test X"${?}" = X"1"'
+_t 'dot check-ignore -q --no-index .ssh/other'
+_t 'dot check-ignore -q --no-index .ssh/config; test X"${?}" = X"1"'
 
 #shundle: cloned from DOT_SHUNDLE_URL and told which rc file to read
 _t 'test -f "${HOME}/.shundle/bundle/shundle/shundle"'
