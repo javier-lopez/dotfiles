@@ -1,0 +1,11 @@
+#lock-wallpaper                 /usr/share/minos/wallpapers/o@o.png
+#http://en.wikipedia.org/wiki/Web_colors#HTML_color_names
+#lock-color-inside              white
+#lock-color-inside-verification #fff
+#lock-color-inside-wrong        a52a2a
+#lock-color-ring                000000ff
+#lock-color-ring-verification   ffffffff
+#lock-color-ring-wrong          a52a2aff
+#lock-color-line                00000000
+#lock-color-keypress            1e90ff
+#lock-color-delpress            a52a2aff

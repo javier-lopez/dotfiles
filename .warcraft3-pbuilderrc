@@ -1,0 +1,130 @@
+# #######################################################
+# Last review            Fri 04 Jun 2010 02:12:36 AM CDT
+# #######################################################
+
+# vim: set ts=8 sw=4 tw=0 ft=sh :
+
+#########################HOW TO USE #####################
+# Create a base environment for Ubuntu hardy
+# >> sudo DIST=hardy pbuilder create
+
+# Create a base environment for Debian sid
+# >> sudo DIST=sid pbuilder create
+
+# Create a base environment for Ubuntu hardy under
+# the i386 architecture
+# >> sudo DIST=hardy ARCH=i386 pbuilder create
+
+# Update a base environment for Ubuntu hardy
+# >> sudo DIST=hardy pbuilder update
+
+# Build a package using Ubuntu hardy as the base
+# environment
+# >> DIST=hardy pdebuild
+
+# Build a package using Ubuntu hardy as the base
+# environment under the i386 architecture
+# >> DIST=hardy ARCH=i386 pdebuild
+###########################################################
+
+
+###########################################################
+####DONT TOUCH BELOW UNLESS YOU KNOW WHAT ARE YOU DOING####
+###########################################################
+# https://wiki.ubuntu.com/PbuilderHowto
+
+if [ -z "${PATH_PBUILDER}" ]; then
+    PATH_PBUILDER="/var/cache/pbuilder" #without the last "/"
+fi
+
+# Codenames for Debian suites according to their alias. Update these when needed.
+UNSTABLE_CODENAME="sid"
+TESTING_CODENAME="squeeze"
+STABLE_CODENAME="lenny"
+STABLE_BACKPORTS_SUITE="${STABLE_CODENAME}-backports"
+
+# List of Debian suites.
+DEBIAN_SUITES=(${UNSTABLE_CODENAME} ${TESTING_CODENAME} ${STABLE_CODENAME}
+    "unstable" "testing" "stable")
+
+# List of Ubuntu suites. Update these when needed.
+UBUNTU_SUITES=("trusty" "saucy" "raring" "quantal" "precise")
+
+# Mirrors to use. Update these to your preferred mirror.
+DEBIAN_MIRROR="ftp.us.debian.org"
+UBUNTU_MIRROR="us.archive.ubuntu.com"
+#UBUNTU_MIRROR="mirrors.kernel.org" #sometimes it's out of sync
+
+# Optionally use the changelog of a package to determine the suite to use if
+# none set.
+if [ -z "${DIST}" ] && [ -r "debian/changelog" ]; then
+    DIST="$(dpkg-parsechangelog | awk '/^Distribution: / {print $2}')"
+    # Use the unstable suite for certain suite values.
+    if $(echo "experimental UNRELEASED" | grep "${DIST}" >/dev/null 2>&1); then
+        DIST="${UNSTABLE_CODENAME}"
+    fi
+fi
+
+# Optionally set a default distribution if none is used. Note that you can set
+# your own default (i.e. ${DIST:="unstable"}).
+: ${DIST:="$(lsb_release --short --codename)"}
+
+# Optionally change Debian release states in $DIST to their names.
+case "${DIST}" in
+    unstable) DIST="${UNSTABLE_CODENAME}" ;;
+    testing)  DIST="${TESTING_CODENAME}"  ;;
+    stable)   DIST="$STABLE_CODENAME"     ;;
+esac
+
+# Optionally set the architecture to the host architecture if none set. Note
+# that you can set your own default (i.e. ${ARCH:="i386"}).
+: ${ARCH:="$(dpkg --print-architecture)"}
+
+NAME="${DIST}"
+if [ -n "${ARCH}" ]; then
+    NAME="${NAME}-${ARCH}"
+    DEBOOTSTRAPOPTS=("--arch" "${ARCH}" "${DEBOOTSTRAPOPTS[@]}")
+fi
+
+#################
+# Base settings #
+#################
+
+###################################################################################
+BASETGZ="${PATH_PBUILDER}/${NAME}/${NAME}-base.tgz"
+# Optionally, set BASEPATH (and not BASETGZ) if using cowbuilder
+# BASEPATH="$PATH_PBUILDER/$NAME/base.cow/"
+DISTRIBUTION="${DIST}"
+APTCACHE="${PATH_PBUILDER}/${NAME}/aptcache/"
+BUILDPLACE="${PATH_PBUILDER}/${NAME}/build/"
+HOOKDIR="${HOME}/.pbuilder-hooks/"
+###################################################################################
+
+if $(echo ${DEBIAN_SUITES[@]} | grep ${DIST} >/dev/null 2>&1); then
+    # Debian configuration
+    MIRRORSITE="http://${DEBIAN_MIRROR}/debian/"
+    COMPONENTS="main contrib non-free"
+    # This is for enabling backports for the Debian stable suite.
+    if $(echo "${STABLE_CODENAME} stable" | grep ${DIST} >/dev/null 2>&1); then
+        EXTRAPACKAGES="${EXTRAPACKAGES} debian-backports-keyring"
+        OTHERMIRROR="${OTHERMIRROR} | deb http://www.backports.org/debian ${STABLE_BACKPORTS_SUITE} ${COMPONENTS}"
+    fi
+elif $(echo ${UBUNTU_SUITES[@]} | grep ${DIST} >/dev/null 2>&1); then
+    # Ubuntu configuration
+    MIRRORSITE="http://${UBUNTU_MIRROR}/ubuntu/"
+    COMPONENTS="main restricted universe multiverse"
+else
+    echo "Unknown distribution: ${DIST}"
+    exit 1
+fi
+
+# gdebi resolution dep, requires gdebi-core
+if command -v "gdebi" >/dev/null 2>&1; then
+    PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi" || true
+fi
+
+if command -v "pigz" >/dev/null 2>&1; then
+    COMPRESSPROG="pigz"
+fi
+
+BINDMOUNTS="${BINDMOUNTS} ${HOME}/.warcraft3-savegame /dev"

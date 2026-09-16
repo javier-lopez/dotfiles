@@ -1,0 +1,27 @@
+! Base16 3024-dark
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+
+*color0:rgb:09/03/00
+*color1:rgb:db/2d/20
+*color2:rgb:01/a2/52
+*color3:rgb:fd/ed/02
+*color4:rgb:01/a0/e4
+*color5:rgb:a1/6a/94
+*color6:rgb:b5/e4/f4
+*color7:rgb:a5/a2/a2
+*color8:rgb:5c/58/55
+*color9:rgb:db/2d/20
+*color10:rgb:01/a2/52
+*color11:rgb:fd/ed/02
+*color12:rgb:01/a0/e4
+*color13:rgb:a1/6a/94
+*color14:rgb:b5/e4/f4
+*color15:rgb:f7/f7/f7
+*color16:rgb:00/00/00
+*color17:rgb:cd/ab/53
+*color18:rgb:3a/34/32
+*color19:rgb:4a/45/43
+*color20:rgb:80/7d/7c
+*color21:rgb:d6/d5/d4
+*foreground:rgb:a5/a2/a2
+*background:rgb:09/03/00
