@@ -146,6 +146,39 @@ any of: entering a repo this session did not start in · starting or stopping a
 stack · taking a host port · creating or deleting a data volume · cherry-picking
 between projects · merging to main · dispatching a subagent into these repos.
 
+# Heavy work runs on the build nodes, never on this laptop
+
+This laptop (4 cores / 8 threads, ~12 GB for WSL) is shared by several Claude
+sessions and their subagents, the owner's editor, dev stacks and screen
+recordings. One heavy job saturates it for everyone (owner, 2026-11-08: «el
+trabajo pesado debería ir en los build nodos… así cualquier Claude en este
+equipo evita saturar el equipo»).
+
+- **Heavy means:** headless browsers (Playwright, Chromium, HyperFrames check
+  or render), video encodes, full test suites, type checks of large projects,
+  numpy/ML work, docker image builds. Run them on the build nodes:
+  `root@build.001.gopana.app` (port 22) and `kasm-user@build.002.gopana.app`
+  (port 2222), with rsync + ssh + docker. Working patterns:
+  `~/social.gopana.app/src/video/render-node/remote-render.sh`,
+  `~/social.nebulosa.io/src/video/remote/remote-check.sh`, and in gopana.app
+  `./scripts/run.sh dev … remote`.
+- **Light means:** editing, git, a short ffmpeg probe, one quick targeted check
+  (`--only`). Before anything heavy that truly must run here (a screen capture),
+  look at `cat /proc/loadavg` and tell the peer sessions first.
+- **More capacity:** `cd ~/gopana.app && ./scripts/run.sh dev nodes up N` (at
+  most 3 dynamic droplets). Tell the gopana session before raising them,
+  `touch /opt/gopana-build/.busy` on each so its reaper leaves them, and
+  `nodes down` them when done: only 001 and 002 stay.
+- build.002 is a container inside Kasm: when Kasm restarts it, its ssh refuses
+  for a while and it can lose packages (rsync) and docker images. Check before
+  relying on it.
+- **Never search the whole filesystem** (`find /`, `bfs /`, `locate`): it
+  crawls the Windows drive through `/mnt/c`. Search the repo, or put the file
+  at a known path.
+- **No idle servers:** stop a dev server nobody is using (`docker compose stop`)
+  instead of leaving it polling.
+- Every subagent brief carries this section.
+
 # Push notifications to the phone
 
 The owner works with Remote Control and the Claude app on their phone. The
