@@ -21,7 +21,9 @@ if command -v "gpg-agent" >/dev/null 2>&1 &&
     fi
 fi
 
-if [ -n "${SSH_CONNECTION}" ] && [ -z "${TMUX}" ]; then
+#only with a terminal: a login shell without one (vagrant ssh -c, bash -l run by a
+#tool) would have its command replaced by a tmux that cannot start
+if [ -n "${SSH_CONNECTION}" ] && [ -z "${TMUX}" ] && [ -t 0 ]; then
     if command -v "tmux" >/dev/null 2>&1; then
         if tmux has-session >/dev/null 2>&1; then
             exec tmux attach

@@ -152,12 +152,14 @@ if [ -f ~/.shundle/bundle/shundle/shundle ]; then
                     #wcd --no-cron #after rm ~/.shundle/bundle/learn
 
         #SHUNDLE_BIN="${HOME}/.bin" #where Expose links their commands
-        Expose="sh/tools: !battery"
+        Expose="sh/tools"
         Expose="perl: diff-so-fancy gcal keepn rmdup sentry"
         Expose="python/tools: mailgun simple-*"
         #export WCD_LS_MAX="80"
 
         command -v fuck >/dev/null 2>&1 && eval "$(fuck --hook bash)"
+    Bundle="gh:javier-lopez/cmdfound" #runs what isn't installed, fuck hands it the missing commands
+        Expose="cmdfound"
 else
     alias shundle-install='git clone --depth=1 \
     https://github.com/javier-lopez/shundle ~/.shundle/bundle/shundle && \

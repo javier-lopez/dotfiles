@@ -118,6 +118,21 @@ bindcode $Win+$Enter          exec m-terminal
 bindcode $Win+Shift+$Enter    split h
 bindcode $Alt+$Esc            exec m-launcher
 
+#the menu: a click on the background, with either button, opens it, and so does
+#the secondary button on the bar (--root-window is a flag of minos' i3: the
+#binding runs on the background alone, never on a window). Its entries, a line
+#each, in their order: "entry | its key, shown beside it | the command it runs"
+#no comma and no semicolon in them: they end an i3 command. i3 4.12 keeps 511
+#characters of a variable, room for about ten entries like these
+set $menu \
+    "Terminal     | Win+Enter     | m-terminal" \
+    "Launcher     | Alt+Esc       | m-launcher" \
+    "File manager | AltGr+f       | m-file-manager" \
+    "Help         | F1            | m-help" \
+    "Session      | Ctrl+Alt+Supr | m-session-manager"
+bindsym --root-window button1 exec --no-startup-id m-menu $menu
+bindsym --root-window button3 exec --no-startup-id m-menu $menu
+
 #starting i3 v4.11 bindsys is hardly useful
 #for latam keyboards, therefore keyshortcuts
 #are defined as bindcode entries
@@ -303,6 +318,8 @@ bar {
     font pango:Inconsolata 9
     workspace_buttons yes
     separator_symbol "|"
+    #the secondary button on the bar opens the menu too
+    bindsym button3 exec --no-startup-id m-menu $menu
     #mode hide
     #modifier $Win
     colors {

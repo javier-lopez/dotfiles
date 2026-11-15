@@ -33,6 +33,9 @@
 !URxvt*background:      rgba:0000/0000/0000/dddd
 !                            Red/Blue/Green/Alpha
 URxvt*background:       #000000
+!colorize's default-dark foreground, here too: a terminal started before any shell (the scratchpad) or a
+!tmux that drops colorize's escapes would otherwise keep urxvt's black text on this black background
+URxvt*foreground:       #cbcbcb
 
 !URxvt*font:            xft:Inconsolata:pixelsize=12
 URxvt*font:             xft:Inconsolata for Powerline:pixelsize=19
