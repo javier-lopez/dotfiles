@@ -6,6 +6,8 @@ Help
      <alt><esc>      ⇨  launcher
     <win><space>     ⇨  terminal in buffer mode
     <win><enter>     ⇨  new terminal emulator
+[click][background]  ⇨  menu
+  [secondary][bar]   ⇨  menu
 
      <altgr><k>      ⇨  close app
   [secondary][title] ⇨  close app
@@ -61,8 +63,8 @@ XF86AudioLowerVolume ⇨  decrease volume
       <win><<->      ⇨  go to previous desk
       <win><h>       ⇨  go to left window
       <win><l>       ⇨  go to right window
-      <win><j>       ⇨  go to upper window
-      <win><k>       ⇨  go to down window
+      <win><j>       ⇨  go to lower window
+      <win><k>       ⇨  go to upper window
       <win><N>       ⇨  move app to <n> desk
       <win><H>       ⇨  move app to the left
       <win><L>       ⇨  move app to the right

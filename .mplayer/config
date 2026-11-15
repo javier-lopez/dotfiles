@@ -6,7 +6,8 @@ vo="xv"
 #enable zoommode when using mplayer without GUI
 #zoom="1"
 ao=alsa
-input=file=/tmp/mplayer.fifo
+#the fifo player-ctrl sends commands to: this user's (uid 1000), made at login by ~/.minos/autostart
+input=file=/run/user/1000/mplayer.fifo
 nolirc="1"
 use-filename-title="1"
 

@@ -7,5 +7,5 @@
 #lock-color-ring-verification   ffffffff
 #lock-color-ring-wrong          a52a2aff
 #lock-color-line                00000000
-#lock-color-keypress            1e90ff
-#lock-color-delpress            a52a2aff
+#lock-color-keypress            1090f0
+#lock-color-delpress            a02020ff

@@ -42,10 +42,20 @@ _execm eyesaver  redshift   #save your eyes
 _execm handsaver workrave   #save your hands
 (sleep 2 && _execm composition compton)& #eyecandy + fix for general tearing
 #(sleep 2 && _execm composition 'xcompmgr -cCFf -l2 -t1 -r3 -o.20 -D3')&
-#mplayer fifo controller
-mplayer__fifo="$(cat etc/mplayer/mplayer.conf ~/.mplayer/config 2>/dev/null | \
-                 awk '/^input=file=/ {sub(/^input=file=/, ""); print}' | tail -1)"
-[ -n "${mplayer__fifo}" ] && [ ! -e "${mplayer__fifo}" ] && mkfifo "${mplayer__fifo}"
+#mplayer fifo controller: mplayer reads the commands player-ctrl sends from the fifo its config names
+#(input=file=), a path it takes as written. A name every user shares lets anyone drive another's
+#mplayer, whose run command starts a shell, so each user's fifo lives in the user's runtime
+#directory, made here at login, and ~/.mplayer/config names it when it names none or a shared one
+if [ -n "${XDG_RUNTIME_DIR}" ]; then
+    mplayer__fifo="${XDG_RUNTIME_DIR}/mplayer.fifo"
+    [ -p "${mplayer__fifo}" ] || mkfifo -m 600 "${mplayer__fifo}"
+    mplayer__named="$(awk '/^input=file=/ {sub(/^input=file=/, ""); print}' ~/.mplayer/config 2>/dev/null | tail -1)"
+    case "${mplayer__named}" in
+        ''|/tmp/*) [ -f ~/.minos/not_override ] || { mkdir -p ~/.mplayer &&
+            { grep -v '^input=file=' ~/.mplayer/config 2>/dev/null; printf "%s\\n" "input=file=${mplayer__fifo}"; } \
+                > ~/.mplayer/config.minos && mv -f ~/.mplayer/config.minos ~/.mplayer/config; } ;;
+    esac
+fi
 _exec minos-welcome
 _exec skype-apulse #local
 _exec spotify      #local
